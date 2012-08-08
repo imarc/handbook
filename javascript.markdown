@@ -31,7 +31,6 @@ K&R indent style. That style is described in this section.
 Use tab character at the beginning of a line. A tab is expected to represent
 the width of four spaces.  For inline spacing, use spaces, not tabs.
 
-	#!js
 	if (condition) {
 		action; // indented with one tab
 	}
@@ -50,7 +49,6 @@ declarations. Content after the opening brace is indented. The closing brace is
 placed on a line by itself at the same indent level as the control statement or
 function declaration.
 
-	#!js
 	function fooMethod(arg1, arg2) {
 		if (condition) {
 			statement;
@@ -67,7 +65,6 @@ dropped to a new line.
 If more than one action is called upon a jQuery object, you must indent those
 actions.
 
-	#!js
 	$('.classname').parents('div').find('input')
 		.val('New Value')
 		.parents('div').find('span.element2')
@@ -141,7 +138,6 @@ iMarc sites that use only jQuery should use the `$` character to represent the
 jQuery object. In no-conflict mode, jQuery objects should use `jQuery` as the
 instance name.
 
-	#!js
 	$(function() {
 		//...
 	});
@@ -149,7 +145,6 @@ instance name.
 If your code requires everything to be loaded on the page first, use
 `window.load()` instead:
 
-	#!js
 	$(window).load(function() {
 		//...
 	});
@@ -157,7 +152,6 @@ If your code requires everything to be loaded on the page first, use
 When creating a plugin, always use a closure to ensure that the plugin will
 work even when jQuery is in no-conflict mode:
 
-	#!js
 	;(function($) {
 
 		$.fn.yourPlugin = function() {
@@ -186,7 +180,6 @@ methods should be named.
 Variable names, functions, classes and plugin names should all be in the
 lowerCamelCase format.
 
-	#!js
 	var pageFunction        = 'foo';
 	var anotherVariableName = 'bar';
 
@@ -195,7 +188,6 @@ lowerCamelCase format.
 Constructor functions are the only exception; they should all be in the
 UpperCamelCase format.
 
-	#!js
 	var Foo = function (bar, baz) {
 		this.bar = bar;
 		this.baz = baz;
@@ -210,7 +202,6 @@ except for places where the variable has no real meaning or a trivial meaning
 Take care to minimize the letter count, but do not use abbreviations, because
 they greatly decrease the readability of the function name itself.
 
-	#!js
 	function setMessages() { ... }
 	function parseData() { ... }
 
@@ -224,7 +215,6 @@ Inline documentation for classes follows the
 
 Wrap comments at 80 characters when possible to increase readability.
 
-	#!js
 	/**
 	 * This is an example description
 	 *
@@ -243,7 +233,6 @@ under normal circumstances and that should be handled by calling code. For
 instance, if an exception is thrown when the network is down, you don’t need to
 document that.
 
-	#!js
 	/**
 	 * Description of function.
 	 *
@@ -260,7 +249,6 @@ document that.
 The header block at the top of the plugin file are commented using the
 template below.
 
-	#!js
 	/**
 	 * Description of plugin
 	 *
@@ -309,7 +297,6 @@ be surmised from the code itself.
 Inline comments should always follow the single line comment style with two
 forward slashes.
 
-	#!js
 	// This is a very long comment that span so long and is over the 80 character
 	// limit that it spans multiple lines
 	if (condition) {
@@ -326,7 +313,6 @@ function commenting as described elsewhere in this document. Using C-style
 comments inline can cause problems if a maintainer wants to comment out a large
 block of code.
 
-	#!js
 	// The inline comment below, makes commenting out the entire block impossible
 	/*
 	if (condition) {
@@ -343,7 +329,6 @@ less than the default plugin definition. If you think that this non-plugin page
 has code that requires more explanation, you can optionally add a comment to
 start that code. It can be formatted like this:
 
-	#!js
 	/* --------------------------------------------------------------------- */
 	/* Description of code below it.
 	/* --------------------------------------------------------------------- */
@@ -357,7 +342,6 @@ Note that the first and last lines span 80 characters.
 
 Variables should always start with `var` when defined to keep it locally scoped.
 
-	#!js
 	function fooMethod() {
 		var foo = 'bar2';
 	}
@@ -378,7 +362,6 @@ it (if you do not intend to pass that variable through method calls).
 Type comparisons should always have the variable on the right and the type you
 are trying to compare it to on the left.
 
-	#!js
 	var foo = 'bar';
 
 	if (!foo) {	//... }
@@ -397,7 +380,6 @@ If a jQuery element is going to be used multiple times, set it to a JavaScript
 variable to prevent calling the DOM every time it needs to be used (this is
 known as object caching):
 
-	#!js
 	var firstLink = $('a:first');
 
 	firstLink.val();
@@ -412,7 +394,6 @@ known as object caching):
 Use the `.data()` method to store data about an element after event calls
 rather than in a variable.
 
-	#!js
 	var select = $('select.foo');
 	select.data('original_option', select.val());
 
@@ -435,7 +416,6 @@ indented on the next line. The closing brace is on the indenting level as the
 control statement. Control statements also have one space between the control
 keyword and opening parenthesis to distinguish them from function calls.
 
-	#!js
 	if (condition1 || condition2) {
 		action1();
 	} else if (condition3 && condition4) {
@@ -450,7 +430,6 @@ parenthesis to distinguish them from function calls.
 Note that conditions only have parentheses around them if they have multiple
 conditions within them.
 
-	#!js
 	if ((condition1 || condition2) && condition3) {
 		action1();
 	}
@@ -458,14 +437,12 @@ conditions within them.
 Do not omit the curly braces under any circumstance. In the case of a large
 number of short tests and actions, the following is acceptable:
 
-	#!js
 	if (condition)  { action; }
 	if (condition2) { action2; }
 
 For switch statements, cases are indented one level. Case actions are indented
 two levels.
 
-	#!js
 	switch (condition) {
 		case 1:
 			action1;
@@ -490,7 +467,6 @@ parenthesis, and the first parameter; spaces between commas and each parameter,
 and no space between the last parameter, the closing parenthesis, and the
 semicolon. Here’s an example:
 
-	#!js
 	var element = foo(bar, baz, qux);
 
 As displayed above, there is one space on either side of an equals sign used to
@@ -498,7 +474,6 @@ assign the return value of a function to a variable. In the case of a block of
 related assignments, more space, using spaces not tabs, may be inserted to
 promote readability:
 
-	#!js
 	var short        = foo(bar);
 	var longVariable = foo(baz);
 
@@ -507,7 +482,6 @@ promote readability:
 
 Wrap conditions in parentheses in ternary operations.
 
-	#!js
 	bar = (bar) ? bar : default_integer_1;
 	baz = (undefined == baz) ? baz : 'default_value_2';
 
@@ -517,14 +491,12 @@ Wrap conditions in parentheses in ternary operations.
 Use anonymous functions if you need to pass and/or easily redefine the function
 in the future.
 
-	#!js
 	var fooMethod = function (bar, baz, foobar) {
 		//...
 	}
 
 Otherwise use a named function.
 
-	#!js
 	function fooMethod(bar, baz, qux) {
 		//...
 	}
@@ -532,7 +504,6 @@ Otherwise use a named function.
 Default values should be handled in the first lines of the function with a
 ternary operation:
 
-	#!js
 	function fooMethod(bar, baz, qux) {
 		bar = (undefined === bar) ? bar : default_integer_1;
 		baz = (undefined === baz) ? baz : 'default_value_2';
@@ -542,7 +513,6 @@ Anonymous functions should be indented when they part of a function call that
 has more than one parameter. Once a single parameter is idented, all parameters
 should be indented.
 
-	#!js
 	$('.classname').hover(
 		function() {
 			setInterval(
@@ -564,7 +534,6 @@ should be indented.
 Exceptions and try/catch blocks should be used for error handling.  Do not use
 function or method return values to indicate success or failure.
 
-	#!js
 	try {
 		if (undefined == foo) {
 			throw 'Error message';
@@ -585,7 +554,6 @@ If you need to use Firebug, use `preventDefault()` and `stopPropagation()` to
 prevent the DOM element from performing its original actions, otherwise end the
 function with `return false;`.
 
-	#!js
 	$('.foo').click(function(event) {
 		event
 			.preventDefault()
@@ -608,7 +576,6 @@ function uses `return false;`.
 
 To check if a jQuery object has any DOM elements, use the length attribute:
 
-	#!js
 	var links = $('a');
 
 	if (links.length > 0) {
