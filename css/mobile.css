@@ -1,0 +1,111 @@
+/* --------------------------------------------------------------------- */
+/* Mobile Layout
+/* --------------------------------------------------------------------- */ 
+
+#header .content {
+	padding: 0;
+}
+
+#header .title {
+	color: #EEE;
+	padding: 10px;
+	display: block;
+	background: #111;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	text-transform: lowercase;
+}
+	#header .content .title a,
+	#header .content .title a:hover {
+		color: #fff;
+	}
+
+
+#header .primary_nav {
+	margin: 0;
+	list-style: none;
+	background: #DDD;
+	padding: 10px 0 0 0;
+}
+
+.secondary .secondary_nav {
+	margin: 0;
+	list-style: none;
+	background: #EEE;
+	padding: 10px 20px 0 20px;
+}
+
+#header .primary_nav li,
+.secondary .secondary_nav li {
+	padding: 0 10px 10px 10px;
+}
+
+#header .primary_nav li a,
+.secondary .secondary_nav li a {
+	padding: 10px;
+	display: block;
+	background: #FFF;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#header .primary_nav li.active a,
+.secondary .secondary_nav li.active a {
+	color: #FFF;
+	background: #2C82D1;
+}
+
+.content {
+	padding: 10px;
+}
+
+/* --------------------------------------------------------------------- */
+/* Mobile Overrides
+/* --------------------------------------------------------------------- */ 
+
+.content .toc {
+	top: auto !important;
+	width: auto !important;
+	position: static !important;
+	height: auto !important;
+}
+
+pre {
+	padding: 10px;
+	font-size: 13px;
+	line-height: 1.5;
+	overflow: auto;
+	margin: 0 0 20px 0;
+}
+
+dt {
+	width: auto;
+	padding: 5px;
+	display: block;
+	text-align: left;
+	font-weight: bold;
+}
+
+dd {
+	width: auto;
+	padding: 5px;
+	display: block;
+	background: #EEE;
+	margin: 0 0 15px 0;
+	border-top: 1px solid #CCC;
+}
+
+img {
+	padding: 0;
+	width: 100%;
+	border: none;
+}
+
+#footer {
+	color: #555;
+	background: #f9f9f9;
+}

@@ -1,0 +1,514 @@
+= jQuery Plugins =
+
+[[toc(Topics)]]
+
+== iMarc ==
+
+Any reusable plugins created within iMarc can be found here.
+
+
+
+=== Activate on (Partial) Path ===
+
+==== $.fn.activateOnPath ====
+
+Adds class 'active' to a matched element where the href matches the path. If
+the element doesn't have an href, it uses the first child that does have an
+href.
+
+ Signature::
+  $(element).activateOnPath( )
+
+ Return::
+  New jQuery instance of $(element)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/activate_on_path.plugin.js activate_on_path.plugin.js]
+
+ Usage::
+  Useful for subnav / exact matches
+  {{{
+#!js
+$("[ref='activate']").activateOnPath();
+}}}
+
+==== $.fn.activateOnPartialPath ====
+
+Adds class 'active' to a matched element where the href matches the path. If
+the element doesn't have an href, it uses the first child that does have an
+href.
+
+ Signature::
+  $(element).activateOnPartialPath( )
+
+ Return::
+  New jQuery instance of $(element)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/activate_on_path.plugin.js activate_on_path.plugin.js]
+
+ Usage::
+  Useful for main nav / partial matches
+  {{{
+#!js
+$("[ref='activate_partial']").activateOnPartialPath();
+}}}
+
+
+
+=== Character Limit ===
+
+Restricts a textarea to having a maximum number of characters. Also shows the
+number of characters remaining as you type.
+
+==== $.fn.characterLimit ====
+
+ Signature::
+  $(textarea).characterLimit( integer charLimit, string remainingSelector, string remainingFormat )
+
+ Parameters::
+   - integer **charLimit** //The number of characters to restrict an element to having//
+   - string **remainingSelector** //The selector to show the number of characters remaining//
+   - string **remainingFormat** //An optional third parameter, remainingFormat allows setting the format of the text placed in the remainingSelector. It should be a string with %d where the number should be placed and %s where a plural s should be placed for character{s} or char{s}. The default is '%d character%s left'.//
+
+ Return::
+  New jQuery instance of $(textarea)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/characterlimit.plugin.js characterlimit.plugin.js]
+
+ Usage::
+   1. Include jQuery on the page
+   2. Call {{{
+#!js
+$(textarea).characterLimit(200, '#optional_selector_for_remaining_count');
+}}}
+
+
+
+=== Clean URL ===
+
+Cleans data to be URL friendly. Adds a keyup event to the input and will clean 
+data as you type.
+
+==== $.fn.cleanURL ====
+
+ Signature::
+  $(page-url).cleanURL( string alternate_field, string example_url )
+
+ Parameters::
+   - string **alternate_field** //The id of a separate text input that will be used to fill in the URL field. Useful when you want a title field to fill in the URL field.//
+   - string **example_url** //The id of an HTML element that will be filled in with the clean data. Useful for showing an example URL on the page.//
+
+ Return::
+  New jQuery instance of $('.page-url')
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/clean_url.plugin.js clean_url.plugin.js]
+
+ Usage::
+   Cleans inputted text in the page_url field
+   {{{
+#!js
+$(page-url).cleanURL();
+}}}
+   Cleans inputted text in the page_url field while also optionally using text
+   from the title field and filling in the example element
+   {{{
+#!js
+$(page-url).cleanURL(page-title, example_url);
+}}}
+
+
+
+=== Google Map ===
+
+Takes an address and creates a Google Map on the fly.
+
+==== $.fn.googleMap ====
+
+ Signature::
+  $(element).googleMap( string address_source )
+
+ Parameters::
+   - string **address_source** //The selector of an element whose HTML contains an address//
+
+ Return::
+  New jQuery instance of $(element)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/googlemap.plugin.js googlemap.plugin.js]
+
+ Usage::
+   1. Include jQuery on the page
+   2. Call {{{
+#!js
+$(element).googleMap(selector_to_get_address_from);
+}}}
+   The address will be pulled from the specified selector. All newlines and break tags will be removed.
+
+
+
+=== New Category ===
+
+Via AJAX this plugin adds a new category to a table
+
+==== $.fn.newCategory ====
+
+ Signature::
+  $(element).newCategory( string table, string column, string url )
+
+ Parameters::
+   - string **table** //The table the category is to be created for//
+   - string **column** //The column within the category table to associated add the new category to//
+   - string **url** //The URL to post the new category information to//
+
+ Return::
+  New jQuery instance of $(element)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/newcategory.plugin.js newcategory.plugin.js]
+
+ Usage::
+   1. Include jQuery on the page
+   2. Call {{{
+#!js
+$(element).newCategory(table, column, url);
+}}}
+   The plugin generates an input and button to click. When the button is clicked the input data is posted via AJAX to the url, creates the category and adds it to the list of categories.
+
+
+
+=== Progress Bar ===
+
+Via AJAX this plugin uploads a new file/image and shows a progress bar of the
+upload as it uploads. Also allows you to remove this image and upload another
+if needed.
+
+==== $.fn.progressBar ====
+
+ Signature::
+  $(input).progressBar( string type )
+
+ Parameters::
+   - string **type** //Type of file being uploaded. Choices are 'Image', 'File'//
+
+ Return::
+  New jQuery instance of $(input)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/progressbar-flourish.plugin.js progressbar-flourish.plugin.js]
+
+ Usage::
+   1. Include jQuery on the page
+   2. This plugin should be called upon a single input. This input should contain the default image column html that is created with the scaffolder, which includes a hidden input named apc_upload_progress with a UID value.
+   3. The only parameter for this method is whether or not the upload is for a file or and image. This is only used if the upload is an image, and associates the link to a colorbox instance. {{{
+#!js
+$('#resource-image').progressBar('Image');
+}}}
+   4. Here is an example of the PHP that would be used with the above JQuery. This is the default code created by the scaffolder. In this example, resource is the object, with the column image being the targeted upload. Please note that the apc_upload_progress is a required input that must be BEFORE the file input. {{{
+#!php
+<div class="input <?= fCRUD::getRowClass() ?>">
+	<label for="resource-image">Image: <em>*</em></label>
+	<input type="hidden" name="apc_upload_progress" value="<?= md5(uniqid(rand())) ?>" />
+	<input type="file" class="file" id="resource-image" name="image" />
+	
+	<? 
+	if ($resource->encodeImage()) {
+		?>
+		<div class="existing-image">
+			Current image: <a class="current_file_link" href="<?= $resource->prepareImage(TRUE) ?>"><?= $resource->prepareImage() ?></a>
+			<input type="hidden" name="existing-image" value="<?= $resource->encodeImage() ?>" />
+			
+			<input type="hidden" name="delete-image" value="0" />
+			<input class="delete_checkbox" type="checkbox" id="resource-delete-image" name="delete-image" value="1" />
+			<label for="resource-delete-image" class="inline">Delete</label>
+		</div>
+		<? 
+	}
+	?> 
+</div>
+}}}
+
+
+
+=== Quick Search ===
+
+Provides an ajax search and single or multi selection that populated a hidden
+input with comma-separated IDs
+
+==== $.fn.quickSearch ====
+
+ Signature::
+  $(input).quickSearch( string related_class, string url, boolean single )
+
+ Parameters::
+   - string **related_class** //Class name of the related class to search//
+   - string **string_url** //The AJAX URL to post search terms to to return results//
+   - boolean **single** //Whether to only allow a single record to be selected at a time//
+
+ Return::
+  New jQuery instance of $(input)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/quicksearch.plugin.js quicksearch.plugin.js]
+
+ Usage::
+  Initialize the plugin after adding jQuery to the page: {{{
+#!js
+$(input).quickSearch('RelatedClass', '/sup/ajax/quicksearch.php', true);
+}}}
+
+ Activity Indicator::
+  When the plugin has sent a request and is waiting for a response, the label
+  for the input the plugin was called on, will have a CSS class "searching".
+  This can be used with CSS to provide an activity indicator. Note that all of
+  the HTML generated by this plugin is inside of a div with the class
+  "quicksearch": {{{
+#!css
+div.quicksearch label.searching {
+    background-image: url(/sup/img/ajax/loading.gif);
+    background-position: middle right;
+    background-repeat: no-repeat;
+}
+}}}
+
+ Ajax Page Specification::
+  The class needs an ajax page that responds to the following requests:
+  1. An initial population request, with the following parameters: {{{
+#!php
+{
+    "action":        'list',
+    "related_class": '%ClassBeingSearched%',
+    "values":        [%id1%, %id2%, %id3%, %id4%, ...]
+}
+}}}
+   The response should be in the following form, sorted alphabetically by the HTML: {{{
+#!php
+{
+    "%id1%": "%html_for_record%",
+    "%id2%": "%html_for_record%",
+    ...
+}
+}}}
+   This plugin will then prepopulate the selected list with these records.
+   The HTML for the record should be the "name" of the record. For instance,
+   for a User record, the user's first and last name.
+   2. Whenever the user types characters into the search box, the following request will be sent: {{{
+#!php
+{
+    "action":        'search',
+    "related_class": '%ClassBeingSearched%',
+    "keywords":      '%string_user_searched_for%'
+}
+}}}
+   The response to this request should be all records matching the keywords,
+   sorted alphabetically, in the following format:{{{
+#!php
+{
+    "%matching_id_1%": "%html_for_record%",
+    "%matching_id_2%": "%html_for_record%",
+    ...    
+}
+}}}
+   This plugin will then populate the results list with these records. Any
+   records that have already been selected will NOT be added to the results
+   list.
+
+
+
+=== Drag-and-drop Sort Order ===
+
+Provides draggable resorting to reorder record in a table view. This plugin
+should be called on the table that has elements to be sorted. The table should
+have cells of two a tags within a td with class "sort_order". Each a should
+contain a single img. The hrefs should contain all necessary query string
+parameters to move a record in the direction indicated by the link. This
+normally include the primary key field and value, the sort order field and
+value and the class name of the records being reordered
+
+==== $.fn.sortOrder ====
+
+ Signature::
+  $(table).sortOrder( string className, string field )
+
+ Parameters::
+   - string **className** //The fActiveRecord class to submit changes to//
+   - string **field** //The sort order field, used to rewrite the up and down array links after a successful move//
+
+ Return::
+  New jQuery instance of $(table)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/sortorder-flourish.plugin.js sortorder-flourish.plugin.js]
+
+ Usage::
+  The first parameter is the Flourish class to submit changes to. The second
+  parameter, the sort order field, is used to rewrite the up and down array
+  links after a successful move. {{{
+#!js
+$('.item_list').sortOrder('User', 'display_column');
+}}}
+  Here is an example of the HTML that would be used with the above JQuery.
+  In most dynamic apps these links will be generated automatically and will
+  need to take into consideration things link the up arrow on the first row
+  and the down arrow on the last row should be disabled. {{{
+#!js
+<tr>
+	<td class="sort_order">
+		<a href="/sup/ajax/sort_order.php?class=User&amp;user_id=1&amp;display_order=1"><img src="/sup/img/sitemanager/order_up.png" alt="Move Up" /></a>
+		<a href="/sup/ajax/sort_order.php?class=User&amp;user_id=1&amp;display_order=3"><img src="/sup/img/sitemanager/order_down.png" alt="Move Down" /></a>
+	</td>
+	<td>Name of Record</td>
+	<td>Data about record</td>
+</tr>
+}}}
+
+
+
+=== Sort Order Dropdown ===
+
+Provides the ability to take a new value from a display order select and
+adjust the parent display order and subsequently its children.
+
+==== $.fn.sortOrderDropdown ====
+
+ Signature::
+  $(input).sortOrder( string class_name, string sort_order_input, string primary_key_input, string url )
+
+ Parameters::
+   - string **class_name** //The fActiveRecord class to submit changes to//
+   - string **sort_order_input** //The selector for the input with a value of the current display order//
+   - string **primary_key_input** //The selector for the primary key of the current record to change sort order of//
+   - string **url** //The AJAX URL to post a new display order and return the changed order//
+
+ Return::
+  New jQuery instance of $(input)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/sortorder_dropdown-flourish.plugin.js sortorder_dropdown-flourish.plugin.js]
+
+
+=== Stick To Top ===
+
+Provides ability to have an element stick to the top of the page.
+
+==== $.fn.stickToTop ====
+
+ Signature::
+  $(column).stickToTop(container)
+
+ Parameters::
+   - string **container** //Selector for a container that restricts the plugin from moving width-wise//
+
+ Return::
+  New jQuery instance of $(column)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/sticktotop.plugin.js sticktotop.plugin.js]
+
+ Usage::
+   1. Include jQuery on the page
+   2. Call {{{
+#!js
+$('.create_sidebar').stickToTop('#torso');
+}}}
+   Note: This plugin should be called on an element that can have `position: relative`.
+
+
+
+=== Tag Suggest ===
+
+When you type into an input that has this plugin called on it, as you type a
+drop down of suggestions will appear. You can mouse and click a selection,
+arrow down to select an option, or continue typing to see more choices.
+Choices are created via an AJAX call that returns a "dictionary" of related
+items.
+
+==== $.fn.tagSuggest ====
+
+ Signature::
+  $(input).tagSuggest( string url )
+
+ Parameters::
+   - string **url** //The AJAX URL to post a new display order and return the changed order//
+
+ Return::
+  New jQuery instance of $(input)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/tagsuggest.plugin.js tagsuggest.plugin.js]
+
+
+
+=== Time Picker ===
+
+Provides a time picker with the same interaction model as
+[http://haineault.com/media/jquery/ui-timepickr/page/#d-demo-wrapper-2 Maxime Haineault's] but
+with less dependencies
+
+==== $.fn.timepicker ====
+
+ Signature::
+  $(input).timepicker( array options )
+
+ Parameters::
+   - array **options** //Possible options to adjust portions of the plugin with. Options include: date format, and minute intervals to show (default is every 15 minutes)//
+
+ Return::
+  New jQuery instance of $(input)
+
+ SVN::
+  [http://svn.imarc.net/browse/framework.imarc.net/view/trunk/js/jquery_plugins/timepicker.plugin.js timepicker.plugin.js]
+
+ Usage::
+   - The only parameter is an options object that allows setting the format and displayed minutes.
+   - For the `format` key, a string is expected containing any of the following PHP date formatting codes: g, i, a, A. These codes can be combined with punctuation and whitespace. {{{
+#!js
+$('#time_input').timepicker({format: 'g:i A'});
+}}}
+   - The default format is 'g:ia'.
+   - The `minutes` key accepts an array of two-digit minutes options to display to the user below the hour. {{{
+#!js
+$('#time_input').timepicker({minutes: ['00', '30']});
+}}}
+   - This defaults to ['00', '15', '30', '45'].
+
+
+
+== Third Party Plugins ==
+
+These are recommended solutions to problems we frequently have.
+
+=== Dropdown Replacement ===
+
+Select box replacement. Is browser compatible, is small, and allows for keyboard navigating.
+
+ URL::
+  http://programmingdrunk.com/current-projects/dropdownReplacement/
+
+ Used On::
+  - [http://clipboard.imarc.net Clipboard]
+
+
+=== jMediaelement ===
+
+HTML5 video player with jwPlayer (flash) fallback.
+
+ URL::
+  http://www.protofunc.com/jme/
+
+ Used On::
+  - [http://www.desktone.com/demo Desktone]
+
+
+=== Superfish ===
+
+Multi-tier dropdown navigation. Includes default CSS for vertical or horizontal dropdowns, as well as auto-width detection for submenus.
+
+ URL::
+  http://users.tpg.com.au/j_birch/plugins/superfish/
+
+ Recommended Adjustments::
+  - Does not come with different styles for submenu links by default, so add a specific style in the stylesheet for that.
+  - Adjust the CSS in the default CSS rather than overwriting with more specific styles in your screen.css. If there are multiple usage instances, make separate CSS files for each, or copy/paste the default Superfish styles and adjust in the screen.css.
