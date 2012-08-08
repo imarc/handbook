@@ -160,14 +160,22 @@ meet the expectation level set with the client.
 The text and visual content of a page should always be accessible. The layout 
 of a page should not appear discernibly broken.
 
+## HTML5 and CSS3 Compatability
+
+If you choose to use HTML5 elements, you should use [Modernizr](http://modernizr.com/) 
+to ensure backwards compatability with older version of browsers.
+
+Modernizr detects what the browser's rendering engine supports, and allows you to customize 
+the look of the website depending on what is and isn't allowed.
+
+
 ## Validation
 
-Use `XHTML 1.0 Strict` as DOCTYPE declaration.
+Use the HTML 5 Doctype declaration instead of the older XHTML 1.0 Strict.
 
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<!DOCTYPE html>
 
-More on the [XHTML Strict 1.0 Specification](http://www.w3.org/TR/xhtml1)/
+More on the [HTML5 Doctype](http://www.w3schools.com/html5/tag_doctype.asp)/
 
 All HTML and CSS should be valid. Markup should be well-formed and contain all 
 required attributes. Elements should occur within the proper context of the DOCTYPE.
