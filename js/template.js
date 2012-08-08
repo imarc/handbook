@@ -1,17 +1,15 @@
 $(function() {
 
-	var html = '', baseNum = 1;
+	var html = '',
+		baseNum = 1;
 
-	$.fn.addListItem = function () {
-		$(this).each(function(){
-			html += '<li><a href="#">';
-			html += $(this).text();
-			html += '</li></a>';
-		});
-	};
+	// will only capture h2 and h3 headers
+	var headers = ['h2', 'h3'];
 
-	$('.main').find('h2, h3, h4, h5, h6').each(function(){
+	$('.main').find(headers.join(', ')).each(function(){
 		var tagNum = parseInt($(this).prop('tagName').replace('H', ''));
+		var name   = $(this).text().replace(/[^a-z0-9]/gi, '');
+		$(this).attr('id', name);
 
 		if (tagNum < baseNum) {
 			html += '</ul>';	
@@ -19,7 +17,7 @@ $(function() {
 			html += '<ul>';
 		}
 		
-		html += '<li><a href="#">';
+		html += '<li><a href="#' + name + '">';
 		html += $(this).text();
 		html += '</li></a>';
 
