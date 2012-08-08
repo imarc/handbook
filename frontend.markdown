@@ -171,7 +171,7 @@ the look of the website depending on what is and isn't allowed.
 
 ## Validation
 
-Use the HTML 5 Doctype instead of the older .
+Use the HTML 5 Doctype declaration instead of the older XHTML 1.0 Strict.
 
 	<!DOCTYPE html>
 
