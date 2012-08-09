@@ -1,18 +1,29 @@
 ---
 title: iMarc Handbook
-layout: default
+layout: notoc
 ---
 
-# iMarc Handbook: Engineering Standards &amp; Best Practices
+<h1 class="title">Engineering Standards &amp; Best Practices </h1>
+<p class="copyright">
+	Copyright 2005‒2012 <a href="http://imarc.net/">iMarc LLC</a>.
+</p>
 
-Copyright 2005, 2012 [iMarc LLC](http://www.imarc.net)
+<dl>
+	<dt><a href="frontend">Frontend</a></dt>
+	<dd>HTML and CSS standards</dd>
+	<dt><a href="javascript">JavaScript</a></dt>
+	<dd>JavaScript and jQuery standards</dd>
+	<dt><a href="backend">PHP &amp; SQL</a></dt>
+	<dd>PHP and SQL standards</dd>
+	<dt><a href="deployment">Deployment</a></dt>
+	<dd>Deployment standards</dd>
+</dl>
 
-* ### [HTML &amp; CSS](frontend)
-	<div class="remote_menu"></div>
-* ### [Javascript](javascript)
-* ### [PHP &amp; SQL](backend)
-* ### [Deployment](standards)
+## In progress:
 
-## Pages In-Progress:
-
-* [User Experience](ux) – UX standards and processes
+<dl>
+    <dt>
+        <a href="ux">User Experience</a>
+    </dt>
+    <dd>UX standards and processes</dd>
+</dl>
