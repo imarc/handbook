@@ -1,60 +1,56 @@
-[[toc(Topics)]]
+---
+title: User Experience
+layout: default
+---
 
-
-
-
-= User Experience =
+# User Experience
 
 This document outlines major user experience terminology, methods and best practices 
 employed by iMarc. The goal of user experience is to design and develop web sites 
 armed with the knowledge of users' identities, pain, and tasks. iMarc is a full service 
 web development and design firm located north of Boston. Learn more at http://imarc.net.
 
-
-
-
-
-== Research Activities ==
+## Research Activities
 
 When beginning a project, it's important to execute proper research prior to any creative or
 development production. Depending on budget, a number of research levels can be incorporated
 into a project:
 
- - [#StakeholderInterviews stakeholder interviews]
- - [#CompetitiveAnalysis competitive analysis]
- - [#SurveysQuantitativeData surveys (quantitative data)]
- - [#UserInterviewsQualitativeData user interviews (qualitative data)]
- - [#UsabilityTestingPrototypes usability testing (prototypes)]
+ - [stakeholder interviews](#StakeholderInterviews)
+ - [competitive analysis](#CompetitiveAnalysis)
+ - [surveys (quantitative data)](#SurveysQuantitativeData)
+ - [user interviews (qualitative data)](#UserInterviewsQualitativeData)
+ - [usability testing (prototypes)](#UsabilityTestingPrototypes)
 
-=== Stakeholder Interviews === 
+### Stakeholder Interviews
 
 As is customary with all iMarc projects, speaking with key stakeholders in the customer's
 company is essential to understand the pain, aspirations, and goals of the website. What are
 the success metrics? Who are the audience segments? Does any existing market research exist?
 
-=== Competitive Analysis ===
+### Competitive Analysis
 
 A competitive analysis can give customers a view of how their competitors fare on the web. 
 This analysis can include:
 
- - layout
-   - page density
-   - visual impact
- - navigations structure analysis
-   - what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
- - light SEO audit
-   - pages indexed
-   - meta and title info
-   - sitemap XML and robots.txt audit 
+- layout
+  - page density
+  - visual impact
+- navigations structure analysis 
+  - what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
+- light SEO audit
+  - pages indexed
+  - meta and title info
+  - sitemap XML and robots.txt audit 
 
-=== Surveys (Quantitative Data) ===
+### Surveys (Quantitative Data)
 
-Surveys allow us to gather information on a large number of participants, yielding results in quantitative terms. For example, //We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.//
+Surveys allow us to gather information on a large number of participants, yielding results in quantitative terms. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
 
 Typically, questions are asked in a close-ended fashion (multiple choice, Yes/No, True/False). This allows for faster answering easy analysis. iMarc prefers to use Survey Monkey, a tool that easily displays result patterns.
 
 
-=== User Interviews (Qualitative Data) ===
+### User Interviews (Qualitative Data)
 
 Everyone does not interact with the web in the same manner. Speaking to current and/or 
 perspective users is very helpful in a website's planning stages. By conducting contextual, 
@@ -63,23 +59,23 @@ to UI components, design elements, document flow, feature importance, technical 
 User interviews can take place in person or remotely over the phone with screen sharing software. 
 **Some common exercises within user interviews include:**
 
- - questionnaires
-   - favorite sites
-   - web usage
- - 4-up site gut-reactions
- - [http://en.wikipedia.org/wiki/Card_sorting feature card sorting]
-   - card sorting allows us to see users' preferred feature-sets and also preferred task workflows
+- questionnaires
+  - favorite sites
+  - web usage
+- 4-up site gut-reactions
+- [feature card sorting](http://en.wikipedia.org/wiki/Card_sorting)
+  - card sorting allows us to see users' preferred feature-sets and also preferred task workflows
 
-//An example of remote card sorting using websort.com//
+*An example of remote card sorting using websort.com*
 
-[[img(/wiki/sup/img/card_sort.jpg, Example of card sorting using websort.com)]]
-
-
+![Example of card sorting using websort.com](/img/card_sort.jpg)
 
 
 
 
-== Site maps ==
+
+
+## Site maps
 
 Site maps are diagrams meant to show the relationship of a web 
 site's information. They are crucial to project planning and scope and are used 
@@ -89,30 +85,31 @@ iMarc uses site maps to convey content hierarchy, dynamic and CMS controlled
 content, and template usage. Additionally, site maps create a navigational 
 backbone for a website.
 
-//Below is an example site map//
+*Below is an example site map*
 
-[[img(/wiki/sup/img/sitemap.png, Example Site map)]]
+![Example Site map](/img/sitemap.png)
 
 
-=== Anatomy ===
+### Anatomy
 
 iMarc divides site maps up to three layers depending on the project. 
 
- Main site content::
-  Lists out all content in a hierarchy
- Dynamic content and templates::
-  This layer illustrates areas of the site that pertains to search results, external system integration, user input, access restrictions, editable front–end content
- Templates::
-  Lists the template number being used (related to wireframes)
+ **Main site content**
+> Lists out all content in a hierarchy
+
+ **Dynamic content and templates**
+> This layer illustrates areas of the site that pertains to search results, external system integration, user input, access restrictions, editable front–end content
+ **Templates**
+> Lists the template number being used (related to wireframes)
 
 
-=== Software ===
+### Software
 
 iMarc currently uses OmniGraffle for site maps but previously used a program 
 called Inspiration.
 
 
-== Wireframes ==
+## Wireframes
 
 Wireframes are user interface diagrams stripped of all presentational style, 
 leaving nothing but a layout of the document – this allows for rapid and 
@@ -122,15 +119,15 @@ research and discovery and before creative design.**
 
 Projects benefit from wireframes in various ways: 
 
- - Creative is given a foundation upon which they begin design rounds. Depending on project's complexity, there may be many wireframes for many important templates.
- - Developers can visually understand user interface components rather than guessing the convention and behavior from a requirements document. 
- - Clients and the iMarc BizDev team use them to validate requirements.
+- Creative is given a foundation upon which they begin design rounds. Depending on project's complexity, there may be many wireframes for many important templates.
+- Developers can visually understand user interface components rather than guessing the convention and behavior from a requirements document. 
+- Clients and the iMarc BizDev team use them to validate requirements.
 
 There are varying degrees of wireframes ranging from a low, conceptual wireframe to a high 
 fidelity wireframe. Different projects will use different types of wireframes
 depending on the purpose it serves in relation to a goal.
 
-=== Low Fidelity/Reference Zone Wireframe ===
+### Low Fidelity/Reference Zone Wireframe
 
 A reference zone wireframe is an abstract representation of a website template illustrating 
 where large blocks of content exist (primary nav, utility nav, callout, etc). The use of 
@@ -139,9 +136,9 @@ such as navigation and sidebars. UI components and content are not included. The
 are also ideal for customers who do not have ample budget but can be challenging for some as
 they are not accustomed to think in the abstract.
 
-[[img(/wiki/sup/img/wireframe_reference.png, Example of Low-Fidelity Wireframe)]]
+![Example of Low-Fidelity Wireframe](/img/wireframe_reference.png)
 
-=== High Fidelity Wireframe, or 'Wireframe' ===
+### High Fidelity Wireframe, or 'Wireframe'
 
 A high fidelity wireframe is a very detailed layout, complete with different UI
 elements such as links and buttons. It is a detailed mockup that shows actual
@@ -150,30 +147,30 @@ images. Annotations of UI components and their behaviors is optional. When an
 employee at iMarc refers to a generic 'wireframe' they are referring to a high 
 fidelity wireframe.
 
-[[img(/wiki/sup/img/wireframe.png, Example of High-Fidelity Wireframe)]]
+![Example of High-Fidelity Wireframe](/img/wireframe.png)
 
-=== Template Information ===
+### Template Information
 
- Wireframe title::
-  Each wireframe should be given a title relevant to the template
- Updated date::
-  When was this wireframe last updated?
- Version number::
-  Give the wireframe a version number
- Annotations::
-  Annotations describe behaviors, functionality, etc
+ **Wireframe title**
+> Each wireframe should be given a title relevant to the template
+ **Updated date**
+> When was this wireframe last updated?
+ **Version number**
+> Give the wireframe a version number
+ **Annotations**
+> Annotations describe behaviors, functionality, etc
 
-[[img(/wiki/sup/img/wireframe_meta.png, Wireframe title, date, annotations)]]
+![Wireframe title, date, annotations](/img/wireframe_meta.png)
 
-=== Software and Stencil Set ===
+### Software and Stencil Set
 
 iMarc generally uses OmniGraffle for wireframes along with the 
-[http://konigi.com/tools/omnigraffle-wireframe-stencils Konigi stencil set]. 
+[Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils). 
 This set includes a plethora or user interface components used in iMarc projects.
 
 
 
-=== Usability Testing (Prototypes) ===
+### Usability Testing (Prototypes)
 Donec in massa vitae dolor tristique luctus. Phasellus risus diam, laoreet nec 
 commodo a, vestibulum eget leo. Morbi augue orci, sodales sed posuere fermentum, pharetra eu libero.
 
