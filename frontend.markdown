@@ -16,7 +16,7 @@ all aspects of the web application.
 
 HTML pages should begin with by setting `utf-8` in the content-type meta tag.
 
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
 
 Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the 
 frontend HTML and backend databases, use real UTF-8 characters instead of HTML 
