@@ -68,7 +68,7 @@ User interviews can take place in person or remotely over the phone with screen 
 
 *An example of remote card sorting using websort.com*
 
-![Example of card sorting using websort.com](/img/card_sort.jpg)
+![Example of card sorting using websort.com](img/card_sort.jpg)
 
 
 
@@ -87,7 +87,7 @@ backbone for a website.
 
 *Below is an example site map*
 
-![Example Site map](/img/sitemap.png)
+![Example Site map](img/sitemap.png)
 
 
 ### Anatomy
@@ -136,7 +136,7 @@ such as navigation and sidebars. UI components and content are not included. The
 are also ideal for customers who do not have ample budget but can be challenging for some as
 they are not accustomed to think in the abstract.
 
-![Example of Low-Fidelity Wireframe](/img/wireframe_reference.png)
+![Example of Low-Fidelity Wireframe](img/wireframe_reference.png)
 
 ### High Fidelity Wireframe, or 'Wireframe'
 
@@ -147,7 +147,7 @@ images. Annotations of UI components and their behaviors is optional. When an
 employee at iMarc refers to a generic 'wireframe' they are referring to a high 
 fidelity wireframe.
 
-![Example of High-Fidelity Wireframe](/img/wireframe.png)
+![Example of High-Fidelity Wireframe](img/wireframe.png)
 
 ### Template Information
 
@@ -160,7 +160,7 @@ fidelity wireframe.
  **Annotations**
 > Annotations describe behaviors, functionality, etc
 
-![Wireframe title, date, annotations](/img/wireframe_meta.png)
+![Wireframe title, date, annotations](img/wireframe_meta.png)
 
 ### Software and Stencil Set
 
