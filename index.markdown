@@ -7,12 +7,12 @@ layout: default
 
 Copyright 2005, 2012 [iMarc LLC](http://www.imarc.net)
 
-* ### [HTML &amp; CSS](frontend.html)
+* ### [HTML &amp; CSS](frontend)
 	<div class="remote_menu"></div>
-* ### [Javascript](javascript.html)
-* ### [PHP &amp; SQL](backend.html)
-* ### [Deployment](standards.html)
+* ### [Javascript](javascript)
+* ### [PHP &amp; SQL](backend)
+* ### [Deployment](standards)
 
 ## Pages In-Progress:
 
-* [User Experience](ux.html) – UX standards and processes
+* [User Experience](ux) – UX standards and processes
