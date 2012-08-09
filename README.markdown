@@ -8,6 +8,6 @@ is specifically used by Github Pages with jekyll to generate the front end.
 Just show me the Handbook
 -------------------------
 
-You can see the iMarc Handbook (currently a work in progress) at
+You can see the iMarc Handbook at
 
-+ http://imarc.github.com/handbook/
++ http://handbook.imarc.net/
