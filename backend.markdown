@@ -9,8 +9,7 @@ This document describes iMarc’s code standards for developing databases and
 writing PHP. iMarc is a full service web development and design firm located
 north of Boston. Learn more at http://imarc.net.
 
-Many of the PHP standards on this page were derived from [Horde’s Code
-Standards](http://imarc.github.com/handbook/javascript).
+Many of the PHP standards on this page were derived from [Horde’s Code Standards](http://www.horde.org/apps/horde/docs/CODING_STANDARDS).
 
 
 ## Development Environment
@@ -22,14 +21,14 @@ iMarc’s target development and production platform is:
  - PostgreSQL 8.3+
 
 The PHP library we use is
-[Flourish](http://imarc.github.com/handbook/javascript). Documentation can be
+[Flourish](http://www.flourishlib.com). Documentation can be
 found at
-[http://flourishlib.com/docs](http://imarc.github.com/handbook/javascript).
+[http://flourishlib.com/docs](http://flourishlib.com/docs).
 
 
 ## UTF-8
 
-[UTF-8](http://imarc.github.com/handbook/javascript) should be used as the character
+[UTF-8](http://flourishlib.com/docs) should be used as the character
 encoding for all aspects of a web applicaiton.
 
 UTF-8 is one of the most robust and widely-supported character encodings, which
@@ -44,7 +43,7 @@ a site that need to be build with UTF-8 in mind:
 	<dd>
 		Set your editor to use UTF-8. Include the correct meta tags, as
 		specified by [frontend
-		standards](http://imarc.github.com/handbook/javascript).  Force the
+		standards](/frontend#UTF-8).  Force the
 		correct HTTP content-type header.
 		<pre>
 			<code>
@@ -80,7 +79,7 @@ a site that need to be build with UTF-8 in mind:
 	</dd>
 </dl>
 
-See [Flourish’s UTF-8 docs](http://imarc.github.com/handbook/javascript) for
+See [Flourish’s UTF-8 docs](http://flourishlib.com/docs/UTF-8) for
 more explanation and examples.
 
 
@@ -93,7 +92,7 @@ or Mac (`\r`) breaks.
 ## Style
 
 PHP code follows the [K&R indent and bracing
-style](http://imarc.github.com/handbook/javascript).  That style is decribed in
+style](http://en.wikipedia.org/wiki/Indent_style#K.26R_style).  That style is decribed in
 this section.
 
 
@@ -464,7 +463,7 @@ systems and setups.
 Shorthand PHP tags – `<? ?>` – should be used in views, controllers, and other
 non-class files. Shorthand tags promote readability and brevity, which outweigh
 the loss of portability when
-[short_open_tag](http://imarc.github.com/handbook/javascript) is turned off.
+[short_open_tag](http://us4.php.net/manual/en/configuration.directives.php) is turned off.
 
 	<div class="success">
 		<p>
@@ -544,7 +543,7 @@ generally be avoided.
 ## Naming Conventions
 
 File naming conventions are described in [Storing and Naming
-Files](http://imarc.github.com/handbook/javascript).
+Files](#StoringandNamingFiles).
 
 
 ### Database Naming Conventions
@@ -674,7 +673,7 @@ When possible, wrap all comments at 80 characters to increase readability.
 ### Library Commenting
 
 Inline documentation for library code follows the [PHPDoc
-convention](http://imarc.github.com/handbook/javascript).
+convention](http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.pkg.html).
 
 PHPDoc uses multi-line comments that start with `/**` on a line by itself and
 ends with `*/` on a line by itself. These are called doc blocks. Doc blocks
@@ -782,7 +781,7 @@ Non-library classes only require a short description and copyright.
 #### Non-Library Function and Method Comments
 
 Non-library functions and methods may be commented using the PHPDoc convention
-[described above](http://imarc.github.com/handbook/javascript). Non-library
+[described above](#LibraryFunctionandMethodComments). Non-library
 functions and methods can also skip comments completely.
 
 
@@ -827,7 +826,7 @@ comment out a large block of code.
 	}
 	*/
 
-[Unix shell-style](http://imarc.github.com/handbook/javascript)
+[Unix shell-style](http://php.net/manual/en/language.basic-syntax.comments.php)
 comments – `# comment` – are always avoided.
 
 
@@ -926,17 +925,17 @@ parentheses are left out.
 ## Example URLs and IPs
 
 Use `example.com` for all example URLs, per [RFC
-2606](http://imarc.github.com/handbook/javascript).
+2606](http://www.faqs.org/rfcs/rfc2606.html).
 
 Use the IP range `192.0.2.0/24` for all example IP addresses, per [RFC
-3330](http://imarc.github.com/handbook/javascript). If you just need a single
+3330](http://www.faqs.org/rfcs/rfc3330.html). If you just need a single
 IP address use `192.0.2.1`
 
 
 ## PHP Settings
 
 All code must work with
-[register_globals](http://imarc.github.com/handbook/javascript) disabled.
+[register_globals](http://us.php.net/manual/en/security.registerglobals.php) disabled.
 
 To retrieve submitted data, use the more specific `$_GET` or `$_POST`, not
 `$_REQUEST`
@@ -944,12 +943,12 @@ To retrieve submitted data, use the more specific `$_GET` or `$_POST`, not
 
 ## Regular Expression Functions
 
-Always use [preg_](http://imarc.github.com/handbook/javascript) functions
-instead of [ereg_](http://imarc.github.com/handbook/javascript) (and
-[preg_split()](http://imarc.github.com/handbook/javascript) instead of
-[split()](http://imarc.github.com/handbook/javascript)); they are included in
+Always use [preg_](http://www.php.net/manual/en/ref.pcre.php) functions
+instead of [ereg_](http://www.php.net/manual/en/ref.regex.php) (and
+[preg_split()](http://www.php.net/manual/en/function.preg-split.php) instead of
+[split()](http://www.php.net/manual/en/function.split.php)); they are included in
 PHP by default and much more efficient and much faster than
-[ereg_](http://imarc.github.com/handbook/javascript).
+[ereg_](http://www.php.net/manual/en/ref.regex.php).
 
 
 ## Private Variables
@@ -996,7 +995,7 @@ format for emailing error message is `team+project@imarc.net` (example:
 ### Error Reporting
 
 All code must work with
-[error_reporting](http://imarc.github.com/handbook/javascript) set to `E_ALL`
+[error_reporting](http://www.php.net/manual/en/ref.errorfunc.php#ini.error-reporting) set to `E_ALL`
 and `E_STRICT`.
 
 
@@ -1015,7 +1014,7 @@ function or method return values to indicate success or failure.
 	}
 
 See [Flourish’s fException
-documentation](http://imarc.github.com/handbook/javascript) for information on
+documentation](http://flourishlib.com/docs/fException) for information on
 which exception type to throw.
 
 
@@ -1026,7 +1025,7 @@ exists.  There are several similar methods to do this. In general, use the
 simplest.
 
 If you need to know if a variable exists at all and is not `NULL`, use
-[isset()](http://imarc.github.com/handbook/javascript).
+[isset()](http://www.php.net/manual/en/function.isset.php).
 
 	// Check to see if $param is defined.
 	if (isset($param)) {
@@ -1035,7 +1034,7 @@ If you need to know if a variable exists at all and is not `NULL`, use
 
 If you need to know if a variable exists AND has a non-empty value (not `NULL`,
 0, `FALSE`, empty string or undefined), use
-[empty()](http://imarc.github.com/handbook/javascript).
+[empty()](http://www.php.net/manual/en/function.empty.php).
 
 	// Make sure that $answer exists, is not an empty string, and is
 	// not 0:
@@ -1045,7 +1044,7 @@ If you need to know if a variable exists AND has a non-empty value (not `NULL`,
 		// (bool)$answer would be FALSE.
 	}
 
-Don’t use [array_key_exists()](http://imarc.github.com/handbook/javascript)
+Don’t use [array_key_exists()](http://www.php.net/manual/en/function.array-key-exists.php)
 unless it is possible that an array key has a value of `NULL`.
 `array_key_exists()` runs many times slower than `isset()` because a full array
 scan must be performed.
@@ -1109,7 +1108,7 @@ certificate.
 
 Whenever working with data input by a user, whether from the query string, form
 inputs or cookies, be sure to escape the data before echoing it to prevent
-[XSS](http://imarc.github.com/handbook/javascript). This prevents malicious
+[XSS](http://en.wikipedia.org/wiki/Cross-site_scripting). This prevents malicious
 users from injecting javascript functionality or unapproved content into pages.
 
 	// GOOD Examples
@@ -1139,7 +1138,7 @@ of a site.
 
 ### Use Tokens to Prevent Cross-Site Request Forgeries (CSRF)
 
-[CSRF](http://imarc.github.com/handbook/javascript) attacks leverage
+[CSRF](http://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks leverage
 the fact that users are often logged into multiple sites in a single browser
 at a time. They make fake requests to sites via image tag src URLs and
 javascript.
