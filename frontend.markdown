@@ -168,6 +168,8 @@ to ensure backwards compatability with older version of browsers.
 Modernizr detects what the browser's rendering engine supports, and allows you to customize 
 the look of the website depending on what is and isn't allowed.
 
+HTML5shim/shiv has been incorporated into Modernizr, so you should not use both.
+
 
 ## Validation
 
@@ -175,7 +177,7 @@ Use the HTML 5 Doctype declaration instead of the older XHTML 1.0 Strict.
 
 	<!DOCTYPE html>
 
-More on the [HTML5 Doctype](http://www.w3schools.com/html5/tag_doctype.asp)/
+More on the [HTML5 Doctype](http://www.w3schools.com/html5/tag_doctype.asp).
 
 All HTML and CSS should be valid. Markup should be well-formed and contain all 
 required attributes. Elements should occur within the proper context of the DOCTYPE.
@@ -333,7 +335,7 @@ page or section.
   Inline content styled for visual emphasis
 
 Example diagram:
-![Content naming conventions](/wiki/sup/img/naming_content.jpg)
+![Content naming conventions](img/naming_content.jpg)
 
 ### Messaging
 
