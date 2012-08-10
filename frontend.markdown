@@ -1014,7 +1014,7 @@ The following template can be used to to start most iMarc-created web pages.
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
-		<meta charset=utf-8" />
+		<meta charset="utf-8" />
 		<title>Title</title>
 	</head>
 
