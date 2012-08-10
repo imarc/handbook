@@ -187,9 +187,9 @@ required attributes. Elements should occur within the proper context of the DOCT
 
 ## iMarc Credits
 
-Include the following `credits` meta tag in the had that attributes iMarc.
+Include the following `author` meta tag in the had that attributes iMarc.
 
-	<meta name="credits" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
+	<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
 
 ## Content Descriptors
 
@@ -1010,12 +1010,11 @@ as it allows IE6 to have HTML elements show over it (such as dropdown menus).
 
 The following template can be used to to start most iMarc-created web pages.
 
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<!DOCTYPE html>
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<meta name="credits" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
+		<meta charset=utf-8" />
 		<title>Title</title>
 	</head>
 
