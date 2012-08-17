@@ -221,6 +221,11 @@ We usually write reports and specifications in [Word](http://www.microsoft.com/m
 
 Energistically e-enable superior communities through enterprise-wide portals. Progressively re-engineer interoperable ROI for tactical results. Holisticly brand technically sound alignments for real-time data.
 
+
+
+
+
+
 # User Experience
 
 This document outlines major user experience terminology, methods and best practices 
