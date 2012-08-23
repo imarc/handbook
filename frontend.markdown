@@ -108,27 +108,23 @@ With short lines of content, the tag and content can stay on the same line.
 
 ## Storing and Naming Files
 
-Stylesheets, images, and other supporting files are stored under the `/sup/` 
+Stylesheets, images, and other supporting files are stored in the root 
 directory. 
 
-CSS should be organized in external files. Use one stylesheet for each targeted 
-device, browser or media. CSS files are stored under `/sup/css/`.
+CSS files are stored under `/css/`.
 
-Images should reside be organized into subfolders under `/sup/img/` whenever 
-appropriate.
+Images should reside under `/img/` and can be stored into subfolders if you wish (e.g. `/img/icons/`)
 
-	/sup
-		/css
-			ipad.css
-			mobile.css
-			print.css
-			screen.css
-			lte_ie6.css
-		/img
-			header.jpg
-			/icons
-				facebook.gif
-				twitter.gif
+	/css
+		print.css
+		screen.css
+		lte_ie7.css
+		lte_ie6.css
+	/img
+		header.jpg
+		/icons
+			facebook.gif
+			twitter.gif
 
 ## Browser Support & Accessibility
 
@@ -237,7 +233,7 @@ properly scoped conditional stylesheet. This example comment targets Internet Ex
 less than or equal to version 6:
 
 	<!--[if lte IE 6]>
-		<link rel="stylesheet" href="/sup/css/lte_ie6.css" />
+		<link rel="stylesheet" href="/css/lte_ie6.css" />
 	<![endif]-->
 
 ## Presentational Elements
@@ -514,7 +510,7 @@ This is an example of default form markup.
 				<input type="button" value="button" />
 			</div>
 			<div class="image">
-				<input type="image" src="/sup/img/forms/image.jpg" value="image" />
+				<input type="image" src="/img/forms/image.jpg" value="image" />
 			</div>
 			<div class="submit">
 				<input type="submit" />
@@ -906,10 +902,10 @@ Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bul
 
 	@font-face {
 		font-family: 'ExpresswayRegular';
-		src: url('../../sup/fonts/expressway_rg-webfont.eot?') format('eot'),    	    
-			 url('../../sup/fonts/expressway_rg-webfont.woff') format('woff'),
-			 url('../../sup/fonts/expressway_rg-webfont.ttf')  format('truetype'),
-			 url('../../sup/fonts/expressway_rg-webfont.svg#webfont') format('svg');
+		src: url('../../fonts/expressway_rg-webfont.eot?') format('eot'),    	    
+			 url('../../fonts/expressway_rg-webfont.woff') format('woff'),
+			 url('../../fonts/expressway_rg-webfont.ttf')  format('truetype'),
+			 url('../../fonts/expressway_rg-webfont.svg#webfont') format('svg');
 	}
 
 Font Squirrel has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) 
@@ -986,7 +982,7 @@ the HTML, as SWFObject replaces whatever element it uses. Then SWFObject embeds 
 			wmode: 'transparent'
 		};
 		swfobject.embedSWF(
-			'/sup/flash/example.swf', // location of Flash
+			'/flash/example.swf', // location of Flash
 			'flash_holder',           // container id
 			'640',                    // width
 			'480',                    // height
@@ -1072,7 +1068,7 @@ Facebook pulls the first `img` it can find in the site. If this is
 unsatisfactory, you can control the thumbnail image to be shared by using the 
 following line in the web site's `head`:
 
-	<link rel="image_src" href="/sup/img/site/logo_acme.png" />		
+	<link rel="image_src" href="/img/site/logo_acme.png" />		
 
 #### Facebook Open Graph
 
