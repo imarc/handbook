@@ -202,6 +202,23 @@ We usually write reports and specifications in [Word](http://www.microsoft.com/m
 
 
 
+
+
+## Template Meta Info
+
+Strategy deliverables should contain some combination of the following meta information
+
+ - Wireframe title - Each wireframe should be given a title relevant to the template
+ - Updated date - When was this wireframe last updated?
+ - Version number - Give the wireframe a version number
+ - Annotations - Annotations describe behaviors, functionality, etc
+ - Author
+
+![Wireframe title, date, annotations](img/wireframe_meta.png)
+
+
+
+
 ## Research Activities
 
 Depending on budget, a number of research levels can be incorporated
@@ -242,19 +259,6 @@ iMarc prefers to use Survey Monkey, a tool that easily displays result patterns.
 
 Speak to current and/or perspective users by conducting contextual, non-biased interviews. This can relate to UI components, design elements, document flow, feature importance, technical knowledge and more. User interviews can take place in person or remotely over the phone with screen sharing software. 
 
-
-
-## Template Meta Info
-
-Strategy deliverables should contain some combination of the following meta information
-
- - Wireframe title - Each wireframe should be given a title relevant to the template
- - Updated date - When was this wireframe last updated?
- - Version number - Give the wireframe a version number
- - Annotations - Annotations describe behaviors, functionality, etc
- - Author
-
-![Wireframe title, date, annotations](img/wireframe_meta.png)
 
 
 
