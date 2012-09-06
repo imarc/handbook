@@ -10,4 +10,4 @@ Just show me the Handbook
 
 You can see the iMarc Handbook at
 
-+ http://handbook.imarc.net/
++ http://imarc.github.com/handbook
