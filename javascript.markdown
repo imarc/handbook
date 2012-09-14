@@ -32,7 +32,7 @@ Use tab character at the beginning of a line. A tab is expected to represent
 the width of four spaces.  For inline spacing, use spaces, not tabs.
 
 	if (condition) {
-		action; // indented with one tab
+	    action; // indented with one tab
 	}
 	var foo    = "far";    //lined up with spaces
 	var fooBar = "foobar"; //lined up with spaces

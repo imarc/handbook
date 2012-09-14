@@ -8,7 +8,7 @@ layout: default
 
 # Strategy
 
-This document outlines iMarc’s strategy process, methods, and deliverables. The strategy process incorporates practices from UX, IA, needs analysis, and even sales and business development.
+This document outlines iMarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
 
 iMarc is a full service web agency located north of Boston. Learn more at http://imarc.net.
 
@@ -17,66 +17,41 @@ iMarc is a full service web agency located north of Boston. Learn more at http:/
 
 ## Process
 
-The strategy process is provided to clients who have signed a proposal which includes a specified time and cost budget for strategy.
+The strategy process is provided to clients who have signed a proposal which includes a specified time and cost budget for strategy. Proposals that do explicitly define a strategy budget or scope should be turned down by the strategy team.
 
-### Beginning Strategy
+Strategy work should clarify the project for the client and production team while focusing on a positive end-user experience.
 
-Strategy begins with an internal handoff meeting between the proposal author and strategy team. Proposals that do not call out a strategy budget or scope should be turned down by the strategy team.
+The strategy lead is responsible for delivering change orders when the scope of the strategy phase, or the production work that strategy is defining, changes.
 
-The proposal author then makes it clear to the client that leadership is changing hands and the lead strategist is now their primary point of contact.
+### Kickoff
 
+Strategy begins with an internal handoff meeting between the proposal author and strategy team.
 
+The proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
 
 
 ### Goals
 
-Strategy builds upon previous discovery and must fulfill the terms of the proposal or SOW. Strategy should sanity check recommendations from the proposal with client needs, overriding those recommendations and changing course where necessary and agreeable with the client.
+Strategy sanity checks recommendations from the proposal with client needs.  Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
 
-Strategy produces a plan for production teams that is realistically possible within all project constraints. The work should clarify the project for the client and center around a positive end user experience.
-
-When proposals specify a time or cost budget for the production phase, strategy deliverables must define a project that can be easily produced within those limitations.
-
-The strategy lead is responsible for delivering change orders when the scope of the strategy phase, or the production work that strategy is defining, changes.
-
+When proposals specify time or cost budget for production, strategy deliverables must define a project that can be easily produced within those limitations.
 
 
 
 ### Approval
 
-The output of strategy are concrete reference documents. Deliverables are approved by the client and iMarc producer.
+The output of strategy are concrete reference documents. Deliverables are approved by the client and iMarc producer who will ultimately lead the production phase.
 
-Approved deliverables are handed off to the project’s Interactive Producer. The strategy lead then makes it clear to the client that leadership is changing hands and the Interactive Producer is now their primary point of contact.
+Approved deliverables are handed off to the project’s producer. 
 
-
-
-
-## Process: How We (Usually) Do This
-
-*In Progress*
-
-### Discovery 
- - Kickoff Meeting
- - Interviews with Stakeholders, Clients, Customers, etc
- - Web Analytics
- - Audience Analysis: Who they are, what they need or want, how we can provide that
-
-### Defining the Site or App 
- - Site Mapping
- - Wireframeing
- - Content Plan
- - Analytics Plan
-
-### Writing the Spec
-
- - Spec = Sitemap + Wireframes + Content Plan + Analytics Plan + //lots of detail//
- - Functional vs Technical 
+The strategy lead is responsible for notifying the client that project leadership is changing hands and the Interactive Producer is now their primary point of contact.
 
 
 
 
 ## Deliverables
 
-**Project Scope** is defined by a *Proposal* or by a *Statement of Work*. "Scope" means how many hours are allocated to the project's phases, and any mandatory features. Scope is restated in the *Functional Spec* or *Technical Spec*
+**Project Scope** is defined by a *Proposal* or a *Statement of Work*. "Scope" means how many hours are allocated to the project's phases, and any mandatory features. Scope is restated in the *Functional Spec* or *Technical Spec*
 
 **Project Requirements** are defined by a *Functional Spec* or a *Technical Spec*.
 
@@ -100,7 +75,7 @@ Approved deliverables are handed off to the project’s Interactive Producer. Th
  - Is not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor.
  - Defines project scope
  - Defines features and functionality
- - Usually does not include background research and discovery
+ - Usually does not include background research & discovery
  - Usually does not require a specification before production
 
 
@@ -120,7 +95,7 @@ The Functional Spec takes about 60 hours to produce, including all discovery, re
  - Describes front-end functionality (what, not how)
  - Typically includes the following [supporting documents](#SupportingDocuments)
    - [site map](#SiteMap)
-   - [homepage narrative] (#SiteMap)
+   - [homepage narrative](#HomepageNarrative)
  - Reviewed by Interactive Producer before finalization
  - May include or reference change orders vs the proposal scope
 
@@ -152,43 +127,56 @@ The Functional Specification or Technical Specification commonly include:
 
 
 
-#### Discovery Report
+### Discovery Report
 Brief document summarizing findings, including:
- 	- Business overview, including services and customers
- 	- Target audiences
- 	- Project goals, prioritized * (e.g., new business development, recruiting, membership growth, industry influence...) *
- 	- Project challenges * (e.g., competitors, company differentiators, technical isssues...) *
- 	- Notable trends in site analytics
- 	- Client interview and/or survey results * (if conducted) *
- 	- Baseline performance/analytics * (including conversion rates, if possible) *
- 	- Prioritized objectives
- 	- Initial recommendations
 
-The discovery document is typically 3-6 pages long. The primary purpose of this document is to ensure all stakeholders are aligned to the same objectives and priorities. Secondarily, it serves as a "checklist" of sorts for the next documents: site map, wireframes, specifications.
+ - Business overview, including services and customers
+ - Target audiences
+ - Project goals, prioritized
+ - Project challenges
+ - Notable trends in site analytics
+ - Client interview and/or survey results (if conducted)
+ - Baseline performance/analytics * (including conversion rates, if possible)
+ - Prioritized objectives
+ - Initial recommendations
+
+The discovery document is typically 2-6 pages. The primary purpose of this document is to ensure all stakeholders are aligned to the same objectives and priorities. Secondarily, it serves as a "checklist" of sorts for the next documents: site map, wireframes, specifications.
+
+
+
+### Analytics Report
+
+2–10 page document that summarizes website analytics indentifying the most important data pertaining to the upcoming project. The primary purpose of this document is to convey traffic data and trends in an easy to understand summarization.
 
 
 
 
-#### Homepage Narrative
+### Homepage Narrative
 
 Brief, 1-2 page document that defines all content, features and functionality required for the homepage. This simple list and description acts as a starting point for the design and creative phase.
 
 
 
 
-#### Site Map
+### Site Map
 
-Diagram showing the relationship of a web site's information. They are crucial to project planning and scope and are used throughout the project lifecycle.
- 	- iMarc uses site maps to convey content hierarchy, dynamic and CMS controlled content, and template usage.
+Diagram showing the relationship of a web site's information and organization of content. 
+ 	- iMarc uses site maps to convey content hierarchy, CMS controlled content, and template usage.
  	- Site maps create a navigational backbone for a website.
 
 *Example:*
 ![Sample Site map](img/sitemap.png)
 
 
+### Content Outline
+
+The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page.
+
+*Example:*
+![Sample Content Outline](img/content_outline.png)
 
 
-#### Wireframe
+### Wireframe
 
 User interface illustration stripped of all presentational style.
  	- Allows for rapid, efficient UI iteration
@@ -202,7 +190,7 @@ User interface illustration stripped of all presentational style.
 
 
 
-### Software & Templates
+## Software & Templates
 
 iMarc currently uses [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) for site maps and wireframes, but previously used a program called Inspiration. OmniGraffle is Mac-only software.
 
@@ -215,8 +203,63 @@ We usually write reports and specifications in [Word](http://www.microsoft.com/m
 
 
 
-## Tips
 
-*In Progress*
+## Template Meta Info
 
-Energistically e-enable superior communities through enterprise-wide portals. Progressively re-engineer interoperable ROI for tactical results. Holisticly brand technically sound alignments for real-time data.
+Strategy deliverables should contain some combination of the following meta information
+
+ - Wireframe title - Each wireframe should be given a title relevant to the template
+ - Updated date - When was this wireframe last updated?
+ - Version number - Give the wireframe a version number
+ - Annotations - Annotations describe behaviors, functionality, etc
+ - Author
+
+![Wireframe title, date, annotations](img/wireframe_meta.png)
+
+
+
+
+## Research Activities
+
+Depending on budget, a number of research levels can be incorporated
+into a project.
+
+
+### Stakeholder Interviews
+
+Identify and gain consus with the client who the key decision makers are. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
+
+Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project. 
+
+- What are the success metrics?
+- Who are the audience segments? 
+- Does any existing market research exist?
+
+
+### Competitive Analysis
+
+A competitive analysis can give customers a view of how their competitors fare on the web. 
+This analysis can include:
+
+- Layout - page density, visual impact
+- Navigations structure analysis - what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
+- SEO audit - pages indexed, meta and title info, sitemap XML and robots.txt audit 
+
+
+### Surveys (Quantitative Data)
+
+Surveys allow us to gather information on a large number of participants, yielding results in quantitative terms. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
+
+Questions are asked in a close-ended fashion (multiple choice, Yes/No, True/False). This allows for faster answering easy analysis. 
+
+iMarc prefers to use Survey Monkey, a tool that easily displays result patterns.
+
+
+### User Interviews (Qualitative Data)
+
+Speak to current and/or perspective users by conducting contextual, non-biased interviews. This can relate to UI components, design elements, document flow, feature importance, technical knowledge and more. User interviews can take place in person or remotely over the phone with screen sharing software. 
+
+
+
+
+

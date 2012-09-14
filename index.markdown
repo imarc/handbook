@@ -23,7 +23,7 @@ layout: notoc
 
 <dl>
     <dt>
-        <a href="ux">User Experience</a>
+        <a href="strategy">Strategy</a>
     </dt>
-    <dd>UX standards and processes</dd>
+    <dd>Strategy Processes</dd>
 </dl>
