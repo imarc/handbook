@@ -153,8 +153,8 @@ Brief, 1-2 page document that defines all content, features and functionality re
 ### Site Map
 
 Diagram showing the relationship of a web site's information and organization of content. 
- 	- iMarc uses site maps to convey content hierarchy, CMS controlled content, and template usage.
- 	- Site maps create a navigational backbone for a website.
+  - iMarc uses site maps to convey content hierarchy, CMS controlled content, and template usage.
+  - Site maps create a navigational backbone for a website.
 
 *Example:*
 ![Sample Site map](img/sitemap.png)
@@ -172,12 +172,12 @@ The content outline supplements a Site Map. A content mimics the the organizatio
 
 User interface illustration stripped of all presentational style. It's a bit of a "sneak preview" of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
 
-	- Allows for rapid, efficient UI iteration
-	- Conveys what a screen does
- 	- We often create multiple wireframes express various parts of the site
-	- Sometimes depict multiple parts of a single workflow; we call these *Storyboards*
-	- Almost always annotated to describe behaviors, functionality, and content needs.
- 	- Should not depict creative design. However, design is inexlicably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
+ - Allows for rapid, efficient UI iteration
+ - Conveys what a screen does
+ - We often create multiple wireframes express various parts of the site
+ - Sometimes depict multiple parts of a single workflow; we call these *Storyboards*
+ - Almost always annotated to describe behaviors, functionality, and content needs.
+ - Should not depict creative design. However, design is inexlicably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
 
 *Example:*
 ![Example of Wireframe](img/wireframe.png)
