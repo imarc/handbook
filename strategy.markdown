@@ -50,6 +50,57 @@ The strategy lead is responsible for notifying the client that project leadershi
 
 
 
+
+## Research Activities
+
+Depending on budget and goals, a number of research activities may be incorporated into a project.
+
+
+### Stakeholder Interviews (Qualitative)
+
+Identify and gain consus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
+
+Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
+- What are the success metrics?
+- Who are the audience segments?
+- What do their customers or users need?
+- Is there any market research?
+- What will make them successful?
+- What challenges do they face?
+
+Stakeholder interviews often turn up new information, issues and objectives.
+
+
+### Competitive Analysis (Qualitative)
+
+A competitive analysis can give customers a view of how their competitors fare on the web. This analysis can include:
+
+- Layout - page density, visual impact
+- Navigations structure analysis - what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
+- Content - how are they using content to persuade visitor? What is the style? who is it written for, and why?
+- SEO audit - pages indexed, meta and title info, sitemap XML and robots.txt audit 
+
+
+### Surveys (Quantitative)
+
+Surveys allow us to gather information from a large number of participants, yielding results in quantitative terms. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
+
+Questions are asked in a close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. 
+
+Surveys are most effective at measuring things we know about. They are ineffective at discovering the unknown.
+
+iMarc typically uses Survey Monkey, which has fairly good tools for finding patterns in responses and on-the-fly cross-tabulation.
+
+
+### User Interviews (Qualitative)
+
+Speak to current and/or perspective users by conducting contextual, non-biased interviews. This can relate to user interface components, design elements, document flow, feature importance, technical knowledge and more. 
+
+User interviews can take place in person or remotely over the phone with screen sharing software. Like stakeholder interviews, user interviews tend to result in new discoveries.
+
+
+
+
 ## Deliverables
 
 A **deliverable** is a document or similar work product you can give to someone.
@@ -195,8 +246,6 @@ iMarc generally uses the [Konigi stencil set](http://konigi.com/tools/omnigraffl
 We usually write reports and specifications in [Word](http://www.microsoft.com/mac/word), but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. (You can download branded templates from [our intranet](http://internal.imarc.net/).) We've used [Pages](http://www.apple.com/iwork/pages/) too; the revision tools aren't as robust but it's much better at handling images and styles, and less prone to crashing.
 
 
-
-
 ### Document Metadata
 
 Strategy deliverables should contain some combination of the following meta information.
@@ -209,58 +258,5 @@ Strategy deliverables should contain some combination of the following meta info
  - **Revision notes:** What changed in this revision; mainly used in requirements and specification documents.
 
 ![Wireframe title, date, annotations](img/metadata-wireframe.png)
-
-
-
-
-## Research Activities
-
-Depending on budget, a number of research activities may be incorporated into a project.
-
-
-### Stakeholder Interviews (Qualitative)
-
-Identify and gain consus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
-
-Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
-- What are the success metrics?
-- Who are the audience segments?
-- What do their customers or users need?
-- Is there any market research?
-- What will make them successful?
-- What challenges do they face?
-
-Stakeholder interviews often turn up new information, issues and objectives.
-
-
-### Competitive Analysis
-
-A competitive analysis can give customers a view of how their competitors fare on the web. This analysis can include:
-
-- Layout - page density, visual impact
-- Navigations structure analysis - what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
-- Content - how are they using content to persuade visitor? What is the style? who is it written for, and why?
-- SEO audit - pages indexed, meta and title info, sitemap XML and robots.txt audit 
-
-
-### Surveys (Quantitative)
-
-Surveys allow us to gather information from a large number of participants, yielding results in quantitative terms. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
-
-Questions are asked in a close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. 
-
-Surveys are most effective at measuring things we know about. They are ineffective at discovering the unknown.
-
-iMarc typically uses Survey Monkey, which has fairly good tools for finding patterns in responses and on-the-fly cross-tabulation.
-
-
-### User Interviews (Qualitative)
-
-Speak to current and/or perspective users by conducting contextual, non-biased interviews. This can relate to user interface components, design elements, document flow, feature importance, technical knowledge and more. 
-
-User interviews can take place in person or remotely over the phone with screen sharing software. Like stakeholder interviews, user interviews tend to result in new discoveries.
-
-
-
 
 
