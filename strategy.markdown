@@ -120,7 +120,7 @@ Typically takes 90–170 person-hours to produce, including all discovery, resea
 
 ## Supporting Documents
 
-The Requirements or Specification documents commonly include:
+Functional Requirements and Production Specification documents commonly include:
 
 
 ### Discovery Report
@@ -133,11 +133,10 @@ A brief document summarizing findings, including:
  - Project challenges
  - Notable trends in site analytics
  - Client interview and/or survey results (if conducted)
- - Baseline performance/analytics * (including conversion rates, if possible)
- - Prioritized objectives
- - Initial recommendations
+ - Baseline performance/analytics (including conversion rates, if possible)
+ - Recommendations
 
-The discovery document is typically 2-6 pages. The primary purpose of this document is to ensure all stakeholders are aligned to the same objectives and priorities. Secondarily, it serves as a "checklist" of sorts for the next documents: site map, wireframes, specifications.
+The discovery document is typically 2-6 pages. The primary purpose of this document is to ensure all stakeholders are aligned to the same objectives and priorities. Secondarily, it serves as a "checklist" of sorts for the next documents: site map, wireframes, and requirements or specifications.
 
 
 ### Analytics Report
@@ -162,7 +161,7 @@ Diagram showing the relationship of a web site's information and organization of
 
 ### Content Outline
 
-The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page.
+The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page. Typically a component of a Functional Requirements document.
 
 *Example:*
 ![Sample Content Outline](img/content_outline.png)
@@ -198,16 +197,16 @@ We usually write reports and specifications in [Word](http://www.microsoft.com/m
 
 
 
-## Template Metadata
+### Document Metadata
 
 Strategy deliverables should contain some combination of the following meta information.
 
- - **Client Name:** Example: "iMarc LLC"
+ - **Client bame:** Example: "iMarc LLC"
  - **Document title:** What is this and what role does it play in the project? Example: "Product Detail Page Wireframe"
  - **Updated date:** When was this wireframe last updated? Example: "September 14, 2012"
  - **Version number:** A collaboration aid. Example: "v7"
  - **Author:** Each document has one author. The last person to touch the document is the author of record and is responsible for its contents. Example: "David Tufts"
- - **Revision Notes:** what changed in this revision - mainly used in requirements and specification documents
+ - **Revision notes:** What changed in this revision; mainly used in requirements and specification documents.
 
 ![Wireframe title, date, annotations](img/metadata-wireframe.png)
 
