@@ -198,18 +198,18 @@ We usually write reports and specifications in [Word](http://www.microsoft.com/m
 
 
 
-## Template Meta Info
+## Template Metadata
 
 Strategy deliverables should contain some combination of the following meta information.
 
- - Client Name - Example: "iMarc LLC"
- - Document title - What is this and what role does it play in the project? Example: "Product Detail Page Wireframe"
- - Updated date - When was this wireframe last updated? Example: "September 14, 2012"
- - Version number - A collaboration aid. Example: "v7"
- - Author - Each document has one author. The last person to touch the document is the author of record and is responsible for its contents. Example: "David Tufts"
- - Revision Notes - what changed in this revision - mainly used in requirements and specification documents
+ - **Client Name:** Example: "iMarc LLC"
+ - **Document title:** What is this and what role does it play in the project? Example: "Product Detail Page Wireframe"
+ - **Updated date:** When was this wireframe last updated? Example: "September 14, 2012"
+ - **Version number:** A collaboration aid. Example: "v7"
+ - **Author:** Each document has one author. The last person to touch the document is the author of record and is responsible for its contents. Example: "David Tufts"
+ - **Revision Notes:** what changed in this revision - mainly used in requirements and specification documents
 
-![Wireframe title, date, annotations](img/wireframe_meta.png)
+![Wireframe title, date, annotations](img/metadata-wireframe.png)
 
 
 
