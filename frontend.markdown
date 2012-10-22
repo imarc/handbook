@@ -189,17 +189,19 @@ Include the following `author` meta tag in the had that attributes iMarc.
 
 ## Favicon
 
-While use can user either a PNG or an ICO for a website's favicon, you should continue using ICO's due to compatibility issues related to PNGs. All modern browsers look for a "favicon.ico" file in the root directory of your project, unless you specify another icon via a `<link>` in the head.
+iMarc uses ICO files for favicons. To ensure that your favicon is used, use a `<link>` in the head.
+
+	<link rel="shortcut icon" href="http://example.com/myicon.ico" />
 
 If you're using Photoshop, you should install the [ICO plugin](http://www.telegraphics.com.au/svn/icoformat/trunk/dist/README.html) which will allow you to save out ICO files. If you need to quickly create an ICO favicon and you don't have access to the plug-in, you can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon/).
 
-## Apple Touch Icon
+## Touch Icon
 
-The iPhone supports both a touch and start-up icon for our websites and web applications.
+iOS and Android both support a touch icon for our websites.
 
-The touch icon is specified in the head with a `<link>`.
+The touch icon is specified in the head with a `<link>`. Note that we use the precomposed version which removes the iOS filters(reflective sheen, drop shadow, rounded corners). Without the precomposed, the icons will not work on Android devices.
 
-	<link rel="apple-touch-icon" href="/custom_icon.png"/>
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
 Your touch icons should be a PNG at 512x512. It's possible to specify different sizes for different devices, but using a single high resolution touch icon is the easiest way to ensure the highest quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
