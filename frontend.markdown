@@ -187,11 +187,21 @@ Include the following `author` meta tag in the had that attributes iMarc.
 
 	<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
 
-## Favicon 
+## Favicon
 
 While use can user either a PNG or an ICO for a website's favicon, you should continue using ICO's. All modern browsers look for a "favicon.ico" file in the root directory of your project, unless you specify another icon via a `<link>` in the head.
 
 If you're using Photoshop, you should install the [ICO plugin](http://www.telegraphics.com.au/svn/icoformat/trunk/dist/README.html) which will allow you to save out ICO files. If you need to quickly create an ICO favicon and you don't have access to the plug-in, you can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon/).
+
+## Apple Touch Icon
+
+The iPhone supports both a touch and start-up icon for our websites and web applications.
+
+The touch icon is specified in the head with a `<link>`.
+
+	<link rel="apple-touch-icon" href="/custom_icon.png"/>
+
+Your touch icons should be a PNG at 512x512. It's possible to specify different sizes for different devices, but using a single high resolution touch icon is the easiest way to ensure the highest quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
 ## Content Descriptors
 
