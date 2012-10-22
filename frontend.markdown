@@ -189,7 +189,7 @@ Include the following `author` meta tag in the had that attributes iMarc.
 
 ## Favicon
 
-While use can user either a PNG or an ICO for a website's favicon, you should continue using ICO's. All modern browsers look for a "favicon.ico" file in the root directory of your project, unless you specify another icon via a `<link>` in the head.
+While use can user either a PNG or an ICO for a website's favicon, you should continue using ICO's due to compatibility issues related to PNGs. All modern browsers look for a "favicon.ico" file in the root directory of your project, unless you specify another icon via a `<link>` in the head.
 
 If you're using Photoshop, you should install the [ICO plugin](http://www.telegraphics.com.au/svn/icoformat/trunk/dist/README.html) which will allow you to save out ICO files. If you need to quickly create an ICO favicon and you don't have access to the plug-in, you can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon/).
 
