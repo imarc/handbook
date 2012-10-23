@@ -41,7 +41,7 @@ en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 * (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
 * (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
 
-Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
+Em dashesxxx have been dropped based on Robert Bringhurst’s recommendation in 
 [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
   The em dashs is the nineteenth-century standard, still prescribed in many 
