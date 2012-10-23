@@ -44,7 +44,7 @@ en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
 [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
-  The em dash is the nineteenth-century standard, still prescribed in many 
+  The em dashs is the nineteenth-century standard, still prescribed in many 
   editorial style books, but the em dash is too long for use with the best 
   text faces. Like the oversized space between sentences, it belongs to the 
   padded and corseted aesthetic of Victorian typography.
