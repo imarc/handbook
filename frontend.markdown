@@ -263,13 +263,12 @@ Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
 
 ## Naming Conventions
 
-### Using Classes and IDs
+### Use Only Class Selectors
 
-Classes and IDs should all be lowercase, and use an underscore in between words.
+To avoid CSS specificity issues, use only class selectors when marking up HTML.
+The exception to this rule is the ID that is placed on the `body` tag.
 
-Assign meaningful classes to elements when appropriate for style or 
-interaction. IDs are acceptable only when it is necessary to identify a 
-unique element on the page.
+Classes should be lowercase, using underscores between words.
 
 Classes have the benefit of being highly reusable. By utilizing classes, we 
 can write leaner, more reusable CSS.
@@ -298,11 +297,11 @@ context of a sidebar.
 Most page layouts can generally be thought of in three primary parts. These
 structural names should be used as IDs in the markup.
 
-* #### header
+- #### header
   Global navigation, logo, utility links, typically at the top of a page.
-* #### torso
+- #### torso
   Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
-* #### footer
+- #### footer
   Links and global content that typically follow the content.
 
 Example diagram:
@@ -313,15 +312,15 @@ Example diagram:
 Within the structural elements, navigation should be described using the 
 following terminology.
 
-* #### primary\_nav::
+- #### primary_nav
 	Links to top-level pages representing the first level of directories
-* #### secondary\_nav::
+- #### secondary\_nav
 	Links to pages within a single section; direct children of a single primary\_nav item
-* #### tertiary\_nav::
+- #### tertiary\_nav
 	Links to pages representing direct children of a single secondary\_nav item
-* #### supplemental\_nav::
+- #### supplemental\_nav
 	Top-teir navigation that is visually de-emphasized. It always supplements the primary\_nav.
-* #### utility::
+- #### utility::
 	Element that holds global utility functions and links, such as login forms, links to secondary or tertiary pages called out globally, messaging, forms
 
 ![Navigation naming conventions](img/naming_navigation.jpg)
