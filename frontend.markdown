@@ -41,7 +41,7 @@ en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 * (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
 * (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
 
-Em dashesxxx have been dropped based on Robert Bringhurst’s recommendation in 
+Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
 [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
   The em dashs is the nineteenth-century standard, still prescribed in many 
@@ -49,12 +49,7 @@ Em dashesxxx have been dropped based on Robert Bringhurst’s recommendation in
   text faces. Like the oversized space between sentences, it belongs to the 
   padded and corseted aesthetic of Victorian typography.
 
-## Line Breaks
-
-Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
-or Mac (`\r`) breaks. 
-
-## Style
+## Coding Style
 
 Consistent coding style for HTML and CSS is vital because multiple people 
 collaborate on a site’s markup and style. 
@@ -62,20 +57,19 @@ collaborate on a site’s markup and style.
 ### Indenting & Spacing
 
 Use tab character at the beginning of a line. A tab is expected to represent
-the width of four spaces.  For inline spacing, use spaces, not tabs.
+the width of four spaces. For inline spacing, use spaces, not tabs.
 
 	.header {
-		width: 40em;
-		margin: 1em auto;
+	    width: 40em;
+	    margin: 1em auto;
+	}
 
-	.event\_month { float: right; }
-	.event\_day   { display: block; }
-	.event\_year  { float: left; }
+### Line Breaks
 
-Since inline content is lined up with spaces, a monospaced font is always used 
-when editing code.
+Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
+or Mac (`\r`) breaks. 
 
-### Formatting Markup
+### Markup Formatting
 
 Keep markup at a reasonable width. When markup surrounds 
 a significant amount of content, place the tags on their own line, 
@@ -86,30 +80,80 @@ indent the content, and hard-wrap content at about 80 characters.
 
 	<!-- Instead, DO THIS -->
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla 
-		libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed 
-		ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit 
-		a sollicitudin sagittis.
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla 
+	    libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed 
+	    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit 
+	    a sollicitudin sagittis.
 	</p>
 	<ul>
-		<li>
-			Foo is listed first – ipsum dolor sit amet, consectetur adipiscing 
-			elit fringilla libero id quam semper semper.
-		</li>
+	    <li>
+	        Foo is listed first – ipsum dolor sit amet, consectetur adipiscing 
+	        elit fringilla libero id quam semper semper.
+	    </li>
 	</ul>
 
 With short lines of content, the tag and content can stay on the same line.
 
 	<ul>
-		<li>Foo is listed first</li>
-		<li>Bar follows</li>
-		<li>Baz is typically last</li>
+	    <li>Foo is listed first</li>
+	    <li>Bar follows</li>
+	    <li>Baz is typically last</li>
 	</ul>
+
+### Stylesheet Formatting
+
+Style rules with more than one property should have each property on a new 
+indented line. When there is more than one selector for a single rule, 
+each selector goes on its own line. The close brace should be on its own 
+line at the same indentation as the style selector.
+
+	html,
+	body {
+	    color: #000;
+	    background: #FFF;
+	}
+
+Stylesheets should be organized in a logical manner. Related style rules should 
+be grouped together in ascending order of specificity. Style rules with nested 
+specificity should be indented accordingly.
+
+Each property should have a space between the colon and the value, and should
+end with a semi-colon. 
+
+	.header {
+	    background: #EEE;
+	}
+	    .header .content {
+	        padding: 0;
+	        margin: 0 auto;
+	        background: none;
+	    }
+	      .header .content .title {
+	          margin: 0;
+	          float: left;
+	          line-height: 3;		
+	          color: #000000;
+	          font-size: 24px;
+	          font-weight: normal;
+	          font-family: Helvetica, Arial, sans-serif;			
+	      }
+
+To visually divide a style sheet, use the following comment style as a section 
+indicator.
+
+	/* --------------------------------------------------------------------- */
+	/* Layout
+	/* --------------------------------------------------------------------- */ 
+
+### Inline Styles
+
+Inline styles should not be used. Instead, use a class or ID selector to apply
+style from a stylesheet.
 
 ## Storing and Naming Files
 
 Stylesheets, images, and other supporting files are stored in the root 
-directory. 
+directory in respective folders.
 
 CSS files are stored under `/css/`.
 
@@ -131,8 +175,8 @@ Images should reside under `/img/` and can be stored into subfolders if you wish
 All pages should work in every browser, even if they don’t look the same 
 across all browsers.
 
-The following is excerpted from our standard proposal. Frontend markup must 
-meet the expectation level set with the client.
+The following is excerpted from our standard proposal. **Frontend markup must 
+meet the expectation level set with the client.**
 
 > iMarc tests on Windows and OS X operating systems and current versions of 
 > major browsers, including: Internet Explorer, Firefox, Chrome and Safari.
@@ -156,50 +200,60 @@ meet the expectation level set with the client.
 The text and visual content of a page should always be accessible. The layout 
 of a page should not appear discernibly broken.
 
-## HTML5 and CSS3 Compatability
+### CSS3
 
-If you choose to use HTML5 elements, you should use [Modernizr](http://modernizr.com/) 
-to ensure backwards compatability with older version of browsers.
+Use CSS3 as a visual enhancement for supporting browsers. It should never 
+detract from the experience of browsers that do not support a particular rule.
 
-Modernizr detects what the browser's rendering engine supports, and allows you to customize 
-the look of the website depending on what is and isn't allowed.
+[The CSS3 Rule Generator](http://css3generator.com)
 
-HTML5shim/shiv has been incorporated into Modernizr, so you should not use both.
+Include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility, Prefixed styles should be grouped together with the related styles.
+
+	.callout {
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-topright: 5px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 5px;
+	}
 
 
-## Validation
+## Doctype
 
-Use the HTML 5 Doctype declaration instead of the older XHTML 1.0 Strict.
+Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype declaration instead of the older XHTML 1.0 Strict.
 
 	<!DOCTYPE html>
 
-More on the [HTML5 Doctype](http://www.w3schools.com/html5/tag_doctype.asp).
+While we are utilizing the HTML5 doctype, we are not marking up pages using HTML5 elements such as `header`, `section`, `figure`, etc.  
+
+### Validation
 
 All HTML and CSS should be valid. Markup should be well-formed and contain all 
 required attributes. Elements should occur within the proper context of the DOCTYPE.
 
 * HTML should validate with the [W3C Markup Validation Service](http://validator.w3.org/).
-* Style sheets should validate with the [http://jigsaw.w3.org/css-validator/ W3C CSS Validation Service].
+* Style sheets should validate with the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator).
 
 ## iMarc Credits
 
-Include the following `author` meta tag in the had that attributes iMarc.
+Include the following meta tag in the head to credit iMarc.
 
 	<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
 
 ## Favicon
 
-iMarc uses ICO files for favicons. To ensure that your favicon is used, use a `<link>` in the head.
+Use ICO files for favicons using the code snippet below.
 
 	<link rel="shortcut icon" href="http://example.com/myicon.ico" />
 
-If you're using Photoshop, you should install the [ICO plugin](http://www.telegraphics.com.au/svn/icoformat/trunk/dist/README.html) which will allow you to save out ICO files. If you need to quickly create an ICO favicon and you don't have access to the plug-in, you can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon/).
+If you’re using Photoshop, you should install the [ICO plugin](http://www.telegraphics.com.au/svn/icoformat/trunk/dist/README.html) which will allow you to save out ICO files. If you need to quickly create an ICO favicon and you don't have access to the plug-in, you can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon/).
 
-## Touch Icon
+## Touch Icons
 
-iOS and Android both support a touch icon for our websites.
+iOS and Android devices both support touch icons.
 
-The touch icon is specified in the head with a `<link>`. Note that we use the precomposed version which removes the iOS filters(reflective sheen, drop shadow, rounded corners). Without the precomposed, the icons will not work on Android devices.
+Using a precomposed touch icon removes iOS effects (reflective sheen, drop shadow, rounded corners). Touch icons will not work on Android devices without the precomposed attribute value.
 
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
@@ -240,7 +294,7 @@ The meta description should be less than 160 characters.
 
 	<meta name="description" content="iMarc creates web sites &amp; applications for discerning clients. Strategy, marketing, design and programming since 1997. Newburyport, MA — 978-462-8848" />
 
-## Browser Targeting
+## Conditional Comments
 
 Frontend code should apply to all supported browsers. When necessary, use
 [conditional comments](http://www.quirksmode.org/css/condcom.html) to target specific 
@@ -248,10 +302,13 @@ versions of Internet Explorer.
 
 Style written specifically for Internet Explorer should be placed inside a 
 properly scoped conditional stylesheet. This example comment targets Internet Explorer
-less than or equal to version 6:
+less than or equal to version 6 and Internet Explorer 7 only:
 
 	<!--[if lte IE 6]>
-		<link rel="stylesheet" href="/css/lte_ie6.css" />
+	    <link rel="stylesheet" href="/css/site/lte_ie6.css" />
+	<![endif]--> 
+	<!--[if IE 7]>
+	    <link rel="stylesheet" href="/css/site/ie7.css" />
 	<![endif]-->
 
 ## Presentational Elements
@@ -273,6 +330,18 @@ Classes should be lowercase, using underscores between words.
 Classes have the benefit of being highly reusable. By utilizing classes, we 
 can write leaner, more reusable CSS.
 
+#### Choose Meaningful Names
+
+Choose names that accurately describe the content, not the visual container. 
+Avoid choosing presentational names.
+
+For example, `meta` is an acceptable class name while `sidebar_info` is not. The 
+described content will always be `meta`; it might not always be in the 
+context of a sidebar.
+
+* Meaningful class names might be: `main`, `aside`, `record_detail`.
+* Bad CSS classes would be: `left_column`, `blue_callout`, `hidden`. 
+
 ### Body Classes and IDs
 
 Use classes on the body element to denote current section. Use an optional ID 
@@ -280,48 +349,29 @@ if needed for targeting styles for specific pages.
 
 	<body class="products" id="macbook_pro">
 
-### Choose Meaningful Names
-
-Choose names that accurately describe the content, not the visual container. 
-Avoid choosing presentational names.
-
-For example, `meta` is an acceptable class name while `sidebar_info` is not. The 
-described content will always be //meta//; it might not always be in the 
-context of a sidebar.
-
-- Meaningful class names might be: `main`, `aside`, `record_detail`.
-- Bad CSS classes would be: `leftColumn`, `blue_callout`, `hidden`. 
-
 ### Structure
 
 Most page layouts can generally be thought of in three primary parts. These
-structural names should be used as IDs in the markup.
+structural names should be used as classes in the markup.
 
-* #### header
-  Global navigation, logo, utility links, typically at the top of a page.
-* #### torso
-  Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
-* #### footer
-  Links and global content that typically follow the content.
+* **header** – Global navigation, logo, utility links, typically at the top of a page.
+* **torso** – Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
+* **footer** – Links and global content that typically follow the content.
 
-Example diagram:
+
 ![Structural naming conventions](img/naming_structure.jpg)
+
 
 ### Navigation 
 
 Within the structural elements, navigation should be described using the 
 following terminology.
 
-* #### primary_nav
-	Links to top-level pages representing the first level of directories
-* #### secondary\_nav
-	Links to pages within a single section; direct children of a single primary\_nav item
-* #### tertiary\_nav
-	Links to pages representing direct children of a single secondary\_nav item
-* #### supplemental\_nav
-	Top-teir navigation that is visually de-emphasized. It always supplements the primary\_nav.
-* #### utility::
-	Element that holds global utility functions and links, such as login forms, links to secondary or tertiary pages called out globally, messaging, forms
+* **primary_nav** – Links to top-level pages representing the first level of directories
+* **secondary_nav** – Links to pages within a single section; direct children of a single primary_nav item
+* **utility_nav** – Navigation that holds global utility links (e.g. login, shopping cart)
+* **tertiary_nav** – (not pictured) Links to pages representing direct children of a single secondary_nav item
+
 
 ![Navigation naming conventions](img/naming_navigation.jpg)
 
@@ -329,84 +379,112 @@ following terminology.
 Within navigation elements, there may be a different style to denote the current 
 page or section.
 
- active::
-  The currently viewed item in any navigation (primary_nav, secondary_nav, etc.)
- 
+* **active** – The currently viewed item in any navigation (primary_nav, secondary_nav, etc.)
+
+
 ![Active states in navigation](img/naming_navigation_2.jpg)
+
 
 ### Content
 
-* #### main
-  The purpose of the page, whatever the most important content is.
-* ### supplemental
-  Any auxiliary content or related info
-* ### section
-  Holds part of the main or supplement content
-* ### callout
-  A summary of existing content edited and styled for emphasis
-* ### highlight
-  Inline content styled for visual emphasis
+* **main** – The purpose of the page, whatever the most important content is
+* **aside** – Any auxiliary content or related info
+* **section** – Holds part of the main or aside content
+* **highlight** – Inline content styled for visual emphasis
 
-Example diagram:
+
 ![Content naming conventions](img/naming_content.jpg)
+
 
 ### Messaging
 
-* #### success::
-  Confirmation after an action has successfully completed
-* #### info::
-  Informative message
-* #### error::
-  Notification that an action had problems
-* #### help::
-  Coaching or guidance; typically inline
+* **success** – Confirmation after an action has successfully completed
+* **info** – Informative message
+* **error** – Notification that an action had problems
+* **help** – Coaching or guidance; typically inline
+
+
+Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating
+CSS rules.
+
+	<div class="messaging success">
+	   <p>
+	      Congratulations! You have signed up for ACME’s business afterhours.
+	   </p>
+	</div>
 
 ### Complete Page Markup
 
-This is an example of a complete page using the naming conventions described above.
+This is an example of a complete page using some of the the naming conventions described above.
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+        <title>Title</title>
+	    <meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
+	    <meta charset="utf-8" />
+	    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png" />
+	    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+	    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="all" />
+	    <!--[if lt IE 9]>
+		    <link href="/css/site/lt_ie9.css" rel="stylesheet" type="text/css">
+		<![endif]-->
+	</head>
 
 	<body>
-		<div id="header">
-			<ul class="primary_nav">
-				<li>
-				  <a href="#">a link</a>
-				  <a href="#" class="active">another link</a>
-				</li>
-			</ul>	
-			<ul class="secondary_nav">
-				<li>
-				  <a href="#">a link</a>
-				</li>
-			</ul>	
-			<ul class="tertiary_nav">
-				<li>
-				  <a href="#">a link</a>
-				</li>
-			</ul>	
-		</div>
-		<div id="torso">
-			<div class="main">
-				<div class="info">
-					this is an info utility area
-				</div>
-				<ul class="supplemental_nav">
-					<li>
-						<a href="#">a link</a>
-					</li>
-				</ul>
-				<div class="section">
-					this is the <span class="highlight">main content</span>
-					<div class="callout">
-						this is a callout
-					</div>
-				</div>
-			</div>
-			<div class="supplemental">
-				this is supplemental to the main content
-			</div>
-		</div>
-		<div id="footer">
-			this is a footer
+	    <div class="header">
+	        <ul class="utility_nav">
+	            <li>
+	                <a href="#">Log In</a>
+	            </li>
+	            <li>
+	                <a href="#">Cart</a>
+	            </li>
+	        </ul>	
+	        <ul class="primary_nav">
+	            <li class="active">
+	                <a href="#">Products</a>
+	            </li>
+	            <li>
+	                <a href="#">Services</a>
+	            </li>
+	            <li>
+	                <a href="#">About</a>
+	            </li>
+	        </ul>	
+	    </div>
+	    <div class="torso group">
+	        <div class="main">       
+	            <p class="highlight">
+	                Integer posuere erat a ante venenatis dapibus posuere velit.
+	            </p>
+	            <p>
+	                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+	                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante 
+	                venenatis dapibus posuere velit aliquet.
+	            </p>
+	        </div>
+	    </div>
+	    <div class="aside">
+            <ul class="secondary_nav">
+                <li>
+                    <a href="#">iPod</a>
+                </li>
+                <li>
+                    <a href="#">iPad</a>
+                </li>
+                <li>
+                    <a href="#">iPhone</a>
+                </li>
+            </ul>
+	        <div class="section">
+	            <p>
+	                Find us on our social networks.
+	            </p>
+	        </div>
+	    </div>
+		<div class="footer">
+		    this is a footer
 		</div>
 	</body>
 
@@ -546,7 +624,7 @@ should be associated directly with inputs.
 
 ## Tables
 
-### Table Structure
+### Structure
 
 All Tables should adhere to proper structure, including `thead`, `tfoot`, 
 and `tbody` when appropriate table content exists.
@@ -579,7 +657,7 @@ and `tbody` when appropriate table content exists.
 		</tbody>
 	</table>
 
-## Summaries
+### Summaries
 
 Tables should contain a summary attribute, which should summarize the table contents.
 
@@ -609,61 +687,6 @@ on each table cell. The only style properties that should be modified cross-brow
 		</tr>
 	</table>
 
-## Stylesheet Formatting
-
-Stylesheets should be organized in a logical manner. Related style rules should 
-be grouped together in ascending order of specificity. Style rules with nested 
-specificity should be indented accordingly.
-
-Each property should have a space between the colon and the value, and should
-end with a semi-colon. 
-
-	.header {
-		background: #EEE;
-	}
-		.header .content {
-			padding: 0;
-			margin: 0 auto;
-			background: none;
-		}
-			.header .content .title {
-				margin: 0;
-				float: left;
-				line-height: 3;		
-				color: #000000;
-				font-size: 24px;
-				font-weight: normal;
-				font-family: Helvetica, Arial, sans-serif;			
-			}
-
-To visually divide a style sheet, use the following comment style as a section 
-indicator.
-
-	/* --------------------------------------------------------------------- */
-	/* Layout
-	/* --------------------------------------------------------------------- */ 
-
-Style rules with one style property may be written on one line, with a single 
-space between braces.
-
-	body { background: #FFF; }
-
-Style rules with more than one property should have each property on a new 
-indented line. When there is more than one selector for a single rule, 
-each selector goes on its own line. The close brace should be on its own 
-line at the same indentation as the style selector.
-
-	html,
-	body {
-		color: #000;
-		background: #FFF;
-	}
-
-### Inline Styles
-
-Inline styles should not be used. Instead, use a class or ID selector to apply
-style from a stylesheet.
-
 ## Browser Reset
 
 A browser reset should be the first style added to a greenfield project. 
@@ -674,10 +697,60 @@ Use iMarc’s standard browser reset at the beginning of your CSS file.
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	del, dfn, em, font, img, ins, kbd, q, s, samp, 
 	small, strike, strong, sub, sup, tt, var,
-	b, u, i, center,
-	dl, dt, dd, ol, ul, li,
+	b, u, i, center, dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    outline: 0;
+	    font-size: 100%;
+	    vertical-align: baseline;
+	    background: transparent;
+	}
+	body {
+	    line-height: 1;
+	}
+
+iMarc’s browser reset is derived from the [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
+
+After resetting, make sure you apply some [sane defaults](#SaneDefaults) and 
+test all markup with our [markup tester](#MarkupTest).
+
+### Sane Defaults
+
+A browser reset only does half the job. Elements that get reset, must then be 
+set to sane defaults. This allows markup to render as most expect it, even 
+before the stylesheet is updated to accommodate a specific design.
+
+Start with the following sane defaults and update them as the design requires.
+
+	/* --------------------------------------------------------------------- */
+	/*	Acme Agency
+	/*	TABLE OF CONTENTS
+	/* --------------------------------------------------------------------- */
+	/*
+	/*	reset
+	/*	grouping
+	/*	base
+	/*	layout
+	/*	forms
+	/*	tables
+	/*	page specific
+	/*
+
+	/* --------------------------------------------------------------------- */
+	/* reset
+	/* --------------------------------------------------------------------- */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp, 
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li,
 	fieldset, form, label, legend,
 	table, caption, tbody, tfoot, thead, tr, th, td {
 		margin: 0;
@@ -688,181 +761,244 @@ Use iMarc’s standard browser reset at the beginning of your CSS file.
 		vertical-align: baseline;
 		background: transparent;
 	}
+	body { line-height: 1;}
 
-iMarc’s browser reset is derived from http://meyerweb.com/eric/tools/css/reset/
+	/* --------------------------------------------------------------------- */
+	/* grouping
+	/* --------------------------------------------------------------------- */
+	.group:after {
+		content: ".";
+		font-size: 0;
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
 
-After resetting, make sure you apply some [#SaneDefaults sane defaults] and 
-test all markup with our [#MarkupTester markup test].
-
-### Sane Defaults
-
-A browser reset only does half the job. Elements that get reset, must then be 
-set to sane defaults. This allows markup to render as most expect it, even 
-before the stylesheet is updated to accommodate a specific design.
-
-Start with the following sane defaults and update them as the design requires.
-
+	/* --------------------------------------------------------------------- */
+	/* base
+	/* --------------------------------------------------------------------- */
 	html {
-		color: #000;
 		background: #FFF;
 	}
-
 	body {
-		width: 960px;
-		padding: 24px;
-		margin: 0 auto;
-		font-size: 16px;
+		color: #717073;
+		font-family: Arial, sans-serif;
+		font-size: 13px;
 		line-height: 1.5;
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
-
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #444;
+		font-weight: normal;
+		margin: 0 0 0.2em;
+	}
 	h1 {
-		font-size: 36px;
-		line-height: 1.33;
-		margin-bottom: 0.66em;
+		font-size: 32px;
+		line-height: 1.2;
+		margin: 0 0 0.5em;
 	}
-
 	h2 {
 		font-size: 24px;
-		line-height: 1.0;
-		margin-bottom: 1em;
 	}
-
 	h3 {
-		font-size: 21px;
-		line-height: 1.14;
-		margin-bottom: 1.14em;
-	}
-
-	h4 {
 		font-size: 18px;
-		line-height: 1.33;
-		margin-bottom: 1.33em;
 	}
-
+	h4 {
+		font-size: 16px;
+	}
 	h5 {
-		margin-bottom: 1.5em;
+		font-size: 14px;
 	}
-
-	h6 {
-		font-weight: normal;
-		margin-bottom: 1.5em;
+	p, 
+	ul, 
+	ol, 
+	dl, 
+	img, 
+	iframe  { 
+		margin: 0 0 1.4em;
 	}
-
-	p {
-		margin-bottom: 1.5em;
-	}
-
-	ul {
-		margin: 0 0 1.5em 3em;
-	}
-
-	ol {
-		margin: 0 0 1.5em 3em;
-	}
-
-	dl {
-		margin-bottom: 1.5em;
-	}
-
-	dt {
-		font-weight: bold;
-	}
-
-	dd {
-		margin: 0 0 0 3em;
-	}
-
-	tt, 
-	code {
-		background: #EEE;
-		font-family: Consolas, Monaco, monospace;
-	}
-
-	pre {
-		background: #EEE;
-		font-family: Consolas, Monaco, monospace;
-		padding: 1.5em;
-		margin: 0 0 1.5em 0;
-	}
-
 	blockquote {
 		padding: 0 0 0 15px;
 		margin: 0 0 1.5em 1.5em;
-		border-left: 1px solid #CCC;
+	}
+	a {
+		color: #487c3d;
+	}
+	a:hover { 
+		color: #214919;
 	}
 
-	/* tables still need 'cellspacing="0"' in the markup */
-	table {
-		width: 100%;
-		border-spacing: 0;
-		margin-bottom: 1.5em;
-		border-collapse: collapse;
-	}
 
-	th {
-		padding: .83em;
-		text-align: left;
-		border-bottom: 1px solid #999;
-	}
+	/* --------------------------------------------------------------------- */
+	/* layout
+	/* --------------------------------------------------------------------- */
 
-	td {
-		padding: .83em;
-		border-bottom: 1px solid #CCC;
-	}
+	/* header */
+	.header {
 
-	form {
-		margin: 1em 0;
 	}
-		form fieldset {
-			margin: .5em 0 1.5em 0;
-		}
-		form fieldset h3 {
-			margin-bottom: .5em;
-			border-bottom: 1px solid #CCC;
-		}
-		form .text label, 
-		form .password label, 
-		form .radios label, 
-		form .checkboxes label, 
-		form .select label, 
-		form .textarea label, 
-		form .file label {
-			display: block;
-		}
-			form .radios .radio label, 
-			form .checkboxes .checkbox label {
-				display: inline;
-			}
 			
-		form textarea {
-			width: 100%;
+	/* primary nav */
+	.primary_nav {
+
+	}
+											
+	.site {
+		margin: 0 auto;
+		width: 960px;
+	}
+		.torso {
+			padding: 0 0 30px;
 		}
-		
-		form textarea,
-		form .text input, 
-		form .password input {
-			font-size: 16px;
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			.main {
+				position: relative;
+			}
+			.aside {
+				width: 236px;
+			}
+
+	/* footer */
+
+	.footer {
+
+	}	
+
+			
+	/* --------------------------------------------------------------------- */
+	/* forms
+	/* --------------------------------------------------------------------- */
+
+	form label {
+		display: block;
+		font-weight: bold;
+		margin: 0 0 5px;
+	}
+	span.required {
+		color: #ac181b;
+		font-size: 12px;
+	}
+	.text,
+	.password,
+	.entry,
+	.file,
+	.checkboxes,
+	.select,
+	.radios,
+	.textarea,
+	.submit {
+		margin-bottom: 12px;
+	}
+		.text input,
+		.password input,
+		.textarea textarea {
+			background: #FFF;
+			border: 1px solid #AAA;
+			color: #444;
+			font-family: Arial, sans-serif;
+			padding: 5px;
+			font-size: 12px;
 		}
+	.textarea textarea {
+		height: 150px;
+		width: 360px;
+	}
+	.checkbox input,
+	.radio input {
+		float: left;
+		margin: 2px 4px 0 0;
+		width: 16px;
+	}
+	.checkbox label,
+	.radio label {
+		display: inline;
+	}
 
 	/* messaging */
-	.success { }
-	.info { }
-	.error { }
-	.help { }
+	.error,
+	.info,
+	.success {
+		color: #FFF;
+		font-size: 14px;
+		margin: 20px 0 30px;
+		padding: 16px 18px 16px 58px;
+	}
+	.error   { 
+		background: #dc4405;
+		border-top: 1px solid #df4242;
+	}
+	.success { 
+		background: #215732; 
+		border-top: 1px solid #36d275;
+	}
+	.info    { 
+		background: #ebf2b9;
+		border-top: 1px solid #fbffe2;
+		color: #333;
+	}
 
-	/* content areas */
-	.section { }
-	.callout { }
-	.highlight { }
+		.error a,
+		.info a,
+		.success a {
+			font-weight: bold;
+			text-decoration: underline;
+		}
+		.error a,
+		.success a {
+			color: #FFF;
+		}
+		.info a {
+			color: #333;
+		}
+		.error p,
+		.info p,
+		.success p {
+			margin: 0;
+		}
+		.error ul,
+		.info ul,
+		.success ul {
+			list-style-type: disc;
+			margin: 8px 0 0 30px;
+		}
+		.error li,
+		.info li,
+		.success li {
+			background: none;
+			margin: 0 0 .2em;
+			padding: 0;
+		}
 
-Double check your CSS with our [#MarkupTester markup test].
+
+	/* --------------------------------------------------------------------- */
+	/* tables
+	/* --------------------------------------------------------------------- */
+
+	table {
+		border-collapse: collapse;
+		margin: 0;
+	}
+	td, th {
+		text-align: left;
+	}
+
+	/* --------------------------------------------------------------------- */
+	/* page specific
+	/* --------------------------------------------------------------------- */
+
+	/* homepage
+	/* --------------------------------------------------------------------- */
+
+
+Double check your CSS with our [markup test](#MarkupTester).
 
 ## Group Clearfix
 
-Use the "group" class to clear parent elements with floated children. It allows 
-for parent elements to be more easily styled.
+Use the _group_ class to on parent elements to properly contain floats within it.
 
 	.group:after {
 		content: ".";
@@ -872,8 +1008,8 @@ for parent elements to be more easily styled.
 		visibility: hidden;
 	}
 
-To get the group clearfix to work in IE6 and IE7, it is necessary to include
-the following rules within conditional comments.
+To get the _group_ method to work in IE6 and IE7, it is necessary to include
+the following rules within their respective conditional stylesheets.
 
 	/* IE6 */
 	.group { height: 1%; }
@@ -889,14 +1025,14 @@ Use floats to construct layouts instead of frames, iframes, or tables.
 This maintains the flow of the page, and allows acceptable control over 
 source ordering.
 
-## Type
+## Typography
 
 The default type size and font for a site should be set on the `body` element.
 
-body {
-	font-size: 16px;
-	font-family: Constantia, Lucida, Georgia, serif;
-}
+	body {
+	    font-size: 16px;
+	    font-family: Arial, Helvetica, serif;
+	}
 
 Do not set sizes on unclassed markup that typically should be rendered as 
 the default text size. This includes `p`, `li`, `div`, `td`, `a`.
@@ -905,51 +1041,61 @@ Use pixel units to size type. Use the `em` unit to set the top and bottom margin
 Leading, or `line-height`, should be a unitless measure.
 
 	h1 {
-		font-size: 36px;
-		line-height: 1.33;
-		margin: 0 0 .66em 0;
+	    font-size: 36px;
+	    line-height: 1.33;
+	    margin: 0 0 .66em 0;
 	}
+
+### Font Stacks
+
+Specify font families using font stacks. This provides appropriate fall-back 
+fonts to handle when a specified font may not be available.
+
+Default **serif** font stack:
+
+font-family: Constantia, Lucida, Georgia, serif;
+
+Default **sans-serif** font stack:
+
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
+`fantasy`, or `monospace`. This provides a fallback in case all other fonts 
+in the stack are unavailable.
+ 
 
 ### @font-face
 
-Use bulletproof syntax to include font files with `@font-face`. Appropriate 
+Use the following syntax to include font files on the web with `@font-face`. Appropriate 
 file formats should be provided for supported browsers.
 
-Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax Ethan Dunham at Font Spring]):
+Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Font Squirrel)):
 
-	@font-face {
-		font-family: 'ExpresswayRegular';
-		src: url('../../fonts/expressway_rg-webfont.eot?') format('eot'),    	    
-			 url('../../fonts/expressway_rg-webfont.woff') format('woff'),
-			 url('../../fonts/expressway_rg-webfont.ttf')  format('truetype'),
-			 url('../../fonts/expressway_rg-webfont.svg#webfont') format('svg');
-	}
+    @font-face {
+        font-family: 'DearestRegular';
+        src: url('/fonts/Dearest-webfont.eot');
+        src: url('/fonts/Dearest-webfont.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/Dearest-webfont.woff') format('woff'),
+             url('/fonts/Dearest-webfont.ttf') format('truetype'),
+             url('/fonts/Dearest-webfont.svg#DearestRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
 
-Font Squirrel has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) 
-that can convert font files to various formats.
+Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) that can convert font files to various formats. Make sure you check with your producer regarding the use of web fonts as there are licensing requirements for certain fonts.
 
-## CSS3
+[Google Web Fonts](http://www.google.com/webfonts) is a free web font collection iMarc has used.
 
-Use CSS3 as a visual enhancement for supporting browsers. It should never 
-detract from the experience of browsers that do not support a particular rule.
+## Advanced HTML5 and CSS3 usage
 
-[The Cross-Browser CSS3 Rule Generator](http://css3please.com)/
+If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com/) 
+to ensure backwards compatability with older browsers.
 
-## Browser Prefixes
+Modernizr detects what the browser’s rendering engine supports, and allows you to customize 
+the look of the website depending on what’s supported.
 
-Include `-webkit` and `-moz` prefixes with each declaration that supports these 
-prefixes. Prefixed styles should be grouped together with the related styles.
+HTML5shim/shiv has been incorporated into Modernizr, so you should not use both.
 
-	.callout {
-		-webkit-border-top-left-radius: 10px;
-		-webkit-border-top-right-radius: 5px;
-		-moz-border-radius-topleft: 10px;
-		-moz-border-radius-topright: 5px;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 5px;
-	}
-
-[CSS Border Radius Generator](http://borderradius.com)/
 
 ### Media Queries
 
@@ -1058,23 +1204,6 @@ makes a good default.
 **Traditional Scale** – 6, 7, 8, 9, 10, 11, 12, 14, **16**, 18, 21, 24, 36, 48, 60, 72
 
 More information on [typographic scales](http://lamb.cc/typograph/).
-
-### Font Stacks
-
-Specify font families using font stacks. This provides appropriate fall-back 
-fonts to handle when a specified font may not be available.
-
-Default **serif** font stack:
-
-font-family: Constantia, Lucida, Georgia, serif;
-
-Default **sans-serif** font stack:
-
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
-`fantasy`, or `monospace`. This provides a fallback in case all other fonts 
-in the stack are unavailable.
 
 ### Enhanced Facebook Meta
 
