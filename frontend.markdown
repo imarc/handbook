@@ -853,13 +853,13 @@ Start with the following sane defaults and update them as the design requires.
 		width: 960px;
 	}
 		.torso {
-			padding: 0 0 30px;
+			padding: 30px;
 		}
 			.main {
-				position: relative;
+			
 			}
 			.aside {
-				width: 236px;
+		
 			}
 
 	/* footer */
@@ -962,7 +962,6 @@ Start with the following sane defaults and update them as the design requires.
 		.error ul,
 		.info ul,
 		.success ul {
-			list-style-type: disc;
 			margin: 8px 0 0 30px;
 		}
 		.error li,
@@ -1170,7 +1169,7 @@ as it allows IE6 to have HTML elements show over it (such as dropdown menus).
 The following template can be used to to start most iMarc-created web pages.
 
 	<!DOCTYPE html>
-	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<html lang="en">
 	<head>
 		<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
 		<meta charset="utf-8" />
