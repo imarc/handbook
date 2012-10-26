@@ -323,7 +323,7 @@ Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
 ### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
-The exception to this rule is the ID that is placed on the `body` tag.
+The exceptions to this rule are anchors, form label IDs, the ID that is placed on the `body` tag, and instances when IDs are more appropriate hooks for JavaScript.
 
 Classes should be lowercase, using underscores between words.
 
@@ -364,17 +364,40 @@ structural names should be used as classes in the markup.
 
 ### Navigation 
 
-Within the structural elements, navigation should be described using the 
-following terminology.
+Navigation should be referenced as the following.
 
-* **primary_nav** – Links to top-level pages representing the first level of directories
-* **secondary_nav** – Links to pages within a single section; direct children of a single primary_nav item
-* **utility_nav** – Navigation that holds global utility links (e.g. login, shopping cart)
-* **tertiary_nav** – (not pictured) Links to pages representing direct children of a single secondary_nav item
+* **primary** – Links to top-level pages representing the first level of directories
+* **secondary** – Links to pages within a single section; direct children of a single primary parent
+* **utility** – Navigation that holds global utility links (e.g. login, shopping cart)
+* **tertiary** – (not pictured) Links to pages representing direct children of a single secondary parent
 
 
 ![Navigation naming conventions](img/naming_navigation.jpg)
 
+Example markup:
+
+	<div class="nav">
+	    <ul class="primary">
+	        <li>
+	            <a href="">Products</a>
+	        </li>
+	        <li>
+	            <a href="">Services</a>
+	        </li>
+	        <li>
+	            <a href="">Resources</a>
+	        </li>
+	    </ul>
+	</div>
+
+Example CSS:
+
+	.header .nav .primary {
+	    ...
+	}
+	.header .nav .utility {
+	    ...
+	}
 
 Within navigation elements, there may be a different style to denote the current 
 page or section.
@@ -433,25 +456,29 @@ This is an example of a complete page using some of the the naming conventions d
 
 	<body>
 	    <div class="header">
-	        <ul class="utility_nav">
-	            <li>
-	                <a href="#">Log In</a>
-	            </li>
-	            <li>
-	                <a href="#">Cart</a>
-	            </li>
-	        </ul>	
-	        <ul class="primary_nav">
-	            <li class="active">
-	                <a href="#">Products</a>
-	            </li>
-	            <li>
-	                <a href="#">Services</a>
-	            </li>
-	            <li>
-	                <a href="#">About</a>
-	            </li>
-	        </ul>	
+	    	<div class="nav">
+	            <ul class="utility">
+	                <li>
+	                    <a href="#">Log In</a>
+	                </li>
+	                <li>
+	                    <a href="#">Cart</a>
+	                </li>
+	            </ul>
+	        </div>
+	        <div class="nav">
+	        	<ul class="primary">
+	                <li class="active">
+	                    <a href="#">Products</a>
+	                </li>
+	                <li>
+	                    <a href="#">Services</a>
+	                </li>
+	                <li>
+	                    <a href="#">About</a>
+	                </li>
+	            </ul>
+	        </div>	
 	    </div>
 	    <div class="torso group">
 	        <div class="main">       
@@ -466,17 +493,19 @@ This is an example of a complete page using some of the the naming conventions d
 	        </div>
 	    </div>
 	    <div class="aside">
-            <ul class="secondary_nav">
-                <li>
-                    <a href="#">iPod</a>
-                </li>
-                <li>
-                    <a href="#">iPad</a>
-                </li>
-                <li>
-                    <a href="#">iPhone</a>
-                </li>
-            </ul>
+	        <div class="nav">
+                <ul class="secondary">
+                    <li>
+                        <a href="#">iPod</a>
+                    </li>
+                    <li>
+                        <a href="#">iPad</a>
+                    </li>
+                    <li>
+                        <a href="#">iPhone</a>
+                    </li>
+                </ul>
+            </div>
 	        <div class="section">
 	            <p>
 	                Find us on our social networks.
@@ -1061,11 +1090,19 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
 `fantasy`, or `monospace`. This provides a fallback in case all other fonts 
 in the stack are unavailable.
- 
 
-### @font-face
+### Typographic Scale
 
-Use the following syntax to include font files on the web with `@font-face`. Appropriate 
+Use a typographic scale when choosing type sizes. The traditional scale 
+makes a good default.
+
+**Traditional Scale** – 6, 7, 8, 9, 10, 11, 12, 14, **16**, 18, 21, 24, 36, 48, 60, 72
+
+More information on [typographic scales](http://lamb.cc/typograph/).
+
+### Web Fonts
+
+Use the following syntax to use web fonts on the web with `@font-face`. Appropriate 
 file formats should be provided for supported browsers.
 
 Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Font Squirrel)):
@@ -1117,7 +1154,7 @@ However, even in this example, some devices may download all three stylesheets,
 including background images in each sheet. This allows the browser to apply 
 specific width-based rules on the fly without re-fetching images or CSS. 
 The downside is a loss of optimization. For tips on improving optimization, 
-see [Mobile Optimization](#MobileOptimizatio)n
+see [Mobile Optimization](#MobileOptimization)
 
 ## Flash
 
@@ -1194,15 +1231,6 @@ achieve something close to inline-block in Internet Explorer.
 **Additional Notes:** Gecko 1.8.1 removed support for inline-block. Proprietary 
 style properties are required for browsers using Gecko 1.8.1. Firefox 2 was 
 the most popular browser using the Gecko 1.8.1 rendering engine.
-
-### Typographic Scale
-
-Use a typographic scale when choosing type sizes. The traditional scale 
-makes a good default.
-
-**Traditional Scale** – 6, 7, 8, 9, 10, 11, 12, 14, **16**, 18, 21, 24, 36, 48, 60, 72
-
-More information on [typographic scales](http://lamb.cc/typograph/).
 
 ### Enhanced Facebook Meta
 
