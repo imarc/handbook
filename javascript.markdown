@@ -82,10 +82,11 @@ to nearby elements, as it is more robust against DOM changes.
 If more than one action is called upon a jQuery object, you must indent those
 actions.
 
-	$('.classname').closest('div').find('input')
+	$(newTextInput)
 		.val('New Value')
-		.parents('div').find('span.element2')
-			.remove();
+		.addClass('selected')
+		.css('width', newWidth)
+		.appendTo(someInputContainer);
 
 Note that you can optionally indent single actions underneath an object for
 better readability.
