@@ -9,8 +9,17 @@ This document describes JavaScript coding and style standards employed by
 iMarc. iMarc is a full service web development and design firm located north of
 Boston. Learn more at http://imarc.net.
 
-As a standard, iMarc uses the [jQuery](http://www.jquery.com) library to extend
-JavaScript functionality.
+As a standard, iMarc uses [jQuery](http://www.jquery.com) to extend JavaScript
+functionality.
+
+## Minification
+
+Never include minified libraries.
+
+Flourish provides its own minifier. We’ve run into problems minifying already
+minified code, and the benefit of using the one built into Flourish is that it
+does it on the fly per environment, so that dev can use unminified JavaScript,
+while stage and prod do, which makes development and debugging much easier.
 
 
 ## Line Breaks
@@ -49,7 +58,7 @@ declarations. Content after the opening brace is indented. The closing brace is
 placed on a line by itself at the same indent level as the control statement or
 function declaration.
 
-	function fooMethod(arg1, arg2) {
+	this.fooMethod = function (arg1, arg2) {
 		if (condition) {
 			statement;
 		}
@@ -62,19 +71,42 @@ dropped to a new line.
 
 ### Traversing the DOM with jQuery
 
-In general, when traversing the DOM with jQuery, use closest() with a selector
-instead of parent() or parents() to get to a specific parent element.
+In general, when traversing the DOM with jQuery, use `closest()` with a selector
+instead of `parent()` or `parents()` to get to a specific parent element.
 
 	$('input').closest('.detail_container');
 
-Use find() with a selector to select specific child elements.
+Use `find()` with a selector to select specific child elements.
 
 	$('.detail_container').find('.detail').toggle();
 
-Use closest() with find() instead of siblings(), next(), or prev() to traverse
+Use `closest()` with `find()` instead of `siblings(),` `next(),` or `prev()` to traverse
 to nearby elements, as it is more robust against DOM changes.
 
 	$('input').closest('.detail_container').find('.detail').show();
+
+
+### Check for Elements with jQuery
+
+To check whether any elements matching a selector exists, use the `length` attribute:
+
+	if ($('a').length) {
+		// I found links
+	} else {
+		// No links were found.
+	}
+
+Since `if` statements do not create closures, if you'd like to have a large
+section of code that will only be run if an element exists, use `:first` with `each()`:
+
+	$('#block:first').each(function() {
+		// runs once, but only if there's at least one element mathcing #block.
+	});
+	
+	// Dangerous
+	$('#block').each(function() {
+		// runs for every #block, whether that never, once, twice, etc.
+	});
 
 
 ### Indenting jQuery Chains
@@ -98,80 +130,83 @@ This section describes our naming convention and standard directory structure.
 
 ### Typical Directory Structure
 
-	/sup
-		/ajax
+	docroot
+		/css
 		/js
 			/lib
-			/plugins
 			/site
 			/sitemanager
 
+JavaScript files are typically kept inside the docroot for a given site.
 
-A typical directory structure for a website groups all JavaScript files in the
-`/sup/js/`.
+The `js/lib/` directory contains any third party or library code, such as
+jQuery and jQuery plugins including those we've written and taken from
+Framework.imarc.net. If a plugin or library has additional files, if possible,
+those files should be stored in a subdirectory of `js/lib/`, such as
+`js/lib/colorbox/`. Inside one of these subdirectories, it is acceptable to
+have images or CSS that is part of the plugin or library, to preserve relative
+paths between the various files.
 
-The `./js/lib/` folder is used to store JavaScript libraries such as jQuery,
-Prototype, MooTools, etc.
+The `js/site/` and `js/sitemanager/` directories should contain files specific to the site.
 
-Plugins for a library are stored under `./js/plugins/`, such as iMarc’s
-datepicker, or a jQuery plugin. If a plugin has associated files with it,
-create a folder that is the name of the plugin and store the entire folder
-under plugins; for example, the modal window plugin ColorBox should have a
-`/sup/js/plugins/colorbox/` folder that holds its supplemental CSS, images, JS
-files, etc. It is best to keep the plugin’s default folder structure within the
-plugin folder, as often times they use relative paths to reach their
-supplemental files.
+In general, `js/site/site.js` should contain JavaScript meant to be run on
+nearly every page on the site. For example, JavaScript that's part of the
+site's navigation.
 
-The `./js/site/` and `./js/sitemanager/` folders should contain files specific
-to the site you are working with. Each developer can choose the structure
-within these folders, be it subfolders that mimic the view path and then
-JavaScript files that are the names of the view files, or if you want to make a
-naming convention such as {controller}-{action}.js (ex: `users-add_edit.js`),
-that has been done in the past as well.
+It is up to the developer to choose the naming convention for the other
+JavaScript files, as long as they are consistent. An example might be creating
+subdirectories for each controller and individual files for pages within these
+directories. Another example might be using a naming convention like
+`{controller}-{action}.js` (ex: `users-add_edit.js`) or picking names based
+upon the URL of the page the JavaScript will be included on.
 
 
-### Naming Files
+### Naming Plugins
 
-Custom JavaScript files should typically one of two types: the plugin name in
-lower case lettering followed by `.plugin.js` or the location/action of the
-view it is being included with. Often times it is a good practice to hyphenate
-between the controller name and the action (`users-list.js`). All filenames
-should be lowercase.
+jQuery plugins we author should follow the following naming conventions:
+
+* The filename should be in all lowercase.
+* It should end with `.plugin.js`.
+* If you want to include a version number, it should be separated by a dash and
+  come just before `.plugin.js` (ex: `foobar-1.2.plugin.js`.)
 
 
 ### Including Files
 
-Javascript files should be included at the bottom of an HTML document, right
-before the closing `</body>` tag.
-
-If you have JavaScript that must be included before the body (such as cufón),
-create a separate fTemplating element such as `header_js`, add those JavaScript
-includes to it, and place the element within the `<head>`.
+Unless there is a specific reason to include a JavaScript file sooner,
+JavaScript files should be included at the bottom of an HTML document, just
+before the closing `</body>` tag. For us, this usually means JavaScript
+includes should be part of the site's `footer.php`.
 
 
-## jQuery Code Tags
+## Closures
 
-iMarc sites that use only jQuery should use the `$` character to represent the
-jQuery object. In no-conflict mode, jQuery objects should use `jQuery` as the
-instance name.
+In general, all JavaScript code should be kept in closures. This minimizes side
+effects and unintended interactions between different JavaScript plugins and
+snippets.
+
+
+### jQuery
+
+In general, we can use jQuery's shorthand for defining a closure that will be
+called when the document is ready:
 
 	$(function() {
 		//...
 	});
 
-If your code requires everything to be loaded on the page first, use
-`window.load()` instead:
+In some instances, our JavaScript may need to wait until the page has completely loaded. To use jQuery to have your closure called on `window.load` instead, use
 
 	$(window).load(function() {
 		//...
-	});
+	]);
 
 When creating a plugin, always use a closure to ensure that the plugin will
 work even when jQuery is in no-conflict mode:
 
 	;(function($) {
 
-		$.fn.yourPlugin = function() {
+		$.fn.yourPlugin = function () {
 			return this.each(function() {
 				//...
 			});
@@ -182,6 +217,41 @@ work even when jQuery is in no-conflict mode:
 Preceding the anonymous function with a semi-colon ensures that the plugin can
 be minimized with other plugins.
 
+Here’s a full example.
+
+	(function($) {
+		$.fn.showHide = function(controls, contents) {
+			this.each(function() {
+				var container = $(this);
+				var control   = container.find(controls);
+				var content   = container.find(contents);
+
+				control.data('hide-text', control.text());
+
+				control.click(function() {
+					if (content.is(':visible')) {
+						$(this).text(
+							$(this).data('hide-text')
+						);
+						content.slideUp();
+					} else {
+						$(this).text(
+							$(this).attr('data-show')
+						);
+						content.slideDown();
+					}
+				});
+
+				content.hide();
+			});
+		};
+	})(jQuery);
+
+	$(function() {
+		$('.excerpt').showHide('.expand', '.detail');
+	});
+
+You can see this example in action on [jsFiddle](http://jsfiddle.net/khamer/AVxby/1/).
 
 ## Naming Conventions
 
@@ -219,8 +289,12 @@ except for places where the variable has no real meaning or a trivial meaning
 Take care to minimize the letter count, but do not use abbreviations, because
 they greatly decrease the readability of the function name itself.
 
-	function setMessages() { ... }
-	function parseData() { ... }
+	var setMessages = function() {
+		//...
+	};
+	var parseData = function() {
+		//...
+	};
 
 Poor examples of variable names might be `get_Data()` or `buildsomewidget()`.
 
@@ -263,11 +337,15 @@ document that.
 
 ### Comments for Plugins
 
-The header block at the top of the plugin file are commented using the
-template below.
+For JavaScript files (typically plugins) that are meant to be reusable by
+themselves, You should provide additional information. At the top of your
+plugin, you should have a comment block as follows:
+
 
 	/**
 	 * Description of plugin
+	 *
+	 * Public methods, how to instantiate
 	 *
 	 * == Method Signature ==
 	 *
@@ -280,16 +358,12 @@ template below.
 	 *
 	 * @changes 0.0.2 Description [initials, YYYY-MM-DD]
 	 * @changes 0.0.1 Description [initials, YYYY-MM-DD]
-	 */
-
-	/*!
-	 * @copyright 2010, iMarc <info@imarc.net>
+	 *
+	 * @copyright 2012, iMarc <info@imarc.net>
 	 */
 
 Any edit that is noted in the changelog requires new authors to add their name
 and initials to the `@authors` list.
-
-The `@copyright` must be within special comments.
 
 Plugin methods are commented the same as functions.
 
@@ -355,23 +429,41 @@ Note that the first and last lines span 80 characters.
 
 ## Variables
 
+### File Scoping
+
+All files and distinct, unrelated pieces of code should be separated into their
+own closures. These closures can be anonymous and called immediately, but
+shouldn’t be nested other than within a jQuery callback (such as
+`$(window).load(function(){...})`, `$(function(){...})`, etc.)
+
+	$(function() {
+		(function() {
+			//Track links
+		})();
+
+		(function() {
+			//Top level navigation animations
+		})();
+	});
+
+
 ### Variable Definition/Scoping
 
-Variables should always start with `var` when defined to keep it locally scoped.
+All declarations should start with `var` to make it clear that things are locally scoped.
 
-	function fooMethod() {
+	var fooMethod = function() {
 		var foo = 'bar2';
 	}
 
 	fooMethod();
 
-	alert(foo); // returns undefined
+	alert(foo); // shows 'undefined'
 
-	// By removing 'var' from the function, 'foo' becomes a global variable.
-	// In that case, alert(foo) will return 'bar2'
+If for some reason you do need to declare something globally, use `window.` before the variable name to make your intention clear:
 
-Make sure that you define a variable in the outermost scope that you will need
-it (if you do not intend to pass that variable through method calls).
+	window.globalFunction = function() {
+		//You probably didn't need to do this.
+	};
 
 
 ### Type Comparisons
@@ -393,7 +485,7 @@ can also change a variable’s type by using the `parseInt()`, `parseFloat()`, o
 
 ### Object Caching
 
-If a jQuery element is going to be used multiple times, set it to a JavaScript
+If a jQuery element is going to be used more than once, set it to a JavaScript
 variable to prevent calling the DOM every time it needs to be used (this is
 known as object caching):
 
@@ -419,6 +511,14 @@ rather than in a variable.
 
 		return false;
 	});
+
+### Data Attributes
+
+Use `data-` attributes to store values in the DOM that are directly related to
+the presentation, such as text that's displayed on hovers or clicks. This keeps
+all of the content together, and keeps content out the JavaScript.
+
+	<span class="toggle" data-shown_text="Hide This Stuff">Show This Stuff</span>
 
 
 ## Control Structures
@@ -505,26 +605,36 @@ Wrap conditions in parentheses in ternary operations.
 
 ### Function Definitions
 
-Use anonymous functions if you need to pass and/or easily redefine the function
-in the future.
+Always declare and define functions like this:
 
-	var fooMethod = function (bar, baz, foobar) {
+	var someFunction = function (bar, baz, foobar) {
 		//...
-	}
+	};
 
-Otherwise use a named function.
+*Do not* define functions using the alternate syntax:
 
-	function fooMethod(bar, baz, qux) {
+	function someFunction(bar, baz, foobar) {
 		//...
-	}
+	};
+
+Functionally, these two syntaxes are identical except that the function defined
+with the second syntax can be referenced before it is declared. Always use the
+second syntax as it is consistent with how privileged methods must be defined:
+
+	var MyObject = function() {
+		this.privilegedMethod = function(bar, baz, qux) {
+			//...
+		};
+	};
 
 Default values should be handled in the first lines of the function with a
 ternary operation:
 
-	function fooMethod(bar, baz, qux) {
+	var fooMethod = function (bar, baz, qux) {
 		bar = (undefined === bar) ? bar : default_integer_1;
 		baz = (undefined === baz) ? baz : 'default_value_2';
 	}
+
 
 Anonymous functions should be indented when they part of a function call that
 has more than one parameter. Once a single parameter is idented, all parameters
@@ -546,6 +656,142 @@ should be indented.
 	);
 
 
+## Graceful Degradation
+
+For graceful degradation, always make sure that the DOM and initial CSS reflect
+the state you’d like the site in when JavaScript is not available. Even if
+content will initially be hidden, consider how the site should look without
+JavaScript available and hardcode your HTML and CSS to match that.
+
+JavaScript should be used to show controls or hide content that will be
+available via tabs or toggles on load.
+
+### Inserting HTML
+
+While there’s plenty of valid reasons to generate and insert HTML, when
+possible include the markup for controls in the HTML and use CSS to hide them.
+This keeps as much of the DOM as possible together, making it easier to
+maintain later.
+
+When inserting complex HTML, use jQuery Templating (or Mustache.js) with a
+template.
+
+
+## jQuery Patterns
+
+### Remain Relative
+
+Whenever possible, define behaviors relative to the closest common parent of
+all involved elements. For example,
+
+	<div class="excerpt">
+		<h2>Title</h2>
+		<div class="expand" data-show="Show">Hide</div>
+		<p class="detail">
+			Some details that will start hidden.
+		</p>
+	</div>
+
+Should most likely be written relative to the `.exerpt`:
+
+	$('.expand').click(function() {
+		$(this).hide()
+			.closest('.excerpt').find('.detail').show();
+	});
+	$('.expand .detail').hide();
+
+### Robust Traversal
+
+Use closest() with a selector instead of parent() so that your JavaScript is
+more robust. In general, .closest(...).find(...) is a much better pattern than
+using siblings(), next(), or prev().
+
+Avoid using traversal methods (especially next() and prev()) without selectors,
+as they are very fragile to any changes to the DOM.
+
+
+### Plugin Example
+
+Here’s a longer example, where the above code was abstracted and written as a
+jQuery plugin:
+
+	;(function($) {
+		$.fn.showHide = function(control_selector, content_selector) {
+			this.each(function() {
+				var container = $(this);
+				var control = container.find(control_selector);
+				var content = container.find(content_selector);
+
+				control.click(function() {
+					if (content.is(':visible')) {
+						content.hide();
+					} else {
+						content.show();
+					}
+				});
+
+				content.hide();
+			});
+		};
+	})(jQuery);
+
+	//...
+
+	$(function(){
+		$(‘.excerpt’).showHide(‘.expand’, ‘.detail’);
+	});
+
+
+### Graceful Event Handling
+
+One of the most common patterns we encounter is content that starts hidden and
+is displayed when the user clicks on a button. The above plugin is an example
+of this pattern, however, it doesn't allow for anything beyond a `hide` and
+`show`.
+
+Here's a (non-plugin) example that also swaps the text of the toggle button:
+
+	$(function() {
+		var betterToggle = function() {
+			var $this = $(this);
+			var $details = $this.closest('.article').find('.details');
+			
+			if ($details.is(':visible')) {
+				$this.data('hide_text', $this.text());
+				$this.text(
+					$this.attr('data-show_text')
+				);
+				$details.hide();
+			} else {
+				$this.text(
+					$this.data('hide_text')
+				);
+				$details.show();
+			}
+		};
+		
+		$('.toggle').click(betterToggle);
+		$('.toggle').each(betterToggle);
+	});
+
+You can see this live as a [jsFiddle](http://jsfiddle.net/JqUbD/).
+
+Note using `click()` and `each()`. `each()` here runs the functionality of
+`betterToggle` on each button once at initialization. This allows for us to
+start out page in a fully revealed form (for graceful degradation) and hide
+things appropriately.
+
+## Using jQuery with other Libraries
+
+If you need to use another library that uses `$` (ex: Prototype), you should
+use the jQuery object. For parts of code that will only use jQuery, you can, if
+appropriate, use a closure to allow you to use `$` again:
+
+	(function($){
+		//...
+	})(jQuery);
+
+
 ## Error checking
 
 Exceptions and try/catch blocks should be used for error handling.  Do not use
@@ -564,52 +810,71 @@ function or method return values to indicate success or failure.
 
 ## Debugging Techniques
 
-If you need to quickly check something use `console.log()`, otherwise use the
-debugger built in to Firebug.
+### Linting
 
-If you need to use Firebug, use `preventDefault()` and `stopPropagation()` to
-prevent the DOM element from performing its original actions, otherwise end the
-function with `return false;`.
-
-	$('.foo').click(function(event) {
-		event
-			.preventDefault()
-			.stopPropagation();
-
-		bar.css('this will fail'); // returns a reference error to an undefined variable
-	});
-
-	$('.baz').click(function(event) {
-		bar.css('this will not show failure'); // this will be skipped as return false will cancel the error
-
-		return false;
-	});
-
-This is because Firebug does not show JavaScript errors from a function if the
-function uses `return false;`.
+Other than warnings about strict mode, JSHint should give your javascript a
+clean bill of health. You can also use Crockford’s JSLint, however it will
+complain additionally complain that function(... should be function (..., which
+we do not follow. Both tools are still useful for checking basic code quality
+and avoiding risky behavior (like relying on automatic semicolon insertion.)
 
 
-## Existence Checking
+### console.log
 
-To check if a jQuery object has any DOM elements, use the length attribute:
+`console.log` is built into Chrome, Safari, Opera, and Firebug. However, make
+sure there are no calls to `console.log` in any file when launched, as they
+will break in IE.
 
-	var links = $('a');
+You can avoid this problem with IE by including the following javascript from
+H5BP, however in most cases, its better practice to remove the offending
+`console.log` statements, as they shouldn’t be in the production version anyway.
 
-	if (links.length > 0) {
-		//...
+	if (!(window.console && console.log)) {
+		(function() {
+			var noop = function() {};
+			var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'markTimeline', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
+			var length = methods.length;
+			var console = window.console = {};
+			while (length--) {
+				console[methods[length]] = noop;
+			}
+		}());
 	}
+
+
+### alert()
+
+Whenever possible, console.log to show feedback during execution. However,
+`alert()` can be used to create a breakpoint; a way to pause JavaScript
+execution so that you can more see the state of the DOM.
+
+
+### Using Global References
+
+Another tactic is to *temporarily* create a global reference to an object that
+you're working with:
+
+	//...
+	window.debug = misbehavingObject;
+
+After doing this, you can use `window.debug` from Firebug of the inspector to
+reference that object and work with it live.
 
 
 ## Tips
 
 It is recommended to install [Firebug](http://getfirebug.com/) in Firefox, as
-you can do basic logging with `console.log()`, and debug using the debugger. A
-light version is also available for all other browsers as a bookmarklet.
+you can do basic logging with `console.log()`, and debug using the debugger.
+
+Google Chrome, Chromium, and Opera all have built-in inspectors that have close
+to equivalent capabilities to Firebug and should suffice.
 
 All pages should work in every browser, even if they don’t act the same across
 all browsers.
 
 
 ## Useful Links
+ - [jQuery Documentation](http://api.jquery.com/)
+ - [Quirksmode Event Compatibility Tables](http://quirksmode.org/dom/events/index.html)
  - [Mozilla JavaScript Documentation](https://developer.mozilla.org/en/javascript)
  - [Prototypes and Inheritance](http://msdn.microsoft.com/en-us/scriptjunkie/ff852808.aspx)
