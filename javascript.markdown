@@ -60,19 +60,35 @@ Note: In [backend PHP code](/backend/) the function’s opening brace would be
 dropped to a new line.
 
 
+### Traversing the DOM with jQuery
+
+In general, when traversing the DOM with jQuery, use closest() with a selector
+instead of parent() or parents() to get to a specific parent element.
+
+	$('input').closest('.detail_container');
+
+Use find() with a selector to select specific child elements.
+
+	$('.detail_container').find('.detail').toggle();
+
+Use closest() with find() instead of siblings(), next(), or prev() to traverse
+to nearby elements, as it is more robust against DOM changes.
+
+	$('input').closest('.detail_container').find('.detail').show();
+
+
 ### Indenting jQuery Chains
 
 If more than one action is called upon a jQuery object, you must indent those
 actions.
 
-	$('.classname').parents('div').find('input')
+	$('.classname').closest('div').find('input')
 		.val('New Value')
 		.parents('div').find('span.element2')
 			.remove();
 
 Note that you can optionally indent single actions underneath an object for
 better readability.
-
 
 ## Storing and Naming Files
 
