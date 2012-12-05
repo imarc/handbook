@@ -200,23 +200,46 @@ meet the expectation level set with the client.**
 The text and visual content of a page should always be accessible. The layout 
 of a page should not appear discernibly broken.
 
-### CSS3
+### Accessibility Checklist
 
-Use CSS3 as a visual enhancement for supporting browsers. It should never 
-detract from the experience of browsers that do not support a particular rule.
+Use this checklist as you near the completion of a site to ensure
 
-[The CSS3 Rule Generator](http://css3generator.com)
+The check list has two sections. One is a list for every website that iMarc works on. We also have a checklist for clients looking for a deeper level of accessibility and are willing to pay a premium.
 
-Include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility, Prefixed styles should be grouped together with the related styles.
+#### Baseline Checklist
 
-	.callout {
-		-webkit-border-top-left-radius: 10px;
-		-webkit-border-top-right-radius: 5px;
-		-moz-border-radius-topleft: 10px;
-		-moz-border-radius-topright: 5px;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 5px;
-	}
+* Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
+* HTML and CSS correctly validate using W3C validation tools
+	* [HTML validator](http://validator.w3.org/)
+	* [CSS validator](http://jigsaw.w3.org/css-validator/)
+* Include skip navigation allowing users to skip repetitive navigation
+* :focus styles should should exist on links and form elements
+* Ensure all anchors work and none are set to <a href=”#”>
+* JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
+* Web forms
+	* Inputs always have associated labels
+	* If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
+	* Validation messages show all errors at once instead of progressively showing more errors
+	* Validation messages use same field names as form and in the same order
+	* Make sure all required fields are listed as required in error message
+	* Make sure required fields visually indicate their requirements (e.g. asterisk)
+* Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user seeing the image. Decorative or redundant images can utilize an empty alt value.
+* All sites should have a custom 404 page.
+* Timed responses are properly indicated to users.
+* All content is viewable without an active stylesheet.
+* Color
+	* Color combinations should not create visual difficulty for users with color deficiencies. Utilize [http://www.checkmycolours.com](http://www.checkmycolours.com), [http://colororacle.org](http://colororacle.org) or a similar service.
+	* Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
+* All form fields can be activated, operated and submitted using a keyboard.
+* Users can control galleries and modal windows using a keyboard.
+
+#### Advanced Checklist
+
+* Audio files are accompanied by text transcriptions.
+* Videos are captioned.
+* CAPTCHAs are accessible to screen reader users and to Braille Display users.
+* Print stylesheets are used for maximum legibility.
+* Mobile media query is used to ensure website layout does not break on mobile devices.
 
 
 ## Doctype
@@ -1131,6 +1154,24 @@ Modernizr detects what the browser’s rendering engine supports, and allows you
 the look of the website depending on what’s supported.
 
 HTML5shim/shiv has been incorporated into Modernizr, so you should not use both.
+
+### CSS3
+
+Use CSS3 as a visual enhancement for supporting browsers. It should never 
+detract from the experience of browsers that do not support a particular rule.
+
+[The CSS3 Rule Generator](http://css3generator.com)
+
+Include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility, Prefixed styles should be grouped together with the related styles.
+
+	.callout {
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-topright: 5px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 5px;
+	}
 
 
 ### Media Queries
