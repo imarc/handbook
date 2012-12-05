@@ -206,34 +206,28 @@ As you are working on a website, use the Baseline Checklist below to ensure an a
 
 #### Baseline Checklist
 
-- Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
-- HTML and CSS correctly validate using W3C validation tools!
-
-	- [HTML validator](http://validator.w3.org/)
-	- [CSS validator](http://jigsaw.w3.org/css-validator/)
-
+* Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
+* HTML and CSS correctly validate using W3C validation tools!
+    * [HTML validator](http://validator.w3.org/)
+    * [CSS validator](http://jigsaw.w3.org/css-validator/)
 * Include skip navigation allowing users to skip repetitive navigation
 * focus styles should should exist on links and form elements
 * Ensure all anchors work and none are set to href=”#”
 * JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
 * Web forms
-
 	* Inputs always have associated labels
 	* If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
 	* Validation messages show all errors at once instead of progressively showing more errors
 	* Validation messages use same field names as form and in the same order
 	* Make sure all required fields are listed as required in error message
 	* Make sure required fields visually indicate their requirements (e.g. asterisk)
-
 * Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user seeing the image. Decorative or redundant images can utilize an empty alt value.
 * Site has a custom 404 page.
 * Timed responses are properly indicated to users.
 * All content is viewable without an active stylesheet.
 * Color
-
 	* Color combinations should not create visual difficulty for users with color deficiencies. Utilize [http://www.checkmycolours.com](http://www.checkmycolours.com), [http://colororacle.org](http://colororacle.org) or a similar service.
 	* Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
-
 * All form fields can be activated, operated and submitted using a keyboard.
 * Users can control galleries and modal windows using a keyboard.
 
