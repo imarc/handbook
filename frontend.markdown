@@ -211,7 +211,7 @@ As you are working on a website, use the Baseline Checklist below to ensure an a
 	* [HTML validator](http://validator.w3.org/)
 	* [CSS validator](http://jigsaw.w3.org/css-validator/)
 * Include skip navigation allowing users to skip repetitive navigation
-* :focus styles should should exist on links and form elements
+* focus styles should should exist on links and form elements
 * Ensure all anchors work and none are set to href=”#”
 * JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
 * Web forms
