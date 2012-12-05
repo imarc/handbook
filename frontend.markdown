@@ -206,11 +206,11 @@ As you are working on a website, use the Baseline Checklist below to ensure an a
 
 #### Baseline Checklist
 
-* Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
-* HTML and CSS correctly validate using W3C validation tools!
+- Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
+- HTML and CSS correctly validate using W3C validation tools!
 
-	* [HTML validator](http://validator.w3.org/)
-	* [CSS validator](http://jigsaw.w3.org/css-validator/)
+	- [HTML validator](http://validator.w3.org/)
+	- [CSS validator](http://jigsaw.w3.org/css-validator/)
 
 * Include skip navigation allowing users to skip repetitive navigation
 * focus styles should should exist on links and form elements
