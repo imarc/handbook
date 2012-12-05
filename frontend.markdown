@@ -207,7 +207,7 @@ As you are working on a website, use the Baseline Checklist below to ensure an a
 #### Baseline Checklist
 
 * Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
-* HTML and CSS correctly validate using W3C validation tools
+* HTML and CSS correctly validate using W3C validation tools!
 
 	* [HTML validator](http://validator.w3.org/)
 	* [CSS validator](http://jigsaw.w3.org/css-validator/)
@@ -233,7 +233,7 @@ As you are working on a website, use the Baseline Checklist below to ensure an a
 
 	* Color combinations should not create visual difficulty for users with color deficiencies. Utilize [http://www.checkmycolours.com](http://www.checkmycolours.com), [http://colororacle.org](http://colororacle.org) or a similar service.
 	* Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
-	
+
 * All form fields can be activated, operated and submitted using a keyboard.
 * Users can control galleries and modal windows using a keyboard.
 
