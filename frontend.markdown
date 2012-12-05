@@ -202,9 +202,7 @@ of a page should not appear discernibly broken.
 
 ### Accessibility Checklist
 
-Use this checklist as you near the completion of a site to ensure
-
-The check list has two sections. One is a list for every website that iMarc works on. We also have a checklist for clients looking for a deeper level of accessibility and are willing to pay a premium.
+As you are working on a website, use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients willing to pay more for an extra level of accessibility, use the Advanced Checklist.
 
 #### Baseline Checklist
 
@@ -214,7 +212,7 @@ The check list has two sections. One is a list for every website that iMarc work
 	* [CSS validator](http://jigsaw.w3.org/css-validator/)
 * Include skip navigation allowing users to skip repetitive navigation
 * :focus styles should should exist on links and form elements
-* Ensure all anchors work and none are set to <a href=”#”>
+* Ensure all anchors work and none are set to href=”#”
 * JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
 * Web forms
 	* Inputs always have associated labels
