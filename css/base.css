@@ -203,6 +203,10 @@ blockquote.citation {
 /* Lists
 /* --------------------------------------------------------------------- */ 
 
+li > p {
+	margin: 0;
+}
+
 ul {
 	list-style: disc;
 	margin: 0 0 15px 15px;
