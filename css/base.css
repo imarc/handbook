@@ -207,7 +207,7 @@ li > p {
 	margin: 0;
 }
 
-li > ul {
+ul li > ul {
 	margin-bottom: 0;
 }
 
