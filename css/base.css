@@ -207,6 +207,10 @@ li > p {
 	margin: 0;
 }
 
+li > ul {
+	margin-bottom: 0;
+}
+
 ul {
 	list-style: disc;
 	margin: 0 0 15px 15px;
