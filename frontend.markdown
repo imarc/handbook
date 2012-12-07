@@ -202,7 +202,7 @@ of a page should not appear discernibly broken.
 
 ### Accessibility Checklist
 
-As you are working on a website, use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients willing to pay more for an extra level of accessibility, use the Advanced Checklist.
+As you are working on a website, use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
 
 #### Baseline Checklist
 
