@@ -207,7 +207,7 @@ Diagram showing the relationship of a web site's information and organization of
   - Site maps create a navigational backbone for a website.
 
 *Example:*
-![Sample Site map](img/sitemap.png)
+![Sample Site map](img/strategy/sitemap.png)
 
 
 ### Content Outline
@@ -215,7 +215,7 @@ Diagram showing the relationship of a web site's information and organization of
 The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page. Typically a component of a Functional Requirements document.
 
 *Example:*
-![Sample Content Outline](img/content_outline.png)
+![Sample Content Outline](img/strategy/content_outline.png)
 
 
 ### Wireframe
@@ -230,7 +230,7 @@ User interface illustration stripped of all presentational style. It's a bit of 
  - Should not depict creative design. However, design is inexlicably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
 
 *Example:*
-![Example of Wireframe](img/wireframe.png)
+![Example of Wireframe](img/strategy/wireframe.png)
 
 
 
@@ -257,6 +257,6 @@ Strategy deliverables should contain some combination of the following meta info
  - **Author:** Each document has one author. The last person to touch the document is the author of record and is responsible for its contents. Example: "David Tufts"
  - **Revision notes:** What changed in this revision; mainly used in requirements and specification documents.
 
-![Wireframe title, date, annotations](img/metadata-wireframe.png)
+![Wireframe title, date, annotations](img/strategy/metadata-wireframe.png)
 
 
