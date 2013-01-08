@@ -13,6 +13,15 @@ This document outlines iMarc’s strategy process and deliverables. This incorpo
 iMarc is a full service web agency located north of Boston. Learn more at http://imarc.net.
 
 
+## Definition of Key Terms
+
++ A **deliverable** is a document or similar work product you can give to someone.
++ An **activity** or **task** is something you do. It is not a deliverble.
++ **Project Scope** is how many hours are allocated to the project, and any mandatory features. Scope is defined by a [Proposal](#proposal) or a [Statement of Work](#statementofworksow), and should be restated in the [Functional Requirements](#functionalrequirements) or [Production Specification](#productionspecification).
++ **Project Requirements** are defined by a [Functional Requirements](#functionalrequirements) or a [Production Specification](#productionspecification) document.
++ **Project Implementation** is defined by a [Production Specification](#productionspecification).
+
+
 
 ## Process
 
@@ -53,35 +62,48 @@ The strategy lead is responsible for notifying the client that project leadershi
 
 ## Research Activities
 
-Depending on budget and goals, a number of research activities may be incorporated into a project.
+Depending on budget and goals, a number of research activities may be incorporated into a project. Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers. Some are quantitative, meaning they are designed to produce a measurable result. Designing meaningful quantitative research takes a lot of time and requires substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
-### Stakeholder Interviews (Qualitative)
+### User Interviews
+
+Locate, contact and talk to the actual users of the site or application, conducting contextual, unbiased interviews. More of an art than a science, this is used to find out not just what users are doing, but 
+
+Interviews can concrete items, such as user interface components, design elements, document flow, feature importance, technical knowledge and more. They also can explore more fundamental issues: what users want, what's frustrating, what they like, the environment in which they use the site or app, other tools or competitors they might consider, and so on.
+
+User interviews can take place in person or remotely over the phone, with or without screen sharing. We create a script and a list of questions to ensure consistency. Typically, the results are summarized for the client in a findings report.
+
+Related to this, some organizations will have people who are in daily contact with users, and have valuable insight into what makes users "tick". Customer service and technical support teams are often treasure troves of insight, with "on the ground" knowledge dwarfing that of sales and marketing organizations. Especially when dealing with a consumer-facing organization, talking to these people is invaluable.
+
+
+
+### Stakeholder Interviews
 
 Identify and gain consus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
 
 Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
-- What are the success metrics?
-- Who are the audience segments?
-- What do their customers or users need?
-- Is there any market research?
-- What will make them successful?
-- What challenges do they face?
+
++ What are the success metrics?
++ Who are the audience segments?
++ What do their customers or users need?
++ Is there any market research?
++ What will make them successful?
++ What challenges do they face?
 
 Stakeholder interviews often turn up new information, issues and objectives.
 
 
-### Competitive Analysis (Qualitative)
+### Competitive Analysis
 
 A competitive analysis can give customers a view of how their competitors fare on the web. This analysis can include:
 
-- Layout - page density, visual impact
-- Navigations structure analysis - what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
-- Content - how are they using content to persuade visitor? What is the style? who is it written for, and why?
-- SEO audit - pages indexed, meta and title info, sitemap XML and robots.txt audit 
++ *Layout* – page density, visual impact
++ *Navigation structure analysis* – what forms of navigation are used? (main, breadcrumbs, footer, etc). Is it consistent?
++ *Content* – how are they using content to persuade visitor? What is the style? who is it written for, and why?
++ *SEO audit* – pages indexed, meta and title info, sitemap XML and robots.txt audit 
 
 
-### Surveys (Quantitative)
+### Surveys
 
 Surveys allow us to gather information from a large number of participants, yielding results in quantitative terms. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
 
@@ -92,32 +114,28 @@ Surveys are most effective at measuring things we know about. They are ineffecti
 iMarc typically uses Survey Monkey, which has fairly good tools for finding patterns in responses and on-the-fly cross-tabulation.
 
 
-### User Interviews (Qualitative)
 
-Speak to current and/or perspective users by conducting contextual, non-biased interviews. This can relate to user interface components, design elements, document flow, feature importance, technical knowledge and more. 
+### Usability Testing
 
-User interviews can take place in person or remotely over the phone with screen sharing software. Like stakeholder interviews, user interviews tend to result in new discoveries.
+We test a web site, application or prototype by putting actual people in front of a real (or mocked up) site, giving them tasks, and seeing what happens. We identify what isn't working, then fix it. If something works well, don't break it.
+
+iMarc engages in several types of testing:
+
++ **Hallway testing** – During design or development, pull in a passer-by and ask them to do a task. This is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
++ **Quality Assurance testing** – After design and development, iMarc employees who were not involved in creating the site asseses the site for common issues and best practices. (This is not typically part of the strategy process, although strategists often assist in this work.)
++ **Structured usability testing** – We create a formal task list and script, recruit a number of users (typically 5 to 8), and sit each of them in front of a computer. We use a script to ensure consistency, and we use video recording of the screen so we can revisit the tests.
 
 
 
 
 ## Deliverables
 
-A **deliverable** is a document or similar work product you can give to someone.
-
-**Project Scope** is defined by a *Proposal* or a *Statement of Work*. "Scope" means how many hours are allocated to the project's phases, and any mandatory features. Scope is restated in the *Functional Requirements* or *Production Specification*
-
-**Project Requirements** are defined by a *Functional Requirements* or a *Production Specification* document.
-
-**Project Implementation** is defined by a *Production Specification*.
-
-
 ### Proposal
  - Is created by BizDev
  - Is a sales tool
  - Defines project scope
- - Recommends features and functionality
- - Includes background research & discovery
+ - Suggests features and functionality
+ - Includes background research and client goals
 
 
 ### Statement of Work (SOW)
@@ -165,7 +183,7 @@ Typically takes 90–170 person-hours to produce, including all discovery, resea
    - Must be reviewed by Interactive Producer and an engineer before finalization
    - May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by Producer or Strategist
 
-(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
+(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. iMarc's developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
 
 
@@ -183,7 +201,8 @@ A brief document summarizing findings, including:
  - Project goals, prioritized
  - Project challenges
  - Notable trends in site analytics
- - Client interview and/or survey results (if conducted)
+ - Summary of client interview and/or survey results (if conducted)
+ - Summary of usability testing results (if conducted)
  - Baseline performance/analytics (including conversion rates, if possible)
  - Recommendations
 
@@ -192,7 +211,7 @@ The discovery document is typically 2-6 pages. The primary purpose of this docum
 
 ### Analytics Report
 
-2–10 page document that summarizes website analytics indentifying the most important data pertaining to the upcoming project. The primary purpose of this document is to convey user activity and trends in an easy to understand summarization.
+2–10 page document that summarizes website analytics indentifying the most important data pertaining to the upcoming project. The primary purpose of this document is to convey user activity and trends in an easy to understand summarization, to better inform decisions during planning, design and development. The secondary purpose of this document is to establish a baseline for key metrics, including (where applicable) conversions and referrals.
 
 
 ### Homepage Narrative
@@ -250,12 +269,12 @@ We usually write reports and specifications in [Word](http://www.microsoft.com/m
 
 Strategy deliverables should contain some combination of the following meta information.
 
- - **Client bame:** Example: "iMarc LLC"
+ - **Client Name:** Example: "iMarc LLC"
  - **Document title:** What is this and what role does it play in the project? Example: "Product Detail Page Wireframe"
- - **Updated date:** When was this wireframe last updated? Example: "September 14, 2012"
- - **Version number:** A collaboration aid. Example: "v7"
+ - **Updated Date:** When was this wireframe last updated? Example: "September 14, 2012"
+ - **Version Number:** A collaboration aid. Example: "v7"
  - **Author:** Each document has one author. The last person to touch the document is the author of record and is responsible for its contents. Example: "David Tufts"
- - **Revision notes:** What changed in this revision; mainly used in requirements and specification documents.
+ - **Revision Notes:** What changed in this revision; mainly used in requirements and specification documents.
 
 ![Wireframe title, date, annotations](img/strategy/metadata-wireframe.png)
 
