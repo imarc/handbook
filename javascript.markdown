@@ -702,12 +702,24 @@ Should most likely be written relative to the `.exerpt`:
 
 ### Robust Traversal
 
-Use closest() with a selector instead of parent() so that your JavaScript is
-more robust. In general, .closest(...).find(...) is a much better pattern than
-using siblings(), next(), or prev().
+Targeting elements based on their relative DOM position (i.e. chaining jQuery
+`prev()`, `next()`, and `parent()` calls without selectors) introduces
+fragility. Any changes to the markup structure may introduce bugs.
 
-Avoid using traversal methods (especially next() and prev()) without selectors,
-as they are very fragile to any changes to the DOM.
+A better approach is to provide explicit selectors to jQuery functions
+which search up or down multiple levels of the DOM hierarchy (such has
+`closest()` and `find()`). Employing this method will help tolerate
+changes to the markup.
+
+	// Bad
+	$('.my_button').click(function() {
+		$(this).parent().next().next().show();
+	});
+
+	// Better
+	$('.my_button').click(function() {
+		$(this).closest('.my_button_container').find('.thing_to_show');
+	});
 
 
 ### Plugin Example
