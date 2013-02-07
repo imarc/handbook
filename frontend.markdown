@@ -301,7 +301,7 @@ of the entire website.
 
 ### Meta Description
 
-All pages should include a meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Meta descriptions do appear in search engine result pages as seen in the associate graphic, however Google will sometimes replace written meta descriptions with on-page content if it deems it more appropriate.
+All pages should include a meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Meta descriptions appear in search engine result pages as seen in the graphic below, however Google will sometimes replace meta descriptions with on-page content as they see fit.
 
 [Tips for writing meta descriptions by Google](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624#1)
 
