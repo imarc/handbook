@@ -301,13 +301,9 @@ of the entire website.
 
 ### Meta Description
 
-The homepage should include a meta description. The meta description should 
-only be included on the homepage, since the only real-world use of a meta 
-description is that Google (and other search engines) use it in the blurb in 
-search results. 
+All pages should include a meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Meta descriptions do appear in search engine result pages as seen in the associate graphic, however Google will sometimes replace written meta descriptions with on-page content if it deems it more appropriate.
 
-Interior pages should not include a meta description so Google can use actual 
-content from the page in their results blurb.
+[Tips for writing meta descriptions by Google](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624#1)
 
 ![Example of meta description in search results](/img/meta_description.jpg)
 
