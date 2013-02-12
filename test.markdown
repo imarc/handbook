@@ -1,3 +1,8 @@
+---
+title: testing, dammit.
+layout: default
+---
+
 Test this
 :	Oh yeah
 
