@@ -225,11 +225,11 @@ An FRD should restate scope of production phase (which often changes somewhat du
 
 A 15–80 page document for projects scoped to a 200+ hours production schedule. It typically takes 90–170 person-hours to produce, including all discovery, research and meetings.
 
-Like an FRD, it's created by a Strategy team in close collaboration with the client. It restates the scope of production and must be approved by the client. It includes everything in an FRD, *plus* it:
+Like an FRD, it's created by a Strategy team in close collaboration with the client. It restates the scope of production and must be approved by the client. It includes everything in an FRD, *plus*:
 
 + Describes back-end functionality such as CMS tools, fields and relationships; databases; network and server infrastructure; external systems the site works with; security considerations.
-+ Must be reviewed by Interactive Producer and an engineer before finalization
-+ May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by Producer or Strategist
++ Must be reviewed by Interactive Producer and an engineer before finalization.
++ May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by Producer or Strategist.
 
 (This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. iMarc's developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
@@ -253,7 +253,7 @@ The discovery document is typically 2-6 pages. The primary purpose of this docum
 
 ### Analytics Report
 
-2–10 page document that summarizes website analytics indentifying the most important data pertaining to the upcoming project. The primary purpose of this document is to convey user activity and trends in an easy to understand summarization, to better inform decisions during planning, design and development. The secondary purpose of this document is to establish a baseline for key metrics, including (where applicable) conversions and referrals.
+2–8 page document that summarizes website analytics indentifying the most important data pertaining to the upcoming project. The primary purpose of this document is to convey user activity and trends in an easy to understand summarization, to better inform decisions during planning, design and development. The secondary purpose of this document is to establish a baseline for key metrics, including (where applicable) conversions and referrals.
 
 
 ### Homepage Narrative
@@ -299,9 +299,9 @@ User interface illustration stripped of all presentational style. It's a bit of 
 
 ## Software, Templates and Services
 
-iMarc currently uses [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) for site maps and wireframes. OmniGraffle is Mac-only software. (At least one Interactive Producer uses Microsoft Visio for Windows; OmniGraffle can import/export those files.)
+We currently use [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) for site maps and wireframes. OmniGraffle is Mac-only software. (At least one Interactive Producer uses Microsoft Visio for Windows; OmniGraffle can import/export those files.)
 
-iMarc generally uses the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. We also have created an "iMarc Objects" stencil with some commonly used elements, including iMarc-branded metadata blocks.
+We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. We also have created an "iMarc Objects" stencil with some commonly used elements, including iMarc-branded metadata blocks.
 
 We usually write reports and specifications in [Word](http://www.microsoft.com/mac/word), but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. (You can download branded templates from [our intranet](http://internal.imarc.net/).) We've used [Pages](http://www.apple.com/iwork/pages/) too; the revision tools aren't as robust but it's much better at handling images and styles, and less prone to crashing.
 
