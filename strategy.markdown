@@ -54,21 +54,13 @@ The overall process typically looks something like this:
 
 1. Define project objectives *(know where you are going)*
 1. Audit baseline current site or app *(know where you are coming from)*
-1. Conduct discovery, research, interviews, and testing, and report findings *(know what you do and don't have to work with)*
+1. Conduct discovery, research, interviews, and testing, then report findings *(know what you do and don't have to work with)*
 1. Explore needed content and tools *(know what you need to pack)*
 1. Write the blueprint *(map and plan your trip)*
-
 
 Strategy begins with an internal handoff meeting between the proposal author and strategy team.
 
 The proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
-
-
-### Approvals
-
-The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
-
-The strategy lead is responsible for notifying the client that project leadership is changing hands and the Interactive Producer is now their primary point of contact.
 
 
 ### Team Members and Roles
@@ -97,18 +89,24 @@ Engineer
 UX Engineer
 :	Usually creates wireframes and other visual deliverables, delegated by the Strategist
 
-
-
 As we transition to the creative and production phases, the Strategist hands the reins over to the Producer and withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
 The Designer, Engineer and UX Engineer(s) stick with the project through production; their roles and responsibilities may change a bit. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute, and the UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
 
+### Approvals
+
+The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
+
+The strategy lead is responsible for notifying the client that project leadership is changing hands and the Interactive Producer is now their primary point of contact.
 
 
 
-## Research Activities
+
+## Discovery Activities
 
 Depending on budget and goals, a number of research activities may be incorporated into a project. Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers. Some are quantitative, meaning they are designed to produce a measurable result. Designing meaningful quantitative research takes a lot of time and requires substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
+
+The end of the Discovery process should result in delivering a [Discovery Report](#discoveryreport) to the client. (Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.)
 
 
 ### User Interviews
