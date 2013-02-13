@@ -48,19 +48,18 @@ Implementation
 
 The strategy process is provided to clients who have signed a proposal which includes a specified time and cost budget for strategy. Proposals that do not explicitly define a strategy budget or scope should be turned down by the strategy team.
 
-Strategy work should clarify the project for the client and production team while focusing on a positive end-user experience.
+**Strategy work should clearly define the project for the client and production team while focusing on a positive end-user experience.**
 
 The overall process typically looks something like this:
 
-1. Define project objectives *(know where you are going)*
-1. Audit baseline current site or app *(know where you are coming from)*
-1. Conduct discovery, research, interviews, and testing, then report findings *(know what you do and don't have to work with)*
-1. Explore needed content and tools *(know what you need to pack)*
-1. Write the blueprint *(map and plan your trip)*
+1. Define project objectives
+1. Conduct discovery and report findings
+1. Explore needed content and tools
+1. Create the blueprint
 
 Strategy begins with an internal handoff meeting between the proposal author and strategy team.
 
-The proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
+Before strategy work begins, the proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
 
 
 ### Team Members and Roles
