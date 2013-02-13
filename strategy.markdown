@@ -13,23 +13,34 @@ This document outlines iMarc’s strategy process and deliverables. This incorpo
 iMarc is a full service web agency located north of Boston. Learn more at http://imarc.net.
 
 
+
+## Goals
+
+The goal of all strategy activity is to produce a blueprint for the application or site that iMarc has contracted to deliver.
+
+Strategy sanity checks recommendations from the proposal with client needs.  Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
+
+When proposals specify time or cost budget for production, strategy deliverables must define a project that can be easily produced within those limitations.
+
+
+
 ## Key Terms
 
 
 Deliverable
-: A document or similar work product you can give to someone.
+: A document or similar *work product* you can give to someone.
 
 Activity or Task
 : Something you *do*. It is not a deliverble.
 
 Scope
-: How many hours are allocated to the project, and any mandatory features. Scope is defined by a [Proposal](#proposal) or a [Statement of Work](#statementofworksow), and should be restated in the Functional Requirements or Production Specification.
+: The number of *hours* are allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#proposal) or a [Statement of Work](#statementofworksow), and should be restated in the Requirements.
 
 Requirements
-: is defined by a [Functional Requirements](#functionalrequirements) or a [Production Specification](#productionspecification) document.
+: What the end product must do. Defined by a [Functional Requirements](#functionalrequirements) or a [Production Specification](#productionspecification) document.
 
 Implementation
-: is defined by a [Production Specification](#productionspecification).
+: How the end product must work. Defined by a [Production Specification](#productionspecification).
 
 
 
@@ -47,6 +58,17 @@ The overall process typically looks something like this:
 1. Explore needed content and tools *(know what you need to pack)*
 1. Write the blueprint *(map and plan your trip)*
 
+
+Strategy begins with an internal handoff meeting between the proposal author and strategy team.
+
+The proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
+
+
+### Approvals
+
+The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
+
+The strategy lead is responsible for notifying the client that project leadership is changing hands and the Interactive Producer is now their primary point of contact.
 
 
 ### Team Members and Roles
@@ -80,33 +102,6 @@ UX Engineer
 As we transition to the creative and production phases, the Strategist hands the reins over to the Producer and withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
 The Designer, Engineer and UX Engineer(s) stick with the project through production; their roles and responsibilities may change a bit. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute, and the UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
-
-
-
-### Kickoff
-
-Strategy begins with an internal handoff meeting between the proposal author and strategy team.
-
-The proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
-
-
-### Goals
-
-The goal of all strategy activity is to produce a blueprint for the application or site that iMarc has contracted to deliver.
-
-Strategy sanity checks recommendations from the proposal with client needs.  Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
-
-When proposals specify time or cost budget for production, strategy deliverables must define a project that can be easily produced within those limitations.
-
-
-### Approval
-
-The output of strategy are concrete reference documents. Deliverables are approved by the client and by the iMarc producer who will ultimately lead the production phase.
-
-Approved deliverables are handed off to the project’s producer. 
-
-The strategy lead is responsible for notifying the client that project leadership is changing hands and the Interactive Producer is now their primary point of contact.
-
 
 
 
@@ -297,13 +292,26 @@ User interface illustration stripped of all presentational style. It's a bit of 
 
 
 
-## Software, Templates and Services
+## Tools
 
-We currently use [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) for site maps and wireframes. OmniGraffle is Mac-only software. (At least one Interactive Producer uses Microsoft Visio for Windows; OmniGraffle can import/export those files.)
 
-We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. We also have created an "iMarc Objects" stencil with some commonly used elements, including iMarc-branded metadata blocks.
+### Wireframes and Sitemaps
 
-We usually write reports and specifications in [Word](http://www.microsoft.com/mac/word), but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. (You can download branded templates from [our intranet](http://internal.imarc.net/).) We've used [Pages](http://www.apple.com/iwork/pages/) too; the revision tools aren't as robust but it's much better at handling images and styles, and less prone to crashing.
+We currently use [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) for site maps and wireframes. OmniGraffle is Mac-only software. (At least one Interactive Producer uses Microsoft Visio for Windows; OmniGraffle can import/export those files.) In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
+
+We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices.
+
+We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks.
+
+
+### Reports and Specs
+
+We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. (You can download branded templates from [our intranet](http://internal.imarc.net/).) We've used [Pages](http://www.apple.com/iwork/pages/); the revision tools aren't as robust but it's much better at handling images and styles, and less prone to crashing.
+
+We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen.
+
+
+### Surveys and Testing
 
 To conduct user surveys, we favor [Survey Monkey](http://surveymonkey.com), which has fairly good tools for finding patterns in responses and on-the-fly cross-tabulation.
 
