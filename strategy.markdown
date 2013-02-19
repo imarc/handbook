@@ -130,7 +130,7 @@ Some organizations will have people who are in daily contact with users, and hav
 
 ### Stakeholder Interviews
 
-Identify and gain consus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
+Identify and gain consensus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
 
 Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
 
