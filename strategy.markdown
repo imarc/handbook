@@ -222,25 +222,25 @@ Deliverables
 iMarc engages in several types of testing. In order of increasing rigorousness (and time, effort and cost):
 
 > #### Hallway Testing
-
+> 
 >	During design or development, pull in a passer-by and ask them to do a task. This is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
-
+> 
 > #### Heuristic Evaluation
-
+> 
 >	Experienced usability team members evaluate the user interface (current or planned), judging compliance with recognized usability principles, and provide oral or written suggestions for improvements. This is informal and relatively quick, but depends upon an experienced evaluator. It is well-suited to aggressive project schedules.
-
+> 
 >	A good starting point for this is Jakob Nielsen's [10 Heuristics for User Interface Design](http://www.nngroup.com/articles/ten-usability-heuristics/) and [How to Conduct a Heuristic Evaluation](http://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) articles; Abby Covert's [Information Architecture Heuristics](http://www.slideshare.net/AbbyCovert/information-architecture-heuristics) is great too.
-
+> 
 > #### Quality Assurance
-
+> 
 >	After design and development, iMarc employees who were not involved in creating the site asseses the site for common issues and best practices. (This is not typically part of the strategy process, although strategists often assist in this work.) Similar to Heuristic Evaluation, except it serves as a "last pass" to catch anything missed during production.
-
+> 
 > #### Structured Usability Testing
-
+> 
 >	This involves putting actual people in front of a real or mocked up site, giving them tasks, and seeing what happens. This tends to produce the most new insights of any form of testing.
-
+> 
 >	We create a formal task list and script, recruit a number of users (typically [5 users](http://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/), and [rarely more](http://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
-
+> 
 >	The script helps to ensure consistency, video recording the screen lets us revisit the tests. 
 
 
