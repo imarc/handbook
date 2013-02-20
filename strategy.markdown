@@ -10,7 +10,7 @@ layout: default
 
 This document outlines iMarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
 
-iMarc is a full service web agency located north of Boston. Learn more at http://imarc.net.
+iMarc is a full service web agency located north of Boston. Learn more at [http://imarc.net](http://imarc.net).
 
 
 
@@ -34,13 +34,13 @@ Activity or Task
 : Something you *do*. It is not a deliverable.
 
 Scope
-: The number of *hours* are allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#proposal) or a [Statement of Work](#statementofworksow), and should be restated in the Requirements.
+: The number of *hours* are allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWorkSOW), and should be restated in the Requirements.
 
 Requirements
-: What the end product must do. Defined by a [Functional Requirements](#functionalrequirements) or a [Production Specification](#productionspecification) document.
+: What the end product must do. Defined by a [Functional Requirements](#FunctionalRequirements) or a [Production Specification](#ProductionSpecification) document.
 
 Implementation
-: How the end product must work. Defined by a [Production Specification](#productionspecification).
+: How the end product must work. Defined by a [Production Specification](#ProductionSpecification).
 
 
 
@@ -106,7 +106,7 @@ The strategy lead is responsible for notifying the client that project leadershi
 
 Depending on budget and goals, a number of research activities may be incorporated into a project. Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers. Some are quantitative, meaning they are designed to produce a measurable result. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
-The end of the Discovery process should result in delivering a [Discovery Report](#discoveryreport) to the client. (Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.)
+The end of the Discovery process should result in delivering a [Discovery Report](#DiscoveryReport) to the client. (Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.)
 
 
 ### User Interviews
@@ -138,6 +138,7 @@ Some organizations will have people who are in daily contact with users, and hav
 
 ### Stakeholder Interviews
 
+<<<<<<< HEAD
 Objective
 :	Identify and gain consensus among the client's decision makers.
 
@@ -151,6 +152,9 @@ Deliverables
 Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
 
 Even if the client's senior stakeholders aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
+=======
+Identify and gain consensus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
+>>>>>>> 204c7ad5384f358daeed14882a58cbcad7e0818e
 
 Topics often include:
 
