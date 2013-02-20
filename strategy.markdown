@@ -138,7 +138,6 @@ Some organizations will have people who are in daily contact with users, and hav
 
 ### Stakeholder Interviews
 
-<<<<<<< HEAD
 Objective
 :	Identify and gain consensus among the client's decision makers.
 
@@ -152,9 +151,6 @@ Deliverables
 Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
 
 Even if the client's senior stakeholders aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
-=======
-Identify and gain consensus among the client's decision makers. Even if these people aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
->>>>>>> 204c7ad5384f358daeed14882a58cbcad7e0818e
 
 Topics often include:
 
