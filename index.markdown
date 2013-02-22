@@ -3,22 +3,25 @@ title: iMarc Handbook
 layout: notoc
 ---
 
-<h1 class="title">Engineering Standards &amp; Best Practices </h1>
+<h1 class="title">Production Standards &amp; Best Practices </h1>
 <p class="copyright">
-	Copyright 2005‒2012 <a href="http://imarc.net/">iMarc LLC</a>.
+	Copyright 2005‒2013 <a href="http://imarc.net/">iMarc LLC</a>.
 </p>
 
 <dl>
 	<dt><a href="frontend">Frontend</a></dt>
-	<dd>HTML and CSS standards</dd>
+		<dd>HTML and CSS standards</dd>
 	<dt><a href="javascript">JavaScript</a></dt>
-	<dd>JavaScript and jQuery standards</dd>
+		<dd>JavaScript and jQuery standards</dd>
 	<dt><a href="backend">PHP &amp; SQL</a></dt>
-	<dd>PHP and SQL standards</dd>
+		<dd>PHP and SQL standards</dd>
 	<dt><a href="deployment">Deployment</a></dt>
-	<dd>Deployment standards</dd>
+		<dd>Deployment standards</dd>
+    <dt><a href="strategy">Strategy</a></dt>
+	    <dd>Strategy processes</dd>
 </dl>
 
+<!--
 ## In progress:
 
 <dl>
@@ -27,3 +30,4 @@ layout: notoc
     </dt>
     <dd>Strategy Processes</dd>
 </dl>
+-->
