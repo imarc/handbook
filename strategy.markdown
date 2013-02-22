@@ -87,7 +87,7 @@ Engineer
 :	Handles engineering tasks and/or research, delegated by the Strategist
 
 UX Engineer
-:	Conducts [discovery activities](#discoveryactivities) and produces [deliverables and supporting documents](#deliverablesandsupportingdocuments), delegated by the Strategist
+:	Conducts discovery activities and produces deliverables and supporting documents, delegated by the Strategist
 
 As we transition to the creative and production phases, the Strategist hands the reins over to the Producer and withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
