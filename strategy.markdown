@@ -34,7 +34,7 @@ Activity or Task
 : Something you *do*. It is not a deliverable.
 
 Scope
-: The number of *hours* are allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWorkSOW), and should be restated in the Requirements.
+: The number of *hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWorkSOW), and should be restated in the Requirements.
 
 Requirements
 : What the end product must do. Defined by a [Functional Requirements](#FunctionalRequirements) or a [Production Specification](#ProductionSpecification) document.
@@ -54,8 +54,7 @@ The overall process typically looks something like this:
 
 1. Define project objectives
 1. Conduct discovery and report findings
-1. Explore needed content and tools
-1. Create the blueprint
+1. Define content and tools
 
 Strategy begins with an internal handoff meeting between the proposal author and strategy team.
 
@@ -67,20 +66,20 @@ Before strategy work begins, the proposal author is responsible for notifying th
 During large-scale strategy engagements, the ideal strategy team will consist of:
 
 Producer
-:	Sets high-level milestones; <br>
-	Consulted on spec and strategy deliverables; <br>
+:	Sets high-level milestones;  
+	Consulted on spec and strategy deliverables;  
 	Approves spec doc before production
 
 Strategist
-:	Leads the strategy phase; <br>
-	Manages most client meetings; <br>
-	Responsible for presenting deliverables and adhering to timeline; <br>
-	Sets day-to-day tasks and due dates for team; <br>
-	Delegates tasks to other team members; <br>
+:	Leads the strategy phase;  
+	Manages most client meetings;  
+	Responsible for presenting deliverables and adhering to timeline;  
+	Sets day-to-day tasks and due dates for team;  
+	Delegates tasks to other team members;  
 	Delivers change orders when the scope of the strategy phase, or the production work that strategy is defining, changes
 
 Designer
-:	May participate in discovery and interviews; <br>
+:	May participate in discovery and interviews;  
 	Is consulted on wireframes
 
 Engineer
@@ -120,6 +119,9 @@ Tasks
 Deliverables
 :	The results are summarized for the client in the [Discovery Report](#discoveryreport). Occasionally, a dedicated findings report is created for this component.
 
+Time Req
+:	30 hours for 6 users interviews and inclusion in Discovery Report
+
 User interviews can take place in person or remotely over the phone, with or without screen sharing. We create a script and a list of questions to ensure consistency.
 
 Interviews can explore concrete items, such as user interface components, design elements, document flow, feature importance, technical knowledge, and devices used (pc, tablet, phone…).  But to be most effective, interviews should explore more fundamental issues.
@@ -147,6 +149,9 @@ Tasks
 Deliverables
 :	The results are summarized for the client in the [Discovery Report](#discoveryreport). Occasionally, a dedicated findings report is created for this component.
 
+Time Req
+:	32–68 hours for 6–12 stakeholders and inclusion in Discovery Report
+
 
 Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
 
@@ -165,6 +170,8 @@ Stakeholder interviews often turn up new information, issues and objectives.
 
 Stakeholders often mistake their own needs for their users' needs. It's our job to help align stakeholder's goals with our users' needs.
 
+Batching in small groups can reduce time spent on-site but saves little time overall, and tend to result in less detailed information from all participants. Interviewing senior stakeholders effectively tends to be staff- and time-intensive.
+
 
 ### Competitive Analysis
 
@@ -177,6 +184,10 @@ Tasks
 Deliverables
 :	A competitive analysis should culminate in specific recommendations for the project, as part of the [Discovery Report](#discoveryreport). Occasionally, a dedicated findings report is created for this component.
 
+Time Req
+: 16–32 hours, depending on breadth and depth
+
+
 Typically we look for patterns and best practices among:
 
 + **Content:**  Who is it written for, and why? How do they persuade visitor? What is the style?
@@ -186,6 +197,50 @@ Typically we look for patterns and best practices among:
 + **SEO audit:** What pages are indexed? What meta and title info are used? Is there a sitemap.xml or robots.txt, and if so, what do they indicate?
 
 *Caution:* Just because something commonly is done a certain way does not mean it is the *best way*. You should use your own judgement; the goal of a competitive analysis is not to comply with the lowest common denominator, but to find the very best practices.
+
+
+### Web Analytics Audit
+
+Objective
+:	Help clients understand where their site has performed well or poorly.
+
+Tasks
+:	Explore trends and patterns in user activity, content, and page flows.
+
+Deliverables
+: 2–4 page summary of most important analytics data findings.
+
+Time Req
+:	6–8 hours and inclusion in Discovery Report
+
+The primary purpose of this document is to identify and convey past patterns in user activity, page flows, and content to better inform decisions during planning, design and development. It is necessarily backwards-looking.
+
+
+### Metrics Baseline
+
+Objective
+:	Help clients measure the effectiveness of their site.
+
+Tasks
+:	Talk to core stakeholders, identify metrics for success based on their business activities, and document and prepare those metrics for implementation by the development team.
+
+Deliverables
+: 1–2 page stand-alone report or inclusion in Discovery Report. The findings and metrics should be incorporated into the site Requirements or Specification.
+
+Time Req
+:	6–8 hours
+
+The Metrics Baseline is a forward-looking activity that builds upon the Web Analytics Audit findings to establish what metrics will be used to measure conversion and site performance *after* launch. 
+
+It should provide metrics both for general performance and specific indicators:
+
++ **General Performance**  
+5–10 trackable, standard metrics for the site overall which will help the client understand where their site is performing well, or needs improvement. For example, natural search referrals, length of visit, depth of visit, bounce rate, etc.
+
++ **Specific Indicators**  
+5 KPIs or event triggers that can be used to measure *conversions* (e.g., ”Request a Quote“ form submissions, course sign-up.); *value* (e.g., average order total…); or *behaviors* (e.g., Visitor loyalty and recency, days & visits to purchase, checkout abandonment rate, task completion rate…).
+
+In both cases, set a baseline to measure improvement (if possible). If the client is active in social media, also measure [amplification and applause](http://www.kaushik.net/avinash/best-social-media-metrics-conversation-amplification-applause-economic-value/) rates.
 
 
 
@@ -199,6 +254,10 @@ Tasks
 
 Deliverables
 :	Results are delivered as part of the [Discovery Report](#discoveryreport).
+
+Time Req
+: 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8-12 hours.
+
 
 Questions should be close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
 
@@ -218,12 +277,17 @@ Tasks
 Deliverables
 :	Results may be delivered as part of the [Discovery Report](#discoveryreport) or as a dedicated findings report.
 
+Time Req
+:	See test types, below.
 
-iMarc engages in several types of testing. In order of increasing rigorousness (and time, effort and cost):
+We engage in several types of testing. In order of increasing rigorousness (and time, effort and cost):
 
 > #### Hallway Testing
 > 
 >	During design or development, pull in a passer-by and ask them to do a task. This is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
+> 
+>Time Req
+>:	0.5 hours per task
 > 
 > #### Heuristic Evaluation
 > 
@@ -231,9 +295,15 @@ iMarc engages in several types of testing. In order of increasing rigorousness (
 > 
 >	A good starting point for this is Jakob Nielsen's [10 Heuristics for User Interface Design](http://www.nngroup.com/articles/ten-usability-heuristics/) and [How to Conduct a Heuristic Evaluation](http://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) articles; Abby Covert's [Information Architecture Heuristics](http://www.slideshare.net/AbbyCovert/information-architecture-heuristics) is great too.
 > 
+>Time Req
+>:	6–8 hours and inclusion in the Discovery Report
+> 
 > #### Quality Assurance
 > 
 >	After design and development, iMarc employees who were not involved in creating the site asseses the site for common issues and best practices. (This is not typically part of the strategy process, although strategists often assist in this work.) Similar to Heuristic Evaluation, except it serves as a "last pass" to catch anything missed during production.
+> 
+>Time Req
+>:	N/A (not budgeted with strategy)
 > 
 > #### Structured Usability Testing
 > 
@@ -242,8 +312,9 @@ iMarc engages in several types of testing. In order of increasing rigorousness (
 >	We create a formal task list and script, recruit a number of users (typically [5 users](http://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/), and [rarely more](http://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
 > 
 >	The script helps to ensure consistency, video recording the screen lets us revisit the tests. 
-
-
+> 
+>Time Req
+>:	64–80 hours per round, with 4-5 users, and written usability report and recommendations. 
 
 
 
@@ -251,26 +322,37 @@ iMarc engages in several types of testing. In order of increasing rigorousness (
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
+
 ### Proposal
 
-A proposal is created by Business Development and is a sales tool. It defines the project scope, suggests features and functionality, and usually includes quite a lot of background research and client goals. *Every strategy participant should read the proposal.*
+A proposal is created by Business Development and is a sales tool. It defines the project scope, suggests features and functionality, and usually includes quite a lot of background research and client goals. *Every strategy participant should read the proposal, in its entirety.*
 
 
 ### Statement of Work (SOW)
 
-A statement of work may be created by Business Development or a Producer. It's *not* a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [specification](#TechnicalSpecification) before production.
+A statement of work may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [specification](#TechnicalSpecification) before production.
 
 
 ### Functional Requirements
 
-A 5-10 page document for smaller projects with a production scope less than 200 hours. This should take about 60 hours to produce, including all discovery, research and meetings. This document is created by Strategy team. It's not a sales tool.
+Summary
+:	A 5-10 page document for projects with production scope *under 200 hours*.
+
+Time Req
+:	32 hours, *in addition to Discovery Activities*.
+
 
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [site map](#SiteMap) and [homepage narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
 
 
 ### Production Specification
 
-A 15–80 page document for projects scoped to a 200+ hours production schedule. It typically takes 90–170 person-hours to produce, including all discovery, research and meetings.
+Summary
+:	A 15–80 page document for projects with production scope *over 200 hours*.
+
+Time Req
+:	 90–170 hours, *in addition to Discovery Activities*.
+
 
 Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. It restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
 
@@ -278,12 +360,19 @@ Like a Functional Requirements document, it's created by a Strategy team in clos
 + Must be reviewed by the Producer and an engineer before finalization.
 + May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
 
-(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. iMarc's developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
+(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
 
 ### Discovery Report
 
-A brief document summarizing findings, including:
+Summary
+:	A 15–25 page document that ensures all stakeholders are aligned to the same objectives and priorities before creating a Production Specification.
+
+Time Req
+:	Based upon Discovery Activities conducted (above)
+
+
+The Discovery Report documents what we've learned, ensures internal stakeholders are aligned to the same objectives and priorities, and provides specific recommendations.
 
 + Business overview, including services and customers
 + Target audiences
@@ -295,50 +384,72 @@ A brief document summarizing findings, including:
 + Baseline performance/analytics (including conversion rates, if possible)
 + Recommendations
 
-The discovery document is typically 2-6 pages. The primary purpose of this document is to ensure all stakeholders are aligned to the same objectives and priorities. Secondarily, it serves as a "checklist" of sorts for the next documents: site map, wireframes, and requirements or specifications.
-
-
-### Analytics Report
-
-2–8 page document that summarizes website analytics indentifying the most important data pertaining to the upcoming project. The primary purpose of this document is to convey user activity and trends in an easy to understand summarization, to better inform decisions during planning, design and development. The secondary purpose of this document is to establish a baseline for key metrics, including (where applicable) conversions and referrals.
+The Discovery Report serves as a "checklist" of sorts for the next documents: site map, wireframes, and specifications.
 
 
 ### Homepage Narrative
 
-Brief, 1-2 page document that defines all content, features and functionality required for the homepage. This simple list and description acts as a starting point for the design and creative phase.
+Summary
+: Brief, 1-2 page document that defines all content, features and functionality required for the homepage. 
+
+Time Req
+:	4–6 hours, and inclusion in the Functional Requirements Document
+
+This simple list and description acts as a starting point for the design and creative phase. It is done instead of a wireframe.
 
 
 ### Site Map
 
-Diagram showing the relationship of a web site's information and organization of content. 
+Summary
+:	Diagram showing the relationship of a web site's information and organization of content. 
 
-+ iMarc uses site maps to convey content hierarchy, CMS controlled content, and template usage.
-+ Site maps create a navigational backbone for a website.
+Time Req
+: N/A (Not usually broken out from [FRD](#FunctionalRequirements) or [Spec](#ProductionSpecification))
 
-*Example:*
++ Convey content hierarchy and labeling
++ Denote CMS-controlled content and template usage
++ Create a navigational backbone for a website
+
+#### Example Sitemap:
 ![Sample Site map](img/strategy/sitemap.png)
 
 
 ### Content Outline
 
+
+Summary
+:	Briefly describes the purpose and goal of each page on the site.
+
+Time Req
+: N/A (Not usually broken out from [FRD](#FunctionalRequirements))
+
+
 The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page. Typically a component of the Functional Requirements.
 
-*Example:*
+#### Example Content Outline
 ![Sample Content Outline](img/strategy/content_outline.png)
 
 
 ### Wireframe
 
-User interface illustration stripped of all presentational style. It's a bit of a "sneak preview" of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
+Summary
+: User interface and content illustration stripped of all presentational style. 
+
+Time Req
+: 8–12 hours per page or screen
+
+
+A wireframe is a bit of a "sneak preview" of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
+
+Most wireframes will depict single web pages, but some may depict multiple screens in a complex interaction or workflow. Multi-screen explorations are called *storyboards*.
 
 + Allows for rapid, efficient UI iteration
-+ Conveys what a screen does
++ Conveys what a page or screen does
 + We often create multiple wireframes express various parts of the site
-+ Sometimes depict multiple parts of a single workflow; we call these *Storyboards*
-+ Almost always annotated to describe behaviors, functionality, and content needs.
-+ Should not depict creative design. However, design is inexlicably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
++ Annotated to describe behaviors, functionality, and content needs.
++ Should not depict creative design. However, design is inextricably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
 
-*Example:*
+#### Example Wireframe:
 ![Example of Wireframe](img/strategy/wireframe.png)
 
 
@@ -346,6 +457,7 @@ User interface illustration stripped of all presentational style. It's a bit of 
 
 ## Tools
 
+The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
 
 ### Wireframes and Sitemaps
 
@@ -359,6 +471,8 @@ We also have created an "iMarc Objects" OmniGraffle stencil with some commonly u
 ### Reports and Specs
 
 We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. (You can download branded templates from [our intranet](http://internal.imarc.net/).) We've used [Pages](http://www.apple.com/iwork/pages/); the revision tools aren't as robust but it's much better at handling images and styles, and less prone to crashing.
+
+We sometimes use [Google Docs](http://docs.google.com) to gather content or write collaboratively. However, due to some serious limitations in formatting, revision tracking, and graphics handling, we rarely use it for client deliverables. All Google Docs *must* live within iMarc's private Google Apps Domain; they should not be created or edited using personal accounts.
 
 We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen.
 
@@ -377,12 +491,29 @@ When conducting user testing, we usually record the session screen and audio usi
 
 Strategy deliverables should contain some combination of the following meta information.
 
- - **Client Name:** Example: "iMarc LLC"
- - **Document title:** What is this and what role does it play in the project? Example: "Product Detail Page Wireframe"
- - **Updated Date:** When was this wireframe last updated? Example: "September 14, 2012"
- - **Version Number:** A collaboration aid. Example: "v7"
- - **Author:** Each document has one author. The last person to touch the document is the author of record and is responsible for its contents. Example: "David Tufts"
- - **Revision Notes:** What changed in this revision; mainly used in Functional Requirements and Production Specification documents.
+Client Name
+: Example: *iMarc LLC*
+
+Document title
+:	What is this and what role does it play in the project?  
+Example: *Product Detail Page Wireframe*
+
+Version Number
+:	A collaboration aid.  
+Example: *v7*
+
+Updated Date
+:	When was this document last updated?  
+Example: *September 4, 2012*
+
+Author
+:	Each document has one author. The last person to touch the document is the author of record and is responsible for its contents.  
+Example: *David Tufts*
+
+Revision Notes
+:	What changed in this revision; mainly used in Functional Requirements and Production Specification documents.
+
+#### Example of document metadata:
 
 ![Wireframe title, date, annotations](img/strategy/metadata-wireframe.png)
 
