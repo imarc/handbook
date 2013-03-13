@@ -18,6 +18,8 @@ iMarc is a full service web agency located north of Boston. Learn more at [http:
 
 The goal of all strategy activity is to produce a blueprint for the application or site that iMarc has contracted to deliver.
 
+**Strategy work should clearly define the project for the client and production team while focusing on a positive end-user experience.**
+
 Strategy sanity checks recommendations from the proposal with client needs.  Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
 
 When proposals specify time or cost budget for production, strategy deliverables must define a project that can be easily produced within those limitations.
@@ -30,8 +32,8 @@ When proposals specify time or cost budget for production, strategy deliverables
 Deliverable
 : A document or similar *work product* you can give to someone.
 
-Activity or Task
-: Something you *do*. It is not a deliverable.
+Task
+: An activity you *do*. It is not a deliverable.
 
 Scope
 : The number of *hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWorkSOW), and should be restated in the Requirements.
@@ -46,9 +48,7 @@ Implementation
 
 ## Process
 
-The strategy process is provided to clients who have signed a proposal which includes a specified time and cost budget for strategy. Proposals that do not explicitly define a strategy budget or scope should bypass the strategy team and go directly to a production team.
-
-**Strategy work should clearly define the project for the client and production team while focusing on a positive end-user experience.**
+The strategy process is provided to clients who have engaged iMarc by approving a proposal which includes a specified time and cost budget for strategy. Smaller projects that do not explicitly define a strategy budget or scope should bypass the strategy team and go directly to a production team.
 
 The overall process typically looks something like this:
 
@@ -88,15 +88,16 @@ Engineer
 UX Engineer
 :	Conducts discovery activities and produces deliverables and supporting documents, delegated by the Strategist
 
-As we transition to the creative and production phases, the Strategist hands the reins over to the Producer and withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
+The Designer, Engineer and UX Engineer(s) will stick with the project after the strategy phase is complete. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute. The UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
 
-The Designer, Engineer and UX Engineer(s) stick with the project through production; their roles and responsibilities may change a bit. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute, and the UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
+
+
 
 ### Approvals
 
 The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
 
-The strategy lead is responsible for notifying the client that project leadership is changing hands and the Producer is now their primary point of contact.
+If the client also engages iMarc to produce the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
 
 
