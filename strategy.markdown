@@ -287,7 +287,7 @@ We engage in several types of testing. In order of increasing rigorousness (and 
 >	During design or development, pull in a passer-by and ask them to do a task. This is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
 > 
 >Time Req
->:	0.5 hours per task
+>:	0\.5 hours per task
 > 
 > #### Heuristic Evaluation
 > 
