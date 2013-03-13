@@ -103,9 +103,9 @@ The strategy lead is responsible for notifying the client that project leadershi
 
 ## Discovery Activities
 
-Depending on budget and goals, a number of research activities may be incorporated into a project. Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers. Some are quantitative, meaning they are designed to produce a measurable result. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
+Depending on budget and goals, a number of research activities may be incorporated into a project. 
 
-The end of the Discovery process should result in delivering a [Discovery Report](#DiscoveryReport) to the client. (Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.)
+Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
 ### User Interviews
@@ -126,6 +126,8 @@ User interviews can take place in person or remotely over the phone, with or wit
 
 Interviews can explore concrete items, such as user interface components, design elements, document flow, feature importance, technical knowledge, and devices used (pc, tablet, phone…).  But to be most effective, interviews should explore more fundamental issues.
 
+Topics include:
+
 + What do users want? What are they really trying to do?
 + What frustrates them?
 + What makes them happy? 
@@ -135,7 +137,7 @@ Interviews can explore concrete items, such as user interface components, design
 + If they're mobile, are they walking around a noisy factory floor, or driving from office to office? 
 + If they're not mobile, do they use a desktop PC, a laptop with a big screen, laptop with tiny screen?
 
-Some organizations will have people who are in daily contact with users, and have valuable insight into what makes users "tick". Customer service and technical support teams are often treasure troves of insight, with "on the ground" knowledge dwarfing that of sales and marketing organizations. Their experience is invaluable, especially for consumer-facing organizations, or if for any reason we can't talk to the actual end users.
+Some organizations will have people who are in daily contact with users, and have valuable insight into what makes users "tick". Customer service and technical support teams are often treasure troves of insight, with "on the ground" knowledge dwarfing that of sales and marketing personnel. Their experience is invaluable, especially for consumer-facing organizations, or if for any reason we can't talk to the actual end users.
 
 
 ### Stakeholder Interviews
@@ -157,7 +159,7 @@ Stakeholder interviews help uncover the desires and goals of each decision maker
 
 Even if the client's senior stakeholders aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
 
-Topics often include:
+Topics include:
 
 + What are the success metrics?
 + Who are the audience segments?
@@ -261,7 +263,9 @@ Time Req
 
 Questions should be close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
 
-*Caution:* Surveys are most effective at measuring things we know about. They are ineffective at discovering the unknown. Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias) creeping into survey design and interpretation.
+*Caution:* Surveys can only answer the questions we know to ask; unlike interviews and usability testing, they rarely produce novel findings.
+
+Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias) creeping into survey design and interpretation.
 
 
 
@@ -287,7 +291,7 @@ We engage in several types of testing. In order of increasing rigorousness (and 
 >	During design or development, pull in a passer-by and ask them to do a task. This is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
 > 
 >Time Req
->:	0\.5 hours per task
+>:	0\.5 hours per task per person
 > 
 > #### Heuristic Evaluation
 > 
@@ -333,6 +337,34 @@ A proposal is created by Business Development and is a sales tool. It defines th
 A statement of work may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [specification](#TechnicalSpecification) before production.
 
 
+### Discovery Report
+
+Summary
+:	A 15–25 page document that ensures all stakeholders are aligned to the same objectives and priorities before creating a Production Specification.
+
+Time Req
+:	Based upon Discovery Activities conducted (above)
+
+
+The Discovery Report documents what we've learned, ensures internal stakeholders are aligned to the same objectives and priorities, and provides specific recommendations.
+
+Topics include:
+
++ Business overview, including services and customers
++ Target audiences
++ Project goals, prioritized
++ Project challenges
++ Notable trends in site analytics
++ Summary of client interview and/or survey results (if conducted)
++ Summary of usability testing results (if conducted)
++ Baseline performance/analytics (including conversion rates, if possible)
++ Recommendations
+
+Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.
+
+The Discovery Report serves as a "checklist" of sorts for the next documents: site map, wireframes, and specifications.
+
+
 ### Functional Requirements
 
 Summary
@@ -361,30 +393,6 @@ Like a Functional Requirements document, it's created by a Strategy team in clos
 + May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
 
 (This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
-
-
-### Discovery Report
-
-Summary
-:	A 15–25 page document that ensures all stakeholders are aligned to the same objectives and priorities before creating a Production Specification.
-
-Time Req
-:	Based upon Discovery Activities conducted (above)
-
-
-The Discovery Report documents what we've learned, ensures internal stakeholders are aligned to the same objectives and priorities, and provides specific recommendations.
-
-+ Business overview, including services and customers
-+ Target audiences
-+ Project goals, prioritized
-+ Project challenges
-+ Notable trends in site analytics
-+ Summary of client interview and/or survey results (if conducted)
-+ Summary of usability testing results (if conducted)
-+ Baseline performance/analytics (including conversion rates, if possible)
-+ Recommendations
-
-The Discovery Report serves as a "checklist" of sorts for the next documents: site map, wireframes, and specifications.
 
 
 ### Homepage Narrative
