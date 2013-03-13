@@ -30,7 +30,7 @@ When proposals specify time or cost budget for production, strategy deliverables
 Deliverable
 : A document or similar *work product* you can give to someone.
 
-Activity or Task
+Task
 : Something you *do*. It is not a deliverable.
 
 Scope
