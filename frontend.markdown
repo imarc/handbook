@@ -1120,20 +1120,80 @@ More information on [typographic scales](http://lamb.cc/typograph/).
 ### Web Fonts
 
 Use the following syntax to use web fonts on the web with `@font-face`. Appropriate 
-file formats should be provided for supported browsers.
+file formats should be provided for supported browsers. When using a multi weight/style typeface be sure to add the appropriate `font-weight` and `font-style` for each.
 
 Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Font Squirrel)):
 
-    @font-face {
-        font-family: 'DearestRegular';
-        src: url('/fonts/Dearest-webfont.eot');
-        src: url('/fonts/Dearest-webfont.eot?#iefix') format('embedded-opentype'),
-             url('/fonts/Dearest-webfont.woff') format('woff'),
-             url('/fonts/Dearest-webfont.ttf') format('truetype'),
-             url('/fonts/Dearest-webfont.svg#DearestRegular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
+	@font-face {
+	   font-family: 'VerbRegular';
+	      src: url('/fonts/Verb/VerbRegular-webfont.eot');
+	      src: url('/fonts/Verb/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/Verb/VerbRegular-webfont.woff') format('woff'),
+	           url('/fonts/Verb/VerbRegular-webfont.ttf') format('truetype'),
+	           url('/fonts/Verb/VerbRegular-webfont.svg#VerbRegular') format('svg');
+	   font-weight: normal;
+	   font-style: normal;
+	}
+	@font-face {
+	   font-family: 'VerbRegularItalic';
+	      src: url('/fonts/Verb/VerbRegular-Italic-webfont.eot');
+	      src: url('/fonts/Verb/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/Verb/VerbRegular-Italic-webfont.woff') format('woff'),
+	           url('/fonts/Verb/VerbRegular-Italic-webfont.ttf') format('truetype'),
+	           url('/fonts/Verb/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
+	   font-weight: normal;
+	   font-style: italic;
+	}
+	@font-face {
+	   font-family: 'VerbBold';
+	      src: url('/fonts/Verb/VerbBold-webfont.eot');
+	      src: url('/fonts/Verb/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/Verb/VerbBold-webfont.woff') format('woff'),
+	           url('/fonts/Verb/VerbBold-webfont.ttf') format('truetype'),
+	           url('/fonts/Verb/VerbBold-webfont.svg#VerbBold') format('svg');
+	   font-weight: bold;
+	   font-style: normal;
+	}
+	@font-face {
+	   font-family: 'VerbBoldItalic';
+	      src: url('/fonts/Verb/VerbBold-Italic-webfont.eot');
+	      src: url('/fonts/Verb/VerbBold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/Verb/VerbBold-Italic-webfont.woff') format('woff'),
+	           url('/fonts/Verb/VerbBold-Italic-webfont.ttf') format('truetype'),
+	           url('/fonts/Verb/VerbBold-Italic-webfont.svg#VerbBoldItalic') format('svg');
+	   font-weight: bold;
+	   font-style: italic;
+	}
+
+When styling elements, it's important to define the `font-family` as well as `font-weight` and `font-style` when necessary. This eliminates any faux bolding or faux italics in the browser. [Here's an example of faux styling when you don't properly define each font](http://paul.sandbox.imarc.net/font-face/) 
+
+Use the following method when defining fonts:
+
+		body {
+			font-family: "VerbRegular";
+		}
+	
+	
+		h1, h2 {
+			font-family: "VerbBold";
+		}
+	
+		h3 {
+			font-family: "VerbRegular";
+			font-weight: normal;
+		}
+	
+		strong {
+			font-family: "VerbBold";
+		}
+	
+		strong em {
+			font-family: "VerbBoldItalic";
+		}
+	
+		em {
+		 font-family: "VerbRegularItalic";
+		}
 
 Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) that can convert font files to various formats. Make sure you check with your producer regarding the use of web fonts as there are licensing requirements for certain fonts.
 
