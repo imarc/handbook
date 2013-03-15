@@ -1126,41 +1126,41 @@ Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bul
 
 	@font-face {
 	   font-family: 'VerbRegular';
-	      src: url('/fonts/Verb/VerbRegular-webfont.eot');
-	      src: url('/fonts/Verb/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/Verb/VerbRegular-webfont.woff') format('woff'),
-	           url('/fonts/Verb/VerbRegular-webfont.ttf') format('truetype'),
-	           url('/fonts/Verb/VerbRegular-webfont.svg#VerbRegular') format('svg');
+	      src: url('/fonts/VerbRegular-webfont.eot');
+	      src: url('/fonts/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/VerbRegular-webfont.woff') format('woff'),
+	           url('/fonts/VerbRegular-webfont.ttf') format('truetype'),
+	           url('/fonts/VerbRegular-webfont.svg#VerbRegular') format('svg');
 	   font-weight: normal;
 	   font-style: normal;
 	}
 	@font-face {
 	   font-family: 'VerbRegularItalic';
-	      src: url('/fonts/Verb/VerbRegular-Italic-webfont.eot');
-	      src: url('/fonts/Verb/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/Verb/VerbRegular-Italic-webfont.woff') format('woff'),
-	           url('/fonts/Verb/VerbRegular-Italic-webfont.ttf') format('truetype'),
-	           url('/fonts/Verb/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
+	      src: url('/fonts/VerbRegular-Italic-webfont.eot');
+	      src: url('/fonts/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/VerbRegular-Italic-webfont.woff') format('woff'),
+	           url('/fonts/VerbRegular-Italic-webfont.ttf') format('truetype'),
+	           url('/fonts/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
 	   font-weight: normal;
 	   font-style: italic;
 	}
 	@font-face {
 	   font-family: 'VerbBold';
-	      src: url('/fonts/Verb/VerbBold-webfont.eot');
-	      src: url('/fonts/Verb/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/Verb/VerbBold-webfont.woff') format('woff'),
-	           url('/fonts/Verb/VerbBold-webfont.ttf') format('truetype'),
-	           url('/fonts/Verb/VerbBold-webfont.svg#VerbBold') format('svg');
+	      src: url('/fonts/VerbBold-webfont.eot');
+	      src: url('/fonts/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/VerbBold-webfont.woff') format('woff'),
+	           url('/fonts/VerbBold-webfont.ttf') format('truetype'),
+	           url('/fonts/VerbBold-webfont.svg#VerbBold') format('svg');
 	   font-weight: bold;
 	   font-style: normal;
 	}
 	@font-face {
 	   font-family: 'VerbBoldItalic';
-	      src: url('/fonts/Verb/VerbBold-Italic-webfont.eot');
-	      src: url('/fonts/Verb/VerbBold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/Verb/VerbBold-Italic-webfont.woff') format('woff'),
-	           url('/fonts/Verb/VerbBold-Italic-webfont.ttf') format('truetype'),
-	           url('/fonts/Verb/VerbBold-Italic-webfont.svg#VerbBoldItalic') format('svg');
+	      src: url('/fonts/VerbBold-Italic-webfont.eot');
+	      src: url('/fonts/VerbBold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+	           url('/fonts/VerbBold-Italic-webfont.woff') format('woff'),
+	           url('/fonts/VerbBold-Italic-webfont.ttf') format('truetype'),
+	           url('/fonts/VerbBold-Italic-webfont.svg#VerbBoldItalic') format('svg');
 	   font-weight: bold;
 	   font-style: italic;
 	}
