@@ -1,6 +1,6 @@
 ---
 title: iMarc CSS Base
-layout: base
+layout: default
 ---
 
 # iMarc CSS Base
