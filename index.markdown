@@ -9,6 +9,8 @@ layout: notoc
 </p>
 
 <dl>
+    <dt><a href="strategy">Strategy</a></dt>
+	    <dd>Strategy processes</dd>
 	<dt><a href="frontend">Frontend</a></dt>
 		<dd>HTML and CSS standards</dd>
 	<dt><a href="javascript">JavaScript</a></dt>
@@ -17,8 +19,6 @@ layout: notoc
 		<dd>PHP and SQL standards</dd>
 	<dt><a href="deployment">Deployment</a></dt>
 		<dd>Deployment standards</dd>
-    <dt><a href="strategy">Strategy</a></dt>
-	    <dd>Strategy processes</dd>
 </dl>
 
 <!--

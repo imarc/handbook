@@ -205,7 +205,7 @@ Typically we look for patterns and best practices among:
 ### Web Analytics Audit
 
 Objective
-:	Help clients understand how their site has performed well or poorly.
+:	Help clients understand where their site has performed well or poorly.
 
 Tasks
 :	Explore trends and patterns in user activity, content, and page flows.
