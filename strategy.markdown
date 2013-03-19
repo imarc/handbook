@@ -36,13 +36,13 @@ Task
 : An activity you *do*. It is not a deliverable.
 
 Scope
-: The number of *hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWorkSOW), and should be restated in the Requirements.
+: The number of *hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal][] or a [Statement of Work][], and should be restated in the Requirements.
 
 Requirements
-: What the end product must do. Defined by a [Functional Requirements](#FunctionalRequirements) or a [Production Specification](#ProductionSpecification) document.
+: What the end product must do. Defined by a [Functional Requirements][] or a [Production Specification][] document.
 
 Implementation
-: How the end product must work. Defined by a [Production Specification](#ProductionSpecification).
+: How the end product must work. Defined by a [Production Specification][].
 
 
 
@@ -118,7 +118,7 @@ Tasks
 :	Locate, contact and talk to the *actual users* of the site or application, conducting contextual, unbiased interviews.
 
 Deliverables
-:	The results are summarized for the client in the [Discovery Report](#discoveryreport). Occasionally, a dedicated findings report is created for this component.
+:	The results are summarized for the client in the [Discovery Report][]. Occasionally, a dedicated findings report is created for this component.
 
 Time Req
 :	30 hours for 6 users interviews and inclusion in Discovery Report
@@ -150,7 +150,7 @@ Tasks
 :	Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
 
 Deliverables
-:	The results are summarized for the client in the [Discovery Report](#discoveryreport). Occasionally, a dedicated findings report is created for this component.
+:	The results are summarized for the client in the [Discovery Report][]. Occasionally, a dedicated findings report is created for this component.
 
 Time Req
 :	32–68 hours for 6–12 stakeholders and inclusion in Discovery Report
@@ -185,7 +185,7 @@ Tasks
 :	Look for patterns and best practices in content, layout, navigation, workflow, and SEO.
 
 Deliverables
-:	A competitive analysis should culminate in specific recommendations for the project, as part of the [Discovery Report](#discoveryreport). Occasionally, a dedicated findings report is created for this component.
+:	A competitive analysis should culminate in specific recommendations for the project, as part of the [Discovery Report][]. Occasionally, a dedicated findings report is created for this component.
 
 Time Req
 : 16–32 hours, depending on breadth and depth
@@ -256,7 +256,7 @@ Tasks
 :	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](#surveysandtesting) below), analyze the results.
 
 Deliverables
-:	Results are delivered as part of the [Discovery Report].
+:	Results are delivered as part of the [Discovery Report][].
 
 Time Req
 : 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8-12 hours.
@@ -280,7 +280,7 @@ Tasks
 :	Vary by type of testing; see below.
 
 Deliverables
-:	Results may be delivered as part of the [Discovery Report](#discoveryreport) or as a dedicated findings report.
+:	Results may be delivered as part of the [Discovery Report][] or as a dedicated findings report.
 
 Time Req
 :	See test types, below.
@@ -333,9 +333,9 @@ During the strategy process, we'll refer to and create a number of deliverables.
 A proposal is created by Business Development and is a sales tool. It defines the project scope, suggests features and functionality, and usually includes quite a lot of background research and client goals. *Every strategy participant should read the proposal, in its entirety.*
 
 
-### Statement of Work (SOW)
+### Statement of Work
 
-A statement of work may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [specification](#TechnicalSpecification) before production.
+A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Technical Specification][] before production.
 
 
 ### Discovery Report
@@ -375,7 +375,7 @@ Time Req
 :	32 hours, *in addition to Discovery Activities*.
 
 
-This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [site map](#SiteMap) and [homepage narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
+This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map][] and [Homepage Narrative][]. It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
 
 
 ### Production Specification
@@ -413,7 +413,7 @@ Summary
 :	Diagram showing the relationship of a web site's information and organization of content. 
 
 Time Req
-: N/A (Not usually broken out from [FRD](#FunctionalRequirements) or [Spec](#ProductionSpecification))
+: N/A (Not usually broken out from [Functional Requirements][] or [Production Specification][])
 
 + Convey content hierarchy and labeling
 + Denote CMS-controlled content and template usage
@@ -430,7 +430,7 @@ Summary
 :	Briefly describes the purpose and goal of each page on the site.
 
 Time Req
-: N/A (Not usually broken out from [FRD](#FunctionalRequirements))
+: N/A (Not usually broken out from [Functional Requirements][])
 
 
 The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page. Typically a component of the Functional Requirements.
