@@ -79,7 +79,7 @@ Strategist
 	Delivers change orders when the scope of the strategy phase, or the production work that strategy is defining, changes
 
 UX Engineer
-:	Conducts discovery activities and produces deliverables and supporting documents, delegated by the Strategist
+:	Conducts [discovery activities](#DiscoveryActivities) and produces deliverables and supporting documents, delegated by the Strategist
 
 Designer
 :	May participate in discovery and interviews;  
