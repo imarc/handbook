@@ -145,21 +145,8 @@
 /* Index
 /* --------------------------------------------------------------------- */ 
 
-	.index .content .main {
-		width: 980px;
-	}
-	.index h1 a {
-		color: #000;
-	}
-	.index h1 sup {
-		font-size: 14px;
-	}
-	.index .content .introduction {
-		width: 655px;
-		margin: 40px auto;
-	}
-
 	h1.title {
+		font-size: 24px;
 		text-align: center;
 	}
 	p.copyright {
