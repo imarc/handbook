@@ -16,11 +16,9 @@ iMarc is a full service web agency located north of Boston. Learn more at [http:
 
 ## Goals
 
-The goal of all strategy activity is to produce a blueprint for the application or site that iMarc has contracted to deliver.
+The goal of all strategy activity is to produce a clear and concise blueprint for an application or website. **Strategy work should clearly define the project for the client and production team while focusing on a positive end-user experience.**
 
-**Strategy work should clearly define the project for the client and production team while focusing on a positive end-user experience.**
-
-Strategy sanity checks recommendations from the proposal with client needs.  Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
+Strategy work will sanity check recommendations from the proposal against actual client needs. Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
 
 When proposals specify time or cost budget for production, strategy deliverables must define a project that can be easily produced within those limitations.
 
@@ -470,7 +468,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 ### Wireframes and Sitemaps
 
-We currently use [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) for site maps and wireframes. OmniGraffle is Mac-only software. (At least one Producer uses Microsoft Visio for Windows; OmniGraffle can import/export those files.) In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
+[OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
 We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices.
 
@@ -479,20 +477,22 @@ We also have created an "iMarc Objects" OmniGraffle stencil with some commonly u
 
 ### Reports and Specs
 
-We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. (You can download branded templates from [our intranet](http://internal.imarc.net/).) We've used [Pages](http://www.apple.com/iwork/pages/); the revision tools aren't as robust but it's much better at handling images and styles, and less prone to crashing.
+We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
-We sometimes use [Google Docs](http://docs.google.com) to gather content or write collaboratively. However, due to some serious limitations in formatting, revision tracking, and graphics handling, we rarely use it for client deliverables. All Google Docs *must* live within iMarc's private Google Apps Domain; they should not be created or edited using personal accounts.
+We've used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
 We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen.
 
 
 ### Surveys and Testing
 
-To conduct user surveys, we favor [Survey Monkey](http://surveymonkey.com), which has fairly good tools for finding patterns in responses and on-the-fly cross-tabulation.
+[Survey Monkey](http://surveymonkey.com) is used to conduct user surveys.
 
-To test content structure, we've had good results with [Treejack](http://www.optimalworkshop.com/treejack.htm). (It does not handle recruiting testers, though.)
+[Treejack](http://www.optimalworkshop.com/treejack.htm) is used for testing content structure and navigation.
 
-When conducting user testing, we usually record the session screen and audio using [Camtasia](http://www.techsmith.com/camtasia.html). For remote user testing, [GoToMeeting](http://www.gotomeeting.com/fec/) is the service of choice.
+[Camtasia](http://www.techsmith.com/camtasia.html) is used for conducting in-person user testing. Camtasia records the session screen and audio.
+
+[GoToMeeting](http://www.gotomeeting.com/fec/) is used for remote user testing.
 
 
 
@@ -500,19 +500,21 @@ When conducting user testing, we usually record the session screen and audio usi
 
 Strategy deliverables should contain some combination of the following meta information.
 
-Client Name
+Client
 : Example: *iMarc LLC*
 
-Document title
-:	What is this and what role does it play in the project?  
-Example: *Product Detail Page Wireframe*
+Project
+: Example: *Website Redesign*
 
-Version Number
-:	A collaboration aid.  
+Document Title
+: Example: *Product Detail Page Wireframe*
+
+Version
+:	A number used as collaboration aid to identify a specific document. If changes are made to a published or shared document, the version number should increase.
 Example: *v7*
 
-Updated Date
-:	When was this document last updated?  
+Last Updated
+:	Full date that the document was last updated 
 Example: *September 4, 2012*
 
 Author
