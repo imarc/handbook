@@ -145,10 +145,13 @@
 /* Index
 /* --------------------------------------------------------------------- */ 
 
-	h1.title {
-		font-size: 24px;
-		text-align: center;
-	}
-	p.copyright {
-		text-align: center;
-	}
+h1.title {
+	font-size: 24px;
+	margin-top: 36px;
+	margin-bottom: 0;
+	text-align: center;
+}
+p.copyright {
+	text-align: center;
+	margin-bottom: 36px;
+}

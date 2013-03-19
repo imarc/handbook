@@ -5,7 +5,7 @@ layout: default
 
 # iMarc CSS Base
 
-This is a description of the interesting details of our CSS base. You can see our [CSS baseplate here](css/baseplate.css).
+This is a description of the interesting details of our CSS base.
 
 ## DOCTYPE
 
