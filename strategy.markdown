@@ -54,7 +54,7 @@ The overall process typically looks something like this:
 
 1. Define project objectives
 1. Conduct discovery and report findings
-1. Define content and tools
+1. Define content and tools via spec doc(s)
 
 Strategy begins with an internal handoff meeting between the proposal author and strategy team.
 
@@ -78,15 +78,15 @@ Strategist
 	Delegates tasks to other team members;  
 	Delivers change orders when the scope of the strategy phase, or the production work that strategy is defining, changes
 
+UX Engineer
+:	Conducts discovery activities and produces deliverables and supporting documents, delegated by the Strategist
+
 Designer
 :	May participate in discovery and interviews;  
 	Is consulted on wireframes
 
 Engineer
 :	Handles engineering tasks and/or research, delegated by the Strategist
-
-UX Engineer
-:	Conducts discovery activities and produces deliverables and supporting documents, delegated by the Strategist
 
 The Designer, Engineer and UX Engineer(s) will stick with the project after the strategy phase is complete. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute. The UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
 
@@ -127,7 +127,7 @@ User interviews can take place in person or remotely over the phone, with or wit
 
 Interviews can explore concrete items, such as user interface components, design elements, document flow, feature importance, technical knowledge, and devices used (pc, tablet, phone…).  But to be most effective, interviews should explore more fundamental issues.
 
-Topics include:
+**Topics include:**
 
 + What do users want? What are they really trying to do?
 + What frustrates them?
@@ -160,7 +160,7 @@ Stakeholder interviews help uncover the desires and goals of each decision maker
 
 Even if the client's senior stakeholders aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
 
-Topics include:
+**Topics include:**
 
 + What are the success metrics?
 + Who are the audience segments?
@@ -205,7 +205,7 @@ Typically we look for patterns and best practices among:
 ### Web Analytics Audit
 
 Objective
-:	Help clients understand where their site has performed well or poorly.
+:	Help clients understand how their site has performed well or poorly.
 
 Tasks
 :	Explore trends and patterns in user activity, content, and page flows.
@@ -256,7 +256,7 @@ Tasks
 :	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](#surveysandtesting) below), analyze the results.
 
 Deliverables
-:	Results are delivered as part of the [Discovery Report](#discoveryreport).
+:	Results are delivered as part of the [Discovery Report].
 
 Time Req
 : 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8-12 hours.
@@ -349,7 +349,7 @@ Time Req
 
 The Discovery Report documents what we've learned, ensures internal stakeholders are aligned to the same objectives and priorities, and provides specific recommendations.
 
-Topics include:
+**Topics include:**
 
 + Business overview, including services and customers
 + Target audiences
