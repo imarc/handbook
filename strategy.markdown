@@ -336,34 +336,6 @@ A proposal is created by Business Development and is a sales tool. It defines th
 A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Technical Specification](#TechnicalSpecification) before production.
 
 
-### Discovery Report
-
-Summary
-:	A 15–25 page document that ensures all stakeholders are aligned to the same objectives and priorities before creating a Production Specification.
-
-Time Req
-:	Based upon Discovery Activities conducted (above)
-
-
-The Discovery Report documents what we've learned, ensures internal stakeholders are aligned to the same objectives and priorities, and provides specific recommendations.
-
-**Topics include:**
-
-+ Business overview, including services and customers
-+ Target audiences
-+ Project goals, prioritized
-+ Project challenges
-+ Notable trends in site analytics
-+ Summary of client interview and/or survey results (if conducted)
-+ Summary of usability testing results (if conducted)
-+ Baseline performance/analytics (including conversion rates, if possible)
-+ Recommendations
-
-Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.
-
-The Discovery Report serves as a "checklist" of sorts for the next documents: site map, wireframes, and specifications.
-
-
 ### Functional Requirements
 
 Summary
@@ -374,6 +346,37 @@ Time Req
 
 
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
+
+
+
+### Discovery Report
+
+Summary
+:	A 10–25 page document summarizing the results of all [Discovery Activities] and providing specific recommendations for the project, for projects with production scope *over 200 hours*.
+
+Time Req
+:	Based upon Discovery Activities conducted (above)
+
+
+The Discovery Report documents what we've learned, and provides specific recommendations. Its secondary goal is to ensure internal stakeholders agree upon the same objectives and priorities before creatubg a Production Specification.
+
+**Topics include:**
+
++ Business overview, including services and customers
++ Target audiences
++ Project goals, prioritized
++ Project challenges
++ [Web Analytics Audit] results and notable trends
++ [Metrics Baseline]
++ [Client interview](#StakeholderInterviews) findings (if conducted)
++ [User interview](#UserInterviews) findings (if conducted)
++ [Survey](#Surveys) results (if conducted)
++ [Usability Testing] results (if conducted)
++ Recommendations
+
+Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.
+
+The Discovery Report serves as a foundation for the next documents: site map, wireframes, and specifications.
 
 
 ### Production Specification
@@ -481,7 +484,7 @@ We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but
 
 We've used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
-We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen.
+We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
 ### Surveys and Testing
@@ -510,11 +513,11 @@ Document Title
 : Example: *Product Detail Page Wireframe*
 
 Version
-:	A number used as collaboration aid to identify a specific document. If changes are made to a published or shared document, the version number should increase.
+:	A number used as collaboration aid to identify a specific document. If changes are made to a published or shared document, the version number should increase.  
 Example: *v7*
 
 Last Updated
-:	Full date that the document was last updated 
+:	Full date that the document was last updated  
 Example: *September 4, 2012*
 
 Author
