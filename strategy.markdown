@@ -358,19 +358,22 @@ Time Req
 :	Based upon Discovery Activities conducted (above)
 
 
-The Discovery Report documents what we've learned, and provides specific recommendations. Its secondary goal is to ensure internal stakeholders agree upon the same objectives and priorities before creatubg a Production Specification.
+The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](#SiteMap), [wireframes](#Wireframe), and [specification](#ProductionSpecification).
+
+Its secondary goal is to ensure internal stakeholders agree upon the project's objectives and priorities before creating a Production Specification.
 
 **Topics include:**
 
-+ Business overview, including services and customers
++ Business overview, including services, customers and market situation
 + Target audiences
 + Project goals, prioritized
 + Project challenges
 + [Web Analytics Audit] results and notable trends
 + [Metrics Baseline]
++ [Competitive analysis]
 + [Client interview](#StakeholderInterviews) findings (if conducted)
 + [User interview](#UserInterviews) findings (if conducted)
-+ [Survey](#Surveys) results (if conducted)
++ [Survey](#Surveys) findings (if conducted)
 + [Usability Testing] results (if conducted)
 + Recommendations
 
