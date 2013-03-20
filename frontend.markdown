@@ -457,7 +457,7 @@ CSS rules.
 
 This is an example of a complete page using some of the the naming conventions described above.
 
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
 	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
@@ -474,100 +474,97 @@ This is an example of a complete page using some of the the naming conventions d
 			<![endif]-->
 		</head>
 		<body>
-			<div class="site">
-				<header class="primary">
-					<h1><a href="/">iMarc</a></h1>
-					<nav class="utility">
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Legal</a></li>
-							<li><a href="#">Log In</a></li>
-						</ul>
-					</nav>
-					<nav class="primary">
-						<ul>
-							<li>
-								<a href="/">Home</a>
-							</li>
-							<li>
-								<a href="#">Teams</a>
-							</li>
-							<li>
-								<a href="#">Help</a>
-							</li>
-						</ul>
-					</nav>
-					<nav class="secondary">
-						<ul>
-							<li>
-								<a href="#these">Bruins</a>
-							</li>
-							<li>
-								<a href="#">Patriots</a>
-							</li>
-							<li>
-								<a href="#">Celtics</a>
-							</li>
-							<li>
-								<a href="#">Red Sox</a>
-							</li>
-						</ul>
-					</nav>
-				</header>
-				<div class="torso">
-					<aside class="primary">
-						<section>
-						    <nav class="secondary">
-								<ul>
-									<li>
-										<a href="#these">Players</a>
-									</li>
-									<li>
-										<a href="#">Ownership</a>
-									</li>
-									<li>
-										<a href="#next">Fans</a>
-									</li>
-									<li>
-										<a href="#">Staff</a>
-									</li>
-								</ul>
-						    </nav>
-						</section>
-					</aside>
-					<div class="main" role="main">
-						<header>
-							<hgroup>
-								<h1>The iMarc Boilerplate</h1>
-								<h2>Simple, Semantic Structure for Your CSS</h2>
-							</hgroup>
-						</header>
-						<section class="intro">
-							<p>
-								The iMarc Boilerplate provides some basic defaults for CSS and HTML
+		  <div class="site">
+			  <header class="primary">
+				  <h1><a href="/">iMarc</a></h1>
+				  <nav class="utility">
+					  <ul>
+						  <li><a href="#">Home</a></li>
+						  <li><a href="#">Careers</a></li>
+						  <li><a href="#">Legal</a></li>
+						  <li><a href="#">Log In</a></li>
+					  </ul>
+				  </nav>
+				  <nav class="primary">
+					  <ul>
+						  <li>
+							  <a href="/">Home</a>
+						  </li>
+						  <li>
+							  <a href="#">Teams</a>
+						  </li>
+						  <li>
+							  <a href="#">Help</a>
+						  </li>
+					  </ul>
+				  </nav>
+				  <nav class="secondary">
+					  <ul>
+						  <li>
+							  <a href="#these">Bruins</a>
+						  </li>
+						  <li>
+							  <a href="#">Patriots</a>
+						  </li>
+						  <li>
+							  <a href="#">Celtics</a>
+						  </li>
+						  <li>
+							  <a href="#">Red Sox</a>
+						  </li>
+					  </ul>
+				  </nav>
+			  </header>
+			  <div class="torso">
+				  <aside class="primary">
+					  <section>
+						     <nav class="secondary">
+							  <ul>
+								  <li>
+									  <a href="#these">Players</a>
+								  </li>
+								  <li>
+									  <a href="#">Ownership</a>
+								  </li>
+								  <li>
+									  <a href="#next">Fans</a>
+								  </li>
+								  <li>
+									  <a href="#">Staff</a>
+								  </li>
+							  </ul>
+						     </nav>
+					  </section>
+				  </aside>
+				  <div class="main" role="main">
+					  <header>
+						  <hgroup>
+							  <h1>The iMarc Boilerplate</h1>
+							  <h2>Simple, Semantic Structure for Your CSS</h2>
+						  </hgroup>
+					  </header>
+					  <section class="intro">
+						  <p>
+							  The iMarc Boilerplate provides some basic  defaults for CSS and HTML
 								structure. It uses some HTML5 elements as well as the HTML5Shiv and
 								supports Chrome, Firefox, and Internet Explorer 8+.
-							</p>
-							<div class="highlight">
+						  </p>
+						  <div class="highlight">
 								For more information, see iMarc's
 								<a href="http://handbook.imarc.net/frontend">frontend standards</a>.
-							</div>
-							<p>
-								This is a filler paragraph – Ignore this. These are scattered through
-								out the markup to simulate content. Lorem ipsum dolor sit amet,
-								consectetur adipiscing elit. Felis est, nec convallis dui.  Nulla lectus
-								velit, ornare sit amet blandit in, mattis eget nulla.
-							</p>
-						</section>
-					</div>
-				</div>
-				<footer class="primary">
-					<div class="copyright">©2013 iMarc LLC.</div>
-				</footer>
-			</div>
-		</body>
-	</html>
+						  </div>
+						  <p>
+							This is a filler paragraph – Ignore this. These are scattered through out the markup to simulate content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis est, nec convallis dui. Nulla lectus velit, ornare sit amet blandit in, mattis eget nulla.
+						  </p>
+					  </section>
+				  </div>
+			  </div>
+			  <footer class="primary">
+				  <div class="copyright">©2013 iMarc LLC.</div>
+			  </footer>
+		  </div>
+	  </body>
+  </html>
 
 ## Forms
 
