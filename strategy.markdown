@@ -368,13 +368,13 @@ Its secondary goal is to ensure internal stakeholders agree upon the project's o
 + Target audiences
 + Project goals, prioritized
 + Project challenges
-+ [Web Analytics Audit] results and notable trends
-+ [Metrics Baseline]
-+ [Competitive analysis]
-+ [Client interview](#StakeholderInterviews) findings (if conducted)
++ [Web Analytics Audit](#WebAnalyticsAudit) results and notable trends
++ [Metrics Baseline](#MetricsBaseline)
++ [Competitive analysis](#CompetitiveAnalysis)
++ [Stakeholder interviews](#StakeholderInterviews) findings (if conducted)
 + [User interview](#UserInterviews) findings (if conducted)
 + [Survey](#Surveys) findings (if conducted)
-+ [Usability Testing] results (if conducted)
++ [Usability Testing](#UsabilityTesting) results (if conducted)
 + Recommendations
 
 Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.
