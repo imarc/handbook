@@ -107,6 +107,28 @@ Depending on budget and goals, a number of research activities may be incorporat
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
+### Goal Analysis and Prioritization
+
+Objective
+:	Review and prioritize goals based on business requirements and audience needs.
+
+Tasks
+:	Explore and prioritize the client's business environment, target audiences, goals and key challenges.
+
+Deliverables
+:	Findings are summarized in the [Discovery Report](#DiscoveryReport).
+
+Time Req
+:	22-28 hours
+
+**Topics include:**
+
++ Business overview, including services, customers and market situation
++ Prioritized goals
++ Known challenges
++ Target audiences
+
+
 ### User Interviews
 
 Objective
@@ -336,23 +358,10 @@ A proposal is created by Business Development and is a sales tool. It defines th
 A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Technical Specification](#TechnicalSpecification) before production.
 
 
-### Functional Requirements
-
-Summary
-:	A 5-10 page document for projects with production scope *under 200 hours*.
-
-Time Req
-:	32 hours, *in addition to Discovery Activities*.
-
-
-This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
-
-
-
 ### Discovery Report
 
 Summary
-:	A 10–25 page document summarizing the results of all [Discovery Activities] and providing specific recommendations for the project, for projects with production scope *over 200 hours*.
+:	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope *over 200 hours*.
 
 Time Req
 :	Based upon Discovery Activities conducted (above)
@@ -364,51 +373,18 @@ Its secondary goal is to ensure internal stakeholders agree upon the project's o
 
 **Topics include:**
 
-+ Business overview, including services, customers and market situation
-+ Target audiences
-+ Project goals, prioritized
-+ Project challenges
-+ [Web Analytics Audit](#WebAnalyticsAudit) results and notable trends
++ [Goal Analysis and Prioritization](#GoalAnalysisAndPrioritization)
++ [Web Analytics Audit](#WebAnalyticsAudit)
 + [Metrics Baseline](#MetricsBaseline)
 + [Competitive analysis](#CompetitiveAnalysis)
-+ [Stakeholder interviews](#StakeholderInterviews) findings (if conducted)
++ [Stakeholder interview](#StakeholderInterviews) findings (if conducted)
 + [User interview](#UserInterviews) findings (if conducted)
 + [Survey](#Surveys) findings (if conducted)
 + [Usability Testing](#UsabilityTesting) results (if conducted)
 + Recommendations
 
-Sometimes a presentation format may be used instead; set appropriate client expectations based on the exact discovery activities you plan to undertake.
-
 The Discovery Report serves as a foundation for the next documents: site map, wireframes, and specifications.
 
-
-### Production Specification
-
-Summary
-:	A 15–80 page document for projects with production scope *over 200 hours*.
-
-Time Req
-:	 90–170 hours, *in addition to Discovery Activities*.
-
-
-Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. It restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
-
-+ Describes back-end functionality such as CMS tools, fields and relationships; databases; network and server infrastructure; external systems the site works with; security considerations.
-+ Must be reviewed by the Producer and an engineer before finalization.
-+ May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
-
-(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
-
-
-### Homepage Narrative
-
-Summary
-: Brief, 1-2 page document that defines all content, features and functionality required for the homepage. 
-
-Time Req
-:	4–6 hours, and inclusion in the Functional Requirements Document
-
-This simple list and description acts as a starting point for the design and creative phase. It is done instead of a wireframe.
 
 
 ### Site Map
@@ -443,6 +419,17 @@ The content outline supplements a Site Map. A content mimics the the organizatio
 ![Sample Content Outline](img/strategy/content_outline.png)
 
 
+### Homepage Narrative
+
+Summary
+: Brief, 1-2 page document that defines all content, features and functionality required for the homepage. 
+
+Time Req
+:	4–6 hours, and inclusion in the Functional Requirements Document
+
+This simple list and description acts as a starting point for the design and creative phase. It is done instead of a wireframe.
+
+
 ### Wireframe
 
 Summary
@@ -464,6 +451,39 @@ Most wireframes will depict single web pages, but some may depict multiple scree
 
 #### Example Wireframe:
 ![Example of Wireframe](img/strategy/wireframe.png)
+
+
+
+
+### Functional Requirements
+
+Summary
+:	A 5-10 page document for projects with production scope *under 200 hours*.
+
+Time Req
+:	32 hours, *in addition to Discovery Activities*.
+
+
+This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
+
+
+
+### Production Specification
+
+Summary
+:	A 15–80 page document for projects with production scope *over 200 hours*.
+
+Time Req
+:	 90–170 hours, *in addition to Discovery Activities*.
+
+
+Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. It restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
+
++ Describes back-end functionality such as CMS tools, fields and relationships; databases; network and server infrastructure; external systems the site works with; security considerations.
++ Must be reviewed by the Producer and an engineer before finalization.
++ May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
+
+(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
 
 
