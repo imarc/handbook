@@ -27,6 +27,6 @@ $(function() {
 	
 	$('.toc').append($(html));
 
-	$('.toc').addClass('sticky').stickToTop('#torso');
+	$('.toc').addClass('sticky').stickToTop('.torso', { minWidth: 770 });
 
 })

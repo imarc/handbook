@@ -10,9 +10,11 @@
  *	$('.create_sidebar').stickToTop('#torso');
  * 
  * @copyright 2009-2011, iMarc <info@imarc.net>
- * @author	Craig Ruksznis [cr] <craigruks@imarc.net>
- * @author	Will Bond [wb] <will@imarc.net>
+ * @author  Craig Ruksznis [cr] <craigruks@imarc.net>
+ * @author  Will Bond [wb] <will@imarc.net>
+ * @author  Kevin Hamer [kh] <kevin@imarc.net>
  *
+ * @changes  2.1.0  Adding options [kh, 2013-03-12]
  * @changes  2.0.0  Refactored the plugin to not require the widthContainer parameter, simplified internals [wb, 2011-09-18]
  * @changes  1.2.1  Fixed some bugs with positioning [wb, 2011-09-18]
  * @changes  1.2.0  Fixed handling browsers that return 0px for the CSS right property, updated documentation [wb, 2011-06-14]
@@ -27,7 +29,7 @@
 	 * @param  jQuery object  heightContainer  Container to keep element within for height purposes
 	 * @return void
 	 **/
-	$.stickToTop = function(element, heightContainer) {
+	$.stickToTop = function(element, heightContainer, opts) {
 		// set defaults first for setting back to original positioning
 		var originalCSSPosition = element.css('position');
 		var originalCSSLeft     = element.css('left');
@@ -38,6 +40,12 @@
 		var fixedLeft    = element.offset().left;
 		var containerTop = heightContainer.offset().top;
 		var topOffset    = element.offset().top;
+
+		// default options and overlaying options.
+		var options = {
+			minWidth: 0
+		};
+		$.extend(options, opts);
 		
 		element.css({
 			width: element.width(),
@@ -96,16 +104,22 @@
 		}
 
 		$(window).resize(function() {
-			if (element.css('position') == 'fixed') {
-				resetPosition();
-				setPositionFixed();
+			if (!options.minWidth || $(window).outerWidth() > options.minWidth) {
+				if (element.css('position') == 'fixed') {
+					resetPosition();
+					setPositionFixed();
+				}
 			}
-		}).scroll(determinePosition);
+		}).scroll(function() {
+			if (!options.minWidth || $(window).outerWidth() > options.minWidth) {
+				determinePosition();
+			}
+		});
 	}
 	
-	$.fn.stickToTop = function(heightContainer) {
+	$.fn.stickToTop = function(heightContainer, options) {
 		this.each(function() {
-			new $.stickToTop($(this), $(heightContainer));
+			new $.stickToTop($(this), $(heightContainer), options);
 		});
 		return this;
 	};
