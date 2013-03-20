@@ -28,9 +28,9 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 `&quot;`.
 
 	<p>
-		Separation of content – better with an en-dash. 
-		iMarc’s motto: “Use curly quotes” 
-		<a href="#"> Learn More »</a>
+	  Separation of content – better with an en-dash. 
+	  iMarc’s motto: “Use curly quotes” 
+      <a href="#"> Learn More »</a>
 	</p>	
 
 ### Dashes
@@ -59,9 +59,9 @@ collaborate on a site’s markup and style.
 Use tab character at the beginning of a line. A tab is expected to represent
 the width of four spaces. For inline spacing, use spaces, not tabs.
 
-	.header {
-	    width: 40em;
+	header {
 	    margin: 1em auto;
+	    width: 40em;
 	}
 
 ### Line Breaks
@@ -109,8 +109,8 @@ line at the same indentation as the style selector.
 
 	html,
 	body {
-	    color: #000;
 	    background: #FFF;
+	    color: #000;
 	}
 
 Stylesheets should be organized in a logical manner. Related style rules should 
@@ -120,22 +120,22 @@ specificity should be indented accordingly.
 Each property should have a space between the colon and the value, and should
 end with a semi-colon. 
 
-	.header {
+	header {
 	    background: #EEE;
 	}
-	    .header .content {
-	        padding: 0;
-	        margin: 0 auto;
+	    header .content {
 	        background: none;
+	        margin: 0 auto;
+	        padding: 0;
 	    }
-	      .header .content .title {
-	          margin: 0;
-	          float: left;
-	          line-height: 3;		
+	      header .content .title {
 	          color: #000000;
+	          float: left;
 	          font-size: 24px;
 	          font-weight: normal;
 	          font-family: Helvetica, Arial, sans-serif;			
+	          line-height: 3;		
+	          margin: 0;
 	      }
 
 To visually divide a style sheet, use the following comment style as a section 
@@ -409,10 +409,10 @@ Example markup:
 
 Example CSS:
 
-	.header .nav .primary {
+	header nav.primary {
 	    ...
 	}
-	.header .nav .utility {
+	header nav.utility {
 	    ...
 	}
 
@@ -458,81 +458,116 @@ CSS rules.
 This is an example of a complete page using some of the the naming conventions described above.
 
 	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-        <title>Title</title>
-	    <meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
-	    <meta charset="utf-8" />
-	    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png" />
-	    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-	    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="all" />
-	    <!--[if lt IE 9]>
-		    <link href="/css/site/lt_ie9.css" rel="stylesheet" type="text/css">
-		<![endif]-->
-	</head>
-
-	<body>
-	    <div class="header">
-	    	<div class="nav">
-	            <ul class="utility">
-	                <li>
-	                    <a href="#">Log In</a>
-	                </li>
-	                <li>
-	                    <a href="#">Cart</a>
-	                </li>
-	            </ul>
-	        </div>
-	        <div class="nav">
-	        	<ul class="primary">
-	                <li class="active">
-	                    <a href="#">Products</a>
-	                </li>
-	                <li>
-	                    <a href="#">Services</a>
-	                </li>
-	                <li>
-	                    <a href="#">About</a>
-	                </li>
-	            </ul>
-	        </div>	
-	    </div>
-	    <div class="torso group">
-	        <div class="main">       
-	            <p class="highlight">
-	                Integer posuere erat a ante venenatis dapibus posuere velit.
-	            </p>
-	            <p>
-	                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-	                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante 
-	                venenatis dapibus posuere velit aliquet.
-	            </p>
-	        </div>
-	    </div>
-	    <div class="aside">
-	        <div class="nav">
-                <ul class="secondary">
-                    <li>
-                        <a href="#">iPod</a>
-                    </li>
-                    <li>
-                        <a href="#">iPad</a>
-                    </li>
-                    <li>
-                        <a href="#">iPhone</a>
-                    </li>
-                </ul>
-            </div>
-	        <div class="section">
-	            <p>
-	                Find us on our social networks.
-	            </p>
-	        </div>
-	    </div>
-		<div class="footer">
-		    this is a footer
-		</div>
-	</body>
+	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+		<head>
+			<meta charset="UTF-8" />
+			<title>Boilerplate - Simple, Semantic Structure for Your CSS - iMarc</title>
+			<meta name="description" content="iMarc, LLC" />
+			<meta name="author" content="Design, programming, by iMarc. More info at http://imarc.net" />
+			<meta name="viewport" content="width=device-width" />
+			<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+			<!--[if IE]>
+				<script src="js/html5shiv.js"></script>
+			<![endif]-->
+		</head>
+		<body>
+			<div class="site">
+				<header class="primary">
+					<h1><a href="/">iMarc</a></h1>
+					<nav class="utility">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Legal</a></li>
+							<li><a href="#">Log In</a></li>
+						</ul>
+					</nav>
+					<nav class="primary">
+						<ul>
+							<li>
+								<a href="/">Home</a>
+							</li>
+							<li>
+								<a href="#">Teams</a>
+							</li>
+							<li>
+								<a href="#">Help</a>
+							</li>
+						</ul>
+					</nav>
+					<nav class="secondary">
+						<ul>
+							<li>
+								<a href="#these">Bruins</a>
+							</li>
+							<li>
+								<a href="#">Patriots</a>
+							</li>
+							<li>
+								<a href="#">Celtics</a>
+							</li>
+							<li>
+								<a href="#">Red Sox</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<div class="torso">
+					<aside class="primary">
+						<section>
+						    <nav class="secondary">
+								<ul>
+									<li>
+										<a href="#these">Players</a>
+									</li>
+									<li>
+										<a href="#">Ownership</a>
+									</li>
+									<li>
+										<a href="#next">Fans</a>
+									</li>
+									<li>
+										<a href="#">Staff</a>
+									</li>
+								</ul>
+						    </nav>
+						</section>
+					</aside>
+					<div class="main" role="main">
+						<header>
+							<hgroup>
+								<h1>The iMarc Boilerplate</h1>
+								<h2>Simple, Semantic Structure for Your CSS</h2>
+							</hgroup>
+						</header>
+						<section class="intro">
+							<p>
+								The iMarc Boilerplate provides some basic defaults for CSS and HTML
+								structure. It uses some HTML5 elements as well as the HTML5Shiv and
+								supports Chrome, Firefox, and Internet Explorer 8+.
+							</p>
+							<div class="highlight">
+								For more information, see iMarc's
+								<a href="http://handbook.imarc.net/frontend">frontend standards</a>.
+							</div>
+							<p>
+								This is a filler paragraph – Ignore this. These are scattered through
+								out the markup to simulate content. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit. Felis est, nec convallis dui.  Nulla lectus
+								velit, ornare sit amet blandit in, mattis eget nulla.
+							</p>
+						</section>
+					</div>
+				</div>
+				<footer class="primary">
+					<div class="copyright">©2013 iMarc LLC.</div>
+				</footer>
+			</div>
+		</body>
+	</html>
 
 ## Forms
 
@@ -562,7 +597,6 @@ corresponding max-length attribute in the markup.
 This is an example of default form markup.
 
 	<form action="" method="post">
-		
 		<fieldset>
 			<h3>Fieldset Heading (don't use a legend)</h3>
 			<div class="text">
@@ -574,8 +608,7 @@ This is an example of default form markup.
 				<label for="sample_form-password">Password<span class="required">*</span></label>
 				<input id="sample_form-password" type="password" />
 			</div>
-		</fieldset>
-		
+		</fieldset>		
 		<fieldset>
 			<h3>Another Fieldset</h3>
 			<div class="radios group">
@@ -632,7 +665,6 @@ This is an example of default form markup.
 				</select>
 			</div>
 		</fieldset>
-		
 		<fieldset>
 			<h3>Another Fieldset</h3>
 			<div class="textarea">
@@ -644,7 +676,6 @@ This is an example of default form markup.
 				<input type="file" id="sample_form-file" />
 			</div>
 		</fieldset>
-		
 		<fieldset>
 			<h3>Another Fieldset</h3>
 			<div class="button">
@@ -657,7 +688,6 @@ This is an example of default form markup.
 				<input type="submit" />
 			</div>
 		</fieldset>
-
 	</form>
 
 ### Labels
@@ -675,8 +705,10 @@ should be associated directly with inputs.
 All Tables should adhere to proper structure, including `thead`, `tfoot`, 
 and `tbody` when appropriate table content exists.
 
-	<table summary="example table with thead, tfoot, and tbody.">
+	<table>
+		<caption>Table with caption, colgroup, thead, tfoot, and tbody</caption>
 		<colgroup>
+			<col />
 			<col />
 			<col />
 		</colgroup>
@@ -695,6 +727,11 @@ and `tbody` when appropriate table content exists.
 			</tr>
 		</tfoot>
 		<tbody>
+			<tr>
+				<td>body 1</td>
+				<td>body 2</td>
+				<td>body 3</td>
+			</tr>
 			<tr>
 				<td>body 1</td>
 				<td>body 2</td>
@@ -740,25 +777,65 @@ Browser resets ensure that inconsistent default browser styles are not applied.
 
 Use iMarc’s standard browser reset at the beginning of your CSS file.
 
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, font, img, ins, kbd, q, s, samp, 
-	small, strike, strong, sub, sup, tt, var,
-	b, u, i, center, dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td {
-	    margin: 0;
-	    padding: 0;
-	    border: 0;
-	    outline: 0;
-	    font-size: 100%;
-	    vertical-align: baseline;
-	    background: transparent;
+	/* = Table of Contents =
+	 * Base
+	 * Grouping
+	 * Layout
+	 * Typography
+	 * Navigation
+	 * Forms
+	 * Messaging
+	 * Tables
+	 * Section Specific
+	 * Page Specific
+	 * Media Queries
+	 * Internet Explorer
+	 */
+
+
+	/* = Base = */
+	a, abbr, address, article, aside, audio, b, blockquote, body, canvas, cite,
+	code, dd, div, dl, dt, em, fieldset, footer, form, h1, h2, h3, h4, h5, h6,
+	header, hgroup, html, i, iframe, img, label, li, nav, object, ol, p, pre,
+	section, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, ul,
+	video {
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		margin: 0;
+		outline: 0;
+		padding: 0;
+		vertical-align: baseline;
 	}
+
+	article, aside, footer, header, hgroup, nav, section {
+		display: block;
+	}
+
+	audio, canvas, video {
+		display: inline-block;
+	}
+
+	img {
+		-ms-interpolation-mode: bicubic;
+		max-width: 100%;
+		vertical-align: middle;
+	}
+
+	html {
+		background: #fff;
+		color: #000;
+		font-family: Arial, Helvetica, sans-serif;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+	}
+
 	body {
-	    line-height: 1;
+		font-size: 16px;
+		line-height: 1.4;
+		min-width: 360px;
 	}
+
 
 iMarc’s browser reset is derived from the [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
 
