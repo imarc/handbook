@@ -320,7 +320,7 @@ Its secondary goal is to ensure internal stakeholders agree upon the project's o
 
 **Topics include:**
 
-+ [Goal Analysis and Prioritization](#GoalAnalysisAndPrioritization)
++ [Goal Analysis and Prioritization](#GoalAnalysisandPrioritization)
 + [Web Analytics Audit](#WebAnalyticsAudit)
 + [Metrics Baseline](#MetricsBaseline)
 + [Competitive analysis](#CompetitiveAnalysis)
