@@ -45,11 +45,11 @@ a UTF-8 character like `»`, instead of typing out entities like `&raquo;`.
 The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 `&quot;`.
 
-	<p>
-		Separation of content – better with an en-dash. 
-		iMarc’s motto: “Use curly quotes” 
-		<a href="#"> Learn More »</a>
-	</p>	
+    <p>
+        Separation of content – better with an en-dash. 
+        iMarc’s motto: “Use curly quotes” 
+        <a href="#"> Learn More »</a>
+    </p>	
 
 ### Dashes
 
@@ -83,9 +83,6 @@ This is using four spaces option in Mou
         margin: 1em auto;
         width: 40em;
     }
-
-
-
 
 ### Line Breaks
 
@@ -183,14 +180,14 @@ CSS files are stored under `/css/`.
 
 Images should reside under `/img/` and can be stored into subfolders if you wish (e.g. `/img/icons/`)
 
-	/css
-	    screen.css
-		print.css
-	/img
-		header.jpg
-	/icons
-		facebook.gif
-		twitter.gif
+    /css
+        screen.css
+        print.css
+    /img
+        header.jpg
+        /icons
+            facebook.gif
+            twitter.gif
 
 ## Browser Support & Accessibility
 
@@ -331,15 +328,14 @@ Double check your CSS with our [markup test](#MarkupTester).
 
 Use the _group_ class on parent elements to properly contain floats.
 
-	.group:before,
-	.group:after {
-		content: '';
-		display: table;
-	}
-	
-	.group:after {
-		clear: both;
-	}
+    .group:before,
+    .group:after {
+        content: '';
+        display: table;
+    }
+    .group:after {
+        clear: both;
+    }
 
 To get the _group_ method to work in IE6 and IE7, it is necessary to include
 the following rules within their respective IE CSS sections.
@@ -438,11 +434,11 @@ page or section.
 
 Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
 
-	<div class="messaging success">
-	   <p>
-	      Congratulations! You have signed up for ACME’s business afterhours.
-	   </p>
-	</div>
+    <div class="messaging success">
+        <p>
+            Congratulations! You have signed up for ACME’s business afterhours.
+        </p>
+    </div>
 
 ## Forms
 
@@ -479,33 +475,33 @@ For form element markup, see **[iMarc Boilerplate on GitHub](https://github.com/
 All Tables should adhere to proper structure, including `thead`, `tfoot`, 
 and `tbody` when appropriate table content exists.
 
-	<table summary="example table with thead, tfoot, and tbody.">
-		<colgroup>
-			<col />
-			<col />
-		</colgroup>
-		<thead>
-			<tr>
-				<th>header 1</th>
-				<th>header 2</th>
-				<th>header 3</th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<td>footer 1</td>
-				<td>footer 2</td>
-				<td>footer 3</td>
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr>
-				<td>body 1</td>
-				<td>body 2</td>
-				<td>body 3</td>
-			</tr>
-		</tbody>
-	</table>
+    <table summary="example table with thead, tfoot, and tbody.">
+        <colgroup>
+            <col />
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>header 1</th>
+                <th>header 2</th>
+                <th>header 3</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>footer 1</td>
+                <td>footer 2</td>
+                <td>footer 3</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>body 1</td>
+                <td>body 2</td>
+                <td>body 3</td>
+            </tr>
+        </tbody>
+    </table>
 
 ### Summaries
 
@@ -553,11 +549,11 @@ fonts to handle when a specified font may not be available.
 
 Default **serif** font stack:
 
-`font-family: Constantia, Lucida, Georgia, serif;`
+    font-family: Constantia, Lucida, Georgia, serif;
 
 Default **sans-serif** font stack:
 
-`font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;`
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
 `fantasy`, or `monospace`. This provides a fallback in case all other fonts 
@@ -624,31 +620,25 @@ When styling elements, it's important to define the `font-family` as well as `fo
 
 Use the following method when defining fonts:
 
-		body {
-			font-family: "VerbRegular";
-		}
-	
-	
-		h1, h2 {
-			font-family: "VerbBold";
-		}
-	
-		h3 {
-			font-family: "VerbRegular";
-			font-weight: normal;
-		}
-	
-		strong {
-			font-family: "VerbBold";
-		}
-	
-		strong em {
-			font-family: "VerbBoldItalic";
-		}
-	
-		em {
-		 font-family: "VerbRegularItalic";
-		}
+    body {
+        font-family: "VerbRegular";
+    }
+    h1, h2 {
+        font-family: "VerbBold";
+    }
+    h3 {
+        font-family: "VerbRegular";
+        font-weight: normal;
+    }
+    strong {
+        font-family: "VerbBold";
+    }
+    strong em {
+        font-family: "VerbBoldItalic";
+    }
+    em {
+        font-family: "VerbRegularItalic";
+    }
 
 Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) that can convert font files to various formats. Make sure you check with your producer regarding the use of web fonts as there are licensing requirements for certain fonts.
 
@@ -691,25 +681,25 @@ detract from the experience of browsers that do not support a particular rule.
 
 Include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility, Prefixed styles should be grouped together with the related styles.
 
-	.callout {
-		-webkit-border-top-left-radius: 10px;
-		-webkit-border-top-right-radius: 5px;
-		-moz-border-radius-topleft: 10px;
-		-moz-border-radius-topright: 5px;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 5px;
-	}
+    .callout {
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 5px;
+    }
 
 
 ### Media Queries
 
 Use inline media query syntax if the scoped style is targeted and concise.
 
-	@media (max-width: 1000px) {
-		body{
-			background: #000;
-		}
-	}
+    @media (max-width: 1000px) {
+        body{
+            background: #000;
+        }
+    }
 
 To target multiple devices, load common style in `base.css`. Each device should 
 have its own stylesheet.
@@ -825,9 +815,9 @@ also provides resources for optimization.
 To prevent a specific style sheet from even being requested, JavaScript can 
 be used.
 
-	if (screen.width > 768) {
-		document.write('<link rel="stylesheet" href="full.css" type="text/css" />');
-	}
-	else {
-		document.write('<link rel="stylesheet" href="mobile.css" type="text/css" />');
-	}
+    if (screen.width > 768) {
+        document.write('<link rel="stylesheet" href="full.css" type="text/css" />');
+    }
+    else {
+        document.write('<link rel="stylesheet" href="mobile.css" type="text/css" />');
+    }
