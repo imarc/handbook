@@ -349,10 +349,73 @@ the following rules within their respective IE CSS sections.
 
 ## Naming Conventions
 
+See **[iMarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** for detailed layout naming conventions.
+
+### Structure
+
+Most page layouts can generally be thought of in three primary parts. These
+structural names should be used as classes in the markup.
+
+* **`header.primary`** – Logo, global navigation, utility links, typically at the top of a page.
+* **`.torso`** – Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
+* **`footer.primary`** – Links and global content that typically follow the content. Note that 
+
+
+![Structural naming conventions](img/naming_structure.png)
+
+
+### Navigation 
+
+Navigation should be referenced as the following.
+
+* **`nav.primary`** – Links to top-level pages representing the first level of directories
+* **`nav.secondary`** – Links to pages within a single section; direct children of a single primary parent
+* **`footer.utility`** – Navigation that holds global utility links (e.g. login, shopping cart)
+* **`nav.tertiary`** – (not pictured) Links to pages representing direct children of a single secondary parent
+
+
+![Navigation naming conventions](img/naming_navigation.png)
+
+
+Within navigation elements, there may be a different style to denote the current 
+page or section.
+
+* **`.active`** – The currently viewed item in any navigation (primary_nav, secondary_nav, etc.)
+
+
+![Active states in navigation](img/naming_navigation2.png)
+
+
+### Content
+
+* **`.main`** – The purpose of the page, whatever the most important content is
+* **`aside.primary`** – Any auxiliary content or related info
+* **`.intro`** – Introductory content styled for visual emphasis
+
+
+![Content naming conventions](img/naming_content.png)
+
+
+### Messaging
+
+* **`.success`** – Confirmation after an action has successfully completed
+* **`.info`** – Informative message
+* **`.error`** – Notification that an action had problems
+* **`.help`** – Coaching or guidance; typically inline
+
+
+Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
+
+    <div class="messaging success">
+        <p>
+            Congratulations! You have signed up for ACME’s business afterhours.
+        </p>
+    </div>
+    
 ### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
-The exceptions to this rule are anchors, form label IDs, the ID that is placed on the `body` tag, and instances when IDs are more appropriate hooks for JavaScript.
+The exceptions to this rule are anchors, form label IDs, the ID that is [placed on the `body` tag](#BodyClassesandIDs), and instances when IDs are more appropriate hooks for JavaScript.
 
 Classes should be lowercase, using underscores between words.
 
@@ -371,74 +434,13 @@ context of a sidebar.
 * Meaningful class names might be: `main`, `aside`, `record_detail`.
 * Bad CSS classes would be: `left_column`, `blue_callout`, `hidden`. 
 
+
 ### Body Classes and IDs
 
-Use classes on the body element to denote current section. Use an optional ID 
+Use classes and IDs on the body element to denote current section. Use an optional ID 
 if needed for targeting styles for specific pages.
 
 	<body class="products" id="macbook_pro">
-
-### Structure
-
-Most page layouts can generally be thought of in three primary parts. These
-structural names should be used as classes in the markup.
-
-* **header** – Global navigation, logo, utility links, typically at the top of a page.
-* **torso** – Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
-* **footer** – Links and global content that typically follow the content.
-
-
-![Structural naming conventions](img/naming_structure.jpg)
-
-
-### Navigation 
-
-Navigation should be referenced as the following.
-
-* **primary** – Links to top-level pages representing the first level of directories
-* **secondary** – Links to pages within a single section; direct children of a single primary parent
-* **utility** – Navigation that holds global utility links (e.g. login, shopping cart)
-* **tertiary** – (not pictured) Links to pages representing direct children of a single secondary parent
-
-
-![Navigation naming conventions](img/naming_navigation.jpg)
-
-
-Within navigation elements, there may be a different style to denote the current 
-page or section.
-
-* **active** – The currently viewed item in any navigation (primary_nav, secondary_nav, etc.)
-
-
-![Active states in navigation](img/naming_navigation_2.jpg)
-
-
-### Content
-
-* **main** – The purpose of the page, whatever the most important content is
-* **aside** – Any auxiliary content or related info
-* **section** – Holds part of the main or aside content
-* **highlight** – Inline content styled for visual emphasis
-
-
-![Content naming conventions](img/naming_content.jpg)
-
-
-### Messaging
-
-* **success** – Confirmation after an action has successfully completed
-* **info** – Informative message
-* **error** – Notification that an action had problems
-* **help** – Coaching or guidance; typically inline
-
-
-Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
-
-    <div class="messaging success">
-        <p>
-            Congratulations! You have signed up for ACME’s business afterhours.
-        </p>
-    </div>
 
 ## Forms
 
@@ -662,24 +664,23 @@ Frontend code should apply to all supported browsers. If necessary, target versi
 
 ## HTML5 and CSS3 usage
 
-While iMarc uses the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype, it’s important to understand your project’s technical specification. SOme advanced HTML5 technologies may not function correctly 
+While iMarc uses the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype, it’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly 
 
- If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com/) 
+If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com/) 
 to ensure backwards compatability with older browsers.
 
-Modernizr detects what the browser’s rendering engine supports, and allows you to customize 
-the look of the website depending on what’s supported.
+Modernizr detects what the browser’s rendering engine supports, and allows you to customize the look of the website depending on what’s supported.
 
-HTML5shim/shiv has been incorporated into Modernizr, so you should not use both.
+HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
 
 ### CSS3
 
 Use CSS3 as a visual enhancement for supporting browsers. It should never 
-detract from the experience of browsers that do not support a particular rule.
+detract from the experience of browsers that do not support a particular property.
 
 [The CSS3 Rule Generator](http://css3generator.com)
 
-Include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility, Prefixed styles should be grouped together with the related styles.
+If needed, include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility. Prefixed properties should be grouped together before the W3C standard property. [Can I use…](http://caniuse.com) is a fine resource to research browser support.
 
     .callout {
         -webkit-border-top-left-radius: 10px;
@@ -691,62 +692,9 @@ Include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum brows
     }
 
 
-### Media Queries
+## Mobile Optimization
 
-Use inline media query syntax if the scoped style is targeted and concise.
-
-    @media (max-width: 1000px) {
-        body{
-            background: #000;
-        }
-    }
-
-To target multiple devices, load common style in `base.css`. Each device should 
-have its own stylesheet.
-
-	<link rel="stylesheet" type="text/css" href="/base.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="/screen.css" media="screen and (min-width: 481px)" />
-	<link rel="stylesheet" type="text/css" href="/mobile.css" media="screen and (max-width: 480px)" />
-
-However, even in this example, some devices may download all three stylesheets, 
-including background images in each sheet. This allows the browser to apply 
-specific width-based rules on the fly without re-fetching images or CSS. 
-The downside is a loss of optimization. For tips on improving optimization, 
-see [Mobile Optimization](#MobileOptimization)
-
-
-## Tips ##
-
-### Markup Tester
-
-After resetting CSS and applying style, it’s easy to overlook a seldom-used 
-tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html) 
-from the Framework repository and drop it onto your page. All the markup should 
-render nicely.
-
-
-### Enhanced Facebook Meta
-
-Liking and sharing web pages via Facebook can yield unexpected results related
-to its appearance in newsfeeds. Facebook pulls what it deems relevant to a
-shared item – title, description, photo, etc. For a supplementary thumbnail, 
-Facebook pulls the first `img` it can find in the site. If this is 
-unsatisfactory, you can control the thumbnail image to be shared by using the 
-following line in the web site's `head`:
-
-	<link rel="image_src" href="/img/site/logo_acme.png" />		
-
-#### Facebook Open Graph
-
-More detailed information about a web site can be shared with Facebook using
-their [Open Graph protocol](https://developers.facebook.com/docs/opengraph/). 
-Used in parallel with the 
-[Like button](https://developers.facebook.com/docs/reference/plugins/like), it
-enables a connection between Facebook users and a web page.
-
-### Mobile Optimization
-
-#### Viewport
+### Viewport
 On mobile-specific sites, set the viewport to the width of the device:
 
 	<meta name="viewport" content="width=device-width">
@@ -757,7 +705,7 @@ the page is scaled to 100% on load.
 This works in most, but not all mobile browsers, a full chart of support is here: 
 http://www.quirksmode.org/mobile/tableViewport.html#metaviewport
 
-#### Mobile Orientation Changes
+### Mobile Orientation Changes
 iPhone can have issues with dynamic orientation changes – changing from 
 portrait to landscape view while viewing a page. The issue occurs on iPhone, 
 when using the viewport setting, `width=device-width, initial-scale=1.0`.
@@ -775,7 +723,25 @@ explains this issue and one possible solution:
 Another option iMarc has discussed is employing JavaScript to solve iPhone’s 
 re-orientation issue.
 
-#### Media Query Behavior
+
+### Media Queries
+
+Meida queries is a CSS3 technology allowing scope limitation of styles based on a feature such as width, aspect ratio, pixel density, and more. iMarc primarily uses media queries to serve different styles to mobile and tablet devices/
+
+All media queries can reside in a site’s main stylesheet.
+
+    @media (min-width: 481px) {
+        nav.primary li { 
+            float: left;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 0 0 20px 20px;
+        }
+    }
+
+Some devices may download all styles (including large background images), regardless of whether that device is scoped. This allows the device to apply specific width-based rules on the fly without re-fetching images or CSS. The downside is a loss of optimization. For tips on improving optimization, see [Mobile Optimization](#MobileOptimization)
+
+#### Media Query Behaviors
 
 Use `min-device-width` to prevent automatic reflowing when a window is 
 resized.
@@ -784,8 +750,8 @@ resized.
 	<link rel="stylesheet" href="/desktop.css" media="screen and (min-device-width: 481px)" type="text/css" />
 
 **With min/max-device-width:**
-- Andriod and iOS phones will download both CSS files
-- Andriod and iOS phones will ignore style definitions, images, and assets 
+- Android and iOS phones will download both CSS files
+- Android and iOS phones will ignore style definitions, images, and assets 
   referenced in `desktop.css`.
 - When a desktop browser is sized down narrower than 481px, nothing 
   will change.
@@ -798,8 +764,8 @@ when the browser window is scaled.
 	<link rel="stylesheet" href="/desktop.css" media="screen and (min-width: 481px)" type="text/css" />
 
 **With min/max-width:**
-- Andriod and iOS phones will download both CSS files (same as above)
-- Andriod and iOS phones will ignore style definitions, images, and assets 
+- Android and iOS phones will download both CSS files (same as above)
+- Android and iOS phones will ignore style definitions, images, and assets 
    referenced in `desktop.css`. (same as above)
 - When a desktop browser is scaled down the `desktop.css` styles will be 
   deactivated causing the page to dynamically reflows.
@@ -821,3 +787,32 @@ be used.
     else {
         document.write('<link rel="stylesheet" href="mobile.css" type="text/css" />');
     }
+
+
+## Tips ##
+
+### Markup Tester
+
+After resetting CSS and applying style, it’s easy to overlook a seldom-used 
+tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html) 
+from the Framework repository and drop it onto your page. Make sure all tags render appropriately on your project.
+
+### Enhanced Facebook Meta
+
+Liking and sharing web pages via Facebook can yield unexpected results related
+to its appearance in newsfeeds. Facebook pulls what it deems relevant to a
+shared item – title, description, photo, etc. For a supplementary thumbnail, 
+Facebook pulls the first `img` it can find in the site. If this is 
+unsatisfactory, you can control the thumbnail image to be shared by using the 
+following line in the web site's `head`:
+
+	<link rel="image_src" href="/img/site/logo_acme.png" />		
+
+#### Facebook Open Graph
+
+More detailed information about a web site can be shared with Facebook using
+their [Open Graph protocol](https://developers.facebook.com/docs/opengraph/). 
+Used in parallel with the 
+[Like button](https://developers.facebook.com/docs/reference/plugins/like), it
+enables a connection between Facebook users and a web page.
+
