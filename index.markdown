@@ -3,7 +3,11 @@ title: iMarc Handbook
 layout: notoc
 ---
 
-<h1 class="title">Standards &amp; Best Practices</h1>
+<h1 class="title">iMarc’s Handbook of Web Development Standards &amp; Best Practices</h1>
+<p class="copyright">
+	Copyright 2005‒2013 <a href="http://imarc.net/">iMarc LLC</a>.
+</p>
+
 
 <dl>
     <dt><a href="strategy">Strategy</a></dt>
@@ -18,13 +22,3 @@ layout: notoc
 		<dd>Deployment standards</dd>
 </dl>
 
-<!--
-## In progress:
-
-<dl>
-    <dt>
-        <a href="strategy">Strategy</a>
-    </dt>
-    <dd>Strategy Processes</dd>
-</dl>
--->
