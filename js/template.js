@@ -1,32 +1,40 @@
 $(function() {
 
-	var html = '',
-		baseNum = 1;
+	$.fn.appendTOC = function(contentSelector, headingSelector) {
+		var html = '', baseNum = 1;
 
-	// will only capture h2 and h3 headers
-	var headers = ['h2', 'h3'];
+		$(contentSelector).find(headingSelector).each(function() {
+			var heading = $(this);
+			var tagNum  = parseInt(heading.prop('tagName').replace('H', ''));
+			var id      = heading.text().replace(/[^a-z0-9]/gi, '');
+			heading.attr('id', id);
 
-	$('.main').find(headers.join(', ')).each(function(){
-		var tagNum = parseInt($(this).prop('tagName').replace('H', ''));
-		var name   = $(this).text().replace(/[^a-z0-9]/gi, '');
-		$(this).attr('id', name);
+			if (tagNum == baseNum) {
+				html += '</li><li>';
+			} else if (tagNum < baseNum) {
+				for (var i = tagNum; i < baseNum; i++) {
+					html += '</li></ul><li>';
+				}
+			} else if (tagNum > baseNum) {
+				for (var i = baseNum; i < tagNum; i++) {
+					html += '<ul><li>';
+				}
+			}
 
-		if (tagNum < baseNum) {
-			html += '</ul>';	
-		} else if (tagNum > baseNum) {
-			html += '<ul>';
+			baseNum = tagNum;
+
+			html += '<a href="#' + id + '">' + heading.text() + '</a>';
+		});
+
+		for (var i = 1; i < baseNum; i++) {
+			html += '</li></ul>';
 		}
 		
-		html += '<li><a href="#' + name + '">';
-		html += $(this).text();
-		html += '</li></a>';
+		this.append(html);
 
-		baseNum = tagNum;
-	});
+		return this;
+	};
 
-	
-	$('.toc').append($(html));
-
+	$('.toc nav').appendTOC('.main', 'h2, h3');
 	$('.toc').addClass('sticky').stickToTop('.torso', { minWidth: 770 });
-
-})
+});
