@@ -45,42 +45,15 @@
 				color: #FFF;
 				background: #000;
 			}
-	#header .secondary {
-		background: #F6F6F6;
-	}
-		#header .secondary .secondary_nav {
-			font-size: 14px;
-			width: 940px;
-			padding: 10px;
-			margin: 0 auto;
-			list-style: none;
-			text-align: right;
-		}
-  		#header .secondary .secondary_nav li {
-			display: inline-block;
-			margin: 0 0 0 5px;
-  		}
-    		#header .secondary .secondary_nav li a {
-				background: #FFF;
-				padding: 5px 10px;
-				display: inline-block;
-				-webkit-border-radius: 20px;
-				-moz-border-radius: 20px;
-				border-radius: 20px;
-    		}
-    		#header .secondary .secondary_nav li.active a {
-				color: #FFF;
-				background: #000;
-    		}
 
 .content {
-	width: 940px;
+	width: 980px;
 	padding: 20px;
 	margin: 0 auto;
 	position: relative;
 }
 	.content .main {
-		width: 655px;
+		width: 695px;
 		background: #FFF;
 	}
 		.content .main.full-width {
@@ -145,23 +118,13 @@
 /* Index
 /* --------------------------------------------------------------------- */ 
 
-	.index .content .main {
-		width: 980px;
-	}
-	.index h1 a {
-		color: #000;
-	}
-	.index h1 sup {
-		font-size: 14px;
-	}
-	.index .content .introduction {
-		width: 655px;
-		margin: 40px auto;
-	}
-
-	h1.title {
-		text-align: center;
-	}
-	p.copyright {
-		text-align: center;
-	}
+h1.title {
+	font-size: 24px;
+	margin-top: 36px;
+	margin-bottom: 0;
+	text-align: center;
+}
+p.copyright {
+	text-align: center;
+	margin-bottom: 36px;
+}
