@@ -740,6 +740,9 @@ table {
 	.main {
 		margin-right: 216px;
 	}
+		.main.fullwidth {
+			margin-right: 0;
+		}
 
 		.main aside {
 			float: right;
