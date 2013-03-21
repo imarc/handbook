@@ -163,6 +163,11 @@ h1 {
 	color: #f2006d;
 }
 
+	h1 sup {
+		font-size: 50%;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
 h2 {
 	font-size: 2.25em;
 }
@@ -401,14 +406,6 @@ header nav.primary {
 			header nav.primary li ul a {
 				padding: .3em 15px;
 			}
-
-li.logo a {
-	text-indent: -9999px;
-	width: 73px;
-	background-image: url(/img/whitelogo.png);
-	background-repeat: no-repeat;
-	background-position: center;
-}
 
 /* == top secondary navigation == */
 header nav.secondary {
