@@ -3,10 +3,7 @@ title: iMarc Handbook
 layout: notoc
 ---
 
-<h1 class="title">Engineering Standards &amp; Best Practices </h1>
-<p class="copyright">
-	Copyright 2005‒2012 <a href="http://imarc.net/">iMarc LLC</a>.
-</p>
+<h1 class="title">Standards &amp; Best Practices</h1>
 
 <dl>
 	<dt><a href="frontend">Frontend</a></dt>
