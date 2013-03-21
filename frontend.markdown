@@ -46,9 +46,9 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 `&quot;`.
 
 	<p>
-	  Separation of content – better with an en-dash. 
-	  iMarc’s motto: “Use curly quotes” 
-      <a href="#"> Learn More »</a>
+		Separation of content – better with an en-dash. 
+		iMarc’s motto: “Use curly quotes” 
+		<a href="#"> Learn More »</a>
 	</p>	
 
 ### Dashes
@@ -77,10 +77,19 @@ collaborate on a site’s markup and style.
 Use tab character at the beginning of a line. A tab is expected to represent
 the width of four spaces. For inline spacing, use spaces, not tabs.
 
+```
+header {
+	margin: 1em auto;
+	width: 40em;
+}
+```
+
 	header {
 		margin: 1em auto;
 		width: 40em;
 	}
+
+
 
 ### Line Breaks
 
