@@ -437,27 +437,40 @@ Like a Functional Requirements document, it's created by a Strategy team in clos
 
 ## Usability Testing
 
-Goal
-:	Find out what works by asking *real people* to try it. Can be used to improve existing systems, or while developing new ones.
+The best way to find out what does or does not work well is by asking *real people* to try it. 
 
-Deliverables
-:	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated findings report.
-
-Time Req
-:	See test types, below.
-
-We engage in several types of testing. In order of increasing rigorousness (and time, effort and cost):
+Usability testing can be used to improve existing systems, or while developing new ones. We engage in several types of testing.
 
 
 ### Hallway Testing
 
+Objective
+:	Answer simple usability questions quickly and cheaply.
+
+Tasks
+: Recruit a passer-by and ask them to do a specific task.
+
+Deliverables
+:	N/A; conducted during design or development as needed.
+
 Time Req
 :	0\.5 hours per task per person
 
-During design or development, pull in a passer-by and ask them to do a task. This is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
+[Hallway testing](http://en.wikipedia.org/wiki/Usability_testing#Hallway_testing) is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
+
+See also [Hallway usability testing: How much of the UI do you actually make functional?](http://stackoverflow.com/questions/1864212/hallway-usability-testing-how-much-of-the-ui-do-you-actually-make-functional) at Stack Overflow.
 
 
 ### Heuristic Evaluation
+
+Objective
+:	Create oral or written suggestions for improvements in a design or system.
+
+Tasks
+: Evaluate a user interface against usability principles and provide recommendations for improvement.
+
+Deliverables
+:	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated findings report.
 
 Time Req
 :	6–8 hours and inclusion in the Discovery Report
@@ -467,24 +480,49 @@ Experienced usability team members evaluate the user interface (current or plann
 A good starting point for this is Jakob Nielsen's [10 Heuristics for User Interface Design](http://www.nngroup.com/articles/ten-usability-heuristics/) and [How to Conduct a Heuristic Evaluation](http://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) articles; Abby Covert's [Information Architecture Heuristics](http://www.slideshare.net/AbbyCovert/information-architecture-heuristics) is great too.
 
 
-### Quality Assurance
-
-Time Req
-:	N/A (not budgeted with strategy)
-
-After design and development, iMarc employees who were not involved in creating the site asseses the site for common issues and best practices. (This is not typically part of the strategy process, although strategists often assist in this work.) Similar to Heuristic Evaluation, except it serves as a "last pass" to catch anything missed during production.
-
-
 ### Structured Usability Testing
+
+Objective
+:	Make a site or application easier to use and more effective at its purpose.
+
+Tasks
+: Create a list of tasks to test; create a prototype; put humans in front of it; give them the tasks; record what happens.
+
+Deliverables
+:	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated usability findings report.
 
 Time Req
 :	64–80 hours per round, with 4-5 users, and written usability report and recommendations. 
 
-This involves putting actual people in front of a real or mocked up site, giving them tasks, and seeing what happens. This tends to produce the most new insights of any form of testing.
+Usability testing involves putting actual people in front of a real or mocked up site, giving them tasks, and seeing what happens. This tends to produce the most new insights of any form of testing.
 
-We create a formal task list and script, recruit a number of users (typically [5 users](http://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/), and [rarely more](http://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
+It's best to start with a list of questions that need answering, such as *can users easily sign up for a workshop?* or *does breaking the checkout into three steps make it easier to use than the current site?*
+
+Next, create a formal task list and script, recruit [4 to 5 users](http://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/) ([rarely more](http://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
 
 The script helps to ensure consistency, video recording the screen lets us revisit the tests. 
+
+Steve Krug's book [Rocket Surgery Made Easy]() is an excellent guide to designing and conducting usability testing. Another useful (and shorter) work is Jacob Nielsen's [Travelling Usability Lab](http://www.nngroup.com/articles/traveling-usability-lab/) article.
+
+
+
+## Quality Assurance
+
+Objective
+:	Ensure the site or application meets the requirements laid out in the [Functional Requirements](#FunctionalRequirements) or [Production Specification](#ProductionSpecification) document. Find bugs.
+
+Tasks
+: Test every function described in the requirements or spec against expected behavior, and make sure the required content is present and correct.
+
+Deliverables
+:	Issues should be entered as tickets in iMarc's [Workshop](https://workshop.imarc.net). The Producer will traffic them.
+
+Time Req
+:	N/A (not budgeted with strategy)
+
+After design and development, before launch, iMarc employees who were not involved in creating the site assess the site for compliance with the project requirements, for general bugs, and for usability issues. 
+
+QA serves as a "last pass" to catch anything missed during production.
 
 
 
