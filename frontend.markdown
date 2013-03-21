@@ -79,7 +79,7 @@ the width of four spaces. For inline spacing, use spaces, not tabs.
 
 	header {
 		margin: 1em auto;
-	    width: 40em;
+		width: 40em;
 	}
 
 ### Line Breaks
@@ -281,7 +281,7 @@ All pages should include a meta description – a concise, human-readable descri
 
 ![Example of meta description in search results](/img/meta_description.jpg)
 
-The meta description should be less than 160 characters.
+Keep meta descriptions less than 160 characters.
 
 	<meta name="description" content="iMarc creates web sites &amp; applications for discerning clients. Strategy, marketing, design and programming since 1997. Newburyport, MA — 978-462-8848" />
 
@@ -310,21 +310,41 @@ Using a precomposed touch icon removes iOS effects (reflective sheen, drop shado
 
 Your touch icons should be a PNG at 512x512. It's possible to specify different sizes for different devices, but using a single high resolution touch icon is the easiest way to ensure the highest quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
-## Internet Explorer styles
+## Browser Reset
+Use a browser reset as they ensure that inconsistent default browser styles are not applied.
 
-Frontend code should apply to all supported browsers. If necessary, target versions of Internet Explorer via their respective CSS classes from the HTML.
+Use iMarc’s standard browser reset at the beginning of your CSS file. It can be found at the beginning of the CSS file within iMarc Boilerplate.
+
+iMarc’s browser reset is derived from the [HTML5 Boilerplate Reset](https://github.com/h5bp/html5-boilerplate/blob/master/css/normalize.css)
+
+After resetting, make sure you apply some [sane defaults](#SaneDefaults) and 
+test all markup with our [markup tester](#MarkupTest).
+
+Double check your CSS with our [markup test](#MarkupTester).
+
+## Group Clearfix
+
+Use the _group_ class on parent elements to properly contain floats.
+
+	.group:before,
+	.group:after {
+		content: '';
+		display: table;
+	}
 	
-	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
-	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	.group:after {
+		clear: both;
+	}
 
-## Presentational Elements
+To get the _group_ method to work in IE6 and IE7, it is necessary to include
+the following rules within their respective IE CSS sections.
 
-Presentational elements should not be used for text styling purposes. Instead,
-CSS should be used to apply style to text.
+	/* IE6 */
+	.group { height: 1%; }
 
-Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
+	/* IE7 */
+	.group { min-height: 1px; }
+
 
 ## Naming Conventions
 
@@ -493,41 +513,6 @@ Tables should contain a summary attribute, which should summarize the table cont
 Use `<colgroup>` and `<col>` elements to style table columns instead of using a `class` on each table cell. The only style properties that should be modified cross-browser are `background` and `color`.
 
 
-## Browser Reset
-Use a browser reset as they ensure that inconsistent default browser styles are not applied.
-
-Use iMarc’s standard browser reset at the beginning of your CSS file. It can be found at the beginning of the CSS file within iMarc Boilerplate.
-
-iMarc’s browser reset is derived from the [HTML5 Boilerplate Reset](https://github.com/h5bp/html5-boilerplate/blob/master/css/normalize.css)
-
-After resetting, make sure you apply some [sane defaults](#SaneDefaults) and 
-test all markup with our [markup tester](#MarkupTest).
-
-Double check your CSS with our [markup test](#MarkupTester).
-
-## Group Clearfix
-
-Use the _group_ class on parent elements to properly contain floats.
-
-	.group:before,
-	.group:after {
-		content: '';
-		display: table;
-	}
-	
-	.group:after {
-		clear: both;
-	}
-
-To get the _group_ method to work in IE6 and IE7, it is necessary to include
-the following rules within their respective IE CSS sections.
-
-	/* IE6 */
-	.group { height: 1%; }
-
-	/* IE7 */
-	.group { min-height: 1px; }
-
 ## Layout
 
 ### Floats
@@ -563,11 +548,11 @@ fonts to handle when a specified font may not be available.
 
 Default **serif** font stack:
 
-font-family: Constantia, Lucida, Georgia, serif;
+`font-family: Constantia, Lucida, Georgia, serif;`
 
 Default **sans-serif** font stack:
 
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+`font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;`
 
 Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
 `fantasy`, or `monospace`. This provides a fallback in case all other fonts 
@@ -663,6 +648,22 @@ Use the following method when defining fonts:
 Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) that can convert font files to various formats. Make sure you check with your producer regarding the use of web fonts as there are licensing requirements for certain fonts.
 
 [Google Web Fonts](http://www.google.com/webfonts) is a free web font collection iMarc has used.
+
+## Presentational Elements
+
+Presentational elements should not be used for text styling purposes. Instead,
+CSS should be used to apply style to text.
+
+Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
+
+## Internet Explorer styles
+
+Frontend code should apply to all supported browsers. If necessary, target versions of Internet Explorer via their respective CSS classes from the `HTML` tag.
+	
+	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 
 ## HTML5 and CSS3 usage
 

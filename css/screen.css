@@ -45,42 +45,15 @@
 				color: #FFF;
 				background: #000;
 			}
-	#header .secondary {
-		background: #F6F6F6;
-	}
-		#header .secondary .secondary_nav {
-			font-size: 14px;
-			width: 940px;
-			padding: 10px;
-			margin: 0 auto;
-			list-style: none;
-			text-align: right;
-		}
-  		#header .secondary .secondary_nav li {
-			display: inline-block;
-			margin: 0 0 0 5px;
-  		}
-    		#header .secondary .secondary_nav li a {
-				background: #FFF;
-				padding: 5px 10px;
-				display: inline-block;
-				-webkit-border-radius: 20px;
-				-moz-border-radius: 20px;
-				border-radius: 20px;
-    		}
-    		#header .secondary .secondary_nav li.active a {
-				color: #FFF;
-				background: #000;
-    		}
 
 .content {
-	width: 940px;
+	width: 980px;
 	padding: 20px;
 	margin: 0 auto;
 	position: relative;
 }
 	.content .main {
-		width: 655px;
+		width: 695px;
 		background: #FFF;
 	}
 		.content .main.full-width {

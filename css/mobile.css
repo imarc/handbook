@@ -30,20 +30,11 @@
 	padding: 10px 0 0 0;
 }
 
-.secondary .secondary_nav {
-	margin: 0;
-	list-style: none;
-	background: #EEE;
-	padding: 10px 20px 0 20px;
-}
-
-#header .primary_nav li,
-.secondary .secondary_nav li {
+#header .primary_nav li {
 	padding: 0 10px 10px 10px;
 }
 
-#header .primary_nav li a,
-.secondary .secondary_nav li a {
+#header .primary_nav li a {
 	padding: 10px;
 	display: block;
 	background: #FFF;
@@ -53,8 +44,7 @@
 	border-radius: 10px;
 }
 
-#header .primary_nav li.active a,
-.secondary .secondary_nav li.active a {
+#header .primary_nav li.active a {
 	color: #FFF;
 	background: #2C82D1;
 }
