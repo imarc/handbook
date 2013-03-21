@@ -35,6 +35,6 @@ $(function() {
 		return this;
 	};
 
-	$('.toc nav').appendTOC('.main', 'h2, h3');
+	$('.toc').appendTOC('.main', 'h2, h3');
 	$('.toc').addClass('sticky').stickToTop('.torso', { minWidth: 770 });
 });
