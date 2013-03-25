@@ -31,17 +31,19 @@ Deliverable
 : A document or similar *work product* you can give to someone.
 
 Task
-: An activity you *do*. It is not a deliverable.
+: An activity you *do*. It is *not* a deliverable.
+
+Time Reqs
+: The number of hours required to produce an activity or deliverable, for an *average-sized project*.
 
 Scope
-: The number of *hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWork), and should be restated in the Requirements.
+: The *total hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWork), and should be restated in the Requirements.
 
 Requirements
 : What the end product must do. Defined by a [Functional Requirements](#FunctionalRequirements) or a [Production Specification](#ProductionSpecification) document.
 
 Implementation
 : How the end product must work. Defined by a [Production Specification](#ProductionSpecification).
-
 
 
 ## Process
@@ -105,6 +107,7 @@ If the client also engages iMarc to produce the project, the strategy lead is re
 Depending on budget and goals, a number of research activities may be incorporated into a project. 
 
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
+
 
 
 ### Goal Analysis and Prioritization
@@ -311,7 +314,7 @@ Summary
 :	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope *over 200 hours*.
 
 Time Req
-:	Based upon Discovery Activities conducted (above)
+:	Sum of Discovery Activities conducted (above)
 
 
 The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](#SiteMap), [wireframes](#Wireframe), and [specification](#ProductionSpecification).
@@ -352,7 +355,6 @@ Time Req
 
 ### Content Outline
 
-
 Summary
 :	Briefly describes the purpose and goal of each page on the site.
 
@@ -388,7 +390,9 @@ Time Req
 
 A wireframe is a bit of a "sneak preview" of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
 
-Most wireframes will depict single web pages, but some may depict multiple screens in a complex interaction or workflow. Multi-screen explorations are called *storyboards*.
+Most wireframes will depict single web pages, but some may depict multiple screens in a complex interaction or workflow.
+
+*Multi-screen* explorations are called *storyboards*. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
 
 + Allows for rapid, efficient UI iteration
 + Conveys what a page or screen does
