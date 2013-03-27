@@ -2,7 +2,7 @@
 title: Strategy
 layout: default
 ---
-<meta name="robots" content="no index">
+
 
 
 
