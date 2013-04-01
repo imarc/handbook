@@ -77,8 +77,6 @@ collaborate on a site’s markup and style.
 Use tab character at the beginning of a line. A tab is expected to represent
 the width of four spaces. For inline spacing, use spaces, not tabs.
 
-This is using four spaces option in Mou
-
     header {
         margin: 1em auto;
         width: 40em;
