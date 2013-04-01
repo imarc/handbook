@@ -241,6 +241,14 @@ Time Req
 
 The primary purpose of this document is to identify and convey past patterns in user activity, page flows, and content to better inform decisions during planning, design and development. It is necessarily backwards-looking.
 
+**Topics include:**
+
++ Visitor Technology: Browsers and versions, commonest devices
++ Behavior: Bounce rates and top bounce pages, page depth, loyalty, task completion rate
++ Content: Top pages, search terms, important content with puzzlingly low access rates
++ Events: Correlate offline events to visits or conversions
++ Social: Traffic sources, popular content
+
 
 ### Metrics Baseline
 
