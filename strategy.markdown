@@ -115,20 +115,20 @@ Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects with production scope of *150–250 hours*
 
 Tasks
-:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation.
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create [Site Map](#SiteMap).
 
 Deliverables
-:	Short findings document (1–3 pages).
+:	Short findings document (1–3 pages) and [Site Map](#SiteMap)
 
 Time Req
-:	16–20 hours
+:	22–28 hours
 
 
 For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective.
 
 This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
 
-Next, iMarc creates a short report of findings, and presents those findings to the client for validation. The ultimate goal is to learn enough to move forward with an exploratory sitemap, and any other discovery activities included in the proposal.
+Next, iMarc creates a short report of findings, and presents those findings to the client for validation. Finally, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the client.
 
 **Topics include:**
 
@@ -137,7 +137,8 @@ Next, iMarc creates a short report of findings, and presents those findings to t
 + Known challenges
 + Target audiences
 + Competitors
-+ Best practices in content, layout, navigation, workflow, and SEO.
++ Best practices in content, layout, navigation, workflow, and SEO
++ Site Map
 
 
 ### Goal Analysis and Prioritization
@@ -333,7 +334,7 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 ## Deliverables and Supporting Documents
 
-> "Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones." <br> Frederick P. Brooks, Jr. *The Mythical Man-Month*, 1975.
+> "Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones." <br> —Frederick P. Brooks, Jr. *The Mythical Man-Month*, 1975.
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
