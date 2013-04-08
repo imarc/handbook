@@ -112,16 +112,16 @@ Most are qualitative, meaning they depend heavily upon the expertise and experie
 ### Small-scale Discovery
 
 Objective
-:	Clearly define the goals of the project and stakeholder needs, quickly and efficiently.
+:	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects with production scope of *150–250 hours*
 
 Tasks
 :	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation.
 
 Deliverables
-:	Short findings document (1-3 pages).
+:	Short findings document (1–3 pages).
 
 Time Req
-:	16-20 hours
+:	16–20 hours
 
 
 For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective.
@@ -152,7 +152,7 @@ Deliverables
 :	Findings are summarized in the [Discovery Report](#DiscoveryReport).
 
 Time Req
-:	22-28 hours
+:	22–28 hours
 
 **Topics include:**
 
@@ -320,7 +320,7 @@ Deliverables
 :	Results are delivered as part of the [Discovery Report](#DiscoveryReport).
 
 Time Req
-: 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8-12 hours.
+: 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8–12 hours.
 
 
 Questions should be close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
@@ -352,7 +352,7 @@ A Statement of Work, or SOW, may be created by Business Development or a Produce
 ### Discovery Report
 
 Summary
-:	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope *over 200 hours*.
+:	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope of *over 250 hours*.
 
 Time Req
 :	Sum of Discovery Activities conducted (above)
@@ -412,7 +412,7 @@ The content outline supplements a Site Map. A content mimics the the organizatio
 ### Homepage Narrative
 
 Summary
-: Brief, 1-2 page document that defines all content, features and functionality required for the homepage. 
+: Brief, 1–2 page document that defines all content, features and functionality required for the homepage. 
 
 Time Req
 :	4–6 hours, and inclusion in the Functional Requirements Document
@@ -450,7 +450,7 @@ Most wireframes will depict single web pages, but some may depict multiple scree
 ### Functional Requirements
 
 Summary
-:	A 5-10 page document for projects with production scope *under 200 hours*.
+:	A 5–10 page document for projects with production scope of *150–250 hours*.
 
 Time Req
 :	32 hours, *in addition to Discovery Activities*.
@@ -463,7 +463,7 @@ This document should restate scope of production phase (which often changes some
 ### Production Specification
 
 Summary
-:	A 15–80 page document for projects with production scope *over 200 hours*.
+:	A 15–80 page document for projects with production scope of *over 250 hours*.
 
 Time Req
 :	 90–170 hours, *in addition to Discovery Activities*.
@@ -537,7 +537,7 @@ Deliverables
 :	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated usability findings report.
 
 Time Req
-:	64–80 hours per round, with 4-5 users, and written usability report and recommendations. 
+:	64–80 hours per round, with 4–5 users, and written usability report and recommendations. 
 
 Usability testing involves putting actual people in front of a real or mocked up site, giving them tasks, and seeing what happens. This tends to produce the most new insights of any form of testing.
 
