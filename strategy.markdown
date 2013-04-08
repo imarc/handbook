@@ -109,6 +109,36 @@ Depending on budget and goals, a number of research activities may be incorporat
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
+### Small-scale Discovery
+
+Objective
+:	Clearly define the goals of the project and stakeholder needs, quickly and efficiently.
+
+Tasks
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation.
+
+Deliverables
+:	Short findings document (1-3 pages).
+
+Time Req
+:	16-20 hours
+
+
+For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective.
+
+This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
+
+Next, iMarc creates a short report of findings, and presents those findings to the client for validation. The ultimate goal is to learn enough to move forward with an exploratory sitemap, and any other discovery activities included in the proposal.
+
+**Topics include:**
+
++ Business overview, including services, customers and market situation
++ Prioritized goals
++ Known challenges
++ Target audiences
++ Competitors
++ Best practices in content, layout, navigation, workflow, and SEO.
+
 
 ### Goal Analysis and Prioritization
 
@@ -302,6 +332,9 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 
 ## Deliverables and Supporting Documents
+
+> "Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones."
+> Frederick P. Brooks, Jr. *The Mythical Man-Month*, 1975.
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
