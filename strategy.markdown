@@ -432,8 +432,13 @@ Summary
 Time Req
 : 8–12 hours per page or screen
 
+A wireframe is a low fidelity representation of a design that clearly shows:
 
-A wireframe is a bit of a "sneak preview" of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
++ the main groups of content
++ the structure of information
++ a basic visualization of the user interface. 
+
+Wireframes allow for rapid, efficient iteration of content, layout and interactivity. A wireframe is a bit of a “sneak preview” of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
 
 Most wireframes will depict single web pages, but some may depict multiple screens in a complex interaction or workflow.
 
