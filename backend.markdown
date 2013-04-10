@@ -502,7 +502,13 @@ counterpart is output the same way.
 	<table>
 
 
-## Class, Method, and Function Declarations
+## Namespace, Class, Method, and Function Declarations
+
+Namespace declarations should be placed in the second line of a PHP file
+following the PHP open tag.
+
+	<?php
+	namespace Controllers;
 
 Class declarations follow the K&R style for of indenting and bracing, by
 placing the opening brace on a new line, the same indention level as the
@@ -532,13 +538,6 @@ explicitly defined. This includes `public`, even though it's implied.
 
 While `static public function foo()` and `public static function foo()` are
 treated identically, start with `static` so the static keyword stands out.
-
-**Local Functions** – Functions used only on the current page begin with a
-`_` character (e.g. `_example_function`). These functions are placed at the
-bottom of the page. This helps distinguish functions defined on the current
-page from user-defined functions in included files. These functions can
-generally be avoided.
-
 
 ## Naming Conventions
 
@@ -587,6 +586,12 @@ Variable names must be meaningful. One letter variable names must be avoided,
 except for places where the variable has no real meaning or a trivial meaning
 (e.g. for (`$i=0;` `$i<100;` `++$i`)).
 
+### Namespace Names
+
+Namespaces should be given a name describing the the project or segment of
+the project. Namespaces must be in upper camel case.
+
+	namespace MyLibraryName\Extensions;
 
 ### Class Names
 
