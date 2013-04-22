@@ -434,24 +434,18 @@ Time Req
 
 A wireframe is a low fidelity representation of a design that clearly shows:
 
-+ the main groups of content
-+ the structure of information
-+ a basic visualization of the user interface. 
++ the main groups of **content**,
++ the structure of **information**,
++ a basic visualization of the **user interface**. 
 
-Wireframes allow for rapid, efficient iteration of content, layout and interactivity. A wireframe is a bit of a “sneak preview” of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
+The simplified, colorless aesthetic of a wireframe allows us to rapidly iterate the underlying functional design a web page or application. A wireframe helps to visualize ideas and to gain consensus in stakeholders.
 
-Most wireframes will depict single web pages, but some may depict multiple screens in a complex interaction or workflow.
+Wireframes should be annotated to describe behaviors, functionality, and content needs. Most wireframes depict single web pages, but some may depict multiple screens in a complex interaction or workflow.
 
-*Multi-screen* explorations are called *storyboards*. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
-
-+ Allows for rapid, efficient UI iteration
-+ Conveys what a page or screen does
-+ We often create multiple wireframes express various parts of the site
-+ Annotated to describe behaviors, functionality, and content needs.
-+ Should not depict creative design. However, design is inextricably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
+Multi-screen explorations are called **storyboards**. For example, a storyboard might depict the steps required to search a database of customers and create a new customer record. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
 
 #### Example Wireframe:
-![Example of Wireframe](img/strategy/wireframe.png)
+![Example of Wireframe](img/strategy/wireframe-110.png)
 
 
 
