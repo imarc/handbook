@@ -593,11 +593,11 @@ We also have created an "iMarc Objects" OmniGraffle stencil with some commonly u
 
 ### Reports and Specs
 
-We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+[Word](http://www.microsoft.com/mac/word) is used for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
-We've used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
+We have used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
-We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+[Keynote](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
 ### Surveys and Testing
