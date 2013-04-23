@@ -444,8 +444,12 @@ Wireframes should be annotated to describe behaviors, functionality, and content
 
 Multi-screen explorations are called **storyboards**. For example, a storyboard might depict the steps required to search a database of customers and create a new customer record. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
 
-#### Example Wireframe:
-![Example of Wireframe](img/strategy/wireframe-110.png)
+#### Example Wireframe
+![Example Wireframe](img/strategy/wireframe.png)
+
+
+#### Example Storyboard
+![Example Storyboard](img/strategy/storyboard.png)
 
 
 
