@@ -1,6 +1,6 @@
 ---
 title: Deployment
-layout: default.bp
+layout: beta.default
 ---
 
 # Deployment

@@ -1,6 +1,6 @@
 ---
 title: Strategy
-layout: default.bp
+layout: beta.default
 ---
 
 
@@ -31,17 +31,19 @@ Deliverable
 : A document or similar *work product* you can give to someone.
 
 Task
-: An activity you *do*. It is not a deliverable.
+: An activity you *do*. It is *not* a deliverable.
+
+Time Reqs
+: The number of hours required to produce an activity or deliverable, for an *average-sized project*.
 
 Scope
-: The number of *hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWork), and should be restated in the Requirements.
+: The *total hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWork), and should be restated in the Requirements.
 
 Requirements
 : What the end product must do. Defined by a [Functional Requirements](#FunctionalRequirements) or a [Production Specification](#ProductionSpecification) document.
 
 Implementation
 : How the end product must work. Defined by a [Production Specification](#ProductionSpecification).
-
 
 
 ## Process
@@ -107,6 +109,41 @@ Depending on budget and goals, a number of research activities may be incorporat
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
+### Small-scale Discovery
+
+Objective
+:	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects with production scope of *150–250 hours*
+
+Tasks
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Narrative.
+
+Deliverables
+:	Short findings document (1–3 pages), [Site Map](#SiteMap), [Homepage Narrative](#HomepageNarrative)
+
+Time Req
+:	26–32 hours
+
+
+For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective.
+
+This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
+
+Next, iMarc creates a short report of findings, and presents those findings to the client for validation.
+
+Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the client, and creates a [Homepage Narrative](#HomepageNarrative).
+
+**Topics include:**
+
++ Business overview, including services, customers and market situation
++ Prioritized goals
++ Known challenges
++ Target audiences
++ Competitors
++ Best practices in content, layout, navigation, workflow, and SEO
++ [Site Map](#SiteMap)
++ [Homepage Narrative](#HomepageNarrative)
+
+
 ### Goal Analysis and Prioritization
 
 Objective
@@ -119,7 +156,7 @@ Deliverables
 :	Findings are summarized in the [Discovery Report](#DiscoveryReport).
 
 Time Req
-:	22-28 hours
+:	22–28 hours
 
 **Topics include:**
 
@@ -238,6 +275,14 @@ Time Req
 
 The primary purpose of this document is to identify and convey past patterns in user activity, page flows, and content to better inform decisions during planning, design and development. It is necessarily backwards-looking.
 
+**Topics include:**
+
++ **Visitor Technology:** Browsers and versions, commonest devices
++ **Behavior:** Bounce rates and top bounce pages, page depth, loyalty, task completion rate
++ **Content:** Top pages, search terms, important content with puzzlingly low access rates
++ **Events:** Correlate offline events to visits or conversions
++ **Social:** Traffic sources, popular content
+
 
 ### Metrics Baseline
 
@@ -279,7 +324,7 @@ Deliverables
 :	Results are delivered as part of the [Discovery Report](#DiscoveryReport).
 
 Time Req
-: 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8-12 hours.
+: 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8–12 hours.
 
 
 Questions should be close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
@@ -291,6 +336,9 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 
 ## Deliverables and Supporting Documents
+
+> "Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones."  
+> —Frederick P. Brooks, Jr. *The Mythical Man-Month*, 1975.
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
@@ -308,10 +356,10 @@ A Statement of Work, or SOW, may be created by Business Development or a Produce
 ### Discovery Report
 
 Summary
-:	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope *over 200 hours*.
+:	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope of *over 250 hours*.
 
 Time Req
-:	Based upon Discovery Activities conducted (above)
+:	Sum of Discovery Activities conducted (above)
 
 
 The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](#SiteMap), [wireframes](#Wireframe), and [specification](#ProductionSpecification).
@@ -352,7 +400,6 @@ Time Req
 
 ### Content Outline
 
-
 Summary
 :	Briefly describes the purpose and goal of each page on the site.
 
@@ -369,10 +416,10 @@ The content outline supplements a Site Map. A content mimics the the organizatio
 ### Homepage Narrative
 
 Summary
-: Brief, 1-2 page document that defines all content, features and functionality required for the homepage. 
+: Brief, 1–2 page document that defines all content, features and functionality required for the homepage. 
 
 Time Req
-:	4–6 hours, and inclusion in the Functional Requirements Document
+: N/A (not usually broken out from [Small-scale Discovery](#SmallscaleDiscovery)
 
 This simple list and description acts as a starting point for the design and creative phase. It is done instead of a wireframe.
 
@@ -385,19 +432,24 @@ Summary
 Time Req
 : 8–12 hours per page or screen
 
+A wireframe is a low fidelity representation of a design that clearly shows:
 
-A wireframe is a bit of a "sneak preview" of the site for our clients, and helps them visualize the ideas being discussed and get buy-in from stakeholders.
++ the main groups of **content**,
++ the structure of **information**,
++ a basic visualization of the **user interface**. 
 
-Most wireframes will depict single web pages, but some may depict multiple screens in a complex interaction or workflow. Multi-screen explorations are called *storyboards*.
+The simplified, colorless aesthetic of a wireframe allows us to rapidly iterate the underlying functional design a web page or application. It helps to visualize ideas and to gain consensus among stakeholders.
 
-+ Allows for rapid, efficient UI iteration
-+ Conveys what a page or screen does
-+ We often create multiple wireframes express various parts of the site
-+ Annotated to describe behaviors, functionality, and content needs.
-+ Should not depict creative design. However, design is inextricably linked to layout, so you should consult a UX Engineer or Designer on wireframes. Often, they will be the principal authors.
+Wireframes usually are annotated to describe behaviors, functionality, and content needs. *Always use real content*. Using Latin text (“lorem ipsum”) may speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well.
 
-#### Example Wireframe:
-![Example of Wireframe](img/strategy/wireframe.png)
+Most wireframes depict single web pages, but some may depict multiple screens in a complex interaction or workflow. We call these **storyboards**. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
+
+#### Example Wireframe
+![Example Wireframe](img/strategy/wireframe.png)
+
+
+#### Example Storyboard
+![Example Storyboard](img/strategy/storyboard.png)
 
 
 
@@ -405,7 +457,7 @@ Most wireframes will depict single web pages, but some may depict multiple scree
 ### Functional Requirements
 
 Summary
-:	A 5-10 page document for projects with production scope *under 200 hours*.
+:	A 5–10 page document for projects with production scope of *150–250 hours*.
 
 Time Req
 :	32 hours, *in addition to Discovery Activities*.
@@ -418,7 +470,7 @@ This document should restate scope of production phase (which often changes some
 ### Production Specification
 
 Summary
-:	A 15–80 page document for projects with production scope *over 200 hours*.
+:	A 15–80 page document for projects with production scope of *over 250 hours*.
 
 Time Req
 :	 90–170 hours, *in addition to Discovery Activities*.
@@ -492,7 +544,7 @@ Deliverables
 :	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated usability findings report.
 
 Time Req
-:	64–80 hours per round, with 4-5 users, and written usability report and recommendations. 
+:	64–80 hours per round, with 4–5 users, and written usability report and recommendations. 
 
 Usability testing involves putting actual people in front of a real or mocked up site, giving them tasks, and seeing what happens. This tends to produce the most new insights of any form of testing.
 
@@ -536,16 +588,16 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices.
 
-We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks.
+We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES/user_experience/sitemap_wireframe_template/stencils/.
 
 
 ### Reports and Specs
 
-We use [Word](http://www.microsoft.com/mac/word) for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+[Word](http://www.microsoft.com/mac/word) is used for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
-We've used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
+We have used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
-We use [Keynote](http://www.apple.com/iwork/keynote/) when presenting on-screen. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+[Keynote](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
 ### Surveys and Testing
@@ -588,9 +640,8 @@ Example: *David Tufts*
 Revision Notes
 :	What changed in this revision; mainly used in Functional Requirements and Production Specification documents.
 
-#### Example of document metadata:
-
-![Wireframe title, date, annotations](img/strategy/metadata-wireframe.png)
+#### Example of a document metadata block
+![Example metadata block](img/strategy/metadata.png)
 
 
  

@@ -1,6 +1,6 @@
 ---
 title: JavaScript
-layout: default.bp
+layout: beta.default
 ---
 
 # JavaScript

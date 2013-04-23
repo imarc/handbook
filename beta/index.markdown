@@ -1,6 +1,6 @@
 ---
 title: iMarc Handbook
-layout: notoc.bp
+layout: beta.notoc
 ---
 
 <h1 class="title">iMarc’s Handbook of Web Development Standards &amp; Best Practices</h1>
@@ -10,10 +10,8 @@ layout: notoc.bp
 
 
 <dl>
-	<!-- 
     <dt><a href="strategy">Strategy</a></dt>
 	    <dd>Strategy processes</dd>
-	// -->
 	<dt><a href="frontend">Frontend</a></dt>
 		<dd>HTML and CSS standards</dd>
 	<dt><a href="javascript">JavaScript</a></dt>
