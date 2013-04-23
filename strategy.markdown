@@ -640,9 +640,8 @@ Example: *David Tufts*
 Revision Notes
 :	What changed in this revision; mainly used in Functional Requirements and Production Specification documents.
 
-#### Example of document metadata:
-
-![Wireframe title, date, annotations](img/strategy/metadata-wireframe.png)
+#### Example of a document metadata block
+![Example metadata block](img/strategy/metadata.png)
 
 
  
