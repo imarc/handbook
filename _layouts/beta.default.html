@@ -18,57 +18,57 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div class="site">
-			<header class="primary">
-			<h1><a href="/">Handbook <sup>by iMarc</sup></a></h1>
-				<nav class="primary">
-					<ul>
-						<!-- 
-					    <li>
-					        <a href="strategy">Strategy</a>
-					    </li>
-						// -->
-					    <li>
-					        <a href="frontend">Frontend</a>
-					    </li>
-					    <li>
-					        <a href="javascript">JavaScript</a>
-					    </li>
-					    <li>
-					        <a href="backend">Backend</a>
-					    </li>
-					    <li>
-					        <a href="deployment">Deployment</a>
-					    </li>
-					</ul>
-				</nav>
-			</header>
-
-			<div class="torso">
-				<aside class="primary">
-					<section class="toc">
-						<nav class="secondary">
-						</nav>
-					</section>
-				</aside>
-				<div class="main" role="main">
-					{{ content }}
+		<header class="primary">
+			<div class="mold">
+				<div class="branding">
+					<h1><a href="/">Handbook <sup>by iMarc</sup></a></h1>
 				</div>
 			</div>
+			<nav class="primary">
+				<ul class="mold">
+				    <li>
+				        <a href="strategy">Strategy</a>
+				    </li>
+				    <li>
+				        <a href="frontend">Frontend</a>
+				    </li>
+				    <li>
+				        <a href="javascript">JavaScript</a>
+				    </li>
+				    <li>
+				        <a href="backend">Backend</a>
+				    </li>
+				    <li>
+				        <a href="deployment">Deployment</a>
+				    </li>
+				</ul>
+			</nav>
+		</header>
 
-			<footer class="primary">
-				<div class="copyright">©2013 iMarc LLC.</div>
-				<p class="license">
-					Unless otherwise noted, the contents of these pages are licensed under the 
-					<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
-				</p>
-				<p>
-					iMarc is a full service web development and design firm located north of Boston.
-					<br />
-					Learn more at <a href="http://imarc.net">http://imarc.net</a>.
-				</p>
-			</footer>
+		<div class="torso mold">
+			<div class="main" role="main">
+				{{ content }}
+			</div>
+			<aside class="primary">
+				<section class="toc">
+					<nav class="secondary">
+					</nav>
+				</section>
+			</aside>
 		</div>
+
+		<footer class="primary mold">
+			<div class="copyright">©2013 iMarc LLC.</div>
+			<p class="license">
+				Unless otherwise noted, the contents of these pages are licensed under the 
+				<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
+			</p>
+			<p>
+				iMarc is a full service web development and design firm located north of Boston.
+				<br />
+				Learn more at <a href="http://imarc.net">http://imarc.net</a>.
+			</p>
+		</footer>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/plugins/sticktotop.plugin.js"></script>
