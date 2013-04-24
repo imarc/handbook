@@ -52,8 +52,8 @@ when editing code.
 
 ### Bracing & Indenting Blocks
 
-The //One True Brace// variant of the K&R indent style, places the opening
-brace on the same line as control statements //and// same line as function
+The *One True Brace* variant of the K&R indent style, places the opening
+brace on the same line as control statements and same line as function
 declarations. Content after the opening brace is indented. The closing brace is
 placed on a line by itself at the same indent level as the control statement or
 function declaration.

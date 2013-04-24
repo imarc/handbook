@@ -38,46 +38,30 @@ encodings.
 The following list of includes some of, but not necessarily all, the aspects of
 a site that need to be build with UTF-8 in mind:
 
-<dl>
-	<dt>HTML</dt>
-	<dd>
-		Set your editor to use UTF-8. Include the correct meta tags, as
-		specified by [frontend
-		standards](/frontend#UTF-8).  Force the
-		correct HTTP content-type header.
-		<pre>
-			<code>
-				// Raw PHP
-				header('Content-Type: text/html; charset=utf-8');
+HTML
+:	Set your editor to use UTF-8. Include the correct meta tags, 
+	as specified by [frontend standards](/frontend#UTF-8). Force the correct 
+	HTTP content-type header.
 
-				// Flourish
-				fHTML::sendHeader();
-			</code>
-		</pre>
-	</dd>
-	<dt>PHP</dt>
-	<dd>
-		Use correct content-type headers and meta tags to ensure that browsers
-		are sending UTF-8 for form contents. Also use UTF-8 safe string
-		functions.
-	</dd>
-	<dt>Database</dt>
-	<dd>
-		Most databases require that the encoding be set when the database is
-		created. Ensure your database connection is set to use UTF-8.
-	</dd>
-	<dt>Email</dt>
-	<dd>
-		When sending emails, be sure to use code that supports UTF-8 in
-		recipient names, the subject and the body
-	</dd>
-	<dt>Other Data</dt>
-	<dd>
-		Be sure to convert (if necessary) and clean data coming from old
-		databases, external systems, XML files, CSV files and other such data
-		sources
-	</dd>
-</dl>
+	<tt>header('Content-Type: text/html; charset=utf-8');</tt> 
+	or 
+	<tt>fHTML::sendHeader();</tt>
+
+PHP
+:	Use correct content-type headers and meta tags to ensure that 
+	browsers are sending UTF-8 for form contents. Also use UTF-8 safe string functions.
+
+Database
+:	Most databases require that the encoding be set when the database is created. 
+	Ensure your database connection is set to use UTF-8.
+
+Email
+: 	When sending emails, be sure to use code that supports UTF-8 in recipient names, 
+	the subject and the body
+
+Other Data
+:	Be sure to convert (if necessary) and clean data coming from old databases, 
+	external systems, XML files, CSV files and other such data sources
 
 See [Flourish’s UTF-8 docs](http://flourishlib.com/docs/UTF-8) for
 more explanation and examples.
