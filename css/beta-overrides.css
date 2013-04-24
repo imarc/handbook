@@ -1,0 +1,51 @@
+/* 
+
+This is a temporary CSS to include minor Handbook-specific styles that can get 
+appended to the detault boilerplate css (styles.css)
+
+When Boilerplate is final, we'll merge these sheets and continue refining 
+handbook separate from boilerplate.
+
+
+*/
+
+.notoc .main h1.title {
+	font-size: 24px;
+	margin-bottom: .2em;
+}
+.notoc .main .copyright {
+	font-size: 12px;
+	margin-bottom: 3em;
+}
+
+@media only screen and (min-width: 800px) {
+	.notoc .main {
+		margin-right: 0;
+	}
+}
+
+
+.branding h1 sup {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+dt {
+	display: inline-block;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: top;
+	width: 20%;
+}
+dd {
+	background: #e9e9e9;
+	border: 1px solid #CCC;
+	color: #888;
+	display: inline-block;
+	margin: 0 0 20px 10px;
+	padding: 10px;
+	text-shadow: 0px 2px 0px #fff;
+	vertical-align: top;
+	width: 70%;
+}

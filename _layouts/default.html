@@ -1,57 +1,75 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
-		<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-
+		<meta name="robots" content="noindex">
+		<meta charset="UTF-8" />
 		<title>{{ page.title }}</title>
-
-		<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen and (min-width: 569px)" />
-		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 568px)" />
+		<meta name="description" content="iMarc, LLC" />
+		<meta name="author" content="Design, programming, by iMarc. More info at http://imarc.net" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/beta-overrides.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/highlight/github.css" media="all" />
+
+		<!--[if IE]>
+			<script src="js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	<body>
-		<div id="header">
-			<div class="content group">
-				<span class="title"><a href="/">Handbook <sup>by iMarc</sup></a></span>
-				<ul class="primary_nav group">
-					<li><a href="/strategy">Strategy</a></li>
-					<li><a href="/frontend">Frontend</a></li>
-					<li><a href="/javascript">JavaScript</a></li>
-					<li><a href="/backend">Backend</a></li>
-					<li><a href="/deployment">Deployment</a></li>
+		<header class="primary">
+			<div class="container">
+				<div class="branding">
+					<h1><a href="/">Handbook <sup>by iMarc</sup></a></h1>
+				</div>
+			</div>
+			<nav class="primary">
+				<ul class="container">
+				    <li>
+				        <a href="strategy">Strategy</a>
+				    </li>
+				    <li>
+				        <a href="frontend">Frontend</a>
+				    </li>
+				    <li>
+				        <a href="javascript">JavaScript</a>
+				    </li>
+				    <li>
+				        <a href="backend">Backend</a>
+				    </li>
+				    <li>
+				        <a href="deployment">Deployment</a>
+				    </li>
 				</ul>
-			</div>
-		</div>
-		<div id="torso">
-			<div class="content">
-				<div class="toc sticky">
-					<h2>Topics</h2>
-				</div>
+			</nav>
+		</header>
 
-				<div class="main">
-					{{ content }}
-				</div>
+		<div class="torso container">
+			<div class="main" role="main">
+				{{ content }}
 			</div>
+			<aside class="primary">
+				<section class="toc">
+					<nav class="secondary">
+					</nav>
+				</section>
+			</aside>
 		</div>
-		<div id="footer">
-			<div class="content">
-				<p class="copyright">
-					©2012 iMarc LLC
-				</p>
-				<p>
-					Unless otherwise noted, the contents of these pages are licensed under the 
-					<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
-				</p>
-				<p>
-					iMarc is a full service web development and design firm located north of Boston.
-					<br />
-					Learn more at <a href="http://imarc.net">http://imarc.net</a>.
-				</p>
-			</div>
-		</div>
+
+		<footer class="primary container">
+			<div class="copyright">©2013 iMarc LLC.</div>
+			<p class="license">
+				Unless otherwise noted, the contents of these pages are licensed under the 
+				<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
+			</p>
+			<p>
+				iMarc is a full service web development and design firm located north of Boston.
+				<br />
+				Learn more at <a href="http://imarc.net">http://imarc.net</a>.
+			</p>
+		</footer>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/plugins/sticktotop.plugin.js"></script>
