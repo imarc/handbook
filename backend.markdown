@@ -298,8 +298,8 @@ This class would be stored in `/app/controllers/site/About.php`.
 
 Views should mirror the folder structure of controllers, with the filename
 being the `underscore_notation` version of the controller method. Example: the
-controller/method `Site_About::contactUs()` method would load the view
-`/app/views/site/about/contact_us.php`.
+controller/method `About::contactUs()` method would load the view
+`/app/views/about/contact_us.php`.
 
 Views are always stored in the `/app/views/` folder, and never in the
 `/docroot/`.
