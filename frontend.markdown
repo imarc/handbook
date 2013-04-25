@@ -10,7 +10,9 @@ service web development and design firm located north of Boston. Learn more
 at <a href="http://imarc.net">http://imarc.net</a>.
 
 ## iMarc Boilerplate
-**[iMarc Boilerplate](https://github.com/imarc/boilerplate)** is a great starting point for new projects. Authored by iMarc, boilerplate contains standard HTML and CSS.
+**[iMarc Boilerplate](https://github.com/imarc/boilerplate)** is a great 
+starting point for new projects. Authored by iMarc, boilerplate contains 
+standard HTML and CSS.
 
 ## Doctype
 
@@ -123,7 +125,8 @@ With short lines of content, the tag and content can stay on the same line.
 Style rules with more than one property should have each property on a new 
 indented line. When there is more than one selector for a single rule, 
 each selector goes on its own line. The close brace should be on its own 
-line at the same indentation as the style selector. Order CSS declarations alphabetically by property name.
+line at the same indentation as the style selector. Order CSS declarations 
+alphabetically by property name.
 
 	.logo {
 	    background: #FFF;
@@ -134,7 +137,9 @@ line at the same indentation as the style selector. Order CSS declarations alpha
 	    top: 0;
 	}
 
-Stylesheets should be organized in a logical manner. Related style rules should be grouped together in ascending order of specificity. Style rules with nested specificity should be indented accordingly.
+Stylesheets should be organized in a logical manner. Related style rules 
+should be grouped together in ascending order of specificity. Style rules 
+with nested specificity should be indented accordingly.
 
 Each property should have a space between the colon and the value, and should
 end with a semi-colon. 
@@ -216,7 +221,9 @@ of a page should not appear discernibly broken.
 
 ### Accessibility Checklist
 
-As you are working on a website, use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
+As you are working on a website, use the Baseline Checklist below to ensure 
+an acceptable level of accessibility. For clients who desire an extra level 
+of accessibility, use the Advanced Checklist.
 
 #### Baseline Checklist
 
@@ -240,7 +247,7 @@ As you are working on a website, use the Baseline Checklist below to ensure an a
 * Timed responses are properly indicated to users.
 * All content is viewable without an active stylesheet.
 * Color
-	* Color combinations should not create visual difficulty for users with color deficiencies. Utilize [http://www.checkmycolours.com](http://www.checkmycolours.com), [http://colororacle.org](http://colororacle.org) or a similar service.
+	* Color combinations should not create visual difficulty for users with color deficiencies. Utilize [Check My Colours](http://www.checkmycolours.com), [Color Oracle](http://colororacle.org) or a similar service.
 	* Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
 * All form fields can be activated, operated and submitted using a keyboard.
 * Users can control galleries and modal windows using a keyboard.
@@ -265,8 +272,8 @@ to indicate distinct content levels.
 
 	<title>Writing Content For Your Website – Support – iMarc</title>
 
-This shows that I’m on the page called //Writing Content For Your Website//. That 
-page lives in a section called //Support// which resides in a website for //iMarc//.
+This shows that I’m on the page called *Writing Content For Your Website*. That 
+page lives in a section called *Support* which resides in a website for *iMarc*.
 
 The homepage should include the site or company name, followed by a simple description 
 of the entire website.
@@ -275,7 +282,11 @@ of the entire website.
 
 ### Meta Description
 
-All pages should include a meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Meta descriptions appear in search engine result pages as seen in the graphic below, however Google will sometimes replace meta descriptions with on-page content as they see fit.
+All pages should include a meta description – a concise, human-readable 
+description of that page’s contents. Do not duplicate meta descriptions 
+from other pages. Meta descriptions appear in search engine result pages 
+as seen in the graphic below, however Google will sometimes replace meta 
+descriptions with on-page content as they see fit.
 
 [Tips for writing meta descriptions by Google](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624#1)
 
@@ -304,16 +315,23 @@ If you’re using Photoshop, you should install the [ICO plugin](http://www.tele
 
 iOS and Android devices both support touch icons.
 
-Using a precomposed touch icon removes iOS effects (reflective sheen, drop shadow, rounded corners). Touch icons will not work on Android devices without the precomposed attribute value.
+Using a precomposed touch icon removes iOS effects (reflective sheen, 
+drop shadow, rounded corners). Touch icons will not work on Android 
+devices without the precomposed attribute value.
 
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
-Your touch icons should be a PNG at 512x512. It's possible to specify different sizes for different devices, but using a single high resolution touch icon is the easiest way to ensure the highest quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
+Your touch icons should be a PNG at 512x512. It's possible to specify 
+different sizes for different devices, but using a single high 
+resolution touch icon is the easiest way to ensure the highest 
+quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
 ## Browser Reset
-Use a browser reset as they ensure that inconsistent default browser styles are not applied.
+Use a browser reset as they ensure that inconsistent default browser 
+styles are not applied.
 
-Use iMarc’s standard browser reset at the beginning of your CSS file. It can be found at the beginning of the CSS file within iMarc Boilerplate.
+Use iMarc’s standard browser reset at the beginning of your CSS file. 
+It can be found at the beginning of the CSS file within iMarc Boilerplate.
 
 iMarc’s browser reset is derived from the [HTML5 Boilerplate Reset](https://github.com/h5bp/html5-boilerplate/blob/master/css/normalize.css)
 
@@ -347,7 +365,8 @@ the following rules within their respective IE CSS sections.
 
 ## Naming Conventions
 
-See **[iMarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** for detailed layout naming conventions.
+See **[iMarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
+for detailed layout naming conventions.
 
 ### Structure
 
@@ -413,7 +432,9 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 ### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
-The exceptions to this rule are anchors, form label IDs, the ID that is [placed on the `body` tag](#BodyClassesandIDs), and instances when IDs are more appropriate hooks for JavaScript.
+The exceptions to this rule are anchors, form label IDs, the ID that is 
+[placed on the `body` tag](#BodyClassesandIDs), and instances when IDs are 
+more appropriate hooks for JavaScript.
 
 Classes should be lowercase, using underscores between words.
 
@@ -442,7 +463,8 @@ if needed for targeting styles for specific pages.
 
 ## Forms
 
-All elements inside a `form` element should be placed within a `fieldset` element. Use a heading tag instead of the `legend` element to title fieldsets.
+All elements inside a `form` element should be placed within a `fieldset` 
+element. Use a heading tag instead of the `legend` element to title fieldsets.
 
 The `action` attribute is required on all forms, and should have a blank value by default.
 
@@ -453,7 +475,8 @@ is named after the form input type.  For example, a
 `text` input is contained inside `<div class="text">` and 
 a `file` input is contained inside `<div class="file">`.
 
-All appropriate input elements should have an associated label element. Labels should be associated directly with inputs.
+All appropriate input elements should have an associated label element. 
+Labels should be associated directly with inputs.
 
 Related fields, such as checkboxes and radio fields, may be further grouped 
 within a div with a class of the plural input type, such as `checkboxes`. 
@@ -511,7 +534,9 @@ Tables should contain a summary attribute, which should summarize the table cont
 
 ### Columns
 
-Use `<colgroup>` and `<col>` elements to style table columns instead of using a `class` on each table cell. The only style properties that should be modified cross-browser are `background` and `color`.
+Use `<colgroup>` and `<col>` elements to style table columns instead of 
+using a `class` on each table cell. The only style properties that should 
+be modified cross-browser are `background` and `color`.
 
 
 ## Layout
@@ -534,7 +559,8 @@ The default type size and font for a site should be set on the `body` element.
 Do not set sizes on unclassed markup that typically should be rendered as 
 the default text size. This includes `p`, `li`, `div`, `td`, `a`.
 
-Use pixel units to size type. Use the `em` unit to set the top and bottom margins on type. Leading, or `line-height`, should be a unitless measure.
+Use pixel units to size type. Use the `em` unit to set the top and bottom 
+margins on type. Leading, or `line-height`, should be a unitless measure.
 
 	h1 {
 	    font-size: 36px;
@@ -571,7 +597,8 @@ More information on [typographic scales](http://lamb.cc/typograph/).
 ### Web Fonts
 
 Use the following syntax to use web fonts on the web with `@font-face`. Appropriate 
-file formats should be provided for supported browsers. When using a multi weight/style typeface be sure to add the appropriate `font-weight` and `font-style` for each.
+file formats should be provided for supported browsers. When using a multi 
+weight/style typeface be sure to add the appropriate `font-weight` and `font-style` for each.
 
 Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Font Squirrel)):
 
@@ -616,7 +643,9 @@ Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bul
 	   font-style: italic;
 	}
 
-When styling elements, it's important to define the `font-family` as well as `font-weight` and `font-style` when necessary. This eliminates any faux bolding or faux italics in the browser. [Here's an example of faux styling when you don't properly define each font](http://paul.sandbox.imarc.net/font-face/) 
+When styling elements, it's important to define the `font-family` as well as 
+`font-weight` and `font-style` when necessary. This eliminates any faux bolding 
+or faux italics in the browser. [Here's an example of faux styling when you don't properly define each font](http://paul.sandbox.imarc.net/font-face/) 
 
 Use the following method when defining fonts:
 
@@ -640,7 +669,9 @@ Use the following method when defining fonts:
         font-family: "VerbRegularItalic";
     }
 
-Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) that can convert font files to various formats. Make sure you check with your producer regarding the use of web fonts as there are licensing requirements for certain fonts.
+Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) 
+that can convert font files to various formats. Make sure you check with your producer 
+regarding the use of web fonts as there are licensing requirements for certain fonts.
 
 [Google Web Fonts](http://www.google.com/webfonts) is a free web font collection iMarc has used.
 
@@ -653,7 +684,8 @@ Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
 
 ## Internet Explorer styles
 
-Frontend code should apply to all supported browsers. If necessary, target versions of Internet Explorer via their respective CSS classes from the `HTML` tag.
+Frontend code should apply to all supported browsers. If necessary, target 
+versions of Internet Explorer via their respective CSS classes from the `HTML` tag.
 	
 	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -662,12 +694,15 @@ Frontend code should apply to all supported browsers. If necessary, target versi
 
 ## HTML5 and CSS3 usage
 
-While iMarc uses the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype, it’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly 
+While iMarc uses the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) 
+doctype, it’s important to understand your project’s technical specification. 
+Some advanced HTML5 technologies may not function correctly 
 
 If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com/) 
 to ensure backwards compatability with older browsers.
 
-Modernizr detects what the browser’s rendering engine supports, and allows you to customize the look of the website depending on what’s supported.
+Modernizr detects what the browser’s rendering engine supports, and allows you 
+to customize the look of the website depending on what’s supported.
 
 HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
 
@@ -678,7 +713,10 @@ detract from the experience of browsers that do not support a particular propert
 
 [The CSS3 Rule Generator](http://css3generator.com)
 
-If needed, include appropriate `-webkit` and `-moz` vendor prefixes to ensure maximum browser compatibility. Prefixed properties should be grouped together before the W3C standard property. [Can I use…](http://caniuse.com) is a fine resource to research browser support.
+If needed, include appropriate `-webkit` and `-moz` vendor prefixes to ensure 
+maximum browser compatibility. Prefixed properties should be grouped together 
+before the W3C standard property. [Can I use…](http://caniuse.com) is a fine 
+resource to research browser support.
 
     .callout {
         -webkit-border-top-left-radius: 10px;
@@ -700,12 +738,13 @@ On mobile-specific sites, set the viewport to the width of the device:
 This fits the webpage into the visible area of the `viewport` to ensure that 
 the page is scaled to 100% on load.
 
-This works in most, but not all mobile browsers, a full chart of support is here [Quirksmode](http://www.quirksmode.org/mobile/tableViewport.html#metaviewport)
+This works in most, but not all mobile browsers, a full chart of support is 
+here [Quirksmode](http://www.quirksmode.org/mobile/tableViewport.html#metaviewport)
 
 ### Mobile Orientation Changes
 iPhone can have issues with dynamic orientation changes – changing from 
 portrait to landscape view while viewing a page. The issue occurs on iPhone, 
-when using the viewport setting, `width=device-width,` `initial-scale=1.0`.
+when using the viewport setting, `initial-scale=1.0`.
 
 [Mozilla’s developer site](https://developer.mozilla.org/en/Mobile/Viewport_meta_tag#Viewport_basics) 
 explains this issue and one possible solution:
@@ -723,7 +762,9 @@ re-orientation issue.
 
 ### Media Queries
 
-Meida queries is a CSS3 technology allowing scope limitation of styles based on a feature such as width, aspect ratio, pixel density, and more. iMarc primarily uses media queries to serve different styles to mobile and tablet devices/
+Meida queries is a CSS3 technology allowing scope limitation of styles based on a 
+feature such as width, aspect ratio, pixel density, and more. iMarc primarily 
+uses media queries to serve different styles to mobile and tablet devices.
 
 All media queries can reside in a site’s main stylesheet.
 
@@ -736,7 +777,10 @@ All media queries can reside in a site’s main stylesheet.
         }
     }
 
-Some devices may download all styles (including large background images), regardless of whether that device is scoped. This allows the device to apply specific width-based rules on the fly without re-fetching images or CSS. The downside is a loss of optimization. For tips on improving optimization, see [Mobile Optimization](#MobileOptimization)
+Some devices may download all styles (including large background images), regardless 
+of whether that device is scoped. This allows the device to apply specific width-based 
+rules on the fly without re-fetching images or CSS. The downside is a loss of optimization. 
+For tips on improving optimization, see [Mobile Optimization](#MobileOptimization)
 
 #### Media Query Behaviors
 
@@ -766,7 +810,7 @@ when the browser window is scaled.
    referenced in `desktop.css`. (same as above)
 - When a desktop browser is scaled down the `desktop.css` styles will be 
   deactivated causing the page to dynamically reflows.
-- //See [http://robot-or-not.com/](http://robot-or-not.com/)//
+- See [http://robot-or-not.com/](http://robot-or-not.com/)
 
 Additional info on 
 [Peter Gasston’ blog](http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/). 
