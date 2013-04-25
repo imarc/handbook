@@ -588,7 +588,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices.
 
-We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES/user_experience/sitemap_wireframe_template/stencils/.
+We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES → user_experience → sitemap_wireframe_template → stencils.
 
 
 ### Reports and Specs

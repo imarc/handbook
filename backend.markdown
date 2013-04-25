@@ -978,7 +978,7 @@ the end-user.
 When error messages are emailed, always address a production team, not an
 individual developer, in case that developer is not available. The preferred
 format for emailing error message is `team+project@imarc.net` (example:
-`superstring+handbook.imarc.net@imarc.net`)
+`quanta+example.com@imarc.net`)
 
 
 ### Error Reporting

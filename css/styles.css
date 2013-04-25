@@ -416,7 +416,7 @@ nav li {
 
 nav li {
 	display: block;
-	white-space: nowrap;
+	-white-space: nowrap;
 }
 
 nav ul:after {

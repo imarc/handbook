@@ -700,8 +700,7 @@ On mobile-specific sites, set the viewport to the width of the device:
 This fits the webpage into the visible area of the `viewport` to ensure that 
 the page is scaled to 100% on load.
 
-This works in most, but not all mobile browsers, a full chart of support is here: 
-http://www.quirksmode.org/mobile/tableViewport.html#metaviewport
+This works in most, but not all mobile browsers, a full chart of support is here [Quirksmode](http://www.quirksmode.org/mobile/tableViewport.html#metaviewport)
 
 ### Mobile Orientation Changes
 iPhone can have issues with dynamic orientation changes – changing from 

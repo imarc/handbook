@@ -49,3 +49,10 @@ dd {
 	vertical-align: top;
 	width: 75%;
 }
+
+pre, 
+code {
+	word-wrap: normal;
+	white-space: pre;
+	overflow: auto;
+}
