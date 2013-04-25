@@ -1153,14 +1153,11 @@ Poorly constructed URLs might be `/about/contact_us.php` or `/index.php`
 
 ### Friendly URLs
 
-URL words are lower case with underscores instead of spaces. Hyphenated words
-preserve their hyphenation. With dynamic pages, use the title or primary
-content identifier in the URL to help with search engine optimization.
+URL words are lower case with hyphens as separators.  With dynamic pages, 
+use the title or primary content identifier in the URL to help with 
+search engine optimization.
 
 	/news/50-how_sarbanes-oxley_affects_your_business
-
-Do not use hyphens in place of spaces:
-`/news/50-how-sarbanes-oxley-affects-your-business`.
 
 When using dynamic content such as an article title to create a URL, limit the
 textual portion to about 50 characters. Trim on a natural word break if
