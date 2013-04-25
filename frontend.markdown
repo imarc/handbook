@@ -705,7 +705,7 @@ This works in most, but not all mobile browsers, a full chart of support is here
 ### Mobile Orientation Changes
 iPhone can have issues with dynamic orientation changes – changing from 
 portrait to landscape view while viewing a page. The issue occurs on iPhone, 
-when using the viewport setting, `width=device-width, initial-scale=1.0`.
+when using the viewport setting, `width=device-width,` `initial-scale=1.0`.
 
 [Mozilla’s developer site](https://developer.mozilla.org/en/Mobile/Viewport_meta_tag#Viewport_basics) 
 explains this issue and one possible solution:
