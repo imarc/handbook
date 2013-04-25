@@ -115,18 +115,18 @@ Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects with production scope of *150–250 hours*
 
 Tasks
-:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Narrative.
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Narrative. Create metrics baseline.
 
 Deliverables
 :	Short findings document (1–3 pages), [Site Map](#SiteMap), [Homepage Narrative](#HomepageNarrative)
 
 Time Req
-:	26–32 hours
+:	32–40 hours
 
 
 For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective.
 
-This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
+This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars. We also establish baseline site performance metrics, with special attention to conversion events.
 
 Next, iMarc creates a short report of findings, and presents those findings to the client for validation.
 
@@ -140,6 +140,7 @@ Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the clien
 + Target audiences
 + Competitors
 + Best practices in content, layout, navigation, workflow, and SEO
++ Metrics for conversion
 + [Site Map](#SiteMap)
 + [Homepage Narrative](#HomepageNarrative)
 
