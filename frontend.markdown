@@ -703,7 +703,7 @@ the page is scaled to 100% on load.
 This works in most, but not all mobile browsers, a full chart of support is here [Quirksmode](http://www.quirksmode.org/mobile/tableViewport.html#metaviewport)
 
 ### Mobile Orientation Changes
-iPhone can have issues with dynamic orientation changes – changing from 
+iPhone can have issues with dynamic orientation changes – changing from 
 portrait to landscape view while viewing a page. The issue occurs on iPhone, 
 when using the viewport setting, `width=device-width, initial-scale=1.0`.
 
