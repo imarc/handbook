@@ -194,21 +194,20 @@ Images should reside under `/img/` and can be stored into subfolders if you wish
 
 ## Browser Support & Accessibility
 
-The following **philosophy** is paraphrased from our standard proposal language. The most up-to-date verbiage can be found on our Wiki.
+The following **philosophy** is paraphrased from our standard proposal language. The most up-to-date wording can be found on our Wiki.
 
-* We produce semantic, HTML5-compliant markup, CSS and scripts.
+* We produce semantic, HTML5-compliant markup, CSS, and scripts.
 * We believe users should be able to consume as much visual and interactive richness as their browser can support. 
 * We test against a specific whitelist of mainstream desktop and mobile browsers. 
-* We ensure our sites function correctly and look as good as possible 
-on these browsers. 
+* We ensure our sites function correctly and look as good as possible on these browsers. 
 * We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
-* We recognize that some browsers are incapable of properly rendering standards compliant code. We do code to support these browsers unless explicitly requested and spec'ed for the poject.
+* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and spec'ed for the poject.
 
 The difinitive list of **supported browsers** can be found on our 
-[Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets)
+[Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
 
-By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the browsers and additional testing time will be spec'ed in the proposal and strategy documents. 
+By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents. 
 
 ### Accessibility Checklist
 
