@@ -194,30 +194,21 @@ Images should reside under `/img/` and can be stored into subfolders if you wish
 
 ## Browser Support & Accessibility
 
-The following is excerpted from our standard proposal. **Frontend markup must 
-meet the expectation level set with the client.**
+The following **philosophy** is paraphrased from our standard proposal language. The most up-to-date verbiage can be found on our Wiki.
 
-> iMarc tests on Windows and OS X operating systems and current versions of 
-> major browsers, including: Internet Explorer, Firefox, Chrome and Safari.
->
-> Each browser renders web pages differently. Some of these differences 
-> occur in the way text is rendered, while some browsers don’t support 
-> advanced styling features (such as rounded corners or drop-shadows). iMarc 
-> does not design to the lowest common denominator. Instead we sometimes add 
-> these progressive style and interface enhancements that may only be visible 
-> in more modern browsers. However, any style differences across browsers will 
-> not affect the availability of page content.
-> 
-> iMarc develops fully standards compliant, platform independent websites, in 
-> accordance with web development best practices and 
-> [Section 508 accessibility guidelines](http://www.webaim.org/standards/508/checklist).
->
->  This means the sites iMarc creates will function and display correctly on 
->  all standards compliant web browsers, which includes, for example, Opera desktop 
->  browsers, and iPhone, BlackBerry and Android mobile phones browsers.
+* We produce semantic, HTML5-compliant markup, CSS and scripts.
+* We believe users should be able to consume as much visual and interactive richness as their browser can support. 
+* We test against a specific whitelist of mainstream desktop and mobile browsers. 
+* We ensure our sites function correctly and look as good as possible 
+on these browsers. 
+* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
+* We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
+* We recognize that some browsers are incapable of properly rendering standards compliant code. We do code to support these browsers unless explicitly requested and spec'ed for the poject.
 
-The text and visual content of a page should always be accessible. The layout 
-of a page should not appear discernibly broken.
+The difinitive list of **supported browsers** can be found on our 
+[Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets)
+
+By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the browsers and additional testing time will be spec'ed in the proposal and strategy documents. 
 
 ### Accessibility Checklist
 
