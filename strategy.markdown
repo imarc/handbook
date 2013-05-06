@@ -300,13 +300,14 @@ Time Req
 
 The Metrics Baseline is a forward-looking activity that builds upon the Web Analytics Audit findings to establish what metrics will be used to measure conversion and site performance *after* launch. 
 
-It should provide metrics both for general performance and specific indicators:
+It should provide up to 12 total metrics (the limit of a Google Analytics Dashboard) both for general performance and specific indicators:
 
 + **General Performance**  
-5–10 trackable, standard metrics for the site overall which will help the client understand where their site is performing well, or needs improvement. For example, natural search referrals, length of visit, depth of visit, bounce rate, etc.
+5–7 trackable, standard metrics for the site overall which will help the client understand where their site is performing well, or needs improvement. For example, natural search referrals, length of visit, depth of visit, bounce rate, etc.
 
 + **Specific Indicators**  
 5 KPIs or event triggers that can be used to measure *conversions* (e.g., ”Request a Quote“ form submissions, course sign-up.); *value* (e.g., average order total…); or *behaviors* (e.g., Visitor loyalty and recency, days & visits to purchase, checkout abandonment rate, task completion rate…).
+
 
 In both cases, set a baseline to measure improvement (if possible). If the client is active in social media, also measure [amplification and applause](http://www.kaushik.net/avinash/best-social-media-metrics-conversation-amplification-applause-economic-value/) rates.
 
