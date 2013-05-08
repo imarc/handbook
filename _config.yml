@@ -1,11 +1,16 @@
 navigation:
 - text: Strategy
+  relative_url: strategy
   url: /strategy.html
 - text: Frontend
+  relative_url: frontend
   url: /frontend.html
 - text: JavaScript
+  relative_url: javascript
   url: /javascript.html
 - text: Backend
+  relative_url: backend
   url: /backend.html
 - text: Deployment
+  relative_url: deployment
   url: /deployment.html
