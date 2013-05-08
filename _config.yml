@@ -1,0 +1,11 @@
+navigation:
+- text: Strategy
+  url: /strategy.html
+- text: Frontend
+  url: /frontend.html
+- text: JavaScript
+  url: /javascript.html
+- text: Backend
+  url: /backend.html
+- text: Deployment
+  url: /deployment.html

@@ -26,21 +26,16 @@
 			</div>
 			<nav class="primary">
 				<ul class="container">
-				    <li>
-				        <a href="strategy">Strategy</a>
-				    </li>
-				    <li>
-				        <a href="frontend">Frontend</a>
-				    </li>
-				    <li>
-				        <a href="javascript">JavaScript</a>
-				    </li>
-				    <li>
-				        <a href="backend">Backend</a>
-				    </li>
-				    <li>
-				        <a href="deployment">Deployment</a>
-				    </li>
+					{% for link in site.navigation %}
+						{% if page.url == link.url %}
+							{% assign class = 'active' %}
+						{% else %}
+							{% assign class = '' %}
+						{% endif %}
+						<li class="{{ class }}">
+						<a href="{{ link.url }}">{{ link.text }}</a>
+						</li>
+					{% endfor %}
 				</ul>
 			</nav>
 		</header>
