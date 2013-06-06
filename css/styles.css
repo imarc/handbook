@@ -1,6 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 /* = Table of Contents =
-
  * Colors
  * Web Fonts
  * Base
@@ -19,8 +17,11 @@
  * Print Styles
  */
 /* = Colors = */
+
 /* = Web Fonts = */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 /* = Base = */
+
 a, abbr, address, article, aside, audio, b, blockquote, body, canvas, cite,
 code, dd, div, dl, dt, em, fieldset, footer, form, h1, h2, h3, h4, h5, h6,
 header, html, i, iframe, img, label, li, nav, object, ol, p, pre, section,
