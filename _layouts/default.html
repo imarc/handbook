@@ -24,8 +24,9 @@
 					<h1><a href="/">Handbook <sup>by iMarc</sup></a></h1>
 				</div>
 			</div>
+			<a href="#menu" class="menu_link">&#9776;</a>
 			<nav class="primary">
-				<ul class="container">
+				<ul id="menu" class="menu container">
 					{% for link in site.navigation %}
 						{% if page.url == link.url %}
 							{% assign class = 'active' %}
@@ -36,6 +37,7 @@
 						<a href="{{ link.relative_url }}">{{ link.text }}</a>
 						</li>
 					{% endfor %}
+					<li class="back"><a href="#header">back</a></li>
 				</ul>
 			</nav>
 		</header>
