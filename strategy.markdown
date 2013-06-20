@@ -462,10 +462,10 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 ### Functional Requirements
 
 Summary
-:	A 5–10 page document for projects with production scope of *150–250 hours*.
+:	A 5–10 page document for projects of low technical complexity. This typically aligns to projects with production scope of 150–250 hours.
 
 Time Req
-:	32 hours, *in addition to Discovery Activities*.
+:	32 hours
 
 
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
@@ -475,19 +475,21 @@ This document should restate scope of production phase (which often changes some
 ### Production Specification
 
 Summary
-:	A 15–80 page document for projects with production scope of *over 250 hours*.
+:	A 15–80 page document for projects of high technical complexity. This typically aligns to projects with production scope of *over 250 hours*.
 
 Time Req
-:	 90–170 hours, *in addition to Discovery Activities*.
+:	 90–170 hours
 
 
-Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. It restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
+Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
+
+This document restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
 
 + Describes back-end functionality such as CMS tools, fields and relationships; databases; network and server infrastructure; external systems the site works with; security considerations.
 + Must be reviewed by the Producer and an engineer before finalization.
 + May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
 
-(This is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
+(A Production Spec is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it and explore novel approaches. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
 
 
