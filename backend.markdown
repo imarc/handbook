@@ -5,12 +5,14 @@ layout: default
 
 # Backend
 
-This document describes iMarc’s code standards for developing databases and
-writing PHP. iMarc is a full service web development and design firm located
-north of Boston. Learn more at http://imarc.net.
-
-Many of the PHP standards on this page were derived from [Horde’s Code Standards](http://www.horde.org/apps/horde/docs/CODING_STANDARDS).
-
+<section class="intro">
+	<p>
+		This document describes iMarc’s code standards for developing databases and
+		writing PHP. iMarc is a full service web development and design firm located
+		north of Boston.
+	</p>
+	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
+</section>
 
 ## Development Environment
 

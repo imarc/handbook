@@ -8,9 +8,13 @@ layout: default
 
 # Strategy
 
-This document outlines iMarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
-
-iMarc is a full service web agency located north of Boston. Learn more at [http://imarc.net](http://imarc.net).
+<section class="intro">
+	<p>
+		This document outlines iMarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
+		iMarc is a full service web agency located north of Boston.
+	</p>
+	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
+</section>
 
 
 

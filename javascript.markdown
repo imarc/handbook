@@ -5,9 +5,15 @@ layout: default
 
 # JavaScript
 
-This document describes JavaScript coding and style standards employed by
-iMarc. iMarc is a full service web development and design firm located north of
-Boston. Learn more at http://imarc.net.
+<section class="intro">
+	<p>
+		This document describes JavaScript coding and style standards employed by
+		iMarc. iMarc is a full service web development and design firm located north of Boston.
+	</p>
+	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
+</section>
+
+## jQuery
 
 As a standard, iMarc uses [jQuery](http://www.jquery.com) to extend JavaScript
 functionality.

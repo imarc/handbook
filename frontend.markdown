@@ -5,13 +5,17 @@ layout: default
 
 # Frontend
 
-This document describes iMarc’s markup and style standards. iMarc is a full 
-service web development and design firm located north of Boston. Learn more 
-at <a href="http://imarc.net">http://imarc.net</a>.
+<section class="intro">
+	<p>
+		This document describes iMarc’s markup and style standards. iMarc is a full 
+		service web development and design firm located north of Boston.
+	</p>
+	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
+</section>
 
-## iMarc Boilerplate
-**[iMarc Boilerplate](https://github.com/imarc/boilerplate)** is a great 
-starting point for new projects. Authored by iMarc, boilerplate contains 
+## Boilerplate
+**[Boilerplate](https://github.com/imarc/boilerplate)** is a great 
+starting point for new projects. Authored by iMarc, Boilerplate contains 
 standard HTML and CSS.
 
 ## Doctype
