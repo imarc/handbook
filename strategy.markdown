@@ -403,22 +403,6 @@ Time Req
 ![Sample Site map](img/strategy/sitemap.png)
 
 
-### Content Plan
-
-Summary
-:	Identify content goals, sources and assigned responsibilities for each page on the site. May include developing an editorial calendar.
-
-Time Req
-:	10–12 hours
-
-Identifies the content needed for your project, including where the content will come from, and who is responsible for each part. Often, this includes an editorial calendar for ongoing activities like blogs, news, and events.
-
-The plan includes a "content outline", which mimics the organization of the site map, provides 1-2 sentences about the purpose and goal of each page.
-
-#### Example Content Outline
-![Sample Content Outline](img/strategy/content_outline.png)
-
-
 ### Wireframe
 
 Summary
@@ -447,6 +431,21 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 ![Example Storyboard](img/strategy/storyboard.png)
 
 
+### Content Plan
+
+Summary
+:	Identify content goals, sources and assigned responsibilities for each page on the site. May include developing an editorial calendar.
+
+Time Req
+:	10–12 hours
+
+Identifies the content needed for your project, including where the content will come from, and who is responsible for each part. Often, this includes an editorial calendar for ongoing activities like blogs, news, and events.
+
+The plan includes a "content outline", which mimics the organization of the site map, provides 1-2 sentences about the purpose and goal of each page.
+
+#### Example Content Outline
+![Sample Content Outline](img/strategy/content_outline.png)
+
 
 
 ### Functional Requirements
@@ -468,7 +467,7 @@ Summary
 :	A 15–80 page document for projects of high technical complexity. This typically aligns to projects with production scope of *over 250 hours*.
 
 Time Req
-:	 90–170 hours
+:	 72–150 hours
 
 
 Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
