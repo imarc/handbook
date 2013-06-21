@@ -116,7 +116,7 @@ Most are qualitative, meaning they depend heavily upon the expertise and experie
 ### Small-scale Discovery
 
 Objective
-:	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects with production scope of *150–250 hours*
+:	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects of very low complexity
 
 Tasks
 :	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Wireframe.
@@ -128,7 +128,7 @@ Time Req
 :	26–32 hours
 
 
-For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective.
+For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
 This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
 
