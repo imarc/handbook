@@ -393,7 +393,7 @@ Summary
 :	Diagram showing the relationship of a web site's information and organization of content. 
 
 Time Req
-: N/A (Not usually broken out from [Functional Requirements](#FunctionalRequirements) or [Production Specification](#ProductionSpecification))
+: 8–10 hours (up to 4 rounds)
 
 + Convey content hierarchy and labeling
 + Denote CMS-controlled content and template usage
@@ -455,7 +455,7 @@ Summary
 :	A 5–10 page document for projects of low technical complexity. This typically aligns to projects with production scope of 150–250 hours.
 
 Time Req
-:	32 hours
+:	22-24 hours
 
 
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Wirefame](#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
