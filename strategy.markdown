@@ -355,7 +355,7 @@ A proposal is created by Business Development and is a sales tool. It defines th
 
 ### Statement of Work
 
-A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Technical Specification](#TechnicalSpecification) before production.
+A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Production Specification](#ProductionSpecification) before production.
 
 
 ### Discovery Report
@@ -403,16 +403,17 @@ Time Req
 ![Sample Site map](img/strategy/sitemap.png)
 
 
-### Content Outline
+### Content Plan
 
 Summary
-:	Briefly describes the purpose and goal of each page on the site.
+:	Identify content goals, sources and assigned responsibilities for each page on the site. May include developing an editorial calendar.
 
 Time Req
-: N/A (Not usually broken out from [Functional Requirements](#FunctionalRequirements))
+:	10–12 hours
 
+Identifies the content needed for your project, including where the content will come from, and who is responsible for each part. Often, this includes an editorial calendar for ongoing activities like blogs, news, and events.
 
-The content outline supplements a Site Map. A content mimics the the organization of the site map, providing 1-2 sentences about the purpose and goal of each page. Typically a component of the Functional Requirements.
+The plan includes a "content outline", which mimics the organization of the site map, provides 1-2 sentences about the purpose and goal of each page.
 
 #### Example Content Outline
 ![Sample Content Outline](img/strategy/content_outline.png)
