@@ -119,10 +119,10 @@ Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects with production scope of *150–250 hours*
 
 Tasks
-:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Narrative.
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Wireframe.
 
 Deliverables
-:	Short findings document (1–3 pages), [Site Map](#SiteMap), [Homepage Narrative](#HomepageNarrative)
+:	Short findings document (1–3 pages), [Site Map](#SiteMap), Homepage [Wireframe]()
 
 Time Req
 :	26–32 hours
@@ -134,7 +134,7 @@ This starts with a 90-minute conference call or meeting with the client stakehol
 
 Next, iMarc creates a short report of findings, and presents those findings to the client for validation.
 
-Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the client, and creates a [Homepage Narrative](#HomepageNarrative).
+Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the client, and creates a basic [Homepage Wireframe](#Wireframe).
 
 **Topics include:**
 
@@ -145,7 +145,7 @@ Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the clien
 + Competitors
 + Best practices in content, layout, navigation, workflow, and SEO
 + [Site Map](#SiteMap)
-+ [Homepage Narrative](#HomepageNarrative)
++ [Homepage Wireframe](#Wireframe)
 
 
 ### Goal Analysis and Prioritization
@@ -418,17 +418,6 @@ The content outline supplements a Site Map. A content mimics the the organizatio
 ![Sample Content Outline](img/strategy/content_outline.png)
 
 
-### Homepage Narrative
-
-Summary
-: Brief, 1–2 page document that defines all content, features and functionality required for the homepage. 
-
-Time Req
-: N/A (not usually broken out from [Small-scale Discovery](#SmallscaleDiscovery)
-
-This simple list and description acts as a starting point for the design and creative phase. It is done instead of a wireframe.
-
-
 ### Wireframe
 
 Summary
@@ -468,7 +457,7 @@ Time Req
 :	32 hours
 
 
-This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Narrative](#HomepageNarrative). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
+This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Wirefame](#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
 
 
 
