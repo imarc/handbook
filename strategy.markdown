@@ -5,7 +5,6 @@ layout: default
 
 
 
-
 # Strategy
 
 <section class="intro">
@@ -113,28 +112,26 @@ Depending on budget and goals, a number of research activities may be incorporat
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
-### Small-scale Discovery
+### Initial Findings
 
 Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects of very low complexity
 
 Tasks
-:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation. Create Site Map and Homepage Wireframe.
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation.
 
 Deliverables
-:	Short findings document (1–3 pages), [Site Map](#SiteMap), Homepage [Wireframe]()
+:	Short findings document (1–3 pages)
 
 Time Req
-:	26–32 hours
+:	8 hours
 
 
-For small-scale projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
+For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
 This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
 
 Next, iMarc creates a short report of findings, and presents those findings to the client for validation.
-
-Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the client, and creates a basic [Homepage Wireframe](#Wireframe).
 
 **Topics include:**
 
@@ -148,7 +145,7 @@ Next, the iMarc team drafts a [Site Map](#SiteMap) and revises it with the clien
 + [Homepage Wireframe](#Wireframe)
 
 
-### Goal Analysis and Prioritization
+### Business Analysis and Prioritization
 
 Objective
 :	Review and prioritize goals based on business requirements and audience needs.
@@ -366,21 +363,20 @@ Summary
 Time Req
 :	Sum of Discovery Activities conducted (above)
 
-
 The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](#SiteMap), [wireframes](#Wireframe), and [specification](#ProductionSpecification).
 
 Its secondary goal is to ensure internal stakeholders agree upon the project's objectives and priorities before creating a Production Specification.
 
-**Topics include:**
+**Topics may include:**
 
-+ [Goal Analysis and Prioritization](#GoalAnalysisandPrioritization)
++ [Business Analysis and Prioritization](#BusinessAnalysisandPrioritization)
 + [Web Analytics Audit](#WebAnalyticsAudit)
 + [Metrics Baseline](#MetricsBaseline)
 + [Competitive analysis](#CompetitiveAnalysis)
-+ [Stakeholder interview](#StakeholderInterviews) findings (if conducted)
-+ [User interview](#UserInterviews) findings (if conducted)
-+ [Survey](#Surveys) findings (if conducted)
-+ [Usability Testing](#UsabilityTesting) results (if conducted)
++ [Stakeholder interview](#StakeholderInterviews) findings
++ [User interview](#UserInterviews) findings
++ [Survey](#Surveys) findings
++ [Usability Testing](#UsabilityTesting) results
 + Recommendations
 
 The Discovery Report serves as a foundation for the next documents: site map, wireframes, and specifications.
@@ -393,11 +389,11 @@ Summary
 :	Diagram showing the relationship of a web site's information and organization of content. 
 
 Time Req
-: 8–10 hours (up to 4 rounds)
+: 8–30 hours (varies by scope of project)
 
-+ Convey content hierarchy and labeling
-+ Denote CMS-controlled content and template usage
-+ Create a navigational backbone for a website
++ Conveys content hierarchy and labeling
++ Denotes CMS-controlled content and template usage
++ Creates a navigational backbone for a website
 
 #### Example Sitemap:
 ![Sample Site map](img/strategy/sitemap.png)
@@ -431,6 +427,17 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 ![Example Storyboard](img/strategy/storyboard.png)
 
 
+### Homepage Narrative
+
+Summary
+: Brief, 1–2 page document that defines and prioritizes all content, features and functionality required for the homepage. 
+
+Time Req
+: 6–8 hours
+
+This is a short document that lists all content and functions of the home page, including (wherever possible) real examples of each content item. This provides the creative team with a full, prioritized inventory  to use in design.
+
+
 ### Content Plan
 
 Summary
@@ -447,7 +454,6 @@ The plan includes a "content outline", which mimics the organization of the site
 ![Sample Content Outline](img/strategy/content_outline.png)
 
 
-
 ### Functional Requirements
 
 Summary
@@ -455,7 +461,6 @@ Summary
 
 Time Req
 :	22-24 hours
-
 
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Wirefame](#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
 
@@ -469,7 +474,6 @@ Summary
 Time Req
 :	 72–150 hours
 
-
 Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
 
 This document restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
@@ -478,7 +482,7 @@ This document restates the scope of production and must be approved by the clien
 + Must be reviewed by the Producer and an engineer before finalization.
 + May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
 
-(A Production Spec is somewhat akin to a [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it and explore novel approaches. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
+(A Production Spec is somewhat akin to a formal [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it and explore novel approaches. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
 
 
@@ -578,6 +582,7 @@ QA serves as a "last pass" to catch anything missed during production.
 
 The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
 
+
 ### Wireframes and Sitemaps
 
 [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
@@ -640,4 +645,3 @@ Revision Notes
 ![Example metadata block](img/strategy/metadata.png)
 
 
- 
