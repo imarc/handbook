@@ -743,11 +743,11 @@ description and datatype.
 
 All framework class files are versioned with three revision numbers.
 
-[major].[minor].[bugfix]
+\[major\].\[minor\].\[bugfix\]
 
- - [bugfix] increases if a bug has been fixed, but no new feature has been added
- - [minor] increases if a new feature has been added while maintaining backward compatibility
- - [major] increases if backward compatibility breaks or a number of major features have been added
+ - \[bugfix\] increases if a bug has been fixed, but no new feature has been added
+ - \[minor\] increases if a new feature has been added while maintaining backward compatibility
+ - \[major\] increases if backward compatibility breaks or a number of major features have been added
 
 
 ### Non-Library Commenting

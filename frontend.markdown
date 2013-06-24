@@ -594,7 +594,7 @@ Use the following syntax to use web fonts on the web with `@font-face`. Appropri
 file formats should be provided for supported browsers. When using a multi 
 weight/style typeface be sure to add the appropriate `font-weight` and `font-style` for each.
 
-Bulletproof `@font-face` syntax (via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Font Squirrel)):
+Bulletproof `@font-face` syntax via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Fontspring)
 
 	@font-face {
 	   font-family: 'VerbRegular';
@@ -790,7 +790,7 @@ resized.
   referenced in `desktop.css`.
 - When a desktop browser is sized down narrower than 481px, nothing 
   will change.
-- See [http://www.ddmf.org/ http://www.ddmf.org/]
+- See [http://www.ddmf.org/](http://www.ddmf.org/)
 
 Use `min-width` or `max-width` to allow media queries to dynamically activate 
 when the browser window is scaled.
