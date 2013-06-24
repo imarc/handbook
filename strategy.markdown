@@ -141,8 +141,7 @@ Next, iMarc creates a short report of findings, and presents those findings to t
 + Target audiences
 + Competitors
 + Best practices in content, layout, navigation, workflow, and SEO
-+ [Site Map](#SiteMap)
-+ [Homepage Wireframe](#Wireframe)
+
 
 
 ### Business Analysis and Prioritization
