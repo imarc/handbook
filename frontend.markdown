@@ -14,7 +14,7 @@ layout: default
 </section>
 
 ## Boilerplate
-**[Boilerplate](https://github.com/imarc/boilerplate)** is a great 
+**[Boilerplate](http://imarc.github.io/boilerplate)** is a great 
 starting point for new projects. Authored by iMarc, Boilerplate contains 
 standard HTML and CSS.
 
@@ -38,9 +38,9 @@ required attributes. Elements should occur within the proper context of the DOCT
 Use UTF-8 as the character encoding. Set your editor to use UTF-8 for 
 all aspects of the web application.
 
-HTML pages should begin with by setting `utf-8` in the content-type meta tag.
+HTML pages should begin with by setting `UTF-8` in the content-type meta tag.
 
-	<meta charset="utf-8" />
+	<meta charset="UTF-8" />
 
 Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the 
 frontend HTML and backend databases, use real UTF-8 characters instead of HTML 
@@ -68,7 +68,7 @@ en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
 [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
-  The em dashs is the nineteenth-century standard, still prescribed in many 
+  The em dash is the nineteenth-century standard, still prescribed in many 
   editorial style books, but the em dash is too long for use with the best 
   text faces. Like the oversized space between sentences, it belongs to the 
   padded and corseted aesthetic of Victorian typography.
@@ -80,7 +80,7 @@ collaborate on a site’s markup and style.
 
 ### Indenting & Spacing
 
-Use tab character at the beginning of a line. A tab is expected to represent
+Use a tab character at the beginning of a line. A tab is expected to represent
 the width of four spaces. For inline spacing, use spaces, not tabs.
 
     header {
@@ -377,13 +377,14 @@ structural names should be used as classes in the markup.
 
 ### Navigation 
 
-Navigation should be referenced as the following.
+Navigation should be named as the following:
 
 * **`nav.primary`** – Links to top-level pages representing the first level of directories
-* **`nav.secondary`** – Links to pages within a single section; direct children of a single primary parent
-* **`footer.utility`** – Navigation that holds global utility links (e.g. login, shopping cart)
-* **`nav.tertiary`** – (not pictured) Links to pages representing direct children of a single secondary parent
+* **`nav.secondary`** – Links to pages within a single section; direct children of a primary parent
+* **`nav.utility`** – Global utility links (e.g. Log In, Cart, Careers)
+* **`nav.tertiary`** – (not pictured) Links to pages representing direct children of a secondary parent
 
+Use unordered list markup within navigation instead of anchors. Lists allows us to represent hierarchy.
 
 ![Navigation naming conventions](img/naming_navigation.png)
 
@@ -391,7 +392,7 @@ Navigation should be referenced as the following.
 Within navigation elements, there may be a different style to denote the current 
 page or section.
 
-* **`.active`** – The currently viewed item in any navigation (primary_nav, secondary_nav, etc.)
+* **`.active`** – The currently viewed item in any navigation.
 
 
 ![Active states in navigation](img/naming_navigation2.png)

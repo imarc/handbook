@@ -265,16 +265,6 @@ pre {
   color: #888888;
   margin-bottom: 1.5em;
 }
-blockquote:before, blockquote:after,
-pre:before,
-pre:after {
-  content: '';
-  display: table;
-}
-blockquote:after,
-pre:after {
-  clear: both;
-}
 
 blockquote {
   border-left: 1px solid #EAEAEA;
@@ -377,7 +367,6 @@ ul {
 
 dt {
   font-weight: bold;
-  padding-left: .5em;
 }
 
 dd {
@@ -876,24 +865,22 @@ table thead th {
   font-size: 18px;
   font-weight: normal;
 }
-dt {
-  display: inline-block;
-  font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 10px;
+dt, 
+dd {
   vertical-align: top;
-  width: 13%;
+}
+dt {
+  font-weight: bold;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 dd {
   background: #f3f3f3;
   border: 1px solid #CCC;
   color: #666;
-  display: inline-block;
-  margin: 0 0 20px 2%;
-  padding: 10px;
+  margin-bottom: 1.5em;
+  padding: 1em 1.2em;
   text-shadow: 0px 1px 0px #fff;
-  vertical-align: top;
-  width: 75%;
 }
 pre, 
 code {
@@ -1133,6 +1120,22 @@ code {
     padding-left: 0;
     padding-right: 0;
   }
+
+  /* Handbook Specific */
+  dt,
+  dd {
+    display: inline-block;
+  }
+  dt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 25%;
+  }
+  dd {
+    margin-left: 2%;
+    width: 70%;
+  }
+
 }
 html.lt-ie9 .menu_link {
   display: none;
@@ -1387,3 +1390,14 @@ html.lt-ie9 .torso img.justified_right {
     page-break-after: avoid;
   }
 }
+
+
+pre {
+  background-color: pink;
+  display: block;
+  vertical-align: top;
+}
+code {
+  padding: 0;
+}
+

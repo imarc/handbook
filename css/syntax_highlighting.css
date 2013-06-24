@@ -1,13 +1,14 @@
-/*
+/* = Syntax highlighting =
 
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+Based off github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
 pre code {
-  display: block; padding: 0.5em;
+  display: block; 
+  padding: 0.8em;
   color: #000;
-  background: #f8f8ff
+  background: #EFF2F8;
 }
 
 pre .comment,
