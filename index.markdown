@@ -25,7 +25,7 @@ layout: notoc
 		HTML and CSS standards
 	</dd>
 	<dt>
-		<a href="javascript">JavaScriptandaljjejwsj</a>
+		<a href="javascript">JavaScript</a>
 	</dt>
 	<dd>
 		JavaScript and jQuery standards
