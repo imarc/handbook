@@ -17,7 +17,8 @@ layout: default
 ## Development Environment
 
 iMarc’s target development and production platform is:
- - Ubuntu LTS (Latest)
+ - Amazon EC2 & EBS
+ - Ubuntu 10.04 LTS
  - Apache 2.2+
  - PHP 5.3+
  - PostgreSQL 8.4+
