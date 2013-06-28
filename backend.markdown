@@ -17,12 +17,12 @@ layout: default
 ## Development Environment
 
 iMarc’s target development and production platform is:
- - Linux or FreeBSD operating system
+ - Ubuntu LTS (Latest)
  - Apache 2.2+
- - PHP 5.2+
- - PostgreSQL 8.3+
+ - PHP 5.3+
+ - PostgreSQL 8.4+
 
-The PHP library we use is
+The PHP library we are most proficient with is
 [Flourish](http://www.flourishlib.com). Documentation can be
 found at
 [http://flourishlib.com/docs](http://flourishlib.com/docs).
@@ -377,7 +377,7 @@ on models, then direct output by selecting an appropriate view. Controllers may
 be procedural pages or classes.
 
 
-	class Users extends MoorActionController
+	class Users
 	{
 		public function listUsers()
 		{
@@ -422,7 +422,7 @@ business logic.
 
 ## Database Documentation
 
-A project's databases should be documented with a single `.sql` file. The file
+A project's initial database states should be documented with a single `.sql` file. The file
 follows the same naming convention as the database and is stored in the
 revision control system under `/trunk/database/`.
 
@@ -554,11 +554,7 @@ Table names are plural (`users`).
 
 Column names are singular (`first_name`).
 
-The primary key column is named the singular of the table name followed by
-`_id`:
-
-	Table Name:  users
-	Primary Key: user_id
+The primary key column is named `id` unless a better descriptive name is appropriate.
 
 
 ### Variable Naming
@@ -750,14 +746,6 @@ All framework class files are versioned with three revision numbers.
  - \[major\] increases if backward compatibility breaks or a number of major features have been added
 
 
-### Non-Library Commenting
-
-Code outside of iMarc’s framework library less verbose, clear, and unobtrusive
-commenting.
-
-Non-library classes are not versioned.
-
-
 #### Class Comments
 
 Non-library classes only require a short description and copyright.
@@ -895,12 +883,6 @@ value of a function to a variable.
 		$var3
 	);
 
-With a block of related assignments, align the columns to promote readability.
-The second column begins one space after the longest item in the first column.
-
-	$short         = foo($bar);
-	$long_variable = foo($baz);
-
 If assigning a reference to a variable, place the ampersand next to the equal
 sign, not the referenced object.
 
@@ -925,21 +907,8 @@ IP address use `192.0.2.1`
 
 ## PHP Settings
 
-All code must work with
-[register_globals](http://us.php.net/manual/en/security.registerglobals.php) disabled.
-
 To retrieve submitted data, use the more specific `$_GET` or `$_POST`, not
 `$_REQUEST`
-
-
-## Regular Expression Functions
-
-Always use [preg_](http://www.php.net/manual/en/ref.pcre.php) functions
-instead of [ereg_](http://www.php.net/manual/en/ref.regex.php) (and
-[preg_split()](http://www.php.net/manual/en/function.preg-split.php) instead of
-[split()](http://www.php.net/manual/en/function.split.php)); they are included in
-PHP by default and much more efficient and much faster than
-[ereg_](http://www.php.net/manual/en/ref.regex.php).
 
 
 ## Private Variables
@@ -1159,14 +1128,14 @@ URL words are lower case with hyphens as separators.  With dynamic pages,
 use the title or primary content identifier in the URL to help with 
 search engine optimization.
 
-	/news/50-how_sarbanes-oxley_affects_your_business
+	/news/50/how-sarbanes-oxley-affects-your-business
 
 When using dynamic content such as an article title to create a URL, limit the
 textual portion to about 50 characters. Trim on a natural word break if
 possible.
 
 	// Blog Title = We're Hiring: Positions available for PHP developers and Systems Administrators
-	// URL = /blog/932-were_hiring_positions_available_for_php_developers
+	// URL = /blog/932/were-hiring-positions-available-for-php-developers
 
 
 ### Trailing Slashes
@@ -1187,13 +1156,13 @@ error.  This ensures all links to a single resource are consistent.
 
 ### Query Strings
 
-Individual resources or pages should not use a query string for identification.
+Individual resources or pages should ideally not use a query string for identification.
 When creating URLs for dynamic or database-driven content, put database primary
 keys and actions in the path. If possible, also include the name of the
 resources to make for human-readable URLs.
 
-	/news/12-historians_debate_mason-dixon_line
-	/events/201-annual_membership_class
+	/news/12/historians-debate-ufos
+	/events/201/annual-membership-class
 
 Poorly constructed page or resource URLs might be `/news/index.php?news_id=12`
 or `/events/?event_id=201&action=view`.
