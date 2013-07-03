@@ -15,12 +15,20 @@ layout: default
 
 ## Boilerplate
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great 
-starting point for new projects. Authored by iMarc, Boilerplate contains 
-standard HTML and CSS.
+starting point for new projects. Authored by iMarc, Boilerplate contains our standard HTML and CSS.
 
 ## Doctype
 
-Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype on new projects. 
+Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype on new projects.
+
+It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly.
+
+If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com) to ensure backwards compatability with older browsers.
+
+Modernizr detects what the browser’s rendering engine supports, and allows you to customize the look of the website depending on what’s supported.
+
+HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
+
 
 	<!DOCTYPE html>
 
@@ -73,189 +81,7 @@ Em dashes have been dropped based on Robert Bringhurst’s recommendation in
   text faces. Like the oversized space between sentences, it belongs to the 
   padded and corseted aesthetic of Victorian typography.
 
-## Coding Style
-
-Consistent coding style for HTML and CSS is vital because multiple people 
-collaborate on a site’s markup and style. 
-
-### Indenting & Spacing
-
-Use a tab character at the beginning of a line. A tab is expected to represent
-the width of four spaces. For inline spacing, use spaces, not tabs.
-
-    header {
-        margin: 1em auto;
-        width: 40em;
-    }
-
-### Line Breaks
-
-Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
-or Mac (`\r`) breaks. 
-
-### HTML Formatting
-
-Keep markup at a reasonable width. When markup surrounds 
-a significant amount of content, place the tags on their own line, 
-indent the content, and hard-wrap content at about 80 characters.
-
-	<!-- DON'T DO THIS -->
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit a sollicitudin sagittis.</p>
-
-	<!-- Instead, DO THIS -->
-	<p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla 
-	    libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed 
-	    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit 
-	    a sollicitudin sagittis.
-	</p>
-	<ul>
-	    <li>
-	        Foo is listed first – ipsum dolor sit amet, consectetur adipiscing 
-	        elit fringilla libero id quam semper semper.
-	    </li>
-	</ul>
-
-With short lines of content, the tag and content can stay on the same line.
-
-	<ul>
-	    <li>Foo is listed first</li>
-	    <li>Bar follows</li>
-	    <li>Baz is typically last</li>
-	</ul>
-
-### Stylesheet Formatting
-
-Style rules with more than one property should have each property on a new 
-indented line. When there is more than one selector for a single rule, 
-each selector goes on its own line. The close brace should be on its own 
-line at the same indentation as the style selector. Order CSS declarations 
-alphabetically by property name.
-
-	.logo {
-	    background: #FFF;
-	    border: 1px solid #666;
-	    color: #000;
-	    height: 40px;
-	    position: absolute;
-	    top: 0;
-	}
-
-Stylesheets should be organized in a logical manner. Related style rules 
-should be grouped together in ascending order of specificity. Style rules 
-with nested specificity should be indented accordingly.
-
-Each property should have a space between the colon and the value, and should
-end with a semi-colon. 
-
-	header {
-	    background: #EEE;
-	}
-	    header .content {
-	        background: none;
-	        margin: 0 auto;
-	        padding: 0;
-	    }
-	      header .content .title {
-	          color: #000000;
-	          float: left;
-	          font-size: 24px;
-	          font-weight: normal;
-	          font-family: Helvetica, Arial, sans-serif;
-	          line-height: 3;		
-	          margin: 0;
-	      }
-
-To visually divide a style sheet, use the following comment style as a section 
-indicator.
-
-	/* --------------------------------------------------------------------- */
-	/* Section
-	/* --------------------------------------------------------------------- */ 
-
-### Inline Styles
-
-Inline styles should not be used. Instead, use a class selector to apply
-style from a stylesheet.
-
-## Storing and Naming Files
-
-Stylesheets, images, and other supporting files are stored in the root 
-directory in respective folders.
-
-CSS files are stored under `/css/`.
-
-Images should reside under `/img/` and can be stored into subfolders if you wish (e.g. `/img/icons/`)
-
-    /css
-        screen.css
-        print.css
-    /img
-        header.jpg
-        /icons
-            facebook.gif
-            twitter.gif
-
-## Browser Support & Accessibility
-
-The following **philosophy** is paraphrased from our standard proposal language. The most up-to-date wording can be found on our Wiki.
-
-* We produce semantic, HTML5-compliant markup, CSS, and scripts.
-* We believe users should be able to consume as much visual and interactive richness as their browser can support. 
-* We test against a specific whitelist of mainstream desktop and mobile browsers. 
-* We ensure our sites function correctly and look as good as possible on these browsers. 
-* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
-* We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
-* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and spec'ed for the poject.
-
-The difinitive list of **supported browsers** can be found on our 
-[Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
-
-By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents. 
-
-### Accessibility Checklist
-
-As you are working on a website, use the Baseline Checklist below to ensure 
-an acceptable level of accessibility. For clients who desire an extra level 
-of accessibility, use the Advanced Checklist.
-
-#### Baseline Checklist
-
-* Uses open web standards such as HTML, CSS, JavaScript, WAI-ARIA
-* HTML and CSS correctly validate using W3C validation tools!
-	* [HTML validator](http://validator.w3.org/)
-	* [CSS validator](http://jigsaw.w3.org/css-validator/)
-* Include skip navigation allowing users to skip repetitive navigation
-* focus styles should should exist on links and form elements
-* Ensure all anchors work and none are set to href=”#”
-* JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
-* Web forms
-	* Inputs always have associated labels
-	* If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
-	* Validation messages show all errors at once instead of progressively showing more errors
-	* Validation messages use same field names as form and in the same order
-	* Make sure all required fields are listed as required in error message
-	* Make sure required fields visually indicate their requirements (e.g. asterisk)
-* Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user seeing the image. Decorative or redundant images can utilize an empty alt value.
-* Site has a custom 404 page.
-* Timed responses are properly indicated to users.
-* All content is viewable without an active stylesheet.
-* Color
-	* Color combinations should not create visual difficulty for users with color deficiencies. Utilize [Check My Colours](http://www.checkmycolours.com), [Color Oracle](http://colororacle.org) or a similar service.
-	* Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
-* All form fields can be activated, operated and submitted using a keyboard.
-* Users can control galleries and modal windows using a keyboard.
-
-#### Advanced Checklist
-
-* Audio files are accompanied by text transcriptions.
-* Videos are captioned.
-* CAPTCHAs are accessible to screen reader users and to Braille Display users.
-* Print stylesheets are used for maximum legibility.
-* Mobile media query is used to ensure website layout does not break on mobile devices.
-
-
-## Content Descriptors
+## Metadata content
 
 ### Page Titles
 
@@ -290,22 +116,23 @@ Keep meta descriptions less than 160 characters.
 
 	<meta name="description" content="iMarc creates web sites &amp; applications for discerning clients. Strategy, marketing, design and programming since 1997. Newburyport, MA — 978-462-8848" />
 
-
-## iMarc Credits
+### iMarc Credits
 
 Include the following meta tag in the head to credit iMarc.
 
 	<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
 
-## Favicon
+## Icons
 
-Use ICO files for favicons using the code snippet below.
+### Favicons
+
+Use ICO files for favicons using this syntax:
 
 	<link rel="shortcut icon" href="http://example.com/myicon.ico" />
 
-If you’re using Photoshop, you should install the [ICO plugin](http://www.telegraphics.com.au/svn/icoformat/trunk/dist/README.html) which will allow you to save out ICO files. If you need to quickly create an ICO favicon and you don't have access to the plug-in, you can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon/).
+If you’re using Photoshop, you should install an [ICO plugin](http://www.telegraphics.com.au/sw/product/ICOFormat#icoformat) which will allow you to save out ICO files. You can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon). Due to the proliferation of high pixel density displays, size favicons at 32x32 rather than the recent 16x16 standard.
 
-## Touch Icons
+### Touch Icons
 
 iOS and Android devices both support touch icons.
 
@@ -315,24 +142,274 @@ devices without the precomposed attribute value.
 
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
-Your touch icons should be a PNG at 512x512. It's possible to specify 
+Your touch icons should be a PNG at 512x512. It’s possible to specify 
 different sizes for different devices, but using a single high 
 resolution touch icon is the easiest way to ensure the highest 
 quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
-## Browser Reset
-Use a browser reset as they ensure that inconsistent default browser 
-styles are not applied.
+## Coding Style
 
-Use iMarc’s standard browser reset at the beginning of your CSS file. 
-It can be found at the beginning of the CSS file within iMarc Boilerplate.
+Consistent coding style for HTML and CSS is vital because multiple people 
+collaborate on a site’s markup and style. 
 
-iMarc’s browser reset is derived from the [HTML5 Boilerplate Reset](https://github.com/h5bp/html5-boilerplate/blob/master/css/normalize.css)
+### Line Breaks
 
-After resetting, make sure you apply some [sane defaults](#SaneDefaults) and 
-test all markup with our [markup tester](#MarkupTest).
+Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
+or Mac (`\r`) breaks. 
 
-Double check your CSS with our [markup test](#MarkupTester).
+### HTML
+
+Keep markup at a reasonable width. When markup surrounds a significant amount of content, place the tags on their own line, indent the content, and hard-wrap content at about 80 characters.
+
+	<!-- DON'T DO THIS -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit a sollicitudin sagittis.</p>
+
+	<!-- Instead, DO THIS -->
+	<p>
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla 
+	    libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed 
+	    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit 
+	    a sollicitudin sagittis.
+	</p>
+	<ul>
+	    <li>
+	        Foo is listed first – ipsum dolor sit amet, consectetur adipiscing 
+	        elit fringilla libero id quam semper semper.
+	    </li>
+	</ul>
+
+With short lines of content, the tag and content can stay on the same line.
+
+	<ul>
+	    <li>Foo is listed first</li>
+	    <li>Bar follows</li>
+	    <li>Baz is typically last</li>
+	</ul>
+
+#### Layout
+
+Use floats to construct layouts instead of frames, iframes, or tables. 
+This maintains the flow of the page, and allows acceptable control over 
+source ordering.
+
+
+### CSS
+
+#### Formatting
+
+    .callout,
+    .module {
+        background-color: #FFF;
+        border: 1px solid #DDD;
+        color: #666;
+        height: 60px;
+        margin: 20px auto;
+        padding: 20px;
+        width: 960px;
+    }
+
+<ul>
+	<li>
+		Selector(s) lives on its own line(s) followed by the opening brace
+	</li>
+	<li>
+		Each declaration lives on its own indented line
+	</li>
+	<li>
+		Declarations are ordered alphabetically by property name
+	</li>
+	<li>
+		Each property has a space between the colon and value ends with a semi-colon
+	</li>
+	<li>
+		The closing brace should be on its own line at the same indentation as the selector  
+	</li>
+</ul>
+
+
+Stylesheets should be organized in a logical manner. See [Boilerplate’s](http://imarc.github.io/boilerplate) sections in its CSS file. To visually divide a stylesheet sections, use the following comment style as a section indicator.
+
+	/* = Typography = */
+
+
+Related style rules should be grouped together in ascending order of specificity. Nest rules to reflect HTML indentation. 
+
+
+	header {
+	    background-color: #EEE;
+	}
+	    header .content {
+	        background: none;
+	        margin: 0 auto;
+	        padding: 0;
+	    }
+	      header .content .title {
+	          color: #000000;
+	          float: left;
+	          font-size: 24px;
+	          font-weight: normal;
+	          font-family: Helvetica, Arial, sans-serif;
+	          margin: 0;
+	      }
+
+
+#### Bad Practices 
+
+CSS rules should live within a CSS file. Do not use inline styles in HTML.
+
+	<!-- DON'T DO THIS -->
+	<div class="module" style="background-color: #666; padding: 10px;">
+	    …
+	</div>
+
+Presentational elements should not be used for text styling purposes. Instead, CSS should be used to apply style to text.
+
+Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
+
+#### Internet Explorer styles
+
+Some older versions of Internet Explorer need dedicated CSS rules in order to achieve design and functionality. Target previous versions of Internet Explorer from respective HTML CSS classes.
+	
+	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+
+## File Naming and Structure
+
+Stylesheets, images, and other supporting files are stored in the root directory in their respective folders.
+
+Images can contain subfolders if you feel it helps organization.
+
+JavaScript plugins and/or frameworks should live in a `lib` directory. 
+
+    /css
+        screen.css
+        print.css
+    /img
+        header.jpg
+        /icons
+            facebook.gif
+            twitter.gif
+    /js
+        site.js
+        /lib
+            /jquery-1.9.1.min.js
+
+
+## Browser Support 
+
+The following **philosophy** is paraphrased from our standard proposal language. 
+
+* We produce semantic, HTML5-compliant markup, CSS, and scripts.
+* We believe users should be able to consume as much visual and interactive richness as their browser can support. 
+* We test against a specific whitelist of mainstream desktop and mobile browsers. 
+* We ensure our sites function correctly and look as good as possible on these browsers. 
+* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
+* We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
+* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and spec'ed for the poject.
+
+The definitive list of supported browsers can be found on our 
+[Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
+
+By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents. 
+
+
+## Accessibility 
+
+Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
+
+### Baseline Checklist
+<ul>
+	<li>
+		Use open web standards such as HTML, CSS, JavaScript, WAI-ARIA
+	</li>
+	<li>
+		HTML and CSS correctly validate using W3C validation tools  
+		<ul>
+			<li>
+				<a href="http://validator.w3.org">HTML validator</a>
+			</li>
+			<li>
+				<a href="http://jigsaw.w3.org/css-validator">CSS validator</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		Include skip navigation allowing users to skip repetitive navigation
+	</li>
+	<li>
+		focus styles should should exist on links and form elements
+	</li>
+	<li>
+		Ensure all anchors work and none are set to href=”#”
+	</li>
+	<li>
+		JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
+	</li>
+	<li>
+		<strong>Web forms</strong>
+		<ul>
+			<li>
+				Inputs always have associated labels
+			</li>
+			<li>
+				If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
+			</li>
+			<li>
+				Validation messages show all errors at once instead of progressively showing more errors
+			</li>
+			<li>
+				Validation messages use same field names as form and in the same order
+			</li>
+			<li>
+				Make sure all required fields are listed as required in error message
+			</li>
+			<li>
+				Make sure required fields visually indicate their requirements (e.g. asterisk)
+			</li>
+		</ul>
+	</li>
+	<li>
+		Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user seeing the image. Decorative or redundant images can utilize an empty alt value.
+	</li>
+	<li>
+		Site has a custom 404 page.
+	</li>
+	<li>
+		Timed responses are properly indicated to users.
+	</li>
+	<li>
+		All content is viewable without an active stylesheet.
+	</li>
+	<li>
+		<strong>Color</strong>
+		<ul>
+			<li>
+				Color combinations should not create visual difficulty for users with color deficiencies. Utilize <a href="http://www.checkmycolours.com">Check My Colours</a> or a similar service.
+			</li>
+			<li>
+				Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
+			</li>
+		</ul>
+	</li>
+	<li>
+		All form fields can be activated, operated and submitted using a keyboard.
+	</li>
+	<li>
+		Users can control galleries and modal windows using a keyboard.
+	</li>
+</ul>
+
+
+### Advanced Checklist
+
+* Audio files are accompanied by text transcriptions.
+* Videos are captioned.
+* CAPTCHAs are accessible to screen reader users and to Braille Display users.
+* Print stylesheets are used for maximum legibility.
+* Mobile media query is used to ensure website layout does not break on mobile devices.
 
 ## Group Clearfix
 
@@ -488,12 +565,8 @@ For form element markup, see **[iMarc Boilerplate on GitHub](https://github.com/
 
 ## Tables
 
-### Structure
 
-All Tables should adhere to proper structure, including `thead`, `tfoot`, 
-and `tbody` when appropriate table content exists.
-
-    <table summary="example table with thead, tfoot, and tbody.">
+    <table>
         <colgroup>
             <col />
             <col />
@@ -521,9 +594,9 @@ and `tbody` when appropriate table content exists.
         </tbody>
     </table>
 
-### Summaries
+### Caption
 
-Tables should contain a summary attribute, which should summarize the table contents.
+Optional element. `caption` helps describe the table. Think of it as a title.
 
 	<table summary="Table containing main toolbar items (icons and links).">
 
@@ -532,15 +605,6 @@ Tables should contain a summary attribute, which should summarize the table cont
 Use `<colgroup>` and `<col>` elements to style table columns instead of 
 using a `class` on each table cell. The only style properties that should 
 be modified cross-browser are `background` and `color`.
-
-
-## Layout
-
-### Floats
-
-Use floats to construct layouts instead of frames, iframes, or tables. 
-This maintains the flow of the page, and allows acceptable control over 
-source ordering.
 
 ## Typography
 
@@ -670,36 +734,7 @@ regarding the use of web fonts as there are licensing requirements for certain f
 
 [Google Web Fonts](http://www.google.com/webfonts) is a free web font collection iMarc has used.
 
-## Presentational Elements
-
-Presentational elements should not be used for text styling purposes. Instead,
-CSS should be used to apply style to text.
-
-Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
-
-## Internet Explorer styles
-
-Frontend code should apply to all supported browsers. If necessary, target 
-versions of Internet Explorer via their respective CSS classes from the `HTML` tag.
-	
-	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
-	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-
 ## HTML5 and CSS3 usage
-
-While iMarc uses the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) 
-doctype, it’s important to understand your project’s technical specification. 
-Some advanced HTML5 technologies may not function correctly 
-
-If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com/) 
-to ensure backwards compatability with older browsers.
-
-Modernizr detects what the browser’s rendering engine supports, and allows you 
-to customize the look of the website depending on what’s supported.
-
-HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
 
 ### CSS3
 
@@ -811,18 +846,6 @@ Additional info on
 [Peter Gasston’ blog](http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/). 
 Andy Clark’s [320 and up project](http://stuffandnonsense.co.uk/projects/320andup/) 
 also provides resources for optimization.
-
-#### Media Query Alternative
-
-To prevent a specific style sheet from even being requested, JavaScript can 
-be used.
-
-    if (screen.width > 768) {
-        document.write('<link rel="stylesheet" href="full.css" type="text/css" />');
-    }
-    else {
-        document.write('<link rel="stylesheet" href="mobile.css" type="text/css" />');
-    }
 
 
 ## Tips ##

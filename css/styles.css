@@ -348,10 +348,15 @@ dl {
   margin-bottom: 1.5em;
 }
 
+ul ul {
+  margin: .5em 0 0;
+}
+
 ol,
 ul {
   padding-left: 2em;
 }
+
 ol li,
 ol dt,
 ol dd,
@@ -623,6 +628,9 @@ header.secondary nav.secondary li:hover a {
   color: #000;
 }
 
+aside nav ul ul {
+  margin: 0;
+}
 aside nav > ul li a {
   padding-bottom: .5em;
   padding-top: .5em;
