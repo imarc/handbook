@@ -69,11 +69,6 @@ See [Flourish’s UTF-8 docs](http://flourishlib.com/docs/UTF-8) for
 more explanation and examples.
 
 
-## Line Breaks
-
-Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
-or Mac (`\r`) breaks.
-
 
 ## Style
 
@@ -81,6 +76,10 @@ PHP code follows the [K&R indent and bracing
 style](http://en.wikipedia.org/wiki/Indent_style#K.26R_style).  That style is decribed in
 this section.
 
+### Line Breaks
+
+Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
+or Mac (`\r`) breaks.
 
 ### Indenting & Spacing
 
@@ -97,7 +96,7 @@ Since inline content is lined up with spaces, a mono spaced font is always used
 when editing code.
 
 
-### Bracing & Indenting Blocks
+#### Bracing & Indenting Blocks
 
 The K&R indent style means that function, method, and class definitions place
 the opening curly brace, unindented on a new line by itself. Content after the
@@ -105,7 +104,8 @@ opening brace is indented. The closing brace is placed on a line by itself at
 the same indent level as the opening brace.
 
 Control blocks like `if` or `while` keep the opening brace on the same line as
-the control statement.
+the control statement. Code starts indented on the next line. The closing brace 
+is on the same indenting level as the control statement.
 
 	function foo_function($arg1, $arg2='')
 	{
@@ -113,6 +113,53 @@ the control statement.
 			action();
 		}
 		return $val;
+	}
+
+Control statements also have one space between the control keyword and opening
+parenthesis to distinguish them from function calls.
+
+	if (User::isAdministrator() || ($status == 'Active')) {
+		action_foo();
+	} elseif ($status == 'Inactive') {
+		action_bar();
+	} else {
+		action_baz();
+	}
+
+Use `elseif`, not `else if`.
+
+Complicated condition checking should be performed by assigning boolean values
+to meaningful variables and should then be combined on a single line for the
+`if` statement:
+
+	$foo_bar_not_baz = $foo && $foo == $bar && $foo != $baz;
+	$bar_like_baz    = !empty($bar['name']) && $baz['name'] && $bar['name'] == $baz['name'];
+	if ($foo_bar_not_baz || $bar_like_baz) {
+		action1;
+	}
+
+Do not omit the curly braces under any circumstance.
+
+In the case of a large number of short tests and actions, a single line
+condition and code-block is acceptable.
+
+	if ($foo === TRUE) { foo(); }
+	if ($bar === TRUE) { bar(); }
+
+For switch statements, cases are indented one level. Case actions are indented
+two levels. The `break` statement is always on a line by itself.
+
+	switch (User::getStatus()) {
+		case 'Pending':
+			action_pending();
+			break;
+
+		case 'Inactive':
+			action_inactive();
+			break;
+
+		default:
+			action_active();
 	}
 
 **Arrays** — Complex or nested arrays use the following indention format, noted
@@ -338,6 +385,20 @@ A combination of reusable controller and view code is called a module and is
 stored in the `/app/modules/` directory.
 
 
+### Database Documentation
+
+A project's initial database states should be documented with a single `.sql` file. The file
+follows the same naming convention as the database and is stored in the
+revision control system under `/trunk/database/`.
+
+The database documentation file is organized as follows:
+
+ 1. Any customizations to the database as a whole (such as the commonly used `grant_to_web()` function)
+ 2. `DROP TABLE` statements – organized with linking tables first, followed by any other tables. These are ordered in the reverse order of `CREATE` statements
+ 3. `CREATE TABLE` statements – organized with standard tables first, followed by linking tables
+ 4. `INSERT` statements
+
+
 ## Separation of Concerns
 
 All backend code will fall into one of three areas of concern: data access,
@@ -420,115 +481,11 @@ controller.  Views should not directly interpret user input or implement
 business logic.
 
 
-## Database Documentation
-
-A project's initial database states should be documented with a single `.sql` file. The file
-follows the same naming convention as the database and is stored in the
-revision control system under `/trunk/database/`.
-
-The database documentation file is organized as follows:
-
- 1. Any customizations to the database as a whole (such as the commonly used `grant_to_web()` function)
- 2. `DROP TABLE` statements – organized with linking tables first, followed by any other tables. These are ordered in the reverse order of `CREATE` statements
- 3. `CREATE TABLE` statements – organized with standard tables first, followed by linking tables
- 4. `INSERT` statements
-
-
-## PHP Code Tags
-
-Class files always use long form PHP tags – `<?php ?>`, not `<? ?>`. This is
-required for PEAR compliance and increases portability on differing operating
-systems and setups.
-
-	<?php
-	class CalendarDisplay extends Calendar
-	{
-		// ...
-	}
-
-Shorthand PHP tags – `<? ?>` – should be used in views, controllers, and other
-non-class files. Shorthand tags promote readability and brevity, which outweigh
-the loss of portability when
-[short_open_tag](http://us4.php.net/manual/en/configuration.directives.php) is turned off.
-
-	<div class="success">
-		<p>
-			<?= $name ?> successfully added.
-		</p>
-	</div>
-
-Don’t use a semicolon with the short tag echo shortcut, `<?= $foo ?>`
-
-
-### Mixing PHP and HTML
-
-Break out of PHP for any non-trivial HTML output.
-
-	<?
-	$users = User::findActive()->getRecords();
-	foreach($users as $user) {
-		?>
-		<div>
-			<p><?= $user->encodeName() ?></p>
-			<p><?= $user->encodePhone() ?></p>
-			<p><?= $user->encodeWaterPoloScore() ?></p>
-		</div>
-		<?
-	}
-
-If an opening HTML tag is printed outside a PHP block, the closing HTML
-counterpart is output the same way.
-
-	<table>
-		<tr>
-			<?
-			// do stuff in PHP
-			?>
-		<tr>
-	<table>
-
-
-## Namespace, Class, Method, and Function Declarations
-
-Namespace declarations should be placed in the second line of a PHP file
-following the PHP open tag.
-
-	<?php
-	namespace Controllers;
-
-Class declarations follow the K&R style for of indenting and bracing, by
-placing the opening brace on a new line, the same indention level as the
-declaration. Statements are indented within the braces. The closing brace is
-placed on a line of its own at the same indentation level as the opening brace
-and declaration.
-
-	class MyObject
-	{
-		//....
-	}
-
-Function and method declarations also follow this same K&R indent style
-
-	static public function fooMethod($bar, $baz, $foobar='')
-	{
-		//....
-	}
-
-	private function barMethod($arg_1, $arg_2='')
-	{
-		//....
-	}
-
-**Method Visibility** – For consistency, method visibility should be
-explicitly defined. This includes `public`, even though it's implied.
-
-While `static public function foo()` and `public static function foo()` are
-treated identically, start with `static` so the static keyword stands out.
-
 ## Naming Conventions
 
 File naming conventions are described in [Storing and Naming
-Files](#StoringandNamingFiles).
+Files](#StoringandNamingFiles), this section describes in-code PHP and Database 
+naming conventions.
 
 
 ### Database Naming Conventions
@@ -644,9 +601,258 @@ Poor examples of function names might `hw_GetObjectByQueryCollObj()` or
 `jf_n_s_i()`
 
 
+
+
+
+
+## PHP Code
+
+Class files always use long form PHP tags – `<?php ?>`, not `<? ?>`. This is
+required for PEAR compliance and increases portability on differing operating
+systems and setups.
+
+	<?php
+	class CalendarDisplay extends Calendar
+	{
+		// ...
+	}
+
+Shorthand PHP tags – `<? ?>` – should be used in views, controllers, and other
+non-class files. Shorthand tags promote readability and brevity, which outweigh
+the loss of portability when
+[short_open_tag](http://us4.php.net/manual/en/configuration.directives.php) is turned off.
+
+	<div class="success">
+		<p>
+			<?= $name ?> successfully added.
+		</p>
+	</div>
+
+Don’t use a semicolon with the short tag echo shortcut, `<?= $foo ?>`
+
+
+### Mixing PHP and HTML
+
+Break out of PHP for any non-trivial HTML output.
+
+	<?
+	$users = User::findActive()->getRecords();
+	foreach($users as $user) {
+		?>
+		<div>
+			<p><?= $user->encodeName() ?></p>
+			<p><?= $user->encodePhone() ?></p>
+			<p><?= $user->encodeWaterPoloScore() ?></p>
+		</div>
+		<?
+	}
+
+If an opening HTML tag is printed outside a PHP block, the closing HTML
+counterpart is output the same way.
+
+	<table>
+		<tr>
+			<?
+			// do stuff in PHP
+			?>
+		<tr>
+	<table>
+
+
+### Namespace, Class, Method, and Function Declarations
+
+Namespace declarations should be placed in the second line of a PHP file
+following the PHP open tag.
+
+	<?php
+	namespace Controllers;
+
+Class declarations follow the K&R style for of indenting and bracing, by
+placing the opening brace on a new line, the same indention level as the
+declaration. Statements are indented within the braces. The closing brace is
+placed on a line of its own at the same indentation level as the opening brace
+and declaration.
+
+	class MyObject
+	{
+		//....
+	}
+
+Function and method declarations also follow this same K&R indent style
+
+	static public function fooMethod($bar, $baz, $foobar='')
+	{
+		//....
+	}
+
+	private function barMethod($arg_1, $arg_2='')
+	{
+		//....
+	}
+
+**Method Visibility** – For consistency, method visibility should be
+explicitly defined. This includes `public`, even though it's implied.
+
+While `static public function foo()` and `public static function foo()` are
+treated identically, start with `static` so the static keyword stands out.
+
+
+
+
+### Method & Function Calls
+
+Methods and functions are called with no spaces between the function name, the
+opening parenthesis, and the first parameter. There is one space after each
+commas separating parameters. There is no space between the last parameter, the
+closing parenthesis, and the semicolon.
+
+There is one space on either side of an equals sign used to assign the return
+value of a function to a variable.
+
+	$foo = foo($var1, $var2, $var3);
+	$bar = $users->foo($var1, $var2, $var3);
+	$baz = Groups::getUsers($var1, $var2, $var3);
+	$qux = Groups::getUsers(
+		$var1,
+		str_replace('abc', 'def', $var2),
+		$var3
+	);
+
+If assigning a reference to a variable, place the ampersand next to the equal
+sign, not the referenced object.
+
+	$reference =& $foo;
+	$reference =& foo();
+
+When using `include`, `include_once`, `require`, or `require_once`, the
+parentheses are left out.
+
+	include $_SERVER['DOCUMENT_ROOT'] . '/app/init.php';
+
+
+### Private Variables
+
+Make all class variables private or protected (unless there’s a really good
+reason not to). Create `setBar()` methods to set private class variables, and
+`getBar()` methods to retrieve their data.
+
+	class Foo
+	{
+		private $bar;
+
+		public function setBar($in) {
+			$this->bar = $in;
+		}
+		public function getBar() {
+			return $this->bar;
+		}
+	}
+
+### Existence checking
+
+Often you’ll need to check whether or not a variable, property or array key
+exists.  There are several similar methods to do this. In general, use the
+simplest.
+
+If you need to know if a variable exists at all and is not `NULL`, use
+[isset()](http://www.php.net/manual/en/function.isset.php).
+
+	// Check to see if $param is defined.
+	if (isset($param)) {
+		// $param may be FALSE, but it's there.
+	}
+
+If you need to know if a variable exists AND has a non-empty value (not `NULL`,
+0, `FALSE`, empty string or undefined), use
+[empty()](http://www.php.net/manual/en/function.empty.php).
+
+	// Make sure that $answer exists, is not an empty string, and is
+	// not 0:
+	if (!empty($answer)) {
+		// $answer has some non-false content.
+	} else {
+		// (bool)$answer would be FALSE.
+	}
+
+Don’t use [array_key_exists()](http://www.php.net/manual/en/function.array-key-exists.php)
+unless it is possible that an array key has a value of `NULL`.
+`array_key_exists()` runs many times slower than `isset()` because a full array
+scan must be performed.
+
+	// Make sure we have a charset parameter. Value could also be NULL.
+	if (!array_key_exists('charset', $params)) { }
+
+
+### Quoting
+
+Use your judgement when quoting strings. The following variations of single and
+double quotes are all considered good practice at iMarc.  //Just be consistent
+within a single application.//
+
+	$foo = "value";
+	$foo = "Isn't it neat?";
+	$foo = 'Bob said, "I like that"';
+	$foo = "Name\tEmail\tZip\n";
+
+	echo "Hello World";
+	echo 'Hello World';
+
+	$foo['bar'] = "someval";
+
+	if ($var == 'something') { ... }
+
+	Database::Select('*', 'table', 'this', 'that');
+
+
+### Constants
+
+Constants should use ALL CAPITAL LETTERS with words separated with an
+underscore.
+
+	define("MY_VARIABLE", "foo");
+	define("MY_OTHER", "bar");
+
+
+### Filesystem Paths
+
+When including site-wide files, such as classes, paths should be absolute and
+will normally be based on `$_SERVER['DOCUMENT_ROOT']` or a similar
+application-level constant.
+
+	require $_SERVER['DOCUMENT_ROOT'] . "/path/to/Class.php";
+
+When including files specific to the current page or section, use a relative
+path that starts with `./` to prevent PHP from looking in every folder in the
+`include_path`.
+
+	include './views/add_edit.php';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Commenting
 
-Here, we differentiate between //library code// and other code. Library code is
+Here, we differentiate between *library code* and other code. Library code is
 a reusable component of iMarc’s code library. Library code continually evolves,
 often with multiple developers working on them. Library code requires more
 extensive commenting.
@@ -746,22 +952,21 @@ All framework class files are versioned with three revision numbers.
  - \[major\] increases if backward compatibility breaks or a number of major features have been added
 
 
-#### Class Comments
+### Non-Library Commenting
 
-Non-library classes only require a short description and copyright.
+Non-library classes might be helped with a short description and copyright, but even this is optional.
 
 	/**
 	 * Description of class
 	 *
-	 * @copyright 1999-2005 iMarc LLC
+	 * @copyright 2013 iMarc LLC
 	 */
 
 
 #### Non-Library Function and Method Comments
 
 Non-library functions and methods may be commented using the PHPDoc convention
-[described above](#LibraryFunctionandMethodComments). Non-library
-functions and methods can also skip comments completely.
+[described above](#LibraryFunctionandMethodComments), but can also skip comments completely.
 
 
 #### Non-Library Class Variable Comments
@@ -809,125 +1014,13 @@ comment out a large block of code.
 comments – `# comment` – are always avoided.
 
 
-## Control Structures
-
-Control structures, such as `if`, `for`, `while`, or `switch`, place the
-opening brace is on the same line as the control statement. Code starts
-indented on the next line. The closing brace is on the same indenting level as
-the control statement.
-
-Control statements also have one space between the control keyword and opening
-parenthesis to distinguish them from function calls.
-
-	if (User::isAdministrator() || ($status == 'Active')) {
-		action_foo();
-	} elseif ($status == 'Inactive') {
-		action_bar();
-	} else {
-		action_baz();
-	}
-
-Use `elseif`, not `else if`.
-
-Complicated condition checking should be performed by assigning boolean values
-to meaningful variables and should then be combined on a single line for the
-`if` statement:
-
-	$foo_bar_not_baz = $foo && $foo == $bar && $foo != $baz;
-	$bar_like_baz    = !empty($bar['name']) && $baz['name'] && $bar['name'] == $baz['name'];
-	if ($foo_bar_not_baz || $bar_like_baz) {
-		action1;
-	}
-
-Do not omit the curly braces under any circumstance.
-
-In the case of a large number of short tests and actions, a single line
-condition and code-block is acceptable.
-
-	if ($foo === TRUE) { foo(); }
-	if ($bar === TRUE) { bar(); }
-
-For switch statements, cases are indented one level. Case actions are indented
-two levels. The `break` statement is always on a line by itself.
-
-	switch (User::getStatus()) {
-		case 'Pending':
-			action_pending();
-			break;
-
-		case 'Inactive':
-			action_inactive();
-			break;
-
-		default:
-			action_active();
-	}
 
 
-## Method & Function Calls
-
-Methods and functions are called with no spaces between the function name, the
-opening parenthesis, and the first parameter. There is one space after each
-commas separating parameters. There is no space between the last parameter, the
-closing parenthesis, and the semicolon.
-
-There is one space on either side of an equals sign used to assign the return
-value of a function to a variable.
-
-	$foo = foo($var1, $var2, $var3);
-	$bar = $users->foo($var1, $var2, $var3);
-	$baz = Groups::getUsers($var1, $var2, $var3);
-	$qux = Groups::getUsers(
-		$var1,
-		str_replace('abc', 'def', $var2),
-		$var3
-	);
-
-If assigning a reference to a variable, place the ampersand next to the equal
-sign, not the referenced object.
-
-	$reference =& $foo;
-	$reference =& foo();
-
-When using `include`, `include_once`, `require`, or `require_once`, the
-parentheses are left out.
-
-	include $_SERVER['DOCUMENT_ROOT'] . '/app/init.php';
 
 
-## Example URLs and IPs
-
-Use `example.com` for all example URLs, per [RFC
-2606](http://www.faqs.org/rfcs/rfc2606.html).
-
-Use the IP range `192.0.2.0/24` for all example IP addresses, per [RFC
-3330](http://www.faqs.org/rfcs/rfc3330.html). If you just need a single
-IP address use `192.0.2.1`
 
 
-## PHP Settings
 
-To retrieve submitted data, use the more specific `$_GET` or `$_POST`, not
-`$_REQUEST`
-
-
-## Private Variables
-
-Make all class variables private or protected (unless there’s a really good
-reason not to). Create `setBar()` methods to set private class variables, and
-`getBar()` methods to retrieve their data.
-
-	class Foo
-	{
-		private $bar;
-
-		public function setBar($in) {
-			$this->bar = $in;
-		}
-		public function getBar() {
-			return $this->bar;
-		}
-	}
 
 
 ## Error Handling
@@ -978,69 +1071,15 @@ documentation](http://flourishlib.com/docs/fException) for information on
 which exception type to throw.
 
 
-## Existence checking
-
-Often you’ll need to check whether or not a variable, property or array key
-exists.  There are several similar methods to do this. In general, use the
-simplest.
-
-If you need to know if a variable exists at all and is not `NULL`, use
-[isset()](http://www.php.net/manual/en/function.isset.php).
-
-	// Check to see if $param is defined.
-	if (isset($param)) {
-		// $param may be FALSE, but it's there.
-	}
-
-If you need to know if a variable exists AND has a non-empty value (not `NULL`,
-0, `FALSE`, empty string or undefined), use
-[empty()](http://www.php.net/manual/en/function.empty.php).
-
-	// Make sure that $answer exists, is not an empty string, and is
-	// not 0:
-	if (!empty($answer)) {
-		// $answer has some non-false content.
-	} else {
-		// (bool)$answer would be FALSE.
-	}
-
-Don’t use [array_key_exists()](http://www.php.net/manual/en/function.array-key-exists.php)
-unless it is possible that an array key has a value of `NULL`.
-`array_key_exists()` runs many times slower than `isset()` because a full array
-scan must be performed.
-
-	// Make sure we have a charset parameter. Value could also be NULL.
-	if (!array_key_exists('charset', $params)) { }
 
 
-## Quoting
-
-Use your judgement when quoting strings. The following variations of single and
-double quotes are all considered good practice at iMarc.  //Just be consistent
-within a single application.//
-
-	$foo = "value";
-	$foo = "Isn't it neat?";
-	$foo = 'Bob said, "I like that"';
-	$foo = "Name\tEmail\tZip\n";
-
-	echo "Hello World";
-	echo 'Hello World';
-
-	$foo['bar'] = "someval";
-
-	if ($var == 'something') { ... }
-
-	Database::Select('*', 'table', 'this', 'that');
 
 
-## Constants
 
-Constants should use ALL CAPITAL LETTERS with words separated with an
-underscore.
 
-	define("MY_VARIABLE", "foo");
-	define("MY_OTHER", "bar");
+
+
+
 
 
 ## Security
@@ -1109,6 +1148,13 @@ provided to the user in a hidden form input and is then verified against a list
 of tokens saved in their session.
 
 
+
+
+
+
+
+
+
 ## URLs
 
 Whenever possible, use mod_rewrite or a PHP front controller to create URLs
@@ -1175,30 +1221,43 @@ number, sort direction or sort column.
 A poorly constructed version of the above would be `/search/John+Smith/page/2`.
 
 
-## Formatting
+### Example URLs and IPs
+
+Use `example.com` for all example URLs, per [RFC
+2606](http://www.faqs.org/rfcs/rfc2606.html).
+
+Use the IP range `192.0.2.0/24` for all example IP addresses, per [RFC
+3330](http://www.faqs.org/rfcs/rfc3330.html). If you just need a single
+IP address use `192.0.2.1`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Tips
+
+
 
 ### Dates
 
 Don’t format human-presentable dates with leading zeros. Use `May 4, 2010`
 instead of `May 04, 2010`.
-
-
-### Filesystem Paths
-
-When including site-wide files, such as classes, paths should be absolute and
-will normally be based on `$_SERVER['DOCUMENT_ROOT']` or a similar
-application-level constant.
-
-	require $_SERVER['DOCUMENT_ROOT'] . "/path/to/Class.php";
-
-When including files specific to the current page or section, use a relative
-path that starts with `./` to prevent PHP from looking in every folder in the
-`include_path`.
-
-	include './views/add_edit.php';
-
-
-## Tips
 
 ### Boolean Returns
 
@@ -1223,12 +1282,12 @@ boolean.
 When processing a commerce transaction, pay special attention to the order of
 execution and how errors are handled.
 
-  1. Form Validation – validate required fields
-  2. Payment Gateway – process credit card at AuthorizeNet or similar
-  3. Local Logic – update record(s) or do whatever needs to be done
-  4. Store Local Transaction – create the customer receipt and store a copy in the database. Typically administrators can view this log of commerce activity.
-  5. Customer Receipt – email receipt to customer
-  6. Admin Notification – email notification to administrator
+ 1. Form Validation – validate required fields
+ 2. Payment Gateway – process credit card at AuthorizeNet or similar
+ 3. Local Logic – update record(s) or do whatever needs to be done
+ 4. Store Local Transaction – create the customer receipt and store a copy in the database. Typically administrators can view this log of commerce activity.
+ 5. Customer Receipt – email receipt to customer
+ 6. Admin Notification – email notification to administrator
 
 When an error occurs in steps #1 or #2, the error message should be displayed
 to the users.
