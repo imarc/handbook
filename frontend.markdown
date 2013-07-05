@@ -41,46 +41,6 @@ required attributes. Elements should occur within the proper context of the DOCT
 * HTML should validate with the [W3C Markup Validation Service](http://validator.w3.org/).
 * Stylesheets should validate with the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator).
 
-## UTF-8
-
-Use UTF-8 as the character encoding. Set your editor to use UTF-8 for 
-all aspects of the web application.
-
-HTML pages should begin with by setting `UTF-8` in the content-type meta tag.
-
-	<meta charset="UTF-8" />
-
-Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the 
-frontend HTML and backend databases, use real UTF-8 characters instead of HTML 
-entities.
-
-Use real apostrophes and quotations instead of primes and double-primes. Use 
-a UTF-8 character like `»`, instead of typing out entities like `&raquo;`. 
-The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
-`&quot;`.
-
-    <p>
-        Separation of content – better with an en-dash. 
-        iMarc’s motto: “Use curly quotes” 
-        <a href="#"> Learn More »</a>
-    </p>	
-
-### Dashes
-
-There are multiple types of dashes present in common use: hyphen, figure dash, 
-en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
-
-* (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
-* (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
-
-Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
-[The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
-
-  The em dash is the nineteenth-century standard, still prescribed in many 
-  editorial style books, but the em dash is too long for use with the best 
-  text faces. Like the oversized space between sentences, it belongs to the 
-  padded and corseted aesthetic of Victorian typography.
-
 ## Metadata content
 
 ### Page Titles
@@ -121,6 +81,30 @@ Keep meta descriptions less than 160 characters.
 Include the following meta tag in the head to credit iMarc.
 
 	<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
+
+### Character Encoding
+
+Use UTF-8 as the character encoding. Set your editor to use UTF-8 for 
+all aspects of the web application.
+
+HTML pages should begin with by setting `UTF-8` in the content-type meta tag.
+
+	<meta charset="UTF-8" />
+
+Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the 
+frontend HTML and backend databases, use real UTF-8 characters instead of HTML 
+entities.
+
+Use real apostrophes and quotations instead of primes and double-primes. Use 
+a UTF-8 character like `»`, instead of typing out entities like `&raquo;`. 
+The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
+`&quot;`.
+
+    <p>
+        Separation of content – better with an en-dash. 
+        iMarc’s motto: “Use curly quotes” 
+        <a href="#"> Learn More »</a>
+    </p>	
 
 ## Icons
 
@@ -188,9 +172,28 @@ With short lines of content, the tag and content can stay on the same line.
 
 #### Layout
 
-Use floats to construct layouts instead of frames, iframes, or tables. 
-This maintains the flow of the page, and allows acceptable control over 
-source ordering.
+Use floats to construct layouts instead of frames, iframes, or tables. This maintains the flow of the page, and allows acceptable control over source ordering.
+
+#####Containing floats#####
+
+Make sure to properly contain floats with a clearfix. iMarc uses a `group` class.
+
+    .group:before,
+    .group:after {
+        content: '';
+        display: table;
+    }
+    .group:after {
+        clear: both;
+    }
+
+Include the following Internet Explorer rules if your project requires support for IE7 and below.
+
+	/* IE7 */
+	.lt_ie8 .group { min-height: 1px; }
+
+	/* IE6 */
+	.lt_ie7 .group { height: 1%; }
 
 
 ### CSS
@@ -252,6 +255,16 @@ Related style rules should be grouped together in ascending order of specificity
 	          margin: 0;
 	      }
 
+#### CSS3
+Be mindful of CSS properties that are not cross-browser compatible. Some properties need vendor-specific prefixes in order to render the same. Always place vendor-specific declarations before W3C.
+
+    a {
+        color: #487c3d;
+        text-decoration: none;
+        -moz-transition: all .1s ease;
+        -webkit-transition: all .1s ease;
+        transition: all .1s ease;
+    }
 
 #### Bad Practices 
 
@@ -266,23 +279,13 @@ Presentational elements should not be used for text styling purposes. Instead, C
 
 Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
 
-#### Internet Explorer styles
-
-Some older versions of Internet Explorer need dedicated CSS rules in order to achieve design and functionality. Target previous versions of Internet Explorer from respective HTML CSS classes.
-	
-	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-	<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
-	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-
-
-## File Naming and Structure
+## Directory Structure
 
 Stylesheets, images, and other supporting files are stored in the root directory in their respective folders.
 
-Images can contain subfolders if you feel it helps organization.
+Images can contain sub-directories if you feel it helps organization.
 
-JavaScript plugins and/or frameworks should live in a `lib` directory. 
+JavaScript plugins/frameworks should live in a `lib` directory. 
 
     /css
         screen.css
@@ -314,6 +317,15 @@ The definitive list of supported browsers can be found on our
 [Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
 
 By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents. 
+
+### Internet Explorer styles
+
+Some older versions of Internet Explorer need dedicated CSS rules in order to achieve design and functionality. You can target previous versions of Internet Explorer from special HTML classes. Place these styles in a deciated CSS file if the same name (e.g. lt_ie9.css). If the amount of Internet Explorer styles is small, place them in the project’s main CSS file.
+	
+	<!--[if lt IE 7]> <html class="lt_ie9 lt_ie8 lt_ie7" lang="en"> <![endif]-->
+	<!--[if IE 7]>    <html class="lt_ie9 lt_ie8" lang="en"> <![endif]-->
+	<!--[if IE 8]>    <html class="lt_ie9" lang="en"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 
 
 ## Accessibility 
@@ -411,29 +423,6 @@ Use the Baseline Checklist below to ensure an acceptable level of accessibility.
 * Print stylesheets are used for maximum legibility.
 * Mobile media query is used to ensure website layout does not break on mobile devices.
 
-## Group Clearfix
-
-Use the _group_ class on parent elements to properly contain floats.
-
-    .group:before,
-    .group:after {
-        content: '';
-        display: table;
-    }
-    .group:after {
-        clear: both;
-    }
-
-To get the _group_ method to work in IE6 and IE7, it is necessary to include
-the following rules within their respective IE CSS sections.
-
-	/* IE6 */
-	.group { height: 1%; }
-
-	/* IE7 */
-	.group { min-height: 1px; }
-
-
 ## Naming Conventions
 
 See **[iMarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
@@ -441,8 +430,7 @@ for detailed layout naming conventions.
 
 ### Structure
 
-Most page layouts can generally be thought of in three primary parts. These
-structural names should be used as classes in the markup.
+Most page layouts can generally be thought of in three primary parts. These structural names should be used as classes in the markup.
 
 * **`header.primary`** – Logo, global navigation, utility links, typically at the top of a page.
 * **`.torso`** – Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
@@ -528,24 +516,19 @@ context of a sidebar.
 
 ### Body Classes and IDs
 
-Use classes and IDs on the body element to denote current section. Use an optional ID 
-if needed for targeting styles for specific pages.
+Use classes and IDs on the body element to denote current section and page, respectively.
 
 	<body class="products" id="macbook_pro">
 
 ## Forms
 
-All elements inside a `form` element should be placed within a `fieldset` 
-element. Use a heading tag instead of the `legend` element to title fieldsets.
+All elements inside a `form` element should be placed within a `fieldset` element. A `fieldset` is used to group related form elements. Use a heading tag instead of the `legend` element to title fieldsets.
 
 The `action` attribute is required on all forms, and should have a blank value by default.
 
 ### Form Element Markup
 
-Form inputs and labels are grouped together within a div. The containing div 
-is named after the form input type.  For example, a 
-`text` input is contained inside `<div class="text">` and 
-a `file` input is contained inside `<div class="file">`.
+Form inputs and labels are grouped together within a div. The containing div is named after the form input type.  For example, a `text` input is contained inside `<div class="text">` and a `file` input is contained inside `<div class="file">`.
 
 All appropriate input elements should have an associated label element. 
 Labels should be associated directly with inputs.
@@ -555,56 +538,223 @@ within a div with a class of the plural input type, such as `checkboxes`.
 
 This allows maximum form style flexibility with minimal markup changes.
 
-Required and optional fields should be indicated by a `span` with a class 
-of `required` or `optional` within the associated `label` element.
+Required fields should be indicated by a `span` with a class of `required` within the associated `label` element.
 
 If an input has a max-length defined in the database, it should have a 
 corresponding max-length attribute in the markup.
 
-For form element markup, see **[iMarc Boilerplate on GitHub](https://github.com/imarc/boilerplate/blob/gh-pages/markup.html)**.
+Form element markup
+
+    <form method="post">
+        <fieldset>
+            <p>
+                Through out the fields, you will also see <code>span.help</code>
+                elements. These are used for help text relevant to fields.
+            </p>
+            <div class="text">
+                <label for="sample_form-text">Text <span class="required">*</span></label>
+                <input id="sample_form-text" type="text" />
+                <span class="help">only numbers and letters</span>
+            </div>
+            <div class="password">
+                <label for="sample_form-password">Password <span class="required">*</span></label>
+                <input id="sample_form-password" type="password" />
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <h4>
+                Radios and Checkboxes
+            </h4>
+            <div class="radios group">
+                <label>Choose one</label>
+                <label class="radio">
+                    <input id="sample_form-radio" type="radio" />
+                radio
+                </label>
+                <label class="radio">
+                    <input id="sample_form-radio_1" type="radio" />
+                    radio 1
+                </label>
+                <label class="radio">
+                    <input id="sample_form-radio_2" type="radio" />
+                    radio 2
+                </label>
+            </div>
+            <div class="checkboxes group">
+                <label>Check all that apply</label>
+                <label class="checkbox">
+                    <input id="sample_form-checkbox" type="checkbox" />
+                    checkbox
+                </label>
+                    <label class="checkbox">
+                    <input id="sample_form-checkbox_1" type="checkbox" />
+                    checkbox 1
+                </label>
+                <label class="checkbox">
+                    <input id="sample_form-checkbox_2" type="checkbox" />
+                    checkbox 2
+                </label>
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <h4>
+                Selects
+            </h4>
+            <div class="select">
+                 <label for="sample_form-select">Select one</label>
+                 <select id="sample_form-select">
+                     <optgroup label="group">
+                         <option value="option">Option</option>
+                         <option value="option 1">option 1</option>
+                         <option value="option 2" selected="selected">option 2</option>
+                     </optgroup>
+                     <optgroup label="group 1">
+                         <option value="option 3">option 3</option>
+                         <option value="option 4">option 4</option>
+                         <option value="option 5">option 5</option>
+                         <option value="option 6">option 6</option>
+                         <option value="option 7">option 7</option>
+                         <option value="option 8">option 8</option>
+                     </optgroup>
+                 </select>
+            </div>
+            <div class="select multiple">
+                <label for="sample_form-select_multiple">Select multiple</label>
+                <select id="sample_form-select_multiple" multiple="multiple" size="2">
+                    <optgroup label="group">
+                        <option value="option">Option</option>
+                        <option value="option 1">option 1</option>
+                        <option value="option 2" selected="selected">option 2</option>
+                    </optgroup>
+                    <optgroup label="group 1">
+                        <option value="option 3">option 3</option>
+                        <option value="option 4">option 4</option>
+                        <option value="option 5">option 5</option>
+                        <option value="option 6">option 6</option>
+                        <option value="option 7">option 7</option>
+                        <option value="option 8">option 8</option>
+                    </optgroup>
+                </select>
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <h4>
+                Textareas and Files
+            </h4>
+            <div class="textarea">
+                <label for="sample_form-textarea">Textarea</label>
+                <textarea id="sample_form-textarea"></textarea>
+            </div>
+            <div class="file">
+                <label for="sample_form-file">Upload File</label>
+                <input type="file" id="sample_form-file" />
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <h3>
+                Buttons
+            </h3>
+            <div class="submit">
+                <input type="submit" value="Submit" />
+            </div>
+            <div class="button">
+                <input type="button" value="Input Button" />
+            </div>
+            <div class="reset">
+                <input type="reset" value="Reset" />
+            </div>
+            <div class="button">
+                <button>Button Element</button>
+            </div>
+            <a href="" class="button">&lt;a&gt; as a button</a>							
+        </fieldset>
+    </form>
 
 ## Tables
 
+Use tables to display tabular data such as a pricing or feature chart. Do not use tables for page layout. Make sure your tables do not only use rows and cells – take advantage of other elements to increase accessibility.
+
+### Caption
+
+Optional element. `caption` helps describe the table. Think of it as a title. 
+
+    <table>
+        <caption>
+            ACME, Inc Product Line Pricing Tiers
+        </caption>
+        …
+    </table>
+
+
+### Table Headers and Scope
+
+Use the table headers element `th` to indicate a header. Passing a `scope` attribute  and value of `col` or `row` gives non-visual user agents specific guidance on where its associated data lives. This is important when there are headers at the top of columns and at the beginning of each row.
+
+    <table>
+        <caption>
+            ACME, Inc Product Line Pricing Tiers
+        </caption>
+        <tr>
+            <th scope="col">
+                Bronze Tier
+            </th>
+            <th scope="col">
+                Silver Tier
+            </th>
+        </tr>
+        <tr>
+            <td>
+                2 hours of support
+            </td>
+       	    <td>
+                5 hours of support
+            </td>
+        </tr>
+    </table>
+
+### Column Groups
+
+While not used for accessibility, use `<colgroup>` and `<col>` elements to more easily style table columns.
 
     <table>
         <colgroup>
-            <col />
-            <col />
+            <col class="bronze" />
+            <col class="silver" />
+            <col class="gold" />
         </colgroup>
         <thead>
             <tr>
-                <th>header 1</th>
-                <th>header 2</th>
-                <th>header 3</th>
+                <th>
+                    Bronze Tier
+                </th>
+                <th>
+                    Silver Tier
+                </th>
+                <th>
+                    Gold Tier
+                </th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <td>footer 1</td>
-                <td>footer 2</td>
-                <td>footer 3</td>
-            </tr>
-        </tfoot>
         <tbody>
             <tr>
-                <td>body 1</td>
-                <td>body 2</td>
-                <td>body 3</td>
+                <td>
+                    2 hours of support
+                </td>
+                <td>
+                    5 hours of support
+                </td>
+                <td>
+                    10 hours of support
+                </td>
             </tr>
         </tbody>
     </table>
 
-### Caption
 
-Optional element. `caption` helps describe the table. Think of it as a title.
-
-	<table summary="Table containing main toolbar items (icons and links).">
-
-### Columns
-
-Use `<colgroup>` and `<col>` elements to style table columns instead of 
-using a `class` on each table cell. The only style properties that should 
-be modified cross-browser are `background` and `color`.
 
 ## Typography
 
@@ -644,22 +794,13 @@ Include a generic font family such as `serif`, `sans-serif`, `cursive`,
 `fantasy`, or `monospace`. This provides a fallback in case all other fonts 
 in the stack are unavailable.
 
-### Typographic Scale
-
-Use a typographic scale when choosing type sizes. The traditional scale 
-makes a good default.
-
-**Traditional Scale** – 6, 7, 8, 9, 10, 11, 12, 14, **16**, 18, 21, 24, 36, 48, 60, 72
-
-More information on [typographic scales](http://lamb.cc/typograph/).
-
 ### Web Fonts
 
-Use the following syntax to use web fonts on the web with `@font-face`. Appropriate 
+Use the following syntax to use web fonts with `@font-face`. Appropriate 
 file formats should be provided for supported browsers. When using a multi 
 weight/style typeface be sure to add the appropriate `font-weight` and `font-style` for each.
 
-Bulletproof `@font-face` syntax via [http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax](Fontspring)
+Bulletproof `@font-face` syntax via [FontSpring](http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax)
 
 	@font-face {
 	   font-family: 'VerbRegular';
@@ -732,31 +873,23 @@ Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.co
 that can convert font files to various formats. Make sure you check with your producer 
 regarding the use of web fonts as there are licensing requirements for certain fonts.
 
-[Google Web Fonts](http://www.google.com/webfonts) is a free web font collection iMarc has used.
+**[Google Web Fonts](http://www.google.com/webfonts)** is a free web font collection iMarc has used.
 
-## HTML5 and CSS3 usage
+### Dashes
 
-### CSS3
+There are multiple types of dashes present in common use: hyphen, figure dash, 
+en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 
-Use CSS3 as a visual enhancement for supporting browsers. It should never 
-detract from the experience of browsers that do not support a particular property.
+* (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
+* (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
 
-[The CSS3 Rule Generator](http://css3generator.com)
+Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
+[The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
-If needed, include appropriate `-webkit` and `-moz` vendor prefixes to ensure 
-maximum browser compatibility. Prefixed properties should be grouped together 
-before the W3C standard property. [Can I use…](http://caniuse.com) is a fine 
-resource to research browser support.
-
-    .callout {
-        -webkit-border-top-left-radius: 10px;
-        -webkit-border-top-right-radius: 5px;
-        -moz-border-radius-topleft: 10px;
-        -moz-border-radius-topright: 5px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 5px;
-    }
-
+  The em dash is the nineteenth-century standard, still prescribed in many 
+  editorial style books, but the em dash is too long for use with the best 
+  text faces. Like the oversized space between sentences, it belongs to the 
+  padded and corseted aesthetic of Victorian typography.
 
 ## Mobile Optimization
 

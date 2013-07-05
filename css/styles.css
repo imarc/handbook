@@ -46,7 +46,7 @@ audio, canvas, video {
 html {
   background: #2c2c2c;
   color: #555555;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
