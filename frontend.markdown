@@ -7,10 +7,9 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document describes iMarc’s markup and style standards. iMarc is a full 
-		service web development and design firm located north of Boston.
+		This document describes iMarc’s markup and style standards. 
+		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
-	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
 </section>
 
 ## Boilerplate

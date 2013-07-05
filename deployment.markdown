@@ -7,18 +7,10 @@ layout: default
 
 <section class="intro">
 	<p>
-		The preferred method for deploying websites is to use an automated, repeatable
-		system to help prevent human errors and ensure changes are made smoothly.
-		We use an in-house bash script called Patton (named after
-		<a href="http://en.wikipedia.org/wiki/George_S._Patton">General George S. Patton</a> to
-		automate the process.
+		This document describes iMarc’s preferred method for deploying websites using 
+		an automated, repeatable system called <tt>patton</tt>.
+		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
-
-	<p>
-		iMarc is a full service web development and design firm located north of Boston.
-	</p>
-
-	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
 </section>
 
 ## Concepts

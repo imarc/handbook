@@ -8,10 +8,9 @@ layout: default
 <section class="intro">
 	<p>
 		This document describes iMarc’s code standards for developing databases and
-		writing PHP. iMarc is a full service web development and design firm located
-		north of Boston.
+		writing PHP. 
+		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
-	<a class="button" href="http://imarc.net">Learn more about iMarc</a> 
 </section>
 
 ## Development Environment
