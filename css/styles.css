@@ -465,10 +465,11 @@ body.homepage footer.primary  {
 	box-shadow: none;
 	padding: 0;
 }
-body.homepage .branding {
+body.homepage header.primary .branding {
 	background: none;
 	float: none;
 	margin: 0 auto;
+	max-width: none;
 	width: 30em;
 }
 body.homepage .branding h1 {
@@ -575,15 +576,15 @@ body.homepage nav.primary li a.hover .flipper {
 }
 
 body.homepage footer.primary {
-	bottom: 1em;
 	color: #696868;
 	font-size: 13px;
 	padding: 0;
-	position: absolute;
-	width: 100%;
+	text-align: center;
 }
+
 body.homepage footer.primary img {
 	display: inline-block;
+	float: none;
 	margin-bottom: 0.4em;
 	width: 64px;
 }
@@ -702,7 +703,7 @@ body.homepage footer.primary img {
 	footer.primary p {
 		margin: 0;
 	}
-	
+
 	footer.primary img {
 		margin-bottom: 1em;
 	}
@@ -761,6 +762,7 @@ body.homepage footer.primary img {
 		top: -24px;
 		width: 250px;
 	}
+
 	footer.primary {
 		text-align: left;
 	}
@@ -770,6 +772,13 @@ body.homepage footer.primary img {
 		float: left;
 		margin-right: 2em;
 	}
+
+	body.homepage footer.primary {
+		bottom: 1em;
+		position: absolute;
+		width: 100%;
+	}
+
 }
 
 
