@@ -17,29 +17,38 @@
 		<![endif]-->
 	</head>
 	<body>
-		<header class="primary">
-			<div class="container">
+		<div class="header_container" id="top">
+			<header class="group container primary">
 				<div class="branding">
-					<h1><a href="http://handbook.imarc.net">Handbook <sup>by iMarc</sup></a></h1>
+					<a href="http://handbook.imarc.net">
+						<img src="img/logo.png" alt="Handbook" />
+					</a>
 				</div>
+				<a href="#menu" class="jump">&#9776;</a>
+				<nav class="primary">
+					<ul id="menu" class="menu">
+						{% for link in site.navigation %}
+							{% if page.url == link.url %}
+								{% assign class = 'active' %}
+							{% else %}
+								{% assign class = '' %}
+							{% endif %}
+							<li class="{{ class }}">
+							<a href="{{ link.relative_url }}">{{ link.text }}</a>
+							</li>
+						{% endfor %}
+						<li class="top"><a href="#top">back</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+		<div class="heading">
+			<div class="container">
+				<h1>
+					Lorem Ipsum
+				</h1>
 			</div>
-			<a href="#menu" class="menu_link">&#9776;</a>
-			<nav class="primary">
-				<ul id="menu" class="menu container">
-					{% for link in site.navigation %}
-						{% if page.url == link.url %}
-							{% assign class = 'active' %}
-						{% else %}
-							{% assign class = '' %}
-						{% endif %}
-						<li class="{{ class }}">
-						<a href="{{ link.relative_url }}">{{ link.text }}</a>
-						</li>
-					{% endfor %}
-					<li class="back"><a href="#header">back</a></li>
-				</ul>
-			</nav>
-		</header>
+		</div>
 
 		<div class="torso container">
 			<div class="main" role="main">
@@ -54,18 +63,18 @@
 		</div>
 
 		<footer class="primary">
-			<div class="container">
-				<div class="copyright">©2013 iMarc LLC.</div>
-				<p class="license">
-					Unless otherwise noted, the contents of these pages are licensed under the 
-					<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
-				</p>
-				<p>
-					iMarc is a full service web development and design firm located north of Boston.
-					<br />
-					Learn more at <a href="http://imarc.net">http://imarc.net</a>.
-				</p>
-			</div>
+			<img src="/img/logo_imarc_knockout.png" alt="" />
+			<p class="license">
+				Unless otherwise noted, the contents of these pages are licensed under the 
+				<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
+			</p>
+			<p>
+				iMarc is a full service web development and design firm with offices near Boston and Silicon Valley.
+				Learn more at <a href="http://imarc.net">http://imarc.net</a>.
+			</p>
+			<p class="copyright">
+				©2013 iMarc, LLC.
+			</p>
 		</footer>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

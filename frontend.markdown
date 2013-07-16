@@ -3,8 +3,6 @@ title: Frontend
 layout: default
 ---
 
-# Frontend
-
 <section class="intro">
 	<p>
 		This document describes iMarc’s markup and style standards. 
