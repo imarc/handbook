@@ -7,8 +7,6 @@
  * Grouping
  * Layout
  * Typography
- * Navigation
- * Messaging
  * Page Specific
  * Media Queries
  * Print Styles
@@ -72,6 +70,21 @@ img {
 	text-shadow: none;
 }
 
+nav ul {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+nav ul:before, nav ul:after {
+	content: '';
+	display: table;
+}
+
+nav ul:after {
+	clear: both;
+}
+
 /* = Grouping = */
 .group:before, .group:after,
 .container:before,
@@ -86,6 +99,10 @@ img {
 
 
 /* = Layout = */
+.container {
+	padding-left: 16px;
+	padding-right: 16px;
+}
 .header_container {
 	position: absolute;
 	top: 0;
@@ -93,33 +110,43 @@ img {
 	width: 100%;
 	z-index: 5;
 }
-	header.primary {
-		background: #FFF;
-		box-shadow: 0 0 8px rgba(0,0,0,0.3);
-		position: relative;
-		padding: 16px;
-	}
-		header.primary .branding {
-			background: #FFF;
-			max-width: 180px;
-			position: relative;
-		}
-			nav.primary li {
-				font-family: 'Fjord One', Georgia, serif;
-				font-size: 1.3em;
-				margin: 0;
-			}
-				nav.primary li a {
-					display: block;
-					color: #333;
-				}
-				nav.primary .active a {
-					color: #F2006D;
-				}
-			nav.primary .top {
-				display: none;
-			}
 
+header.primary {
+	background: #FFF;
+	box-shadow: 0 0 8px rgba(0,0,0,0.3);
+	position: relative;
+	padding: 16px;
+}
+
+header.primary .branding {
+	background: #FFF;
+	max-width: 180px;
+	position: relative;
+}
+
+header.primary .branding a {
+	display: block;
+	margin-top: 3px;
+}
+
+nav.primary li {
+	font-family: 'Fjord One', Georgia, serif;
+	font-size: 1.3em;
+	margin: 0;
+}
+
+nav.primary li a {
+	display: block;
+	color: #333;
+}
+
+nav.primary .active a {
+	color: #F2006D;
+}
+
+nav.primary .top {
+	display: none;
+}
 
 .heading {
 	background: #0394CD;
@@ -130,18 +157,23 @@ img {
 	width: 100%;
 	z-index: 4;
 }
-	.heading h1 {
-		font-size: 3.5em;
-	}
 
-
-.torso .main,
-.torso aside.primary {
-	padding-left: 16px;
-	padding-right: 16px;
+.heading h1 {
+	font-size: 3.5em;
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 0 16px;
 }
 
-.torso .main h2 {
+.torso {
+	margin-bottom: 3em;
+}
+
+.main .intro {
+	padding-top: 1.4em;
+}
+
+.main h2 {
 	border-top: 1px solid #E4E4E4;
 	color: #F2006D;
 	font-size: 2.2em;
@@ -150,49 +182,59 @@ img {
 	padding-top: 1.4em;
 }
 
-.torso aside.primary {
-	background: salmon;
-	box-shadow: -4px -4px 6px rgba(50, 50, 50, 0.2);
+aside.primary {
+	background: #FFF;
 }
-	aside.primary li {
-		float: none;
-	}
-	aside.primary nav ul ul {
-		margin: 0;
-	}
-	aside.primary nav > ul > li > a {
-		font-weight: bold;
-	}
-	aside.primary nav > ul li a:hover {
-		color: #555555;
-	}
-	aside.primary nav > ul li li a {
-		color: #414141;
-		font-size: 0.9em;
-	}
-	aside.primary nav > ul > li {
-		border-top: 1px solid #E5E5E5;
-		margin-top: 1em;
-		padding-top: 1em;
-	}
-	aside.primary nav > ul > li:first-child {
-		border-top: none;
-	}
 
+aside.primary nav > ul > li {
+	border-top: 1px solid #E5E5E5;
+	font-size: ;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+aside.primary nav > ul li a:hover {
+	color: #555555;
+}
+
+aside.primary nav > ul > li > a {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+aside.primary nav ul ul {
+	margin: 0;
+}
+
+aside.primary nav > ul li li a {
+	color: #414141;
+	font-size: 0.9em;
+}
+
+aside.primary nav > ul li li {
+	margin: 0;
+}
+
+aside.primary nav > ul > li:first-child {
+	border-top: none;
+}
 
 footer.primary {
 	background: #1B1B1B;
-	color: #888888;
-	font-size: 0.875em;
-	margin-bottom: 0;
-	padding: 2.5em 16px;
+	color: #CCC;
+	font-size: 0.9em;
+	padding: 3em 0;
+	text-align: center;
 }
-	footer.primary p {
-		margin: 0;
-	}
-	footer.primary img {
-		opacity: 0.6;
-	}
+
+footer.primary img {
+	display: inline-block;
+	margin-bottom: 1.5em;
+	max-width: 90px;
+	opacity: 0.6;
+}
+
+
 
 /* = Typography = */
 h1,
@@ -215,63 +257,26 @@ h6:first-child {
 
 h1 {
 	font-size: 2.5em;
-	line-height: 1.2;
-	margin-bottom: .5em;
-	margin-top: 1.67em;
 }
 
 h2 {
 	font-size: 2.2em;
-	line-height: 1.2;
-	margin-bottom: .4em;
-	margin-top: 1.2em;
-}
-
-h1 + h2 {
-	margin-top: -.2em;
 }
 
 h3 {
 	font-size: 1.8em;
-	line-height: 1.3;
-	margin-bottom: .4em;
-	margin-top: 1.8em;
-}
-
-h2 + h3 {
-	margin-bottom: .2em;
-	margin-top: -.4em;
 }
 
 h4 {
 	font-size: 1.5em;
-	line-height: 1.4;
-	margin-bottom: .4em;
-	margin-top: 1.8em;
-}
-
-h3 + h4 {
-	margin-top: -.3em;
 }
 
 h5 {
 	font-size: 1em;
-	margin-bottom: .4em;
-	margin-top: 1.8em;
-}
-
-h4 + h5 {
-	margin-top: -.3em;
 }
 
 h6 {
 	font-size: .9em;
-	margin-bottom: .4em;
-	margin-top: 1.8em;
-}
-
-h5 + h6 {
-	margin-top: -.2em;
 }
 
 .intro {
@@ -440,64 +445,6 @@ sub {
 	vertical-align: bottom;
 }
 
-/* = Navigation = */
-nav ul {
-	list-style: none;
-	margin-bottom: 0;
-	padding-left: 0;
-}
-nav ul:before, nav ul:after {
-	content: '';
-	display: table;
-}
-nav ul:after {
-	clear: both;
-}
-
-
-/* = Messaging = */
-.messaging {
-	border-radius: 5px;
-	margin-bottom: 1.5em;
-	padding: 1em 3.25em;
-	position: relative;
-}
-.messaging a {
-	text-decoration: underline;
-}
-.messaging:before {
-	content: '';
-	display: block;
-	font-family: 'imarcicons';
-	font-size: 20px;
-	height: 23px;
-	left: 1em;
-	position: absolute;
-	top: .7em;
-	width: 23px;
-}
-
-.success {
-	background: #ecfae8;
-}
-.success:before {
-	content: "\e001";
-}
-
-.error {
-	background: #ffd7d7;
-}
-.error:before {
-	content: "\23";
-}
-
-.info {
-	background: #bde5f8;
-}
-.info:before {
-	content: "\3d";
-}
-
 
 /* = Page Specific = */
 
@@ -512,25 +459,25 @@ body.homepage {
 	padding: 20px 0 0;
 	text-align: center;
 }
-	body.homepage header.primary,
-	body.homepage footer.primary  {
-		background: none;
-		box-shadow: none;
-		padding: 0;
-	}
-	body.homepage .branding {
-		background: none;
-		float: none;
-		margin: 0 auto;
-		width: 30em;
-	}
-		body.homepage .branding h1 {
-			background: rgba(0,0,0,0.6);
-			display: inline-block;
-			margin: 0 0 0.6em;
-			padding: 14px;
-			width: 400px;
-		}
+body.homepage header.primary,
+body.homepage footer.primary  {
+	background: none;
+	box-shadow: none;
+	padding: 0;
+}
+body.homepage .branding {
+	background: none;
+	float: none;
+	margin: 0 auto;
+	width: 30em;
+}
+body.homepage .branding h1 {
+	background: rgba(0,0,0,0.6);
+	display: inline-block;
+	margin: 0 0 0.6em;
+	padding: 14px;
+	width: 400px;
+}
 body.homepage .intro {
 	color: #CCC;
 	font-size: 30px;
@@ -655,15 +602,15 @@ body.homepage footer.primary img {
 /* = Media Queries = */
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width:768px) {
 	a.jump {
 		color: #414141;
 		display: block;
-		font-size: 38px;
+		font-size: 36px;
 		position: absolute;
-		right: 17px;
+		right: 16px;
 		text-align: center;
-		top: 0px;
+		top: 1px;
 		z-index: 1001;
 	}
 	#menu {
@@ -719,60 +666,109 @@ body.homepage footer.primary img {
 
 }
 
+
 @media only screen and (min-width: 768px) {
 	body {
 		font-size: 14px;
 	}
+
 	header.primary .branding {
 		float: left;
 	}
+
 	nav.primary {
 		float: right;
 	}
+
 	nav.primary li {
 		float: left;
 		margin-left: 1.5em;
 	}
+
 	nav.primary li:first-child {
 		margin-left: 0;
 	}
+
 	.jump {
 		display: none;
 	}
+
 	.container {
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 		max-width: 1100px;
-		padding-left: 30px;
-		padding-right: 30px;
 	}
+
+	footer.primary p {
+		margin: 0;
+	}
+	
+	footer.primary img {
+		margin-bottom: 1em;
+	}
+
 }
 
 @media only screen and (min-width: 1024px) {
 	body {
 		font-size: 16px;
 	}
+
 	header.primary {
 		padding: 30px;
 	}
+
 	header.primary .branding a {
 		display: block;
 		margin-top: 3px;
 	}
+
+	.heading h1 {
+		padding: 0 30px;
+	}
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
 	nav.primary li {
 		margin-left: 2.5em;
 	}
+
 	.notoc .main {
 		margin-right: 0;
 	}
-	.torso .main {
-		float: left;
-		padding-left: 0;
-		padding-right: 0;
-		width: 74%;
+
+	.torso {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		position: relative;
 	}
-	.torso aside.primary {
+
+	.main {
+		margin-right: 270px;
+		padding-bottom: 3em;
+	}
+
+	aside.primary {
+		box-shadow: -4px -4px 6px rgba(70, 70, 70, 0.1);
 		float: right;
-		width: 24%;
+		height: 100%;
+		padding: 0 16px;
+		position: absolute;
+		right: 0;
+		top: -24px;
+		width: 250px;
+	}
+	footer.primary {
+		text-align: left;
+	}
+
+	footer.primary img {
+		display: block;
+		float: left;
+		margin-right: 2em;
 	}
 }
 

@@ -7,8 +7,8 @@ Based off github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 pre code {
   display: block; 
   padding: 0.8em;
-  color: #000;
-  background: #EFF2F8;
+  color: #FFF;
+  background: #303030;
 }
 
 pre .comment,
@@ -28,20 +28,20 @@ pre .nginx .title,
 pre .subst,
 pre .request,
 pre .status {
-  color: #000;
+  color: #FFF;
   font-weight: bold
 }
 
 pre .number,
 pre .hexcolor {
-  color: #40a070
+  color: #D58B51;
 }
 
 pre .string,
 pre .tag .value,
 pre .phpdoc,
 pre .tex .formula {
-  color: #d14
+  color: #9be7a2;
 }
 
 pre .title,
@@ -68,7 +68,7 @@ pre .tag,
 pre .tag .title,
 pre .rules .property,
 pre .django .tag .keyword {
-  color: #000080;
+  color: #E7CF9B;
   font-weight: normal
 }
 
@@ -84,7 +84,7 @@ pre .regexp {
 }
 
 pre .class {
-  color: #458;
+  color: #bbbfe8;
   font-weight: bold
 }
 
@@ -109,7 +109,7 @@ pre .pi,
 pre .doctype,
 pre .shebang,
 pre .cdata {
-  color: #999;
+  color: #C7C7C7;
   font-weight: bold
 }
 
