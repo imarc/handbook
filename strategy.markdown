@@ -3,35 +3,6 @@ title: Strategy
 layout: default
 ---
 
-<style>
-@media only screen and (min-width: 1100px) {
-	/* section numbering */
-	p {counter-increment: paragraph;}
-	h1, h2, h3 {counter-reset: paragraph;}
-	h2 {counter-reset: section;}
-	h2 {counter-increment: chapter;}
-	h3 {counter-increment: section;}
-	h2:before {content: counter(chapter) " » "}
-	h3:before {content: counter(chapter) "." counter(section) " » "}
-	p:before {content: counter(chapter) "." counter(section) "." counter(paragraph) " »"}
-
-	/* layout and style modifications */
-	p:before, h2:before, h3:before {
-		display: block;
-		float:left; 
-		width: 60px; 
-		margin-left: -70px; 
-		text-align:right; 
-		color: #ccc; 
-		font-weight: normal;
-	}
-	p:hover:before, h2:hover:before, h3:hover:before {
-		color: #999;
-	}
-	section.intro p:before {content: none;}
-	footer p:before {content: none;}
-}
-</style>
 
 # Strategy
 
