@@ -234,25 +234,25 @@ Stylesheets should be organized in a logical manner. See [Boilerplate’s](http:
 	/* = Typography = */
 
 
-Related style rules should be grouped together in ascending order of specificity. Nest rules to reflect HTML indentation. 
+Related style rules should be grouped together in ascending order of specificity. 
 
 
-	header {
-	    background-color: #EEE;
-	}
-	    header .content {
-	        background: none;
-	        margin: 0 auto;
-	        padding: 0;
-	    }
-	      header .content .title {
-	          color: #000000;
-	          float: left;
-	          font-size: 24px;
-	          font-weight: normal;
-	          font-family: Helvetica, Arial, sans-serif;
-	          margin: 0;
-	      }
+    header {
+        background-color: #EEE;
+    }
+    header .content {
+        background: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+    header .content .title {
+        color: #000000;
+        float: left;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        margin: 0;
+    }
 
 #### CSS3
 Be mindful of CSS properties that are not cross-browser compatible. Some properties need vendor-specific prefixes in order to render the same. Always place vendor-specific declarations before W3C.
