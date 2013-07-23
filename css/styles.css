@@ -62,11 +62,13 @@ img {
 
 ::-moz-selection {
 	background: #F2006D;
+	color: #FFF;
 	text-shadow: none;
 }
 
 ::selection {
 	background: #F2006D;
+	color: #FFF;
 	text-shadow: none;
 }
 
@@ -104,9 +106,6 @@ nav ul:after {
 	padding-right: 16px;
 }
 .header_container {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	z-index: 5;
 }
@@ -120,6 +119,7 @@ header.primary {
 
 header.primary .branding {
 	background: #FFF;
+	margin: 0 auto 1.4em; 
 	max-width: 180px;
 	position: relative;
 }
@@ -129,10 +129,20 @@ header.primary .branding a {
 	margin-top: 3px;
 }
 
+nav.primary ul {
+	text-align: center;
+}
+
 nav.primary li {
+	display: inline-block;
 	font-family: 'Fjord One', Georgia, serif;
-	font-size: 1.3em;
-	margin: 0;
+	font-size: 1.2em;
+	margin-bottom: 0;
+	margin-left: 1.2em;
+}
+
+nav.primary li:first-child {
+	margin-left: 0;
 }
 
 nav.primary li a {
@@ -144,25 +154,34 @@ nav.primary .active a {
 	color: #F2006D;
 }
 
-nav.primary .top {
-	display: none;
-}
-
 .heading {
 	background: #0394CD;
 	color: #FFF;
-	height: 14em;
-	padding: 8em 0;
 	overflow: hidden;
+	padding: 1em 0;
 	width: 100%;
 	z-index: 4;
 }
 
+.heading h1:before {
+	background-image: url(/img/watermark_frontend.png);
+    content: "";
+    display: block;
+    height: 380px;
+    left: -40px;
+    position: absolute;
+    top: 0;
+    width: 576px;
+    z-index: -1;
+}
+
 .heading h1 {
-	font-size: 3.5em;
+	font-size: 2.8em;
 	margin: 0 auto;
 	max-width: 1100px;
 	padding: 0 16px;
+	position: relative;
+	z-index: 2;
 }
 
 .torso {
@@ -183,7 +202,7 @@ nav.primary .top {
 }
 
 aside.primary {
-	background: #FFF;
+	display: none;
 }
 
 aside.primary nav > ul > li {
@@ -470,24 +489,22 @@ body.homepage header.primary .branding {
 	float: none;
 	margin: 0 auto;
 	max-width: none;
-	width: 30em;
+	width: 90%;
 }
 body.homepage .branding h1 {
 	background: rgba(0,0,0,0.6);
-	display: inline-block;
-	margin: 0 0 0.6em;
+	margin: 0 auto 0.6em;
 	padding: 14px;
-	width: 400px;
+	width: 90%;
 }
 body.homepage .intro {
 	color: #CCC;
-	font-size: 30px;
 	line-height: 1.4;
 }
 body.homepage nav.primary {
 	float: none;
-	margin: 8em 0;
-	width: auto;
+	margin: 8em auto;
+	width: 90%;
 }
 body.homepage nav.primary ul {
 	float: none;
@@ -495,7 +512,6 @@ body.homepage nav.primary ul {
 }
 body.homepage nav.primary li {
 	display: inline-block;
-	float: none;
 	margin-left: 0.8em;
 	margin-top: 1em;
 	vertical-align: top;
@@ -514,8 +530,7 @@ body.homepage nav.primary li a,
 	height: 250px;
 	width: 185px;
 }
-body.homepage nav.primary li a:hover .flipper,
-body.homepage nav.primary li a.hover .flipper {
+body.homepage nav.primary li a:hover .flipper {
 	-moz-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
@@ -590,6 +605,26 @@ body.homepage footer.primary img {
 }
 
 
+/* == headings == */
+
+body .heading h1:before {
+	background-image: url(/img/watermark_strategy.png);
+    left: -100px;
+}
+body.javascript .heading h1:before {
+	background-image: url(/img/watermark_javascript.png);
+    left: -100px;
+}
+body.backend .heading h1:before {
+	background-image: url(/img/watermark_backend.png);
+    left: -100px;
+}
+body.deployment .heading h1:before {
+	background-image: url(/img/watermark_deployment.png);
+    left: -100px;
+}
+
+
 .notoc .main h1.title {
 	font-size: 24px;
 	margin-bottom: .2em;
@@ -602,67 +637,38 @@ body.homepage footer.primary img {
 
 /* = Media Queries = */
 
-
-@media only screen and (max-width:768px) {
-	a.jump {
-		color: #414141;
+@media only screen and (max-width: 479px) {
+	body.homepage nav.primary {
+		margin: 2em auto;
+	}
+	nav.primary li,
+	body.homepage nav.primary li {
+		float: none;
 		display: block;
-		font-size: 36px;
-		position: absolute;
-		right: 16px;
+		margin-bottom: 0.8em;
+		margin-left: 0;
 		text-align: center;
-		top: 1px;
-		z-index: 1001;
 	}
-	#menu {
-		left: 0;
-		margin: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 1000;
-	}
-	#menu a {
-		height: 0;
-		line-height: 0;
-		overflow: hidden;
-	}
-	#menu:target {
-		padding-top: 57px;
-		z-index: 1001;
-	}
-	#menu:target li {
-		border-bottom: 1px solid #E4E4E4;
-	}
-	#menu:target li:first-child {
-		border-top: 1px solid #E4E4E4;
-	}
-	#menu:target a {
-		background: #F4F4F4;
-		line-height: 3em;
-		height: 3em;
-		padding: 0 16px;
-		position: relative;
-		z-index: 1;
-		-webkit-transition: height .25s, line-height .25s;
-		transition: height .25s, line-height .25s; 
-	}
-	#menu:target .top {
-		border: none;
-		display: block;
-	}
-	#menu:target .top a {
-		background: none;
-		border: none;
-		bottom: -101em;
+	body.homepage nav.primary li a,
+	.front {
 		height: auto;
-		left: 0;
-		line-height: 1;
-		position: absolute;
-		right: 0;
-		text-indent: -999em;
-		top: -101em;
-		z-index: 0;
+		position: static;
+		width: 100%;
+	}
+	body.homepage nav.primary li a:hover .flipper {
+		-moz-transform: none;
+		-webkit-transform: none;
+		transform: none;
+	}
+	.front {
+		padding: 1em 0;
+	}
+	.front h3 {
+		margin: 0;
+	}
+	.front img,
+	.back {
+		display: none;
 	}
 
 }
@@ -674,20 +680,12 @@ body.homepage footer.primary img {
 	}
 
 	header.primary .branding {
+		margin-bottom: 0;
 		float: left;
 	}
 
 	nav.primary {
 		float: right;
-	}
-
-	nav.primary li {
-		float: left;
-		margin-left: 1.5em;
-	}
-
-	nav.primary li:first-child {
-		margin-left: 0;
 	}
 
 	.jump {
@@ -708,11 +706,29 @@ body.homepage footer.primary img {
 		margin-bottom: 1em;
 	}
 
+	body.homepage header.primary .branding {
+		max-width: 480px;
+	}
+
+	body.homepage .branding h1 {
+		max-width: 400px;
+	}
+
+	body.homepage h2.intro {
+		font-size: 1.9em;
+	}
+
 }
 
 @media only screen and (min-width: 1024px) {
 	body {
 		font-size: 16px;
+	}
+
+	.header_container {
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	header.primary {
@@ -724,8 +740,14 @@ body.homepage footer.primary img {
 		margin-top: 3px;
 	}
 
+	.heading {
+		height: 14em;
+		padding: 0;
+	}
+
 	.heading h1 {
-		padding: 0 30px;
+		font-weight: 3.5em;
+		padding: 130px 30px;
 	}
 
 	.container {
@@ -734,7 +756,8 @@ body.homepage footer.primary img {
 	}
 
 	nav.primary li {
-		margin-left: 2.5em;
+		font-size: 1.3em;
+		margin-left: 2em;
 	}
 
 	.notoc .main {
@@ -753,7 +776,9 @@ body.homepage footer.primary img {
 	}
 
 	aside.primary {
-		box-shadow: -4px -4px 6px rgba(70, 70, 70, 0.1);
+		background: #FFF;
+		box-shadow: -4px -4px 6px rgba(70,70,70,0.1);
+		display: block;
 		float: right;
 		height: 100%;
 		padding: 0 16px;

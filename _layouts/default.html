@@ -8,7 +8,7 @@
 		<title>{{ page.title }}</title>
 		<meta name="description" content="iMarc, LLC" />
 		<meta name="author" content="Design, programming, by iMarc. More info at http://imarc.net" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/syntax_highlighting.css" media="all" />
 
@@ -24,7 +24,6 @@
 						<img src="img/logo.png" alt="Handbook" />
 					</a>
 				</div>
-				<a href="#menu" class="jump">&#9776;</a>
 				<nav class="primary">
 					<ul id="menu" class="menu">
 						{% for link in site.navigation %}
@@ -37,7 +36,6 @@
 							<a href="{{ link.relative_url }}">{{ link.text }}</a>
 							</li>
 						{% endfor %}
-						<li class="top"><a href="#top">back</a></li>
 					</ul>
 				</nav>
 			</header>
