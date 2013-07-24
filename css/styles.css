@@ -158,20 +158,19 @@ nav.primary .active a {
 	background: #0394CD;
 	color: #FFF;
 	overflow: hidden;
-	padding: 1em 0;
 	width: 100%;
 	z-index: 4;
 }
 
-.heading h1:before {
-	background-image: url(/img/watermark_frontend.png);
+body .heading h1:before {
+	background-repeat: no-repeat;
     content: "";
     display: block;
-    height: 380px;
+    height: 100%;
     left: -40px;
     position: absolute;
     top: 0;
-    width: 576px;
+    width: 100%;
     z-index: -1;
 }
 
@@ -179,7 +178,7 @@ nav.primary .active a {
 	font-size: 2.8em;
 	margin: 0 auto;
 	max-width: 1100px;
-	padding: 0 16px;
+	padding: 1em 16px;
 	position: relative;
 	z-index: 2;
 }
@@ -620,8 +619,12 @@ body.homepage footer.primary img {
 
 /* == headings == */
 
-body .heading h1:before {
+body.strategy .heading h1:before {
 	background-image: url(/img/watermark_strategy.png);
+    left: -100px;
+}
+body.frontend .heading h1:before {
+	background-image: url(/img/watermark_frontend.png);
     left: -100px;
 }
 body.javascript .heading h1:before {
