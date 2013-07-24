@@ -1,134 +1,104 @@
-/* = Syntax highlighting =
-
-Based off github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
 */
 
 pre code {
-  display: block; 
-  padding: 0.8em;
-  color: #FFF;
-  background: #303030;
+  display: block; padding: 0.5em;
+  background: #000; color: #f8f8f8;
 }
 
+pre .shebang,
 pre .comment,
 pre .template_comment,
-pre .diff .header,
 pre .javadoc {
-  color: #998;
-  font-style: italic
+  color: #7c7c7c;
 }
 
 pre .keyword,
-pre .css .rule .keyword,
-pre .winutils,
-pre .javascript .title,
-pre .lisp .title,
-pre .nginx .title,
-pre .subst,
+pre .tag,
+pre .tex .command,
 pre .request,
-pre .status {
-  color: #FFF;
-  font-weight: bold
+pre .status,
+pre .clojure .attribute {
+  color: #96CBFE;
 }
 
-pre .number,
-pre .hexcolor {
-  color: #D58B51;
+pre .sub .keyword,
+pre .method,
+pre .list .title,
+pre .nginx .title {
+  color: #FFFFB6;
 }
 
 pre .string,
 pre .tag .value,
-pre .phpdoc,
-pre .tex .formula {
-  color: #9be7a2;
+pre .cdata,
+pre .filter .argument,
+pre .attr_selector,
+pre .apache .cbracket,
+pre .date {
+  color: #A8FF60;
 }
 
-pre .title,
-pre .id {
-  color: #900;
-  font-weight: bold
-}
-
-pre .javascript .title,
-pre .lisp .title,
 pre .subst {
-  font-weight: normal
-}
-
-pre .class .title,
-pre .haskell .type,
-pre .vhdl .literal,
-pre .tex .command {
-  color: #458;
-  font-weight: bold
-}
-
-pre .tag,
-pre .tag .title,
-pre .rules .property,
-pre .django .tag .keyword {
-  color: #E7CF9B;
-  font-weight: normal
-}
-
-pre .attribute,
-pre .variable,
-pre .instancevar,
-pre .lisp .body {
-  color: #008080
+  color: #DAEFA3;
 }
 
 pre .regexp {
-  color: #009926
+  color: #E9C062;
 }
 
-pre .class {
-  color: #bbbfe8;
-  font-weight: bold
+pre .title,
+pre .sub .identifier,
+pre .pi,
+pre .decorator,
+pre .tex .special,
+pre .haskell .type,
+pre .constant,
+pre .smalltalk .class,
+pre .javadoctag,
+pre .yardoctag,
+pre .phpdoc,
+pre .nginx .built_in {
+  color: #FFFFB6;
 }
 
 pre .symbol,
 pre .ruby .symbol .string,
-pre .ruby .symbol .keyword,
-pre .ruby .symbol .keymethods,
-pre .lisp .keyword,
-pre .tex .special,
-pre .input_number {
-  color: #990073
+pre .number,
+pre .variable,
+pre .vbscript,
+pre .literal {
+  color: #C6C5FE;
 }
 
-pre .builtin,
-pre .built_in,
-pre .lisp .title {
-  color: #0086b3
+pre .css .tag {
+  color: #96CBFE;
 }
 
-pre .preprocessor,
-pre .pi,
-pre .doctype,
-pre .shebang,
-pre .cdata {
-  color: #C7C7C7;
-  font-weight: bold
+pre .css .rules .property,
+pre .css .id {
+  color: #FFFFB6;
 }
 
-pre .deletion {
-  background: #fdd
+pre .css .class {
+  color: #FFF;
 }
 
-pre .addition {
-  background: #dfd
+pre .hexcolor {
+  color: #C6C5FE;
 }
 
-pre .diff .change {
-  background: #0086b3
+pre .number {
+  color:#FF73FD;
 }
 
-pre .chunk {
-  color: #aaa
-}
-
-pre .tex .formula {
-  opacity: 0.5;
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata {
+  opacity: 0.7;
 }
