@@ -3,8 +3,6 @@ title: Deployment
 layout: default
 ---
 
-# Deployment
-
 <section class="intro">
 	<p>
 		This document describes iMarc’s preferred method for deploying websites using 

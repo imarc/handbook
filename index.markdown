@@ -1,10 +1,10 @@
 ---
 title: iMarc Handbook
-layout: notoc
+layout: homepage
 ---
 
 <h1 class="title">
-	iMarc’s Handbook of Web Development Standards &amp; Best Practices
+	iMarc’s Standards &amp; Best Practices for Web Development
 </h1>
 <p class="copyright">
 	Copyright 2005‒2013 <a href="http://imarc.net/">iMarc LLC</a>.
@@ -43,4 +43,3 @@ layout: notoc
 		Deployment standards
 	</dd>
 </dl>
-

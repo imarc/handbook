@@ -3,8 +3,6 @@ title: Backend
 layout: default
 ---
 
-# Backend
-
 <section class="intro">
 	<p>
 		This document describes iMarc’s code standards for developing databases and

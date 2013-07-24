@@ -1,3 +1,8 @@
+{% for link in site.navigation %}
+	{% if page.url == link.url %}
+		{% assign bodyclass = link.relative_url %}
+	{% endif %}
+{% endfor %}
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -5,10 +10,10 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
 		<meta charset="UTF-8" />
-		<title>{{ page.title }}</title>
+		<title>{{ page.title }} – Handbook – iMarc's Standards &amp; Best Practices</title>
 		<meta name="description" content="iMarc, LLC" />
 		<meta name="author" content="Design, programming, by iMarc. More info at http://imarc.net" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/syntax_highlighting.css" media="all" />
 
@@ -16,32 +21,35 @@
 			<script src="js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-	<body>
-		<header class="primary">
-			<div class="container">
+	<body class="{{ bodyclass }}">
+		<div class="header_container" id="top">
+			<header class="group container primary">
 				<div class="branding">
-					<h1><a href="http://handbook.imarc.net">Handbook <sup>by iMarc</sup></a></h1>
+					<a href="http://handbook.imarc.net">
+						<img src="img/logo.png" alt="Handbook" />
+					</a>
 				</div>
-			</div>
-			<a href="#menu" class="menu_link">&#9776;</a>
-			<nav class="primary">
-				<ul id="menu" class="menu container">
-					{% for link in site.navigation %}
-						{% if page.url == link.url %}
-							{% assign class = 'active' %}
-						{% else %}
-							{% assign class = '' %}
-						{% endif %}
-						<li class="{{ class }}">
-						<a href="{{ link.relative_url }}">{{ link.text }}</a>
-						</li>
-					{% endfor %}
-					<li class="back"><a href="#header">back</a></li>
-				</ul>
-			</nav>
-		</header>
+				<nav class="primary">
+					<ul id="menu" class="menu">
+						{% for link in site.navigation %}
+							{% if page.url == link.url %}
+								{% assign class = 'active' %}
+							{% else %}
+								{% assign class = '' %}
+							{% endif %}
+							<li class="{{ class }}">
+							<a href="{{ link.relative_url }}">{{ link.text }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+			</header>
+		</div>
+		<div class="heading">
+			<h1>{{ page.title }}</h1>
+		</div>
 
-		<div class="torso container">
+		<div class="container torso">
 			<div class="main" role="main">
 				{{ content }}
 			</div>
@@ -55,15 +63,17 @@
 
 		<footer class="primary">
 			<div class="container">
-				<div class="copyright">©2013 iMarc LLC.</div>
+				<img src="/img/logo_imarc_knockout.png" alt="" />
 				<p class="license">
 					Unless otherwise noted, the contents of these pages are licensed under the 
 					<a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution / Share Alike license</a>.
 				</p>
 				<p>
-					iMarc is a full service web development and design firm located north of Boston.
-					<br />
+					iMarc is a full service web development and design firm with offices near Boston and Silicon Valley.
 					Learn more at <a href="http://imarc.net">http://imarc.net</a>.
+				</p>
+				<p class="copyright">
+					©2013 iMarc, LLC.
 				</p>
 			</div>
 		</footer>

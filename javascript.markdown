@@ -3,8 +3,6 @@ title: JavaScript
 layout: default
 ---
 
-# JavaScript
-
 <section class="intro">
 	<p>
 		This document describes JavaScript coding and style standards employed by iMarc.

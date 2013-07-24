@@ -3,9 +3,6 @@ title: Strategy
 layout: default
 ---
 
-
-# Strategy
-
 <section class="intro">
 	<p>
 		This document outlines iMarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
