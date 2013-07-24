@@ -419,7 +419,7 @@ dt:after {
     content: '';
     left: 10px;
     position: absolute;
-    top: 2.1em;
+    top: 2em;
 }
 
 dd {
