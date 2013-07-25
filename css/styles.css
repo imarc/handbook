@@ -49,7 +49,7 @@ html {
 
 body {
 	background: #FFF;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.5;
 	min-width: 310px;
 }
@@ -407,7 +407,7 @@ dt {
     font-size: 0.9em;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.8em;
     padding: 0.3em 0.8em;
     position: relative;
     text-transform: uppercase;
@@ -417,13 +417,13 @@ dt:after {
     border: 7px solid #f00;
     border-color: #727272 #727272 transparent transparent;
     content: '';
-    left: 10px;
+    left: 15px;
     position: absolute;
     top: 2em;
 }
 
 dd {
-	margin: 0 0 1.5em 2em;
+	margin: 0 0 1.5em 1.8em;
 }
 
 ul ul {
@@ -603,10 +603,11 @@ body.homepage nav.primary li a:hover .flipper {
 }
 
 body.homepage footer.primary {
-	color: #696868;
+	color: #AAA;
 	font-size: 13px;
 	padding: 0;
 	text-align: center;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.8);
 }
 
 body.homepage footer.primary img {
@@ -638,16 +639,6 @@ body.backend .heading h1:before {
 body.deployment .heading h1:before {
 	background-image: url(/img/watermark_deployment.png);
     left: -100px;
-}
-
-
-.notoc .main h1.title {
-	font-size: 24px;
-	margin-bottom: .2em;
-}
-.notoc .main .copyright {
-	font-size: 12px;
-	margin-bottom: 3em;
 }
 
 
@@ -692,7 +683,7 @@ body.deployment .heading h1:before {
 
 @media only screen and (min-width: 768px) {
 	body {
-		font-size: 14px;
+		font-size: 15px;
 	}
 
 	header.primary .branding {
@@ -774,10 +765,6 @@ body.deployment .heading h1:before {
 	nav.primary li {
 		font-size: 1.3em;
 		margin-left: 2em;
-	}
-
-	.notoc .main {
-		margin-right: 0;
 	}
 
 	.torso {
