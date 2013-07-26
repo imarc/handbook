@@ -127,12 +127,13 @@ header.primary .branding {
 header.primary .branding a {
 	display: block;
 	margin-top: 3px;
-	-webkit-transition:opacity 80ms linear;  
-	transition:opacity 80ms linear;  
+	-webkit-transition: opacity 200ms linear;  
+	transition: opacity 200ms linear;  
 }
 
+header.primary .branding a:hover,
 header.primary .branding a:focus {
-	opacity: 0.8;
+	opacity: 0.7;
 }
 
 nav.primary ul {
@@ -215,7 +216,7 @@ body .heading h1:before {
 }
 
 .main a:focus {
-	background-color: rgba(3,148,205,0.2);
+	background-color: rgba(3,148,212,0.2);
 }
 
 aside.primary {
@@ -224,10 +225,23 @@ aside.primary {
 
 aside.primary nav > ul > li {
 	border-top: 1px solid #E5E5E5;
-	font-size: ;
 	margin-top: 1em;
 	padding-top: 1em;
 }
+
+aside.primary nav li a {
+	display: block;
+}
+aside.primary nav li a:focus {
+	background-color: rgba(3,148,212,0.1);
+	box-shadow: -4px 0 0 rgba(3,148,212,0.1);
+}
+
+aside.primary nav li a:active {
+	background-color: transparent;
+	box-shadow: none;
+}
+
 
 aside.primary nav > ul li a:hover {
 	color: #555555;
@@ -384,6 +398,8 @@ hr {
 a {
 	color: #0394CD;
 	text-decoration: none;
+	-webkit-transition: color 200ms;
+	transition: color 200ms;
 }
 a:hover, 
 a:focus {
@@ -434,8 +450,8 @@ dt {
 }
 
 dt:after {
-    border: 7px solid #f00;
-    border-color: #727272 #727272 transparent transparent;
+    border-left: 14px solid transparent;
+    border-top: 14px solid #727272;
     content: '';
     left: 12px;
     position: absolute;
@@ -531,6 +547,11 @@ body.homepage header.primary .branding {
 	max-width: none;
 	width: 90%;
 }
+body.homepage .branding a:hover,
+body.homepage .branding a:focus {
+	opacity: 0.5;
+}
+
 body.homepage .branding h1 {
 	background: rgba(0,0,0,0.6);
 	margin: 0 auto 0.6em;
@@ -570,7 +591,8 @@ body.homepage nav.primary li a,
 	height: 250px;
 	width: 185px;
 }
-body.homepage nav.primary li a:hover .flipper {
+body.homepage nav.primary li a:hover .flipper,
+body.homepage nav.primary li a:focus .flipper {
 	-moz-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
