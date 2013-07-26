@@ -127,6 +127,12 @@ header.primary .branding {
 header.primary .branding a {
 	display: block;
 	margin-top: 3px;
+	-webkit-transition:opacity 80ms linear;  
+	transition:opacity 80ms linear;  
+}
+
+header.primary .branding a:focus {
+	opacity: 0.8;
 }
 
 nav.primary ul {
@@ -149,9 +155,17 @@ nav.primary li a {
 	display: block;
 	color: #333;
 }
+nav.primary li a:hover,
+nav.primary li a:focus {
+	color: #F2006D;
+}
 
 nav.primary .active a {
 	color: #F2006D;
+}
+nav.primary .active a:hover,
+nav.primary .active a:focus {
+	color: #9B0033;
 }
 
 .heading {
@@ -195,9 +209,13 @@ body .heading h1:before {
 	border-top: 1px solid #E4E4E4;
 	color: #F2006D;
 	font-size: 2.2em;
-	margin-bottom: 0.2em;
+	margin-bottom: 0.1em;
 	margin-top: 1.4em;
 	padding-top: 1.4em;
+}
+
+.main a:focus {
+	background-color: rgba(3,148,205,0.2);
 }
 
 aside.primary {
@@ -214,7 +232,7 @@ aside.primary nav > ul > li {
 aside.primary nav > ul li a:hover {
 	color: #555555;
 }
-
+	
 aside.primary nav > ul > li > a {
 	font-size: 1.1em;
 	font-weight: bold;
@@ -227,6 +245,11 @@ aside.primary nav ul ul {
 aside.primary nav > ul li li a {
 	color: #414141;
 	font-size: 0.9em;
+}
+
+aside.primary nav > ul li li a:hover,
+aside.primary nav > ul li li a:focus {
+	color: #777;
 }
 
 aside.primary nav > ul li li {
@@ -362,12 +385,10 @@ a {
 	color: #0394CD;
 	text-decoration: none;
 }
-a:hover, a:active {
+a:hover, 
+a:focus {
 	color: #F2006D;
 	outline: 0;
-}
-a:focus {
-	outline: thin dotted;
 }
 
 .button {
@@ -393,7 +414,6 @@ a:focus {
 	background: #0084b8;
 }
 
-
 ol,
 ul,
 dl {
@@ -407,7 +427,7 @@ dt {
     font-size: 0.9em;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.2em;
     padding: 0.3em 0.8em;
     position: relative;
     text-transform: uppercase;
@@ -417,13 +437,21 @@ dt:after {
     border: 7px solid #f00;
     border-color: #727272 #727272 transparent transparent;
     content: '';
-    left: 15px;
+    left: 12px;
     position: absolute;
     top: 2em;
 }
 
 dd {
-	margin: 0 0 1.5em 1.8em;
+	margin: 0 0 1.8em 2em;
+}
+
+h2 + dl {
+	margin-top: 0.8em;
+}
+
+h3 + dl {
+	margin-top: 0.4em;
 }
 
 ul ul {

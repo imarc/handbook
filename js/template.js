@@ -36,5 +36,5 @@ $(function() {
 	};
 
 	$('.toc nav').appendTOC('.main', 'h2, h3');
-	//$('.toc').addClass('sticky').stickToTop('.torso', { minWidth: 770 });
+	$('.toc').addClass('sticky').stickToTop('.torso', { minWidth: 770 });
 });
