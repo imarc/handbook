@@ -389,7 +389,7 @@ Time Req
 + Denotes CMS-controlled content and template usage
 + Creates a navigational backbone for a website
 
-#### Example Sitemap:
+#### Example Site Map:
 ![Sample Site map](img/strategy/sitemap.png)
 
 
@@ -577,7 +577,7 @@ QA serves as a "last pass" to catch anything missed during production.
 The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
 
 
-### Wireframes and Sitemaps
+### Wireframes and Site Maps
 
 [OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
