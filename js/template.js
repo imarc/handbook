@@ -7,7 +7,7 @@ $(function() {
 			var heading = $(this);
 			var tagNum  = parseInt(heading.prop('tagName').replace('H', ''));
 			var id      = heading.text().replace(/[^a-z0-9]/gi, '');
-			var link    = window.location.href;
+			var link    = window.location.pathname;
 			
 			heading.attr('id', id);
 
