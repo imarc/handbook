@@ -7,6 +7,8 @@ $(function() {
 			var heading = $(this);
 			var tagNum  = parseInt(heading.prop('tagName').replace('H', ''));
 			var id      = heading.text().replace(/[^a-z0-9]/gi, '');
+			var link    = window.location.href;
+			
 			heading.attr('id', id);
 
 			if (tagNum == baseNum) {
@@ -22,8 +24,10 @@ $(function() {
 			}
 
 			baseNum = tagNum;
+			
+			link += '#' + id;
 
-			html += '<a href="#' + id + '">' + heading.text() + '</a>';
+			html += '<a href="' + link + '">' + heading.text() + '</a>';
 		});
 
 		for (var i = 1; i < baseNum; i++) {
