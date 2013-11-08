@@ -490,7 +490,7 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
 The exceptions to this rule are anchors, form label IDs, the ID that is 
-[placed on the `body` tag](#BodyClassesandIDs), and instances when IDs are 
+[placed on the `body` tag](frontend#BodyClassesandIDs), and instances when IDs are 
 more appropriate hooks for JavaScript.
 
 Classes should be lowercase, using underscores between words.
@@ -940,7 +940,7 @@ All media queries can reside in a site’s main stylesheet.
 Some devices may download all styles (including large background images), regardless 
 of whether that device is scoped. This allows the device to apply specific width-based 
 rules on the fly without re-fetching images or CSS. The downside is a loss of optimization. 
-For tips on improving optimization, see [Mobile Optimization](#MobileOptimization)
+For tips on improving optimization, see [Mobile Optimization](frontend#MobileOptimization)
 
 #### Media Query Behaviors
 

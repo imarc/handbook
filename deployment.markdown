@@ -69,7 +69,7 @@ there are database and script Migrations.
 
 Database migrations are `.sql` files that are executed against an environment’s
 database. Script migrations are `.sh` or `.php` files that are executed within
-an Environment. [More on using migrations.](#UsingMigrations)
+an Environment. [More on using migrations.](deployment#UsingMigrations)
 
 ## Workflows
 
@@ -99,7 +99,7 @@ This workflow means:
 - All SiteManager content must be authored in the Prod environment
 - Testing content can be created in the Dev and Stage environments, but it
   will be overwritten each time one of those environments is deployed
-- [Migration](#UsingMigrations) scripts must be written for database and
+- [Migration](deployment#UsingMigrations) scripts must be written for database and
   writable folder changes
 
 The Live Site Workflow is enabled by setting `CONTENT_SOURCE_ENV="prod"` in
@@ -114,7 +114,7 @@ contain any Content, or at least any relevant Content. This workflow is used for
 There needs to be clear communication between all members of a project when
 using the Development Site workflow to prevent loss of client-supplied data.
 **As soon as a client is creating content, the project should immediately
-switch over to the [Live Site Workflow](#LiveSiteWorkflow).**
+switch over to the [Live Site Workflow](deployment#LiveSiteWorkflow).**
 
 This workflow means:
 
@@ -122,7 +122,7 @@ This workflow means:
   each commit.**
 - All SiteManager content must be authored in the Dev environment
 - Database and writable folder changes are manually performed, or a
-  [migration](#UsingMigrations) is written and `./deploy dev` is executed to
+  [migration](deployment#UsingMigrations) is written and `./deploy dev` is executed to
   run it
 
 The Development Site Workflow is enabled by setting `CONTENT_SOURCE_ENV="dev"`
@@ -203,7 +203,7 @@ into the trunk to deploy to Stage or Prod.
 
 ### Content Source
 
-**Be sure to read about the [Development Site Workflow](#DevelopmentSiteWorkflow)
+**Be sure to read about the [Development Site Workflow](deployment#DevelopmentSiteWorkflow)
 and communicate with the rest of the project team before using this feature.**
 
 To use the Development Site workflow, the `CONTENT_SOURCE_ENV`

@@ -482,7 +482,7 @@ business logic.
 ## Naming Conventions
 
 File naming conventions are described in [Storing and Naming
-Files](#StoringandNamingFiles), this section describes in-code PHP and Database 
+Files](backend#StoringandNamingFiles), this section describes in-code PHP and Database 
 naming conventions.
 
 
@@ -964,7 +964,7 @@ Non-library classes might be helped with a short description and copyright, but 
 #### Non-Library Function and Method Comments
 
 Non-library functions and methods may be commented using the PHPDoc convention
-[described above](#LibraryFunctionandMethodComments), but can also skip comments completely.
+[described above](backend#LibraryFunctionandMethodComments), but can also skip comments completely.
 
 
 #### Non-Library Class Variable Comments

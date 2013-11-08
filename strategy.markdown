@@ -35,13 +35,13 @@ Time Reqs
 : The number of hours required to produce an activity or deliverable, for an *average-sized project*.
 
 Scope
-: The *total hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](#Proposal) or a [Statement of Work](#StatementofWork), and should be restated in the Requirements.
+: The *total hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](strategy#Proposal) or a [Statement of Work](strategy#StatementofWork), and should be restated in the Requirements.
 
 Requirements
-: What the end product must do. Defined by a [Functional Requirements](#FunctionalRequirements) or a [Production Specification](#ProductionSpecification) document.
+: What the end product must do. Defined by a [Functional Requirements](strategy#FunctionalRequirements) or a [Production Specification](strategy#ProductionSpecification) document.
 
 Implementation
-: How the end product must work. Defined by a [Production Specification](#ProductionSpecification).
+: How the end product must work. Defined by a [Production Specification](strategy#ProductionSpecification).
 
 
 ## Process
@@ -77,7 +77,7 @@ Strategist
 	Delivers change orders when the scope of the strategy phase, or the production work that strategy is defining, changes
 
 UX Engineer
-:	Conducts [discovery activities](#DiscoveryActivities) and produces deliverables and supporting documents, delegated by the Strategist
+:	Conducts [discovery activities](strategy#DiscoveryActivities) and produces deliverables and supporting documents, delegated by the Strategist
 
 Designer
 :	May participate in discovery and interviews;  
@@ -148,7 +148,7 @@ Tasks
 :	Explore and prioritize the client's business environment, target audiences, goals and key challenges.
 
 Deliverables
-:	Findings are summarized in the [Discovery Report](#DiscoveryReport).
+:	Findings are summarized in the [Discovery Report](strategy#DiscoveryReport).
 
 Time Req
 :	22–28 hours
@@ -170,7 +170,7 @@ Tasks
 :	Locate, contact and talk to the *actual users* of the site or application, conducting contextual, unbiased interviews.
 
 Deliverables
-:	The results are summarized for the client in the [Discovery Report](#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
+:	The results are summarized for the client in the [Discovery Report](strategy#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
 
 Time Req
 :	30 hours for 6 users interviews and inclusion in Discovery Report
@@ -202,7 +202,7 @@ Tasks
 :	Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
 
 Deliverables
-:	The results are summarized for the client in the [Discovery Report](#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
+:	The results are summarized for the client in the [Discovery Report](strategy#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
 
 Time Req
 :	32–68 hours for 6–12 stakeholders and inclusion in Discovery Report
@@ -237,7 +237,7 @@ Tasks
 :	Look for patterns and best practices in content, layout, navigation, workflow, and SEO.
 
 Deliverables
-:	A competitive analysis should culminate in specific recommendations for the project, as part of the [Discovery Report](#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
+:	A competitive analysis should culminate in specific recommendations for the project, as part of the [Discovery Report](strategy#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
 
 Time Req
 : 16–32 hours, depending on breadth and depth
@@ -314,10 +314,10 @@ Objective
 :	Gather information from a large number of participants, yielding results in quantitative terms. 
 
 Tasks
-:	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](#SurveysandTesting) below), analyze the results.
+:	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](strategy#SurveysandTesting) below), analyze the results.
 
 Deliverables
-:	Results are delivered as part of the [Discovery Report](#DiscoveryReport).
+:	Results are delivered as part of the [Discovery Report](strategy#DiscoveryReport).
 
 Time Req
 : 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8–12 hours.
@@ -346,31 +346,31 @@ A proposal is created by Business Development and is a sales tool. It defines th
 
 ### Statement of Work
 
-A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Production Specification](#ProductionSpecification) before production.
+A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Production Specification](strategy#ProductionSpecification) before production.
 
 
 ### Discovery Report
 
 Summary
-:	A 10–25 page document summarizing the results of all [Discovery Activities](#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope of *over 250 hours*.
+:	A 10–25 page document summarizing the results of all [Discovery Activities](strategy#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope of *over 250 hours*.
 
 Time Req
 :	Sum of Discovery Activities conducted (above)
 
-The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](#SiteMap), [wireframes](#Wireframe), and [specification](#ProductionSpecification).
+The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](strategy#SiteMap), [wireframes](strategy#Wireframe), and [specification](strategy#ProductionSpecification).
 
 Its secondary goal is to ensure internal stakeholders agree upon the project's objectives and priorities before creating a Production Specification.
 
 **Topics may include:**
 
-+ [Business Analysis and Prioritization](#BusinessAnalysisandPrioritization)
-+ [Web Analytics Audit](#WebAnalyticsAudit)
-+ [Metrics Baseline](#MetricsBaseline)
-+ [Competitive analysis](#CompetitiveAnalysis)
-+ [Stakeholder interview](#StakeholderInterviews) findings
-+ [User interview](#UserInterviews) findings
-+ [Survey](#Surveys) findings
-+ [Usability Testing](#UsabilityTesting) results
++ [Business Analysis and Prioritization](stretegy#BusinessAnalysisandPrioritization)
++ [Web Analytics Audit](strategy#WebAnalyticsAudit)
++ [Metrics Baseline](strategy#MetricsBaseline)
++ [Competitive analysis](strategy#CompetitiveAnalysis)
++ [Stakeholder interview](strategy#StakeholderInterviews) findings
++ [User interview](strategy#UserInterviews) findings
++ [Survey](strategy#Surveys) findings
++ [Usability Testing](strategy#UsabilityTesting) results
 + Recommendations
 
 The Discovery Report serves as a foundation for the next documents: site map, wireframes, and specifications.
@@ -456,7 +456,7 @@ Summary
 Time Req
 :	22-24 hours
 
-This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](#SiteMap) and [Homepage Wirefame](#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
+This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](strategy#SiteMap) and [Homepage Wirefame](strategy#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
 
 
 
@@ -516,7 +516,7 @@ Tasks
 : Evaluate a user interface against usability principles and provide recommendations for improvement.
 
 Deliverables
-:	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated findings report.
+:	Results may be delivered as part of the [Discovery Report](strategy#DiscoveryReport) or as a dedicated findings report.
 
 Time Req
 :	6–8 hours and inclusion in the Discovery Report
@@ -535,7 +535,7 @@ Tasks
 : Create a list of tasks to test; create a prototype; put humans in front of it; give them the tasks; record what happens.
 
 Deliverables
-:	Results may be delivered as part of the [Discovery Report](#DiscoveryReport) or as a dedicated usability findings report.
+:	Results may be delivered as part of the [Discovery Report](strategy#DiscoveryReport) or as a dedicated usability findings report.
 
 Time Req
 :	64–80 hours per round, with 4–5 users, and written usability report and recommendations. 
@@ -555,7 +555,7 @@ Steve Krug's book [Rocket Surgery Made Easy]() is an excellent guide to designin
 ## Quality Assurance
 
 Objective
-:	Ensure the site or application meets the requirements laid out in the [Functional Requirements](#FunctionalRequirements) or [Production Specification](#ProductionSpecification) document. Find bugs.
+:	Ensure the site or application meets the requirements laid out in the [Functional Requirements](strategy#FunctionalRequirements) or [Production Specification](strategy#ProductionSpecification) document. Find bugs.
 
 Tasks
 : Test every function described in the requirements or spec against expected behavior, and make sure the required content is present and correct.

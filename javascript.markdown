@@ -259,7 +259,7 @@ You can see this example in action on [jsFiddle](http://jsfiddle.net/khamer/AVxb
 ## Naming Conventions
 
 File naming conventions are described in [Storing and Naming
-Files](#StoringandNamingFiles).
+Files](javascript#StoringandNamingFiles).
 
 The following describes how JavaScript variables, functions, classes, and
 methods should be named.
