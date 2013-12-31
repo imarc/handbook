@@ -138,6 +138,14 @@ webserver. Before using Patton, you must edit the `patton.config` file and set
 the `DOMAIN_NAME` variable to the top-level domain name for the site. Do **not**
 include `www.`.
 
+### Initialization (Patton 10.x)
+
+Patton 10+ uses ACLs instead of cludged together `sudo` allowances.  You can
+initialize a new skeleton structure with the following.   This will not only create
+the various environment folders, but also set their ACLs appropriately.
+
+	./deploy -i .
+
 ### Show Config
 
 The simplest operation with Patton is to display the current configuration. This
@@ -332,6 +340,26 @@ superglobal contain the same keys that would be present with an Apache request.
 	}
 
 #### Example Shell Migration
+
+##### Patton 10+
+
+Newer versions of patton use ACLs so you should not need to worry about using
+`chmod` or `chown`.  You should be able to `mkdir`, `rm`, `cp`, and `mv` as you
+please with no sudo necessary.
+
+	# Create a new directory
+	mkdir -p $ENV_WRITABLE_DIR/photos/photo
+
+	# Delete an old directory
+	rm -Rf $ENV_WRITABLE_DIR/photos/photo
+
+	# Move a folder
+	mv $ENV_WRITABLE_DIR/photos/photo $ENV_WRITABLE_DIR/photos/image
+
+Additionally, since proper defaults are set on writable folders, you do not
+need to worry about granting permissions to additional users.
+
+##### Earlier
 
 Bash migration scripts have a specific number of commands that can be executed
 as `root` via `sudo` to allow for the low-privilege `deploy` to perform common
