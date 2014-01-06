@@ -613,6 +613,7 @@ systems and setups.
 	{
 		// ...
 	}
+	?>
 
 Shorthand PHP tags – `<? ?>` – should be used in views, controllers, and other
 non-class files. Shorthand tags promote readability and brevity, which outweigh
@@ -621,7 +622,7 @@ the loss of portability when
 
 	<div class="success">
 		<p>
-			<?= $name ?> successfully added.
+			<?= $message ?>
 		</p>
 	</div>
 
@@ -663,6 +664,7 @@ following the PHP open tag.
 
 	<?php
 	namespace Controllers;
+	?>
 
 Class declarations follow the K&R style for of indenting and bracing, by
 placing the opening brace on a new line, the same indention level as the
