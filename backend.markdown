@@ -481,9 +481,8 @@ business logic.
 
 ## Naming Conventions
 
-File naming conventions are described in [Storing and Naming
-Files](backend#StoringandNamingFiles), this section describes in-code PHP and Database 
-naming conventions.
+File naming conventions are described in [Storing and Naming Files](backend#StoringandNamingFiles), 
+this section describes in-code PHP and Database naming conventions.
 
 
 ### Database Naming Conventions
