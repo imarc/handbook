@@ -6,8 +6,8 @@ layout: default
 <section class="intro">
 	<p>
 		This document describes iMarc’s preferred method for deploying websites using 
-		an automated, repeatable system called <tt>patton</tt>.
-		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		an automated, repeatable system called  `patton`. 
+		[iMarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -271,9 +271,9 @@ Script migrations are scripts that end with `.sh` or `.php` and are stored in
 the `/scripts/migrations/` folder that lives either inside of `/trunk/` or
 `/branches/branch_name/`.
 
-//The scripts commands are executed as the OS deploy user. To see what user
+The scripts commands are executed as the OS deploy user. To see what user
 account will be used, execute `./deploy -cq` and look for the `DEPLOY_USER`
-setting.//
+setting.
 
 Script migrations that end in `.sh` will be executed by bash, whereas migrations
 ending in `.php` are executed by PHP on the command line.
