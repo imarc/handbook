@@ -107,7 +107,7 @@ Depending on budget and goals, a number of research activities may be incorporat
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
-### Initial Findings
+### Initial Discovery and Findings
 
 Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects of very low complexity
