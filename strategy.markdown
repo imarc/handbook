@@ -268,7 +268,7 @@ Deliverables
 Time Req
 :	6–8 hours and inclusion in Discovery Report
 
-The primary purpose of this document is to identify and convey past patterns in user activity, page flows, and content to better inform decisions during planning, design and development. It is necessarily backwards-looking.
+The primary purpose of this document is to identify and convey past patterns in user activity, page flows, content, and traffic sources to better inform decisions during planning, design and development. It is necessarily backwards-looking.
 
 **Topics include:**
 
@@ -277,6 +277,8 @@ The primary purpose of this document is to identify and convey past patterns in 
 + **Content:** Top pages, search terms, important content with puzzlingly low access rates
 + **Events:** Correlate offline events to visits or conversions
 + **Social:** Traffic sources, popular content
++ **Traffic Sources:** Relative mix of traffic sources, keywords used in organic search
++ **SEO Audit:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [iMarc Wiki: SEO](http://wiki.imarc.net/SEO) for guidance.)
 
 
 ### Metrics Baseline
