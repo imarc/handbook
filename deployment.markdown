@@ -141,10 +141,23 @@ include `www.`.
 ### Initialization (Patton 10.x)
 
 Patton 10+ uses ACLs instead of cludged together `sudo` allowances.  You can
-initialize a new skeleton structure with the following.   This will not only create
-the various environment folders, but also set their ACLs appropriately.
+initialize a new skeleton structure with the following inside of your project's
+folder:
 
 	./deploy -i .
+
+You can optionally create the entire project directory by specifying a completely
+new folder:
+
+	./deploy -i /var/www/example.com
+
+Initialization will perform the following actions on the noted supported systems
+unless configured otherwise:
+
+1. Create basic directory structure
+2. Set access control lists or permissions if `ACLS=0`
+3. Create databases - *PostgreSQL Only*
+4. Set proper privileges on databases - *PostgreSQL 9+ Only*
 
 ### Show Config
 
@@ -282,7 +295,7 @@ ending in `.php` are executed by PHP on the command line.
 
 The following environmental variables are available directly in shell scripts,
 or in PHP via the `$_ENV` superglobal.
- 
+
  <dl>
 	<dt>ENVIRONMENT</dt>
 	<dd>The current environment, e.g. `dev`</dd>
@@ -308,7 +321,7 @@ or in PHP via the `$_ENV` superglobal.
 	<dt>ENV_OLD_DB</dt>
 	<dd>
 		The old database for the environment, e.g. `dev_example_com`.
-		*This is not normally useful because this database is dropped by 
+		*This is not normally useful because this database is dropped by
 		the end of deployment when deploying to the `dev` and `stage`
 		environments, and is the same as `ENV_NEW_DB` for the `prod`
 		environment.*
@@ -366,7 +379,7 @@ as `root` via `sudo` to allow for the low-privilege `deploy` to perform common
 actions.
 
 - `rm -Rf`
-- `mv` 
+- `mv`
 - `chmod -R`
 - `mkdir -p`
 
