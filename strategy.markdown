@@ -268,6 +268,9 @@ Deliverables
 Time Req
 :	6–8 hours and inclusion in Discovery Report
 
+Template
+:	fileserver: files/user_experience/web-analytics/
+
 The primary purpose of this document is to identify and convey past patterns in user activity, page flows, content, and traffic sources to better inform decisions during planning, design and development. It is necessarily backwards-looking.
 
 **Topics include:**
@@ -387,6 +390,10 @@ Summary
 Time Req
 : 8–30 hours (varies by scope of project)
 
+Template
+:	fileserver: files/user_experience/sitemap-wireframe-template/
+
+
 + Conveys content hierarchy and labeling
 + Denotes CMS-controlled content and template usage
 + Creates a navigational backbone for a website
@@ -398,10 +405,13 @@ Time Req
 ### Wireframe
 
 Summary
-: User interface and content illustration stripped of all presentational style. 
+: User interface and content illustration stripped of all presentational style.
 
 Time Req
 : 8–12 hours per page or screen
+
+Template
+:	fileserver: files/user_experience/sitemap-wireframe-template/
 
 A wireframe is a low fidelity representation of a design that clearly shows:
 
@@ -417,7 +427,6 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 
 #### Example Wireframe
 ![Example Wireframe](img/strategy/wireframe.png)
-
 
 #### Example Storyboard
 ![Example Storyboard](img/strategy/storyboard.png)
@@ -458,6 +467,10 @@ Summary
 Time Req
 :	22-24 hours
 
+Template
+:	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
+
+
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](strategy#SiteMap) and [Homepage Wirefame](strategy#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
 
 
@@ -469,6 +482,9 @@ Summary
 
 Time Req
 :	 72–150 hours
+
+Template
+:	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
 
 Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
 
@@ -581,11 +597,12 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 ### Wireframes and Site Maps
 
-[OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
+[OmniGraffle Pro 6](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
-We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices.
+We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. (As of OmniGraffle 6, it's a built-in stencil.)
 
-We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES → user_experience → sitemap_wireframe_template → stencils.
+We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES/user_experience/sitemap-wireframe-template/stencils.
+
 
 
 ### Reports and Specs
@@ -594,7 +611,7 @@ We also have created an "iMarc Objects" OmniGraffle stencil with some commonly u
 
 We have used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
-[Keynote](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+[Keynote 5 ('09)](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
 ### Surveys and Testing
