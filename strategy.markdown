@@ -391,7 +391,7 @@ Time Req
 : 8–30 hours (varies by scope of project)
 
 Template
-:	fileserver: files/user_experience/sitemap-wireframe-template/
+:	fileserver: files/user_experience/sitemap-wireframe-template/ <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
 
 
 + Conveys content hierarchy and labeling
