@@ -269,7 +269,7 @@ Time Req
 :	6–8 hours and inclusion in Discovery Report
 
 Template
-:	fileserver: files/user_experience/web-analytics/
+:	fileserver: files/user_experience/web-analytics/ <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
 
 The primary purpose of this document is to identify and convey past patterns in user activity, page flows, content, and traffic sources to better inform decisions during planning, design and development. It is necessarily backwards-looking.
 
