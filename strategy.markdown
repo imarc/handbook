@@ -1,4 +1,4 @@
----
+
 title: Strategy
 layout: default
 ---
@@ -390,16 +390,35 @@ Summary
 Time Req
 : 8–30 hours (varies by scope of project)
 
-Template
+Templates
 :	fileserver: files/user_experience/sitemap-wireframe-template/ <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
 
+A sitemap should:
 
-+ Conveys content hierarchy and labeling
-+ Denotes CMS-controlled content and template usage
-+ Creates a navigational backbone for a website
++ Convey content hierarchy and labeling
++ Denote CMS-controlled content and template usage
++ Create a navigational backbone for a website
+
+A sitemap can be as simple as an outline, for example:
+
+![Non-canonical sitemap outline style that we don't do here](img/strategy/sitemap-outline.png)
+
+iMarc sitemaps, however, tend to either be a tree-style diagram such as this:
+
+![Tree-style sitemap diagram](img/strategy/sitemap-tree.png)
+
+Or, when it helps in comprehension, a flowchart-style diagram may be used, with mini-wireframes used to denote page templates:
+
+![Flowchart-style sitemap diagram](img/strategy/sitemap-flowchart.png)
+
+Regardless of the style used, an iMarc sitemap should:
+
++ Every page on the site should be represented on the sitemap.
+	+ Exception: List-and-view constructs, such as press releases, events calendars, and product catalogs, are instead represented by a multi-page icon.
++ The page names and their order on the sitemap are significant -- site menus will match this.
 
 #### Example Site Map:
-![Sample Site map](img/strategy/sitemap.png)
+![Sample Site map, tree-style](img/strategy/sitemap.png)
 
 
 ### Wireframe
@@ -410,18 +429,19 @@ Summary
 Time Req
 : 8–12 hours per page or screen
 
-Template
-:	fileserver: files/user_experience/sitemap-wireframe-template/
+Templates
+:	fileserver: files/user_experience/sitemap-wireframe-template/ <br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
 
-A wireframe is a low fidelity representation of a design that clearly shows:
+A wireframe is a low fidelity representation of a design that connects the underlying conceptual structure (information architecture), to the visual design of the website. A wireframe should clearly show:
 
 + the main groups of **content**,
 + the structure of **information**,
++ the available **functions or actions**,
 + a basic visualization of the **user interface**. 
 
-The simplified, colorless aesthetic of a wireframe allows us to rapidly iterate the underlying functional design a web page or application. It helps to visualize ideas and to gain consensus among stakeholders.
+The wireframe allows us to rapidly iterate the underlying functional design a web page or application. It helps to visualize ideas and to gain consensus among stakeholders. The wireframe's simplified, colorless aesthetic allows us to focus on content and function instead of being distracted by creative design.
 
-Wireframes usually are annotated to describe behaviors, functionality, and content needs. *Always use real content*. Using Latin text (“lorem ipsum”) may speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well.
+Wireframes usually are annotated to describe behaviors, functionality, and content needs. **Always use real content.** Using Latin text (“lorem ipsum”) may speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well. It bears repeating: **always use real content**.
 
 Most wireframes depict single web pages, but some may depict multiple screens in a complex interaction or workflow. We call these **storyboards**. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
 
