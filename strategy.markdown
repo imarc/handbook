@@ -11,7 +11,7 @@ layout: default
 </section>
 
 <style type="text/css">
-figure img { border: 1px solid gray;}
+figure img { border: 1px solid #999999;}
 figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 </style>
 
