@@ -402,7 +402,6 @@ A sitemap should:
 A sitemap can be as simple as an outline, for example:
 
 <figure markdown="1">
-<figcaption>Sitemap as a simple outline</figcaption>
 ![Non-canonical sitemap outline style that we don't do here](img/strategy/sitemap-outline.png)
 </figure>
 
@@ -422,11 +421,15 @@ Regardless of the style used, an iMarc sitemap follows certain conventions:
 
 + Every page on the site should be represented on the sitemap.
 	+ Exception: List-and-view constructs, such as press releases, events calendars, and product catalogs, are instead represented by a multi-page icon.
-+ The page names and their order on the sitemap are significant -- site menus will match this.
++ The page names and their order on the sitemap are significant – site menus will match this.
 
 #### Example Site Maps:
-![Sample Site map, tree-style](img/strategy/sitemap.png) <br>
-![Sample Site map, flowchart-style](img/strategy/sitemap-imarc-flowchart.png)
+<figure markdown="1">
+[![Sample Site map, tree-style](img/strategy/sitemap.png)](img/strategy/sitemap.png)
+</figure>
+<figure markdown="1">
+[![Sample Site map, flowchart-style](img/strategy/sitemap-imarc-flowchart.png)](img/strategy/sitemap-imarc-flowchart.png)
+</figure>
 
 
 ### Wireframe
