@@ -429,9 +429,11 @@ Regardless of the style used, an iMarc sitemap follows certain conventions:
 
 #### Example Site Maps:
 <figure markdown="1">
+<figcaption>Traditional style:</figcaption>
 [![Sample Site map, tree-style](img/strategy/sitemap.png)](img/strategy/sitemap.png)
 </figure>
 <figure markdown="1">
+<figcaption>Flowchart style:</figcaption>
 [![Sample Site map, flowchart-style](img/strategy/sitemap-imarc-flowchart.png)](img/strategy/sitemap-imarc-flowchart.png)
 </figure>
 
