@@ -10,6 +10,10 @@ layout: default
 	</p>
 </section>
 
+<style type="text/css">
+figure img { border: 1px solid gray;}
+figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
+</style>
 
 
 ## Goals
