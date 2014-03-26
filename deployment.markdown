@@ -73,9 +73,9 @@ an Environment. [More on using migrations.](deployment#UsingMigrations)
 
 ## Workflows
 
-There are two primary workflows we use with Patton: Live Site and Development
-Site. The Live Site workflow is the most common and serves as a baseline with
-which to compare the Development Site workflow.
+There are two distinct workflows we use with Patton: Live Site and Development
+Site. While each one of these is unique in some ways, the earliest part of the
+workflow (making and testing changes), remains very much the same.
 
 While Patton provides a great deal of functionality and guidance for deployment
 of websites, it is still important that everyone involved in a project
@@ -83,12 +83,120 @@ understand the workflow and communicate what is being done.
 
 ### Common Practices
 
-In all workflows, SVN is the master repository of Code and Code should *never*
-be manually edited on the Stage or Prod environments. Edits to Code are
-previewed on Dev and committed to SVN. Patton is used to deploy them to the
-Stage and Prod environments.
+In all workflows, version control represents the authoritative copy of the Code
+and Code should *never* be manually edited on the Stage or Prod environments.
+Edits to Code are previewed on Dev and committed to SVN/Git/etc. Patton is used
+to deploy them to the Stage and Prod environments.
 
-### Live Site Workflow
+_**NOTE:** The examples below use command line versions of SVN and SFTP to
+complete a single minor update to the site.  Depending on the type of version
+control used for the project and the tools you are using, your specific
+actions may differ, but the process **should not**._
+
+#### Cloning or Updating Your Working Copy
+
+The first step to working on a site is to clone/checkout a working copy of it.
+If you already have a working copy that you used to make updates previously
+then you can skip this step.  Here is how to checkout a repository using SVN:
+
+    user@host:~$ svn checkout https://<svn.example.com>/<repository>/trunk <repository>
+
+If you simply need to get any updates/changes which have been made since the
+last time you worked on it, you can do the following:
+
+    user@host:~$ cd <repository>
+    user@host:~/<repository>$ svn update
+    
+_**NOTE:** It is important to make sure you pull updates before you begin
+working.  This helps to avoid conflicts with your changes and other people's
+changes_
+
+#### Making and Testing Changes
+
+Once you have a working copy checked out, you can make changes to that local
+copy and upload them to the Dev Environment.  You can use whatever tools
+you're most familiar with to make changes and upload them with SFTP/SCP:
+
+    user@host:~/<repository>$ sftp <user>@<example.com>
+    Connected to example.com.
+    sftp> lcd <app/views/about>
+    sftp> cd <app/views/about>
+    sftp> put main.php
+    sftp> exit
+
+Once you have made your edits, you can review the changes on the development
+site.
+
+#### Committing Changes
+
+Once your changes look good, you need to commit them before they can actually
+be deployed.  Continuing with our example using SVN, we'll take a look at
+several related commands.
+
+##### Show Changes
+
+Before committing you might just want to double check which files you've
+changed:
+
+    user@host:~/<repository>$ svn status
+    M       app/views/about/main.php
+    
+The "M" signifies that the file has been modified since your previous update.
+If you want to see an actual _diff_ of the file you can execute the following:
+
+    user@host:~/<repository>$ svn diff app/views/about/main.php
+    Index: app/views/about/main.php
+    ===================================================================
+    --- app/views/about/main.php	(revision 321)
+    +++ app/views/about/main.php	(working copy)
+    @@ -15,7 +15,7 @@
+     			<p>
+     				...ami memory cat defunct.
+     			</p>   
+     
+    -			<h2>Old Heading</h2>
+    +			<h2>Modified New Heading</h2>
+     			<p>
+     				Lorem ipsum ditty kong...
+     			</p>
+        
+The above example shows where we changed the text of a heading file.
+Additional context (common lines of code) may be provided above or below
+actual changes.  Changes themselves, however, will be shown as either (-)
+for removal or (+) for addition.
+
+##### Make Them Stick
+
+After reviewing your changes you can commit them back to the repository:
+
+    user@host:~/<repository>$ svn commit -m "Changed heading" <app/views/about/main.php>
+    Sending        app/views/about/main.php
+    Transmitting file data .
+    Committed revision 322.
+
+
+##### Testing Deployment
+
+Once commited you can follow the directions [Deploying](deployment#Deploying)
+in order to deploy your changes to the Stage Environment.  You can then
+review these changes on your stage site's URL.
+
+##### Pushing Live
+
+Once you've reviewed the changes on stage and ensured nothing was broken
+during or after deployment on the stage site, you can deploy to production.
+Again, use the relevant example under [Deploying](deployment#Deploying).
+
+### Live Site vs. Development Site
+
+Depending on the specific workflow which Patton is currently configured
+for, there are other things you may need to keep in mind depending on
+how significant your changes to the code base are.
+
+The Live Site workflow is the most common and serves as a baseline with
+which to compare the Development Site workflow.
+
+#### Live Site Workflow
 
 In the Live Site workflow, a live website is being run in the Prod environment.
 This is the standard workflow to be used once a client starts creating Content
@@ -96,7 +204,7 @@ on the site.
 
 This workflow means:
 
-- All SiteManager content must be authored in the Prod environment
+- **All SiteManager content must be authored in the Prod environment**
 - Testing content can be created in the Dev and Stage environments, but it
   will be overwritten each time one of those environments is deployed
 - [Migration](deployment#UsingMigrations) scripts must be written for database and
@@ -105,7 +213,7 @@ This workflow means:
 The Live Site Workflow is enabled by setting `CONTENT_SOURCE_ENV="prod"` in
 `patton.config`.
 
-### Development Site Workflow
+#### Development Site Workflow
 
 With the Development Site workflow, the Prod and Stage environments will not
 contain any Content, or at least any relevant Content. This workflow is used for
@@ -113,8 +221,9 @@ contain any Content, or at least any relevant Content. This workflow is used for
 
 There needs to be clear communication between all members of a project when
 using the Development Site workflow to prevent loss of client-supplied data.
-**As soon as a client is creating content, the project should immediately
-switch over to the [Live Site Workflow](deployment#LiveSiteWorkflow).**
+
+_**NOTE:** As soon as a client is creating content, the project should immediately
+switch over to the [Live Site Workflow](deployment#LiveSiteWorkflow)._
 
 This workflow means:
 
