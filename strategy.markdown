@@ -171,7 +171,7 @@ As larger projects often have many goals, yet do not have unlimited time and res
 
 <figure markdown="1">
 <figcaption>Sample card sort result</figcaption>
-![Sample card sort](cardsort.jpg)
+![Sample card sort](img/strategy/cardsort.jpg)
 </figure>
 
 > (If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.)
