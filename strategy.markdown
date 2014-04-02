@@ -18,6 +18,9 @@ figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 
 ## Goals
 
+> “Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.”  
+> –Sun Tzu
+
 The goal of all strategy activity is to produce a clear and concise blueprint for an application or website. **Strategy work aims to clearly define the project for the client and production team while focusing on a positive end-user experience.**
 
 Strategy work will sanity check recommendations from the proposal against actual client needs. Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
@@ -106,12 +109,15 @@ If the client also engages iMarc to produce the project, the strategy lead is re
 
 ## Discovery Activities
 
+> “Research is formalized curiosity. It is poking and prying with a purpose.”  
+> –[Zora Neale Hurston](http://en.wikipedia.org/wiki/Zora_Neale_Hurston)
+
 Depending on budget and goals, a number of research activities may be incorporated into a project. 
 
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
-### Initial Discovery and Findings
+### Initial Discovery
 
 Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects of very low complexity
@@ -123,7 +129,7 @@ Deliverables
 :	Short findings document (1–3 pages)
 
 Time Req
-:	8 hours
+:	8–12 hours
 
 
 For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
@@ -143,19 +149,34 @@ Next, iMarc creates a short report of findings, and presents those findings to t
 
 
 
-### Business Analysis and Prioritization
+### In-Depth Discovery
 
 Objective
-:	Review and prioritize goals based on business requirements and audience needs.
+:	Clearly define and prioritize the goals of the project, stakeholder needs, and audiences.
 
 Tasks
-:	Explore and prioritize the client's business environment, target audiences, goals and key challenges.
+:	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality; identify key challenges. Report findings to client for validation.
 
 Deliverables
-:	Findings are summarized in the [Discovery Report](strategy#DiscoveryReport).
+:	Findings are summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone discovery findings document (3–8 pages).
 
 Time Req
-:	22–28 hours
+:	24–32 hours
+
+For projects such as creating a custom web app, a major re-design of a large site, or a project with many stakeholders and high visibility, an in-depth discovery process will yield better results. This is typically lead by a Strategist, with the assistance of the producer, engineering, UX and creative groups.
+
+This starts with a 90- to 120–minute conference call or meeting with the client stakeholder team. iMarc and the client team discuss the project goals, their current business environment and growth objectives. We'll also discuss the client's current site, and identify competitor sites and exemplars for follow-up. (This is often a precursor to a full [Competitive Analysis](#CompetitiveAnalysis).)
+
+As larger projects often have many goals, yet do not have unlimited time and resources, it's important to prioritize goals. A group card sort activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them. 
+
+<figure markdown="1">
+<figcaption>Sample card sort result</figcaption>
+![Sample card sort](cardsort.jpg)
+</figure>
+
+> (If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.)
+
+Lastly, iMarc creates a report of findings, and presents those findings to the client for validation. This often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. The report may be part of a comprehensive Discovery Report that includes other research, or as a stand-alone document.
 
 **Topics include:**
 
@@ -163,21 +184,23 @@ Time Req
 + Prioritized goals
 + Known challenges
 + Target audiences
++ Competitors
++ Best practices in content, layout, navigation, workflow, and SEO
 
 
-### User Interviews
+### User/Customer Interviews
 
 Objective
-:	Find out not just what users are doing, but *why*. The better we understand the users' motivations, the better we can fulfill their needs.
+:	Find out not just what users are doing, but *why*. The better we understand our users' motivations, the better we can fulfill their needs.
 
 Tasks
 :	Locate, contact and talk to the *actual users* of the site or application, conducting contextual, unbiased interviews.
 
 Deliverables
-:	The results are summarized for the client in the [Discovery Report](strategy#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
+:	Findings are summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone user/customer interview findings document.
 
 Time Req
-:	30 hours for 6 users interviews and inclusion in Discovery Report
+:	30 hours for 6 user/customer interviews
 
 User interviews can take place in person or remotely over the phone, with or without screen sharing. We create a script and a list of questions to ensure consistency.
 
@@ -206,7 +229,7 @@ Tasks
 :	Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
 
 Deliverables
-:	The results are summarized for the client in the [Discovery Report](strategy#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
+:	Findings are summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone stakeholder interview findings document.
 
 Time Req
 :	32–68 hours for 6–12 stakeholders and inclusion in Discovery Report
@@ -241,7 +264,7 @@ Tasks
 :	Look for patterns and best practices in content, layout, navigation, workflow, and SEO.
 
 Deliverables
-:	A competitive analysis should culminate in specific recommendations for the project, as part of the [Discovery Report](strategy#DiscoveryReport). Occasionally, a dedicated findings report is created for this component.
+:	A competitive analysis should culminate in specific recommendations for the project,summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone user/customer interview findings document.
 
 Time Req
 : 16–32 hours, depending on breadth and depth
@@ -267,10 +290,10 @@ Tasks
 :	Explore trends and patterns in user activity, content, and page flows.
 
 Deliverables
-: 2–4 page summary of most important analytics data findings.
+:	2–4 page summary of most important analytics data findings.
 
 Time Req
-:	6–8 hours and inclusion in Discovery Report
+:	6–8 hours
 
 Template
 :	fileserver: files/user_experience/web-analytics/ <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
@@ -297,7 +320,7 @@ Tasks
 :	Talk to core stakeholders, identify metrics for success based on their business activities, and document and prepare those metrics for implementation by the development team.
 
 Deliverables
-: 1–2 page stand-alone report or inclusion in Discovery Report. The findings and metrics should be incorporated into the site Requirements or Specification.
+:	1–2 page stand-alone report or inclusion in Discovery Report. The findings and metrics should be incorporated into the site Requirements or Specification.
 
 Time Req
 :	6–8 hours
@@ -320,16 +343,16 @@ In both cases, set a baseline to measure improvement (if possible). If the clien
 ### Surveys
 
 Objective
-:	Gather information from a large number of participants, yielding results in quantitative terms. 
+:	Gather information from a large number of participants, yielding results in quantitative terms.
 
 Tasks
 :	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](strategy#SurveysandTesting) below), analyze the results.
 
 Deliverables
-:	Results are delivered as part of the [Discovery Report](strategy#DiscoveryReport).
+:	Results are delivered either in a stand-alone survey findings document, or in a [Discovery Report](strategy#DiscoveryReport).
 
 Time Req
-: 32–40 hours per survey and inclusion in the discovery report. If also recruiting, add 8–12 hours.
+: 32–40 hours per survey. If also recruiting, add 8–12 hours.
 
 
 Questions should be close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
@@ -342,8 +365,8 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 ## Deliverables and Supporting Documents
 
-> "Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones."  
-> —Frederick P. Brooks, Jr. *The Mythical Man-Month*, 1975.
+> ”Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones.“  
+> —[Frederick P. Brooks, Jr.](http://en.wikipedia.org/wiki/Fred_Brooks) *The Mythical Man-Month*, 1975.
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
@@ -372,12 +395,12 @@ Its secondary goal is to ensure internal stakeholders agree upon the project's o
 
 **Topics may include:**
 
-+ [Business Analysis and Prioritization](stretegy#BusinessAnalysisandPrioritization)
++ [In-Depth Discovery](strategy#InDepthDiscovery)
 + [Web Analytics Audit](strategy#WebAnalyticsAudit)
 + [Metrics Baseline](strategy#MetricsBaseline)
-+ [Competitive analysis](strategy#CompetitiveAnalysis)
-+ [Stakeholder interview](strategy#StakeholderInterviews) findings
-+ [User interview](strategy#UserInterviews) findings
++ [Competitive Analysis](strategy#CompetitiveAnalysis)
++ [Stakeholder Interviews](strategy#StakeholderInterviews) findings
++ [User/Customer Interviews](strategy#UserCustomerInterviews) findings
 + [Survey](strategy#Surveys) findings
 + [Usability Testing](strategy#UsabilityTesting) results
 + Recommendations
@@ -538,6 +561,9 @@ This document restates the scope of production and must be approved by the clien
 
 ## Usability Testing
 
+> “If we knew what it was we were doing, it would not be called research, would it?”  
+> –Albert Einstein
+
 The best way to find out what does or does not work well is by asking *real people* to try it. 
 
 Usability testing can be used to improve existing systems, or while developing new ones. We engage in several types of testing.
@@ -629,6 +655,9 @@ QA serves as a "last pass" to catch anything missed during production.
 
 ## Tools
 
+> “Man is a tool-using animal. Without tools he is nothing, with tools he is all.”  
+> –[Thomas Carlyle](http://www.britannica.com/EBchecked/topic/96126/Thomas-Carlyle)
+
 The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
 
 
@@ -636,7 +665,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 [OmniGraffle Pro 6](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
-We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. (As of OmniGraffle 6, it's a built-in stencil.)
+We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. (It's in OmniGraffle 6's standard stencil library.)
 
 We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES/user_experience/sitemap-wireframe-template/stencils.
 
@@ -644,11 +673,15 @@ We also have created an "iMarc Objects" OmniGraffle stencil with some commonly u
 
 ### Reports and Specs
 
-[Word](http://www.microsoft.com/mac/word) is used for most reports and specs, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+We publish Functional Requirements, Production Specifications, and some reports as web-native documents on [strategy.imarc.net](https://strategy.imarc.net). This uses a custom [document publishing system](http://wiki.imarc.net/Strategy_Docs_Publishing) inspired by GitHub Pages, but with many customizations for our own process. See the wiki for details.
 
-We have used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues. We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
+We use [Word](http://www.microsoft.com/mac/word) for some documents, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
-[Keynote 5 ('09)](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+We have used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues.
+
+We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
+
+[Keynote](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
 ### Surveys and Testing
@@ -657,15 +690,17 @@ We have used [Pages](http://www.apple.com/iwork/pages/), however the revision to
 
 [Treejack](http://www.optimalworkshop.com/treejack.htm) is used for testing content structure and navigation.
 
+[OptimalSort](http://www.optimalworkshop.com/optimalsort.htm) is used for remote card sort exercises.
+
 [Camtasia](http://www.techsmith.com/camtasia.html) is used for conducting in-person user testing. Camtasia records the session screen and audio.
 
-[GoToMeeting](http://www.gotomeeting.com/fec/) is used for remote user testing.
+[GoToMeeting](http://www.gotomeeting.com/fec/) or [Join.me](http://join.me) are used for remote user testing.
 
 
 
 ### Document Metadata
 
-Strategy deliverables should contain some combination of the following meta information.
+Strategy deliverables should contain an appropriate combination of the following meta information.
 
 Client
 : Example: *iMarc LLC*
