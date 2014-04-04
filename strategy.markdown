@@ -727,6 +727,6 @@ Revision Notes
 
 This section lists major updates only. For a complete history, see the [document history](https://github.com/imarc/handbook/commits/gh-pages/strategy.markdown) on GitHub.
 
-* April 4, 2014: Overhauled Initial Discovery/In-Depth Discovery (replacing "Intial Findings" and "Business Analysis and Goals Prioritization", respectively). Retired Discovery Report. Tools updates. Added card sorts.
+* April 4, 2014: Overhauled Core Discovery/Detailed Discovery (replacing "Intial Findings" and "Business Analysis and Goals Prioritization", respectively). Retired Discovery Report. Tools updates. Added card sorts.
 * February 20, 2014: Site Map updates and new illustrations.
 * Jan 31, 2014: Added document templates to many deliverables.
