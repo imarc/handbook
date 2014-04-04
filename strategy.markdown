@@ -35,14 +35,14 @@ When proposals specify time or cost budget for production, strategy deliverables
 Deliverable
 : A document or similar *work product* you can give to someone.
 
-Task
-: An activity you *do*. It is *not* a deliverable.
+Activity
+: An task you *do*. It is *not* a deliverable. (It may result in one.)
 
-Time Reqs
+Time Req
 : The number of hours required to produce an activity or deliverable, for an *average-sized project*.
 
 Scope
-: The *total hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](strategy#Proposal) or a [Statement of Work](strategy#StatementofWork), and should be restated in the Requirements.
+: The *total hours* allocated to the project, and mandatory *features*. Scope is defined by a [Proposal](strategy#Proposal) or a [Statement of Work](strategy#StatementofWork), and should be restated in the Requirements or Specification.
 
 Requirements
 : What the end product must do. Defined by a [Functional Requirements](strategy#FunctionalRequirements) or a [Production Specification](strategy#ProductionSpecification) document.
@@ -63,7 +63,7 @@ The overall process typically looks something like this:
 
 Strategy begins with an internal handoff meeting between the proposal author and strategy team.
 
-Before strategy work begins, the proposal author is responsible for notifying the client that project leadership is changing hands and the lead strategist is now their primary point of contact.
+Before strategy work begins, the proposal author is responsible for notifying the client that project leadership is changing hands and the producer or lead strategist is now their primary point of contact.
 
 
 ### Team Members and Roles
@@ -102,7 +102,7 @@ The Designer, Engineer and UX Engineer(s) will stick with the project after the 
 
 The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
 
-If the client also engages iMarc to produce the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
+If the client also engages iMarc to develop the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
 
 
@@ -117,7 +117,7 @@ Depending on budget and goals, a number of research activities may be incorporat
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
-### Initial Discovery
+### Core Discovery
 
 Objective
 :	Clearly define the goals of the project and stakeholder needs, quickly and efficiently, for projects of very low complexity
@@ -131,12 +131,11 @@ Deliverables
 Time Req
 :	8–12 hours
 
-
 For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
 This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
 
-Next, iMarc creates a short report of findings, and presents those findings to the client for validation.
+Next, iMarc creates a short report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way.
 
 **Topics include:**
 
@@ -149,7 +148,7 @@ Next, iMarc creates a short report of findings, and presents those findings to t
 
 
 
-### In-Depth Discovery
+### Detailed Discovery
 
 Objective
 :	Clearly define and prioritize the goals of the project, stakeholder needs, and audiences.
@@ -158,7 +157,7 @@ Tasks
 :	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality; identify key challenges. Report findings to client for validation.
 
 Deliverables
-:	Findings are summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone discovery findings document (3–8 pages).
+:	Findings document (3–8 pages)
 
 Time Req
 :	24–32 hours
@@ -167,16 +166,9 @@ For projects such as creating a custom web app, a major re-design of a large sit
 
 This starts with a 90- to 120–minute conference call or meeting with the client stakeholder team. iMarc and the client team discuss the project goals, their current business environment and growth objectives. We'll also discuss the client's current site, and identify competitor sites and exemplars for follow-up. (This is often a precursor to a full [Competitive Analysis](#CompetitiveAnalysis).)
 
-As larger projects often have many goals, yet do not have unlimited time and resources, it's important to prioritize goals. A group card sort activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them. 
+As larger projects often have many goals, yet do not have unlimited time and resources, it's important to prioritize goals. A group [card sort](#GoalsCardSort) activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
-<figure markdown="1">
-<figcaption>Sample card sort result</figcaption>
-![Sample card sort](img/strategy/cardsort.jpg)
-</figure>
-
-> (If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.)
-
-Lastly, iMarc creates a report of findings, and presents those findings to the client for validation. This often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. The report may be part of a comprehensive Discovery Report that includes other research, or as a stand-alone document.
+Lastly, iMarc creates a report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. 
 
 **Topics include:**
 
@@ -186,6 +178,26 @@ Lastly, iMarc creates a report of findings, and presents those findings to the c
 + Target audiences
 + Competitors
 + Best practices in content, layout, navigation, workflow, and SEO
+
+#### Goals Card Sort
+
+Projects often have many goals, yet do not have unlimited time and resources. A group card sort activity can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
+
+A small-group card sort is performed in person with the core client team (3–6 people). Cards are prepared in advance with all known project goals, and blanks are available to create new ones. The team is asked to sort the goals into groups (typically "High", "Medium", and "Low").  Not only do priorities emerge, but the conversation within the client team clarifies _why_ cards go into each group.
+
+<figure markdown="1">
+<figcaption>Sample card sort result</figcaption>
+![Sample card sort](img/strategy/cardsort.jpg)
+</figure>
+
+If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
+
+**Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testinng tool such as TreeJack to test content findability, not a card sort.)
+
+Recommended reading: 
+
+* [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
+* [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
 
 
 ### User/Customer Interviews
@@ -197,7 +209,7 @@ Tasks
 :	Locate, contact and talk to the *actual users* of the site or application, conducting contextual, unbiased interviews.
 
 Deliverables
-:	Findings are summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone user/customer interview findings document.
+:	Findings document (typically 3–5 pages)
 
 Time Req
 :	30 hours for 6 user/customer interviews
@@ -229,10 +241,10 @@ Tasks
 :	Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
 
 Deliverables
-:	Findings are summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone stakeholder interview findings document.
+:	Findings document (typically 3–5 pages)
 
 Time Req
-:	32–68 hours for 6–12 stakeholders and inclusion in Discovery Report
+:	32–68 hours for 6–12 stakeholders
 
 
 Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
@@ -255,6 +267,7 @@ Stakeholders often mistake their own needs for their users' needs. It's our job 
 Batching in small groups can reduce time spent on-site but saves little time overall, and tend to result in less detailed information from all participants. Interviewing senior stakeholders effectively tends to be staff- and time-intensive.
 
 
+
 ### Competitive Analysis
 
 Objective
@@ -264,7 +277,7 @@ Tasks
 :	Look for patterns and best practices in content, layout, navigation, workflow, and SEO.
 
 Deliverables
-:	A competitive analysis should culminate in specific recommendations for the project,summarized either in a [Discovery Report](strategy#DiscoveryReport), or in a stand-alone user/customer interview findings document.
+:	A competitive analysis should culminate in specific recommendations for the project, summarized a findings document (typically 2–5 pages).
 
 Time Req
 : 16–32 hours, depending on breadth and depth
@@ -320,7 +333,7 @@ Tasks
 :	Talk to core stakeholders, identify metrics for success based on their business activities, and document and prepare those metrics for implementation by the development team.
 
 Deliverables
-:	1–2 page stand-alone report or inclusion in Discovery Report. The findings and metrics should be incorporated into the site Requirements or Specification.
+:	1–3 page findings document. The findings and metrics should be incorporated into the site Requirements or Specification.
 
 Time Req
 :	6–8 hours
@@ -339,7 +352,6 @@ It should provide up to 12 total metrics (the limit of a Google Analytics Dashbo
 In both cases, set a baseline to measure improvement (if possible). If the client is active in social media, also measure [amplification and applause](http://www.kaushik.net/avinash/best-social-media-metrics-conversation-amplification-applause-economic-value/) rates.
 
 
-
 ### Surveys
 
 Objective
@@ -349,7 +361,7 @@ Tasks
 :	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](strategy#SurveysandTesting) below), analyze the results.
 
 Deliverables
-:	Results are delivered either in a stand-alone survey findings document, or in a [Discovery Report](strategy#DiscoveryReport).
+:	1–3 page summary of findings.
 
 Time Req
 : 32–40 hours per survey. If also recruiting, add 8–12 hours.
@@ -363,6 +375,7 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 
 
+
 ## Deliverables and Supporting Documents
 
 > ”Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones.“  
@@ -373,40 +386,12 @@ During the strategy process, we'll refer to and create a number of deliverables.
 
 ### Proposal
 
-A proposal is created by Business Development and is a sales tool. It defines the project scope, suggests features and functionality, and usually includes quite a lot of background research and client goals. *Every strategy participant should read the proposal, in its entirety.*
+A proposal is created by Business Development and is a sales tool. It defines the project scope, suggests features and functionality, and usually includes quite a lot of background research and client goals. ***Every strategy participant should read the proposal, in its entirety.***
 
 
 ### Statement of Work
 
 A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Production Specification](strategy#ProductionSpecification) before production.
-
-
-### Discovery Report
-
-Summary
-:	A 10–25 page document summarizing the results of all [Discovery Activities](strategy#DiscoveryActivities) and providing specific recommendations for the project, for projects with production scope of *over 250 hours*.
-
-Time Req
-:	Sum of Discovery Activities conducted (above)
-
-The Discovery Report documents what we've learned, and provides specific recommendations for use in developing the [site map](strategy#SiteMap), [wireframes](strategy#Wireframe), and [specification](strategy#ProductionSpecification).
-
-Its secondary goal is to ensure internal stakeholders agree upon the project's objectives and priorities before creating a Production Specification.
-
-**Topics may include:**
-
-+ [In-Depth Discovery](strategy#InDepthDiscovery)
-+ [Web Analytics Audit](strategy#WebAnalyticsAudit)
-+ [Metrics Baseline](strategy#MetricsBaseline)
-+ [Competitive Analysis](strategy#CompetitiveAnalysis)
-+ [Stakeholder Interviews](strategy#StakeholderInterviews) findings
-+ [User/Customer Interviews](strategy#UserCustomerInterviews) findings
-+ [Survey](strategy#Surveys) findings
-+ [Usability Testing](strategy#UsabilityTesting) results
-+ Recommendations
-
-The Discovery Report serves as a foundation for the next documents: site map, wireframes, and specifications.
-
 
 
 ### Site Map
@@ -530,9 +515,7 @@ Time Req
 Template
 :	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
 
-
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](strategy#SiteMap) and [Homepage Wirefame](strategy#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
-
 
 
 ### Production Specification
@@ -557,6 +540,13 @@ This document restates the scope of production and must be approved by the clien
 (A Production Spec is somewhat akin to a formal [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it and explore novel approaches. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
 
 
+### Discovery Report (retired)
+
+We have removed the Discovery Report as a separate deliverable. We've found that brief findings documents for each discovery activity are more digestible by the client, faster to produce, and get more useful client feedback than long, monolithic reports.
+
+If a client requires a Discovery Report, one can be produced by special request. Please contact the Producer to arrange a Change Order.
+
+
 
 
 ## Usability Testing
@@ -567,7 +557,6 @@ This document restates the scope of production and must be approved by the clien
 The best way to find out what does or does not work well is by asking *real people* to try it. 
 
 Usability testing can be used to improve existing systems, or while developing new ones. We engage in several types of testing.
-
 
 ### Hallway Testing
 
@@ -597,10 +586,10 @@ Tasks
 : Evaluate a user interface against usability principles and provide recommendations for improvement.
 
 Deliverables
-:	Results may be delivered as part of the [Discovery Report](strategy#DiscoveryReport) or as a dedicated findings report.
+:	1–3 page findings document
 
 Time Req
-:	6–8 hours and inclusion in the Discovery Report
+:	6–8 hours
 
 Experienced usability team members evaluate the user interface (current or planned), judging compliance with recognized usability principles, and provide oral or written suggestions for improvements. This is informal and relatively quick, but depends upon an experienced evaluator. It is well-suited to aggressive project schedules.
 
@@ -616,7 +605,7 @@ Tasks
 : Create a list of tasks to test; create a prototype; put humans in front of it; give them the tasks; record what happens.
 
 Deliverables
-:	Results may be delivered as part of the [Discovery Report](strategy#DiscoveryReport) or as a dedicated usability findings report.
+:	4–8 page findings document
 
 Time Req
 :	64–80 hours per round, with 4–5 users, and written usability report and recommendations. 
@@ -630,6 +619,10 @@ Next, create a formal task list and script, recruit [4 to 5 users](http://www.nn
 The script helps to ensure consistency, video recording the screen lets us revisit the tests. 
 
 Steve Krug's book [Rocket Surgery Made Easy]() is an excellent guide to designing and conducting usability testing. Another useful (and shorter) work is Jacob Nielsen's [Travelling Usability Lab](http://www.nngroup.com/articles/traveling-usability-lab/) article.
+
+<figure markdown="1">
+![Live Usabilility Testing](img/strategy/user-testing-live.jpg)
+</figure>
 
 
 
@@ -684,17 +677,17 @@ We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Ap
 [Keynote](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
-### Surveys and Testing
+### Research and Testing Tools
 
-[Survey Monkey](http://surveymonkey.com) is used to conduct user surveys.
+**Surveys:** [Survey Monkey](http://surveymonkey.com) is used to conduct user surveys.
 
-[Treejack](http://www.optimalworkshop.com/treejack.htm) is used for testing content structure and navigation.
+**Tree Testing:** [Treejack](http://www.optimalworkshop.com/treejack.htm) is used for testing content structure and navigation.
 
-[OptimalSort](http://www.optimalworkshop.com/optimalsort.htm) is used for remote card sort exercises.
+**Card Sorting:** [OptimalSort](http://www.optimalworkshop.com/optimalsort.htm) is used for remote card sort exercises. ([Here are some others](http://www.measuringux.com/CardSorting/); we haven't yet tried most of them.)
 
-[Camtasia](http://www.techsmith.com/camtasia.html) is used for conducting in-person user testing. Camtasia records the session screen and audio.
+**Screen Recording:** [Camtasia](http://www.techsmith.com/camtasia.html) is used for conducting in-person user testing. Camtasia records the session screen and audio.
 
-[GoToMeeting](http://www.gotomeeting.com/fec/) or [Join.me](http://join.me) are used for remote user testing.
+**Screen Sharing:** [GoToMeeting](http://www.gotomeeting.com/fec/) or [Join.me](http://join.me) are used for remote user testing.
 
 
 
@@ -730,3 +723,10 @@ Revision Notes
 ![Example metadata block](img/strategy/metadata.png)
 
 
+## Recent Changes ##
+
+This section lists major updates only. For a complete history, see the [document history](https://github.com/imarc/handbook/commits/gh-pages/strategy.markdown) on GitHub.
+
+* April 4, 2014: Overhauled Initial Discovery/In-Depth Discovery (replacing "Intial Findings" and "Business Analysis and Goals Prioritization", respectively). Retired Discovery Report. Tools updates. Added card sorts.
+* February 20, 2014: Site Map updates and new illustrations.
+* Jan 31, 2014: Added document templates to many deliverables.
