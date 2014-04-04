@@ -179,25 +179,25 @@ Lastly, iMarc creates a report of findings, and presents those findings to the c
 + Competitors
 + Best practices in content, layout, navigation, workflow, and SEO
 
-#### Goals Card Sort
-
-Projects often have many goals, yet do not have unlimited time and resources. A group card sort activity can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
-
-A small-group card sort is performed in person with the core client team (3–6 people). Cards are prepared in advance with all known project goals, and blanks are available to create new ones. The team is asked to sort the goals into groups (typically "High", "Medium", and "Low").  Not only do priorities emerge, but the conversation within the client team clarifies _why_ cards go into each group.
-
-<figure markdown="1">
-<figcaption>Sample card sort result</figcaption>
-![Sample card sort](img/strategy/cardsort.jpg)
-</figure>
-
-If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
-
-**Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testinng tool such as TreeJack to test content findability, not a card sort.)
-
-Recommended reading: 
-
-* [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
-* [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
+> #### Goals Card Sort
+> 
+> Projects often have many goals, yet do not have unlimited time and resources. A group card sort activity can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
+> 
+> A small-group card sort is performed in person with the core client team (3–6 people). Cards are prepared in advance with all known project goals, and blanks are available to create new ones. The team is asked to sort the goals into groups (typically "High", "Medium", and "Low").  Not only do priorities emerge, but the conversation within the client team clarifies _why_ cards go into each group.
+> 
+> <figure markdown="1">
+> <figcaption>Sample card sort result</figcaption>
+> ![Sample card sort](img/strategy/cardsort.jpg)
+> </figure>
+> 
+> If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
+> 
+> **Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testinng tool such as TreeJack to test content findability, not a card sort.)
+> 
+> Recommended reading: 
+> 
+> * [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
+> * [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
 
 
 ### User/Customer Interviews
