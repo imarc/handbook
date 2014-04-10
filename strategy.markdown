@@ -131,6 +131,9 @@ Deliverables
 Time Req
 :	8–12 hours
 
+Templates
+:	fileserver: files/Strategy/templates/Discovery/
+
 For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
 This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
@@ -161,6 +164,9 @@ Deliverables
 
 Time Req
 :	24–32 hours
+
+Templates
+:	fileserver: files/Strategy/templates/Discovery/
 
 For projects such as creating a custom web app, a major re-design of a large site, or a project with many stakeholders and high visibility, an in-depth discovery process will yield better results. This is typically lead by a Strategist, with the assistance of the producer, engineering, UX and creative groups.
 
@@ -246,6 +252,9 @@ Deliverables
 Time Req
 :	32–68 hours for 6–12 stakeholders
 
+Templates
+:	fileserver: files/Strategy/templates/Interviews/
+
 
 Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
 
@@ -308,7 +317,7 @@ Deliverables
 Time Req
 :	6–8 hours
 
-Template
+Templates
 :	fileserver: files/user_experience/web-analytics/ <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
 
 The primary purpose of this document is to identify and convey past patterns in user activity, page flows, content, and traffic sources to better inform decisions during planning, design and development. It is necessarily backwards-looking.
@@ -485,6 +494,9 @@ Summary
 Time Req
 : 6–8 hours
 
+Templates
+:	fileserver: files/Strategy/templates/Site Maps & Wireframes/
+
 This is a short document that lists all content and functions of the home page, including (wherever possible) real examples of each content item. This provides the creative team with a full, prioritized inventory  to use in design.
 
 
@@ -512,7 +524,7 @@ Summary
 Time Req
 :	22-24 hours
 
-Template
+Templates
 :	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
 
 This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](strategy#SiteMap) and [Homepage Wirefame](strategy#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
@@ -526,7 +538,7 @@ Summary
 Time Req
 :	 72–150 hours
 
-Template
+Templates
 :	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
 
 Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
