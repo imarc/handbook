@@ -395,10 +395,11 @@ The following **philosophy** is paraphrased from our standard proposal language.
 </td></tr>
 </table>
 
-The definitive list of supported browsers can be found on our 
-[Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
+As of May 2013, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
 
-By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents. 
+By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents.
+
+iMarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
 ### Internet Explorer styles
 
