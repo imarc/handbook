@@ -433,7 +433,7 @@ Time Req
 : 8–30 hours (varies by scope of project)
 
 Templates
-:	fileserver: files/user_experience/sitemap-wireframe-template/ <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
+:	fileserver: files/user_experience/sitemap-wireframe-template/<br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
 
 A sitemap should:
 
@@ -485,7 +485,7 @@ Time Req
 : 8–12 hours per page or screen
 
 Templates
-:	fileserver: files/user_experience/sitemap-wireframe-template/ <br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
+:	fileserver: files/user_experience/sitemap-wireframe-template/<br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
 
 A wireframe is a low fidelity representation of a design that connects the underlying conceptual structure (information architecture), to the visual design of the website. A wireframe should clearly show:
 
@@ -693,7 +693,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. (It's in OmniGraffle 6's standard stencil library.)
 
-We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in FILES/user_experience/sitemap-wireframe-template/stencils.
+We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in files/user_experience/sitemap-wireframe-template/stencils.
 
 
 
