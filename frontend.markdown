@@ -310,6 +310,91 @@ The following **philosophy** is paraphrased from our standard proposal language.
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
 * We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and spec'ed for the poject.
 
+<table>
+<tr>
+<th>Browser/Version </th>
+<th> Mac 10.8 </th>
+<th> Mac 10.9 </th>
+<th> Windows XP </th>
+<th> Windows 7 </th>
+<th> Windows 8
+</th></tr>
+<tr>
+<td> Chrome (release channel) </td>
+<td>  </td>
+<td colspan="4"> yes
+</td></tr>
+<tr>
+<td> Firefox (release channel) </td>
+<td>  </td>
+<td colspan="4"> yes
+</td></tr>
+<tr>
+<td> Internet Explorer 8.0 </td>
+<td>  </td>
+<td>   </td>
+<td>  yes </td>
+<td> yes </td>
+<td>
+</td></tr>
+<tr>
+<td> Internet Explorer 9.0 </td>
+<td>  </td>
+<td>   </td>
+<td>   </td>
+<td> yes </td>
+<td>
+</td></tr>
+<tr>
+<td> Internet Explorer 10.0 </td>
+<td>  </td>
+<td>   </td>
+<td>   </td>
+<td> yes </td>
+<td> yes
+</td></tr>
+<tr>
+<td> Internet Explorer 11.0 </td>
+<td>  </td>
+<td>   </td>
+<td>   </td>
+<td>  </td>
+<td> yes (*8.1 only)
+</td></tr>
+<tr>
+<td> Safari 6.1 </td>
+<td> yes </td>
+<td>  </td>
+<td>   </td>
+<td>   </td>
+<td>
+</td></tr>
+<tr>
+<td> Safari 6.1 Retina </td>
+<td> yes </td>
+<td>  </td>
+<td>   </td>
+<td>   </td>
+<td>
+</td></tr>
+<tr>
+<td> Safari 7.0 </td>
+<td>  </td>
+<td> yes </td>
+<td>   </td>
+<td>   </td>
+<td>
+</td></tr>
+<tr>
+<td> Safari 7.0 Retina </td>
+<td>  </td>
+<td> yes </td>
+<td>   </td>
+<td>   </td>
+<td>
+</td></tr>
+</table>     
+
 The definitive list of supported browsers can be found on our 
 [Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
 
