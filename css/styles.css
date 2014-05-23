@@ -727,6 +727,10 @@ table tr:nth-child(even) td.supported {
 	background: #d2f8b0;
 }
 
+tr:first-child th:first-child {
+	background: #444444;
+}
+
 
 /* = Media Queries = */
 
