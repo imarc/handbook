@@ -317,24 +317,24 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <th> Mac 10.9 </th>
 <th> Windows XP </th>
 <th> Windows 7 </th>
-<th> Windows 8
-</th></tr>
+<th> Windows 8 </th>
+</tr>
 <tr>
 <td> Chrome (release channel) </td>
 <td>  </td>
-<td colspan="4"> yes
+<td class="supported" colspan="4"> yes
 </td></tr>
 <tr>
 <td> Firefox (release channel) </td>
 <td>  </td>
-<td colspan="4"> yes
+<td class="supported" colspan="4"> yes
 </td></tr>
 <tr>
 <td> Internet Explorer 8.0 </td>
 <td>  </td>
 <td>   </td>
-<td>  yes </td>
-<td> yes </td>
+<td class="supported">  yes </td>
+<td class="supported"> yes </td>
 <td>
 </td></tr>
 <tr>
@@ -342,7 +342,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>  </td>
 <td>   </td>
 <td>   </td>
-<td> yes </td>
+<td class="supported"> yes </td>
 <td>
 </td></tr>
 <tr>
@@ -350,8 +350,8 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>  </td>
 <td>   </td>
 <td>   </td>
-<td> yes </td>
-<td> yes
+<td class="supported"> yes </td>
+<td class="supported"> yes
 </td></tr>
 <tr>
 <td> Internet Explorer 11.0 </td>
@@ -359,11 +359,11 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>   </td>
 <td>   </td>
 <td>  </td>
-<td> yes (*8.1 only)
+<td class="supported"> yes (*8.1 only)
 </td></tr>
 <tr>
 <td> Safari 6.1 </td>
-<td> yes </td>
+<td class="supported"> yes </td>
 <td>  </td>
 <td>   </td>
 <td>   </td>
@@ -371,7 +371,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 </td></tr>
 <tr>
 <td> Safari 6.1 Retina </td>
-<td> yes </td>
+<td class="supported"> yes </td>
 <td>  </td>
 <td>   </td>
 <td>   </td>
@@ -380,7 +380,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <tr>
 <td> Safari 7.0 </td>
 <td>  </td>
-<td> yes </td>
+<td class="supported"> yes </td>
 <td>   </td>
 <td>   </td>
 <td>
@@ -388,7 +388,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <tr>
 <td> Safari 7.0 Retina </td>
 <td>  </td>
-<td> yes </td>
+<td class="supported"> yes </td>
 <td>   </td>
 <td>   </td>
 <td>

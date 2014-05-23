@@ -691,6 +691,41 @@ body.deployment .heading h1:before {
     left: -100px;
 }
 
+/* = Tables = */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 1.5em;
+	width: 100%;
+}
+table caption {
+	font-size: .75em;
+	margin-bottom: .75em;
+}
+table td,
+table th {
+	padding: .5em 1em;
+	text-align: left;
+	vertical-align: top;
+}
+table th {
+	font-weight: bold;
+	background: #555555;
+	border: 1px solid #555555;
+	color: #fff;
+	text-transform: uppercase;
+}
+table td {
+	border: 1px solid #e3e3e3;
+}
+table tr:nth-child(even) td {
+	background: #f3f3f3;
+}
+
+td.supported {
+	background: #d2f8b0;
+}
+
 
 /* = Media Queries = */
 
