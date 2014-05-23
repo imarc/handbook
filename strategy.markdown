@@ -104,8 +104,29 @@ The output of strategy are concrete reference documents. Deliverables are approv
 
 If the client also engages iMarc to develop the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
+### Software Development Life Cycle
 
+iMarc's typical software development life cycle ensure's that we are creating the best possible end-product for our clients. The steps involved in the process are:
 
+Listen
+:   Gather Requirements, Evaluate, Conceptualize
+
+Strategize
+:   Analyze, Interviews, Specification, Wireframing
+
+Design
+:	Creative, Visuals, Branding
+
+Develop
+:	Programming, Databases, Markup
+
+Test
+:	Quality Assurance, Security Scans
+
+Release
+:	Launch, Support, Maintain
+
+The cycle repeats as requirements change or enhancements are requested.
 
 ## Discovery Activities
 

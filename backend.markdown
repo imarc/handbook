@@ -13,12 +13,12 @@ layout: default
 
 ## Development Environment
 
-iMarc’s target development and production platform is:
- - Amazon EC2 & EBS
- - Ubuntu 10.04 LTS
- - Apache 2.2+
- - PHP 5.3+
- - PostgreSQL 8.4+
+iMarc’s ideal development and production platform is:
+ - Amazon EC2 w/EBS or DigitalOcean
+ - Debian 7 (Wheezy)
+ - Apache 2.4+
+ - PHP 5.4+
+ - PostgreSQL 9.3+
 
 The PHP library we are most proficient with is
 [Flourish](http://www.flourishlib.com). Documentation can be
