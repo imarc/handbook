@@ -393,7 +393,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>   </td>
 <td>
 </td></tr>
-</table>     
+</table>
 
 The definitive list of supported browsers can be found on our 
 [Wiki](http://wiki.imarc.net/Browser_Support). As of May 2013, this includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
