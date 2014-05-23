@@ -312,85 +312,85 @@ The following **philosophy** is paraphrased from our standard proposal language.
 
 <table>
 <tr>
-<th>Browser/Version </th>
-<th> Mac 10.8 </th>
-<th> Mac 10.9 </th>
-<th> Windows XP </th>
-<th> Windows 7 </th>
-<th> Windows 8 </th>
+<th>Browser/Version</th>
+<th>Mac 10.8</th>
+<th>Mac 10.9</th>
+<th>Win XP</th>
+<th>Win 7</th>
+<th>Win 8</th>
 </tr>
 <tr>
-<td> Chrome (release channel) </td>
-<td>  </td>
-<td class="supported" colspan="4"> yes
+<td>Chrome (stable)</td>
+<td></td>
+<td class="supported" colspan="4">yes
 </td></tr>
 <tr>
-<td> Firefox (release channel) </td>
+<td>Firefox (stable)</td>
 <td>  </td>
-<td class="supported" colspan="4"> yes
+<td class="supported" colspan="4">yes
 </td></tr>
 <tr>
-<td> Internet Explorer 8.0 </td>
-<td>  </td>
-<td>   </td>
-<td class="supported">  yes </td>
-<td class="supported"> yes </td>
+<td>Internet Explorer 8.0</td>
+<td></td>
+<td></td>
+<td class="supported">yes</td>
+<td class="supported">yes</td>
 <td>
 </td></tr>
 <tr>
-<td> Internet Explorer 9.0 </td>
-<td>  </td>
-<td>   </td>
-<td>   </td>
-<td class="supported"> yes </td>
+<td>Internet Explorer 9.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="supported">yes</td>
 <td>
 </td></tr>
 <tr>
-<td> Internet Explorer 10.0 </td>
-<td>  </td>
-<td>   </td>
-<td>   </td>
-<td class="supported"> yes </td>
-<td class="supported"> yes
+<td>Internet Explorer 10.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="supported">yes</td>
+<td class="supported">yes
 </td></tr>
 <tr>
-<td> Internet Explorer 11.0 </td>
-<td>  </td>
-<td>   </td>
-<td>   </td>
-<td>  </td>
-<td class="supported"> yes (*8.1 only)
+<td>Internet Explorer 11.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="supported">yes (*8.1 only)
 </td></tr>
 <tr>
-<td> Safari 6.1 </td>
-<td class="supported"> yes </td>
-<td>  </td>
-<td>   </td>
-<td>   </td>
+<td>Safari 6.1</td>
+<td class="supported">yes</td>
+<td></td>
+<td></td>
+<td></td>
 <td>
 </td></tr>
 <tr>
-<td> Safari 6.1 Retina </td>
-<td class="supported"> yes </td>
-<td>  </td>
-<td>   </td>
-<td>   </td>
+<td>Safari 6.1 Retina</td>
+<td class="supported">yes</td>
+<td></td>
+<td></td>
+<td></td>
 <td>
 </td></tr>
 <tr>
-<td> Safari 7.0 </td>
-<td>  </td>
-<td class="supported"> yes </td>
-<td>   </td>
-<td>   </td>
+<td>Safari 7.0</td>
+<td></td>
+<td class="supported">yes</td>
+<td></td>
+<td></td>
 <td>
 </td></tr>
 <tr>
-<td> Safari 7.0 Retina </td>
-<td>  </td>
-<td class="supported"> yes </td>
-<td>   </td>
-<td>   </td>
+<td>Safari 7.0 Retina</td>
+<td></td>
+<td class="supported">yes</td>
+<td></td>
+<td></td>
 <td>
 </td></tr>
 </table>
