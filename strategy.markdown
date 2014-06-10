@@ -274,7 +274,8 @@ Time Req
 :	32–68 hours for 6–12 stakeholders
 
 Templates
-:	fileserver: files/Strategy/templates/Interviews/
+:	fileserver: files/Strategy/templates/Interviews/  
+(Both internal stakeholder and user interview templates are provided)
 
 
 Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
