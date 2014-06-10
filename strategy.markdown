@@ -312,6 +312,9 @@ Deliverables
 Time Req
 : 16–32 hours, depending on breadth and depth
 
+Template
+:	fileserver: files/Strategy/templates/Competitive Analysis/
+
 
 Typically we look for patterns and best practices among:
 
