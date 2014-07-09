@@ -310,6 +310,8 @@ The following **philosophy** is paraphrased from our standard proposal language.
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
 * We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and spec'ed for the poject.
 
+### Desktop Browser Support
+
 <table>
 <tr>
 <th>Browser/Version</th>
@@ -398,6 +400,89 @@ The following **philosophy** is paraphrased from our standard proposal language.
 As of May 2013, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
 
 By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents.
+
+### Mobile Browser Support
+
+<table>
+<tr>
+<th> Platform/OS </th>
+<th> Browser </th>
+<th> Target Devices </th>
+<th> Resolution(s)
+</th></tr>
+<tr>
+<td> iOS 6 </td>
+<td> Safari </td>
+<td> iPhone Retina </td>
+<td> 640x960
+</td></tr>
+<tr>
+<td> iOS 6 </td>
+<td> Safari </td>
+<td> iPhone </td>
+<td> 320x480
+</td></tr>
+<tr>
+<td> iOS 6 </td>
+<td> Safari </td>
+<td> iPad Retina </td>
+<td> 2048x1536
+</td></tr>
+<tr>
+<td> iOS 6 </td>
+<td> Safari </td>
+<td> iPad </td>
+<td> 1024x768
+</td></tr>
+<tr>
+<td> iOS 7 </td>
+<td> Safari 7 </td>
+<td> iPhone Retina </td>
+<td> 640x960
+</td></tr>
+<tr>
+<td> iOS 7 </td>
+<td> Safari 7 </td>
+<td> iPad Retina </td>
+<td> 2048x1536
+</td></tr>
+<tr>
+<td> iOS 7 </td>
+<td> Safari 7 </td>
+<td> iPad </td>
+<td> 1024x768
+</td></tr>
+<tr>
+<td> Android 2.3 </td>
+<td> Browser </td>
+<td> handsets, 7" tablets </td>
+<td> 320x480 to 1024x600
+</td></tr>
+<tr>
+<td> Android 4.1–4.3 </td>
+<td> Browser </td>
+<td> handsets </td>
+<td> 320x480 to 1920x1080
+</td></tr>
+<tr>
+<td> Android 4.1–4.3 </td>
+<td> Browser </td>
+<td> 7" tablet, 10" tablet </td>
+<td> 1024x600 to 2460x1600
+</td></tr>
+<tr>
+<td> Android 4.1–4.3 </td>
+<td> Chrome </td>
+<td> handsets </td>
+<td> 320x480 to 1920x1080
+</td></tr>
+<tr>
+<td> Android 4.1–4.3 </td>
+<td> Chrome </td>
+<td> 7" tablet, 10" tablet </td>
+<td> 1024x600 to 2460x1600
+</td></tr>
+</table>
 
 iMarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
