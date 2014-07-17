@@ -21,7 +21,7 @@ figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 > “Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.”  
 > –Sun Tzu
 
-The *goal* of all strategy activity is to produce a clear and concise blueprint for an application or website. **Strategy work aims to clearly define the project for the client and production team while focusing on a positive end-user experience.**
+The <span style="color:blue;">goal</span> of all strategy activity is to produce a clear and concise blueprint for an application or website. **Strategy work aims to clearly define the project for the client and production team while focusing on a positive end-user experience.**
 
 Strategy work will sanity check recommendations from the proposal against actual client needs. Strategy deliverables override recommendations from the proposal where necessary and agreed upon by the client.
 
