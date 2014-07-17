@@ -4,7 +4,7 @@ layout: default
 ---
 
 <section class="intro">
-	<p>
+	<p markdown="1">
 		This document describes iMarc’s preferred method for deploying websites using 
 		an automated, repeatable system called  `patton`. 
 		[iMarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
