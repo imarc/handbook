@@ -3,9 +3,9 @@ title: Creative
 layout: default
 ---
 
-<section>
+<section class="intro">
 	<p>
-		This document outlines iMarc’s creative process and deliverables. [iMarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document outlines iMarc’s creative process and deliverables. <a href="http://www.imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
