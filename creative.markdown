@@ -26,9 +26,9 @@ We aim to help a brand stand up a little taller, stay in someone's mind a little
 ## Process ##
 The creative process, at its heart, can be broken down into three main steps:
 
-*Discover:* Understand the core objectives and business goals.
-*Create:* Turn a conceptual idea into a design solution.
-*Iterate:* Refine our design until we reach the best solution.
+**Discover:** Understand the core objectives and business goals. <br>
+**Create:** Turn a conceptual idea into a design solution. <br>
+**Iterate:** Refine our design until we reach the best solution.
 
 ***TODO [Graphic/Visuals] Stick with what we have in preso’s***
 
@@ -216,10 +216,10 @@ Mood boards can be extremely useful for resolving design ambiguity. If a client 
 + bringing a group to consensus on a design solution
 
 
-### User Interface Design (UI) (“comp”) ###
+### User Interface Design (“comp”) ###
 
 Summary
-:	A User Interface Design is a high fidelity composition, static visualization of what the website will eventually look like once built.
+:	A User Interface Design is a high fidelity composition, static visualization of what the website will eventually look like once built. We refer to this as a “comp”.
 
 Time Required
 :	16-18 hours per page or screen
