@@ -20,7 +20,8 @@ The goal of all creative work is to transmit a clear and memorable message that 
 
 We aim to help a brand stand up a little taller, stay in someone's mind a little longer, and ultimately connect with its audience.
 
-
+> "People be fiending for my peanut M&M's." <br>
+> –Christian <blink>Keyes</blink>, Esq. (not the R&B star)
 
 
 ## Process ##
