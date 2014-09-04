@@ -589,7 +589,7 @@ body.homepage nav.primary li a,
 .front,
 .back {
 	height: 250px;
-	width: 185px;
+	width: 174px;
 }
 body.homepage nav.primary li a:hover .flipper,
 body.homepage nav.primary li a:focus .flipper {
@@ -674,6 +674,10 @@ body.strategy .heading h1:before {
 	background-image: url(/img/watermark_strategy.png);
     left: -100px;
 }
+body.creative .heading h1:before {
+	background-image: url(/img/watermark_creative.png);
+    left: -100px;
+}
 body.frontend .heading h1:before {
 	background-image: url(/img/watermark_frontend.png);
     left: -100px;
@@ -688,10 +692,6 @@ body.backend .heading h1:before {
 }
 body.deployment .heading h1:before {
 	background-image: url(/img/watermark_deployment.png);
-    left: -100px;
-}
-body.creative .heading h1:before {
-	background-image: url(/img/watermark_creative.png);
     left: -100px;
 }
 

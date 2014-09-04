@@ -2,6 +2,9 @@ navigation:
 - text: Strategy
   relative_url: strategy
   url: /strategy.html
+- text: Creative
+  relative_url: creative
+  url: /creative.html
 - text: Frontend
   relative_url: frontend
   url: /frontend.html
