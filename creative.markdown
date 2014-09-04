@@ -29,6 +29,7 @@ The creative process, at its heart, can be broken down into three main steps:
 **Create:** Turn a conceptual idea into a design solution. <br>
 **Iterate:** Refine our design until we reach the best solution.
 
+![Process](img/creative/our_process.png)
 
 The process begins after the functional and strategic requirements are documented and approved, with an internal handoff between the Strategy and Creative teams. In cases where a Strategist's involvement is not necessary, work will begin directly after the project kickoff. All projects should have a well-defined goal, time budget, and deliverables.
 
@@ -171,7 +172,7 @@ Deliverables
 :	Photography shot list or Video storyboard, and approved visual style.
 
 Time Req
-:	6–168 hours
+:	6–18 hours
 
 For projects such requiring custom photography or video, it’s important to establish the overall tone, look, and feel before capturing the subject matter. iMarc’s creative team will work with stakeholders to define the visual “look” that the photos or video will have as well as define the shot list (photography) or storyboard (video) of what needs to be captured during the shoot.
 
