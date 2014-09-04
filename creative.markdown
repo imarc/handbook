@@ -29,8 +29,6 @@ The creative process, at its heart, can be broken down into three main steps:
 **Create:** Turn a conceptual idea into a design solution. <br>
 **Iterate:** Refine our design until we reach the best solution.
 
-![Process](img/creative/our_process.png)
-
 The process begins after the functional and strategic requirements are documented and approved, with an internal handoff between the Strategy and Creative teams. In cases where a Strategist's involvement is not necessary, work will begin directly after the project kickoff. All projects should have a well-defined goal, time budget, and deliverables.
 
 
