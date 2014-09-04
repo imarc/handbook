@@ -690,6 +690,10 @@ body.deployment .heading h1:before {
 	background-image: url(/img/watermark_deployment.png);
     left: -100px;
 }
+body.creative .heading h1:before {
+	background-image: url(/img/watermark_creative.png);
+    left: -100px;
+}
 
 /* = Tables = */
 table {
