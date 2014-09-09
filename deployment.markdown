@@ -467,13 +467,14 @@ superglobal contain the same keys that would be present with an Apache request.
 
 Newer versions of patton use ACLs so you should not need to worry about using
 `chmod` or `chown`.  You should be able to `mkdir`, `rm`, `cp`, and `mv` as you
-please with no sudo necessary.
+please with no sudo necessary.  However, due to limitaitons of the `-p` argument
+for mkdir, you will need to set umask when creating directories.
 
 	# Create a new directory
-	mkdir -p $ENV_WRITABLE_DIR/photos/photo
+	umask g=rwx; mkdir -p $ENV_WRITABLE_DIR/photos/photo
 
 	# Delete an old directory
-	rm -Rf $ENV_WRITABLE_DIR/photos/photo
+	rm -rf $ENV_WRITABLE_DIR/photos/photo
 
 	# Move a folder
 	mv $ENV_WRITABLE_DIR/photos/photo $ENV_WRITABLE_DIR/photos/image
