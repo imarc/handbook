@@ -13,6 +13,7 @@ layout: default
 <style type="text/css">
 figure img { border: 1px solid #999999;}
 figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
+.inlinedetailnotreallysemanticisit { margin: 2em; padding: 2em; background-color: #eee; }
 </style>
 
 
@@ -52,6 +53,34 @@ Implementation
 
 
 ## Process
+
+This Handbook page focuses on the strategy process. For context, it's helpful to understand iMarc's larger software development life cycle.
+
+### Software Development Life Cycle
+
+iMarc's typical software development life cycle ensure's that we are creating the best possible end-product for our clients. The steps involved in the process are:
+
+Listen
+:   Gather Requirements, Evaluate, Conceptualize
+
+Strategize
+:   Analyze, Interviews, Wireframing, Site mapping
+
+Design
+:	Creative, Visuals, Branding
+
+Develop
+:	Programming, Databases, Markup
+
+Test
+:	Quality Assurance, Security Scans
+
+Release
+:	Launch, Support, Maintain
+
+The cycle repeats as requirements change or enhancements are requested.
+
+### Strategy Process
 
 The strategy process is provided to clients who have engaged iMarc by approving a proposal which includes a specified time and cost budget for strategy. Smaller projects that do not explicitly define a strategy budget or scope should bypass the strategy team and go directly to a production team.
 
@@ -96,37 +125,13 @@ Engineer
 The Designer, Engineer and UX Engineer(s) will stick with the project after the strategy phase is complete. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute. The UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
 
 
-
-
 ### Approvals
 
 The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
 
 If the client also engages iMarc to develop the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
-### Software Development Life Cycle
 
-iMarc's typical software development life cycle ensure's that we are creating the best possible end-product for our clients. The steps involved in the process are:
-
-Listen
-:   Gather Requirements, Evaluate, Conceptualize
-
-Strategize
-:   Analyze, Interviews, Specification, Wireframing
-
-Design
-:	Creative, Visuals, Branding
-
-Develop
-:	Programming, Databases, Markup
-
-Test
-:	Quality Assurance, Security Scans
-
-Release
-:	Launch, Support, Maintain
-
-The cycle repeats as requirements change or enhancements are requested.
 
 ## Discovery Activities
 
@@ -147,13 +152,13 @@ Tasks
 :	Meet with client team to review and prioritize goals, audiences, and benchmarks; discuss content, features, and functionality. Report findings to client for validation.
 
 Deliverables
-:	Short findings document (1–3 pages)
+:	Short findings document (1–3 printed pages)
 
 Time Req
-:	8–12 hours
+:	10 hours
 
 Templates
-:	fileserver: files/Strategy/templates/Discovery/
+:	<smb://fileserver/files/Strategy/templates/Discovery/>
 
 For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
@@ -184,18 +189,18 @@ Deliverables
 :	Findings document (3–8 pages)
 
 Time Req
-:	24–32 hours
+:	30 hours
 
 Templates
-:	fileserver: files/Strategy/templates/Discovery/
+:	<smb://fileserver/files/Strategy/templates/Discovery/>
 
-For projects such as creating a custom web app, a major re-design of a large site, or a project with many stakeholders and high visibility, an in-depth discovery process will yield better results. This is typically lead by a Strategist, with the assistance of the producer, engineering, UX and creative groups.
+For projects such as a major re-design of a large site, or a project with many stakeholders and high visibility, an in-depth discovery process will yield better results. This is typically lead by a Strategist, with the assistance of the producer, UX, engineering, and creative groups.
 
 This starts with a 90- to 120–minute conference call or meeting with the client stakeholder team. iMarc and the client team discuss the project goals, their current business environment and growth objectives. We'll also discuss the client's current site, and identify competitor sites and exemplars for follow-up. (This is often a precursor to a full [Competitive Analysis](#CompetitiveAnalysis).)
 
 As larger projects often have many goals, yet do not have unlimited time and resources, it's important to prioritize goals. A group [card sort](#GoalsCardSort) activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
-Lastly, iMarc creates a report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. 
+Lastly, iMarc creates a concise report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. 
 
 **Topics include:**
 
@@ -206,79 +211,60 @@ Lastly, iMarc creates a report of findings, and presents those findings to the c
 + Competitors
 + Best practices in content, layout, navigation, workflow, and SEO
 
-> #### Goals Card Sort
-> 
-> Projects often have many goals, yet do not have unlimited time and resources. A group card sort activity can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
-> 
-> A small-group card sort is performed in person with the core client team (3–6 people). Cards are prepared in advance with all known project goals, and blanks are available to create new ones. The team is asked to sort the goals into groups (typically "High", "Medium", and "Low").  Not only do priorities emerge, but the conversation within the client team clarifies _why_ cards go into each group.
-> 
-> <figure markdown="1">
-> <figcaption>Sample card sort result</figcaption>
-> ![Sample card sort](img/strategy/cardsort.jpg)
-> </figure>
-> 
-> If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
-> 
-> **Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testinng tool such as TreeJack to test content findability, not a card sort.)
-> 
-> Recommended reading: 
-> 
-> * [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
-> * [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Goals Card Sort
 
+Projects often have many goals, yet do not have unlimited time and resources. A group card sort activity can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
-### User/Customer Interviews
+A small-group card sort is performed in person with the core client team (3–6 people). Cards are prepared in advance with all known project goals, and blanks are available to create new ones. The team is asked to sort the goals into groups (typically "High", "Medium", and "Low").  Not only do priorities emerge, but the conversation within the client team clarifies _why_ cards go into each group.
 
-Objective
-:	Find out not just what users are doing, but *why*. The better we understand our users' motivations, the better we can fulfill their needs.
+<figure markdown="1">
+<figcaption>Sample card sort result</figcaption>
+![Sample card sort](img/strategy/cardsort.jpg)
+</figure>
 
-Tasks
-:	Locate, contact and talk to the *actual users* of the site or application, conducting contextual, unbiased interviews.
+If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
 
-Deliverables
-:	Findings document (typically 3–5 pages)
+**Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testinng tool such as TreeJack to test content findability, not a card sort.)
+</div>
 
-Time Req
-:	30 hours for 6 user/customer interviews
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Recommended reading
 
-User interviews can take place in person or remotely over the phone, with or without screen sharing. We create a script and a list of questions to ensure consistency.
+* [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
+* [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
+</div>
 
-Interviews can explore concrete items, such as user interface components, design elements, document flow, feature importance, technical knowledge, and devices used (pc, tablet, phone…).  But to be most effective, interviews should explore more fundamental issues.
-
-**Topics include:**
-
-+ What do users want? What are they really trying to do?
-+ What frustrates them?
-+ What makes them happy? 
-+ Is the task we're fulfilling their primary goal, or is it part of something else? 
-+ Are there other tools or competitors they might consider? 
-+ What is the environment where they use the system? 
-+ If they're mobile, are they walking around a noisy factory floor, or driving from office to office? 
-+ If they're not mobile, do they use a desktop PC, a laptop with a big screen, laptop with tiny screen?
-
-Some organizations will have people who are in daily contact with users, and have valuable insight into what makes users "tick". Customer service and technical support teams are often treasure troves of insight, with "on the ground" knowledge dwarfing that of sales and marketing personnel. Their experience is invaluable, especially for consumer-facing organizations, or if for any reason we can't talk to the actual end users.
-
-
-### Stakeholder Interviews
+### Interviews
 
 Objective
-:	Identify and gain consensus among the client's decision makers.
+:	Interviews are an effective way to rapidly gain understanding of a project's audiences, goals, requirements, constraints, and available resources.
 
 Tasks
-:	Speak with key stakeholders. Understand and document their pain, aspirations, and goals for the project.  
+:	Vary by interview subjects and objective; see below for notes on stakeholder and user interviews.
 
 Deliverables
-:	Findings document (typically 3–5 pages)
+:	Concise summary of findings (3–4 printed pages)
 
 Time Req
-:	32–68 hours for 6–12 stakeholders
+:	30 hours for 3–4 interview sessions with 2–4 interview subjects each
 
 Templates
-:	fileserver: files/Strategy/templates/Interviews/  
+:	<smb://fileserver/files/Strategy/templates/Interviews/>  
 (Both internal stakeholder and user interview templates are provided)
 
+Interviews almost always turn up new information, issues and objectives. Whether you are talking to stakeholders, users, or customers, your job is to understand and document their pain, aspirations, and requirements.
 
-Stakeholder interviews help uncover the desires and goals of each decision maker involved in the project. Often, the needs of different stakeholders must be balanced or prioritized; the interviews help make informed recommendations.
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Stakeholder Interviews
+Stakeholder interviews have two objectives:
+
+* Uncover the desires and goals of each decision maker involved in the project
+* Identify differences and gain consensus among the decision makers
+
+Stakeholders often mistake their own needs for their users' needs. It's our job to help align stakeholder's goals with our users' needs.
+
+Often, the needs of different stakeholders must be balanced or prioritized. Interviews help us make informed recommendations, and our clients to make informed decisions (and, often as not, compromises).
 
 Even if the client's senior stakeholders aren't in every meeting, the client team and strategy team should be aware of all people with decision making or veto authority.
 
@@ -286,35 +272,59 @@ Even if the client's senior stakeholders aren't in every meeting, the client tea
 
 + What are the success metrics?
 + Who are the audience segments?
-+ What do their customers or users need?
++ What do customers or users need?
 + Is there any market research?
-+ What will make them successful?
++ What will make the client successful?
 + What challenges do they face?
 
-Stakeholder interviews often turn up new information, issues and objectives.
+When estimating time requirements, be aware that preparing to interview senior stakeholders effectively is staff- and time-intensive.
+</div>
 
-Stakeholders often mistake their own needs for their users' needs. It's our job to help align stakeholder's goals with our users' needs.
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### User or Customer Interviews
 
-Batching in small groups can reduce time spent on-site but saves little time overall, and tend to result in less detailed information from all participants. Interviewing senior stakeholders effectively tends to be staff- and time-intensive.
+By talking to users or customers, we can learn not just what users are doing, but *why*. The better we understand their motivations, the better we can fulfill their needs. 
+
+Interviews can explore concrete items, such as user interface, document flow, feature importance, technical knowledge, or devices used (pc, tablet, phone…). But to be most effective, interviews should explore more fundamental issues.
+
+User interviews can take place in person or remotely. We create a script and a list of questions to ensure consistency.
+
+**Topics include:**
+
++ What do users want? What are they _really_ trying to do?
++ What frustrates them?
++ What makes them happy?
++ Is the task we're fulfilling their primary goal, or is it part of something else?
++ Are there other tools or competitors they might consider?
++ What is the environment where they use the system? What else are they doing while using the site/app/system?
+
+Some organizations will have people who are in daily contact with users, and have valuable insight into what makes users "tick". Customer service and technical support teams are often treasure troves of insight, with "on the ground" knowledge dwarfing that of sales and marketing personnel. Their experience is invaluable, especially for consumer-facing organizations, or if for any reason we can't talk to the actual end users.
+</div>
+
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Recommended reading: 
+
+* [Interviewing Users: How to Uncover Compelling Insights](http://www.amazon.com/gp/product/193382011X/), Steve Portigal, 2013
+</div>
 
 
 
 ### Competitive Analysis
 
 Objective
-:	Give clients a view of how their competitors fare on the web.
+:	Understand how our clients' competitors use their online presences, learn from good practices and avoid their mistakes.
 
 Tasks
-:	Look for patterns and best practices in content, layout, navigation, workflow, and SEO.
+:	Look for patterns and best practices in content, layout, navigation, workflow, SEO, and social media.
 
 Deliverables
-:	A competitive analysis should culminate in specific recommendations for the project, summarized a findings document (typically 2–5 pages).
+:	Specific recommendations for the project, summarized in a concise findings document (2–4 printed pages)
 
 Time Req
-: 16–32 hours, depending on breadth and depth
+: 8 hours
 
 Template
-:	fileserver: files/Strategy/templates/Competitive Analysis/
+:	<smb://fileserver/files/Strategy/templates/Competitive Analysis/>
 
 
 Typically we look for patterns and best practices among:
@@ -328,68 +338,47 @@ Typically we look for patterns and best practices among:
 *Caution:* Just because something commonly is done a certain way does not mean it is the *best way*. You should use your own judgement; the goal of a competitive analysis is not to comply with the lowest common denominator, but to find the very best practices.
 
 
-### Web Analytics Audit
+### Web Analytics and Metrics Baseline
 
 Objective
-:	Help clients understand where their site has performed well or poorly.
+:	Help clients understand where their site has performed well or poorly, and establish a baseline to measure the effectiveness of their site in the future.
 
 Tasks
 :	Explore trends and patterns in user activity, content, and page flows.
 
 Deliverables
-:	2–4 page summary of most important analytics data findings.
+:	2–3 page summary of most important analytics data findings. This establishes a baseline for future measurement.
 
 Time Req
-:	6–8 hours
+:	8 hours
 
 Templates
-:	fileserver: files/user_experience/web-analytics/ <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
+:	<smb://fileserver/files/user_experience/web-analytics/> <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
 
-The primary purpose of this document is to identify and convey past patterns in user activity, page flows, content, and traffic sources to better inform decisions during planning, design and development. It is necessarily backwards-looking.
+We review web analytics to better inform decisions during planning, design and development, and set a baseline to measure the site in the future. We look at user activity, page flows, content popularity, and traffic sources. It is necessarily backwards-looking.
 
 **Topics include:**
 
-+ **Visitor Technology:** Browsers and versions, commonest devices
 + **Behavior:** Bounce rates and top bounce pages, page depth, loyalty, task completion rate
 + **Content:** Top pages, search terms, important content with puzzlingly low access rates
-+ **Events:** Correlate offline events to visits or conversions
 + **Social:** Traffic sources, popular content
-+ **Traffic Sources:** Relative mix of traffic sources, keywords used in organic search
-+ **SEO Audit:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [iMarc Wiki: SEO](http://wiki.imarc.net/SEO) for guidance.)
++ **Visitor Technology:** Browsers and versions, commonest devices
++ **Traffic Sources and Search Keywords:** Relative mix of traffic sources, keywords used in organic search
++ **Events:** Correlate offline events to visits or conversions
++ **SEO:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [iMarc Wiki: SEO](http://wiki.imarc.net/SEO) for guidance.)
 
+We also identify the most important performance metrics that the client should follow in the future. The exact metrics will vary from project to project, but in general we will define several general and specific indicators:
 
-### Metrics Baseline
++ **General Performance:** 3–4 trackable, standard metrics for the site overall which will help the client understand where their site is performing well, or needs improvement. For example, natural search referrals, length of visit, depth of visit, bounce rate, etc.
 
-Objective
-:	Help clients measure the effectiveness of their site.
++ **Specific Indicators:** 2–3 KPIs or event triggers that can be used to measure *conversions* (e.g., ”Request a Quote“ form submissions, course sign-up.); *value* (e.g., average order total…); or *behaviors* (e.g., Visitor loyalty and recency, days & visits to purchase, checkout abandonment rate, task completion rate…).
 
-Tasks
-:	Talk to core stakeholders, identify metrics for success based on their business activities, and document and prepare those metrics for implementation by the development team.
-
-Deliverables
-:	1–3 page findings document. The findings and metrics should be incorporated into the site Requirements or Specification.
-
-Time Req
-:	6–8 hours
-
-The Metrics Baseline is a forward-looking activity that builds upon the Web Analytics Audit findings to establish what metrics will be used to measure conversion and site performance *after* launch. 
-
-It should provide up to 12 total metrics (the limit of a Google Analytics Dashboard) both for general performance and specific indicators:
-
-+ **General Performance**  
-5–7 trackable, standard metrics for the site overall which will help the client understand where their site is performing well, or needs improvement. For example, natural search referrals, length of visit, depth of visit, bounce rate, etc.
-
-+ **Specific Indicators**  
-5 KPIs or event triggers that can be used to measure *conversions* (e.g., ”Request a Quote“ form submissions, course sign-up.); *value* (e.g., average order total…); or *behaviors* (e.g., Visitor loyalty and recency, days & visits to purchase, checkout abandonment rate, task completion rate…).
-
-
-In both cases, set a baseline to measure improvement (if possible). If the client is active in social media, also measure [amplification and applause](http://www.kaushik.net/avinash/best-social-media-metrics-conversation-amplification-applause-economic-value/) rates.
 
 
 ### Surveys
 
 Objective
-:	Gather information from a large number of participants, yielding results in quantitative terms.
+:	Gather information from a large number of participants, yielding quantitative results.
 
 Tasks
 :	Design a set of closed-ended questions, distribute the survey to users (see [survey tools](strategy#SurveysandTesting) below), analyze the results.
@@ -398,14 +387,25 @@ Deliverables
 :	1–3 page summary of findings.
 
 Time Req
-: 32–40 hours per survey. If also recruiting, add 8–12 hours.
+: 32 hours per survey.
 
-
-Questions should be close-ended fashion (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
+Questions should be close-ended (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, *We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.*
 
 *Caution:* Surveys can only answer the questions we know to ask; unlike interviews and usability testing, they rarely produce novel findings.
 
 Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias) creeping into survey design and interpretation.
+
+**A note on incentives:** Some clients may wish to offer an incentive to participants. When included with the survey invitation itself (for example, an Amazon gift code redeemable regardless of participation), this can increase participation rates by 19%. However, the promise of an incentive after completion has not been found to be effective, nor has participation in a lottery or raffle.
+
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Recommend Reading
+
+* [Smart Survey Design (PDF)](https://s3.amazonaws.com/SurveyMonkeyFiles/SmartSurvey.pdf), SurveyMonkey
+* [Survey Design](http://www.surveysoftware.net/sdesign.htm), Creative Research Systems
+* [Questionnaire Design and Surveys Sampling](http://home.ubalt.edu/ntsbarsh/stat-data/Surveys.htm), Prof. Hossein Arsham, University of Baltimore
+* [Statistics Tutorial](http://www.statisticallysignificantconsulting.com/Statistics101.htm), Steve Creech, Statistically Significant Consulting
+* [Using Incentives in Survey Research](https://www.statpac.com/surveys/incentives.htm), StatPac
+</div>
 
 
 
@@ -417,6 +417,8 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
+Over the years, iMarc has shifted from defining the requirements for websites (or apps) only in prose, to creating more visual documents. Combined with detailed annotations or working prototypes, these better explain how a web site or apps will work.
+
 
 ### Proposal
 
@@ -425,7 +427,7 @@ A proposal is created by Business Development and is a sales tool. It defines th
 
 ### Statement of Work
 
-A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery, and rarely requires a [Production Specification](strategy#ProductionSpecification) before production.
+A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery.
 
 
 ### Site Map
@@ -434,10 +436,10 @@ Summary
 :	Diagram showing the relationship of a web site's information and organization of content. 
 
 Time Req
-: 8–30 hours (varies by scope of project)
+: 10 hours (minimum, varies by scope of project)
 
 Templates
-:	fileserver: files/user_experience/sitemap-wireframe-template/<br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
+:	<smb://fileserver/files/user_experience/sitemap-wireframe-template/> <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
 
 A sitemap should:
 
@@ -486,10 +488,10 @@ Summary
 : User interface and content illustration stripped of all presentational style.
 
 Time Req
-: 8–12 hours per page or screen
+: 8–10 hours each
 
 Templates
-:	fileserver: files/user_experience/sitemap-wireframe-template/<br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
+:	<smb://fileserver/files/user_experience/sitemap-wireframe-template/> <br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
 
 A wireframe is a low fidelity representation of a design that connects the underlying conceptual structure (information architecture), to the visual design of the website. A wireframe should clearly show:
 
@@ -502,7 +504,7 @@ The wireframe allows us to rapidly iterate the underlying functional design a we
 
 Wireframes usually are annotated to describe behaviors, functionality, and content needs. **Always use real content.** Using Latin text (“lorem ipsum”) may speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well. It bears repeating: **always use real content**.
 
-Most wireframes depict single web pages, but some may depict multiple screens in a complex interaction or workflow. We call these **storyboards**. The time required is cumulative: a four-screen storyboard will take 32-48 hours of work to create, revise and approve.
+Most wireframes depict single web pages, but some may depict multiple screens in a complex interaction or workflow. We call these **storyboards**. The time required is cumulative: a four-screen storyboard will take 32-40 hours of work to create, revise and approve.
 
 #### Example Wireframe
 ![Example Wireframe](img/strategy/wireframe.png)
@@ -511,77 +513,22 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 ![Example Storyboard](img/strategy/storyboard.png)
 
 
-### Homepage Narrative
+### Prototypes
 
 Summary
-: Brief, 1–2 page document that defines and prioritizes all content, features and functionality required for the homepage. 
+:	An interactive mockup of a user interface that shows how it will work
 
 Time Req
-: 6–8 hours
+:	_special_
 
-Templates
-:	fileserver: files/Strategy/templates/Site Maps & Wireframes/
+Rapid prototypes can be used to quickly test interface or design interaction concepts. They bridge the gap between static documents such as site maps and wireframes, and the actual user experience of a web site or app.
 
-This is a short document that lists all content and functions of the home page, including (wherever possible) real examples of each content item. This provides the creative team with a full, prioritized inventory  to use in design.
+At iMarc, we use prototypes to test novel interfaces, gain user feedback, or to explain an interaction to a client before committing to intensive development.
 
+A UX Engineer creates an interactive mockup; it is barely styled ("low fidelity"), uses real content if possible, and implements the minimum functionality possible to test the concept. We review the prototype with the client or users, identifing what works and what needs to change. There may be several rounds of iteration, improving and expanding functionality until the interface is well-defined.
 
-### Content Plan
+The prototype then serves as a blueprint for creative design and coding.
 
-Summary
-:	Identify content goals, sources and assigned responsibilities for each page on the site. May include developing an editorial calendar.
-
-Time Req
-:	10–12 hours
-
-Identifies the content needed for your project, including where the content will come from, and who is responsible for each part. Often, this includes an editorial calendar for ongoing activities like blogs, news, and events.
-
-The plan includes a "content outline", which mimics the organization of the site map, provides 1-2 sentences about the purpose and goal of each page.
-
-#### Example Content Outline
-![Sample Content Outline](img/strategy/content_outline.png)
-
-
-### Functional Requirements
-
-Summary
-:	A 5–10 page document for projects of low technical complexity. This typically aligns to projects with production scope of 150–250 hours.
-
-Time Req
-:	22-24 hours
-
-Templates
-:	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
-
-This document should restate scope of production phase (which often changes somewhat during discovery), and must be approved by the client. It describes business needs driving the project, and describes front-end functionality (what, not how). It typically includes a [Site Map](strategy#SiteMap) and [Homepage Wirefame](strategy#Wireframe). It should be reviewed by the Producer before finalization, and may include or reference change orders vs the proposal scope.
-
-
-### Production Specification
-
-Summary
-:	A 15–80 page document for projects of high technical complexity. This typically aligns to projects with production scope of *over 250 hours*.
-
-Time Req
-:	 72–150 hours
-
-Templates
-:	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
-
-Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
-
-This document restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
-
-+ Describes back-end functionality such as CMS tools, fields and relationships; databases; network and server infrastructure; external systems the site works with; security considerations.
-+ Must be reviewed by the Producer and an engineer before finalization.
-+ May also be reviewed on an ad hoc basis by UX, Creative, BizDev or others identified by the Producer or Strategist.
-
-(A Production Spec is somewhat akin to a formal [Functional Specification](http://en.wikipedia.org/wiki/Functional_specification). However, it's not as detailed: we are not building the Space Shuttle, and there is room for improvisation. Our developers have tremendous domain knowledge; it's important to let them exercise it and explore novel approaches. See also Joel Spolsky's [Painless Functional Specifications](http://www.joelonsoftware.com/articles/fog0000000036.html) series.)
-
-
-### Discovery Report (retired)
-
-We have removed the Discovery Report as a separate deliverable. We've found that brief findings documents for each discovery activity are more digestible by the client, faster to produce, and get more useful client feedback than long, monolithic reports.
-
-If a client requires a Discovery Report, one can be produced by special request. Please contact the Producer to arrange a Change Order.
 
 
 
@@ -611,27 +558,35 @@ Time Req
 
 [Hallway testing](http://en.wikipedia.org/wiki/Usability_testing#Hallway_testing) is informal, easy, cheap, fast, and not very rigorous. It answers simple questions quickly.
 
-See also [Hallway usability testing: How much of the UI do you actually make functional?](http://stackoverflow.com/questions/1864212/hallway-usability-testing-how-much-of-the-ui-do-you-actually-make-functional) at Stack Overflow.
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Recommended Reading
 
+* [Hallway usability testing: How much of the UI do you actually make functional?](http://stackoverflow.com/questions/1864212/hallway-usability-testing-how-much-of-the-ui-do-you-actually-make-functional), Stack Overflow
+</div>
 
-### Heuristic Evaluation
+### Expert Evaluation
 
 Objective
 :	Create oral or written suggestions for improvements in a design or system.
 
 Tasks
-: Evaluate a user interface against usability principles and provide recommendations for improvement.
+: Evaluate an existing user interface against usability principles and provide recommendations for improvement.
 
 Deliverables
-:	1–3 page findings document
+:	Concise recommendations for changes (1–2 printed pages)
 
 Time Req
-:	6–8 hours
+:	8 hours
 
-Experienced usability team members evaluate the user interface (current or planned), judging compliance with recognized usability principles, and provide oral or written suggestions for improvements. This is informal and relatively quick, but depends upon an experienced evaluator. It is well-suited to aggressive project schedules.
+Experienced usability specialist evaluates the user interface (current or planned), judging compliance with recognized usability principles, and provides oral or written suggestions for improvements. This is informal and relatively quick, but depends upon an experienced evaluator. It is well-suited to aggressive project schedules.
 
-A good starting point for this is Jakob Nielsen's [10 Heuristics for User Interface Design](http://www.nngroup.com/articles/ten-usability-heuristics/) and [How to Conduct a Heuristic Evaluation](http://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) articles; Abby Covert's [Information Architecture Heuristics](http://www.slideshare.net/AbbyCovert/information-architecture-heuristics) is great too.
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Recommended Reading
 
+* [10 Heuristics for User Interface Design](http://www.nngroup.com/articles/ten-usability-heuristics/), Jakob Nielsen
+* [How to Conduct a Heuristic Evaluation](http://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/), Jakob Nielsen
+* [Information Architecture Heuristics](http://www.slideshare.net/AbbyCovert/information-architecture-heuristics), Abby Covert
+</div>
 
 ### Structured Usability Testing
 
@@ -639,28 +594,33 @@ Objective
 :	Make a site or application easier to use and more effective at its purpose.
 
 Tasks
-: Create a list of tasks to test; create a prototype; put humans in front of it; give them the tasks; record what happens.
+: Create a list of tasks to test; put humans in front of the web site, app, or prototype; give them the tasks; record what happens.
 
 Deliverables
-:	4–8 page findings document
+:	Findings document with recommendations (3–5 printed pages)
 
 Time Req
-:	64–80 hours per round, with 4–5 users, and written usability report and recommendations. 
+:	40 hours per round, with 4–5 users, and written usability report and recommendations. (Does not include time to create a [prototype](#Prototypes).)
 
 Usability testing involves putting actual people in front of a real or mocked up site, giving them tasks, and seeing what happens. This tends to produce the most new insights of any form of testing.
 
 It's best to start with a list of questions that need answering, such as *can users easily sign up for a workshop?* or *does breaking the checkout into three steps make it easier to use than the current site?*
 
-Next, create a formal task list and script, recruit [4 to 5 users](http://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/) ([rarely more](http://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
+Next, create a formal task list and script, recruit 4–5 users (rarely more), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
 
-The script helps to ensure consistency, video recording the screen lets us revisit the tests. 
-
-Steve Krug's book [Rocket Surgery Made Easy]() is an excellent guide to designing and conducting usability testing. Another useful (and shorter) work is Jacob Nielsen's [Travelling Usability Lab](http://www.nngroup.com/articles/traveling-usability-lab/) article.
+The script helps to ensure consistency; video recording the screen lets us revisit the tests. 
 
 <figure markdown="1">
 ![Live Usabilility Testing](img/strategy/user-testing-live.jpg)
 </figure>
 
+<div markdown="1" class="inlinedetailnotreallysemanticisit">
+#### Recommended Reading
+
+* [Rocket Surgery Made Easy](http://www.sensible.com/rsme.html), Steve Krug
+* [Travelling Usability Lab](http://www.nngroup.com/articles/traveling-usability-lab/), Jakob Nielsen
+* [How Many Test Users in a Usability Study?](http://www.nngroup.com/articles/how-many-test-users/), Jakob Nielsen
+</div>
 
 
 ## Quality Assurance
@@ -669,10 +629,10 @@ Objective
 :	Ensure the site or application meets the requirements laid out in the [Functional Requirements](strategy#FunctionalRequirements) or [Production Specification](strategy#ProductionSpecification) document. Find bugs.
 
 Tasks
-: Test every function described in the requirements or spec against expected behavior, and make sure the required content is present and correct.
+: Test every function and content object described in the wireframes/requirements against expected behavior, verify the presence of all pages in the site map, and make sure the required content is present and correct.
 
 Deliverables
-:	Issues should be entered as tickets in iMarc's [Workshop](https://workshop.imarc.net). The Producer will traffic them.
+:	Issues should be entered as tasks in iMarc's [Workshop](https://workshop.imarc.net). The Producer will traffic them.
 
 Time Req
 :	N/A (not budgeted with strategy)
@@ -691,7 +651,7 @@ QA serves as a "last pass" to catch anything missed during production.
 The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
 
 
-### Wireframes and Site Maps
+### Wireframes, Site Maps, and Prototypes
 
 [OmniGraffle Pro 6](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
@@ -699,19 +659,22 @@ We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wi
 
 We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in files/user_experience/sitemap-wireframe-template/stencils.
 
+There are a number of tools we've used to create prototypes, including Keynote, Omnigraffle, and of course JavaScript and PHP. Here are some guides:
 
+* [How to Create HTML & PDF Prototypes Using OmniGraffle Pro](http://techblog.appnexus.com/2012/how-to-create-html-pdf-prototypes-using-omnigraffle-pro/)
+* [How to Create Rapid Prototypes Using Keynote](http://keynotopia.com/tutorials/)
 
 ### Reports and Specs
 
-We publish Functional Requirements, Production Specifications, and some reports as web-native documents on [strategy.imarc.net](https://strategy.imarc.net). This uses a custom [document publishing system](http://wiki.imarc.net/Strategy_Docs_Publishing) inspired by GitHub Pages, but with many customizations for our own process. See the wiki for details.
-
-We use [Word](http://www.microsoft.com/mac/word) for some documents, but are not married to it. We prefer Word's .docx file format for its superior change tracking capabilities. Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
-
-We have used [Pages](http://www.apple.com/iwork/pages/), however the revision tools and cross-platform compatibility might cause collaboration issues.
+We publish many documents and reports as web-native documents on [strategy.imarc.net](https://strategy.imarc.net). This uses a custom [document publishing system](http://wiki.imarc.net/Strategy_Docs_Publishing) inspired by GitHub Pages, but with many customizations for our own process. See the wiki for details.
 
 We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
-[Keynote](http://www.apple.com/iwork/keynote/) is used when presenting on-screen. (If cross-platform compatibility will be required, we use PowerPoint.) Branded templates can be downloaded from [our intranet](http://internal.imarc.net/).
+We use [Word](http://www.microsoft.com/mac/word) for some documents, but are not great fans of it. We appreciate Word's .docx file format for its superior change tracking capabilities.
+
+[Keynote](http://www.apple.com/iwork/keynote/) is preferred for on-screen presentation. If cross-platform compatibility will be required, we use PowerPoint.
+
+Branded templates for Word and Keynote can be downloaded from [our intranet](http://internal.imarc.net/).
 
 
 ### Research and Testing Tools
@@ -724,7 +687,7 @@ We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Ap
 
 **Screen Recording:** [Camtasia](http://www.techsmith.com/camtasia.html) is used for conducting in-person user testing. Camtasia records the session screen and audio.
 
-**Screen Sharing:** [GoToMeeting](http://www.gotomeeting.com/fec/) or [Join.me](http://join.me) are used for remote user testing.
+**Screen Sharing:** [Join.me](http://join.me) or [GoToMeeting](http://www.gotomeeting.com/fec/) are used for remote user testing (and presentation).
 
 
 
@@ -733,28 +696,26 @@ We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Ap
 Strategy deliverables should contain an appropriate combination of the following meta information.
 
 Client
-: Example: *iMarc LLC*
+:	Example: *iMarc LLC*
 
 Project
-: Example: *Website Redesign*
+:	Example: *Website Redesign*
 
 Document Title
-: Example: *Product Detail Page Wireframe*
+:	Example: *Product Detail Page Wireframe*
 
 Version
 :	A number used as collaboration aid to identify a specific document. If changes are made to a published or shared document, the version number should increase.  
 Example: *v7*
 
 Last Updated
-:	Full date that the document was last updated  
+:	Full date that the document was last modified. (In OmniGraffle, using the <%ModificationDate%> variable is recommend.)  
 Example: *September 4, 2012*
 
 Author
 :	Each document has one author. The last person to touch the document is the author of record and is responsible for its contents.  
 Example: *David Tufts*
 
-Revision Notes
-:	What changed in this revision; mainly used in Functional Requirements and Production Specification documents.
 
 #### Example of a document metadata block
 ![Example metadata block](img/strategy/metadata.png)
@@ -764,6 +725,8 @@ Revision Notes
 
 This section lists major updates only. For a complete history, see the [document history](https://github.com/imarc/handbook/commits/gh-pages/strategy.markdown) on GitHub.
 
-* April 4, 2014: Overhauled Core Discovery/Detailed Discovery (replacing "Intial Findings" and "Business Analysis and Goals Prioritization", respectively). Retired Discovery Report. Tools updates. Added card sorts.
-* February 20, 2014: Site Map updates and new illustrations.
-* Jan 31, 2014: Added document templates to many deliverables.
+* September 20, 2014: Updated hours for most activities & deliverables based on projects in the past year. Simplified, consolidated, and focused many discovery activities. Retired some deliverables in favor of more visual deliverables, including Functional Requirements, Production Specification, Homepage Narrative, Content Plan. Updated Tools lists and usability testing. (RM)
+* May 22, 2014: Added software development lifecycle (JT)
+* April 4, 2014: Overhauled Core Discovery/Detailed Discovery (replacing "Intial Findings" and "Business Analysis and Goals Prioritization", respectively). Retired Discovery Report. Tools updates. Added card sorts. (RM)
+* February 20, 2014: Site Map updates and new illustrations. (RM)
+* Jan 31, 2014: Added document templates to many deliverables. (RM)
