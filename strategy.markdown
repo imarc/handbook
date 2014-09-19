@@ -529,7 +529,10 @@ A UX Engineer creates an interactive mockup; it is barely styled ("low fidelity"
 
 The prototype then serves as a blueprint for creative design and coding.
 
+#### Example Prototype
+This is a screen recording of a working HTML prototype. This mocks up how searching and adding would work in a simple password manager web app:
 
+![Prototype of a Password Manager](img/strategy/prototype.gif)  
 
 
 
