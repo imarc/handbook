@@ -512,7 +512,7 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 #### Example Storyboard
 ![Example Storyboard](img/strategy/storyboard.png)
 
-
+<!--
 ### Prototypes
 
 Summary
@@ -534,6 +534,7 @@ This is a screen recording of a working HTML prototype. This mocks up how search
 
 ![Prototype of a Password Manager](img/strategy/prototype.gif)  
 
+-->
 
 
 ## Usability Testing
