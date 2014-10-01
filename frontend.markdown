@@ -500,10 +500,48 @@ Some older versions of Internet Explorer need dedicated CSS rules in order to ac
 
 Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
 
+### ARIA Landmark Roles
+
+ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse areas of a website by their respective landmark role, allowing users to skip over regions that are repeated on every page. iMarc takes advantage of five roles:
+<ul>
+	<li>
+		<code>banner</code>: A region that contains the prime heading or internal title of a page.
+	</li>
+	<li>
+		<code>navigation</code>: A collection of links suitable for use when navigating the document or related documents.
+	</li>
+	<li>
+		<code>main</code>: Main content in a document. In almost all cases a page will have only one main role.
+	</li>
+	<li>
+		<code>complementary</code>:	Any section of the document that supports the main content, yet is separate and meaningful on its own.
+	</li>
+	<li>
+		<code>contentinfo</code>: A region that contains information about the parent document such as copyrights and links to privacy statements
+	</li>
+</ul>
+
+Adding a role is simple and does not affect the display or behavior of a web page. Note that if there are multiple navigation structures, they should be labeled for completeness using the <code>aria-label</code> attribute.
+
+	<header class="primary" role="banner">
+
+	<nav aria-label="utility" class="utility" role="navigation">
+
+	<nav aria-label="primary" class="primary" role="navigation">
+
+	<nav aria-label="secondary" class="secondary" role="navigation">
+
+	<aside class="primary" role="complementary">
+
+	<div class="main" role="main">
+
+	<footer class="primary" role="contentinfo">
+
+
 ### Baseline Checklist
 <ul>
 	<li>
-		Use open web standards such as HTML, CSS, JavaScript, WAI-ARIA
+		Use open web standards such as HTML, CSS, JavaScript
 	</li>
 	<li>
 		HTML and CSS correctly validate using W3C validation tools  
