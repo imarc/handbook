@@ -517,7 +517,7 @@ Most wireframes depict single web pages, but some may depict multiple screens in
 
 Summary
 :	An interactive mockup of a user interface that shows how it will work
-
+``
 Time Req
 :	_special_
 
@@ -655,18 +655,19 @@ QA serves as a "last pass" to catch anything missed during production.
 The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
 
 
-### Wireframes, Site Maps, and Prototypes
+### Wireframes and Site Maps
 
 [OmniGraffle Pro 6](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
-We generally use the [Konigi stencil set](http://konigi.com/tools/omnigraffle-wireframe-stencils) for wireframes. This provides a remarkably complete set of user interface components for web sites, applications and mobile devices. (It's in OmniGraffle 6's standard stencil library.)
+We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version at GitHub:  
+<https://github.com/imarc/omnigraffle-stencils/>
 
-We also have created an "iMarc Objects" OmniGraffle stencil with some commonly used elements, including iMarc-branded metadata blocks. You can get the latest stencil from our file server, in files/user_experience/sitemap-wireframe-template/stencils.
-
+<!--
 There are a number of tools we've used to create prototypes, including Keynote, Omnigraffle, and of course JavaScript and PHP. Here are some guides:
 
 * [How to Create HTML & PDF Prototypes Using OmniGraffle Pro](http://techblog.appnexus.com/2012/how-to-create-html-pdf-prototypes-using-omnigraffle-pro/)
 * [How to Create Rapid Prototypes Using Keynote](http://keynotopia.com/tutorials/)
+-->
 
 ### Reports and Specs
 
