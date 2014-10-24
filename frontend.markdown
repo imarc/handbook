@@ -408,8 +408,7 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <th> Platform/OS </th>
 <th> Browser </th>
 <th> Target Devices </th>
-<th> Resolution(s)
-</th></tr>
+</tr>
 <tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
