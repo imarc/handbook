@@ -412,22 +412,12 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
-<td> iPhone 4 series, 5 series </td>
-</tr>
-<tr>
-<td> iOS 7 </td>
-<td> Safari 7 </td>
-<td> iPad </td>
+<td> iPhone 4 series, 5 series, iPad 2+ </td>
 </tr>
 <tr>
 <td> iOS 8 </td>
 <td> Safari 8 </td>
-<td> iPhone 4S, 5 series, 6 series </td>
-</tr>
-<tr>
-<td> iOS 8 </td>
-<td> Safari 8 </td>
-<td> iPad </td>
+<td> iPhone 4S, 5 series, 6 series, iPad 3+ </td>
 </tr>
 <tr>
 <td> Android 4.1 </td>
