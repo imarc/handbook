@@ -414,13 +414,15 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <td> iOS 7 </td>
 <td> Safari 7 </td>
 <td> iPhone Retina </td>
-<td> 640x960
+<td> 640x960 to 640x1136 (physical)<br>
+	320x480 to 320x568 (logical)
 </td></tr>
 <tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
 <td> iPad Retina </td>
-<td> 2048x1536
+<td> 2048x1536 (physical)<br>
+	1024x768 (virtual)
 </td></tr>
 <tr>
 <td> iOS 7 </td>
@@ -432,13 +434,15 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <td> iOS 8 </td>
 <td> Safari 8 </td>
 <td> iPhone Retina </td>
-<td> 640x960
+<td> 640x960 to 1920x1080 (physical)<br>
+	320x480 to 414×736 (virtual)
 </td></tr>
 <tr>
 <td> iOS 8 </td>
 <td> Safari 8 </td>
 <td> iPad Retina </td>
-<td> 2048x1536
+<td> 2048x1536 (physical)<br>
+	1024x768 (virtual)
 </td></tr>
 <tr>
 <td> iOS 8 </td>
