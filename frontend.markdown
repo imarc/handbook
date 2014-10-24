@@ -413,7 +413,7 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
-<td> iPhone Retina </td>
+<td> iPhone 4–5S </td>
 <td> 640x960 to 640x1136 (physical)<br>
 	320x480 to 320x568 (logical)
 </td></tr>
@@ -433,7 +433,7 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <tr>
 <td> iOS 8 </td>
 <td> Safari 8 </td>
-<td> iPhone Retina </td>
+<td> iPhone 4S–6 Plus </td>
 <td> 640x960 to 1920x1080 (physical)<br>
 	320x480 to 414×736 (virtual)
 </td></tr>
