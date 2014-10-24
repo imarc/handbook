@@ -413,67 +413,33 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
-<td> iPhone 4–5S </td>
-<td> 640x960 to 640x1136 (physical)<br>
-	320x480 to 320x568 (logical)
-</td></tr>
-<tr>
-<td> iOS 7 </td>
-<td> Safari 7 </td>
-<td> iPad Retina </td>
-<td> 2048x1536 (physical)<br>
-	1024x768 (virtual)
-</td></tr>
+<td> iPhone 4 series, 5 series </td>
+</tr>
 <tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
 <td> iPad </td>
-<td> 1024x768
-</td></tr>
+</tr>
 <tr>
 <td> iOS 8 </td>
 <td> Safari 8 </td>
-<td> iPhone 4S–6 Plus </td>
-<td> 640x960 to 1920x1080 (physical)<br>
-	320x480 to 414×736 (virtual)
-</td></tr>
-<tr>
-<td> iOS 8 </td>
-<td> Safari 8 </td>
-<td> iPad Retina </td>
-<td> 2048x1536 (physical)<br>
-	1024x768 (virtual)
-</td></tr>
+<td> iPhone 4S, 5 series, 6 series </td>
+</tr>
 <tr>
 <td> iOS 8 </td>
 <td> Safari 8 </td>
 <td> iPad </td>
-<td> 1024x768
-</td></tr>
+</tr>
 <tr>
 <td> Android 4.1 </td>
 <td> Browser </td>
-<td> handsets </td>
-<td> 320x480 to 1920x1080
-</td></tr>
-<tr>
-<td> Android 4.1 </td>
-<td> Browser </td>
-<td> 7" tablet, 10" tablet </td>
-<td> 1024x600 to 2460x1600
-</td></tr>
+<td> 4"+ handsets, 7–10" tablets </td>
+</tr>
 <tr>
 <td> Android 4.2–4.4 </td>
 <td> Chrome </td>
-<td> handsets </td>
-<td> 320x480 to 1920x1080
-</td></tr>
-<tr>
-<td> Android 4.2–4.4 </td>
-<td> Chrome </td>
-<td> 7" tablet, 10" tablet </td>
-<td> 1024x600 to 2460x1600
-</td></tr>
+<td> 4"+ handsets, 7–10" tablets </td>
+</tr>
 </table>
 
 iMarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
