@@ -308,7 +308,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 * We ensure our sites function correctly and look as good as possible on these browsers. 
 * We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
-* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and spec'ed for the poject.
+* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the poject.
 
 ### Desktop Browser Support
 
@@ -397,7 +397,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 </td></tr>
 </table>
 
-As of October 2014, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 7+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
+As of October 2014, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 7+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
 By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
@@ -411,30 +411,6 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <th> Resolution(s)
 </th></tr>
 <tr>
-<td> iOS 6 </td>
-<td> Safari </td>
-<td> iPhone Retina </td>
-<td> 640x960
-</td></tr>
-<tr>
-<td> iOS 6 </td>
-<td> Safari </td>
-<td> iPhone </td>
-<td> 320x480
-</td></tr>
-<tr>
-<td> iOS 6 </td>
-<td> Safari </td>
-<td> iPad Retina </td>
-<td> 2048x1536
-</td></tr>
-<tr>
-<td> iOS 6 </td>
-<td> Safari </td>
-<td> iPad </td>
-<td> 1024x768
-</td></tr>
-<tr>
 <td> iOS 7 </td>
 <td> Safari 7 </td>
 <td> iPhone Retina </td>
@@ -453,31 +429,43 @@ By default we do not test on IE 6 and 7. However individual projects may require
 <td> 1024x768
 </td></tr>
 <tr>
-<td> Android 2.3 </td>
-<td> Browser </td>
-<td> handsets, 7" tablets </td>
-<td> 320x480 to 1024x600
+<td> iOS 8 </td>
+<td> Safari 8 </td>
+<td> iPhone Retina </td>
+<td> 640x960
 </td></tr>
 <tr>
-<td> Android 4.1–4.3 </td>
+<td> iOS 8 </td>
+<td> Safari 8 </td>
+<td> iPad Retina </td>
+<td> 2048x1536
+</td></tr>
+<tr>
+<td> iOS 8 </td>
+<td> Safari 8 </td>
+<td> iPad </td>
+<td> 1024x768
+</td></tr>
+<tr>
+<td> Android 4.1 </td>
 <td> Browser </td>
 <td> handsets </td>
 <td> 320x480 to 1920x1080
 </td></tr>
 <tr>
-<td> Android 4.1–4.3 </td>
+<td> Android 4.1 </td>
 <td> Browser </td>
 <td> 7" tablet, 10" tablet </td>
 <td> 1024x600 to 2460x1600
 </td></tr>
 <tr>
-<td> Android 4.1–4.3 </td>
+<td> Android 4.2–4.4 </td>
 <td> Chrome </td>
 <td> handsets </td>
 <td> 320x480 to 1920x1080
 </td></tr>
 <tr>
-<td> Android 4.1–4.3 </td>
+<td> Android 4.2–4.4 </td>
 <td> Chrome </td>
 <td> 7" tablet, 10" tablet </td>
 <td> 1024x600 to 2460x1600
