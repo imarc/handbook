@@ -315,8 +315,8 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <table>
 <tr>
 <th>Browser/Version</th>
-<th>Mac 10.8</th>
 <th>Mac 10.9</th>
+<th>Mac 10.10</th>
 <th>Win XP</th>
 <th>Win 7</th>
 <th>Win 8</th>
@@ -364,7 +364,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td class="supported">yes (*8.1 only)
 </td></tr>
 <tr>
-<td>Safari 6.1</td>
+<td>Safari 7.1</td>
 <td class="supported">yes</td>
 <td></td>
 <td></td>
@@ -372,7 +372,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>
 </td></tr>
 <tr>
-<td>Safari 6.1 Retina</td>
+<td>Safari 7.1 Retina</td>
 <td class="supported">yes</td>
 <td></td>
 <td></td>
@@ -380,7 +380,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>
 </td></tr>
 <tr>
-<td>Safari 7.0</td>
+<td>Safari 8.0</td>
 <td></td>
 <td class="supported">yes</td>
 <td></td>
@@ -388,7 +388,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <td>
 </td></tr>
 <tr>
-<td>Safari 7.0 Retina</td>
+<td>Safari 8.0 Retina</td>
 <td></td>
 <td class="supported">yes</td>
 <td></td>
@@ -397,9 +397,9 @@ The following **philosophy** is paraphrased from our standard proposal language.
 </td></tr>
 </table>
 
-As of May 2013, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 6+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
+As of October 2014, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 7+ (Mac & iOS), and Andoid Browser (Android 2.3, 4.1, 4.2 handsets).
 
-By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be spec'ed in the proposal and strategy documents.
+By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
 ### Mobile Browser Support
 
