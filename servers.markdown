@@ -10,7 +10,7 @@ layout: default
 	</p>
 </section>
 
-## Architecture
+## iMarc's Architecture
 
 We employ Amazon's EC2 cloud computing platform in order to maintain long term flexibility and consistency across our hosting environment.  Additionally, EC2 has provided equal or better uptime for our servers while maintaining a number of features which allow for even less downtime during major maintenance.
 
@@ -42,7 +42,7 @@ IP addresses which can be provisioned separately and arbitrarily assigned or una
 
 Launch configurations define pre-existing settings for creating instances such as instance size and the AMI which to install on it.  Launch configurations are required for auto scaling groups, are instructions on how many instances of that particular launch configuration to start and maintain in order to provide scaling.
 
-## Server Management
+## iMarc Server Management
 
 Each iMarc server consists of the following:
 
@@ -204,3 +204,56 @@ While you can technically bundle an AMI from any server, it is generally recomme
 - The region of the AWS (S3) bucket will determine the availability of the AMI.  You can't create a west coast instance with an AMI from an east coast bucket.
 
 
+## Security, Stability, Reliability
+
+### Software Updates
+
+iMarc releases 3 internal AMIs per year on a 4 month release cycle:
+
+- April
+- August
+- December
+
+This release cycle provides us an ability to stay on top of upgrades without a huge amount of overhead for major changes in the underlying distribution.  It also enables us to keep up to date on minimal threat security issues and gives us frequent opportunity to add requisite features or consolidate functionality which was otherwise server specific.
+
+While there is no exact release date, we strive to release them every month even in the event that we will not be upgrading all servers.  Each AMI release, at a minimum employs a full `apt-get update` and `apt-get dist-upgrade` until *no new packages are available*.  Individual packages may need to be installed from independent targets in the event of cross repository/target incompatibility.
+
+#### Sources
+
+We only use official and highly regarded repositories.  Currently all official sources for iMarc's internal servers are official Debian repositories, although we do mix packages from stable, unstable, and testing.  Additional repositories which could be used in future releases depending on platform could be:
+
+- [Dotdeb for common debian webstacks](http://www.dotdeb.org/)
+- [Remi for making RedHat usable](http://rpms.famillecollet.com/)
+
+#### Security Updates
+
+In the event of critical security updates iMarc works to patch all servers directly without necessarily releasing a new AMI.  This allows us to respond more directly on a per server basis and faster since we don't have to go through as careful checks to make sure no existing servers will be rendered incapable.  Any updates to packages themselves or common changes which need to occur in the AMI can be overridden in every server's config or `spawn` function, or globally in the AWS Scripts themselves.
+
+Examples of major security vulnerabilities which iMarc patched on a per server level:
+
+- Heartbleed
+- Shellshock
+- Poodle
+
+Depending on the initial assessment of our vulnerability, these updates are generally completed across all servers within 24 - 36 hours.
+
+### Backups
+
+All iMarc servers are provided access to our internal backup service.  Daily backups are performed on every server such that local copies can be immediatley restored from 3 - 7 days past depending on the data.
+
+In addition to this, we have a centralized remote system which connected and stores longer term archives of backed up files.
+
+Backups are almost universal across our common services and include:
+
+- All MySQL Databases
+- All PostgreSQL Databases
+- All Website (Does not include external cloud storage data)
+- Web Server Logs (including access logs)
+- Web Server Configs
+- Crontabs
+
+### Monitoring
+
+iMarc performs monitoring across all its servers and receives notification of downed servers within 2 minutes of the system becoming unresponsive.  In addition to this newer servers provide much more robust debugging during startup and can notify us if they are terminated (for upgrade or retirement by Amazon) and fail to respawn properly.
+
+Persistent health checks are provided via a paid third party service to ensure that systems are being tested independent of their networks and architecture.
