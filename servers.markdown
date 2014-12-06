@@ -42,7 +42,7 @@ IP addresses which can be provisioned separately and arbitrarily assigned or una
 
 Launch configurations define pre-existing settings for creating instances such as instance size and the AMI which to install on it.  Launch configurations are required for auto scaling groups, are instructions on how many instances of that particular launch configuration to start and maintain in order to provide scaling.
 
-## iMarc Server Management
+### Basic Concepts
 
 Each iMarc server consists of the following:
 
@@ -54,9 +54,12 @@ Each iMarc server consists of the following:
 
 The Launch Configuration defines the size, AMI, and startup instructions for a given instance, while the Auto Scaling Group ensures that there is always a single instance running to fulfill that system.
 
-All resources associated with a single server are tagged with the servers name which is named after some type of beer, for example: ommegang.
+All resources associated with a single server are tagged with the servers name which is named after some type of beer, for example: ommegang.  Resources are tied together via this tagging.
 
-In order to make this process as easy and as conistent as possible iMarc has built a number of scripts which are designed to provide control over servers.  These scripts interact with the aforementioned components to perform various operations on a single "server" which may affect one or more of the components that make up a server above.
+
+## iMarc Server Management
+
+In order to make the process of managing servers as easy and as conistent as possible iMarc has built a number of scripts which are designed to provide control over servers.  These scripts interact with the aforementioned components to perform various operations on a single "server" which may affect one or more of the components that make up a server above.
 
 The scripts are hosted in [iMarc's git repositories](http://gitlab.imarc.net/imarc/aws-scripts).  All commands are executed via the `run.sh` script such as:
 
