@@ -42,7 +42,7 @@ IP addresses which can be provisioned separately and arbitrarily assigned or una
 
 Launch configurations define pre-existing settings for creating instances such as instance size and the AMI which to install on it.  Launch configurations are required for auto scaling groups, are instructions on how many instances of that particular launch configuration to start and maintain in order to provide scaling.
 
-### Server Management
+## Server Management
 
 Each iMarc server consists of the following:
 
@@ -74,7 +74,7 @@ In order for the scripts to work, additional tools need to be installed and work
 
 All of the above are available in AWS's [developer tools section](http://aws.amazon.com/developertools) and are installed in our AMI releases for use by the scripts.
 
-#### Configuring a Server
+### Configuring a Server
 
 A server's configuration should generally be added prior to creating it.  The server configuration allows for overriding any of the variables set in the platform configuration or the global settings.
 
@@ -92,7 +92,7 @@ You can add custom logic or commands that a server will run whenever a new insta
 		return 0
 	}
 
-##### Testing Scripts and Configs
+#### Testing Scripts and Configs
 
 If you make changes to the AWS Scripts in any way, whether it is a server configuration or a modification to the common behavior, you can test them quickly for syntax errors which may be catastrophic by using the following:
 
@@ -106,7 +106,7 @@ If you want to syntax check a single configuration without testing all the scrip
 
 	bash -n <path to config script>
 
-#### Creating a New Server
+### Creating a New Server
 
 Creating a new server will create all of the aforementioned resources and tag them with the servername for grouping. All of the settings below with the exception of the EBS Size can be set in the server config instead of being given at the command line.
 
@@ -117,31 +117,31 @@ When a new server is created, the instance is provided a bootstrapping script in
 1. Clone or update the local aws-scripts copy
 2. Execute the the aws-scripts `init.sh` script with the "persist" argument
 
-##### Persisting Instances
+#### Persisting Instances
 
 Since instances themselves can be terminated arbitrarily (by us or by amazon), the persistence of a server includes a number of operations including copying various data points to the attached EBS volume and creating mount points to remount those directories on startup.  Persistence is also responsible for creating the launch configuration and auto scaling group that will keep the server running even when the instance is terminated.
 
 When the launch configuration is created, the user data is overwritten such that the `init.sh` script is run with the "spawn" argument.  This shares some common functionality with the "persist" method, but does not attempt to persist data and configuration.
 
-##### Notes
+#### Notes
 
 - This command will allocate a new IP address if there is no existing one or if the existing one does not match the current DNS record.
 - If an IP address needs to be allocated during this process, this command will prompt you to modify the DNS record.  *You must add the record before continuing!*
 - If an EBS volume can be created, but the zone is full of instances, the EBS volume will be removed.
 
-#### Stopping Auto Scaling
+### Stopping Auto Scaling
 
 If for some reason a server does not need to be running all the time, it is possible to stop auto scaling and terminate it indefinitely.  The EBS volume and Elastic IP are *not* removed, so you can re-attach an instance later.
 
 	run.sh stop-auto-scaling[@<name>]
 
-##### Notes
+#### Notes
 
 - The running instance is terminated
 - When run locally on a server, the auto scaling group and launch configuration are *not* removed.
 - When run remotely from another system, the auto scaling group and launch configuration are removed.
 
-#### Attaching an Instance
+### Attaching an Instance
 
 If you've stopped auto scaling on a server, but need to bring that server back up to make some modifications to persistent data, you can re-attach an instance to the EBS volume and Elastic IP.  Note that the instance does not have to match the original instance size/details:
 
@@ -149,25 +149,25 @@ If you've stopped auto scaling on a server, but need to bring that server back u
 
 Once you have made your changes, you can terminate the instance from the AWS console.
 
-##### Notes
+#### Notes
 
 - If an instance is already attached to the volume, the command will error.
 - The instance will be started in the same region/zone based on the volume.
 - This command can fail if a volume is in a zone which is otherwise full (reserved instances are important).
 
-#### Starting Auto Scaling
+### Starting Auto Scaling
 
 If you have previously stopped auto scaling but you need to bring a server back up to running full time, you can begin auto scaling again with the following:
 
 	run.sh start-auto-scaling[@<name>] [<Instance Size (m1.small, m1.large, etc)>] [<AMI Type (web-server)] [Architecture (x86_64, i386)]
 
-##### Notes
+#### Notes
 
 - This command will error if the instance is already auto-scaling.
 - This will enable auto-scaling regardless of the value of $AUTO_SCALE_CAPACITY.
 - If the server has no current instance region and zone will be pulled from the matching volume.
 
-#### Upgrading an AMI
+### Upgrading an AMI
 
 When iMarc's AMIs are released they often contain critical security updates and general updates to a system.  While it is not necessary to upgrade a server's AMI every release cycle, you should definitely determine if the AMI release will solve your problem or concern before writing custom spawn logic in the configuration.
 
@@ -175,31 +175,31 @@ When you upgrade an AMI the Auto Scaling Group will be given a new Launch Config
 
 	/root/.ec2/imarc/run.sh upgrade-ami[@<name>]
 
-##### Notes
+#### Notes
 
 - Auto-scaling must be enabled on the server since this modifies the Auto Scaling Group.
 - To upgrade a non-auto-scaled host, simply terminate it when you like and use `attach-instance` instead, the latest AMI will be used.
 - The upgrade is not complete until the currently running host is terminated.
 
 
-#### Creating a Workspace
+### Creating a Workspace
 
 If you wish to test something without setting up a complete server, you can create a workspace which is basically an instance only version of an iMarc server.  There is no dedicated Elastic IP, no attached EBS volume, etc.  These are used also for building new AMIs on top of existing ones.  These are always small instances.
 
 	/root/.ec2/imarc/run.sh create-workspace [<AMI Type (web-server)] [Architecture (x86_64, i386)] [<Region (us-east-1)>]
 
-##### Notes
+#### Notes
 
 - Workspaces will use the latest existing AMI based on type, architecture and region.
 - Worspaces will not run any persist or spawn logic, and will have no services enabled by default, they are literally the latest AMI untouched.
 
-#### Bundle an AMI
+### Bundle an AMI
 
 While you can technically bundle an AMI from any server, it is generally recommended to create a workspace and do so from the workspace.  Bundling an AMI will will package an image of the currently running system and upload it to our S3 buckets.  The AMI will be named with the type and the date which is how other commands determine which AMI to use for server setup.
 
 	/root/.ec2/imarc/run.sh bundle-ami [<AWS Bucket (imarc-amis)>] [<AMI Type (web-server)>]
 
-###### Notes
+#### Notes
 
 - The region of the AWS (S3) bucket will determine the availability of the AMI.  You can't create a west coast instance with an AMI from an east coast bucket.
 

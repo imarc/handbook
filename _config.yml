@@ -14,6 +14,9 @@ navigation:
 - text: Backend
   relative_url: backend
   url: /backend.html
+- text: Servers
+  relative_url: servers
+  url: /servers.html
 - text: Deployment
   relative_url: deployment
   url: /deployment.html
