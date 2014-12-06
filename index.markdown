@@ -37,6 +37,12 @@ layout: homepage
 		PHP and SQL standards
 	</dd>
 	<dt>
+		<a href="servers">Servers</a>
+	</dt>
+	<dd>
+		Servers and hosting setups
+	</dd>
+	<dt>
 		<a href="deployment">Deployment</a>
 	</dt>
 	<dd>
