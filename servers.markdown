@@ -5,7 +5,7 @@ layout: default
 
 <section class="intro">
 	<p markdown="1">
-		This document describes iMarc’s servers, hosting services, and maintenance practices with respect to both.
+		This document describes iMarc’s hosting, server, and maintenance practices.
 		[iMarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
@@ -59,7 +59,7 @@ All resources associated with a single server are tagged with the servers name w
 
 ## iMarc Server Management
 
-In order to make the process of managing servers as easy and as conistent as possible iMarc has built a number of scripts which are designed to provide control over servers.  These scripts interact with the aforementioned components to perform various operations on a single "server" which may affect one or more of the components that make up a server above.
+In order to make the process of managing servers as easy and as consistent as possible iMarc has built a number of scripts which are designed to provide control over servers.  These scripts interact with the aforementioned components to perform various operations on a single "server" which may affect one or more of the components that make up a server above.
 
 The scripts are hosted in [iMarc's git repositories](http://gitlab.imarc.net/imarc/aws-scripts).  All commands are executed via the `run.sh` script such as:
 
@@ -97,7 +97,7 @@ You can add custom logic or commands that a server will run whenever a new insta
 
 #### Testing Scripts and Configs
 
-If you make changes to the AWS Scripts in any way, whether it is a server configuration or a modification to the common behavior, you can test them quickly for syntax errors which may be catastrophic by using the following:
+If you make changes to the AWS Scripts in any way, whether it is a server configuration or a modification to the common behavior, you can test them quickly for potentially catastrophic syntax errors by using the following:
 
 	/root/.ec2/imarc/run.sh test
 
@@ -115,7 +115,7 @@ Creating a new server will create all of the aforementioned resources and tag th
 
 	run.sh create-server@<name> <EBS Size in GB> [<Instance Type (m1.small, m1.large, etc)>] [<AMI Type (web-server)] [<Region (us-east-1)>] [Zone (a, b, etc)]
 
-When a new server is created, the instance is provided a bootstrapping script in its user data.  User data is a customizable area in memory which the instance can access directly.  Using the cloud-init package this area is populate with an initialization script which is then executed at startup.  The provided user data script takes the following actions:
+When a new server is created, the instance is provided a bootstrapping script in its user data.  User data is a customizable area in memory which the instance can access directly.  Using the cloud-init package this area is populated with an initialization script which is then executed at startup.  The provided user data script takes the following actions:
 
 1. Clone or update the local aws-scripts copy
 2. Execute the the aws-scripts `init.sh` script with the "persist" argument
