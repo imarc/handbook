@@ -411,8 +411,6 @@ a:focus {
 	background: #0394CD;
 	background: -moz-linear-gradient(top, #0394cd 0%, #0174b5 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0394cd), color-stop(100%,#0174b5));
-	background: -webkit-linear-gradient(top, #0394cd 0%,#0174b5 100%);
-	background: -o-linear-gradient(top, #0394cd 0%,#0174b5 100%);
 	background: -ms-linear-gradient(top, #0394cd 0%,#0174b5 100%);
 	background: linear-gradient(to bottom, #0394cd 0%,#0174b5 100%);
 	border: none;
@@ -582,6 +580,7 @@ body.homepage nav.primary li:first-child {
 }
 body.homepage nav.primary li a {
 	-moz-perspective: 1000;
+	-ms-perspective: 1000;
 	-webkit-perspective: 1000;
 	perspective: 1000;
 }
@@ -594,14 +593,17 @@ body.homepage nav.primary li a,
 body.homepage nav.primary li a:hover .flipper,
 body.homepage nav.primary li a:focus .flipper {
 	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
 .flipper {
 	-moz-transition: 400ms;
+	-ms-transition: 400ms;
 	-webkit-transition: 400ms;
 	transition: 400ms;
 	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	position: relative;
@@ -609,6 +611,7 @@ body.homepage nav.primary li a:focus .flipper {
 .front, 
 .back {
 	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	box-shadow: 0 0 6px 2px rgba(0,0,0,0.8);
@@ -627,7 +630,9 @@ body.homepage nav.primary li a:focus .flipper {
 	background-color: #FFF;
 	color: #5E5E5E;
 	padding: 20px;
+	z-index: 4;
 	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
@@ -758,6 +763,7 @@ tr:first-child th:first-child {
 	}
 	body.homepage nav.primary li a:hover .flipper {
 		-moz-transform: none;
+		-ms-transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
