@@ -145,7 +145,7 @@ nav.primary li {
 	font-family: 'Fjord One', Georgia, serif;
 	font-size: 1.1em;
 	margin-bottom: 0;
-	margin-left: 1.2em;
+	margin-left: .35em;
 }
 
 nav.primary li:first-child {
@@ -562,8 +562,9 @@ body.homepage .intro {
 }
 body.homepage nav.primary {
 	float: none;
-	margin: 8em auto;
+	margin: 8em auto 10em;
 	width: 90%;
+	max-width: 936px;
 }
 body.homepage nav.primary ul {
 	float: none;
@@ -658,11 +659,10 @@ body.homepage nav.primary li a:focus .flipper {
 }
 
 body.homepage footer.primary {
-	color: #AAA;
 	font-size: 13px;
 	padding: 0;
 	text-align: center;
-	text-shadow: 1px 1px 0 rgba(0,0,0,0.8);
+	text-shadow: 1px 1px 12px #000;
 }
 
 body.homepage footer.primary img {
@@ -698,6 +698,10 @@ body.backend .heading h1:before {
 body.deployment .heading h1:before {
 	background-image: url(/img/watermark_deployment.png);
     left: -100px;
+}
+body.servers .heading h1:before {
+	background-image: url(/img/watermark_servers.png);
+	left: -100px;
 }
 
 /* = Tables = */
@@ -863,8 +867,7 @@ tr:first-child th:first-child {
 	}
 
 	nav.primary li {
-		font-size: 1.3em;
-		margin-left: 2em;
+		margin-left: 1.4em;
 	}
 
 	.torso {
@@ -911,8 +914,6 @@ tr:first-child th:first-child {
 @media only screen and (min-height: 1000px) {
 
 	body.homepage footer.primary {
-		bottom: 1em;
-		position: absolute;
 	}
 
 }
