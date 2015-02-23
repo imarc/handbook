@@ -225,7 +225,7 @@ A small-group card sort is performed in person with the core client team (3–6 
 
 If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into "core" and "advisory" groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
 
-**Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testinng tool such as TreeJack to test content findability, not a card sort.)
+**Other applications:** This technique can is also effective at prioritizing audiences or brand attributes. An "open sort" exercise, in which the groups are created on the fly by participants, is very useful for organizing. (But be aware that creating groups and finding content in groups are different cognitive tasks; use a tree testing tool such as TreeJack to test content findability, not a card sort.)
 </div>
 
 <div markdown="1" class="inlinedetailnotreallysemanticisit">
