@@ -67,7 +67,7 @@ Depending on the requirements, project code can be versioned by release, or not 
 
 ## Autoloading
 
-Unless a special autoloader is needed, all autoloaders should follow (PSR-4)[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md] or (PSR-0)[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md].
+Unless a special autoloader is needed, all autoloaders should follow [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) or [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md).
 
 The best practice is to use [Composer's built-in autoloader](https://getcomposer.org/doc/04-schema.md#autoload).
 
