@@ -18,11 +18,11 @@ libraries that are meant to be reusable components across many projects. Project
 ## Environment
 
 iMarc’s ideal development and production platform is:
- - Amazon EC2 w/EBS or DigitalOcean
- - Debian 7 (Wheezy)
- - Apache 2.4+
- - PHP 5.5+
- - PostgreSQL 9.3+
+- Amazon EC2 w/EBS or DigitalOcean
+- Debian 7 (Wheezy)
+- Apache 2.4+
+- PHP 5.5+
+- PostgreSQL 9.3+
 
 ## Security
 
