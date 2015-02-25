@@ -10,7 +10,7 @@ layout: default
 	</p>
 </section>
 
-## Terms
+## Important Terms
 
 This document occasionally makes a distinction between **library code** and **project code**. Library code is closed or open source
 libraries that are meant to be reusable components across many projects. Project code is code written for a single specific project.
@@ -43,13 +43,9 @@ For a very detailed guide to web security issues, view the [OWASP Security Guide
 
 ## Dependency Management
 
-All PHP dependencies are managed by [Composer](https://getcomposer.org/). Get started with Composer by reading their [intro documentation](https://getcomposer.org/doc/00-intro.md).
+All PHP dependencies are managed by [Composer](https://getcomposer.org/). Get started with Composer by reading their [intro documentation](https://getcomposer.org/doc/00-intro.md). Composer installs all dependencies into a `/vendor` directory within your project.
 
-Composer installs all dependencies into a `/vendor` directory within your project.
-
-Library code should never have `/vendor` or the composer.lock committed.
-
-Project code should have dependencies in `/vendor` and the composer.lock committed into version control. All .git directories within `/vendor` should not be committed.
+Library code should never have `/vendor` or the composer.lock committed. Project code should have dependencies in `/vendor` and the composer.lock committed into version control. All .git directories within `/vendor` should not be committed.
 To ignore .git directories, the following line should be added to your `.gitignore`
 
 	vendor/.git
