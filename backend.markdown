@@ -5,581 +5,156 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document describes iMarc’s code standards for developing databases and
-		writing PHP. 
+		This document describes iMarc’s standards for writing PHP and SQL.
 		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
-## Development Environment
+## Terms
+
+This document occasionally makes a distinction between **library code** and **project code**. Library code is closed or open source
+libraries that are meant to be reusable components across many projects. Project code is code written for a single specific project.
+
+## Environment
 
 iMarc’s ideal development and production platform is:
  - Amazon EC2 w/EBS or DigitalOcean
  - Debian 7 (Wheezy)
  - Apache 2.4+
- - PHP 5.4+
+ - PHP 5.5+
  - PostgreSQL 9.3+
 
-The PHP library we are most proficient with is
-[Flourish](http://www.flourishlib.com). Documentation can be
-found at
-[http://flourishlib.com/docs](http://flourishlib.com/docs).
+## Security
 
+All Engineers must understand and implement the best practices around:
 
-## UTF-8
+- [HTTP Methods](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)
+- [SSL (HTTPS) Usage](http://en.wikipedia.org/wiki/HTTP_Secure)
+- [SQL Injection](http://en.wikipedia.org/wiki/SQL_injection)
+- [Cross-Site Scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_scripting)
+- [Cross-Site Request Forgeries (CSRF)](http://en.wikipedia.org/wiki/Cross-site_request_forgery)
+- [Password Hashing](http://php.net/manual/en/faq.passwords.php)
+- [Session Fixation](http://en.wikipedia.org/wiki/Session_fixation)
+- [Email Injection](http://en.wikipedia.org/wiki/Email_injection)
+- [Path Traversal](http://en.wikipedia.org/wiki/Directory_traversal_attack)
 
-[UTF-8](http://flourishlib.com/docs) should be used as the character
-encoding for all aspects of a web applicaiton.
+For a very detailed guide to web security issues, view the [OWASP Security Guide](https://www.owasp.org/index.php/Guide_Table_of_Contents)
 
-UTF-8 is one of the most robust and widely-supported character encodings, which
-means that all parts of a site can share content without converting between
-encodings.
+## Dependency Management
 
-The following list of includes some of, but not necessarily all, the aspects of
-a site that need to be build with UTF-8 in mind:
+All PHP dependencies are managed by [Composer](https://getcomposer.org/). Get started with Composer by reading their [intro documentation](https://getcomposer.org/doc/00-intro.md).
 
-HTML
-:	Set your editor to use UTF-8. Include the correct meta tags, 
-	as specified by [frontend standards](/frontend#UTF-8). Force the correct 
-	HTTP content-type header.
+Composer installs all dependencies into a `/vendor` directory within your project.
 
-	<tt>header('Content-Type: text/html; charset=utf-8');</tt> 
-	or 
-	<tt>fHTML::sendHeader();</tt>
+Library code should never have `/vendor` or the composer.lock committed.
 
-PHP
-:	Use correct content-type headers and meta tags to ensure that 
-	browsers are sending UTF-8 for form contents. Also use UTF-8 safe string functions.
+Project code should have dependencies in `/vendor` and the composer.lock committed into version control. All .git directories within `/vendor` should not be committed.
+To ignore .git directories, the following line should be added to your `.gitignore`
 
-Database
-:	Most databases require that the encoding be set when the database is created. 
-	Ensure your database connection is set to use UTF-8.
+	vendor/.git
 
-Email
-: 	When sending emails, be sure to use code that supports UTF-8 in recipient names, 
-	the subject and the body
+## Versioning
 
-Other Data
-:	Be sure to convert (if necessary) and clean data coming from old databases, 
-	external systems, XML files, CSV files and other such data sources
+All library code should follow [Semantic Versioning](http://semver.org/).
 
-See [Flourish’s UTF-8 docs](http://flourishlib.com/docs/UTF-8) for
-more explanation and examples.
+	Given a version number MAJOR.MINOR.PATCH, increment the:
+		MAJOR version when you make incompatible API changes,
+		MINOR version when you add functionality in a backwards-compatible manner, and
+		PATCH version when you make backwards-compatible bug fixes.
 
+Depending on the requirements, project code can be versioned by release, or not at all.
 
+## Autoloading
 
-## Style
+Unless a special autoloader is needed, all autoloaders should follow (PSR-4)[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md] or (PSR-0)[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md].
 
-PHP code follows the [K&R indent and bracing
-style](http://en.wikipedia.org/wiki/Indent_style#K.26R_style).  That style is decribed in
-this section.
+The best practice is to use [Composer's built-in autoloader](https://getcomposer.org/doc/04-schema.md#autoload).
 
-### Line Breaks
+## Unit Testing
 
-Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
-or Mac (`\r`) breaks.
+All PHP unit tests should be written in [PHPUnit](https://phpunit.de/).
 
-### Indenting & Spacing
+All libraries should have full test converage. Project based code should have unit tests for key components, unless requirements specify otherwise.
 
-Use tab character at the beginning of a line. A tab is expected to represent
-the width of four spaces.  For inline spacing, use spaces, not tabs.
+## Coding Style
 
-	if (condition) {
-		action(); // indented with one tab
-	}
-	$foo      = "bar";    //lined up with spaces
-	$foo_bar  = "foobar"; //lined up with spaces
+All PHP style should follow (PSR-1)[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md] and (PSR-2)[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md].
 
-Since inline content is lined up with spaces, a mono spaced font is always used
-when editing code.
+Style can be validated and fixed with (CodeSniffer)[https://github.com/squizlabs/PHP_CodeSniffer]. Install CodeSniffer with composer:
 
+	composer global require "squizlabs/php_codesniffer=*"
 
-#### Bracing & Indenting Blocks
+Ensure that your code follows the standards:
 
-The K&R indent style means that function, method, and class definitions place
-the opening curly brace, unindented on a new line by itself. Content after the
-opening brace is indented. The closing brace is placed on a line by itself at
-the same indent level as the opening brace.
+	phpcs --standard=psr1,psr2 .
 
-Control blocks like `if` or `while` keep the opening brace on the same line as
-the control statement. Code starts indented on the next line. The closing brace 
-is on the same indenting level as the control statement.
+iMarc specific items that PSR 1 and 2 don't address can be found below.
 
-	function foo_function($arg1, $arg2='')
-	{
-		if (condition) {
-			action();
-		}
-		return $val;
-	}
-
-Control statements also have one space between the control keyword and opening
-parenthesis to distinguish them from function calls.
-
-	if (User::isAdministrator() || ($status == 'Active')) {
-		action_foo();
-	} elseif ($status == 'Inactive') {
-		action_bar();
-	} else {
-		action_baz();
-	}
-
-Use `elseif`, not `else if`.
+### Complicated conditions
 
 Complicated condition checking should be performed by assigning boolean values
 to meaningful variables and should then be combined on a single line for the
 `if` statement:
 
 	$foo_bar_not_baz = $foo && $foo == $bar && $foo != $baz;
-	$bar_like_baz    = !empty($bar['name']) && $baz['name'] && $bar['name'] == $baz['name'];
+	$bar_like_baz = !empty($bar['name']) && $baz['name'] && $bar['name'] == $baz['name'];
+
 	if ($foo_bar_not_baz || $bar_like_baz) {
 		action1;
 	}
 
-Do not omit the curly braces under any circumstance.
+### Complex or Nested Arrays
 
-In the case of a large number of short tests and actions, a single line
-condition and code-block is acceptable.
-
-	if ($foo === TRUE) { foo(); }
-	if ($bar === TRUE) { bar(); }
-
-For switch statements, cases are indented one level. Case actions are indented
-two levels. The `break` statement is always on a line by itself.
-
-	switch (User::getStatus()) {
-		case 'Pending':
-			action_pending();
-			break;
-
-		case 'Inactive':
-			action_inactive();
-			break;
-
-		default:
-			action_active();
-	}
-
-**Arrays** — Complex or nested arrays use the following indention format, noted
+Complex or nested arrays use the following indention format, noted
 via the closing parenthesis characters:
 
-	$arrayname['index'] = array(
+	$array = [
 		'name1' => 'value1',
-		'name2' => array(
+		'name2' => [ 
 			'subname1' => 'subvalue1',
 			'subname2' => 'subvalue2'
-		)
-	);
+		]	
+	];
 
+### Code with Markup
 
-### Code & Markup Indenting
+If PHP is used for a templating language, follow the same indenting standards. With
+the exception of PHP tags: after one item opens, the next item is indented.
 
-When breaking between PHP and HTML, follow the same indenting standards. With
-the exception of PHP tags, after one item opens, the next item is indented.
-
-	<div>
-		<?
-		try {
-			$users->tossIfEmpty();
+	<ul>
+		<?php
+		foreach ($users as $user) {
 			?>
-			<table>
-				<tr>
-					<th>Name</th>
-				</tr>
-				<?
-				foreach ($users as $user) {
-					?>
-					<tr>
-						<td>
-							<?= $user->getName() ?>
-						</td>
-					</tr>
-					<?
-				}
-				?>
-			</table>
-			<?
-		} catch (fEmptySetException $e) {
-			$e->printMessage();
+			<li>
+				<?= $user->getName() ?>
+			</li>
+			<?php
 		}
 		?>
-	</div>
+	</ul>
 
+### Naming
 
-### SQL Indenting
+#### Class and Namespace Names
 
-Non-trivial SQL statements should be broken onto multiple lines for
-readability.
+Class naming should follow the conventions in [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
 
-	SELECT
-		u.user_id,
-		u.first_name,
-		u.last_name
-	FROM
-		users AS u INNER JOIN
-		groups AS g ON u.group_id = g.group_id
-	WHERE
-		g.name = 'Administrators' AND
-		g.status = 'Active'
-	ORDER BY
-		u.last_name ASC,
-		u.first_name ASC
+Namespaces should ideally be singular and be given a name describing the the
+project or segment of the project. Namespaces must be in upper camel case.
 
-	INSERT INTO users (
-		first_name,
-		last_name,
-		address,
-		city,
-		state,
-		zip_code
-	) VALUES (
-		'John',
-		'Smith',
-		'14 Inn St',
-		'Newburyport',
-		'MA',
-		'01950'
-	);
+	namespace MyLibraryName\User;
 
+#### Interface, Trait, and Exception naming
 
-### SQL Capitalization
+All Interfaces, Traits, and Exceptions should have a suffix representing their type.
 
-SQL identifiers are lower case. All SQL reserved words and functions are
-uppercase.
+	ProgrammableInterface
+	AssociatableTrait
+	HorribleException
 
-	CREATE TABLE users (
-		user_id SERIAL PRIMARY KEY,
-		name VARCHAR NOT NULL,
-		status NOT NULL DEFAULT 'Active' CHECK(status IN ('Active', 'Inactive'))
-	);
+#### Function Names
 
-
-## Storing and Naming Files
-
-This section describes file and directory naming conventions and overall
-directory structure.
-
-
-### Directory Structure
-
-All server-side files should be kept separate from public files. This helps
-prevent unintentional exposure of sensitive information such as passwords.
-
-**Server-side files** are files that are written in a programming language that
-is executed on the server. The output of these files is sent to the user’s
-browser. These are stored outside of the document root of the website in a
-folder called `/app/`.
-
-**Public files** include all files that are directly sent to the client without
-any sort of processing. This includes images, CSS, JS, and other supporting
-files such as `robots.txt`. These files are stored in the document root.
-
-Files that can be written or uploaded by the webserver are stored in
-`/writable/`.
-
-	/app - all PHP and server-side code
-		/config - all configuration
-		/controllers - all PHP controllers
-			/site
-			/sitemanager
-		/helpers - local PHP code that is not a controller or view
-		/lib - third-party libraries such as Flourish, iMarc Framework, etc
-		/models - all database model classes
-		/modules - reusable combination of a controller and a view
-		/partials - reusable HTML/PHP templates
-			/site
-				header.php
-				footer.php
-			/sitemanager
-				header.php
-				footer.php
-		/views - all HTML content for the site
-			/site
-			/sitemanager
-		init.php - PHP environment initialization
-
-	/docroot - all files that are sent directly to a browser
-		/css
-		/flash
-		/img
-		/js
-		/writable - symlink to ../writable
-		.htaccess - used to configure Apache
-		bootstrap.php - this should be the only PHP file in the document root
-		robots.txt
-
-	/writable - organized in sub-directories
-
-
-### Naming Server-Side Files
-
-All server-side code is stored in the `/app/` directory. This folder is a
-sibling of the `/docroot/` folder.
-
-Non-class files are named with all lowercase letters and underscores.  Example:
-`/app/views/site/member_portal.php`.
-
-Class files are named `[ObjectName].php`, following the same rules as class
-names.
-
-
-### Naming Public Files and Directories
-
-All public files are stored in directories according to their filetype or
-function. These directories are lower case with underscores instead of spaces.
-For example, all CSS file are stored in the `/css/` folder.
-
-
-#### Controllers & Views
-
-Controllers are classes that perform all business logic and include a
-corresponding view to create output. An individual page is mapped to a method
-in a controller, while a controller represents a whole web path folder.  All
-pages will have a controller method, even if there is no business logic beyond
-including the appropriate view.
-
-Controllers are class files that contain an `_` between subsections. When
-mapping `_`s to the filesystem, they are changed to directory separators `/`.
-Example: the “About” section would have a controller named `Site_About.php`.
-This class would be stored in `/app/controllers/site/About.php`.
-
-Views should mirror the folder structure of controllers, with the filename
-being the `underscore_notation` version of the controller method. Example: the
-controller/method `About::contactUs()` method would load the view
-`/app/views/about/contact_us.php`.
-
-Views are always stored in the `/app/views/` folder, and never in the
-`/docroot/`.
-
-The following is an example directory structure for an about section of a
-website.
-
-	/app
-		/controllers
-			/site
-				About.php
-		/views
-			/site
-				/about
-					main.php
-					news.php
-					news_article.php
-
-The primary method and view for a section of the site should be called `main()`
-and `main.php`.
-
-
-#### Partials
-
-Reusable parts of a view – modular elements that can be included in multiple
-views – are stored in the `/app/partials/` directory. Partials should be
-organized into subfolders that represent where they are used on the site, such
-as the `/site` and `/sitemanager` sections.
-
-
-#### Modules
-
-A combination of reusable controller and view code is called a module and is
-stored in the `/app/modules/` directory.
-
-
-### Database Documentation
-
-A project's initial database states should be documented with a single `.sql` file. The file
-follows the same naming convention as the database and is stored in the
-revision control system under `/trunk/database/`.
-
-The database documentation file is organized as follows:
-
- 1. Any customizations to the database as a whole (such as the commonly used `grant_to_web()` function)
- 2. `DROP TABLE` statements – organized with linking tables first, followed by any other tables. These are ordered in the reverse order of `CREATE` statements
- 3. `CREATE TABLE` statements – organized with standard tables first, followed by linking tables
- 4. `INSERT` statements
-
-
-## Separation of Concerns
-
-All backend code will fall into one of three areas of concern: data access,
-display, or business logic. These areas map roughly to the Model, View, and
-Controller aspects of an MVC architecture. The code for each of these areas of
-concern should be kept separate from the others.
-
-
-### Models
-
-The model layer contains all code that interacts with the database. Models
-provide an API to the controller and views. Models are implemented as classes.
-
-	class User extends fActiveRecord
-	{
-		static public function buildActive($per_page=0, $page=1)
-		{
-			return fRecordSet::build(
-				__CLASS__,
-				array('status=' => 'Active'),
-				array('first_name||last_name' => 'asc'),
-				$per_page,
-				$page
-			);
-		}
-	}
-
-All data access should go through model objects and not through lower-level
-database related APIs such as `fDatabase` or `fRecordSet`. Model objects should
-not handle user input or output content.
-
-
-### Controllers
-
-The controllers for a site interpret user input, determine actions to perform
-on models, then direct output by selecting an appropriate view. Controllers may
-be procedural pages or classes.
-
-
-	class Users
-	{
-		public function listUsers()
-		{
-			$per_page = fRequest::getValid('per_page', array(10, 25, 50));
-			$page     = fRequest::get('page', 'integer', 1);
-
-			$this->template->set(array(
-				'users' => User::buildActive($per_page, $page),
-				'view'  => './views/users/list.php'
-			));
-
-			$this->template->place('view');
-		}
-	}
-
-Controllers should never directly access the database or output content.
-
-
-### Views
-
-The view layer contains all code for generating output, whether it be HTML,
-JSON or CSV. Code in views is limited to conditional logic, encoding, and
-formatting.
-
-	<div>
-		<?
-		foreach ($this->get('users') as $user) {
-			?>
-			<div class="user">
-				<h2><?= $user->encodeName() ?></h2>
-				<!-- More content… -->
-			</div>
-			<?
-		}
-		?>
-	</div>
-
-Views should only interact with models and data passed to them by the
-controller.  Views should not directly interpret user input or implement
-business logic.
-
-
-## Naming Conventions
-
-File naming conventions are described in [Storing and Naming Files](backend#StoringandNamingFiles), 
-this section describes in-code PHP and Database naming conventions.
-
-
-### Database Naming Conventions
-
-Name your database after the primary domain it serves. Since database names
-can’t contain periods, replace the domain’s period(s) with underscores. Exclude
-'www' from the database name unless the domain starts with with a number, since
-databases names in most systems can't start with numbers.
-
-	Domain: example.com
-	Database Name: example_com
-
-	Domain: wiki.example.com
-	Database Name: wiki_example_com
-
-	Domain: 123project.com
-	Database Name: www_123project_com
-
-All names (database, table, and column names) are lowercase, with underscores
-to separate words, to avoid case sensitivity issues.
-
-Table names are plural (`users`).
-
-Column names are singular (`first_name`).
-
-The primary key column is named `id` unless a better descriptive name is appropriate.
-
-
-### Variable Naming
-
-Variable names should be in lowercase and use underscores to separate words.
-
-	$page_function = "foo";
-	$database_user = "mysql";
-
-Variable names must be meaningful. One letter variable names must be avoided,
-except for places where the variable has no real meaning or a trivial meaning
-(e.g. for (`$i=0;` `$i<100;` `++$i`)).
-
-### Namespace Names
-
-Namespaces should be given a name describing the the project or segment of
-the project. Namespaces must be in upper camel case.
-
-	namespace MyLibraryName\Extensions;
-
-### Class Names
-
-Classes should be given descriptive names. Avoid using abbreviations.
-
-Classes are named in upper camel case. Each word in the class name should start
-with a capital letter, without underscore delimiters. Acronyms retain their
-capitalization.
-
-	class GoodExample
-	{
-		// ...
-	}
-
-	class Curl
-	{
-		// ...
-	}
-
-	class FTPClient
-	{
-		// ...
-	}
-
-Poor examples of class names might be `foobar`, `foo_bar` of `fooBarSup`.
-
-
-### Method Names
-
-Method names follow the lower camel case convention. The initial letter of the
-name is lowercase, and each letter that starts a new ‘word’ is capitalized.
-Like class names, acronyms retain their capitalization.
-
-	class GoodExample
-	{
-		public function connect()
-		{
-			// ...
-		}
-
-		public function getData()
-		{
-			// ...
-		}
-	}
-
-Poor examples of method names might be `get_Data()` or `buildsomewidget()`.
-
-
-### Function Names
-
-User defined functions should be in lowercase, with words underscore to
+User defined functions should be in lowercase, using underscores to
 separate words. Take care to minimize the letter count, but do not use
 abbreviations, because they greatly decrease the readability of the function
 name itself.
@@ -594,140 +169,22 @@ name itself.
 		// ...
 	}
 
-Poor examples of function names might `hw_GetObjectByQueryCollObj()` or
-`jf_n_s_i()`
+#### Variable Names
 
+Use underscores or lowerCamelCase for variable names. The main thing is to be consistent
+with the library or project you are working with.
 
+Variable names must be meaningful. One letter variable names must be avoided,
+except for places where the variable has no real meaning or a trivial meaning
+(e.g. for (`$i=0;` `$i<100;` `++$i`)).
 
-
-
-
-## PHP Code
-
-Class files always use long form PHP tags – `<?php ?>`, not `<? ?>`. This is
-required for PEAR compliance and increases portability on differing operating
-systems and setups.
-
-	<?php
-	class CalendarDisplay extends Calendar
-	{
-		// ...
-	}
-	?>
-
-Shorthand PHP tags – `<? ?>` – should be used in views, controllers, and other
-non-class files. Shorthand tags promote readability and brevity, which outweigh
-the loss of portability when
-[short_open_tag](http://us4.php.net/manual/en/configuration.directives.php) is turned off.
-
-	<div class="success">
-		<p>
-			<?= $message ?>
-		</p>
-	</div>
-
-Don’t use a semicolon with the short tag echo shortcut, `<?= $foo ?>`
-
-
-### Mixing PHP and HTML
-
-Break out of PHP for any non-trivial HTML output.
-
-	<?
-	$users = User::findActive()->getRecords();
-	foreach($users as $user) {
-		?>
-		<div>
-			<p><?= $user->encodeName() ?></p>
-			<p><?= $user->encodePhone() ?></p>
-			<p><?= $user->encodeWaterPoloScore() ?></p>
-		</div>
-		<?
-	}
-
-If an opening HTML tag is printed outside a PHP block, the closing HTML
-counterpart is output the same way.
-
-	<table>
-		<tr>
-			<?
-			// do stuff in PHP
-			?>
-		<tr>
-	<table>
-
-
-### Namespace, Class, Method, and Function Declarations
-
-Namespace declarations should be placed in the second line of a PHP file
-following the PHP open tag.
-
-	<?php
-	namespace Controllers;
-	?>
-
-Class declarations follow the K&R style for of indenting and bracing, by
-placing the opening brace on a new line, the same indention level as the
-declaration. Statements are indented within the braces. The closing brace is
-placed on a line of its own at the same indentation level as the opening brace
-and declaration.
-
-	class MyObject
-	{
-		//....
-	}
-
-Function and method declarations also follow this same K&R indent style
-
-	static public function fooMethod($bar, $baz, $foobar='')
-	{
-		//....
-	}
-
-	private function barMethod($arg_1, $arg_2='')
-	{
-		//....
-	}
-
-**Method Visibility** – For consistency, method visibility should be
-explicitly defined. This includes `public`, even though it's implied.
-
-While `static public function foo()` and `public static function foo()` are
-treated identically, start with `static` so the static keyword stands out.
-
-
-
-
-### Method & Function Calls
-
-Methods and functions are called with no spaces between the function name, the
-opening parenthesis, and the first parameter. There is one space after each
-commas separating parameters. There is no space between the last parameter, the
-closing parenthesis, and the semicolon.
-
-There is one space on either side of an equals sign used to assign the return
-value of a function to a variable.
-
-	$foo = foo($var1, $var2, $var3);
-	$bar = $users->foo($var1, $var2, $var3);
-	$baz = Groups::getUsers($var1, $var2, $var3);
-	$qux = Groups::getUsers(
-		$var1,
-		str_replace('abc', 'def', $var2),
-		$var3
-	);
+### Reference Assignment
 
 If assigning a reference to a variable, place the ampersand next to the equal
 sign, not the referenced object.
 
 	$reference =& $foo;
 	$reference =& foo();
-
-When using `include`, `include_once`, `require`, or `require_once`, the
-parentheses are left out.
-
-	include $_SERVER['DOCUMENT_ROOT'] . '/app/init.php';
-
 
 ### Private Variables
 
@@ -747,289 +204,63 @@ reason not to). Create `setBar()` methods to set private class variables, and
 		}
 	}
 
-### Existence checking
+## Documentation & Commenting
 
-Often you’ll need to check whether or not a variable, property or array key
-exists.  There are several similar methods to do this. In general, use the
-simplest.
+Documentation for code follows the [PHPDoc Standard](http://www.phpdoc.org/docs/latest/index.html)
 
-If you need to know if a variable exists at all and is not `NULL`, use
-[isset()](http://www.php.net/manual/en/function.isset.php).
+Library code must always have documentation. For project code, the level of documentation 
+is left up to the requirements or lead developer on that particular project, yet it is 
+highly encouraged.
 
-	// Check to see if $param is defined.
-	if (isset($param)) {
-		// $param may be FALSE, but it's there.
-	}
-
-If you need to know if a variable exists AND has a non-empty value (not `NULL`,
-0, `FALSE`, empty string or undefined), use
-[empty()](http://www.php.net/manual/en/function.empty.php).
-
-	// Make sure that $answer exists, is not an empty string, and is
-	// not 0:
-	if (!empty($answer)) {
-		// $answer has some non-false content.
-	} else {
-		// (bool)$answer would be FALSE.
-	}
-
-Don’t use [array_key_exists()](http://www.php.net/manual/en/function.array-key-exists.php)
-unless it is possible that an array key has a value of `NULL`.
-`array_key_exists()` runs many times slower than `isset()` because a full array
-scan must be performed.
-
-	// Make sure we have a charset parameter. Value could also be NULL.
-	if (!array_key_exists('charset', $params)) { }
-
-
-### Quoting
-
-Use your judgement when quoting strings. The following variations of single and
-double quotes are all considered good practice at iMarc.  //Just be consistent
-within a single application.//
-
-	$foo = "value";
-	$foo = "Isn't it neat?";
-	$foo = 'Bob said, "I like that"';
-	$foo = "Name\tEmail\tZip\n";
-
-	echo "Hello World";
-	echo 'Hello World';
-
-	$foo['bar'] = "someval";
-
-	if ($var == 'something') { ... }
-
-	Database::Select('*', 'table', 'this', 'that');
-
-
-### Constants
-
-Constants should use ALL CAPITAL LETTERS with words separated with an
-underscore.
-
-	define("MY_VARIABLE", "foo");
-	define("MY_OTHER", "bar");
-
-
-### Filesystem Paths
-
-When including site-wide files, such as classes, paths should be absolute and
-will normally be based on `$_SERVER['DOCUMENT_ROOT']` or a similar
-application-level constant.
-
-	require $_SERVER['DOCUMENT_ROOT'] . "/path/to/Class.php";
-
-When including files specific to the current page or section, use a relative
-path that starts with `./` to prevent PHP from looking in every folder in the
-`include_path`.
-
-	include './views/add_edit.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Commenting
-
-Here, we differentiate between *library code* and other code. Library code is
-a reusable component of iMarc’s code library. Library code continually evolves,
-often with multiple developers working on them. Library code requires more
-extensive commenting.
-
-An application also uses other code, such as controllers, models, and other
-helpers. This code may be commented with less detail.
-
-When possible, wrap all comments at 80 characters to increase readability.
-
-
-### Library Commenting
-
-Inline documentation for library code follows the [PHPDoc
-convention](http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.pkg.html).
-
-PHPDoc uses multi-line comments that start with `/**` on a line by itself and
-ends with `*/` on a line by itself. These are called doc blocks. Doc blocks
-contain a description of the element being commented, followed by a number of
-`@`-demarcated tags.
-
-An example of the doc block for a method is shown below.
-
-	/**
-	 * Sets the user's password. If the password is empty, the existing value will be left.
-	 * If the password changed, an email is triggered to the user.
-	 *
-	 * @param  string $password User's password
-	 * @return void
-	 */
-
-
-#### Library Class Comments
+### Class Documentation
 
 The class header block at the top of the file uses the template below.
 
 	/**
 	 * Description of class
 	 *
-	 * @copyright 1999-2005 iMarc LLC
+	 * @copyright 2015 iMarc LLC
 	 *
-	 * @author  Original Author [initials] <author@example.com>
-	 * @author  Your Name [initials] <you@example.com>
+	 * @author Your Name <author@email.com>
+	 * @author Another Name <author@email.com>
 	 *
-	 * @version 0.0.2
+	 * @package Project or Library name
+	 * @link URL if relevant
 	 *
-	 * @changes 0.0.2 Description [initials, YYYY-MM-DD]
-	 * @changes 0.0.1 Description [initials, YYYY-MM-DD]
+	 * @version 1.0.0
 	 */
 
-Any edit that noted in the changelog requires new authors to add their name and
-initials to the `@authors` list.
+An author should add their name to the `@authors` list after any edit.
 
-
-#### Library Function and Method Comments
+### Function and Method Docblocks
 
 Functions and methods are commented using the template below. If there are no
 parameters, do not include `@param void`.
 
-`@throws` tags should be included for every class of exception that is thrown
-under normal circumstances and that should be handled by calling code. For
-instance, if an exception is thrown when the network is down, you don’t
-need to document that.
-
 	/**
 	 * Description of function.
 	 *
-	 * @throws ExceptionClass  Under what conditions the exception is thrown
-	 * @throws OtherException  Under what conditions the exception is thrown
+	 * @throws ExceptionClass Optional description of when
+	 * @throws OtherException  
+
+	 * @param type $varname A description of the param (which may also
+	 *    span multiple lines if necessary)
 	 *
-	 * @param  datatype  $variablename   Description of variable.
-	 * @param  datatype  $variable2name  Description of variable2.
+	 * @param type $varname A description of the param
+
 	 * @return datatype  Description of return value.
 	 */
 
-
-#### Library Class Variable Comments
-
-Verbose variable comments follow the PHPDoc convention and include a
-description and datatype.
-
-	/**
-	 * Variable description
-	 *
-	 * @var datatype
-	 */
-	private $database;
-
-
-#### Library Versioning
-
-All framework class files are versioned with three revision numbers.
-
-\[major\].\[minor\].\[bugfix\]
-
- - \[bugfix\] increases if a bug has been fixed, but no new feature has been added
- - \[minor\] increases if a new feature has been added while maintaining backward compatibility
- - \[major\] increases if backward compatibility breaks or a number of major features have been added
-
-
-### Non-Library Commenting
-
-Non-library classes might be helped with a short description and copyright, but even this is optional.
-
-	/**
-	 * Description of class
-	 *
-	 * @copyright 2013 iMarc LLC
-	 */
-
-
-#### Non-Library Function and Method Comments
-
-Non-library functions and methods may be commented using the PHPDoc convention
-[described above](backend#LibraryFunctionandMethodComments), but can also skip comments completely.
-
-
-#### Non-Library Class Variable Comments
-
-Variables in non-library classes can follow a simpler comment style or skip
-commenting completely.
-
-	private $database; // holds database connection
-	private $first_name;
-	private $last_name;
-
-
 ### Inline Comments
-
-Inline comments should explain the reason behind a line of code or block of
-code. Comments should not explain what the code is actually doing, as that can
-be surmised from the code itself.
 
 Inline comments always follow the C++ comment style with two forward slashes
 
-	// Admin searches go back to the SiteManager since the normal view can't
-	// handle ordering by anything but association or date created
-	if ($admin_search) {
-		$destination = '/sitemanager/assets/assets.php' . $destination;
-	}
-
-	// Set domain-wide cookie for 3rd party video site to read (video.example.com)
-	fCookie::set('video_access', 'on', '0', '/', '.example.com');
-
-	User::foo(); // brief explanation
-
-C-style comments, `/* comment */` are reserved for header blocks, classes, and
-functions, not inline commenting.
-
-Using C-style comments inline can cause problems if a maintainer wants to
-comment out a large block of code.
-
-	/* Temporarily disabling this check...
-	if (User::isAdministrator()) {
-		User::foo(); /* brief explanation */
-	}
-	*/
+	// Here is a comment
 
 [Unix shell-style](http://php.net/manual/en/language.basic-syntax.comments.php)
 comments – `# comment` – are always avoided.
 
-
-
-
-
-
-
-
-
-
-
 ## Error Handling
-
-Errors and exceptions are handled through Flourish.
-
-	define('ERROR_DESTINATION', 'team@imarc.net');
-
-	fCore::enableErrorHandling(ERROR_DESTINATION);
-	fCore::enableExceptionHandling(ERROR_DESTINATION);
 
 Production and staging environments are generally configured to email error
 messages, while development environments typically display error messages on
@@ -1043,145 +274,163 @@ individual developer, in case that developer is not available. The preferred
 format for emailing error message is `team+project@imarc.net` (example:
 `quanta+example.com@imarc.net`)
 
-
-### Error Reporting
+## Error Reporting
 
 All code must work with
 [error_reporting](http://www.php.net/manual/en/ref.errorfunc.php#ini.error-reporting) set to `E_ALL`
 and `E_STRICT`.
 
+## Databases and SQL
 
-### Error Checking
+iMarc prefers Postgres for storing relational data.
 
-Exceptions and try/catch blocks should be used for error handling. Do not use
-function or method return values to indicate success or failure.
+### Indenting
 
-	try {
-		if (empty($foo)) {
-			throw new Exception("Error message");
-		}
+Non-trivial SQL statements should be broken onto multiple lines for
+readability.
 
-	} catch (Exception $e) {
-		echo $e->getMessage();
-	}
+	SELECT
+		u.user_id,
+		u.first_name,
+		u.last_name
+	FROM
+		users AS u LEFT JOIN
+		groups AS g ON u.group_id = g.group_id
+	WHERE
+		g.name = 'Administrators' AND
+		g.status = 'Active'
+	ORDER BY
+		u.last_name ASC,
+		u.first_name ASC
 
-See [Flourish’s fException
-documentation](http://flourishlib.com/docs/fException) for information on
-which exception type to throw.
+### Capitalization
 
+SQL identifiers are lower case. All SQL reserved words and functions are
+uppercase.
 
+	CREATE TABLE users (
+		user_id SERIAL PRIMARY KEY,
+		name VARCHAR NOT NULL,
+		status NOT NULL DEFAULT 'Active' CHECK(status IN ('Active', 'Inactive'))
+	);
 
+### Database Naming
 
+Name your database after the primary domain it serves. Since database names
+can’t contain periods, replace the domain’s period(s) with underscores. Exclude
+'www' from the database name unless the domain starts with with a number, since
+databases names in most systems can't start with numbers.
 
+	Domain: wiki.example.com
+	Database Name: wiki_example_com
 
+	Domain: 123project.com
+	Database Name: www_123project_com
 
+All names (database, table, and column names) are lowercase, with underscores
+to separate words, to avoid case sensitivity issues.
 
+Table names are plural (`users`).
 
+Column names are singular (`first_name`).
 
+The primary key column is named `id` unless a better descriptive name is appropriate.
 
+## Character Encoding
 
+[UTF-8](http://en.wikipedia.org/wiki/UTF-8) should be used as the character
+encoding for all aspects of a web applicaiton.
 
-## Security
+UTF-8 is one of the most robust and widely-supported character encodings, which
+means that all parts of a site can share content without converting between
+encodings.
 
-### SSL (HTTPS) Usage
+The following list of includes some of, but not necessarily all, the aspects of
+a site that need to be build with UTF-8 in mind:
 
-All sites that handle payments **must** have an SSL certificate, and all pages
-that involve payment, checkout or login **must** only be accessible via a
-secure connection. In addition, all pages that require a user login to view
-must only be accessible over a secure connection.
+HTML
+:	Set your editor to use UTF-8. Include the correct meta tags, 
+	as specified by [frontend standards](/frontend#UTF-8). Force the correct 
+	HTTP content-type header.
 
-Sites that provide a login mechanism should, if possible, only allow access to
-pages via a secure connection. This provides the highest level of security and
-prevents against sessoin sidejacking attacks, especially over unprotected
-networks.
+PHP
+:	Use correct content-type headers and meta tags to ensure that 
+	browsers are sending UTF-8 for form contents. Also use UTF-8 safe string functions.
 
-The php ini setting `session.cookie_secure` must be set to `1` before the
-session is opened if all pages on a site are configured to use an SSL
-certificate.
+Database
+:	Most databases require that the encoding be set when the database is created. 
+	Ensure your database connection is set to use UTF-8.
 
-	ini_set('session.cookie_secure', 1);
+Email
+: 	When sending emails, be sure to use code that supports UTF-8 in recipient names, 
+	the subject and the body
 
+Other Data
+:	Be sure to convert (if necessary) and clean data coming from old databases, 
+	external systems, XML files, CSV files and other such data sources
 
-### Preventing Cross-Site Scripting (XSS)
+## Storing and Naming Files
 
-Whenever working with data input by a user, whether from the query string, form
-inputs or cookies, be sure to escape the data before echoing it to prevent
-[XSS](http://en.wikipedia.org/wiki/Cross-site_scripting). This prevents malicious
-users from injecting javascript functionality or unapproved content into pages.
+This section describes file and directory naming conventions and overall
+directory structure.
 
-	// GOOD Examples
-	echo fRequest::encode('name');
-	echo htmlentities($_GET['name'], ENT_COMPAT, 'UTF-8');
+### Directory Structure
 
-	// BAD Examples
-	echo $_POST['email'];
+All server-side files should be kept separate from public files. This helps
+prevent unintentional exposure of sensitive information such as passwords.
 
+**Server-side files** are files that are written in a programming language that
+is executed on the server. The output of these files is sent to the user’s
+browser. These are stored outside of the document root.
 
-### Use Appropriate HTTP Methods
+**Public files** include all files that are directly sent to the client without
+any sort of processing. This includes images, CSS, JS, and other supporting
+files such as `robots.txt`. These files are stored in the document root.
 
-Any sort of script that saves data in a database, changes the state of
-something, sends an email, or any other sort of creative or destructive action
-should always be done via the HTTP POST method. This helps prevent Cross-Site
-Request Forgeries (CSRF) and prevents search engines from affecting the content
-of a site.
+## Separation of Concerns
 
-	// DO this
-	if ($_SERVER['HTTP_METHOD'] == 'POST') {
-		delete_from_database();
-	}
+All backend code will fall into one of three areas of concern: data access,
+display, or business logic. These areas map roughly to the Model, View, and
+Controller aspects of an MVC architecture. The code for each of these areas of
+concern should be kept separate from the others.
 
-	// NOT this
-	delete_from_database();
+### Models
 
+The model layer contains all code that interacts with the database. Models
+provide an API to the controller and views. Models are implemented as classes.
+All data access should go through model objects and not through lower-level
+database related APIs such as `fDatabase` or `fRecordSet`. Model objects should
+not handle user input or output content.
 
-### Use Tokens to Prevent Cross-Site Request Forgeries (CSRF)
+### Controllers
 
-[CSRF](http://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks leverage
-the fact that users are often logged into multiple sites in a single browser
-at a time. They make fake requests to sites via image tag src URLs and
-javascript.
+The controllers for a site interpret user input, determine actions to perform
+on models, then direct output by selecting an appropriate view. Controllers should be
+classes, but in some cases may be procedural pages. Controllers should never directly
+access the database or output content.
 
-To prevent CSRF attacks, use the HTTP POST method for creative or destructive
-actions and always include a token. The token should be a random string that is
-provided to the user in a hidden form input and is then verified against a list
-of tokens saved in their session.
+### Views
 
+The view layer contains all code for generating output, whether it be HTML,
+JSON or CSV. Code in views is limited to conditional logic, encoding, and
+formatting. Views should only interact with models and data passed to them by the
+controller.  Views should not directly interpret user input or implement
+business logic.
 
-
-
-
-
-
-
-
-## URLs
-
-Whenever possible, use mod_rewrite or a PHP front controller to create URLs
-that don’t have the `.php` suffix. Similarly, try to avoid having URLs that
-reference `index.php`.
-
-	/about/contact_us
-	/members/benefits
-	/
-
-Poorly constructed URLs might be `/about/contact_us.php` or `/index.php`
-
-
-### Friendly URLs
+## Friendly URLs
 
 URL words are lower case with hyphens as separators.  With dynamic pages, 
 use the title or primary content identifier in the URL to help with 
 search engine optimization.
 
-	/news/50/how-sarbanes-oxley-affects-your-business
+	/news/how-sarbanes-oxley-affects-your-business
 
 When using dynamic content such as an article title to create a URL, limit the
 textual portion to about 50 characters. Trim on a natural word break if
 possible.
 
 	// Blog Title = We're Hiring: Positions available for PHP developers and Systems Administrators
-	// URL = /blog/932/were-hiring-positions-available-for-php-developers
-
+	// URL = /blog/were-hiring-positions-available-for-php-developers
 
 ### Trailing Slashes
 
@@ -1198,29 +447,7 @@ For example, `/about/employees/` will redirect to `/about/employees` in
 production, but during development, `/about/employees/` will result in a 404
 error.  This ensures all links to a single resource are consistent.
 
-
-### Query Strings
-
-Individual resources or pages should ideally not use a query string for identification.
-When creating URLs for dynamic or database-driven content, put database primary
-keys and actions in the path. If possible, also include the name of the
-resources to make for human-readable URLs.
-
-	/news/12/historians-debate-ufos
-	/events/201/annual-membership-class
-
-Poorly constructed page or resource URLs might be `/news/index.php?news_id=12`
-or `/events/?event_id=201&action=view`.
-
-Query strings should be used for view parameters, such as a filter, page
-number, sort direction or sort column.
-
-	/search?keywords=John+Smith&page=2
-
-A poorly constructed version of the above would be `/search/John+Smith/page/2`.
-
-
-### Example URLs and IPs
+## Example URLs and IPs
 
 Use `example.com` for all example URLs, per [RFC
 2606](http://www.faqs.org/rfcs/rfc2606.html).
@@ -1228,70 +455,3 @@ Use `example.com` for all example URLs, per [RFC
 Use the IP range `192.0.2.0/24` for all example IP addresses, per [RFC
 3330](http://www.faqs.org/rfcs/rfc3330.html). If you just need a single
 IP address use `192.0.2.1`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Tips
-
-
-
-### Dates
-
-Don’t format human-presentable dates with leading zeros. Use `May 4, 2010`
-instead of `May 04, 2010`.
-
-### Boolean Returns
-
-In simple conditional statements, return the conditional check instead of a
-boolean.
-
-	// Yes
-	return ($foo == 'bar');
-
-	// No
-	if ($foo == 'bar') {
-		return TRUE;
-	}
-	return FALSE;
-
-	// No
-	return ($foo == 'bar') ? TRUE : FALSE;
-
-
-### Commerce Processing
-
-When processing a commerce transaction, pay special attention to the order of
-execution and how errors are handled.
-
- 1. Form Validation – validate required fields
- 2. Payment Gateway – process credit card at AuthorizeNet or similar
- 3. Local Logic – update record(s) or do whatever needs to be done
- 4. Store Local Transaction – create the customer receipt and store a copy in the database. Typically administrators can view this log of commerce activity.
- 5. Customer Receipt – email receipt to customer
- 6. Admin Notification – email notification to administrator
-
-When an error occurs in steps #1 or #2, the error message should be displayed
-to the users.
-
-The remaining steps should be wrapped in individual `try/catch` blocks so an
-error in step #3 doesn't prevent trying step #4.
-
-Never store or email full credit card information.
