@@ -50,7 +50,7 @@ To ignore .git directories, the following line should be added to your `.gitigno
 
 	vendor/.git
 
-## Versioning
+## Versioning and Tagging
 
 All library code should follow [Semantic Versioning](http://semver.org/).
 
@@ -58,6 +58,8 @@ All library code should follow [Semantic Versioning](http://semver.org/).
 		MAJOR version when you make incompatible API changes,
 		MINOR version when you add functionality in a backwards-compatible manner, and
 		PATCH version when you make backwards-compatible bug fixes.
+
+Versions should be tagged appropriately in Git to work seamlessly with Composer.
 
 Depending on the requirements, project code can be versioned by release, or not at all.
 
