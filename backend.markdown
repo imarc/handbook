@@ -18,6 +18,7 @@ libraries that are meant to be reusable components across many projects. Project
 ## Environment
 
 iMarc’s ideal development and production platform is:
+
 - Amazon EC2 w/EBS or DigitalOcean
 - Debian 7 (Wheezy)
 - Apache 2.4+
