@@ -605,7 +605,7 @@ page or section.
 ### CSS Principals
 
 Engineers should strive to make lean, modular classes that can be easily adapted
-to different sections and pages. **If you find youself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
+to different sections and pages. **If you find yourself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
 
 #### Example
 
@@ -621,17 +621,17 @@ important to find properties they share and start with some base styles. These
 would probably live in our stylesheet’s **Layout** section
 
 	.callout {
-		border-radius: 4px;
-		font-weight: 300;
+	    border-radius: 4px;
+	    font-weight: 300;
 	    margin-bottom: 3em;
 	    margin-top: 2em;
 	    padding: 1em;
 	}
 	.callout .button {
-		background-color: pink;
-		border-radius: 2px;
-		padding: 0.4em;
-		text-transform: uppercase;
+	    background-color: pink;
+	    border-radius: 2px;
+	    padding: 0.4em;
+	    text-transform: uppercase;
 	}
 
 Based on the knowledge we have from our creative mockups, we feel confident with 
@@ -639,12 +639,12 @@ these base styles. Any visual changes for callouts should be added on to these
 base styles:
 
 	.callout.dense {
-		font-weight: 600;
-		margin-top: 0;
+	    font-weight: 600;
+	    margin-top: 0;
 	}
 	.callout.dense .button {
-		background-color: pink;
-		float: right;
+	    background-color: pink;
+	    float: right;
 	}
 
 You might wonder why we didn’t target our callouts via a `body#members .callout`
@@ -660,10 +660,10 @@ When specific targeting per section or per page is needed, use class or ID
 on the body tag. Use the ID for a single page. Use the class for styles that 
 are common within an entire section. 
 
-ID use case: Headlines must use a font-weight: 700; on the MacBook Pro page to 
+**ID use case**: Headlines must use a font-weight: 700; on the MacBook Pro page to 
 align with marketing materials.
 
-Class use case: Buttons need to be silver for all pages within the Products section
+**Class use case**: Buttons need to be silver for all pages within the Products section
 
 	<body class="products" id="macbook_pro">
 
