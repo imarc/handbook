@@ -605,17 +605,74 @@ page or section.
 ### CSS Principals
 
 Engineers should strive to make lean, modular classes that can be easily adapted
-to different sections and pages. Body classes and IDs should be used for common 
-patterns across an entire section `(body.class)` or a single page `(body#id)`. **If you find youself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
+to different sections and pages. **If you find youself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
+
+#### Example
+
+Here we have two callouts used on two different pages: a landing page and a 
+members page.
+
+![Landing page call to action](img/cta-landing.png)
+
+![Members page call to action](img/cta-members.png)
+
+Knowing we will utilize callouts on multiple pages, it’s
+important to find properties they share and start with some base styles. These 
+would probably live in our stylesheet’s **Layout** section
+
+	.callout {
+		border-radius: 4px;
+		font-weight: 300;
+	    margin-bottom: 3em;
+	    margin-top: 2em;
+	    padding: 1em;
+	}
+	.callout .button {
+		background-color: pink;
+		border-radius: 2px;
+		padding: 0.4em;
+		text-transform: uppercase;
+	}
+
+Based on the knowledge we have from our creative mockups, we feel confident with 
+these base styles. Any visual changes for callouts should be added on to these 
+base styles:
+
+	.callout.dense {
+		font-weight: 600;
+		margin-top: 0;
+	}
+	.callout.dense .button {
+		background-color: pink;
+		float: right;
+	}
+
+You might wonder why we didn’t target our callouts via a `body#members .callout`
+selector. It would not necessarily be a bad way to proceed. But thinking in a 
+modular way, what if the client also wanted to use this `.dense` styled 
+callout on special Guest pages? We would find ourself copying and pasting rules 
+in more than one place.
 
 
+### Specific Targeting
+
+When specific targeting per section or per page is needed, use class or ID 
+on the body tag. Use the ID for a single page. Use the class for styles that 
+are common within an entire section. 
+
+ID use case: Headlines must use a font-weight: 700; on the MacBook Pro page to 
+align with marketing materials.
+
+Class use case: Buttons need to be silver for all pages within the Products section
+
+	<body class="products" id="macbook_pro">
 
 
 ### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
 The exceptions to this rule are: anchors, form label IDs, the ID that is 
-[placed on the `body` tag](frontend#BodyClassesandIDs), and instances when IDs are 
+[placed on the `body` tag](frontend#SpecificTargeting), and instances when IDs are 
 more appropriate hooks for JavaScript purposes.
 
 Classes should be lowercase, using hyphens between words. Ideally, your class should 
@@ -636,12 +693,6 @@ context of a sidebar.
 * Meaningful class names might be: `main`, `aside`, `record_detail`.
 * Bad CSS classes would be: `left_column`, `blue_callout`, `hidden`. 
 
-
-### Specific Targeting
-
-Use classes and IDs on the body element to denote current section and page, respectively.
-
-	<body class="products" id="macbook_pro">
 
 
 ## Forms
