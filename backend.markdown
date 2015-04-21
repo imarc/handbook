@@ -461,18 +461,16 @@ The view layer contains all code for generating output, whether it be HTML,
 JSON or CSV. Code in views is limited to conditional logic, encoding, and
 formatting.
 
-	<div>
-		<?
-		foreach ($this->get('users') as $user) {
-			?>
-			<div class="user">
-				<h2><?= $user->encodeName() ?></h2>
-				<!-- More content… -->
-			</div>
-			<?
-		}
+	<?php
+	foreach ($this->get('users') as $user) {
 		?>
-	</div>
+		<div class="user">
+			<h2><?= $user->encodeName() ?></h2>
+			<!-- More content… -->
+		</div>
+		<?php
+	}
+	?>
 
 Views should only interact with models and data passed to them by the
 controller.  Views should not directly interpret user input or implement
