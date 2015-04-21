@@ -252,29 +252,6 @@ Related style rules should be grouped together in ascending order of specificity
         margin: 0;
     }
 
-#### CSS3
-Be mindful of CSS properties that are not cross-browser compatible. Some properties need vendor-specific prefixes in order to render the same. Always place vendor-specific declarations before W3C.
-
-    a {
-        color: #487c3d;
-        text-decoration: none;
-        -moz-transition: all .1s ease;
-        -webkit-transition: all .1s ease;
-        transition: all .1s ease;
-    }
-
-#### Bad Practices 
-
-CSS rules should live within a CSS file. Do not use inline styles in HTML.
-
-	<!-- DON'T DO THIS -->
-	<div class="module" style="background-color: #666; padding: 10px;">
-	    …
-	</div>
-
-Presentational elements should not be used for text styling purposes. Instead, CSS should be used to apply style to text.
-
-Presentational elements include `b`, `i`, `u`, `big`, `small`, and `font`.
 
 ## Directory Structure
 
@@ -576,7 +553,7 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 * Print stylesheets are used for maximum legibility.
 * Mobile media query is used to ensure website layout does not break on mobile devices.
 
-## Naming Conventions
+## Structure and Process
 
 See **[iMarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
 for detailed layout naming conventions.
@@ -587,7 +564,7 @@ Most page layouts can generally be thought of in three primary parts. These stru
 
 * **`header.primary`** – Logo, global navigation, utility links, typically at the top of a page.
 * **`.torso`** – Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
-* **`footer.primary`** – Links and global content that typically follow the content. Note that 
+* **`footer.primary`** – Links and global content that typically follows the torso.
 
 
 ![Structural naming conventions](img/naming_structure.png)
@@ -625,39 +602,32 @@ page or section.
 
 ![Content naming conventions](img/naming_content.png)
 
+### CSS Principals
 
-### Messaging
-
-* **`.success`** – Confirmation after an action has successfully completed
-* **`.info`** – Informative message
-* **`.error`** – Notification that an action had problems
-* **`.help`** – Coaching or guidance; typically inline
+Engineers should strive to make lean, modular classes that can be easily adapted
+to different sections and pages. Body classes and IDs should be used for common 
+patterns across an entire section `(body.class)` or a single page `(body#id)`. **If you find youself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
 
 
-Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
 
-    <div class="messaging success">
-        <p>
-            Congratulations! You have signed up for ACME’s business afterhours.
-        </p>
-    </div>
-    
+
 ### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
-The exceptions to this rule are anchors, form label IDs, the ID that is 
+The exceptions to this rule are: anchors, form label IDs, the ID that is 
 [placed on the `body` tag](frontend#BodyClassesandIDs), and instances when IDs are 
-more appropriate hooks for JavaScript.
+more appropriate hooks for JavaScript purposes.
 
-Classes should be lowercase, using underscores between words.
+Classes should be lowercase, using hyphens between words. Ideally, your class should 
+always be one word.
 
 Classes have the benefit of being highly reusable. By utilizing classes, we 
-can write leaner, more reusable CSS.
+can write leaner, more modular CSS.
 
 #### Choose Meaningful Names
 
 Choose names that accurately describe the content, not the visual container. 
-Avoid choosing presentational names.
+Avoid choosing presentational names e.g.(`orange-arrow`, `left-column`)
 
 For example, `meta` is an acceptable class name while `sidebar_info` is not. The 
 described content will always be `meta`; it might not always be in the 
@@ -667,11 +637,12 @@ context of a sidebar.
 * Bad CSS classes would be: `left_column`, `blue_callout`, `hidden`. 
 
 
-### Body Classes and IDs
+### Specific Targeting
 
 Use classes and IDs on the body element to denote current section and page, respectively.
 
 	<body class="products" id="macbook_pro">
+
 
 ## Forms
 
@@ -826,6 +797,24 @@ Form element markup
             <a href="" class="button">&lt;a&gt; as a button</a>							
         </fieldset>
     </form>
+
+
+### Messaging
+
+* **`.success`** – Confirmation after an action has successfully completed
+* **`.info`** – Informative message
+* **`.error`** – Notification that an action had problems
+* **`.help`** – Coaching or guidance; typically inline
+
+
+Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
+
+    <div class="messaging success">
+        <p>
+            Congratulations! You have signed up for ACME’s business afterhours.
+        </p>
+    </div>
+
 
 ## Tables
 
