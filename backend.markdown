@@ -59,7 +59,7 @@ All library code should follow [Semantic Versioning](http://semver.org/).
 		MINOR version when you add functionality in a backwards-compatible manner, and
 		PATCH version when you make backwards-compatible bug fixes.
 
-Versions should be tagged appropriately in Git to work seamlessly with Composer.
+Library code versions should be tagged appropriately in Git to work seamlessly with Composer.
 
 Depending on the requirements, project code can be versioned by release, or not at all.
 
@@ -69,9 +69,9 @@ Unless a special autoloader is needed, all autoloaders should follow [PSR-4](htt
 
 The best practice is to use [Composer's built-in autoloader](https://getcomposer.org/doc/04-schema.md#autoload).
 
-## Unit Testing
+## Testing
 
-All PHP unit tests should be written in [PHPUnit](https://phpunit.de/).
+All PHP unit and behavioral tests should be written in [PHPUnit](https://phpunit.de/) or [PHPSpec](http://www.phpspec.net/).
 
 All libraries should have full test converage. Project based code should have unit tests for key components, unless requirements specify otherwise.
 
@@ -87,7 +87,23 @@ Ensure that your code follows the standards:
 
 	phpcs --standard=psr1,psr2 .
 
-iMarc specific items that PSR 1 and 2 don't address can be found below.
+iMarc exceptions to PSR standards and specific items that PSR 1 and 2 don't address can be found below.
+
+### Line Breaks
+
+Set your text editor to only use Unix line-break (\n), not Windows (\r\n) or Mac (\r) breaks.
+
+### Indenting & Spacing
+
+Use tab character at the beginning of a line. A tab is expected to represent the width of four spaces. For inline spacing, use spaces, not tabs.
+
+	if (condition) {
+		action(); // indented with one tab
+	}
+	$foo      = "bar";    //lined up with spaces
+	$foo_bar  = "foobar"; //lined up with spaces
+
+Since inline content is lined up with spaces, a mono spaced font is always used when editing code.
 
 ### Complicated conditions
 
@@ -225,8 +241,6 @@ The class header block at the top of the file uses the template below.
 	 *
 	 * @package Project or Library name
 	 * @link URL if relevant
-	 *
-	 * @version 1.0.0
 	 */
 
 An author should add their name to the `@authors` list after any edit.
@@ -241,13 +255,13 @@ parameters, do not include `@param void`.
 	 *
 	 * @throws ExceptionClass Optional description of when
 	 * @throws OtherException  
-
+	 *
 	 * @param type $varname A description of the param (which may also
 	 *    span multiple lines if necessary)
 	 *
 	 * @param type $varname A description of the param
-
-	 * @return datatype  Description of return value.
+	 *
+	 * @return datatype Description of return value.
 	 */
 
 ### Inline Comments
