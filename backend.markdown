@@ -77,7 +77,7 @@ All libraries should have full test converage. Project based code should have un
 
 All PHP style should follow [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) and [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md).
 
-Style can be validated and fixed with (CodeSniffer)[https://github.com/squizlabs/PHP_CodeSniffer]. Install CodeSniffer with composer:
+Style can be validated and fixed with [CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer). Install CodeSniffer with composer:
 
 	composer global require "squizlabs/php_codesniffer=*"
 
