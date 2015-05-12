@@ -621,14 +621,7 @@ Always declare and define functions like this:
 	};
 
 Functionally, these two syntaxes are identical except that the function defined
-with the second syntax can be referenced before it is declared. Always use the
-second syntax as it is consistent with how privileged methods must be defined:
-
-	var MyObject = function() {
-		this.privilegedMethod = function(bar, baz, qux) {
-			//...
-		};
-	};
+with the second syntax can be referenced before it is declared. 
 
 Default values should be handled in the first lines of the function with a
 ternary operation:
