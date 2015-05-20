@@ -20,9 +20,9 @@ Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype on 
 
 It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly.
 
-If you choose to use HTML5 elements, use [Modernizr](http://modernizr.com) to ensure backwards compatability with older browsers.
+If you choose to use advanced HTML5 elements with varying support, use [Modernizr](http://modernizr.com) to ensure backwards compatability with older browsers.
 
-Modernizr detects what the browser’s rendering engine supports, and allows you to customize the look of the website depending on what’s supported.
+Modernizr detects what the browser’s rendering engine supports, allowing you to react appropriately to differing support scenarios.
 
 HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
 
@@ -184,15 +184,6 @@ Make sure to properly contain floats with a clearfix. iMarc uses a `group` class
         clear: both;
     }
 
-Include the following Internet Explorer rules if your project requires support for IE7 and below.
-
-	/* IE7 */
-	.lt_ie8 .group { min-height: 1px; }
-
-	/* IE6 */
-	.lt_ie7 .group { height: 1%; }
-
-
 ### CSS
 
 #### Formatting
@@ -300,21 +291,11 @@ The following **philosophy** is paraphrased from our standard proposal language.
 </tr>
 <tr>
 <td>Chrome (stable)</td>
-<td></td>
-<td class="supported" colspan="4">yes
+<td class="supported" colspan="5">yes
 </td></tr>
 <tr>
 <td>Firefox (stable)</td>
-<td>  </td>
-<td class="supported" colspan="4">yes
-</td></tr>
-<tr>
-<td>Internet Explorer 8.0</td>
-<td></td>
-<td></td>
-<td class="supported">yes</td>
-<td class="supported">yes</td>
-<td>
+<td class="supported" colspan="5">yes
 </td></tr>
 <tr>
 <td>Internet Explorer 9.0</td>
@@ -374,9 +355,9 @@ The following **philosophy** is paraphrased from our standard proposal language.
 </td></tr>
 </table>
 
-As of October 2014, the definitive list includes Chrome and Firefox (Mac & Windows), IE 8+, Safari 7+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 9+, Safari 7+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
-By default we do not test on IE 6 and 7. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+By default we do not test on IE 6-8. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
 ### Mobile Browser Support
 
@@ -412,12 +393,10 @@ iMarc employees who have access to our wiki can read more about our policies in 
 
 ### Internet Explorer styles
 
-Some older versions of Internet Explorer need dedicated CSS rules in order to achieve design and functionality. You can target previous versions of Internet Explorer from special HTML classes. Place these styles in a deciated CSS file if the same name (e.g. lt_ie9.css). If the amount of Internet Explorer styles is small, place them in the project’s main CSS file.
+Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design and functionality. You can target previous versions of Internet Explorer using conditional comments. Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS changes styles are minimal, place them in the project’s main CSS file.
 	
-	<!--[if lt IE 7]> <html class="lt_ie9 lt_ie8 lt_ie7" lang="en"> <![endif]-->
-	<!--[if IE 7]>    <html class="lt_ie9 lt_ie8" lang="en"> <![endif]-->
-	<!--[if IE 8]>    <html class="lt_ie9" lang="en"> <![endif]-->
-	<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
+	<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
 
 
 ## Accessibility 
@@ -954,8 +933,8 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
 The default type size and font for a site should be set on the `body` element.
 
 	body {
-	    font-size: 16px;
 	    font-family: Arial, Helvetica, serif;
+	    font-size: 16px;
 	}
 
 Do not set sizes on unclassed markup that typically should be rendered as 
@@ -989,84 +968,66 @@ in the stack are unavailable.
 
 ### Web Fonts
 
-Use the following syntax to use web fonts with `@font-face`. Appropriate 
+Use the following syntax to use web fonts with the `@font-face` at-rule. Appropriate 
 file formats should be provided for supported browsers. When using a multi 
-weight/style typeface be sure to add the appropriate `font-weight` and `font-style` for each.
-
-Bulletproof `@font-face` syntax via [FontSpring](http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax)
+weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while 
+using the same `font-family` name.
 
 	@font-face {
-	   font-family: 'VerbRegular';
+	   font-family: 'Verb';
 	      src: url('/fonts/VerbRegular-webfont.eot');
 	      src: url('/fonts/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
 	           url('/fonts/VerbRegular-webfont.woff') format('woff'),
 	           url('/fonts/VerbRegular-webfont.ttf') format('truetype'),
 	           url('/fonts/VerbRegular-webfont.svg#VerbRegular') format('svg');
-	   font-weight: normal;
+	   font-weight: 400;
 	   font-style: normal;
 	}
 	@font-face {
-	   font-family: 'VerbRegularItalic';
+	   font-family: 'Verb';
 	      src: url('/fonts/VerbRegular-Italic-webfont.eot');
 	      src: url('/fonts/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
 	           url('/fonts/VerbRegular-Italic-webfont.woff') format('woff'),
 	           url('/fonts/VerbRegular-Italic-webfont.ttf') format('truetype'),
 	           url('/fonts/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
-	   font-weight: normal;
+	   font-weight: 400;
 	   font-style: italic;
 	}
 	@font-face {
-	   font-family: 'VerbBold';
+	   font-family: 'Verb';
 	      src: url('/fonts/VerbBold-webfont.eot');
 	      src: url('/fonts/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
 	           url('/fonts/VerbBold-webfont.woff') format('woff'),
 	           url('/fonts/VerbBold-webfont.ttf') format('truetype'),
-	           url('/fonts/VerbBold-webfont.svg#VerbBold') format('svg');
-	   font-weight: bold;
+	           url('/fonts/VerbBold-webfont.svg#VerbRegularItalic') format('svg');
+	   font-weight: 700;
 	   font-style: normal;
 	}
-	@font-face {
-	   font-family: 'VerbBoldItalic';
-	      src: url('/fonts/VerbBold-Italic-webfont.eot');
-	      src: url('/fonts/VerbBold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/VerbBold-Italic-webfont.woff') format('woff'),
-	           url('/fonts/VerbBold-Italic-webfont.ttf') format('truetype'),
-	           url('/fonts/VerbBold-Italic-webfont.svg#VerbBoldItalic') format('svg');
-	   font-weight: bold;
-	   font-style: italic;
-	}
 
-When styling elements, it's important to define the `font-family` as well as 
-`font-weight` and `font-style` when necessary. This eliminates any faux bolding 
-or faux italics in the browser. [Here's an example of faux styling when you don't properly define each font](http://paul.sandbox.imarc.net/font-face/) 
-
-Use the following method when defining fonts:
+Note that different type variations all use the same `font-family` name. 
+Make sure to leverage both the `font-style` and `font-weight` on your elements.
 
     body {
-        font-family: "VerbRegular";
+        font-family: "Verb";
     }
-    h1, h2 {
-        font-family: "VerbBold";
+    h1 {
+    	font-style: normal
+        font-weight: 700;
     }
-    h3 {
-        font-family: "VerbRegular";
-        font-weight: normal;
+    h2 {
+    	font-style: italic;
+        font-weight: 400;
     }
-    strong {
-        font-family: "VerbBold";
-    }
-    strong em {
-        font-family: "VerbBoldItalic";
-    }
-    em {
-        font-family: "VerbRegularItalic";
+    p {
+    	font-style: normal;
+        font-weight: 400;
     }
 
-Font Squirrel also has a handy [@font-face Generator](http://www.fontsquirrel.com/fontface/generator) 
-that can convert font files to various formats. Make sure you check with your producer 
-regarding the use of web fonts as there are licensing requirements for certain fonts.
+`<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
+both an italic and bold version exist.
 
-**[Google Web Fonts](http://www.google.com/webfonts)** is a free web font collection iMarc has used.
+Other web font services iMarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**, 
+**[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
 
 ### Dashes
 
@@ -1083,6 +1044,11 @@ Em dashes have been dropped based on Robert Bringhurst’s recommendation in
   editorial style books, but the em dash is too long for use with the best 
   text faces. Like the oversized space between sentences, it belongs to the 
   padded and corseted aesthetic of Victorian typography.
+
+### Print Styles
+
+While not requested often, some websites necessitate a clean layout when pages
+are printed. iMarc begins from a sane starting point as documented in [iMarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.css#L1169)
 
 ## Mobile Optimization
 
