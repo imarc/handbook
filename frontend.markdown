@@ -1048,7 +1048,7 @@ Em dashes have been dropped based on Robert Bringhurst’s recommendation in
 ### Print Styles
 
 While not requested often, some websites necessitate a clean layout when pages
-are printed. iMarc begins from a sane starting point as documented in [iMarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.css#L1169)
+are printed. iMarc begins from a sane starting point as documented in [iMarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.scss#L1130)
 
 ## Mobile Optimization
 
