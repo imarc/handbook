@@ -283,79 +283,40 @@ The following **philosophy** is paraphrased from our standard proposal language.
 <table>
 <tr>
 <th>Browser/Version</th>
-<th>Mac 10.9</th>
-<th>Mac 10.10</th>
-<th>Win XP</th>
-<th>Win 7</th>
-<th>Win 8</th>
+<th>Mac</th>
+<th>Windows</th>
 </tr>
 <tr>
 <td>Chrome (stable)</td>
-<td class="supported" colspan="5">yes
+<td class="supported" colspan="2">yes
 </td></tr>
 <tr>
 <td>Firefox (stable)</td>
-<td class="supported" colspan="5">yes
+<td class="supported" colspan="2">yes
 </td></tr>
 <tr>
 <td>Internet Explorer 9.0</td>
 <td></td>
-<td></td>
-<td></td>
 <td class="supported">yes</td>
-<td>
-</td></tr>
+</tr>
 <tr>
 <td>Internet Explorer 10.0</td>
 <td></td>
-<td></td>
-<td></td>
 <td class="supported">yes</td>
-<td class="supported">yes
-</td></tr>
+</tr>
 <tr>
 <td>Internet Explorer 11.0</td>
-<td></td>
-<td></td>
-<td></td>
 <td></td>
 <td class="supported">yes (*8.1 only)
 </td></tr>
 <tr>
-<td>Safari 7.1</td>
-<td class="supported">yes</td>
-<td></td>
-<td></td>
-<td></td>
-<td>
-</td></tr>
-<tr>
-<td>Safari 7.1 Retina</td>
-<td class="supported">yes</td>
-<td></td>
-<td></td>
-<td></td>
-<td>
-</td></tr>
-<tr>
 <td>Safari 8.0</td>
-<td></td>
 <td class="supported">yes</td>
 <td></td>
-<td></td>
-<td>
-</td></tr>
-<tr>
-<td>Safari 8.0 Retina</td>
-<td></td>
-<td class="supported">yes</td>
-<td></td>
-<td></td>
-<td>
-</td></tr>
+</tr>
 </table>
 
-As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 9+, Safari 7+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 9+, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
 By default we do not test on IE 6-8. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
