@@ -350,6 +350,8 @@ By default we do not test on IE 6-8. However individual projects may require bro
 </tr>
 </table>
 
+By default we do not test on Blackberry or Windows Phone devices. However, individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+
 iMarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
 ### Internet Explorer styles
