@@ -103,7 +103,11 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
         <a href="#"> Learn More »</a>
     </p>	
 
-## Icons
+## Graphics
+
+### Image Compression
+
+Whenever you cut up a website, you should use image compression software to crunch the images. Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) comes highly recommended among the Imarc team.
 
 ### Favicons
 
