@@ -281,39 +281,34 @@ The following **philosophy** is paraphrased from our standard proposal language.
 ### Desktop Browser Support
 
 <table>
-<tr>
-<th>Browser/Version</th>
-<th>Mac</th>
-<th>Windows</th>
-</tr>
-<tr>
-<td>Chrome (stable)</td>
-<td class="supported" colspan="2">yes
-</td></tr>
-<tr>
-<td>Firefox (stable)</td>
-<td class="supported" colspan="2">yes
-</td></tr>
-<tr>
-<td>Internet Explorer 9.0</td>
-<td></td>
-<td class="supported">yes</td>
-</tr>
-<tr>
-<td>Internet Explorer 10.0</td>
-<td></td>
-<td class="supported">yes</td>
-</tr>
-<tr>
-<td>Internet Explorer 11.0</td>
-<td></td>
-<td class="supported">yes (*8.1 only)
-</td></tr>
-<tr>
-<td>Safari 8.0</td>
-<td class="supported">yes</td>
-<td></td>
-</tr>
+	<tr>
+		<th>Browser/Version</th>
+		<th>Mac</th>
+		<th>Windows</th>
+	</tr>
+	<tr>
+		<td>Chrome (stable)</td>
+		<td class="supported" colspan="2">yes</td>
+	</tr>
+	<tr>
+		<td>Firefox (stable)</td>
+		<td class="supported" colspan="2">yes</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 10.0</td>
+		<td></td>
+		<td class="supported">yes</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 11.0</td>
+		<td></td>
+		<td class="supported">yes (*8.1 only)</td>
+	</tr>
+	<tr>
+		<td>Safari 8.0</td>
+		<td class="supported">yes</td>
+		<td></td>
+	</tr>
 </table>
 
 As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 9+, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
