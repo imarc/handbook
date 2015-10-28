@@ -5,14 +5,14 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document describes JavaScript coding and style standards employed by iMarc.
-		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document describes JavaScript coding and style standards employed by Imarc.
+		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
 ## jQuery
 
-As a standard, iMarc uses [jQuery](http://www.jquery.com) to extend JavaScript
+As a standard, Imarc uses [jQuery](http://www.jquery.com) to extend JavaScript
 functionality.
 
 ## Minification
@@ -362,7 +362,7 @@ plugin, you should have a comment block as follows:
 	 * @changes 0.0.2 Description [initials, YYYY-MM-DD]
 	 * @changes 0.0.1 Description [initials, YYYY-MM-DD]
 	 *
-	 * @copyright 2012, iMarc <info@imarc.net>
+	 * @copyright 2012, Imarc <info@imarc.net>
 	 */
 
 Any edit that is noted in the changelog requires new authors to add their name

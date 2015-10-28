@@ -5,8 +5,8 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document outlines iMarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
-		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document outlines Imarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
+		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -54,11 +54,11 @@ Implementation
 
 ## Process
 
-This Handbook page focuses on the strategy process. For context, it's helpful to understand iMarc's larger software development life cycle.
+This Handbook page focuses on the strategy process. For context, it's helpful to understand Imarc's larger software development life cycle.
 
 ### Software Development Life Cycle
 
-iMarc's typical software development life cycle ensure's that we are creating the best possible end-product for our clients. The steps involved in the process are:
+Imarc's typical software development life cycle ensure's that we are creating the best possible end-product for our clients. The steps involved in the process are:
 
 Listen
 :   Gather Requirements, Evaluate, Conceptualize
@@ -82,7 +82,7 @@ The cycle repeats as requirements change or enhancements are requested.
 
 ### Strategy Process
 
-The strategy process is provided to clients who have engaged iMarc by approving a proposal which includes a specified time and cost budget for strategy. Smaller projects that do not explicitly define a strategy budget or scope should bypass the strategy team and go directly to a production team.
+The strategy process is provided to clients who have engaged Imarc by approving a proposal which includes a specified time and cost budget for strategy. Smaller projects that do not explicitly define a strategy budget or scope should bypass the strategy team and go directly to a production team.
 
 The overall process typically looks something like this:
 
@@ -127,9 +127,9 @@ The Designer, Engineer and UX Engineer(s) will stick with the project after the 
 
 ### Approvals
 
-The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the iMarc project producer.
+The output of strategy are concrete reference documents. Deliverables are approved both by the client and by the Imarc project producer.
 
-If the client also engages iMarc to develop the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
+If the client also engages Imarc to develop the project, the strategy lead is responsible for notifying the client that project leadership is changing hands. The Producer is the primary point of contact during the production phase. The Strategist typically withdraws to an advisory-only role (i.e., answering questions about spec or scope, reviewing initial creative work, and helping with QA after development).
 
 
 
@@ -162,9 +162,9 @@ Templates
 
 For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
-This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). iMarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
+This starts with a 90-minute conference call or meeting with the client stakeholder team (2-5). Imarc and the client team discuss the project goals, their current business environment and growth objectives, review the current site, and benchmark competitor sites and exemplars.
 
-Next, iMarc creates a short report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way.
+Next, Imarc creates a short report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way.
 
 **Topics include:**
 
@@ -196,11 +196,11 @@ Templates
 
 For projects such as a major re-design of a large site, or a project with many stakeholders and high visibility, an in-depth discovery process will yield better results. This is typically lead by a Strategist, with the assistance of the producer, UX, engineering, and creative groups.
 
-This starts with a 90- to 120–minute conference call or meeting with the client stakeholder team. iMarc and the client team discuss the project goals, their current business environment and growth objectives. We'll also discuss the client's current site, and identify competitor sites and exemplars for follow-up. (This is often a precursor to a full [Competitive Analysis](#CompetitiveAnalysis).)
+This starts with a 90- to 120–minute conference call or meeting with the client stakeholder team. Imarc and the client team discuss the project goals, their current business environment and growth objectives. We'll also discuss the client's current site, and identify competitor sites and exemplars for follow-up. (This is often a precursor to a full [Competitive Analysis](#CompetitiveAnalysis).)
 
 As larger projects often have many goals, yet do not have unlimited time and resources, it's important to prioritize goals. A group [card sort](#GoalsCardSort) activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
-Lastly, iMarc creates a concise report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. 
+Lastly, Imarc creates a concise report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. 
 
 **Topics include:**
 
@@ -365,7 +365,7 @@ We review web analytics to better inform decisions during planning, design and d
 + **Visitor Technology:** Browsers and versions, commonest devices
 + **Traffic Sources and Search Keywords:** Relative mix of traffic sources, keywords used in organic search
 + **Events:** Correlate offline events to visits or conversions
-+ **SEO:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [iMarc Wiki: SEO](http://wiki.imarc.net/SEO) for guidance.)
++ **SEO:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [Imarc Wiki: SEO](http://wiki.imarc.net/SEO) for guidance.)
 
 We also identify the most important performance metrics that the client should follow in the future. The exact metrics will vary from project to project, but in general we will define several general and specific indicators:
 
@@ -417,7 +417,7 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
 
-Over the years, iMarc has shifted from defining the requirements for websites (or apps) only in prose, to creating more visual documents. Combined with detailed annotations or working prototypes, these better explain how a web site or apps will work.
+Over the years, Imarc has shifted from defining the requirements for websites (or apps) only in prose, to creating more visual documents. Combined with detailed annotations or working prototypes, these better explain how a web site or apps will work.
 
 
 ### Proposal
@@ -427,7 +427,7 @@ A proposal is created by Business Development and is a sales tool. It defines th
 
 ### Statement of Work
 
-A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on iMarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery.
+A Statement of Work, or SOW, may be created by Business Development or a Producer. It's not a sales tool. SOWs are used for existing clients who don't need to be sold on Imarc as a vendor. An SOW defines project scope, features and functionality. It usually does not include background research & discovery.
 
 
 ### Site Map
@@ -453,7 +453,7 @@ A sitemap can be as simple as an outline, for example:
 ![Non-canonical sitemap outline style that we don't do here](img/strategy/sitemap-outline.png)
 </figure>
 
-iMarc sitemaps, however, tend to either be a tree-style diagram such as this:
+Imarc sitemaps, however, tend to either be a tree-style diagram such as this:
 
 <figure markdown="1">
 ![Tree-style sitemap diagram](img/strategy/sitemap-tree.png)
@@ -465,7 +465,7 @@ Or, when it helps in comprehension, a flowchart-style diagram may be used, with 
 ![Flowchart-style sitemap diagram](img/strategy/sitemap-flowchart.png)
 </figure>
 
-Regardless of the style used, an iMarc sitemap follows certain conventions:
+Regardless of the style used, an Imarc sitemap follows certain conventions:
 
 + Every page on the site should be represented on the sitemap.
 	+ Exception: List-and-view constructs, such as press releases, events calendars, and product catalogs, are instead represented by a multi-page icon.
@@ -523,7 +523,7 @@ Time Req
 
 Rapid prototypes can be used to quickly test interface or design interaction concepts. They bridge the gap between static documents such as site maps and wireframes, and the actual user experience of a web site or app.
 
-At iMarc, we use prototypes to test novel interfaces, gain user feedback, or to explain an interaction to a client before committing to intensive development.
+At Imarc, we use prototypes to test novel interfaces, gain user feedback, or to explain an interaction to a client before committing to intensive development.
 
 A UX Engineer creates an interactive mockup; it is barely styled ("low fidelity"), uses real content if possible, and implements the minimum functionality possible to test the concept. We review the prototype with the client or users, identifing what works and what needs to change. There may be several rounds of iteration, improving and expanding functionality until the interface is well-defined.
 
@@ -562,7 +562,7 @@ Time Req
 Templates
 :	https://github.com/imarc/strategy.imarc.net/tree/master/docs/template
 
-Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-iMarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
+Like a Functional Requirements document, it's created by a Strategy team in close collaboration with the client. A Production Specification is needed for projects of high complexity. Examples include integrating with external systems; building on new-to-Imarc platforms; or custom hosting or security requirements. On these projects, Engineers, Producers, UX Engineers and Creative will be involved in developing the specification with the Strategy team.
 
 This document restates the scope of production and must be approved by the client. It includes everything in Functional Requirements, *plus*:
 
@@ -673,12 +673,12 @@ Tasks
 : Test every function and content object described in the wireframes/requirements against expected behavior, verify the presence of all pages in the site map, and make sure the required content is present and correct.
 
 Deliverables
-:	Issues should be entered as tasks in iMarc's [Workshop](https://workshop.imarc.net). The Producer will traffic them.
+:	Issues should be entered as tasks in Imarc's [Workshop](https://workshop.imarc.net). The Producer will traffic them.
 
 Time Req
 :	N/A (not budgeted with strategy)
 
-After design and development, before launch, iMarc employees who were not involved in creating the site assess the site for compliance with the project requirements, for general bugs, and for usability issues. 
+After design and development, before launch, Imarc employees who were not involved in creating the site assess the site for compliance with the project requirements, for general bugs, and for usability issues. 
 
 QA serves as a "last pass" to catch anything missed during production.
 
@@ -710,7 +710,7 @@ There are a number of tools we've used to create prototypes, including Keynote, 
 
 We publish many documents and reports as web-native documents on [strategy.imarc.net](https://strategy.imarc.net). This uses a custom [document publishing system](http://wiki.imarc.net/Strategy_Docs_Publishing) inspired by GitHub Pages, but with many customizations for our own process. See the wiki for details.
 
-We sometimes use [Google Docs](http://docs.google.com) through iMarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
+We sometimes use [Google Docs](http://docs.google.com) through Imarc's Google Apps account. Google Docs should not be created or edited using personal accounts.
 
 We use [Word](http://www.microsoft.com/mac/word) for some documents, but are not great fans of it. We appreciate Word's .docx file format for its superior change tracking capabilities.
 
@@ -738,7 +738,7 @@ Branded templates for Word and Keynote can be downloaded from [our intranet](htt
 Strategy deliverables should contain an appropriate combination of the following meta information.
 
 Client
-:	Example: *iMarc LLC*
+:	Example: *Imarc LLC*
 
 Project
 :	Example: *Website Redesign*

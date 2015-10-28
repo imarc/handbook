@@ -1,13 +1,13 @@
 ---
-title: iMarc Handbook
+title: Imarc Handbook
 layout: homepage
 ---
 
 <h1 class="title">
-	iMarc’s Standards &amp; Best Practices for Web Development
+	Imarc’s Standards &amp; Best Practices for Web Development
 </h1>
 <p class="copyright">
-	Copyright 2005‒2013 <a href="http://imarc.net/">iMarc LLC</a>.
+	Copyright 2005‒2013 <a href="http://imarc.net/">Imarc LLC</a>.
 </p>
 
 

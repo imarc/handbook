@@ -5,8 +5,8 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document describes iMarc’s standards for writing PHP and SQL.
-		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document describes Imarc’s standards for writing PHP and SQL.
+		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -87,7 +87,7 @@ Ensure that your code follows the standards:
 
 	phpcs --standard=psr1,psr2 .
 
-iMarc exceptions to PSR standards and specific items that PSR 1 and 2 don't address can be found below.
+Imarc exceptions to PSR standards and specific items that PSR 1 and 2 don't address can be found below.
 
 ### Line Breaks
 
@@ -234,7 +234,7 @@ The class header block at the top of the file uses the template below.
 	/**
 	 * Description of class
 	 *
-	 * @copyright 2015 iMarc LLC
+	 * @copyright 2015 Imarc LLC
 	 *
 	 * @author Your Name <author@email.com>
 	 * @author Another Name <author@email.com>
@@ -295,7 +295,7 @@ and `E_STRICT`.
 
 ## Databases and SQL
 
-iMarc prefers Postgres for storing relational data.
+Imarc prefers Postgres for storing relational data.
 
 ### Indenting
 

@@ -5,9 +5,9 @@ layout: default
 
 <section class="intro">
 	<p markdown="1">
-		This document describes iMarc’s preferred method for deploying websites using 
+		This document describes Imarc’s preferred method for deploying websites using 
 		an automated, repeatable system called  `patton`. 
-		[iMarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
+		[Imarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -380,7 +380,7 @@ Database migration files should include SQL statements, terminated by `;`s.
 	SELECT grant_to_web();
 
 Any migrations that add database tables should include `SELECT grant_to_web();`
-when running on the standard iMarc server setup. This will allow the website
+when running on the standard Imarc server setup. This will allow the website
 to access data inside of the table.
 
 For migrations on a PostgreSQL database, use database transactions (`BEGIN` and

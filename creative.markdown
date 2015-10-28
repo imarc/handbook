@@ -5,7 +5,7 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document outlines iMarc’s creative process and deliverables. <a href="http://www.imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document outlines Imarc’s creative process and deliverables. <a href="http://www.imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -63,7 +63,7 @@ Engineer
 	Build out the design to match how it was envisioned by the Designer;  
 	Adhere to web best practices established by UX Engineers
 
-Designers stick with the project even after the creative phase is complete—just because a composition is approved does not mean the job is done. Designers both review and assist in building iMarc projects. This ensures consistency throughout the full duration of the project, shepherding the vision established during the creative phase.
+Designers stick with the project even after the creative phase is complete—just because a composition is approved does not mean the job is done. Designers both review and assist in building Imarc projects. This ensures consistency throughout the full duration of the project, shepherding the vision established during the creative phase.
 
 
 
@@ -85,9 +85,9 @@ Time Req
 
 For projects such as websites and applications, a designer will lead client stakeholders through creative discovery . The project Producer, Designer, and UX Engineer should also participate.
 
-This starts with a 60-minute conference call or meeting with the client stakeholder team (typically 2–5; larger teams will require more time). iMarc and the client team discuss the company history, project goals, design goals, current brand guidelines (if applicable) and metrics for success.
+This starts with a 60-minute conference call or meeting with the client stakeholder team (typically 2–5; larger teams will require more time). Imarc and the client team discuss the company history, project goals, design goals, current brand guidelines (if applicable) and metrics for success.
 
-iMarc’s Designer will lead stakeholders through a series of pre-selected benchmark websites based on their visual design, client vertical, functionality and other design related features. This exercise sparks conversations around design that gives iMarc’s creative team insight into the visual direction they should head.
+Imarc’s Designer will lead stakeholders through a series of pre-selected benchmark websites based on their visual design, client vertical, functionality and other design related features. This exercise sparks conversations around design that gives Imarc’s creative team insight into the visual direction they should head.
 
 
 **Topics include:**
@@ -105,7 +105,7 @@ iMarc’s Designer will lead stakeholders through a series of pre-selected bench
 ###  Brand Immersion ###
 
 Objective
-:	Understand a brand’s values, positioning, perception, visual identity, and any existing guidelines. This is used when there is an extensively defined and established brand that the iMarc team should “live and breathe”.
+:	Understand a brand’s values, positioning, perception, visual identity, and any existing guidelines. This is used when there is an extensively defined and established brand that the Imarc team should “live and breathe”.
 
 Tasks
 :	Meet with brand stakeholders to review values, positioning, perception, visual identity, and any guidelines currently in use. 
@@ -113,7 +113,7 @@ Tasks
 Time Req
 :	8–90 hours
 
-This typically starts with an in-depth conference call or meeting with the client’s brand stakeholders. iMarc and the client team discuss the project goals, their current brand values, positioning, perception, audience, and any guidelines currently available.
+This typically starts with an in-depth conference call or meeting with the client’s brand stakeholders. Imarc and the client team discuss the project goals, their current brand values, positioning, perception, audience, and any guidelines currently available.
 
 **Topics include:**
 
@@ -135,16 +135,16 @@ Objective
 :	To enhance, expand and/or form a brand identity.
 
 Tasks
-:	iMarc’s creative team will lead brand stakeholders through exercises targeted at gathering key information associated with the brand.
+:	Imarc’s creative team will lead brand stakeholders through exercises targeted at gathering key information associated with the brand.
 
 Time Req
 :	12–14 hours
 
 For projects such as re-branding or the creation of a fresh new brand, a concise and focused discovery process can be highly effective. This will require a dedicated Designer, Strategist and possibly a Copywriter.
 
-This starts with a 90-minute conference call or meeting with the brand stakeholder team (typically 2–5). iMarc and the client team discuss the project goals, their current brand values, positioning, perception, audience, and any guidelines currently available.
+This starts with a 90-minute conference call or meeting with the brand stakeholder team (typically 2–5). Imarc and the client team discuss the project goals, their current brand values, positioning, perception, audience, and any guidelines currently available.
 
-Next, iMarc’s Creative team will lead the brand stakeholders thought a card sort exercise where they will organize various brand descriptors into different categories. These categories will help define the current brand perception and how iMarc’s Creative Team should prioritize descriptors.
+Next, Imarc’s Creative team will lead the brand stakeholders thought a card sort exercise where they will organize various brand descriptors into different categories. These categories will help define the current brand perception and how Imarc’s Creative Team should prioritize descriptors.
 
 **Topics include:**
 
@@ -172,7 +172,7 @@ Deliverables
 Time Req
 :	6–18 hours
 
-For projects such requiring custom photography or video, it’s important to establish the overall tone, look, and feel before capturing the subject matter. iMarc’s creative team will work with stakeholders to define the visual “look” that the photos or video will have as well as define the shot list (photography) or storyboard (video) of what needs to be captured during the shoot.
+For projects such requiring custom photography or video, it’s important to establish the overall tone, look, and feel before capturing the subject matter. Imarc’s creative team will work with stakeholders to define the visual “look” that the photos or video will have as well as define the shot list (photography) or storyboard (video) of what needs to be captured during the shoot.
 
 **Topics include:**
 
@@ -255,13 +255,13 @@ The identity of a brand is made up of more than just colors, typefaces, imagery,
 ### Photography ###
 
 Summary
-:	On-site digital photography performed by iMarc’s in house Creative staff to showcase your company, product, event, or culture. 
+:	On-site digital photography performed by Imarc’s in house Creative staff to showcase your company, product, event, or culture. 
 
 Time Required
 :	Half Day Shoot: 28–32 hours (Includes post processing)  
 	Full Day Shoot: 40–50 hours (Includes post processing)
 
-iMarc will set up a half day or full day shoot depending on the subject matter to be photographed. iMarc is available for shooting corporate headshots, advertising photography, product photography, landscape photography, still life photography, and event photography.
+Imarc will set up a half day or full day shoot depending on the subject matter to be photographed. Imarc is available for shooting corporate headshots, advertising photography, product photography, landscape photography, still life photography, and event photography.
 
 **Key Elements:**
 
@@ -275,7 +275,7 @@ iMarc will set up a half day or full day shoot depending on the subject matter t
 ### Videography ###
 
 Summary
-:	On-site digital videography performed by iMarc’s in house Creative staff to showcase your company, product, event, or culture while telling a compelling narrative. 
+:	On-site digital videography performed by Imarc’s in house Creative staff to showcase your company, product, event, or culture while telling a compelling narrative. 
 
 Time Required
 :	Half Day Shoot: 60–80 hours (Includes post processing and editing)  
@@ -285,7 +285,7 @@ Full Day Shoot: 80–100 hours (Includes post processing and editing)
 &nbsp;Shoot: 8 hours x 3 Creatives = 24 hours  
 &nbsp;Post Production = 56 - 76 Hours
 
-iMarc will set up a half day or full day video shoot depending on the subject matter you need camptured. iMarc is available for capturing corporate events, product demos, testimonials, interviews, and advertisements. Generally, 3 in- house creatives will be on site for the shoot handling video, lighting and audio capture.
+Imarc will set up a half day or full day video shoot depending on the subject matter you need camptured. Imarc is available for capturing corporate events, product demos, testimonials, interviews, and advertisements. Generally, 3 in- house creatives will be on site for the shoot handling video, lighting and audio capture.
 
 **Key Elements:**
 
@@ -318,7 +318,7 @@ The use of motion or animation can bring your content to life and keep your cust
 
 
 ## Tools ##
-iMarc’s creative team has standardized on certain applications and file formats to ensure a smooth internal workflow and exchange of deliverables. While most of iMarc’s designers use Macs, the Adobe Creative Suite runs on Windows as well.
+Imarc’s creative team has standardized on certain applications and file formats to ensure a smooth internal workflow and exchange of deliverables. While most of Imarc’s designers use Macs, the Adobe Creative Suite runs on Windows as well.
 
 Adobe Indesign and Adobe Illustrator are used to create all print materials, including print templates. We use Illustrator for logo work.
 

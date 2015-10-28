@@ -5,14 +5,14 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document describes iMarc’s markup and style standards. 
-		<a href="http://imarc.net">iMarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document describes Imarc’s markup and style standards. 
+		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
 ## Boilerplate
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great 
-starting point for new projects. Authored by iMarc, Boilerplate contains our standard HTML and CSS.
+starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and CSS.
 
 ## Doctype
 
@@ -47,15 +47,15 @@ page. In the case of nested pages, information in the title tag should be ordere
 most specific to least specific. A standard delimiter such as `–` should be employed 
 to indicate distinct content levels.
 
-	<title>Writing Content For Your Website – Support – iMarc</title>
+	<title>Writing Content For Your Website – Support – Imarc</title>
 
 This shows that I’m on the page called *Writing Content For Your Website*. That 
-page lives in a section called *Support* which resides in a website for *iMarc*.
+page lives in a section called *Support* which resides in a website for *Imarc*.
 
 The homepage should include the site or company name, followed by a simple description 
 of the entire website.
 
-	<title>iMarc – Web Design, Online Applications, Boston, MA</title>
+	<title>Imarc – Web Design, Online Applications, Boston, MA</title>
 
 ### Meta Description
 
@@ -71,13 +71,13 @@ descriptions with on-page content as they see fit.
 
 Keep meta descriptions less than 160 characters.
 
-	<meta name="description" content="iMarc creates web sites &amp; applications for discerning clients. Strategy, marketing, design and programming since 1997. Newburyport, MA — 978-462-8848" />
+	<meta name="description" content="Imarc creates web sites &amp; applications for discerning clients. Strategy, marketing, design and programming since 1997. Newburyport, MA — 978-462-8848" />
 
-### iMarc Credits
+### Imarc Credits
 
-Include the following meta tag in the head to credit iMarc.
+Include the following meta tag in the head to credit Imarc.
 
-	<meta name="author" content="Created by iMarc: web + creative + strategy + mobile. More info at www.imarc.net" />
+	<meta name="author" content="Created by Imarc: web + creative + strategy + mobile. More info at www.imarc.net" />
 
 ### Character Encoding
 
@@ -99,7 +99,7 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 
     <p>
         Separation of content – better with an en-dash. 
-        iMarc’s motto: “Use curly quotes” 
+        Imarc’s motto: “Use curly quotes” 
         <a href="#"> Learn More »</a>
     </p>	
 
@@ -177,7 +177,7 @@ Use floats to construct layouts instead of frames, iframes, or tables. This main
 
 #####Containing floats#####
 
-Make sure to properly contain floats with a clearfix. iMarc uses a `group` class.
+Make sure to properly contain floats with a clearfix. Imarc uses a `group` class.
 
     .group:before,
     .group:after {
@@ -358,7 +358,7 @@ One case where this is of particular concern is when a large group of potential 
 
 By default we do not test on Blackberry or Windows Phone devices. However, individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
-iMarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
+Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
 ### Internet Explorer styles
 
@@ -374,7 +374,7 @@ Use the Baseline Checklist below to ensure an acceptable level of accessibility.
 
 ### ARIA Landmark Roles
 
-ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse areas of a website by their respective landmark role, allowing users to skip over regions that are repeated on every page. iMarc takes advantage of five roles:
+ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse areas of a website by their respective landmark role, allowing users to skip over regions that are repeated on every page. Imarc takes advantage of five roles:
 <ul>
 	<li>
 		<code>banner</code>: A region that contains the prime heading or internal title of a page.
@@ -503,7 +503,7 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 
 ## Structure and Process
 
-See **[iMarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
+See **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
 for detailed layout naming conventions.
 
 ### Structure
@@ -995,7 +995,7 @@ Make sure to leverage both the `font-style` and `font-weight` on your elements.
 `<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
 both an italic and bold version exist.
 
-Other web font services iMarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**, 
+Other web font services Imarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**, 
 **[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
 
 ### Dashes
@@ -1017,7 +1017,7 @@ Em dashes have been dropped based on Robert Bringhurst’s recommendation in
 ### Print Styles
 
 While not requested often, some websites necessitate a clean layout when pages
-are printed. iMarc begins from a sane starting point as documented in [iMarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.scss#L1130)
+are printed. Imarc begins from a sane starting point as documented in [Imarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.scss#L1130)
 
 ## Mobile Optimization
 
@@ -1047,14 +1047,14 @@ explains this issue and one possible solution:
 > add a `maximum-scale` value to prevent this zooming, which has the 
 > sometimes-**unwanted side effect of preventing users from zooming in**.
 
-Another option iMarc has discussed is employing JavaScript to solve iPhone’s 
+Another option Imarc has discussed is employing JavaScript to solve iPhone’s 
 re-orientation issue.
 
 
 ### Media Queries
 
 Meida queries is a CSS3 technology allowing scope limitation of styles based on a 
-feature such as width, aspect ratio, pixel density, and more. iMarc primarily 
+feature such as width, aspect ratio, pixel density, and more. Imarc primarily 
 uses media queries to serve different styles to mobile and tablet devices.
 
 All media queries can reside in a site’s main stylesheet.
