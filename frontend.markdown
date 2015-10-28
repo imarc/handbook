@@ -318,31 +318,31 @@ By default we do not test on IE 6-8. However individual projects may require bro
 ### Mobile Browser Support
 
 <table>
-<tr>
-<th> Platform/OS </th>
-<th> Browser </th>
-<th> Target Devices </th>
-</tr>
-<tr>
-<td> iOS 7 </td>
-<td> Safari 7 </td>
-<td> iPhone 4 series, 5 series, iPad 2+ </td>
-</tr>
-<tr>
-<td> iOS 8 </td>
-<td> Safari 8 </td>
-<td> iPhone 4S, 5 series, 6 series, iPad 3+ </td>
-</tr>
-<tr>
-<td> Android 4.1 </td>
-<td> Browser </td>
-<td> 4"+ handsets, 7–10" tablets </td>
-</tr>
-<tr>
-<td> Android 4.2–4.4 </td>
-<td> Chrome </td>
-<td> 4"+ handsets, 7–10" tablets </td>
-</tr>
+	<tr>
+		<th>Platform/OS</th>
+		<th>Browser</th>
+		<th>Target Devices</th>
+	</tr>
+	<tr>
+		<td>iOS 7</td>
+		<td>Safari 7</td>
+		<td>iPhone 4 series, 5 series, iPad 2+</td>
+	</tr>
+	<tr>
+		<td>iOS 8</td>
+		<td>Safari 8</td>
+		<td>iPhone 4S, 5 series, 6 series, iPad 3+</td>
+	</tr>
+	<tr>
+		<td>Android 4.1</td>
+		<td>Browser</td>
+		<td>4"+ handsets, 7–10" tablets</td>
+	</tr>
+	<tr>
+		<td>Android 4.2–4.4</td>
+		<td>Chrome</td>
+		<td>4"+ handsets, 7–10" tablets</td>
+	</tr>
 </table>
 
 By default we do not test on Blackberry or Windows Phone devices. However, individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
