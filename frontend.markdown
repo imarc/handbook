@@ -311,7 +311,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 	</tr>
 </table>
 
-As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 9+, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 10+, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
 By default we do not test on IE 6-8. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
