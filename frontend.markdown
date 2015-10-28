@@ -306,7 +306,7 @@ The following **philosophy** is paraphrased from our standard proposal language.
 	<tr>
 		<td>Internet Explorer 11.0</td>
 		<td></td>
-		<td class="supported">yes (*8.1 only)</td>
+		<td class="supported">yes</td>
 	</tr>
 	<tr>
 		<td>Microsoft Edge (stable)</td>
