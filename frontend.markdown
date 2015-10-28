@@ -305,13 +305,18 @@ The following **philosophy** is paraphrased from our standard proposal language.
 		<td class="supported">yes (*8.1 only)</td>
 	</tr>
 	<tr>
+		<td>Microsoft Edge (stable)</td>
+		<td></td>
+		<td class="supported">yes</td>
+	</tr>
+	<tr>
 		<td>Safari 8.0</td>
 		<td class="supported">yes</td>
 		<td></td>
 	</tr>
 </table>
 
-As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 10+, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+As of October 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 10+, Edge, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
 By default we do not test on IE 6-9. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
 
