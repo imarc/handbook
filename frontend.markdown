@@ -313,7 +313,9 @@ The following **philosophy** is paraphrased from our standard proposal language.
 
 As of May 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 10+, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
-By default we do not test on IE 6-8. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+By default we do not test on IE 6-9. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+
+One case where this is of particular concern is when a large group of potential site users will be using Windows XP. These users are unable to upgrade beyond IE 8, so we should be mindful of the issues they might face.
 
 ### Mobile Browser Support
 
