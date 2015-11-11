@@ -441,45 +441,23 @@ Time Req
 Templates
 :	<smb://fileserver/files/user_experience/sitemap-wireframe-template/> <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
 
-A sitemap should:
+A sitemap is a diagram that:
 
-+ Convey content hierarchy and labeling
-+ Denote CMS-controlled content and template usage
-+ Create a navigational backbone for a website
++ Conveys content hierarchy and labeling
++ Denotes CMS-controlled content and template usage
++ Creates a navigational backbone for a website
 
-A sitemap can be as simple as an outline, for example:
-
-<figure markdown="1">
-![Non-canonical sitemap outline style that we don't do here](img/strategy/sitemap-outline.png)
-</figure>
-
-Imarc sitemaps, however, tend to either be a tree-style diagram such as this:
+Imarc sitemaps tend to be a tree-style diagram such as this:
 
 <figure markdown="1">
-![Tree-style sitemap diagram](img/strategy/sitemap-tree.png)
+[![Tree-style sitemap diagram](img/strategy/sitemap-example.png)](img/strategy/sitemap-example.png)
 </figure>
 
-Or, when it helps in comprehension, a flowchart-style diagram may be used, with mini-wireframes used to denote page templates:
-
-<figure markdown="1">
-![Flowchart-style sitemap diagram](img/strategy/sitemap-flowchart.png)
-</figure>
-
-Regardless of the style used, an Imarc sitemap follows certain conventions:
+Sometimes, if it helps comprehension and clarity, we'll use other styles. Regardless of the style used, an Imarc sitemap follows certain conventions:
 
 + Every page on the site should be represented on the sitemap.
 	+ Exception: List-and-view constructs, such as press releases, events calendars, and product catalogs, are instead represented by a multi-page icon.
 + The page names and their order on the sitemap are significant – site menus will match this.
-
-#### Example Site Maps:
-<figure markdown="1">
-<figcaption>Traditional style:</figcaption>
-[![Sample Site map, tree-style](img/strategy/sitemap.png)](img/strategy/sitemap.png)
-</figure>
-<figure markdown="1">
-<figcaption>Flowchart style:</figcaption>
-[![Sample Site map, flowchart-style](img/strategy/sitemap-imarc-flowchart.png)](img/strategy/sitemap-imarc-flowchart.png)
-</figure>
 
 
 ### Wireframe
@@ -506,11 +484,13 @@ Wireframes usually are annotated to describe behaviors, functionality, and conte
 
 Most wireframes depict single web pages, but some may depict multiple screens in a complex interaction or workflow. We call these **storyboards**. The time required is cumulative: a four-screen storyboard will take 32-40 hours of work to create, revise and approve.
 
-#### Example Wireframe
-![Example Wireframe](img/strategy/wireframe.png)
-
-#### Example Storyboard
-![Example Storyboard](img/strategy/storyboard.png)
+#### Examples
+<figure markdown="1"><figcaption>Single-page Wireframe</figcaption>
+[![Example Wireframe](img/strategy/wireframe-example.png)](img/strategy/wireframe-example.png)
+</figure>
+<figure markdown="1"><figcaption>Storyboard of a Workflow</figcaption>
+[![Example Storyboard](img/strategy/storyboard.png)](img/strategy/storyboard.png)
+</figure>
 
 <!--
 ### Prototypes
