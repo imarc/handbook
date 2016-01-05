@@ -158,7 +158,7 @@ Time Req
 :	10 hours
 
 Templates
-:	<smb://fileserver/files/Strategy/templates/Discovery/>
+:	<smb://fileserver/files/UX/templates/Discovery/>
 
 For projects such as redesigning an existing site or creating a simple informational or marketing site, a focused and fast discovery process can be highly effective. This may not require a dedicated Strategist and may be conducted by the producer, engineering and creative groups.
 
@@ -192,7 +192,7 @@ Time Req
 :	30 hours
 
 Templates
-:	<smb://fileserver/files/Strategy/templates/Discovery/>
+:	<smb://fileserver/files/UX/templates/Discovery/>
 
 For projects such as a major re-design of a large site, or a project with many stakeholders and high visibility, an in-depth discovery process will yield better results. This is typically lead by a Strategist, with the assistance of the producer, UX, engineering, and creative groups.
 
@@ -250,7 +250,7 @@ Time Req
 :	30 hours for 3–4 interview sessions with 2–4 interview subjects each
 
 Templates
-:	<smb://fileserver/files/Strategy/templates/Interviews/>  
+:	<smb://fileserver/files/UX/templates/Interviews/>  
 (Both internal stakeholder and user interview templates are provided)
 
 Interviews almost always turn up new information, issues and objectives. Whether you are talking to stakeholders, users, or customers, your job is to understand and document their pain, aspirations, and requirements.
@@ -324,7 +324,7 @@ Time Req
 : 8 hours
 
 Template
-:	<smb://fileserver/files/Strategy/templates/Competitive Analysis/>
+:	<smb://fileserver/files/UX/templates/competitive analysis/>
 
 
 Typically we look for patterns and best practices among:
@@ -353,7 +353,7 @@ Time Req
 :	8 hours
 
 Templates
-:	<smb://fileserver/files/user_experience/web-analytics/> <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
+:	<smb://fileserver/files/UX/templates/analytics and metrics> <br> process: [wiki.imarc.net/Analytics_Checklist](http://wiki.imarc.net/Analytics_Checklist)
 
 We review web analytics to better inform decisions during planning, design and development, and set a baseline to measure the site in the future. We look at user activity, page flows, content popularity, and traffic sources. It is necessarily backwards-looking.
 
@@ -409,7 +409,6 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 
 
-
 ## Deliverables and Supporting Documents
 
 > ”Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones.“  
@@ -439,7 +438,7 @@ Time Req
 : 10 hours (minimum, varies by scope of project)
 
 Templates
-:	<smb://fileserver/files/user_experience/sitemap-wireframe-template/> <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
+:	<smb://fileserver/files/UX/templates/site maps> <br> process: [wiki.imarc.net/Sitemap_Process](http://wiki.imarc.net/Sitemap_Process)
 
 A sitemap is a diagram that:
 
@@ -460,6 +459,30 @@ Sometimes, if it helps comprehension and clarity, we'll use other styles. Regard
 + The page names and their order on the sitemap are significant – site menus will match this.
 
 
+### Experience Kickoff
+
+Summary
+: Explore design and user interface concepts with client.
+
+Time Req
+: 4-8 hours
+
+Templates
+:	<smb://fileserver/files/UX/templates/experience kickoff/>
+
+Based on the project’s detailed discovey, imarc and project stakeholders will explore design and user interface 
+concepts – we’ll look at websites together! Some of these explored concepts can include page density, site messaging, 
+color palettes, navigation styles, animations, etc. We will find ourselves answering some common questions:
+
++ How progressive or conservative should our design be? 
++ How much content do we have? How dense should our pages be?
++ What navigation type(s) do we feel our users are most comfortable with?
++ Are we conversational in our site messaging?
++ Does liberal use of imagery help us or hurt us?
+
+The results of the kickoff will help imarc make more informed decision in the [wireframing stage](strategy#Wireframe).
+
+
 ### Wireframe
 
 Summary
@@ -469,7 +492,7 @@ Time Req
 : 8–10 hours each
 
 Templates
-:	<smb://fileserver/files/user_experience/sitemap-wireframe-template/> <br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
+:	<smb://fileserver/files/UX/templates/wireframes/> <br> process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
 
 A wireframe is a low fidelity representation of a design that connects the underlying conceptual structure (information architecture), to the visual design of the website. A wireframe should clearly show:
 
