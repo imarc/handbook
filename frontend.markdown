@@ -350,7 +350,7 @@ should be mindful of the issues they might face.
 		<td>4"+ handsets, 7–10" tablets</td>
 	</tr>
 	<tr>
-		<td>Android 4.2–4.4</td>
+		<td>Android 4.2–5.1</td>
 		<td>Chrome</td>
 		<td>4"+ handsets, 7–10" tablets</td>
 	</tr>
