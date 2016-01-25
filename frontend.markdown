@@ -309,14 +309,14 @@ The following **philosophy** is paraphrased from our standard proposal language.
 		<td class="supported">yes</td>
 	</tr>
 	<tr>
-		<td>Safari 8.0</td>
+		<td>Safari 9.0</td>
 		<td class="supported">yes</td>
 		<td></td>
 	</tr>
 </table>
 
 As of January 2016, the definitive list includes Chrome and Firefox (Mac & Windows), IE 11, Edge,
-Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+Safari 9+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
 By default we do not test on IE 6–10. However individual projects may require browser support
 beyond our defaults. In these cases the additional support will be specified in the proposal and
@@ -337,12 +337,12 @@ should be mindful of the issues they might face.
 	<tr>
 		<td>iOS 8</td>
 		<td>Safari 8</td>
-		<td>4"+ screens, iPad</td>
+		<td>4"+ screens, iPads</td>
 	</tr>
 	<tr>
 		<td>iOS 9</td>
 		<td>Safari 9</td>
-		<td>4"+ screens, iPad</td>
+		<td>4"+ screens, iPads</td>
 	</tr>
 	<tr>
 		<td>Android 4.1</td>
