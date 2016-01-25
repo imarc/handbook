@@ -299,11 +299,6 @@ The following **philosophy** is paraphrased from our standard proposal language.
 		<td class="supported" colspan="2">yes</td>
 	</tr>
 	<tr>
-		<td>Internet Explorer 10.0</td>
-		<td></td>
-		<td class="supported">yes</td>
-	</tr>
-	<tr>
 		<td>Internet Explorer 11.0</td>
 		<td></td>
 		<td class="supported">yes</td>
@@ -320,11 +315,16 @@ The following **philosophy** is paraphrased from our standard proposal language.
 	</tr>
 </table>
 
-As of October 2015, the definitive list includes Chrome and Firefox (Mac & Windows), IE 10+, Edge, Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+As of January 2016, the definitive list includes Chrome and Firefox (Mac & Windows), IE 11, Edge,
+Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
-By default we do not test on IE 6-9. However individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+By default we do not test on IE 6-10. However individual projects may require browser support
+beyond our defaults. In these cases the additional support will be specified in the proposal and
+strategy documents.
 
-One case where this is of particular concern is when a large group of potential site users will be using Windows XP. These users are unable to upgrade beyond IE 8, so we should be mindful of the issues they might face.
+One case where this is of particular concern is when a large group of potential site users will be
+using Windows XP. These users are unable to upgrade beyond IE 8, so we should be mindful of the
+issues they might face.
 
 ### Mobile Browser Support
 
