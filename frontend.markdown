@@ -318,13 +318,13 @@ The following **philosophy** is paraphrased from our standard proposal language.
 As of January 2016, the definitive list includes Chrome and Firefox (Mac & Windows), IE 11, Edge,
 Safari 8+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
 
-By default we do not test on IE 6-10. However individual projects may require browser support
+By default we do not test on IE 6–10. However individual projects may require browser support
 beyond our defaults. In these cases the additional support will be specified in the proposal and
 strategy documents.
 
 One case where this is of particular concern is when a large group of potential site users will be
-using Windows XP. These users are unable to upgrade beyond IE 8, so we should be mindful of the
-issues they might face.
+using Windows XP or Vista. These users are unable to upgrade to current versions of IE, so we
+should be mindful of the issues they might face.
 
 ### Mobile Browser Support
 
@@ -335,14 +335,14 @@ issues they might face.
 		<th>Target Devices</th>
 	</tr>
 	<tr>
-		<td>iOS 7</td>
-		<td>Safari 7</td>
-		<td>iPhone 4 series, 5 series, iPad 2+</td>
-	</tr>
-	<tr>
 		<td>iOS 8</td>
 		<td>Safari 8</td>
-		<td>iPhone 4S, 5 series, 6 series, iPad 3+</td>
+		<td>4"+ screens, iPad</td>
+	</tr>
+	<tr>
+		<td>iOS 9</td>
+		<td>Safari 9</td>
+		<td>4"+ screens, iPad</td>
 	</tr>
 	<tr>
 		<td>Android 4.1</td>
@@ -367,6 +367,7 @@ Some older versions of Internet Explorer need dedicated CSS rules in order to ac
 	<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
 	<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
 
+Note that conditional comments are deprecated in IE10+.
 
 ## Accessibility 
 
