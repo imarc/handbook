@@ -738,6 +738,7 @@ td.supported,
 table tr:nth-child(even) td.supported {
 	background: #229ab7;
 	color: white;
+	font-weight: bold;
 }
 
 tr:first-child th:first-child {
