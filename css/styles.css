@@ -736,7 +736,8 @@ table tr:nth-child(even) td {
 
 td.supported,
 table tr:nth-child(even) td.supported {
-	background: #d2f8b0;
+	background: #229ab7;
+	color: white;
 }
 
 tr:first-child th:first-child {
