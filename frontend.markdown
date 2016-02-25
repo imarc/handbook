@@ -16,15 +16,11 @@ starting point for new projects. Authored by Imarc, Boilerplate contains our sta
 
 ## Doctype
 
-Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype on new projects.
+Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype.
 
-It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly.
-
-If you choose to use advanced HTML5 elements with varying support, use [Modernizr](http://modernizr.com) to ensure backwards compatability with older browsers.
+It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly. If you choose to use advanced HTML5 elements, use [Modernizr](http://modernizr.com), a feature detection library to help ensure your project’s features are acessible to as many potential users as possible.
 
 Modernizr detects what the browser’s rendering engine supports, allowing you to react appropriately to differing support scenarios.
-
-HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
 
 
 	<!DOCTYPE html>
@@ -32,11 +28,12 @@ HTML5shiv has been incorporated into Modernizr, so do not use duplicate shivs.
 
 ### Validation
 
-All HTML and CSS should be valid. Markup should be well-formed and contain all 
-required attributes. Elements should occur within the proper context of the DOCTYPE.
+A concerted effort should be made to ensure your HTML and CSS validate. Markup should 
+be semantic and well-formed and contain all required attributes. Elements should occur 
+within the proper context of the DOCTYPE.
 
-* HTML should validate with the [W3C Markup Validation Service](http://validator.w3.org/).
-* Stylesheets should validate with the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator).
+* [W3C HTML Markup Validator](http://validator.w3.org/)
+* [W3C CSS Validator](http://jigsaw.w3.org/css-validator)
 
 ## Metadata content
 
@@ -59,19 +56,22 @@ of the entire website.
 
 ### Meta Description
 
-All pages should include a meta description – a concise, human-readable 
-description of that page’s contents. Do not duplicate meta descriptions 
-from other pages. Meta descriptions appear in search engine result pages 
-as seen in the graphic below, however Google will sometimes replace meta 
-descriptions with on-page content as they see fit.
+A quality meta description can help in higher clickthroughs. Ideally, all pages 
+include a unique meta description – a concise, human-readable description of that 
+page’s contents. Do not duplicate meta descriptions from other pages. Custom 
+meta descriptions can appear in search engine result pages as seen in the 
+graphic below, however Google will sometimes replace custom meta descriptions 
+with on-page content if they feel it’s of more value to the end user.
 
-[Tips for writing meta descriptions by Google](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624#1)
+If no, meta description exists, Google will create its own from on-page content.
+
+[Tips for writing meta descriptions by Google](https://support.google.com/webmasters/answer/35624?hl=en#1)
 
 ![Example of meta description in search results](/img/meta_description.jpg)
 
-Keep meta descriptions less than 160 characters.
+Keep meta descriptions less than 160 characters. Here is an example meta description for Imarc’s About page.
 
-	<meta name="description" content="Imarc creates web sites &amp; applications for discerning clients. Strategy, marketing, design and programming since 1997. Newburyport, MA — 978-462-8848" />
+	<meta name="description" content="Imarc is a digital design agency. Read about its employees and their core values." />
 
 ### Imarc Credits
 
@@ -111,26 +111,31 @@ Whenever you cut up a website, you should use image compression software to crun
 
 ### Favicons
 
-Use ICO files for favicons using this syntax:
+Use 32x32 PNG files for favicons:
 
-	<link rel="shortcut icon" href="http://example.com/myicon.ico" />
-
-If you’re using Photoshop, you should install an [ICO plugin](http://www.telegraphics.com.au/sw/product/ICOFormat#icoformat) which will allow you to save out ICO files. You can also use [Dynamic Drive's web converter](http://tools.dynamicdrive.com/favicon). Due to the proliferation of high pixel density displays, size favicons at 32x32 rather than the recent 16x16 standard.
+	<link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon" />
 
 ### Touch Icons
 
 iOS and Android devices both support touch icons.
 
 Using a precomposed touch icon removes iOS effects (reflective sheen, 
-drop shadow, rounded corners). Touch icons will not work on Android 
-devices without the precomposed attribute value.
+drop shadow, rounded corners) on legacy iOS versions. Touch icons will not 
+work on Android devices without the precomposed attribute value.
 
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
 
-Your touch icons should be a PNG at 512x512. It’s possible to specify 
+Your touch icons should be a PNG at 192x192. It’s possible to specify 
 different sizes for different devices, but using a single high 
 resolution touch icon is the easiest way to ensure the highest 
 quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
+
+### Safari pinned icon
+
+With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab. 
+Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
+
+    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
 
 ## Coding Style
 
