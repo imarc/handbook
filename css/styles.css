@@ -458,6 +458,8 @@ dt:after {
 
 dd {
 	margin: 0 0 1.8em 2em;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
 h2 + dl {

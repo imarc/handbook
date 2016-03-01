@@ -117,11 +117,7 @@ Use 32x32 PNG files for favicons:
 
 ### Touch Icons
 
-iOS and Android devices both support touch icons.
-
-Using a precomposed touch icon removes iOS effects (reflective sheen, 
-drop shadow, rounded corners) on legacy iOS versions. Touch icons will not 
-work on Android devices without the precomposed attribute value.
+iOS and Android devices both support touch icons:
 
 	<link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
 
@@ -629,8 +625,7 @@ The exceptions to this rule are: anchors, form label IDs, the ID that is
 [placed on the `body` tag](frontend#SpecificTargeting), and instances when IDs are 
 more appropriate hooks for JavaScript purposes.
 
-Classes should be lowercase, using hyphens between words. Ideally, your class should 
-always be one word.
+Classes should be lowercase, using hyphens to separate words. Ideally, classes are only one word.
 
 Classes have the benefit of being highly reusable. By utilizing classes, we 
 can write leaner, more modular CSS.
@@ -640,12 +635,12 @@ can write leaner, more modular CSS.
 Choose names that accurately describe the content, not the visual container. 
 Avoid choosing presentational names e.g.(`orange-arrow`, `left-column`)
 
-For example, `meta` is an acceptable class name while `sidebar_info` is not. The 
+For example, `meta` is an acceptable class name while `sidebar-info` is not. The 
 described content will always be `meta`; it might not always be in the 
 context of a sidebar.
 
-* Meaningful class names might be: `main`, `aside`, `record_detail`.
-* Bad CSS classes would be: `left_column`, `blue_callout`, `hidden`. 
+* Meaningful class names might be: `main`, `aside`, `record-detail`.
+* Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`. 
 
 
 
