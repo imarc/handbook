@@ -47,8 +47,7 @@ to indicate distinct content levels.
 	<title>Support - Contact | Imarc Web Design: Boston + Silicon Valley</title>
 
 This shows that I’m on the page called *Support*. That page lives in a section called *Contact* 
-which resides in a website for *Imarc* which we can tell is a company that does Web Design in
-the Boston and Silicon Valley regions. Titles are adjusted to meet SEO needs.
+which resides in a website for *Imarc* . Titles are adjusted to meet SEO needs.
 
 The homepage should include the site or company name, followed by a simple description 
 of the entire website.
