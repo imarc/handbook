@@ -1,6 +1,3 @@
-@import url(//fonts.googleapis.com/css?family=Fjord+One);
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
-
 /* = Table of Contents =
 
  * Base
@@ -35,14 +32,13 @@ audio, canvas, video {
 }
 
 * {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 html {
 	color: #414141;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "canada-type-gibson", "Gibson", Arial, sans-serif;
+	font-weight: 300;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -126,8 +122,7 @@ header.primary .branding {
 
 header.primary .branding a {
 	display: block;
-	margin-top: 3px;
-	-webkit-transition: opacity 200ms linear;  
+	margin-top: 3px;  
 	transition: opacity 200ms linear;  
 }
 
@@ -142,7 +137,6 @@ nav.primary ul {
 
 nav.primary li {
 	display: inline-block;
-	font-family: 'Fjord One', Georgia, serif;
 	font-size: 1.1em;
 	margin-bottom: 0;
 	margin-left: .35em;
@@ -249,7 +243,7 @@ aside.primary nav > ul li a:hover {
 	
 aside.primary nav > ul > li > a {
 	font-size: 1.1em;
-	font-weight: bold;
+	font-weight: 400;
 }
 
 aside.primary nav ul ul {
@@ -298,8 +292,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Fjord One', Georgia, serif;
-	font-weight: normal;
+	font-weight: 600;
 }
 h1:first-child,
 h2:first-child,
@@ -319,11 +312,13 @@ h2 {
 }
 
 h3 {
-	font-size: 1.8em;
+	font-size: 1.7em;
+	font-weight: 400;
 }
 
 h4 {
-	font-size: 1.5em;
+	font-size: 1.4em;
+	font-weight: 400;
 }
 
 h5 {
@@ -336,7 +331,6 @@ h6 {
 
 .intro {
 	color: #181818;
-	font-family: 'Fjord One', Georgia, serif;
 	font-size: 1.6em;
 	line-height: 1.4;
 }
@@ -347,7 +341,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 400;
 }
 
 i,
@@ -398,7 +392,6 @@ hr {
 a {
 	color: #0394CD;
 	text-decoration: none;
-	-webkit-transition: color 200ms;
 	transition: color 200ms;
 }
 a:hover, 
@@ -409,15 +402,11 @@ a:focus {
 
 .button {
 	background: #0394CD;
-	background: -moz-linear-gradient(top, #0394cd 0%, #0174b5 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0394cd), color-stop(100%,#0174b5));
-	background: -ms-linear-gradient(top, #0394cd 0%,#0174b5 100%);
 	background: linear-gradient(to bottom, #0394cd 0%,#0174b5 100%);
 	border: none;
 	border-radius: 3px;
 	color: #FFF;
 	display: inline-block;
-	font-family: 'Fjord One', Georgia, serif;
 	font-size: 18px;
 	padding: 0.2em 0.8em;
 	text-align: center;
@@ -439,7 +428,7 @@ dt {
     color: #FFF;
     display: inline-block;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 400;
     line-height: 1.5;
     margin-bottom: 0.2em;
     padding: 0.3em 0.8em;
@@ -558,8 +547,9 @@ body.homepage .branding h1 {
 	padding: 14px;
 	width: 90%;
 }
-body.homepage .intro {
+body.homepage h2.intro {
 	color: #CCC;
+	font-weight: 400;
 	line-height: 1.4;
 }
 body.homepage nav.primary {
@@ -581,7 +571,6 @@ body.homepage nav.primary li:first-child {
 	margin-left: 0;
 }
 body.homepage nav.primary li a {
-	-moz-perspective: 1000;
 	-ms-perspective: 1000;
 	-webkit-perspective: 1000;
 	perspective: 1000;
@@ -594,30 +583,20 @@ body.homepage nav.primary li a,
 }
 body.homepage nav.primary li a:hover .flipper,
 body.homepage nav.primary li a:focus .flipper {
-	-moz-transform: rotateY(180deg);
-	-ms-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
 .flipper {
-	-moz-transition: 400ms;
-	-ms-transition: 400ms;
-	-webkit-transition: 400ms;
 	transition: 400ms;
-	-moz-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	position: relative;
 }
 .front, 
 .back {
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	box-shadow: 0 0 6px 2px rgba(0,0,0,0.8);
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -633,15 +612,13 @@ body.homepage nav.primary li a:focus .flipper {
 	color: #5E5E5E;
 	padding: 20px;
 	z-index: 4;
-	-moz-transform: rotateY(180deg);
-	-ms-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
 .front h3, 
 .back h3 {
-	font-family: 'Fjord One', Georgia, serif;
 	font-size: 22px;
+	font-weight: 400;
 	margin-bottom: 18px;
 }
 .back h3 {
@@ -723,7 +700,7 @@ table th {
 	vertical-align: top;
 }
 table th {
-	font-weight: bold;
+	font-weight: 400;
 	background: #555555;
 	border: 1px solid #555555;
 	color: #fff;
@@ -740,7 +717,7 @@ td.supported,
 table tr:nth-child(even) td.supported {
 	background: #229ab7;
 	color: white;
-	font-weight: bold;
+	font-weight: 400;
 }
 
 tr:first-child th:first-child {
@@ -769,8 +746,6 @@ tr:first-child th:first-child {
 		width: 100%;
 	}
 	body.homepage nav.primary li a:hover .flipper {
-		-moz-transform: none;
-		-ms-transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}

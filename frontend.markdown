@@ -103,11 +103,59 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
         <a href="#"> Learn More »</a>
     </p>	
 
-## Graphics
+## Media
+
+### Video
+
+When clients host videos on major video providers like YouTube and Vimeo, utilize those providers’ embed codes to display
+the videos on our sites. Wrap these embed codes in an `.embed` div with the associated CSS rules to allow for a responsive
+implementation:
+
+    .embed {
+        clear: both;
+        height: 0;
+        margin-bottom: 2em;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+
+    .embed iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+#### Background Video
+
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s “hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses <a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for implementing a responsive backround video. Note that we use padding on the `video`’s `::before` pseudo element to achieve our desired aspect ratio.
+
+    <div class="hero">
+    <video autoplay="autoplay" loop="loop" poster="video-placeholder.jpg">
+        <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        <source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
+    </video>
+    </div>
+
+    .hero video {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .hero::before {
+        content: "";
+        display: block;
+        padding-top: 33.333%;
+    }
 
 ### Image Compression
 
 Whenever you cut up a website, you should use image compression software to crunch the images. Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) comes highly recommended among the Imarc team.
+Always compress your images manually or via an automated task if you’re using a task runner.
 
 ### Favicons
 

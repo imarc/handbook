@@ -4,18 +4,18 @@
 	{% endif %}
 {% endfor %}
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
 	<head>
 		<meta charset="UTF-8" />
 		
 		<base href="http://handbook.imarc.net" />
 		
-		<title>{{ page.title }} – Handbook – iMarc's Standards &amp; Best Practices</title>
+		<title>{{ page.title }} – Handbook | iMarc’s Coding Standards &amp; Best Practices</title>
 		<meta name="description" content="iMarc, LLC" />
-		<meta name="author" content="Design, programming, by iMarc. More info at http://imarc.net" />
+		<meta name="web_author" content="Design, programming, by iMarc. More info at http://imarc.com" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="shortcut icon" href="/img/favicon.ico" />
 		<link rel="apple-touch-icon" href="/img/touch-icon.png">
@@ -25,6 +25,9 @@
 		<!--[if IE]>
 			<script src="js/html5shiv.js"></script>
 		<![endif]-->
+
+		<script src="https://use.typekit.net/uzj8mcd.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	</head>
 	<body class="{{ bodyclass }}">
 		<div class="header_container" id="top">
