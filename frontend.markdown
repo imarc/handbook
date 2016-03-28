@@ -41,18 +41,18 @@ within the proper context of the DOCTYPE.
 
 Title tags should contain descriptive information that concisely describes the current
 page. In the case of nested pages, information in the title tag should be ordered from
-most specific to least specific. A standard delimiter such as `–` should be employed 
+most specific to least specific. A standard delimiter such as `–` or `|` should be employed 
 to indicate distinct content levels.
 
-	<title>Writing Content For Your Website – Support – Imarc</title>
+	<title>Support - Contact | Imarc Web Design: Boston + Silicon Valley</title>
 
-This shows that I’m on the page called *Writing Content For Your Website*. That 
-page lives in a section called *Support* which resides in a website for *Imarc*.
+This shows that I’m on the page called *Support*. That page lives in a section called *Contact* 
+which resides in a website for *Imarc* . Titles are adjusted to meet SEO needs.
 
 The homepage should include the site or company name, followed by a simple description 
 of the entire website.
 
-	<title>Imarc – Web Design, Online Applications, Boston, MA</title>
+	<title>Imarc | Web Design and Digital Agency in Boston + Silicon Valley</title>
 
 ### Meta Description
 
@@ -63,21 +63,21 @@ meta descriptions can appear in search engine result pages as seen in the
 graphic below, however Google will sometimes replace custom meta descriptions 
 with on-page content if they feel it’s of more value to the end user.
 
-If no, meta description exists, Google will create its own from on-page content.
+If no meta description exists, Google will create its own from on-page content.
 
 [Tips for writing meta descriptions by Google](https://support.google.com/webmasters/answer/35624?hl=en#1)
 
 ![Example of meta description in search results](/img/meta_description.jpg)
 
-Keep meta descriptions less than 160 characters. Here is an example meta description for Imarc’s About page.
+Keep meta descriptions less than 160 characters. Here is an example meta description for Imarc’s Blog page.
 
-	<meta name="description" content="Imarc is a digital design agency. Read about its employees and their core values." />
+	<meta name="description" content="Our blog features the latest in web design, development, user experience and marketing." />
 
 ### Imarc Credits
 
 Include the following meta tag in the head to credit Imarc.
 
-	<meta name="author" content="Created by Imarc: web + creative + strategy + mobile. More info at www.imarc.net" />
+	<meta name="web_author" content="Imarc, A Digital Agency | Boston + Silicon Valley | more info at imarc.com" />
 
 ### Character Encoding
 
