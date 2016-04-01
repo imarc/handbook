@@ -556,6 +556,26 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 See **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
 for detailed layout naming conventions.
 
+
+## Structured Data Markup
+
+To provide the best content possible for users, search engines and social media platforms try to infer information from the mark up on a website. Most of the time the crawlers do a really good job however the crawlers aren't 100% accurate. By defining data explicitly, it removes this variance.
+
+### Search Engines
+
+If you want content to appear as rich snippets in major search engines like Google, Yahoo, or Bing it is recommended that you use [Schema.org](http://schema.org)'s structured data markup. Some content that can benefit from rich snippets would be blog posts, products, menus, or events. 
+ 
+ [For a complete list of data types.](http://schema.org/docs/full.html)
+
+### Social Media
+
+Liking and sharing web pages via social media like Facebook can yield unexpected results related to its appearance in the timeline. For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
+
+	<link rel="image_src" href="/img/site/logo_acme.png" />		
+
+If you know that content will be shared heavily on social media it is recommended along with schema.org to use [Open Graph Protocol](http://ogp.me/).
+
+
 ### Structure
 
 Most page layouts can generally be thought of in three primary parts. These structural names should be used as classes in the markup.
@@ -1165,23 +1185,4 @@ also provides resources for optimization.
 After resetting CSS and applying style, it’s easy to overlook a seldom-used 
 tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html) 
 from the Framework repository and drop it onto your page. Make sure all tags render appropriately on your project.
-
-### Enhanced Facebook Meta
-
-Liking and sharing web pages via Facebook can yield unexpected results related
-to its appearance in newsfeeds. Facebook pulls what it deems relevant to a
-shared item – title, description, photo, etc. For a supplementary thumbnail, 
-Facebook pulls the first `img` it can find in the site. If this is 
-unsatisfactory, you can control the thumbnail image to be shared by using the 
-following line in the web site's `head`:
-
-	<link rel="image_src" href="/img/site/logo_acme.png" />		
-
-#### Facebook Open Graph
-
-More detailed information about a web site can be shared with Facebook using
-their [Open Graph protocol](https://developers.facebook.com/docs/opengraph/). 
-Used in parallel with the 
-[Like button](https://developers.facebook.com/docs/reference/plugins/like), it
-enables a connection between Facebook users and a web page.
 
