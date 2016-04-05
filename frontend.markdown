@@ -559,21 +559,103 @@ for detailed layout naming conventions.
 
 ## Structured Data Markup
 
-To provide the best content possible for users, search engines and social media platforms try to infer information from the mark up on a website. Most of the time the crawlers do a really good job however the crawlers aren't 100% accurate. By defining data explicitly, it removes this variance.
+To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org) and [Open Graph Protocol](http://ogp.me/).
 
-### Search Engines
+### Schema.org
 
-If you want content to appear as rich snippets in major search engines like Google, Yahoo, or Bing it is recommended that you use [Schema.org](http://schema.org)'s structured data markup. Some content that can benefit from rich snippets would be blog posts, products, menus, or events. 
+Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
+
+#### Schema.org Product Markup Example
+
+	<div itemscope itemtype="http://schema.org/Product">
+	
+		<img itemprop="image" src="dell-30in-lcd.jpg" alt="A Dell UltraSharp monitor"/>
+		
+		<span itemprop="name">Dell UltraSharp 30" LCD Monitor</span>
+		
+		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+			<span itemprop="ratingValue">87</span> out of 
+			<span itemprop="bestRating">100</span> based on 
+			<span itemprop="ratingCount">24</span> user ratings
+		</div>
+		
+		<div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+			<span itemprop="lowPrice">$1250</span> to 
+			<span itemprop="highPrice">$1495</span> from 
+			<span itemprop="offerCount">8</span> sellers Sellers:
+			
+			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<a itemprop="url" href="save-a-lot-monitors.com/dell-30.html"> Save A Lot Monitors - $1250</a>
+			</div>
+		
+			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<a itemprop="url" href="jondoe-gadgets.com/dell-30.html"> Jon Doe's Gadgets - $1350</a>
+			</div>
+		</div>
+		
+	</div>
+
+**[For a complete list of types and example markup.](http://schema.org/docs/full.html)**
+
+#### Rich Snippets
+If you want content to appear as rich snippets on major search engines it is recommended that you use structured data markup on these types of content.
+
+![Rich Snippet](img/rs-frozen.png)
+
+**Google Rich Snippet Support**
+
+- Product
+- Recipe
+- Review
+- Event
+- SoftwareApplication
+- Video
+- News article
+
+**Bing Rich Snippet Support**
+
+- Breadcrumbs
+- Businesses and organizations
+- Events
+- People
+- Products and offers
+- Recipes
+- Reviews
+- Reviews (aggregated)
+
+#### Schema.org Test Tool
+- [General Purpose](https://developers.google.com/structured-data/testing-tool/)
  
- [For a complete list of data types.](http://schema.org/docs/full.html)
+### Open Graph
 
-### Social Media
+The Open Graph Protocol enables any web page to become a rich object in a social graph. Content that will be shared heavily on social media is recommended to use Schema.org and Open Graph Protocol.
 
-Liking and sharing web pages via social media like Facebook can yield unexpected results related to its appearance in the timeline. For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
+Sharing content via social media can yield unexpected results related to its appearance on a time line. For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
 
 	<link rel="image_src" href="/img/site/logo_acme.png" />		
 
-If you know that content will be shared heavily on social media it is recommended along with schema.org to use [Open Graph Protocol](http://ogp.me/).
+#### Open Graph Example
+	<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
+	<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
+	<meta property="og:site_name" content="Imarc Digital Agency">
+	<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
+
+**Facebook Specific**
+	<meta property="fb:admins" content="100004926167588">
+	<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
+	
+
+**Twitter Specific**
+	<meta name="twitter:site" content="@ImarcAgency">
+	<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
+	
+ 
+#### Open Graph Test Tool
+- [General Purpose](http://iframely.com/debug)
+- [Facebook](https://developers.facebook.com/tools/debug)
+- [Twitter](https://dev.twitter.com/docs/cards/validation/validator)
 
 
 ### Structure
