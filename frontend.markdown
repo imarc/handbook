@@ -635,23 +635,22 @@ Sharing content via social media can yield unexpected results related to its app
 	<link rel="image_src" href="/img/site/logo_acme.png" />		
 
 #### Open Graph Example
+	<!-- Facebook -->
+	<meta property="fb:admins" content="100004926167588">
+	<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
+	<!-- Twitter -->
+		<meta name="twitter:site" content="@ImarcAgency">
+    	<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
+    	<meta name="twitter:card" content="summary">
+    	<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
+    	
 	<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
 	<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
 	<meta property="og:site_name" content="Imarc Digital Agency">
 	<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
 
-**Facebook Specific**
-	<meta property="fb:admins" content="100004926167588">
-	<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
-	
+ **[For a complete list of types and example markup.](https://developers.facebook.com/docs/reference/opengraph)**
 
-**Twitter Specific**
-	<meta name="twitter:site" content="@ImarcAgency">
-	<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
-	
- 
 #### Open Graph Test Tool
 - [General Purpose](http://iframely.com/debug)
 - [Facebook](https://developers.facebook.com/tools/debug)
