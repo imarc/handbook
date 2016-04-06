@@ -601,7 +601,7 @@ Schema.org is a collaborative, community activity with a mission to create, main
 
 If you want content to appear as rich snippets on major search engines it is recommended that you use structured data markup on these types of content.
 
-![Rich Snippet](img/rs-frozen.png)
+![Rich Snippet](/img/rs_frozen.png)
 
 **Google Rich Snippet Support**
 
