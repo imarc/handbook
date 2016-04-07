@@ -559,49 +559,44 @@ for detailed layout naming conventions.
 
 ## Structured Data Markup
 
-To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org) and [Open Graph Protocol](http://ogp.me/).
+To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org).
+
+ Content that will be shared heavily on social media is recommended to use Schema.org and [Open Graph Protocol](http://ogp.me/). The Open Graph Protocol enables any web page to become a rich object in a social graph.
 
 ### Schema.org
 
 Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
 
-#### Schema.org Product Markup Example
-
-	<div itemscope itemtype="http://schema.org/Product">
-	
-		<img itemprop="image" src="dell-30in-lcd.jpg" alt="A Dell UltraSharp monitor"/>
-		
-		<span itemprop="name">Dell UltraSharp 30" LCD Monitor</span>
-		
-		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-			<span itemprop="ratingValue">87</span> out of 
-			<span itemprop="bestRating">100</span> based on 
-			<span itemprop="ratingCount">24</span> user ratings
-		</div>
-		
-		<div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-			<span itemprop="lowPrice">$1250</span> to 
-			<span itemprop="highPrice">$1495</span> from 
-			<span itemprop="offerCount">8</span> sellers Sellers:
-			
-			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<a itemprop="url" href="save-a-lot-monitors.com/dell-30.html"> Save A Lot Monitors - $1250</a>
-			</div>
-		
-			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<a itemprop="url" href="jondoe-gadgets.com/dell-30.html"> Jon Doe's Gadgets - $1350</a>
-			</div>
-		</div>
-		
-	</div>
-
 **[For a complete list of types and example markup.](http://schema.org/docs/full.html)**
 
-#### Rich Snippets
+#### Schema.org Example
 
-If you want content to appear as rich snippets on major search engines it is recommended that you use structured data markup on these types of content.
+**Movie Type Markup Example**
 
-![Rich Snippet](img/rs-frozen.png)
+	<!-- Simplified version found on IMDb -->
+	<div itemscope itemtype="http://schema.org/Movie">
+		<h1 class="" itemprop="name">Frozen 2013 - IMDb</h1>
+		<a href="http://pro.imdb.com/title/tt2294629/companycredits?rf=cons_tt_cocred_tt&ref_=cons_tt_cocred_tt" itemprop='url'>
+		<div itemprop="description">
+			When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
+		</div>
+		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            <strong title="7.6 based on 405,502 user ratings"><span itemprop="ratingValue">7.6</span></strong><span class="grey">/</span><span class="grey" itemprop="bestRating">10</span>
+            <a href="/title/tt2294629/ratings?ref_=tt_ov_rt"><span itemprop="ratingCount">405,502</span></a>
+            <span itemprop="reviewCount">893 user</span> <span itemprop="reviewCount">405 critic</span>
+		</div>
+	</div>
+	
+
+An example of what kind of data that is being extracted by crawlers from content that has proper markup.
+
+![Extracted Data](img/structured-data-extracted.png)
+
+If you want content to appear as rich snippets on major search engines such as this.
+
+![Rich Snippet](img/structured-data-rich-snippet.png)
+
+It is recommended that you use structured data markup on these types of content.
 
 **Google Rich Snippet Support**
 
@@ -624,36 +619,53 @@ If you want content to appear as rich snippets on major search engines it is rec
 - Reviews
 - Reviews (aggregated)
 
-#### Schema.org Test Tool
-- [General Purpose](https://developers.google.com/structured-data/testing-tool/)
- 
 ### Open Graph
 
-The Open Graph Protocol enables any web page to become a rich object in a social graph. Content that will be shared heavily on social media is recommended to use Schema.org and Open Graph Protocol.
+Sharing content via social media can yield unexpected results related to its appearance on a time line. 
 
-Sharing content via social media can yield unexpected results related to its appearance on a time line. For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
+For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
 
 	<link rel="image_src" href="/img/site/logo_acme.png" />		
 
 #### Open Graph Example
+
+**Blog Post Markup Example**
+
 	<!-- Facebook Specific-->
-	<meta property="fb:admins" content="100004926167588">
-	<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
-	<!-- Twitter Specific -->
-    <meta name="twitter:site" content="@ImarcAgency">
-    <meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
-	<!-- General -->
-	<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
-	<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
-	<meta property="og:site_name" content="Imarc Digital Agency">
-	<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
+	<head>
+	...
+		<meta property="fb:admins" content="100004926167588">
+		<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
+		<!-- Twitter Specific -->
+		<meta name="twitter:site" content="@ImarcAgency">
+		<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
+		<!-- General -->
+		<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
+		<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
+		<meta property="og:site_name" content="Imarc Digital Agency">
+		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
+	</head>
 
- **[For a complete list of types and example markup.](https://developers.facebook.com/docs/reference/opengraph)**
+**Facebook Rich Object**
 
-#### Open Graph Test Tool
-- [General Purpose](http://iframely.com/debug)
+![Structured Data Facebook](/img/structured-data-facebook.png)
+
+**Twitter Rich Object**
+
+![Structured Data Twitter](/img/structured-data-twitter.png)
+
+**Linkedin Rich Object**
+
+![Structured Data Linkedin](/img/structured-data-linkedin.png)
+
+**[For a complete list of types and example markup.](https://developers.facebook.com/docs/reference/opengraph)**
+
+#### Structured Data Markup Testing Tools
+- [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)
+- [Schema.org Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/)
+- [Open Graph Protocol Testing Tool](http://iframely.com/debug)
 - [Facebook](https://developers.facebook.com/tools/debug)
 - [Twitter](https://dev.twitter.com/docs/cards/validation/validator)
 
@@ -666,7 +678,7 @@ Most page layouts can generally be thought of in three primary parts. These stru
 * **`footer.primary`** – Links and global content that typically follows the torso.
 
 
-![Structural naming conventions](img/naming_structure.png)
+![Structural naming conventions](/img/naming_structure.png)
 
 
 ### Navigation 
@@ -680,7 +692,7 @@ Navigation should be named as the following:
 
 Use unordered list markup within navigation instead of anchors. Lists allows us to represent hierarchy.
 
-![Navigation naming conventions](img/naming_navigation.png)
+![Navigation naming conventions](/img/naming_navigation.png)
 
 
 Within navigation elements, there may be a different style to denote the current 
@@ -689,7 +701,7 @@ page or section.
 * **`.active`** – The currently viewed item in any navigation.
 
 
-![Active states in navigation](img/naming_navigation2.png)
+![Active states in navigation](/img/naming_navigation2.png)
 
 
 ### Content
@@ -699,7 +711,7 @@ page or section.
 * **`.intro`** – Introductory content styled for visual emphasis
 
 
-![Content naming conventions](img/naming_content.png)
+![Content naming conventions](/img/naming_content.png)
 
 ### CSS Principals
 
@@ -711,9 +723,9 @@ to different sections and pages. **If you find yourself copying entire blocks of
 Here we have two callouts used on two different pages: a landing page and a 
 members page.
 
-![Landing page call to action](img/cta-landing.png)
+![Landing page call to action](/img/cta-landing.png)
 
-![Members page call to action](img/cta-members.png)
+![Members page call to action](/img/cta-members.png)
 
 Knowing we will utilize callouts on multiple pages, it’s
 important to find properties they share and start with some base styles. These 
