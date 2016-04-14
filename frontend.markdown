@@ -556,6 +556,133 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 See **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
 for detailed layout naming conventions.
 
+
+## Structured Data Markup
+
+To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org).
+
+ Content that will be shared heavily on social media is recommended to use Schema.org and [Open Graph Protocol](http://ogp.me/). The Open Graph Protocol enables any web page to become a rich object in a social graph.
+
+### Schema.org
+
+Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
+
+#### Schema.org Example
+
+**Movie Type Markup Example**
+
+	<!-- Simplified version found on IMDb -->
+	<div itemscope itemtype="http://schema.org/Movie">
+		<h1 class="" itemprop="name">Frozen 2013 - IMDb</h1>
+		<a href="http://pro.imdb.com/title/tt2294629/companycredits?rf=cons_tt_cocred_tt&ref_=cons_tt_cocred_tt" itemprop='url'>
+		<div itemprop="description">
+			When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
+		</div>
+		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            <strong title="7.6 based on 405,502 user ratings"><span itemprop="ratingValue">7.6</span></strong><span class="grey">/</span><span class="grey" itemprop="bestRating">10</span>
+            <a href="/title/tt2294629/ratings?ref_=tt_ov_rt"><span itemprop="ratingCount">405,502</span></a>
+            <span itemprop="reviewCount">893 user</span> <span itemprop="reviewCount">405 critic</span>
+		</div>
+	</div>
+	
+
+An example of what kind of data that is being extracted by crawlers from content that has proper markup.
+
+![Extracted Data](img/structured-data-extracted.png)
+
+If you want content to appear as rich snippets on major search engines such as this.
+
+![Rich Snippet](img/structured-data-rich-snippet.png)
+
+It is recommended that you use structured data markup on these types of content.
+
+<div class="columns">
+    <div>
+        <p>Google Rich Snippet Support</p>
+        <ul>
+            <li>Product</li>
+            <li>Recipe</li>
+            <li>Review</li>
+            <li>Event</li>
+            <li>Software Applications</li>
+            <li>Video</li>
+            <li>News Articles</li>
+        </ul>
+    </div>
+    <hr/>
+    <div>
+        <p>Bing Rich Snippet Support</p>
+        <ul>
+            <li>Breadcrumbs</li>
+            <li>Businesses and Organizations</li>
+            <li>Events</li>
+            <li>People</li>
+            <li>Products and Offers</li>
+            <li>Recipes</li>
+            <li>Reviews</li>
+            <li>Reviews (aggregated)</li>
+        </ul>
+    </div>
+</div>
+
+**[View a complete list of Schema.org content types and example markup.](http://schema.org/docs/full.html)**
+
+### Open Graph
+
+Sharing content via social media can yield unexpected results related to its appearance on a time line. 
+
+For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
+
+	<link rel="image_src" href="/img/site/logo_acme.png" />		
+
+#### Open Graph Example
+
+**Blog Post Markup Example**
+
+	<head>
+	...
+	    <!-- Facebook Specific-->
+		<meta property="fb:admins" content="100004926167588">
+		<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
+		<!-- Twitter Specific -->
+		<meta name="twitter:site" content="@ImarcAgency">
+		<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
+		<!-- General -->
+		<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
+		<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
+		<meta property="og:site_name" content="Imarc Digital Agency">
+		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
+	</head>
+	
+**Facebook Rich Object**
+
+![Screenshot displaying how structured blog data is displayed on Facebook](/img/structured-data-facebook.png)
+
+<hr>
+
+**Twitter Rich Object**
+
+![Screenshot displaying how structured blog data is displayed on Twitter](/img/structured-data-twitter.png)
+
+<hr>
+
+**Linkedin Rich Object**
+
+![Screenshot displaying how structured blog data is displayed on LinkedIn](/img/structured-data-linkedin.png)
+
+<hr>
+
+**[View more Open Graph example and data types](http://ogp.me/#metadata)**
+
+#### Structured Data Markup Testing Tools
+- [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)
+- [Schema.org Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/)
+- [Open Graph Protocol Testing Tool](http://iframely.com/debug)
+- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug)
+- [Twitter Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
+
 ### Structure
 
 Most page layouts can generally be thought of in three primary parts. These structural names should be used as classes in the markup.
@@ -565,7 +692,7 @@ Most page layouts can generally be thought of in three primary parts. These stru
 * **`footer.primary`** – Links and global content that typically follows the torso.
 
 
-![Structural naming conventions](img/naming_structure.png)
+![Structural naming conventions](/img/naming_structure.png)
 
 
 ### Navigation 
@@ -579,7 +706,7 @@ Navigation should be named as the following:
 
 Use unordered list markup within navigation instead of anchors. Lists allows us to represent hierarchy.
 
-![Navigation naming conventions](img/naming_navigation.png)
+![Navigation naming conventions](/img/naming_navigation.png)
 
 
 Within navigation elements, there may be a different style to denote the current 
@@ -588,7 +715,7 @@ page or section.
 * **`.active`** – The currently viewed item in any navigation.
 
 
-![Active states in navigation](img/naming_navigation2.png)
+![Active states in navigation](/img/naming_navigation2.png)
 
 
 ### Content
@@ -598,7 +725,7 @@ page or section.
 * **`.intro`** – Introductory content styled for visual emphasis
 
 
-![Content naming conventions](img/naming_content.png)
+![Content naming conventions](/img/naming_content.png)
 
 ### CSS Principals
 
@@ -610,9 +737,9 @@ to different sections and pages. **If you find yourself copying entire blocks of
 Here we have two callouts used on two different pages: a landing page and a 
 members page.
 
-![Landing page call to action](img/cta-landing.png)
+![Landing page call to action](/img/cta-landing.png)
 
-![Members page call to action](img/cta-members.png)
+![Members page call to action](/img/cta-members.png)
 
 Knowing we will utilize callouts on multiple pages, it’s
 important to find properties they share and start with some base styles. These 
@@ -1165,23 +1292,4 @@ also provides resources for optimization.
 After resetting CSS and applying style, it’s easy to overlook a seldom-used 
 tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html) 
 from the Framework repository and drop it onto your page. Make sure all tags render appropriately on your project.
-
-### Enhanced Facebook Meta
-
-Liking and sharing web pages via Facebook can yield unexpected results related
-to its appearance in newsfeeds. Facebook pulls what it deems relevant to a
-shared item – title, description, photo, etc. For a supplementary thumbnail, 
-Facebook pulls the first `img` it can find in the site. If this is 
-unsatisfactory, you can control the thumbnail image to be shared by using the 
-following line in the web site's `head`:
-
-	<link rel="image_src" href="/img/site/logo_acme.png" />		
-
-#### Facebook Open Graph
-
-More detailed information about a web site can be shared with Facebook using
-their [Open Graph protocol](https://developers.facebook.com/docs/opengraph/). 
-Used in parallel with the 
-[Like button](https://developers.facebook.com/docs/reference/plugins/like), it
-enables a connection between Facebook users and a web page.
 

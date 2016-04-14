@@ -152,6 +152,27 @@ nav ul:after {
     clear: both;
 }
 
+/* + Columns = */
+.columns > hr {
+    display: none;
+    border: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .columns {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .columns > * {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .columns > hr {
+        display: table-cell;
+        width: 1rem;
+    }
+}
 
 /* = Layout = */
 .container {
@@ -353,6 +374,7 @@ h4,
 h5,
 h6 {
     font-weight: 600;
+    margin-bottom: 0.2em;
 }
 h1:first-child,
 h2:first-child,
@@ -442,11 +464,11 @@ p {
 
 hr {
     border: 0;
-    border-top: 1px solid #888;
+    border-top: 1px solid #BBB;
     display: block;
     height: 0;
-    margin: 2em auto 3em;
-    width: 75%;
+    margin: 2em 0 3em;
+    width: 100%;
 }
 
 a {
