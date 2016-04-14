@@ -683,7 +683,7 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug)
 - [Twitter Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
 
-### Structure
+## Structure
 
 Most page layouts can generally be thought of in three primary parts. These structural names should be used as classes in the markup.
 
@@ -732,9 +732,7 @@ page or section.
 Engineers should strive to make lean, modular classes that can be easily adapted
 to different sections and pages. **If you find yourself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
 
-#### Example
-
-Here we have two callouts used on two different pages: a landing page and a 
+Consider two callouts used on two different pages: a landing page and a 
 members page.
 
 ![Landing page call to action](/img/cta-landing.png)
@@ -778,22 +776,7 @@ modular way, what if the client also wanted to use this `.dense` styled
 callout on special Guest pages? We would find ourself copying and pasting rules 
 in more than one place.
 
-
-### Specific Targeting
-
-When specific targeting per section or per page is needed, use class or ID 
-on the body tag. Use the ID for a single page. Use the class for styles that 
-are common within an entire section. 
-
-**ID use case**: Headlines must use a font-weight: 700; on the MacBook Pro page to 
-align with marketing materials.
-
-**Class use case**: Buttons need to be silver for all pages within the Products section
-
-	<body class="products" id="macbook_pro">
-
-
-### Use Only Class Selectors
+#### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
 The exceptions to this rule are: anchors, form label IDs, the ID that is 
@@ -817,6 +800,19 @@ context of a sidebar.
 * Meaningful class names might be: `main`, `aside`, `record-detail`.
 * Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`. 
 
+
+### Specific Targeting
+
+When specific targeting per section or per page is needed, use class or ID 
+on the body tag. Use the ID for a single page. Use the class for styles that 
+are common within an entire section. 
+
+**ID use case**: Headlines must use a font-weight: 700; on the MacBook Pro page to 
+align with marketing materials.
+
+**Class use case**: Buttons need to be silver for all pages within the Products section
+
+	<body class="products" id="macbook-pro">
 
 
 ## Forms
