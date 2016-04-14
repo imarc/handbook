@@ -567,8 +567,6 @@ To provide the best content possible for users, search engines and social media 
 
 Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
 
-**[For a complete list of types and example markup.](http://schema.org/docs/full.html)**
-
 #### Schema.org Example
 
 **Movie Type Markup Example**
@@ -598,26 +596,36 @@ If you want content to appear as rich snippets on major search engines such as t
 
 It is recommended that you use structured data markup on these types of content.
 
-**Google Rich Snippet Support**
+<div class="columns">
+    <div>
+        <p>Google Rich Snippet Support</p>
+        <ul>
+            <li>Product</li>
+            <li>Recipe</li>
+            <li>Review</li>
+            <li>Event</li>
+            <li>Software Applications</li>
+            <li>Video</li>
+            <li>News Articles</li>
+        <ul>
+    </div>
+    <hr/>
+    <div>
+        <p>Bing Rich Snippet Support</p>
+        <ul>
+            <li>Breadcrumbs</li>
+            <li>Businesses and Organizations</li>
+            <li>Events</li>
+            <li>People</li>
+            <li>Products and Offers</li>
+            <li>Recipes</li>
+            <li>Reviews</li>
+            <li>Reviews (aggregated)</li>
+        </ul>
+    </div>
+</div>
 
-- Product
-- Recipe
-- Review
-- Event
-- Software Applications
-- Video
-- News Articles
-
-**Bing Rich Snippet Support**
-
-- Breadcrumbs
-- Businesses and Organizations
-- Events
-- People
-- Products and Offers
-- Recipes
-- Reviews
-- Reviews (aggregated)
+**[View a complete list of Schema.org content types and example markup.](http://schema.org/docs/full.html)**
 
 ### Open Graph
 
@@ -631,9 +639,9 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 
 **Blog Post Markup Example**
 
-	<!-- Facebook Specific-->
 	<head>
 	...
+	    <!-- Facebook Specific-->
 		<meta property="fb:admins" content="100004926167588">
 		<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
 		<!-- Twitter Specific -->
@@ -647,6 +655,9 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 		<meta property="og:site_name" content="Imarc Digital Agency">
 		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
 	</head>
+	
+
+**[View more Open Graph example and data types](http://ogp.me/#metadata)**
 
 **Facebook Rich Object**
 
@@ -659,8 +670,6 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 **Linkedin Rich Object**
 
 ![Structured Data Linkedin](/img/structured-data-linkedin.png)
-
-**[For a complete list of types and example markup.](https://developers.facebook.com/docs/reference/opengraph)**
 
 #### Structured Data Markup Testing Tools
 - [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)

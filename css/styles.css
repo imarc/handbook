@@ -152,6 +152,27 @@ nav ul:after {
     clear: both;
 }
 
+/* + Columns = */
+.columns > hr {
+    display: none;
+    border-top: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .columns {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .columns > * {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .columns > hr {
+        display: table-cell;
+        width: 1rem;
+    }
+}
 
 /* = Layout = */
 .container {
