@@ -607,7 +607,7 @@ It is recommended that you use structured data markup on these types of content.
             <li>Software Applications</li>
             <li>Video</li>
             <li>News Articles</li>
-        <ul>
+        </ul>
     </div>
     <hr/>
     <div>
@@ -656,27 +656,32 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
 	</head>
 	
-
-**[View more Open Graph example and data types](http://ogp.me/#metadata)**
-
 **Facebook Rich Object**
 
-![Structured Data Facebook](/img/structured-data-facebook.png)
+![Screenshot displaying how structured blog data is displayed on Facebook](/img/structured-data-facebook.png)
+
+<hr>
 
 **Twitter Rich Object**
 
-![Structured Data Twitter](/img/structured-data-twitter.png)
+![Screenshot displaying how structured blog data is displayed on Twitter](/img/structured-data-twitter.png)
+
+<hr>
 
 **Linkedin Rich Object**
 
-![Structured Data Linkedin](/img/structured-data-linkedin.png)
+![Screenshot displaying how structured blog data is displayed on LinkedIn](/img/structured-data-linkedin.png)
+
+<hr>
+
+**[View more Open Graph example and data types](http://ogp.me/#metadata)**
 
 #### Structured Data Markup Testing Tools
 - [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)
 - [Schema.org Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/)
 - [Open Graph Protocol Testing Tool](http://iframely.com/debug)
-- [Facebook](https://developers.facebook.com/tools/debug)
-- [Twitter](https://dev.twitter.com/docs/cards/validation/validator)
+- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug)
+- [Twitter Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
 
 ### Structure
 
