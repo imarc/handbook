@@ -18,12 +18,11 @@ starting point for new projects. Authored by Imarc, Boilerplate contains our sta
 
 Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype.
 
-It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly. If you choose to use advanced HTML5 elements, use [Modernizr](http://modernizr.com), a feature detection library to help ensure your project’s features are acessible to as many potential users as possible.
+    <!DOCTYPE html>
+
+It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly in older browsers. If you choose to use advanced HTML5 elements such as `meter` and `picture`, use [Modernizr](http://modernizr.com), a feature detection library that assists with gracefully degrading your project for users with legacy browsers. In short, use **feature detection** and never use **browser detection**.
 
 Modernizr detects what the browser’s rendering engine supports, allowing you to react appropriately to differing support scenarios.
-
-
-	<!DOCTYPE html>
 
 
 ### Validation
@@ -103,83 +102,129 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
         <a href="#"> Learn More »</a>
     </p>	
 
-## Media
 
-### Video
+## Typography
 
-When clients host videos on major video providers like YouTube and Vimeo, utilize those providers’ embed codes to display
-the videos on our sites. Wrap these embed codes in an `.embed` div with the associated CSS rules to allow for a responsive
-implementation:
+The default type size and font for a site should be set on the `body` element.
 
-    .embed {
-        clear: both;
-        height: 0;
-        margin-bottom: 2em;
-        padding-bottom: 56.25%;
-        position: relative;
+    body {
+        font-family: Arial, Helvetica, serif;
+        font-size: 16px;
     }
 
-    .embed iframe {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1;
+Do not set sizes on unclassed markup that typically should be rendered as 
+the default text size. This includes `p`, `li`, `div`, `td`, `a`.
+
+Use pixel units to size type. Use the `em` unit to set the top and bottom 
+margins on type. Leading, or `line-height`, should be a unitless measure.
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.33;
+        margin: 0 0 .66em 0;
     }
 
-#### Background Video
+### Font Stacks
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s “hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses <a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for implementing a responsive backround video. Note that we use padding on the `video`’s `::before` pseudo element to achieve our desired aspect ratio.
+Specify font families using font stacks. This provides appropriate fall-back 
+fonts to handle when a specified font may not be available.
 
-    <div class="hero">
-    <video autoplay="autoplay" loop="loop" poster="video-placeholder.jpg">
-        <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-        <source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
-    </video>
-    </div>
+Default **serif** font stack:
 
-    .hero video {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1;
+    font-family: Constantia, Lucida, Georgia, serif;
+
+Default **sans-serif** font stack:
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
+`fantasy`, or `monospace`. This provides a fallback in case all other fonts 
+in the stack are unavailable.
+
+### Web Fonts
+
+Use the following syntax to use web fonts with the `@font-face` at-rule. Appropriate 
+file formats should be provided for supported browsers. When using a multi 
+weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while 
+using the same `font-family` name.
+
+    @font-face {
+       font-family: 'Verb';
+          src: url('/fonts/VerbRegular-webfont.eot');
+          src: url('/fonts/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
+               url('/fonts/VerbRegular-webfont.woff') format('woff'),
+               url('/fonts/VerbRegular-webfont.ttf') format('truetype'),
+               url('/fonts/VerbRegular-webfont.svg#VerbRegular') format('svg');
+       font-weight: 400;
+       font-style: normal;
     }
-    .hero::before {
-        content: "";
-        display: block;
-        padding-top: 33.333%;
+    @font-face {
+       font-family: 'Verb';
+          src: url('/fonts/VerbRegular-Italic-webfont.eot');
+          src: url('/fonts/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+               url('/fonts/VerbRegular-Italic-webfont.woff') format('woff'),
+               url('/fonts/VerbRegular-Italic-webfont.ttf') format('truetype'),
+               url('/fonts/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
+       font-weight: 400;
+       font-style: italic;
+    }
+    @font-face {
+       font-family: 'Verb';
+          src: url('/fonts/VerbBold-webfont.eot');
+          src: url('/fonts/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
+               url('/fonts/VerbBold-webfont.woff') format('woff'),
+               url('/fonts/VerbBold-webfont.ttf') format('truetype'),
+               url('/fonts/VerbBold-webfont.svg#VerbRegularItalic') format('svg');
+       font-weight: 700;
+       font-style: normal;
     }
 
-### Image Compression
+Note that different type variations all use the same `font-family` name. 
+Make sure to leverage both the `font-style` and `font-weight` on your elements.
 
-Whenever you cut up a website, you should use image compression software to crunch the images. Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) comes highly recommended among the Imarc team.
-Always compress your images manually or via an automated task if you’re using a task runner.
+    body {
+        font-family: "Verb";
+    }
+    h1 {
+        font-style: normal
+        font-weight: 700;
+    }
+    h2 {
+        font-style: italic;
+        font-weight: 400;
+    }
+    p {
+        font-style: normal;
+        font-weight: 400;
+    }
 
-### Favicons
+`<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
+both an italic and bold version exist.
 
-Use 32x32 PNG files for favicons:
+Other web font services Imarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**, 
+**[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
 
-	<link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon" />
+### Dashes
 
-### Touch Icons
+There are multiple types of dashes present in common use: hyphen, figure dash, 
+en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 
-iOS and Android devices both support touch icons:
+* (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
+* (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
 
-	<link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
+Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
+[The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
-Your touch icons should be a PNG at 192x192. It’s possible to specify 
-different sizes for different devices, but using a single high 
-resolution touch icon is the easiest way to ensure the highest 
-quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
+  The em dash is the nineteenth-century standard, still prescribed in many 
+  editorial style books, but the em dash is too long for use with the best 
+  text faces. Like the oversized space between sentences, it belongs to the 
+  padded and corseted aesthetic of Victorian typography.
 
-### Safari pinned icon
+### Print Styles
 
-With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab. 
-Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
+While not requested often, some websites necessitate a clean layout when pages
+are printed. Imarc begins from a sane starting point as documented in [Imarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.scss#L1130)
 
-    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
 
 ## Coding Style
 
@@ -224,7 +269,7 @@ With short lines of content, the tag and content can stay on the same line.
 
 Use floats to construct layouts instead of frames, iframes, or tables. This maintains the flow of the page, and allows acceptable control over source ordering.
 
-#####Containing floats#####
+##### Containing floats
 
 Make sure to properly contain floats with a clearfix. Imarc uses a `group` class.
 
@@ -297,392 +342,6 @@ Related style rules should be grouped together in ascending order of specificity
     }
 
 
-## Directory Structure
-
-Stylesheets, images, and other supporting files are stored in the root directory in their respective folders.
-
-Images can contain sub-directories if you feel it helps organization.
-
-JavaScript plugins/frameworks should live in a `lib` directory. 
-
-    /css
-        screen.css
-        print.css
-    /img
-        header.jpg
-        /icons
-            facebook.gif
-            twitter.gif
-    /js
-        site.js
-        /lib
-            /jquery-1.9.1.min.js
-
-
-## Browser Support 
-
-The following **philosophy** is paraphrased from our standard proposal language. 
-
-* We produce semantic, HTML5-compliant markup, CSS, and scripts.
-* We believe users should be able to consume as much visual and interactive richness as their browser can support. 
-* We test against a specific whitelist of mainstream desktop and mobile browsers. 
-* We ensure our sites function correctly and look as good as possible on these browsers. 
-* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
-* We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
-* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the poject.
-
-### Desktop Browser Support
-
-<table>
-	<tr>
-		<th>Browser/Version</th>
-		<th>Mac</th>
-		<th>Windows</th>
-	</tr>
-	<tr>
-		<td>Chrome (stable)</td>
-		<td class="supported" colspan="2">yes</td>
-	</tr>
-	<tr>
-		<td>Firefox (stable)</td>
-		<td class="supported" colspan="2">yes</td>
-	</tr>
-	<tr>
-		<td>Internet Explorer 11.0</td>
-		<td></td>
-		<td class="supported">yes</td>
-	</tr>
-	<tr>
-		<td>Microsoft Edge (stable)</td>
-		<td></td>
-		<td class="supported">yes</td>
-	</tr>
-	<tr>
-		<td>Safari 9.0</td>
-		<td class="supported">yes</td>
-		<td></td>
-	</tr>
-</table>
-
-As of January 2016, the definitive list includes Chrome and Firefox (Mac & Windows), IE 11, Edge,
-Safari 9+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
-
-By default we do not test on IE 6–10. However individual projects may require browser support
-beyond our defaults. In these cases the additional support will be specified in the proposal and
-strategy documents.
-
-One case where this is of particular concern is when a large group of potential site users will be
-using Windows XP or Vista. These users are unable to upgrade to current versions of IE, so we
-should be mindful of the issues they might face.
-
-### Mobile Browser Support
-
-<table>
-	<tr>
-		<th>Platform/OS</th>
-		<th>Browser</th>
-		<th>Target Devices</th>
-	</tr>
-	<tr>
-		<td>iOS 8</td>
-		<td>Safari 8</td>
-		<td>4"+ screens, iPads</td>
-	</tr>
-	<tr>
-		<td>iOS 9</td>
-		<td>Safari 9</td>
-		<td>4"+ screens, iPads</td>
-	</tr>
-	<tr>
-		<td>Android 4.1</td>
-		<td>Browser</td>
-		<td>4"+ handsets, 7–10" tablets</td>
-	</tr>
-	<tr>
-		<td>Android 4.2–5.1</td>
-		<td>Chrome</td>
-		<td>4"+ handsets, 7–10" tablets</td>
-	</tr>
-</table>
-
-By default we do not test on Blackberry or Windows Phone devices. However, individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
-
-Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
-
-### Internet Explorer styles
-
-Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design and functionality. You can target previous versions of Internet Explorer using conditional comments. Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS changes styles are minimal, place them in the project’s main CSS file.
-	
-	<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
-	<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
-
-Note that conditional comments are deprecated in IE10+.
-
-## Accessibility 
-
-Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
-
-### ARIA Landmark Roles
-
-ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse areas of a website by their respective landmark role, allowing users to skip over regions that are repeated on every page. Imarc takes advantage of five roles:
-<ul>
-	<li>
-		<code>banner</code>: A region that contains the prime heading or internal title of a page.
-	</li>
-	<li>
-		<code>navigation</code>: A collection of links suitable for use when navigating the document or related documents.
-	</li>
-	<li>
-		<code>main</code>: Main content in a document. In almost all cases a page will have only one main role.
-	</li>
-	<li>
-		<code>complementary</code>:	Any section of the document that supports the main content, yet is separate and meaningful on its own.
-	</li>
-	<li>
-		<code>contentinfo</code>: A region that contains information about the parent document such as copyrights and links to privacy statements
-	</li>
-</ul>
-
-Adding a role is simple and does not affect the display or behavior of a web page. Note that if there are multiple navigation structures, they should be labeled for completeness using the <code>aria-label</code> attribute.
-
-	<header class="primary" role="banner">
-
-	<nav aria-label="utility" class="utility" role="navigation">
-
-	<nav aria-label="primary" class="primary" role="navigation">
-
-	<nav aria-label="secondary" class="secondary" role="navigation">
-
-	<aside class="primary" role="complementary">
-
-	<div class="main" role="main">
-
-	<footer class="primary" role="contentinfo">
-
-
-### Baseline Checklist
-<ul>
-	<li>
-		Use open web standards such as HTML, CSS, JavaScript
-	</li>
-	<li>
-		HTML and CSS correctly validate using W3C validation tools  
-		<ul>
-			<li>
-				<a href="http://validator.w3.org">HTML validator</a>
-			</li>
-			<li>
-				<a href="http://jigsaw.w3.org/css-validator">CSS validator</a>
-			</li>
-		</ul>
-	</li>
-	<li>
-		Include skip navigation allowing users to skip repetitive navigation
-	</li>
-	<li>
-		focus styles should should exist on links and form elements
-	</li>
-	<li>
-		Ensure all anchors work and none are set to href=”#”
-	</li>
-	<li>
-		JavaScript adds a behavior and adheres to progressive advancement, graceful degradation practices. Users without JavaScript can view all website content.
-	</li>
-	<li>
-		<strong>Web forms</strong>
-		<ul>
-			<li>
-				Inputs always have associated labels
-			</li>
-			<li>
-				If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
-			</li>
-			<li>
-				Validation messages show all errors at once instead of progressively showing more errors
-			</li>
-			<li>
-				Validation messages use same field names as form and in the same order
-			</li>
-			<li>
-				Make sure all required fields are listed as required in error message
-			</li>
-			<li>
-				Make sure required fields visually indicate their requirements (e.g. asterisk)
-			</li>
-		</ul>
-	</li>
-	<li>
-		Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user seeing the image. Decorative or redundant images can utilize an empty alt value.
-	</li>
-	<li>
-		Site has a custom 404 page.
-	</li>
-	<li>
-		Timed responses are properly indicated to users.
-	</li>
-	<li>
-		All content is viewable without an active stylesheet.
-	</li>
-	<li>
-		<strong>Color</strong>
-		<ul>
-			<li>
-				Color combinations should not create visual difficulty for users with color deficiencies. Utilize <a href="http://www.checkmycolours.com">Check My Colours</a> or a similar service.
-			</li>
-			<li>
-				Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
-			</li>
-		</ul>
-	</li>
-	<li>
-		All form fields can be activated, operated and submitted using a keyboard.
-	</li>
-	<li>
-		Users can control galleries and modal windows using a keyboard.
-	</li>
-</ul>
-
-
-### Advanced Checklist
-
-* Audio files are accompanied by text transcriptions.
-* Videos are captioned.
-* CAPTCHAs are accessible to screen reader users and to Braille Display users.
-* Print stylesheets are used for maximum legibility.
-* Mobile media query is used to ensure website layout does not break on mobile devices.
-
-## Structure and Process
-
-See **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
-for detailed layout naming conventions.
-
-
-## Structured Data Markup
-
-To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org).
-
- Content that will be shared heavily on social media is recommended to use Schema.org and [Open Graph Protocol](http://ogp.me/). The Open Graph Protocol enables any web page to become a rich object in a social graph.
-
-### Schema.org
-
-Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
-
-#### Schema.org Example
-
-**Movie Type Markup Example**
-
-	<!-- Simplified version found on IMDb -->
-	<div itemscope itemtype="http://schema.org/Movie">
-		<h1 class="" itemprop="name">Frozen 2013 - IMDb</h1>
-		<a href="http://pro.imdb.com/title/tt2294629/companycredits?rf=cons_tt_cocred_tt&ref_=cons_tt_cocred_tt" itemprop='url'>
-		<div itemprop="description">
-			When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
-		</div>
-		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-            <strong title="7.6 based on 405,502 user ratings"><span itemprop="ratingValue">7.6</span></strong><span class="grey">/</span><span class="grey" itemprop="bestRating">10</span>
-            <a href="/title/tt2294629/ratings?ref_=tt_ov_rt"><span itemprop="ratingCount">405,502</span></a>
-            <span itemprop="reviewCount">893 user</span> <span itemprop="reviewCount">405 critic</span>
-		</div>
-	</div>
-	
-
-An example of what kind of data that is being extracted by crawlers from content that has proper markup.
-
-![Extracted Data](img/structured-data-extracted.png)
-
-If you want content to appear as rich snippets on major search engines such as this.
-
-![Rich Snippet](img/structured-data-rich-snippet.png)
-
-It is recommended that you use structured data markup on these types of content.
-
-<div class="columns">
-    <div>
-        <p>Google Rich Snippet Support</p>
-        <ul>
-            <li>Product</li>
-            <li>Recipe</li>
-            <li>Review</li>
-            <li>Event</li>
-            <li>Software Applications</li>
-            <li>Video</li>
-            <li>News Articles</li>
-        </ul>
-    </div>
-    <hr/>
-    <div>
-        <p>Bing Rich Snippet Support</p>
-        <ul>
-            <li>Breadcrumbs</li>
-            <li>Businesses and Organizations</li>
-            <li>Events</li>
-            <li>People</li>
-            <li>Products and Offers</li>
-            <li>Recipes</li>
-            <li>Reviews</li>
-            <li>Reviews (aggregated)</li>
-        </ul>
-    </div>
-</div>
-
-**[View a complete list of Schema.org content types and example markup.](http://schema.org/docs/full.html)**
-
-### Open Graph
-
-Sharing content via social media can yield unexpected results related to its appearance on a time line. 
-
-For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
-
-	<link rel="image_src" href="/img/site/logo_acme.png" />		
-
-#### Open Graph Example
-
-**Blog Post Markup Example**
-
-	<head>
-	...
-	    <!-- Facebook Specific-->
-		<meta property="fb:admins" content="100004926167588">
-		<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
-		<!-- Twitter Specific -->
-		<meta name="twitter:site" content="@ImarcAgency">
-		<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
-		<!-- General -->
-		<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
-		<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
-		<meta property="og:site_name" content="Imarc Digital Agency">
-		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
-	</head>
-	
-**Facebook Rich Object**
-
-![Screenshot displaying how structured blog data is displayed on Facebook](/img/structured-data-facebook.png)
-
-<hr>
-
-**Twitter Rich Object**
-
-![Screenshot displaying how structured blog data is displayed on Twitter](/img/structured-data-twitter.png)
-
-<hr>
-
-**Linkedin Rich Object**
-
-![Screenshot displaying how structured blog data is displayed on LinkedIn](/img/structured-data-linkedin.png)
-
-<hr>
-
-**[View more Open Graph example and data types](http://ogp.me/#metadata)**
-
-#### Structured Data Markup Testing Tools
-- [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)
-- [Schema.org Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/)
-- [Open Graph Protocol Testing Tool](http://iframely.com/debug)
-- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug)
-- [Twitter Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
-
 ## Structure
 
 Most page layouts can generally be thought of in three primary parts. These structural names should be used as classes in the markup.
@@ -701,7 +360,7 @@ Navigation should be named as the following:
 
 * **`nav.primary`** – Links to top-level pages representing the first level of directories
 * **`nav.secondary`** – Links to pages within a single section; direct children of a primary parent
-* **`nav.utility`** – Global utility links (e.g. Log In, Cart, Careers)
+* **`nav.utility`** – Global utility links (e.g. Log In, Shopping Cart, Settings)
 * **`nav.tertiary`** – (not pictured) Links to pages representing direct children of a secondary parent
 
 Use unordered list markup within navigation instead of anchors. Lists allows us to represent hierarchy.
@@ -727,6 +386,9 @@ page or section.
 
 ![Content naming conventions](/img/naming_content.png)
 
+For a more complete list of naming conventions, see **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
+for detailed layout naming conventions. 
+
 ### CSS Principals
 
 Engineers should strive to make lean, modular classes that can be easily adapted
@@ -743,32 +405,32 @@ Knowing we will utilize callouts on multiple pages, it’s
 important to find properties they share and start with some base styles. These 
 would probably live in our stylesheet’s **Layout** section
 
-	.callout {
-	    border-radius: 4px;
-	    font-weight: 300;
-	    margin-bottom: 3em;
-	    margin-top: 2em;
-	    padding: 1em;
-	}
-	.callout .button {
-	    background-color: pink;
-	    border-radius: 2px;
-	    padding: 0.4em;
-	    text-transform: uppercase;
-	}
+    .callout {
+        border-radius: 4px;
+        font-weight: 300;
+        margin-bottom: 3em;
+        margin-top: 2em;
+        padding: 1em;
+    }
+    .callout .button {
+        background-color: pink;
+        border-radius: 2px;
+        padding: 0.4em;
+        text-transform: uppercase;
+    }
 
 Based on the knowledge we have from our creative mockups, we feel confident with 
 these base styles. Any visual changes for callouts should be added on to these 
 base styles:
 
-	.callout.dense {
-	    font-weight: 600;
-	    margin-top: 0;
-	}
-	.callout.dense .button {
-	    background-color: pink;
-	    float: right;
-	}
+    .callout.dense {
+        font-weight: 600;
+        margin-top: 0;
+    }
+    .callout.dense .button {
+        background-color: pink;
+        float: right;
+    }
 
 You might wonder why we didn’t target our callouts via a `body#members .callout`
 selector. It would not necessarily be a bad way to proceed. But thinking in a 
@@ -812,7 +474,7 @@ align with marketing materials.
 
 **Class use case**: Buttons need to be silver for all pages within the Products section
 
-	<body class="products" id="macbook-pro">
+    <body class="products" id="macbook-pro">
 
 
 ## Forms
@@ -965,7 +627,6 @@ Form element markup
             <div class="button">
                 <button>Button Element</button>
             </div>
-            <a href="" class="button">&lt;a&gt; as a button</a>							
         </fieldset>
     </form>
 
@@ -1023,7 +684,7 @@ Use the table headers element `th` to indicate a header. Passing a `scope` attri
             <td>
                 2 hours of support
             </td>
-       	    <td>
+            <td>
                 5 hours of support
             </td>
         </tr>
@@ -1068,128 +729,442 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
     </table>
 
 
+## Media
 
-## Typography
+### Video
 
-The default type size and font for a site should be set on the `body` element.
+When clients host videos on major video providers like YouTube and Vimeo, utilize those providers’ embed codes to display
+the videos on our sites. Wrap these embed codes in an `.embed` div with the associated CSS rules to allow for a responsive
+implementation:
 
-	body {
-	    font-family: Arial, Helvetica, serif;
-	    font-size: 16px;
-	}
-
-Do not set sizes on unclassed markup that typically should be rendered as 
-the default text size. This includes `p`, `li`, `div`, `td`, `a`.
-
-Use pixel units to size type. Use the `em` unit to set the top and bottom 
-margins on type. Leading, or `line-height`, should be a unitless measure.
-
-	h1 {
-	    font-size: 36px;
-	    line-height: 1.33;
-	    margin: 0 0 .66em 0;
-	}
-
-### Font Stacks
-
-Specify font families using font stacks. This provides appropriate fall-back 
-fonts to handle when a specified font may not be available.
-
-Default **serif** font stack:
-
-    font-family: Constantia, Lucida, Georgia, serif;
-
-Default **sans-serif** font stack:
-
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
-`fantasy`, or `monospace`. This provides a fallback in case all other fonts 
-in the stack are unavailable.
-
-### Web Fonts
-
-Use the following syntax to use web fonts with the `@font-face` at-rule. Appropriate 
-file formats should be provided for supported browsers. When using a multi 
-weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while 
-using the same `font-family` name.
-
-	@font-face {
-	   font-family: 'Verb';
-	      src: url('/fonts/VerbRegular-webfont.eot');
-	      src: url('/fonts/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/VerbRegular-webfont.woff') format('woff'),
-	           url('/fonts/VerbRegular-webfont.ttf') format('truetype'),
-	           url('/fonts/VerbRegular-webfont.svg#VerbRegular') format('svg');
-	   font-weight: 400;
-	   font-style: normal;
-	}
-	@font-face {
-	   font-family: 'Verb';
-	      src: url('/fonts/VerbRegular-Italic-webfont.eot');
-	      src: url('/fonts/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/VerbRegular-Italic-webfont.woff') format('woff'),
-	           url('/fonts/VerbRegular-Italic-webfont.ttf') format('truetype'),
-	           url('/fonts/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
-	   font-weight: 400;
-	   font-style: italic;
-	}
-	@font-face {
-	   font-family: 'Verb';
-	      src: url('/fonts/VerbBold-webfont.eot');
-	      src: url('/fonts/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
-	           url('/fonts/VerbBold-webfont.woff') format('woff'),
-	           url('/fonts/VerbBold-webfont.ttf') format('truetype'),
-	           url('/fonts/VerbBold-webfont.svg#VerbRegularItalic') format('svg');
-	   font-weight: 700;
-	   font-style: normal;
-	}
-
-Note that different type variations all use the same `font-family` name. 
-Make sure to leverage both the `font-style` and `font-weight` on your elements.
-
-    body {
-        font-family: "Verb";
-    }
-    h1 {
-    	font-style: normal
-        font-weight: 700;
-    }
-    h2 {
-    	font-style: italic;
-        font-weight: 400;
-    }
-    p {
-    	font-style: normal;
-        font-weight: 400;
+    .embed {
+        clear: both;
+        height: 0;
+        margin-bottom: 2em;
+        padding-bottom: 56.25%;
+        position: relative;
     }
 
-`<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
-both an italic and bold version exist.
+    .embed iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
 
-Other web font services Imarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**, 
-**[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
+#### Background Video
 
-### Dashes
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s “hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses <a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for implementing a responsive backround video. Note that we use padding on the `video`’s `::before` pseudo element to achieve our desired aspect ratio.
 
-There are multiple types of dashes present in common use: hyphen, figure dash, 
-en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
+    <div class="hero">
+    <video autoplay="autoplay" loop="loop" poster="video-placeholder.jpg">
+        <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        <source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
+    </video>
+    </div>
 
-* (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
-* (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
+    .hero video {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .hero::before {
+        content: "";
+        display: block;
+        padding-top: 33.333%;
+    }
 
-Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
-[The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
+### Image Compression
 
-  The em dash is the nineteenth-century standard, still prescribed in many 
-  editorial style books, but the em dash is too long for use with the best 
-  text faces. Like the oversized space between sentences, it belongs to the 
-  padded and corseted aesthetic of Victorian typography.
+Whenever you cut up a website, you should use image compression software to crunch the images. Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) comes highly recommended among the Imarc team.
+Always compress your images manually or via an automated task if you’re using a task runner.
 
-### Print Styles
+### Favicons
 
-While not requested often, some websites necessitate a clean layout when pages
-are printed. Imarc begins from a sane starting point as documented in [Imarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.scss#L1130)
+Use 32x32 PNG files for favicons:
+
+    <link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon" />
+
+### Touch Icons
+
+iOS and Android devices both support touch icons:
+
+    <link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
+
+Your touch icons should be a PNG at 192x192. It’s possible to specify 
+different sizes for different devices, but using a single high 
+resolution touch icon is the easiest way to ensure the highest 
+quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
+
+### Safari pinned icon
+
+With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab. 
+Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
+
+    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
+
+
+## Browser Support 
+
+The following **philosophy** is paraphrased from our standard proposal language. 
+
+* We produce semantic, HTML5-compliant markup, CSS, and scripts.
+* We believe users should be able to consume as much visual and interactive richness as their browser can support. 
+* We test against a specific whitelist of mainstream desktop and mobile browsers. 
+* We ensure our sites function correctly and look as good as possible on these browsers. 
+* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
+* We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
+* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the poject.
+
+### Desktop Browser Support
+
+<table>
+	<tr>
+		<th>Browser/Version</th>
+		<th>Mac</th>
+		<th>Windows</th>
+	</tr>
+	<tr>
+		<td>Chrome (stable)</td>
+		<td class="supported" colspan="2">yes</td>
+	</tr>
+	<tr>
+		<td>Firefox (stable)</td>
+		<td class="supported" colspan="2">yes</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 11.0</td>
+		<td></td>
+		<td class="supported">yes</td>
+	</tr>
+	<tr>
+		<td>Microsoft Edge (stable)</td>
+		<td></td>
+		<td class="supported">yes</td>
+	</tr>
+	<tr>
+		<td>Safari 9.0</td>
+		<td class="supported">yes</td>
+		<td></td>
+	</tr>
+</table>
+
+As of January 2016, the definitive list includes Chrome and Firefox (Mac & Windows), IE 11, Edge,
+Safari 9+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+
+By default we do not test on IE 6–10. However individual projects may require browser support
+beyond our defaults. In these cases the additional support will be specified in the proposal and
+strategy documents.
+
+One case where this is of particular concern is when a large group of potential site users will be
+using Windows XP or Vista. These users are unable to upgrade to current versions of IE, so we
+should be mindful of the issues they might face.
+
+### Mobile Browser Support
+
+<table>
+	<tr>
+		<th>Platform/OS</th>
+		<th>Browser</th>
+		<th>Target Devices</th>
+	</tr>
+	<tr>
+		<td>iOS 8</td>
+		<td>Safari 8</td>
+		<td>4"+ screens, iPads</td>
+	</tr>
+	<tr>
+		<td>iOS 9</td>
+		<td>Safari 9</td>
+		<td>4"+ screens, iPads</td>
+	</tr>
+	<tr>
+		<td>Android 4.1</td>
+		<td>Browser</td>
+		<td>4"+ handsets, 7–10" tablets</td>
+	</tr>
+	<tr>
+		<td>Android 4.2–5.1</td>
+		<td>Chrome</td>
+		<td>4"+ handsets, 7–10" tablets</td>
+	</tr>
+</table>
+
+By default we do not test on Blackberry or Windows Phone devices. However, individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+
+Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
+
+### Internet Explorer styles
+
+Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design and functionality. You can target previous versions of Internet Explorer using conditional comments. Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS changes styles are minimal, place them in the project’s main CSS file.
+	
+	<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
+	<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
+
+Note that conditional comments are deprecated in IE10+.
+
+## Accessibility 
+
+Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
+
+### ARIA Landmark Roles
+
+ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse areas of a website by their respective landmark role, allowing users to skip over regions that are repeated on every page. Imarc takes advantage of five roles:
+<ul>
+	<li>
+		<code>banner</code>: A region that contains the prime heading or internal title of a page.
+	</li>
+	<li>
+		<code>navigation</code>: A collection of links suitable for use when navigating the document or related documents.
+	</li>
+	<li>
+		<code>main</code>: Main content in a document. In almost all cases a page will have only one main role.
+	</li>
+	<li>
+		<code>complementary</code>:	Any section of the document that supports the main content, yet is separate and meaningful on its own.
+	</li>
+	<li>
+		<code>contentinfo</code>: A region that contains information about the parent document such as copyrights and links to privacy statements
+	</li>
+</ul>
+
+Adding a role is simple and does not affect the display or behavior of a web page. Note that if there are multiple navigation structures, they should be labeled for completeness using the <code>aria-label</code> attribute.
+
+	<header class="primary" role="banner">
+
+	<nav aria-label="utility navigation" class="utility" role="navigation">
+
+	<nav aria-label="primary navigation" class="primary" role="navigation">
+
+	<nav aria-label="secondary navigation" class="secondary" role="navigation">
+
+	<aside class="primary" role="complementary">
+
+	<div class="main" role="main">
+
+	<footer class="primary" role="contentinfo">
+
+
+### Baseline Checklist
+<ul>
+	<li>
+		Use open web standards such as HTML, CSS, JavaScript
+	</li>
+	<li>
+		HTML and CSS correctly validate using W3C validation tools  
+		<ul>
+			<li>
+				<a href="http://validator.w3.org">HTML validator</a>
+			</li>
+			<li>
+				<a href="http://jigsaw.w3.org/css-validator">CSS validator</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		Include skip navigation allowing users to skip repetitive navigation
+	</li>
+	<li>
+		focus styles should should exist on links and form elements
+	</li>
+	<li>
+		Ensure all links work and none are set to href=”#”
+	</li>
+	<li>
+		JavaScript adds a behavior layer but adheres to progressive advancement, graceful degradation practices. Users without JavaScript 
+        can view all website content.
+	</li>
+	<li>
+		<strong>Web forms</strong>
+		<ul>
+			<li>
+				Inputs always have associated labels
+			</li>
+			<li>
+				If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
+			</li>
+			<li>
+				Validation messages show all errors at once instead of progressively showing more errors
+			</li>
+			<li>
+				Validation messages use same field names as form and in the same order
+			</li>
+			<li>
+				Make sure all required fields are listed as required in error message
+			</li>
+			<li>
+				Make sure required fields visually indicate their requirements (e.g. asterisk)
+			</li>
+		</ul>
+	</li>
+	<li>
+		Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user. Decorative images that provide no important meaning to non-sighted users should utilize an empty alt value.
+	</li>
+	<li>
+		Timed responses are properly indicated to users.
+	</li>
+	<li>
+		All content is viewable without an active stylesheet.
+	</li>
+	<li>
+		<strong>Color</strong>
+		<ul>
+			<li>
+				Color combinations should not create visual difficulty for users with color deficiencies. Utilize <a href="http://www.checkmycolours.com">Check My Colours</a> or a similar service.
+			</li>
+			<li>
+				Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
+			</li>
+		</ul>
+	</li>
+	<li>
+		All form fields can be activated, operated and submitted using a keyboard.
+	</li>
+	<li>
+		Users can control galleries and modal windows using a keyboard.
+	</li>
+</ul>
+
+
+### Advanced Checklist
+
+* Audio files are accompanied by text transcriptions.
+* Videos are captioned.
+* CAPTCHAs are accessible to screen reader users and to Braille Display users.
+* Print stylesheets are used for maximum legibility.
+* Mobile media query is used to ensure website layout does not break on mobile devices.
+
+
+## Structured Data Markup
+
+To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org).
+
+ Content that will be shared heavily on social media is recommended to use Schema.org and [Open Graph Protocol](http://ogp.me/). The Open Graph Protocol enables any web page to become a rich object in a social graph.
+
+### Schema.org
+
+Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
+
+#### Schema.org Example
+
+**Movie Type Markup Example**
+
+	<!-- Simplified version found on IMDb -->
+	<div itemscope itemtype="http://schema.org/Movie">
+		<h1 class="" itemprop="name">Frozen 2013 - IMDb</h1>
+		<a href="http://pro.imdb.com/title/tt2294629/companycredits?rf=cons_tt_cocred_tt&ref_=cons_tt_cocred_tt" itemprop='url'>
+		<div itemprop="description">
+			When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
+		</div>
+		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            <strong title="7.6 based on 405,502 user ratings"><span itemprop="ratingValue">7.6</span></strong><span class="grey">/</span><span class="grey" itemprop="bestRating">10</span>
+            <a href="/title/tt2294629/ratings?ref_=tt_ov_rt"><span itemprop="ratingCount">405,502</span></a>
+            <span itemprop="reviewCount">893 user</span> <span itemprop="reviewCount">405 critic</span>
+		</div>
+	</div>
+	
+
+An example of what kind of data that is being extracted by crawlers from content that has proper markup.
+
+![Extracted Data](img/structured-data-extracted.png)
+
+If you want content to appear as rich snippets on major search engines such as this.
+
+![Rich Snippet](img/structured-data-rich-snippet.png)
+
+It is recommended that you use structured data markup on these types of content.
+
+<div class="columns">
+    <div>
+        <p>Google Rich Snippet Support</p>
+        <ul>
+            <li>Product</li>
+            <li>Recipe</li>
+            <li>Review</li>
+            <li>Event</li>
+            <li>Software Applications</li>
+            <li>Video</li>
+            <li>News Articles</li>
+        </ul>
+    </div>
+    <hr/>
+    <div>
+        <p>Bing Rich Snippet Support</p>
+        <ul>
+            <li>Breadcrumbs</li>
+            <li>Businesses and Organizations</li>
+            <li>Events</li>
+            <li>People</li>
+            <li>Products and Offers</li>
+            <li>Recipes</li>
+            <li>Reviews</li>
+            <li>Reviews (aggregated)</li>
+        </ul>
+    </div>
+</div>
+
+**[View a complete list of Schema.org content types and example markup.](http://schema.org/docs/full.html)**
+
+### Open Graph
+
+Sharing content via social media can yield unexpected results related to its appearance on a time line. 
+
+For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
+
+	<link rel="image_src" href="/img/site/logo_acme.png" />		
+
+#### Open Graph Example
+
+**Blog Post Markup Example**
+
+	<head>
+	...
+	    <!-- Facebook Specific-->
+		<meta property="fb:admins" content="100004926167588">
+		<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
+		<!-- Twitter Specific -->
+		<meta name="twitter:site" content="@ImarcAgency">
+		<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
+		<!-- General -->
+		<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
+		<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
+		<meta property="og:site_name" content="Imarc Digital Agency">
+		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
+	</head>
+	
+**Facebook Rich Object**
+
+![Screenshot displaying how structured blog data is displayed on Facebook](/img/structured-data-facebook.png)
+
+<hr>
+
+**Twitter Rich Object**
+
+![Screenshot displaying how structured blog data is displayed on Twitter](/img/structured-data-twitter.png)
+
+<hr>
+
+**Linkedin Rich Object**
+
+![Screenshot displaying how structured blog data is displayed on LinkedIn](/img/structured-data-linkedin.png)
+
+<hr>
+
+**[View more Open Graph example and data types](http://ogp.me/#metadata)**
+
+#### Structured Data Markup Testing Tools
+- [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)
+- [Schema.org Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/)
+- [Open Graph Protocol Testing Tool](http://iframely.com/debug)
+- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug)
+- [Twitter Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
+
 
 ## Mobile Optimization
 
