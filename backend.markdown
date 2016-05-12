@@ -6,7 +6,7 @@ layout: default
 <section class="intro">
 	<p>
 		This document describes Imarc’s standards for writing PHP and SQL.
-		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		<a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -125,10 +125,10 @@ via the closing parenthesis characters:
 
 	$array = [
 		'name1' => 'value1',
-		'name2' => [ 
+		'name2' => [
 			'subname1' => 'subvalue1',
 			'subname2' => 'subvalue2'
-		]	
+		]
 	];
 
 ### Code with Markup
@@ -223,8 +223,8 @@ reason not to). Create `setBar()` methods to set private class variables, and
 
 Documentation for code follows the [PHPDoc Standard](http://www.phpdoc.org/docs/latest/index.html)
 
-Library code must always have documentation. For project code, the level of documentation 
-is left up to the requirements or lead developer on that particular project, yet it is 
+Library code must always have documentation. For project code, the level of documentation
+is left up to the requirements or lead developer on that particular project, yet it is
 highly encouraged.
 
 ### Class Documentation
@@ -254,7 +254,7 @@ parameters, do not include `@param void`.
 	 * Description of function.
 	 *
 	 * @throws ExceptionClass Optional description of when
-	 * @throws OtherException  
+	 * @throws OtherException
 	 *
 	 * @param type $varname A description of the param (which may also
 	 *    span multiple lines if necessary)
@@ -284,8 +284,7 @@ the end-user.
 
 When error messages are emailed, always address a production team, not an
 individual developer, in case that developer is not available. The preferred
-format for emailing error message is `team+project@imarc.net` (example:
-`quanta+example.com@imarc.net`)
+format for emailing error message is `errors+project@imarc.com`
 
 ## Error Reporting
 
@@ -362,24 +361,24 @@ The following list of includes some of, but not necessarily all, the aspects of
 a site that need to be build with UTF-8 in mind:
 
 HTML
-:	Set your editor to use UTF-8. Include the correct meta tags, 
-	as specified by [frontend standards](/frontend#UTF-8). Force the correct 
+:	Set your editor to use UTF-8. Include the correct meta tags,
+	as specified by [frontend standards](/frontend#UTF-8). Force the correct
 	HTTP content-type header.
 
 PHP
-:	Use correct content-type headers and meta tags to ensure that 
+:	Use correct content-type headers and meta tags to ensure that
 	browsers are sending UTF-8 for form contents. Also use UTF-8 safe string functions.
 
 Database
-:	Most databases require that the encoding be set when the database is created. 
+:	Most databases require that the encoding be set when the database is created.
 	Ensure your database connection is set to use UTF-8.
 
 Email
-: 	When sending emails, be sure to use code that supports UTF-8 in recipient names, 
+: 	When sending emails, be sure to use code that supports UTF-8 in recipient names,
 	the subject and the body
 
 Other Data
-:	Be sure to convert (if necessary) and clean data coming from old databases, 
+:	Be sure to convert (if necessary) and clean data coming from old databases,
 	external systems, XML files, CSV files and other such data sources
 
 ## Storing and Naming Files
@@ -432,8 +431,8 @@ business logic.
 
 ## Friendly URLs
 
-URL words are lower case with hyphens as separators.  With dynamic pages, 
-use the title or primary content identifier in the URL to help with 
+URL words are lower case with hyphens as separators.  With dynamic pages,
+use the title or primary content identifier in the URL to help with
 search engine optimization.
 
 	/news/how-sarbanes-oxley-affects-your-business

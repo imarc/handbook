@@ -5,13 +5,13 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document describes Imarc’s markup and style standards. 
-		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document describes Imarc’s markup and style standards.
+		<a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
 ## Boilerplate
-**[Boilerplate](http://imarc.github.io/boilerplate)** is a great 
+**[Boilerplate](http://imarc.github.io/boilerplate)** is a great
 starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and CSS.
 
 ## Doctype
@@ -27,8 +27,8 @@ Modernizr detects what the browser’s rendering engine supports, allowing you t
 
 ### Validation
 
-A concerted effort should be made to ensure your HTML and CSS validate. Markup should 
-be semantic and well-formed and contain all required attributes. Elements should occur 
+A concerted effort should be made to ensure your HTML and CSS validate. Markup should
+be semantic and well-formed and contain all required attributes. Elements should occur
 within the proper context of the DOCTYPE.
 
 * [W3C HTML Markup Validator](http://validator.w3.org/)
@@ -40,26 +40,26 @@ within the proper context of the DOCTYPE.
 
 Title tags should contain descriptive information that concisely describes the current
 page. In the case of nested pages, information in the title tag should be ordered from
-most specific to least specific. A standard delimiter such as `–` or `|` should be employed 
+most specific to least specific. A standard delimiter such as `–` or `|` should be employed
 to indicate distinct content levels.
 
 	<title>Support - Contact | Imarc Web Design: Boston + Silicon Valley</title>
 
-This shows that I’m on the page called *Support*. That page lives in a section called *Contact* 
+This shows that I’m on the page called *Support*. That page lives in a section called *Contact*
 which resides in a website for *Imarc* . Titles are adjusted to meet SEO needs.
 
-The homepage should include the site or company name, followed by a simple description 
+The homepage should include the site or company name, followed by a simple description
 of the entire website.
 
 	<title>Imarc | Web Design and Digital Agency in Boston + Silicon Valley</title>
 
 ### Meta Description
 
-A quality meta description can help in higher clickthroughs. Ideally, all pages 
-include a unique meta description – a concise, human-readable description of that 
-page’s contents. Do not duplicate meta descriptions from other pages. Custom 
-meta descriptions can appear in search engine result pages as seen in the 
-graphic below, however Google will sometimes replace custom meta descriptions 
+A quality meta description can help in higher clickthroughs. Ideally, all pages
+include a unique meta description – a concise, human-readable description of that
+page’s contents. Do not duplicate meta descriptions from other pages. Custom
+meta descriptions can appear in search engine result pages as seen in the
+graphic below, however Google will sometimes replace custom meta descriptions
 with on-page content if they feel it’s of more value to the end user.
 
 If no meta description exists, Google will create its own from on-page content.
@@ -80,27 +80,27 @@ Include the following meta tag in the head to credit Imarc.
 
 ### Character Encoding
 
-Use UTF-8 as the character encoding. Set your editor to use UTF-8 for 
+Use UTF-8 as the character encoding. Set your editor to use UTF-8 for
 all aspects of the web application.
 
 HTML pages should begin with by setting `UTF-8` in the content-type meta tag.
 
 	<meta charset="UTF-8" />
 
-Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the 
-frontend HTML and backend databases, use real UTF-8 characters instead of HTML 
+Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the
+frontend HTML and backend databases, use real UTF-8 characters instead of HTML
 entities.
 
-Use real apostrophes and quotations instead of primes and double-primes. Use 
-a UTF-8 character like `»`, instead of typing out entities like `&raquo;`. 
+Use real apostrophes and quotations instead of primes and double-primes. Use
+a UTF-8 character like `»`, instead of typing out entities like `&raquo;`.
 The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 `&quot;`.
 
     <p>
-        Separation of content – better with an en-dash. 
-        Imarc’s motto: “Use curly quotes” 
+        Separation of content – better with an en-dash.
+        Imarc’s motto: “Use curly quotes”
         <a href="#"> Learn More »</a>
-    </p>	
+    </p>
 
 
 ## Typography
@@ -112,10 +112,10 @@ The default type size and font for a site should be set on the `body` element.
         font-size: 16px;
     }
 
-Do not set sizes on unclassed markup that typically should be rendered as 
+Do not set sizes on unclassed markup that typically should be rendered as
 the default text size. This includes `p`, `li`, `div`, `td`, `a`.
 
-Use pixel units to size type. Use the `em` unit to set the top and bottom 
+Use pixel units to size type. Use the `em` unit to set the top and bottom
 margins on type. Leading, or `line-height`, should be a unitless measure.
 
     h1 {
@@ -126,7 +126,7 @@ margins on type. Leading, or `line-height`, should be a unitless measure.
 
 ### Font Stacks
 
-Specify font families using font stacks. This provides appropriate fall-back 
+Specify font families using font stacks. This provides appropriate fall-back
 fonts to handle when a specified font may not be available.
 
 Default **serif** font stack:
@@ -137,15 +137,15 @@ Default **sans-serif** font stack:
 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-Include a generic font family such as `serif`, `sans-serif`, `cursive`, 
-`fantasy`, or `monospace`. This provides a fallback in case all other fonts 
+Include a generic font family such as `serif`, `sans-serif`, `cursive`,
+`fantasy`, or `monospace`. This provides a fallback in case all other fonts
 in the stack are unavailable.
 
 ### Web Fonts
 
-Use the following syntax to use web fonts with the `@font-face` at-rule. Appropriate 
-file formats should be provided for supported browsers. When using a multi 
-weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while 
+Use the following syntax to use web fonts with the `@font-face` at-rule. Appropriate
+file formats should be provided for supported browsers. When using a multi
+weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while
 using the same `font-family` name.
 
     @font-face {
@@ -179,7 +179,7 @@ using the same `font-family` name.
        font-style: normal;
     }
 
-Note that different type variations all use the same `font-family` name. 
+Note that different type variations all use the same `font-family` name.
 Make sure to leverage both the `font-style` and `font-weight` on your elements.
 
     body {
@@ -201,23 +201,23 @@ Make sure to leverage both the `font-style` and `font-weight` on your elements.
 `<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
 both an italic and bold version exist.
 
-Other web font services Imarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**, 
+Other web font services Imarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**,
 **[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
 
 ### Dashes
 
-There are multiple types of dashes present in common use: hyphen, figure dash, 
+There are multiple types of dashes present in common use: hyphen, figure dash,
 en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
 
 * (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
 * (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
 
-Em dashes have been dropped based on Robert Bringhurst’s recommendation in 
+Em dashes have been dropped based on Robert Bringhurst’s recommendation in
 [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
 
-  The em dash is the nineteenth-century standard, still prescribed in many 
-  editorial style books, but the em dash is too long for use with the best 
-  text faces. Like the oversized space between sentences, it belongs to the 
+  The em dash is the nineteenth-century standard, still prescribed in many
+  editorial style books, but the em dash is too long for use with the best
+  text faces. Like the oversized space between sentences, it belongs to the
   padded and corseted aesthetic of Victorian typography.
 
 ### Print Styles
@@ -228,13 +228,13 @@ are printed. Imarc begins from a sane starting point as documented in [Imarc Boi
 
 ## Coding Style
 
-Consistent coding style for HTML and CSS is vital because multiple people 
-collaborate on a site’s markup and style. 
+Consistent coding style for HTML and CSS is vital because multiple people
+collaborate on a site’s markup and style.
 
 ### Line Breaks
 
 Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
-or Mac (`\r`) breaks. 
+or Mac (`\r`) breaks.
 
 ### HTML
 
@@ -245,14 +245,14 @@ Keep markup at a reasonable width. When markup surrounds a significant amount of
 
 	<!-- Instead, DO THIS -->
 	<p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla 
-	    libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed 
-	    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit 
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla
+	    libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed
+	    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit
 	    a sollicitudin sagittis.
 	</p>
 	<ul>
 	    <li>
-	        Foo is listed first – ipsum dolor sit amet, consectetur adipiscing 
+	        Foo is listed first – ipsum dolor sit amet, consectetur adipiscing
 	        elit fringilla libero id quam semper semper.
 	    </li>
 	</ul>
@@ -311,7 +311,7 @@ Make sure to properly contain floats with a clearfix. Imarc uses a `group` class
 		Each property has a space between the colon and value ends with a semi-colon
 	</li>
 	<li>
-		The closing brace should be on its own line at the same indentation as the selector  
+		The closing brace should be on its own line at the same indentation as the selector
 	</li>
 </ul>
 
@@ -321,7 +321,7 @@ Stylesheets should be organized in a logical manner. See [Boilerplate’s](http:
 	/* = Typography = */
 
 
-Related style rules should be grouped together in ascending order of specificity. 
+Related style rules should be grouped together in ascending order of specificity.
 
 
     header {
@@ -354,7 +354,7 @@ Most page layouts can generally be thought of in three primary parts. These stru
 ![Structural naming conventions](/img/naming_structure.png)
 
 
-### Navigation 
+### Navigation
 
 Navigation should be named as the following:
 
@@ -368,7 +368,7 @@ Use unordered list markup within navigation instead of anchors. Lists allows us 
 ![Navigation naming conventions](/img/naming_navigation.png)
 
 
-Within navigation elements, there may be a different style to denote the current 
+Within navigation elements, there may be a different style to denote the current
 page or section.
 
 * **`.active`** – The currently viewed item in any navigation.
@@ -386,15 +386,15 @@ page or section.
 
 ![Content naming conventions](/img/naming_content.png)
 
-For a more complete list of naming conventions, see **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)** 
-for detailed layout naming conventions. 
+For a more complete list of naming conventions, see **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)**
+for detailed layout naming conventions.
 
 ### CSS Principals
 
 Engineers should strive to make lean, modular classes that can be easily adapted
 to different sections and pages. **If you find yourself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
 
-Consider two callouts used on two different pages: a landing page and a 
+Consider two callouts used on two different pages: a landing page and a
 members page.
 
 ![Landing page call to action](/img/cta-landing.png)
@@ -402,7 +402,7 @@ members page.
 ![Members page call to action](/img/cta-members.png)
 
 Knowing we will utilize callouts on multiple pages, it’s
-important to find properties they share and start with some base styles. These 
+important to find properties they share and start with some base styles. These
 would probably live in our stylesheet’s **Layout** section
 
     .callout {
@@ -419,8 +419,8 @@ would probably live in our stylesheet’s **Layout** section
         text-transform: uppercase;
     }
 
-Based on the knowledge we have from our creative mockups, we feel confident with 
-these base styles. Any visual changes for callouts should be added on to these 
+Based on the knowledge we have from our creative mockups, we feel confident with
+these base styles. Any visual changes for callouts should be added on to these
 base styles:
 
     .callout.dense {
@@ -433,43 +433,43 @@ base styles:
     }
 
 You might wonder why we didn’t target our callouts via a `body#members .callout`
-selector. It would not necessarily be a bad way to proceed. But thinking in a 
-modular way, what if the client also wanted to use this `.dense` styled 
-callout on special Guest pages? We would find ourself copying and pasting rules 
+selector. It would not necessarily be a bad way to proceed. But thinking in a
+modular way, what if the client also wanted to use this `.dense` styled
+callout on special Guest pages? We would find ourself copying and pasting rules
 in more than one place.
 
 #### Use Only Class Selectors
 
 To avoid CSS specificity issues, use only class selectors when marking up HTML.
-The exceptions to this rule are: anchors, form label IDs, the ID that is 
-[placed on the `body` tag](frontend#SpecificTargeting), and instances when IDs are 
+The exceptions to this rule are: anchors, form label IDs, the ID that is
+[placed on the `body` tag](frontend#SpecificTargeting), and instances when IDs are
 more appropriate hooks for JavaScript purposes.
 
 Classes should be lowercase, using hyphens to separate words. Ideally, classes are only one word.
 
-Classes have the benefit of being highly reusable. By utilizing classes, we 
+Classes have the benefit of being highly reusable. By utilizing classes, we
 can write leaner, more modular CSS.
 
 #### Choose Meaningful Names
 
-Choose names that accurately describe the content, not the visual container. 
+Choose names that accurately describe the content, not the visual container.
 Avoid choosing presentational names e.g.(`orange-arrow`, `left-column`)
 
-For example, `meta` is an acceptable class name while `sidebar-info` is not. The 
-described content will always be `meta`; it might not always be in the 
+For example, `meta` is an acceptable class name while `sidebar-info` is not. The
+described content will always be `meta`; it might not always be in the
 context of a sidebar.
 
 * Meaningful class names might be: `main`, `aside`, `record-detail`.
-* Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`. 
+* Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`.
 
 
 ### Specific Targeting
 
-When specific targeting per section or per page is needed, use class or ID 
-on the body tag. Use the ID for a single page. Use the class for styles that 
-are common within an entire section. 
+When specific targeting per section or per page is needed, use class or ID
+on the body tag. Use the ID for a single page. Use the class for styles that
+are common within an entire section.
 
-**ID use case**: Headlines must use a font-weight: 700; on the MacBook Pro page to 
+**ID use case**: Headlines must use a font-weight: 700; on the MacBook Pro page to
 align with marketing materials.
 
 **Class use case**: Buttons need to be silver for all pages within the Products section
@@ -487,17 +487,17 @@ The `action` attribute is required on all forms, and should have a blank value b
 
 Form inputs and labels are grouped together within a div. The containing div is named after the form input type.  For example, a `text` input is contained inside `<div class="text">` and a `file` input is contained inside `<div class="file">`.
 
-All appropriate input elements should have an associated label element. 
+All appropriate input elements should have an associated label element.
 Labels should be associated directly with inputs.
 
-Related fields, such as checkboxes and radio fields, may be further grouped 
-within a div with a class of the plural input type, such as `checkboxes`. 
+Related fields, such as checkboxes and radio fields, may be further grouped
+within a div with a class of the plural input type, such as `checkboxes`.
 
 This allows maximum form style flexibility with minimal markup changes.
 
 Required fields should be indicated by a `span` with a class of `required` within the associated `label` element.
 
-If an input has a max-length defined in the database, it should have a 
+If an input has a max-length defined in the database, it should have a
 corresponding max-length attribute in the markup.
 
 Form element markup
@@ -518,7 +518,7 @@ Form element markup
                 <input id="sample_form-password" type="password" />
             </div>
         </fieldset>
-    
+
         <fieldset>
             <h4>
                 Radios and Checkboxes
@@ -554,7 +554,7 @@ Form element markup
                 </label>
             </div>
         </fieldset>
-    
+
         <fieldset>
             <h4>
                 Selects
@@ -596,7 +596,7 @@ Form element markup
                 </select>
             </div>
         </fieldset>
-    
+
         <fieldset>
             <h4>
                 Textareas and Files
@@ -610,7 +610,7 @@ Form element markup
                 <input type="file" id="sample_form-file" />
             </div>
         </fieldset>
-    
+
         <fieldset>
             <h3>
                 Buttons
@@ -654,7 +654,7 @@ Use tables to display tabular data such as a pricing or feature chart. Do not us
 
 ### Caption
 
-Optional element. `caption` helps describe the table. Think of it as a title. 
+Optional element. `caption` helps describe the table. Think of it as a title.
 
     <table>
         <caption>
@@ -795,28 +795,28 @@ iOS and Android devices both support touch icons:
 
     <link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
 
-Your touch icons should be a PNG at 192x192. It’s possible to specify 
-different sizes for different devices, but using a single high 
-resolution touch icon is the easiest way to ensure the highest 
+Your touch icons should be a PNG at 192x192. It’s possible to specify
+different sizes for different devices, but using a single high
+resolution touch icon is the easiest way to ensure the highest
 quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
 ### Safari pinned icon
 
-With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab. 
+With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab.
 Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
 
     <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
 
 
-## Browser Support 
+## Browser Support
 
-The following **philosophy** is paraphrased from our standard proposal language. 
+The following **philosophy** is paraphrased from our standard proposal language.
 
 * We produce semantic, HTML5-compliant markup, CSS, and scripts.
-* We believe users should be able to consume as much visual and interactive richness as their browser can support. 
-* We test against a specific whitelist of mainstream desktop and mobile browsers. 
-* We ensure our sites function correctly and look as good as possible on these browsers. 
-* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers. 
+* We believe users should be able to consume as much visual and interactive richness as their browser can support.
+* We test against a specific whitelist of mainstream desktop and mobile browsers.
+* We ensure our sites function correctly and look as good as possible on these browsers.
+* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers.
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
 * We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the poject.
 
@@ -901,13 +901,13 @@ Imarc employees who have access to our wiki can read more about our policies in 
 ### Internet Explorer styles
 
 Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design and functionality. You can target previous versions of Internet Explorer using conditional comments. Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS changes styles are minimal, place them in the project’s main CSS file.
-	
+
 	<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
 	<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
 
 Note that conditional comments are deprecated in IE10+.
 
-## Accessibility 
+## Accessibility
 
 Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
 
@@ -955,7 +955,7 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 		Use open web standards such as HTML, CSS, JavaScript
 	</li>
 	<li>
-		HTML and CSS correctly validate using W3C validation tools  
+		HTML and CSS correctly validate using W3C validation tools
 		<ul>
 			<li>
 				<a href="http://validator.w3.org">HTML validator</a>
@@ -975,7 +975,7 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 		Ensure all links work and none are set to href=”#”
 	</li>
 	<li>
-		JavaScript adds a behavior layer but adheres to progressive advancement, graceful degradation practices. Users without JavaScript 
+		JavaScript adds a behavior layer but adheres to progressive advancement, graceful degradation practices. Users without JavaScript
         can view all website content.
 	</li>
 	<li>
@@ -1066,7 +1066,7 @@ Schema.org is a collaborative, community activity with a mission to create, main
             <span itemprop="reviewCount">893 user</span> <span itemprop="reviewCount">405 critic</span>
 		</div>
 	</div>
-	
+
 
 An example of what kind of data that is being extracted by crawlers from content that has proper markup.
 
@@ -1111,11 +1111,11 @@ It is recommended that you use structured data markup on these types of content.
 
 ### Open Graph
 
-Sharing content via social media can yield unexpected results related to its appearance on a time line. 
+Sharing content via social media can yield unexpected results related to its appearance on a time line.
 
 For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
 
-	<link rel="image_src" href="/img/site/logo_acme.png" />		
+	<link rel="image_src" href="/img/site/logo_acme.png" />
 
 #### Open Graph Example
 
@@ -1125,7 +1125,7 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 	...
 	    <!-- Facebook Specific-->
 		<meta property="fb:admins" content="100004926167588">
-		<meta name="article:author" content="https://www.facebook.com/iMarcAgency">
+		<meta name="article:author" content="https://www.facebook.com/ImarcAgency">
 		<!-- Twitter Specific -->
 		<meta name="twitter:site" content="@ImarcAgency">
 		<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
@@ -1137,7 +1137,7 @@ For example, Facebook pulls what it deems relevant to a shared item – title, d
 		<meta property="og:site_name" content="Imarc Digital Agency">
 		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
 	</head>
-	
+
 **Facebook Rich Object**
 
 ![Screenshot displaying how structured blog data is displayed on Facebook](/img/structured-data-facebook.png)
@@ -1173,41 +1173,41 @@ On mobile-specific sites, set the viewport to the width of the device:
 
 	<meta name="viewport" content="width=device-width">
 
-This fits the webpage into the visible area of the `viewport` to ensure that 
+This fits the webpage into the visible area of the `viewport` to ensure that
 the page is scaled to 100% on load.
 
-This works in most, but not all mobile browsers, a full chart of support is 
+This works in most, but not all mobile browsers, a full chart of support is
 here [Quirksmode](http://www.quirksmode.org/mobile/tableViewport.html#metaviewport)
 
 ### Mobile Orientation Changes
-iPhone can have issues with dynamic orientation changes – changing from 
-portrait to landscape view while viewing a page. The issue occurs on iPhone, 
+iPhone can have issues with dynamic orientation changes – changing from
+portrait to landscape view while viewing a page. The issue occurs on iPhone,
 when using the viewport setting, `initial-scale=1.0`.
 
-[Mozilla’s developer site](https://developer.mozilla.org/en/Mobile/Viewport_meta_tag#Viewport_basics) 
+[Mozilla’s developer site](https://developer.mozilla.org/en/Mobile/Viewport_meta_tag#Viewport_basics)
 explains this issue and one possible solution:
 
-> Mobile Safari often just zooms the page when changing from portrait to 
-> landscape, instead of laying out the page as it would if originally loaded 
-> in landscape. If web developers want their scale settings to remain 
-> consistent when switching orientations on the iPhone, they must 
-> add a `maximum-scale` value to prevent this zooming, which has the 
+> Mobile Safari often just zooms the page when changing from portrait to
+> landscape, instead of laying out the page as it would if originally loaded
+> in landscape. If web developers want their scale settings to remain
+> consistent when switching orientations on the iPhone, they must
+> add a `maximum-scale` value to prevent this zooming, which has the
 > sometimes-**unwanted side effect of preventing users from zooming in**.
 
-Another option Imarc has discussed is employing JavaScript to solve iPhone’s 
+Another option Imarc has discussed is employing JavaScript to solve iPhone’s
 re-orientation issue.
 
 
 ### Media Queries
 
-Meida queries is a CSS3 technology allowing scope limitation of styles based on a 
-feature such as width, aspect ratio, pixel density, and more. Imarc primarily 
+Meida queries is a CSS3 technology allowing scope limitation of styles based on a
+feature such as width, aspect ratio, pixel density, and more. Imarc primarily
 uses media queries to serve different styles to mobile and tablet devices.
 
 All media queries can reside in a site’s main stylesheet.
 
     @media (min-width: 481px) {
-        nav.primary li { 
+        nav.primary li {
             float: left;
             font-size: 1.4em;
             font-weight: bold;
@@ -1215,14 +1215,14 @@ All media queries can reside in a site’s main stylesheet.
         }
     }
 
-Some devices may download all styles (including large background images), regardless 
-of whether that device is scoped. This allows the device to apply specific width-based 
-rules on the fly without re-fetching images or CSS. The downside is a loss of optimization. 
+Some devices may download all styles (including large background images), regardless
+of whether that device is scoped. This allows the device to apply specific width-based
+rules on the fly without re-fetching images or CSS. The downside is a loss of optimization.
 For tips on improving optimization, see [Mobile Optimization](frontend#MobileOptimization)
 
 #### Media Query Behaviors
 
-Use `min-device-width` to prevent automatic reflowing when a window is 
+Use `min-device-width` to prevent automatic reflowing when a window is
 resized.
 
 	<link rel="stylesheet" href="/base.css" media="all" type="text/css"  />
@@ -1230,13 +1230,13 @@ resized.
 
 **With min/max-device-width:**
 - Android and iOS phones will download both CSS files
-- Android and iOS phones will ignore style definitions, images, and assets 
+- Android and iOS phones will ignore style definitions, images, and assets
   referenced in `desktop.css`.
-- When a desktop browser is sized down narrower than 481px, nothing 
+- When a desktop browser is sized down narrower than 481px, nothing
   will change.
 - See [http://www.ddmf.org/](http://www.ddmf.org/)
 
-Use `min-width` or `max-width` to allow media queries to dynamically activate 
+Use `min-width` or `max-width` to allow media queries to dynamically activate
 when the browser window is scaled.
 
 	<link rel="stylesheet" href="/base.css" media="all" type="text/css" />
@@ -1244,15 +1244,15 @@ when the browser window is scaled.
 
 **With min/max-width:**
 - Android and iOS phones will download both CSS files (same as above)
-- Android and iOS phones will ignore style definitions, images, and assets 
+- Android and iOS phones will ignore style definitions, images, and assets
    referenced in `desktop.css`. (same as above)
-- When a desktop browser is scaled down the `desktop.css` styles will be 
+- When a desktop browser is scaled down the `desktop.css` styles will be
   deactivated causing the page to dynamically reflows.
 - See [http://robot-or-not.com/](http://robot-or-not.com/)
 
-Additional info on 
-[Peter Gasston’ blog](http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/). 
-Andy Clark’s [320 and up project](http://stuffandnonsense.co.uk/projects/320andup/) 
+Additional info on
+[Peter Gasston’ blog](http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/).
+Andy Clark’s [320 and up project](http://stuffandnonsense.co.uk/projects/320andup/)
 also provides resources for optimization.
 
 
@@ -1260,7 +1260,7 @@ also provides resources for optimization.
 
 ### Markup Tester
 
-After resetting CSS and applying style, it’s easy to overlook a seldom-used 
-tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html) 
+After resetting CSS and applying style, it’s easy to overlook a seldom-used
+tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html)
 from the Framework repository and drop it onto your page. Make sure all tags render appropriately on your project.
 

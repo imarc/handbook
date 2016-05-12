@@ -5,9 +5,9 @@ layout: default
 
 <section class="intro">
 	<p markdown="1">
-		This document describes Imarc’s preferred method for deploying websites using 
-		an automated, repeatable system called  `patton`. 
-		[Imarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document describes Imarc’s preferred method for deploying websites using
+		an automated, repeatable system called  `patton`.
+		[Imarc](https://www.imarc.com) is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -106,7 +106,7 @@ last time you worked on it, you can do the following:
 
     user@host:~$ cd <repository>
     user@host:~/<repository>$ svn update
-    
+
 _**NOTE:** It is important to make sure you pull updates before you begin
 working.  This helps to avoid conflicts with your changes and other people's
 changes_
@@ -140,7 +140,7 @@ changed:
 
     user@host:~/<repository>$ svn status
     M       app/views/about/main.php
-    
+
 The "M" signifies that the file has been modified since your previous update.
 If you want to see an actual _diff_ of the file you can execute the following:
 
@@ -152,14 +152,14 @@ If you want to see an actual _diff_ of the file you can execute the following:
     @@ -15,7 +15,7 @@
      			<p>
      				...ami memory cat defunct.
-     			</p>   
-     
+     			</p>
+
     -			<h2>Old Heading</h2>
     +			<h2>Modified New Heading</h2>
      			<p>
      				Lorem ipsum ditty kong...
      			</p>
-        
+
 The above example shows where we changed the text of a heading file.
 Additional context (common lines of code) may be provided above or below
 actual changes.  Changes themselves, however, will be shown as either (-)

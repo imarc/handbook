@@ -6,7 +6,7 @@ layout: default
 <section class="intro">
 	<p markdown="1">
 		This document describes Imarc’s hosting, server, and maintenance practices.
-		[Imarc](http://www.imarc.net) is a full service web development and design firm with offices near Boston and Silicon Valley.
+		[Imarc](https://www.imarc.com) is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 

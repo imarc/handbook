@@ -6,7 +6,7 @@ layout: default
 <section class="intro">
 	<p>
 		This document outlines Imarc’s strategy process and deliverables. This incorporates practices from UX, IA, needs analysis, and business development.
-		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		<a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -19,7 +19,7 @@ figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 
 ## Goals
 
-> “Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.”  
+> “Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.”
 > –Sun Tzu
 
 The *goal* of all strategy activity is to produce a clear and concise blueprint for an application or website. **Strategy work aims to clearly define the project for the client and production team while focusing on a positive end-user experience.**
@@ -100,23 +100,23 @@ Before strategy work begins, the proposal author is responsible for notifying th
 During large-scale strategy engagements, the ideal strategy team will consist of:
 
 Producer
-:	Sets high-level milestones;  
-	Consulted on spec and strategy deliverables;  
+:	Sets high-level milestones;
+	Consulted on spec and strategy deliverables;
 	Approves spec doc before production
 
 Strategist
-:	Leads the strategy phase;  
-	Manages most client meetings;  
-	Responsible for presenting deliverables and adhering to timeline;  
-	Sets day-to-day tasks and due dates for team;  
-	Delegates tasks to other team members;  
+:	Leads the strategy phase;
+	Manages most client meetings;
+	Responsible for presenting deliverables and adhering to timeline;
+	Sets day-to-day tasks and due dates for team;
+	Delegates tasks to other team members;
 	Delivers change orders when the scope of the strategy phase, or the production work that strategy is defining, changes
 
 UX Engineer
 :	Conducts [discovery activities](strategy#DiscoveryActivities) and produces deliverables and supporting documents, delegated by the Strategist
 
 Designer
-:	May participate in discovery and interviews;  
+:	May participate in discovery and interviews;
 	Is consulted on wireframes
 
 Engineer
@@ -135,10 +135,10 @@ If the client also engages Imarc to develop the project, the strategy lead is re
 
 ## Discovery Activities
 
-> “Research is formalized curiosity. It is poking and prying with a purpose.”  
+> “Research is formalized curiosity. It is poking and prying with a purpose.”
 > –[Zora Neale Hurston](http://en.wikipedia.org/wiki/Zora_Neale_Hurston)
 
-Depending on budget and goals, a number of research activities may be incorporated into a project. 
+Depending on budget and goals, a number of research activities may be incorporated into a project.
 
 Most are qualitative, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are quantitative, meaning they are designed to produce a measurable result—for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
@@ -200,7 +200,7 @@ This starts with a 90- to 120–minute conference call or meeting with the clien
 
 As larger projects often have many goals, yet do not have unlimited time and resources, it's important to prioritize goals. A group [card sort](#GoalsCardSort) activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
-Lastly, Imarc creates a concise report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made. 
+Lastly, Imarc creates a concise report of findings, and presents those findings to the client for validation. This helps to ensure internal stakeholders agree on the project's objectives and priorities, _before_ discovering disagreements the hard way. The report often includes recommendations for specific follow-up research, and for outstanding decisions that must be made.
 
 **Topics include:**
 
@@ -250,7 +250,7 @@ Time Req
 :	30 hours for 3–4 interview sessions with 2–4 interview subjects each
 
 Templates
-:	<smb://fileserver/files/UX/templates/Interviews/>  
+:	<smb://fileserver/files/UX/templates/Interviews/>
 (Both internal stakeholder and user interview templates are provided)
 
 Interviews almost always turn up new information, issues and objectives. Whether you are talking to stakeholders, users, or customers, your job is to understand and document their pain, aspirations, and requirements.
@@ -283,7 +283,7 @@ When estimating time requirements, be aware that preparing to interview senior s
 <div markdown="1" class="inlinedetailnotreallysemanticisit">
 #### User or Customer Interviews
 
-By talking to users or customers, we can learn not just what users are doing, but *why*. The better we understand their motivations, the better we can fulfill their needs. 
+By talking to users or customers, we can learn not just what users are doing, but *why*. The better we understand their motivations, the better we can fulfill their needs.
 
 Interviews can explore concrete items, such as user interface, document flow, feature importance, technical knowledge, or devices used (pc, tablet, phone…). But to be most effective, interviews should explore more fundamental issues.
 
@@ -302,7 +302,7 @@ Some organizations will have people who are in daily contact with users, and hav
 </div>
 
 <div markdown="1" class="inlinedetailnotreallysemanticisit">
-#### Recommended reading: 
+#### Recommended reading:
 
 * [Interviewing Users: How to Uncover Compelling Insights](http://www.amazon.com/gp/product/193382011X/), Steve Portigal, 2013
 </div>
@@ -411,7 +411,7 @@ Watch out for [confirmation bias](http://en.wikipedia.org/wiki/Confirmation_bias
 
 ## Deliverables and Supporting Documents
 
-> ”Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones.“  
+> ”Only when one writes do the gaps appear and inconsistencies protrude. The act of writing turns out to require hundreds of mini-decisions, and it is the existence of these that distinguishes clear, exact policies from fuzzy ones.“
 > —[Frederick P. Brooks, Jr.](http://en.wikipedia.org/wiki/Fred_Brooks) *The Mythical Man-Month*, 1975.
 
 During the strategy process, we'll refer to and create a number of deliverables. Not all deliverables are needed for every project. The commonest are described here.
@@ -432,7 +432,7 @@ A Statement of Work, or SOW, may be created by Business Development or a Produce
 ### Site Map
 
 Summary
-:	Diagram showing the relationship of a web site's information and organization of content. 
+:	Diagram showing the relationship of a web site's information and organization of content.
 
 Time Req
 : 10 hours (minimum, varies by scope of project)
@@ -470,11 +470,11 @@ Time Req
 Templates
 :	<smb://fileserver/files/UX/templates/experience kickoff/>
 
-Based on the project’s detailed discovey, imarc and project stakeholders will explore design and user interface 
-concepts – we’ll look at websites together! Some of these explored concepts can include page density, site messaging, 
+Based on the project’s detailed discovey, imarc and project stakeholders will explore design and user interface
+concepts – we’ll look at websites together! Some of these explored concepts can include page density, site messaging,
 color palettes, navigation styles, animations, etc. We will find ourselves answering some common questions:
 
-+ How progressive or conservative should our design be? 
++ How progressive or conservative should our design be?
 + How much content do we have? How dense should our pages be?
 + What navigation type(s) do we feel our users are most comfortable with?
 + Are we conversational in our site messaging?
@@ -499,7 +499,7 @@ A wireframe is a low fidelity representation of a design that connects the under
 + the main groups of **content**,
 + the structure of **information**,
 + the available **functions or actions**,
-+ a basic visualization of the **user interface**. 
++ a basic visualization of the **user interface**.
 
 The wireframe allows us to rapidly iterate the underlying functional design a web page or application. It helps to visualize ideas and to gain consensus among stakeholders. The wireframe's simplified, colorless aesthetic allows us to focus on content and function instead of being distracted by creative design.
 
@@ -535,7 +535,7 @@ The prototype then serves as a blueprint for creative design and coding.
 #### Example Prototype
 This is a screen recording of a working HTML prototype. This mocks up how searching and adding would work in a simple password manager web app:
 
-![Prototype of a Password Manager](img/strategy/prototype.gif)  
+![Prototype of a Password Manager](img/strategy/prototype.gif)
 
 -->
 
@@ -579,10 +579,10 @@ This document restates the scope of production and must be approved by the clien
 
 ## Usability Testing
 
-> “If we knew what it was we were doing, it would not be called research, would it?”  
+> “If we knew what it was we were doing, it would not be called research, would it?”
 > –Albert Einstein
 
-The best way to find out what does or does not work well is by asking *real people* to try it. 
+The best way to find out what does or does not work well is by asking *real people* to try it.
 
 Usability testing can be used to improve existing systems, or while developing new ones. We engage in several types of testing.
 
@@ -652,7 +652,7 @@ It's best to start with a list of questions that need answering, such as *can us
 
 Next, create a formal task list and script, recruit 4–5 users (rarely more), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
 
-The script helps to ensure consistency; video recording the screen lets us revisit the tests. 
+The script helps to ensure consistency; video recording the screen lets us revisit the tests.
 
 <figure markdown="1">
 ![Live Usabilility Testing](img/strategy/user-testing-live.jpg)
@@ -676,12 +676,12 @@ Tasks
 : Test every function and content object described in the wireframes/requirements against expected behavior, verify the presence of all pages in the site map, and make sure the required content is present and correct.
 
 Deliverables
-:	Issues should be entered as tasks in Imarc's [Workshop](https://workshop.imarc.net). The Producer will traffic them.
+:	Issues should be entered as tasks in Imarc's [Workshop](https://workshop.imarc.com). The Producer will traffic them.
 
 Time Req
 :	N/A (not budgeted with strategy)
 
-After design and development, before launch, Imarc employees who were not involved in creating the site assess the site for compliance with the project requirements, for general bugs, and for usability issues. 
+After design and development, before launch, Imarc employees who were not involved in creating the site assess the site for compliance with the project requirements, for general bugs, and for usability issues.
 
 QA serves as a "last pass" to catch anything missed during production.
 
@@ -689,7 +689,7 @@ QA serves as a "last pass" to catch anything missed during production.
 
 ## Tools
 
-> “Man is a tool-using animal. Without tools he is nothing, with tools he is all.”  
+> “Man is a tool-using animal. Without tools he is nothing, with tools he is all.”
 > –[Thomas Carlyle](http://www.britannica.com/EBchecked/topic/96126/Thomas-Carlyle)
 
 The most important qualification for a tool is *fitness for purpose*. We constantly evaluate alternatives; if you think a tool shows promise, try it out; if it works well, add it to Handbook.
@@ -699,7 +699,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 [OmniGraffle Pro 6](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
 
-We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version at GitHub:  
+We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version at GitHub:
 <https://github.com/imarc/omnigraffle-stencils/>
 
 <!--
@@ -750,15 +750,15 @@ Document Title
 :	Example: *Product Detail Page Wireframe*
 
 Version
-:	A number used as collaboration aid to identify a specific document. If changes are made to a published or shared document, the version number should increase.  
+:	A number used as collaboration aid to identify a specific document. If changes are made to a published or shared document, the version number should increase.
 Example: *v7*
 
 Last Updated
-:	Full date that the document was last modified. (In OmniGraffle, using the <%ModificationDate%> variable is recommend.)  
+:	Full date that the document was last modified. (In OmniGraffle, using the <%ModificationDate%> variable is recommend.)
 Example: *September 4, 2012*
 
 Author
-:	Each document has one author. The last person to touch the document is the author of record and is responsible for its contents.  
+:	Each document has one author. The last person to touch the document is the author of record and is responsible for its contents.
 Example: *David Tufts*
 
 

@@ -5,7 +5,7 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document outlines Imarc’s creative process and deliverables. <a href="http://www.imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document outlines Imarc’s creative process and deliverables. <a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -36,31 +36,31 @@ The process begins after the functional and strategic requirements are documente
 During large-scale creative engagements, the ideal team consists of:
 
 Producer
-:	Sets high-level milestones;  
-	Consults on spec and creative deliverables;  
-	Coordinates all deliverables and meetings;  
+:	Sets high-level milestones;
+	Consults on spec and creative deliverables;
+	Coordinates all deliverables and meetings;
 	Creates and assigns tickets for actionable deliverables and tasks
 
 Designer
-:	The visionary and driving force behind all design;  
-	Sets day-to-day tasks and due dates for creative team;  
-	Responsible for presenting deliverables and adhering to timeline;  
+:	The visionary and driving force behind all design;
+	Sets day-to-day tasks and due dates for creative team;
+	Responsible for presenting deliverables and adhering to timeline;
 	Delegates tasks to other team members
 
 Copywriter
 :	Shapes the tone and message
 
 Strategist
-:	Leads the strategic discovery and work;  
-	Is included on brand discovery;  
+:	Leads the strategic discovery and work;
+	Is included on brand discovery;
 	May participate in design reviews
 
 UX Engineer
 :	Works with the designer to ensure consistency is upheld during the build out phase
 
 Engineer
-:	Handles engineering tasks and/or research, delegated by the Designer;  
-	Build out the design to match how it was envisioned by the Designer;  
+:	Handles engineering tasks and/or research, delegated by the Designer;
+	Build out the design to match how it was envisioned by the Designer;
 	Adhere to web best practices established by UX Engineers
 
 Designers stick with the project even after the creative phase is complete—just because a composition is approved does not mean the job is done. Designers both review and assist in building Imarc projects. This ensures consistency throughout the full duration of the project, shepherding the vision established during the creative phase.
@@ -70,7 +70,7 @@ Designers stick with the project even after the creative phase is complete—jus
 
 ## Discovery Activities ##
 
-Depending on budget and goals, a number of research activities may be incorporated into a project. 
+Depending on budget and goals, a number of research activities may be incorporated into a project.
 
 ### General Creative Discovery ###
 
@@ -108,7 +108,7 @@ Objective
 :	Understand a brand’s values, positioning, perception, visual identity, and any existing guidelines. This is used when there is an extensively defined and established brand that the Imarc team should “live and breathe”.
 
 Tasks
-:	Meet with brand stakeholders to review values, positioning, perception, visual identity, and any guidelines currently in use. 
+:	Meet with brand stakeholders to review values, positioning, perception, visual identity, and any guidelines currently in use.
 
 Time Req
 :	8–90 hours
@@ -126,7 +126,7 @@ This typically starts with an in-depth conference call or meeting with the clien
 + Competitors
 + Marketing Strategy
 + Culture
-+ Brand 
++ Brand
 
 
 ### Brand Shaping ###
@@ -198,7 +198,7 @@ A proposal is created by Business Development and is ultimately a sales tool. It
 ### Mood Boards ###
 
 Summary
-:	Mood boarding is a design exploration that leverages color palettes, stylized photography, typography, iconography, and patterns to develop a look and feel within a unified concept. In other words, an educated rough design that attempts to visualize what a client is asking for. 
+:	Mood boarding is a design exploration that leverages color palettes, stylized photography, typography, iconography, and patterns to develop a look and feel within a unified concept. In other words, an educated rough design that attempts to visualize what a client is asking for.
 
 Deliverables
 :	2–3 cohesive design solutions rooted in a unified concept that visually contrast each other.
@@ -239,7 +239,7 @@ Summary
 :	The overall visual aesthetic used to represent a brand. Identity systems are a package of visual components, style guidelines and used as a framework to ensure the corporate image is cohesive and consistent.
 
 Time Required
-:	80–120 hours 
+:	80–120 hours
 
 The identity of a brand is made up of more than just colors, typefaces, imagery, logo and slogan. It’s a visual reflection of everything a company does, owns, and produces that helps reinforce value. The Brand Identity of a company is made up of many visual devices:
 
@@ -255,10 +255,10 @@ The identity of a brand is made up of more than just colors, typefaces, imagery,
 ### Photography ###
 
 Summary
-:	On-site digital photography performed by Imarc’s in house Creative staff to showcase your company, product, event, or culture. 
+:	On-site digital photography performed by Imarc’s in house Creative staff to showcase your company, product, event, or culture.
 
 Time Required
-:	Half Day Shoot: 28–32 hours (Includes post processing)  
+:	Half Day Shoot: 28–32 hours (Includes post processing)
 	Full Day Shoot: 40–50 hours (Includes post processing)
 
 Imarc will set up a half day or full day shoot depending on the subject matter to be photographed. Imarc is available for shooting corporate headshots, advertising photography, product photography, landscape photography, still life photography, and event photography.
@@ -275,14 +275,14 @@ Imarc will set up a half day or full day shoot depending on the subject matter t
 ### Videography ###
 
 Summary
-:	On-site digital videography performed by Imarc’s in house Creative staff to showcase your company, product, event, or culture while telling a compelling narrative. 
+:	On-site digital videography performed by Imarc’s in house Creative staff to showcase your company, product, event, or culture while telling a compelling narrative.
 
 Time Required
-:	Half Day Shoot: 60–80 hours (Includes post processing and editing)  
-&nbsp; Shoot: 4 hours x 3 Creatives = 12 hours  
-&nbsp; Post Production = 48 - 68 Hours  
-Full Day Shoot: 80–100 hours (Includes post processing and editing)  
-&nbsp;Shoot: 8 hours x 3 Creatives = 24 hours  
+:	Half Day Shoot: 60–80 hours (Includes post processing and editing)
+&nbsp; Shoot: 4 hours x 3 Creatives = 12 hours
+&nbsp; Post Production = 48 - 68 Hours
+Full Day Shoot: 80–100 hours (Includes post processing and editing)
+&nbsp;Shoot: 8 hours x 3 Creatives = 24 hours
 &nbsp;Post Production = 56 - 76 Hours
 
 Imarc will set up a half day or full day video shoot depending on the subject matter you need camptured. Imarc is available for capturing corporate events, product demos, testimonials, interviews, and advertisements. Generally, 3 in- house creatives will be on site for the shoot handling video, lighting and audio capture.
@@ -308,7 +308,7 @@ The use of motion or animation can bring your content to life and keep your cust
 **Key Elements:**
 
 + Script Narrative
-+ Storyboard 
++ Storyboard
 + Voice Over (If applicable)
 + Final 1080p HD video exported for web and broadcast (if applicable)
 

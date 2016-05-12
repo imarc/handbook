@@ -7,7 +7,7 @@ layout: homepage
 	Imarc’s Standards &amp; Best Practices for Web Development
 </h1>
 <p class="copyright">
-	Copyright 2005‒2013 <a href="http://imarc.net/">Imarc LLC</a>.
+	Copyright 2005‒2013 <a href="https://www.imarc.com/">Imarc</a>.
 </p>
 
 

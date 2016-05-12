@@ -6,7 +6,7 @@ layout: default
 <section class="intro">
 	<p>
 		This document describes JavaScript coding and style standards employed by Imarc.
-		<a href="http://imarc.net">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		<a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
@@ -105,7 +105,7 @@ section of code that will only be run if an element exists, use `:first` with `e
 	$('#block:first').each(function() {
 		// runs once, but only if there's at least one element mathcing #block.
 	});
-	
+
 	// Dangerous
 	$('#block').each(function() {
 		// runs for every #block, whether that never, once, twice, etc.
@@ -621,7 +621,7 @@ Always declare and define functions like this:
 	};
 
 Functionally, these two syntaxes are identical except that the function defined
-with the second syntax can be referenced before it is declared. 
+with the second syntax can be referenced before it is declared.
 
 Default values should be handled in the first lines of the function with a
 ternary operation:
@@ -763,7 +763,7 @@ Here's a (non-plugin) example that also swaps the text of the toggle button:
 		var betterToggle = function() {
 			var $this = $(this);
 			var $details = $this.closest('.article').find('.details');
-			
+
 			if ($details.is(':visible')) {
 				$this.data('hide_text', $this.text());
 				$this.text(
@@ -777,7 +777,7 @@ Here's a (non-plugin) example that also swaps the text of the toggle button:
 				$details.show();
 			}
 		};
-		
+
 		$('.toggle').click(betterToggle);
 		$('.toggle').each(betterToggle);
 	});
