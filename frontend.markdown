@@ -875,13 +875,13 @@ face.
 		<th>Target Devices</th>
 	</tr>
 	<tr>
-		<td>iOS 8</td>
-		<td>Safari 8</td>
+		<td>iOS 9</td>
+		<td>Safari 9</td>
 		<td>4"+ screens, iPads</td>
 	</tr>
 	<tr>
-		<td>iOS 9</td>
-		<td>Safari 9</td>
+		<td>iOS 10</td>
+		<td>Safari 10</td>
 		<td>4"+ screens, iPads</td>
 	</tr>
 	<tr>
