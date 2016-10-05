@@ -847,22 +847,24 @@ The following **philosophy** is paraphrased from our standard proposal language.
 		<td class="supported">yes</td>
 	</tr>
 	<tr>
-		<td>Safari 9.0</td>
+		<td>Safari 10</td>
 		<td class="supported">yes</td>
 		<td></td>
 	</tr>
 </table>
 
-As of January 2016, the definitive list includes Chrome and Firefox (Mac & Windows), IE 11, Edge,
-Safari 9+ (Mac & iOS), Android Browser (Android 4.1), and Android Chrome (Android 4.2–4.4).
+As of October 2016, the definitive list includes Chrome and Firefox (Mac &
+Windows), IE 11, Edge, Mac Safari 10, iOS Safari 9, Android Browser (Android
+4.1), and Android Chrome (Android 4.2–4.4).
 
-By default we do not test on IE 6–10. However individual projects may require browser support
-beyond our defaults. In these cases the additional support will be specified in the proposal and
-strategy documents.
+By default we do not test on IE 6–10. However individual projects may require
+browser support beyond our defaults. In these cases the additional support will
+be specified in the proposal and strategy documents.
 
-One case where this is of particular concern is when a large group of potential site users will be
-using Windows XP or Vista. These users are unable to upgrade to current versions of IE, so we
-should be mindful of the issues they might face.
+One case where this is of particular concern is when a large group of potential
+site users will be using Windows XP or Vista. These users are unable to upgrade
+to current versions of IE, so we should be mindful of the issues they might
+face.
 
 ### Mobile Browser Support
 
@@ -883,12 +885,7 @@ should be mindful of the issues they might face.
 		<td>4"+ screens, iPads</td>
 	</tr>
 	<tr>
-		<td>Android 4.1</td>
-		<td>Browser</td>
-		<td>4"+ handsets, 7–10" tablets</td>
-	</tr>
-	<tr>
-		<td>Android 4.2–5.1</td>
+		<td>Android 4.4–current</td>
 		<td>Chrome</td>
 		<td>4"+ handsets, 7–10" tablets</td>
 	</tr>
