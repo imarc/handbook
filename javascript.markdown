@@ -662,6 +662,10 @@ JavaScript available and hardcode your HTML and CSS to match that.
 JavaScript should be used to show controls or hide content that will be
 available via tabs or toggles on load.
 
+If a page requires Javascript to properly function it is recommended, as a
+bare minimum, to use a non-intrusive call out within a <noscript> tag to
+notify users with Javascript disabled.
+
 ### Inserting HTML
 
 While there’s plenty of valid reasons to generate and insert HTML, when
