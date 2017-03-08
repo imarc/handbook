@@ -12,7 +12,7 @@ layout: default
 
 ## Boilerplate
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great
-starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and CSS.
+starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and SCSS.
 
 ## Doctype
 
@@ -105,9 +105,9 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 
 ## Typography
 
-The default type size and font for a site should be set on the `body` element.
+The default type size and font for a site should be set on the `html` element.
 
-    body {
+    html {
         font-family: Arial, Helvetica, serif;
         font-size: 16px;
     }
@@ -115,13 +115,12 @@ The default type size and font for a site should be set on the `body` element.
 Do not set sizes on unclassed markup that typically should be rendered as
 the default text size. This includes `p`, `li`, `div`, `td`, `a`.
 
-Use pixel units to size type. Use the `em` unit to set the top and bottom
-margins on type. Leading, or `line-height`, should be a unitless measure.
+Aside from the initial `html` font-size declaration, use `rem` (root relative) units to set type size. With 16px as a base size: 1rem = 16px; 1.25rem = 20px; 2rem = 32px. Leading, or `line-height`, should be a unitless measure.
 
     h1 {
-        font-size: 36px;
-        line-height: 1.33;
-        margin: 0 0 .66em 0;
+        font-size: 2.5rem;
+        line-height: 1.3;
+        margin-bottom: 1.25rem;
     }
 
 ### Font Stacks
@@ -139,64 +138,23 @@ Default **sans-serif** font stack:
 
 Include a generic font family such as `serif`, `sans-serif`, `cursive`,
 `fantasy`, or `monospace`. This provides a fallback in case all other fonts
-in the stack are unavailable.
+in the stack are unavailable. Imarc uses a handy `$font-stack` SASS variable
+to reference our stack throughout our stylesheet if need be.
 
 ### Web Fonts
 
-Use the following syntax to use web fonts with the `@font-face` at-rule. Appropriate
-file formats should be provided for supported browsers. When using a multi
+Use the following syntax to use web fonts with the `@font-face` at-rule. Based on Imarc
+browser support, the woff 1.0 font file format satisfies all our user agents. When using a multi
 weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while
 using the same `font-family` name.
 
     @font-face {
-       font-family: 'Verb';
-          src: url('/fonts/VerbRegular-webfont.eot');
-          src: url('/fonts/VerbRegular-webfont.eot?#iefix') format('embedded-opentype'),
-               url('/fonts/VerbRegular-webfont.woff') format('woff'),
-               url('/fonts/VerbRegular-webfont.ttf') format('truetype'),
-               url('/fonts/VerbRegular-webfont.svg#VerbRegular') format('svg');
-       font-weight: 400;
-       font-style: normal;
-    }
-    @font-face {
-       font-family: 'Verb';
-          src: url('/fonts/VerbRegular-Italic-webfont.eot');
-          src: url('/fonts/VerbRegular-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-               url('/fonts/VerbRegular-Italic-webfont.woff') format('woff'),
-               url('/fonts/VerbRegular-Italic-webfont.ttf') format('truetype'),
-               url('/fonts/VerbRegular-Italic-webfont.svg#VerbRegularItalic') format('svg');
-       font-weight: 400;
-       font-style: italic;
-    }
-    @font-face {
-       font-family: 'Verb';
-          src: url('/fonts/VerbBold-webfont.eot');
-          src: url('/fonts/VerbBold-webfont.eot?#iefix') format('embedded-opentype'),
-               url('/fonts/VerbBold-webfont.woff') format('woff'),
-               url('/fonts/VerbBold-webfont.ttf') format('truetype'),
-               url('/fonts/VerbBold-webfont.svg#VerbRegularItalic') format('svg');
-       font-weight: 700;
-       font-style: normal;
-    }
-
-Note that different type variations all use the same `font-family` name.
-Make sure to leverage both the `font-style` and `font-weight` on your elements.
-
-    body {
-        font-family: "Verb";
-    }
-    h1 {
-        font-style: normal
-        font-weight: 700;
-    }
-    h2 {
-        font-style: italic;
-        font-weight: 400;
-    }
-    p {
+        font-family: 'roboto_slablight';
+        src: url('RobotoSlab-Light-webfont.woff') format('woff'),  
+        font-weight: normal;
         font-style: normal;
-        font-weight: 400;
     }
+
 
 `<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
 both an italic and bold version exist.
