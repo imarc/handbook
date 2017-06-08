@@ -420,6 +420,16 @@ context of a sidebar.
 * Meaningful class names might be: `main`, `aside`, `record-detail`.
 * Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`.
 
+####
+
+CSS Source Maps
+
+Because our CSS is often minified, CSS source maps allows engineers to 
+see where code lives in the original source file via its original line number.
+source maps should always be used.
+
+![Illustrating how sourcemaps expose line numbers from source files](/img/souremap.png)
+
 
 ### Specific Targeting
 
