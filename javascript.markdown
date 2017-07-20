@@ -68,7 +68,7 @@ function declaration.
 		return val;
 	}
 
-Note: In [backend PHP code](/backend/) the function’s opening brace would be
+Note: In [backend PHP code](/backend) the function’s opening brace would be
 dropped to a new line.
 
 
