@@ -423,17 +423,33 @@ context of a sidebar.
 
 ### Specific Targeting
 
-When specific targeting per section or per page is needed, use class or ID
-on the body tag. Use the ID for a single page. Use the class for styles that
-are common within an entire section.
+When targeting a specific section or page is needed, use the body’s class or ID attributes. 
+Use the ID for styles pertaining to a single page. Use the class for styles that
+pertain to an entire section of pages. **Always** include the body tag in your selector.
 
-**ID use case**: Headlines must use a font-weight: 700; on the MacBook Pro page to
+**ID use case**: Headlines must use a font-weight: 700; on the MacBook page to
 align with marketing materials.
 
-**Class use case**: Buttons need to be silver for all pages within the Products section
+**Class use case**: Buttons need to be silver for all pages within the site’s Products section
 
-    <body class="products" id="macbook-pro">
+    <body class="products" id="macbook">
 
+    body#macbook {
+        h1,
+        h2,
+        h3 {
+            font-weight: 300;
+        }
+    }
+
+    body.products {
+        .button {
+            background-color: silver;
+        }
+    }
+
+Beware of potential collisions with styles that share a name. Does the project your working on also have 
+a list of generic products that also use the `.products` selector?
 
 ## Forms
 
