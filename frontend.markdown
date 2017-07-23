@@ -429,7 +429,7 @@ pertain to an entire section of pages. **Always** include the body tag in your s
 
     <body class="products" id="macbook">
 
-**ID use case**: Headlines must use a font-weight: 700; on the MacBook page to
+**ID use case**: Headlines must use a `font-weight: 700;` on the MacBook page to
 align with marketing materials.
 
 **Class use case**: Buttons need to be silver for all pages within the site’s Products section
@@ -449,7 +449,8 @@ align with marketing materials.
     }
 
 Beware of potential collisions with styles that share a name. Does the project your working on also have 
-a list of generic products that also use the `.products` selector?
+a list of generic products that also use the `.products` selector? Make sure you differentiate between 
+them. For example, the generic list of products could include a more specific identifier (e.g. `div.products`).
 
 ## Forms
 
