@@ -427,18 +427,18 @@ When targeting a specific section or page is needed, use the body’s class or I
 Use the ID for styles pertaining to a single page. Use the class for styles that
 pertain to an entire section of pages. **Always** include the body tag in your selector.
 
+    <body class="products" id="macbook">
+
 **ID use case**: Headlines must use a font-weight: 700; on the MacBook page to
 align with marketing materials.
 
 **Class use case**: Buttons need to be silver for all pages within the site’s Products section
 
-    <body class="products" id="macbook">
-
     body#macbook {
         h1,
         h2,
         h3 {
-            font-weight: 300;
+            font-weight: 700;
         }
     }
 
