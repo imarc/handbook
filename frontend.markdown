@@ -427,14 +427,14 @@ When targeting a specific section or page is needed, use the body’s class or I
 Use the ID for styles pertaining to a single page. Use the class for styles that
 pertain to an entire section of pages. **Always** include the body tag in your selector.
 
-    <body class="products" id="macbook">
+    <body class="section-products" id="page-macbook">
 
 **ID use case**: Headlines must use a `font-weight: 700;` on the MacBook page to
 align with marketing materials.
 
 **Class use case**: Buttons need to be silver for all pages within the site’s Products section
 
-    body#macbook {
+    body#page-macbook {
         h1,
         h2,
         h3 {
@@ -442,15 +442,11 @@ align with marketing materials.
         }
     }
 
-    body.products {
+    body.section-products {
         .button {
             background-color: silver;
         }
     }
-
-Beware of potential collisions with styles that share a name. Does the project your working on also have 
-a list of generic products that also use the `.products` selector? Make sure you differentiate between 
-them. For example, the generic list of products could include a more specific identifier (e.g. `div.products`).
 
 ## Forms
 
