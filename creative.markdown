@@ -1,6 +1,7 @@
 ---
 title: Creative
 layout: default
+metadescription: Outline of Imarc's creative process and deliverables; part of Handbook.imarc.com
 ---
 
 <section class="intro">
