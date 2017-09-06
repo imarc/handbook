@@ -1,7 +1,6 @@
 ---
 title: Strategy
 layout: default
-metadescription: A reference of best practices in web strategy, usability, testing and planning
 ---
 
 <section class="intro">
