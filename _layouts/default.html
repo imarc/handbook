@@ -14,7 +14,11 @@
 		<base href="http://handbook.imarc.com" />
 
 		<title>{{ page.title }} – Handbook | Imarc’s Coding Standards &amp; Best Practices</title>
+{% if page.metadescription != "" %}
 		<meta name="description" content="Imarc, A Digital Agency" />
+{% else %}
+		<meta name="description" content="{{ page.metadescription }}" />
+{% endif %}
 		<meta name="web_author" content="Design, programming, by Imarc. More info at https://www.imarc.com" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="shortcut icon" href="/img/favicon.ico" />

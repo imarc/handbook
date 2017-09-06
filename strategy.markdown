@@ -1,6 +1,7 @@
 ---
 title: Strategy
 layout: default
+metadescription: A handbook of best practices in web strategy. This is Imarc's activity reference for planning web sites and apps.
 ---
 
 <section class="intro">
