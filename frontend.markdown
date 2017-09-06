@@ -273,6 +273,17 @@ Make sure to properly contain floats with a clearfix. Imarc uses a `group` class
 	</li>
 </ul>
 
+#### CSS Source Maps
+
+When using SASS files and minified CSS, a browser’s inspector tool cannot find where your original 
+styles were written. Source maps inform the browser what source file contains your styles. In the 
+example, a source map allows the browser to see that the `h1` styles originate in a `_components.scss` 
+import.
+
+It is strongly recommended to use source maps with your CSS.
+
+![Illustrating how sourcemaps expose line numbers from source files](/img/souremap.png)
+
 
 Stylesheets should be organized in a logical manner. See [Boilerplate’s](http://imarc.github.io/boilerplate) sections in its CSS file. To visually divide a stylesheet sections, use the following comment style as a section indicator.
 
@@ -419,7 +430,6 @@ context of a sidebar.
 
 * Meaningful class names might be: `main`, `aside`, `record-detail`.
 * Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`.
-
 
 ### Specific Targeting
 
