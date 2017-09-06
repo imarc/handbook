@@ -1,7 +1,7 @@
 ---
 title: Strategy
 layout: default
-metadescription: The strategy chapter of Imarc's handbook of best practices in web strategy, usability, testing and planning.
+metadescription: A reference of best practices in web strategy, usability, testing and planning
 ---
 
 <section class="intro">
