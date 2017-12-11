@@ -870,10 +870,9 @@ Imarc employees who have access to our wiki can read more about our policies in 
 
 Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design and functionality. You can target previous versions of Internet Explorer using conditional comments. Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS changes styles are minimal, place them in the project’s main CSS file.
 
-	<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
-	<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
-
-Note that conditional comments are deprecated in IE10+.
+#### Internet Explorer (IE) notes
+* Conditional comments are deprecated in IE10+
+* Imarc _does not support_ IE Compatability Mode
 
 ## Accessibility
 
