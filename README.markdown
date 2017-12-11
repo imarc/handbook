@@ -2,8 +2,10 @@ Handbook
 ========
 
 This is the source for the Imarc Handbook. All changes, pull requests, etc.
-should always be done against the *gh-pages* branch (this one), as the branch
-is specifically used by Github Pages with jekyll to generate the front end.
+should always be done against the *gh-pages* branch.
+
+Handbook uses gh-pages and can be viewed locally using [Jekyll](https://jekyllrb.com/). Install 
+Jekyll and run `jekyll serve` within the project directory.
 
 Just show me the Handbook
 -------------------------
