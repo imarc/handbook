@@ -143,15 +143,29 @@ to reference our stack throughout our stylesheet if need be.
 
 ### Web Fonts
 
-Use the following syntax to use web fonts with the `@font-face` at-rule. Based on Imarc
-browser support, the woff 1.0 font file format satisfies all our user agents. When using a multi
-weight/style typeface be sure to add the appropriate `font-style` and `font-weight` for each while
-using the same `font-family` name.
+Use the following syntax to utilize web fonts with `@font-face`. Based on Imarc
+browser support, the WOFF 1.0 font file format satisfies all our user agents. However, if possible,
+use WOFF 2.0 for reduced file size. When using a multi-weight/style typeface be sure to add the
+appropriate `font-style` and `font-weight` for each while using the same `font-family` name.
 
     @font-face {
-        font-family: 'roboto_slablight';
+        font-family: 'Roboto Slab';
         src: url('RobotoSlab-Light-webfont.woff') format('woff'),  
-        font-weight: normal;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        src: url('RobotoSlab-Medium-webfont.woff') format('woff'),  
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Roboto Slab';
+        src: url('RobotoSlab-Bold-webfont.woff') format('woff'),  
+        font-weight: 700;
         font-style: normal;
     }
 
@@ -812,6 +826,11 @@ The following **philosophy** is paraphrased from our standard proposal language.
 		<td></td>
 		<td class="supported">yes</td>
 	</tr>
+    <tr>
+        <td colspan="3" style="box-shadow: inset 0 0 0 2px #FF675B;">
+            <strong>Imarc does not support Internet Explorer’s “Compatibility View” in any form</strong>
+        </td>
+    </tr>
 	<tr>
 		<td>Microsoft Edge (stable)</td>
 		<td></td>
