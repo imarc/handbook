@@ -14,6 +14,18 @@ layout: default
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great
 starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and SCSS.
 
+## Dependency Management
+
+All JS dependencies are managed by [npm](https://www.npmjs.com/). Get started with `npm` by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `/node_modules` directory within your project.
+
+- Project and library code should never have the `/node_modules` directory committed.
+- **Project** code SHOULD commit the `package-lock.json` file.
+- **Library** code SHOULD NOT commit the `package-lock.json` file.
+
+To ignore the `/node_modules` directory, the following line should be added to your `.gitignore`
+
+	node_modules
+
 ## Doctype
 
 Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype.
@@ -437,7 +449,7 @@ context of a sidebar.
 
 ### Specific Targeting
 
-When targeting a specific section or page is needed, use the body’s class or ID attributes. 
+When targeting a specific section or page is needed, use the body’s class or ID attributes.
 Use the ID for styles pertaining to a single page. Use the class for styles that
 pertain to an entire section of pages. **Always** include the body tag in your selector.
 
@@ -1249,4 +1261,3 @@ also provides resources for optimization.
 After resetting CSS and applying style, it’s easy to overlook a seldom-used
 tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html)
 from the Framework repository and drop it onto your page. Make sure all tags render appropriately on your project.
-
