@@ -784,12 +784,17 @@ automated task if you’re using a task runner.
 
 ### SVG
 
-SVG (Scalable Vector Graphics) is an XML-based image format. Imarc will often utilize this format
-when dealing with flat-color graphics. By targeting an SVG’s HTML selectors via CSS, image coloring 
-is controlled through CSS does not require the export of multiple images.
+SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for 
+infinite scaling without sacrificing image quality.
 
-Note that it is not necessary to save out an image file with an `.svg` extension (although 
-sometimes it can be appropriate). SVG code can be exported directly from Adobe Illustrator via 
+#### Implementation
+
+Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an
+`<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or 
+color variations, “inlining” the SVG is acceptable. To help with document readability, include the 
+file via PHP/etc.
+
+SVG code can be exported directly from Adobe Illustrator via 
 *File > Export > Export As…*
 
 Remove any `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
@@ -808,7 +813,7 @@ takes advantage of the `viewBox` attribute.
 #### IE11 sizing
 
 IE11 does not always respect SVG size dimensions in fluid-width scenarios. In this scenario, you 
-can [wrap the SVG with a container](https://codepen.io/marcelmoreau/pen/JMJvmg) with pseudo-element padding to achieve the proper sizing.
+can [wrap the SVG with a container](https://codepen.io/marcelmoreau/pen/JMJvmg) with pseudo-element 
 
 ### Favicons
 
