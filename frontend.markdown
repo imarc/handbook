@@ -797,7 +797,7 @@ file via PHP/etc.
 SVG code can be exported directly from Adobe Illustrator via 
 *File > Export > Export As…*
 
-Remove any `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
+Remove any `doctype`, `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
 takes advantage of the `viewBox` attribute. 
 
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 61.25 61.25">
