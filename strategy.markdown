@@ -3,8 +3,8 @@ title: Strategy
 layout: default
 ---
 
-<section markdown=“1” class="intro">
-This handbook will guide you through the process of creating a clear and concise blueprint for a website or application.
+<section class="intro">
+	<p>This handbook will guide you through the process of creating a clear and concise blueprint for a website or application.</p>
 </section>
 
 <style type="text/css">
@@ -13,11 +13,12 @@ figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 
 .needscontent { 
 	padding: 1em;
+	margin: 1em;
 	font-size: bigger;
 	border: 4px dotted #fbce78;	/* Imarc Metal */
 }
 .needscontent:before {
-	content: 'Needs Update: ’;
+	content: "Needs Update: ";
 	font-style: italic;
 	font-weight: bold;
 	color: #41322f;				/* Imarc Wood */
