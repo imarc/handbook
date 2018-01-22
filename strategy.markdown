@@ -1,5 +1,5 @@
 ---
-title: Strategy
+title: Strategy & UX
 layout: default
 ---
 
