@@ -451,7 +451,7 @@ If the meeting is remote, be sure your producer has reserved a conference room, 
 
 <div markdown="1" class="needscontent templates">
 ##### Templates
-We need some sort of template for this, perhaps an anomymized version of [creative.imarc.net/ara](http://creative.imarc.net/ara)?
+TODO: Make a standard template for this
 </div>
 
 
