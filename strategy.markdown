@@ -39,10 +39,10 @@ Your job is to clearly define the project’s final product for both the client 
 This handbook provides a reference for the most frequently needed activities and deliverables. We’ll focus on what their goals are and how we do them, but leave out tool-specific notes (i.e., this is not an OmniGraffle tutorial).
 
 
-## Team Members
+### Team Members
 For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats, and only a few people are needed.
 
-### Producer or Project Manager
+#### Producer or Project Manager
 
 * Sets high-level milestones
 * Consulted on spec and strategy deliverables
@@ -50,7 +50,7 @@ For large projects, the strategy team will include most of the following roles. 
 * Creates change orders when the scope of the strategy phase, or the production work that strategy is defining, changes
 * Responsible for obtaining client approvals
 
-### Strategist
+#### Strategist
 
 * Leads the strategy phase
 * Manages most client meetings
@@ -58,23 +58,23 @@ For large projects, the strategy team will include most of the following roles. 
 * Sets day-to-day tasks and due dates for team
 * Delegates tasks to other team members
 
-### UX Designer
+#### UX Designer
 
 * Produces deliverables and supporting documents
 * Participates in discovery activities
 * Is consulted on functional requirements & specifications
 
-### UX Engineer
+#### UX Engineer
 
 * May participate in discovery and interviews
 * Is consulted on wireframes, functional requirements & specifications
 
-### Designer
+#### Creative Designer
 
 * May participate in discovery and interviews
 * Is consulted on wireframes
 
-### Web Engineer
+#### Web Engineer
 
 * Responsible for engineering/technical research
 * Is consulted on functional requirements & specifications
@@ -82,7 +82,7 @@ For large projects, the strategy team will include most of the following roles. 
 The Designer, Engineer and UX Engineer(s) will stick with the project after the strategy phase is complete. This ensures that the Engineer and Designer are familiar with the plan and are prepared to execute. The UX Engineer provides consistency, shepherding the vision architected during the strategy phase and forged in production.
 
 
-## Process
+### Process
 
 The overall process typically looks something like this:
 
@@ -108,17 +108,17 @@ As you plan the site, keep in mind that not everything must be nailed down in ad
 * Keep the project moving steadily forward, avoiding getting mired in [yak shaving](http://www.hanselman.com/blog/YakShavingDefinedIllGetThatDoneAsSoonAsIShaveThisYak.aspx) or [alligator wrangling](https://en.wiktionary.org/wiki/forget,_when_up_to_one%27s_neck_in_alligators,_that_the_mission_is_to_drain_the_swamp).
 
 
-### The Client's responsibilities:
+#### The Client's responsibilities:
 * Clearly articulate the objectives of the project
 * Review Imarc’s discovery findings
 * Approve deliverables that will guide designers & engineers in creating the website or app
 
-### The Imarc team's responsibilities:
+#### The Imarc team's responsibilities:
 * Help the client clearly articulate the objectives of the project
 * Lead discovery and report findings to clients
 * Define what we’re building next
 
-### Tips
+#### Tips
 
 You don’t have to document how every part of the website or app will be executed. You *do* have to define *what* they will do. Even if it’s not written down, you and the production team should have a good idea of how that will happen; this helps ensure what you are defining is doable in the time provided. If ever in doubt, talk to the person who will do the work!
 
@@ -134,7 +134,7 @@ The exact form of the approval is unimportant; what matters is that you and the 
 Once approved, the deliverable doesn’t change again without a very, very good reason. Because of this, you may find that a client is reluctant to approve a document. That’s fine. Just explain that you cannot proceed to the next stage until they are comfortable approving the document, and try to identify and address whatever it is that worries the client.
 
 
-### Types of Projects, Types of Clients
+#### Types of Projects, Types of Clients
 
 Each client and project will have different audiences, content, goals. However, projects generally fall into one of the following domains:
 
@@ -155,7 +155,7 @@ In this section:
 * Background research & reading
 * Internal hand-off and team briefing
 
-### Purpose of this activity
+#### Purpose of this activity
 Have you ever stood up to speak, with no idea what to say? Yes? That's for wedding toasts. Everybody else does their homework. Before you kick off with the client, you need to have a good understanding of *who* the client is, *what* they are trying to do, and *how* you’re going to help them do it.
 
 ### Background research and reading
@@ -223,18 +223,18 @@ As larger projects often have many goals, yet do not have unlimited time and res
 </div>
 
 
-### Research Activities
+## Research Activities
 Depending on budget and goals, a number of research activities may be incorporated into a project.
 
 Most are *qualitative*, meaning they depend heavily upon the expertise and experience of the researchers—for example, interviews and hallway testing. Some are *quantitative*, meaning they are designed to produce a measurable result — for example, surveys and analytics. Designing meaningful quantitative research takes time, budget and substantial expertise; few projects actually require this, but the ones that do will benefit greatly.
 
 
-####  Interviews
+###  Interviews
 Interviews are an effective way to rapidly gain understanding of a project’s audiences, goals, requirements, constraints, and available resources.
 
 Interviews almost always turn up new information, issues and objectives. Whether you are talking to stakeholders, users, or customers, your job is to understand and document their pain, aspirations and requirements.
 
-##### Stakeholder Interviews
+#### Stakeholder Interviews
 Stakeholder interviews have two objectives:
 
 * Uncover the desires and goals of each decision maker involved in the project
@@ -251,7 +251,7 @@ When estimating time requirements for interviews, be aware that preparing to int
 Some organizations will have people who are in daily contact with users or customers, and have valuable insight into what makes them “tick”. Customer service and technical support teams are often treasure troves of insight, with “on the ground” knowledge dwarfing that of sales and marketing personnel.
 
 
-##### Customer or User Interviews
+#### Customer or User Interviews
 By talking to users or customers, we can learn not just what users are doing, but why. The better we understand their motivations, the better we can fulfill their needs.
 
 Interviews can explore concrete items, such as user interface, document flow, feature importance, technical knowledge, or devices used (pc, tablet, phone…). But to be most effective, interviews should explore more fundamental issues.
@@ -270,7 +270,7 @@ Both internal stakeholder and user interview templates are provided.
 * [Interviewing Users: How to Uncover Compelling Insights, Steve Portigal, 2013](http://www.amazon.com/gp/product/193382011X/)
 </div>
 
-####  Competitive Analysis
+###  Competitive Analysis
 
 You should understand how your client's competitors use their online presences, learn from good practices and avoid their mistakes. Look for patterns and best practices in content, layout, navigation, workflow, SEO, and social media.
 
@@ -285,13 +285,13 @@ You should look for patterns and best practices among:
 Beware! Just because something commonly is done a certain way does not mean it is the *best* way. You should use your own judgement; the goal of a competitive analysis is not to comply with the lowest common denominator, but to *find the very best practices*.
 
 <div markdown="1" class="templates">
-##### Templates and Tools
+#### Templates and Tools
 
 * [//fileserver/files/UX/templates/competitive analysis/](smb://fileserver/files/UX/templates/competitive analysis/)
 * [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider/) is a great tool to help analyze a site from an SEO perspective. Windows/Mac/Linux.
 </div>
 
-####  Surveys
+###  Surveys
 Use surveys to gather information from a large number of participants, yielding quantitative results.
 
 Questions should be close-ended (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, “We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.”
@@ -303,7 +303,7 @@ Watch out for confirmation bias creeping into survey design and interpretation.
 >	*A note on incentives:* Some clients may wish to offer an incentive to participants. When included with the invitation (for example, an Amazon gift code redeemable **regardless of participation**), this can increase participation rates by up to 19%. However, the promise of an incentive after completion has **not** been found to be effective, nor has participation in a lottery or raffle.
 
 <div markdown="1" class="reading">
-##### Recommended Reading
+#### Recommended Reading
 
 * [Smart Survey Design (PDF)](https://s3.amazonaws.com/SurveyMonkeyFiles/SmartSurvey.pdf), SurveyMonkey
 * [Survey Design](http://www.surveysoftware.net/sdesign.htm), Creative Research Systems
@@ -313,7 +313,7 @@ Watch out for confirmation bias creeping into survey design and interpretation.
 </div>
 
 
-####  Web Analytics
+###  Web Analytics
 
 We review web analytics to better inform decisions, and to set a baseline to measure the site's performance in the future. You'll look at user activity, page flows, content popularity, and traffic sources.
 
@@ -338,7 +338,7 @@ Templates needed
 </div>
 
 <div markdown="1" class="reading">
-##### Recommended Reading:
+#### Recommended Reading:
 
 * [Google Analytics: 5 Things You Should Look at Before a Website Redesign](https://www.imarc.com/blog/5_things_Google_Analytics)
 </div>
@@ -353,7 +353,7 @@ Needs description, examples, templates.
 
 
 
-#### Card Sorts
+### Card Sorts
 
 Projects often have many goals, yet do not have unlimited time and resources. A group card sort activity can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
@@ -367,7 +367,7 @@ This technique is also effective at prioritizing **audiences** or **brand attrib
 
 An “open sort” exercise, in which card groups are created on the fly by participants, is very useful for organizing information. (But be aware that *creating* groups and *finding content* in groups are different cognitive tasks; use a tree testing tool such as TreeJack to test content findability, not a card sort.)
 
-<div markdown="1" class="reading">
+<dv markdown="1" class="reading">
 ##### Recommended Reading:
 
 * [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
@@ -386,7 +386,7 @@ Common formats include:
 * **Written findings reports** take the most time to prepare, and the most time for a client to absorb, but allow you to go into greath depth and provide nuanced interpretation. Preparing a written report usually takes as many hours as all the research that preceeded it.
 
 
-##### Templates
+#### Templates
 
 <div markdown="1" class="templates needscontent">
 <p>needs links to examples on fileserver</p>
