@@ -368,10 +368,12 @@ This technique is also effective at prioritizing **audiences** or **brand attrib
 An “open sort” exercise, in which card groups are created on the fly by participants, is very useful for organizing information. (But be aware that *creating* groups and *finding content* in groups are different cognitive tasks; use a tree testing tool such as TreeJack to test content findability, not a card sort.)
 
 <dv markdown="1" class="reading">
-##### Recommended Reading:
+
+#### Recommended Reading:
 
 * [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
 * [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
+
 </div>
 
 
