@@ -386,10 +386,10 @@ Common formats include:
 * **Written findings reports** take the most time to prepare, and the most time for a client to absorb, but allow you to go into greath depth and provide nuanced interpretation. Preparing a written report usually takes as many hours as all the research that preceeded it.
 
 
-<div markdown="1" class="templates needscontent">
 ##### Templates
 
-needs links to examples on fileserver
+<div markdown="1" class="templates needscontent">
+<p>needs links to examples on fileserver</p>
 </div>
 
 
@@ -449,9 +449,9 @@ Meet with the designer before the kickoff to decide who will lead the meeting. U
 
 If the meeting is remote, be sure your producer has reserved a conference room, a dial-in and screen share for you, and has sent the screen share and dial-in to all the client team members.
 
-<div markdown="1" class="needscontent templates">
 ##### Templates
-TODO: Make a standard template for this
+<div markdown="1" class="needscontent templates">
+<p>TODO: Make a standard template for this</p>
 </div>
 
 
@@ -502,8 +502,8 @@ As noted earlier in this document, you'll need to get an approval at some point.
 
 
 
+#### Examples
 <div class="needscontent">
-#### Examples – THESE IMAGES SHOULD BE UDPATED
 <figure markdown="1"><figcaption>Single-page Wireframe</figcaption>
 [![Example Wireframe](img/strategy/wireframe-example.png)](img/strategy/wireframe-example.png)
 </figure>
@@ -512,10 +512,8 @@ As noted earlier in this document, you'll need to get an approval at some point.
 </figure>
 </div>
 
-<div markdown="1" class="needscontent templates">
 ##### Templates
 [//fileserver/files/UX/templates/wireframes/](smb://fileserver/files/UX/templates/wireframes/)
-</div>
 
 <!-- 
 <div markdown="1" class="needscontent">
@@ -528,6 +526,7 @@ As noted earlier in this document, you'll need to get an approval at some point.
 -->
 
 ###  Usability Testing
+
 The best way to find out what does or does not work well is by asking real people to try it.
 
 Common kinds of testing:
@@ -555,12 +554,13 @@ The script helps to ensure consistency; video recording the screen lets us revis
 
 
 
+## Documenting Requirements
+
 <div markdown="1" class="needscontent">
 
-## Documenting Requirements
 * Purpose of the requirements document
-* When to use them, and when not too.
-* Just enough detail.
+* When to use them, and when not too
+* Just enough detail
 * Reviewers (engineers, creatives, PMs, clients)
 * Guiding Client Feedback and Obtaining Approvals
 
@@ -575,7 +575,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 ### Wireframes and Site Maps
 
-[OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is used for site maps and wireframes. In the past, we've also had good results from [Mockingbird](https://gomockingbird.com) and [Balsamiq](http://www.balsamiq.com).
+[OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is our primary tool for creating site maps and wireframes.
 
 We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version from our fileserver.
 
@@ -588,19 +588,19 @@ We frequently use [Google Docs](http://docs.google.com) for collaborative author
 
 We use [Word](http://www.microsoft.com/mac/word) for some documents, but are not great fans of it. We appreciate Word's .docx file format for its superior change tracking capabilities.
 
-Branded templates for Word and Keynote can be downloaded from [our intranet](http://internal.imarc.net/).
+Branded templates for Word and Keynote can be downloaded from the Imarc Google Drive.
 
 
 ### Research and Testing Tools
 
 **Surveys:** [Survey Monkey](http://surveymonkey.com) for user surveys.
 
-**Tree Testing:** [Treejack](http://www.optimalworkshop.com/treejack.htm) for testing content structure and navigation.
+**Tree Testing:** [Treejack](http://www.optimalworkshop.com/treejack.htm) for testing content structure and navigation. Somewhat expensive, so we turn the subscription on when needed, then de-activate.
 
 **Card Sorting:** [OptimalSort](http://www.optimalworkshop.com/optimalsort.htm) is used for remote card sort exercises. ([Here are some others](http://www.measuringux.com/CardSorting/); we haven't yet tried most of them.)
 
-**Screen Recording:** [Camtasia](http://www.techsmith.com/camtasia.html) for conducting in-person user testing. Camtasia records the session screen and audio.
+**Screen Recording:** [Camtasia](http://www.techsmith.com/camtasia.html) is reasonably good for conducting in-person user testing. Camtasia records the session screen and audio.
 
-**Screen Sharing:** [Join.me](http://join.me) for remote user testing (and presentation).
+**Screen Sharing:** [Join.me](http://join.me) for remote user testing, as well as presentation and remote working sessions with clients.
 
 **A/B Testing:** [Optimizely](https://www.optimizely.com/) is our go-to for testing variations of an existing website. (See also this [A/B Test Sample Size Calculator](http://www.evanmiller.org/ab-testing/sample-size.html).)
