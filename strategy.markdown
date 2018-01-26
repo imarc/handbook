@@ -302,7 +302,7 @@ Open-ended surveys can be helpful in specific scenarios, such as to get input fr
 
 Watch out for [confirmation bias](https://www.sciencedaily.com/terms/confirmation_bias.htm) creeping into survey design and interpretation.
 
-*A note on incentives:* Some clients may wish to offer an incentive to participants. When included **with** the invitation (for example, an Amazon gift code redeemable **regardless of participation**), this can increase participation rates by up to 19%. However, the promise of an incentive **after** completion has **not** been found to be effective, nor has entry into a prize lottery.
+*A note on incentives:* Some clients may wish to offer an incentive to participants. When included *with* the invitation (for example, an Amazon gift code redeemable *regardless of participation*), this can increase participation rates by up to 19%. However, the promise of an incentive *after* completion has *not* been found to be effective, nor has entry into a prize lottery.
 
 <div markdown="1" class="reading">
 #### Recommended Reading
