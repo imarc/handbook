@@ -294,17 +294,20 @@ Beware! Just because something commonly is done a certain way does not mean it i
 ###  Surveys
 Use surveys to gather information from a large number of participants, yielding quantitative results.
 
-Questions should be close-ended (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, “We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.”
+Ideally, questions should be close-ended (multiple choice, Yes/No, True/False). This makes it easy for participants to respond, and easier for us to analyze. For example, “We found that 83% of participants prefer to book their ferry ride online between 11am and 2pm on weekdays.”
 
-> *Caution:* Surveys can only answer the questions we know to ask; unlike interviews and usability testing, they rarely produce novel findings.
+Open-ended surveys can be helpful in specific scenarios, such as to get input from stakeholders who cannot attend intervews or meetings. It's not ideal; unlike in an interview, the moderator can't probe answers. And even free responses will tend to answer only the questions that we already know.
 
-Watch out for confirmation bias creeping into survey design and interpretation.
+> Surveys can only answer the questions we know to ask; unlike interviews and usability testing, **they rarely produce novel findings**.
 
->	*A note on incentives:* Some clients may wish to offer an incentive to participants. When included with the invitation (for example, an Amazon gift code redeemable **regardless of participation**), this can increase participation rates by up to 19%. However, the promise of an incentive after completion has **not** been found to be effective, nor has participation in a lottery or raffle.
+Watch out for [confirmation bias](https://www.sciencedaily.com/terms/confirmation_bias.htm) creeping into survey design and interpretation.
+
+*A note on incentives:* Some clients may wish to offer an incentive to participants. When included **with** the invitation (for example, an Amazon gift code redeemable **regardless of participation**), this can increase participation rates by up to 19%. However, the promise of an incentive **after** completion has **not** been found to be effective, nor has entry into a prize lottery.
 
 <div markdown="1" class="reading">
 #### Recommended Reading
 
+* [Don’t Let Your Brain Deceive You: Avoiding Bias In Your UX Feedback](https://www.smashingmagazine.com/2017/10/avoid-bias-ux-feedback/), Smashing magazine
 * [Smart Survey Design (PDF)](https://s3.amazonaws.com/SurveyMonkeyFiles/SmartSurvey.pdf), SurveyMonkey
 * [Survey Design](http://www.surveysoftware.net/sdesign.htm), Creative Research Systems
 * [Questionnaire Design and Surveys Sampling](http://home.ubalt.edu/ntsbarsh/stat-data/Surveys.htm), Prof. Hossein Arsham, University of Baltimore
