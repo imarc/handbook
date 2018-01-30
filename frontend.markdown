@@ -777,8 +777,43 @@ Sometimes, a video will auto-play (without audio) behind HTML content. This is c
 
 ### Image Compression
 
-Whenever you cut up a website, you should use image compression software to crunch the images. Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) comes highly recommended among the Imarc team.
-Always compress your images manually or via an automated task if you’re using a task runner.
+Whenever you cut up a website, you should use image compression software to crunch the images. 
+Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) 
+comes highly recommended among the Imarc team. Always compress your images manually or via an 
+automated task if you’re using a task runner.
+
+### SVG
+
+SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for 
+infinite scaling without sacrificing image quality.
+
+#### Implementation
+
+Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an
+`<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or 
+color variations, “inlining” the SVG is acceptable. To help with document readability, include the 
+file via PHP/etc.
+
+SVG code can be exported directly from Adobe Illustrator via 
+*File > Export > Export As…*
+
+Remove any `doctype`, `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
+takes advantage of the `viewBox` attribute. 
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 61.25 61.25">
+        <g>
+            <g class="c">
+                <path class="circle" d="M30.63,61.25A30.63,30.63,0,0,1,30.63,0C47.8,0,61.25,13,61.25,29.62c0,17.14-14,31.63-30.62,31.63m0-59a28.38,28.38,0,0,0,0,56.75C46,59,59,45.55,59,29.62,59,14.27,46.54,2.25,30.63,2.25"/>
+            </g>
+            <polygon class="x" points="17.8 29.4 29.34 29.4 31.97 29.4 43.45 29.4 43.45 31.85 31.97 31.85 29.34 31.85 17.8 31.85 17.8 29.4"/>
+            <polygon class="y" points="29.4 43.45 29.4 31.91 29.4 29.28 29.4 17.8 31.85 17.8 31.85 29.28 31.85 31.91 31.85 43.45 29.4 43.45"/>
+        </g>
+    </svg>
+
+#### IE11 sizing
+
+IE11 does not always respect SVG size dimensions in fluid-width scenarios. In this scenario, you 
+can [wrap the SVG with a container](https://codepen.io/marcelmoreau/pen/JMJvmg) with pseudo-element 
 
 ### Favicons
 
@@ -810,12 +845,16 @@ Use a 256x256 SVG file for this – setting your icon to black. To set a color f
 The following **philosophy** is paraphrased from our standard proposal language.
 
 * We produce semantic, HTML5-compliant markup, CSS, and scripts.
-* We believe users should be able to consume as much visual and interactive richness as their browser can support.
+* We believe users should be able to consume as much visual and interactive richness as their 
+browser can support.
 * We test against a specific whitelist of mainstream desktop and mobile browsers.
 * We ensure our sites function correctly and look as good as possible on these browsers.
-* We recognize that not every browser functions in the same way and requiring an identical experience imposes false limitations on users with modern more capable browsers.
-* We do not require an *identical experience*. Instead we strive for an *optimal experience* for each user's environment.
-* We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the poject.
+* We recognize that not every browser functions in the same way and requiring an identical 
+experience imposes false limitations on users with modern more capable browsers.
+* We do not require an *identical experience*. Instead we strive for an *optimal experience* for 
+each user’s environment.
+* We recognize that some browsers are incapable of properly rendering standards compliant code. 
+We do not code to support these browsers unless explicitly requested and specified for the project.
 
 ### Desktop Browser Support
 
@@ -893,17 +932,22 @@ face.
 	</tr>
 </table>
 
-By default we do not test on Blackberry or Windows Phone devices. However, individual projects may require browser support beyond our defaults. In these cases the additional support will be specified in the proposal and strategy documents.
+By default we do not test on Blackberry or Windows Phone devices. However, individual projects may 
+require browser support beyond our defaults. In these cases the additional support will be 
+specified in the proposal and strategy documents.
 
 Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
 ### Internet Explorer styles
 
-Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design and functionality. You can target previous versions of Internet Explorer using conditional comments. Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS changes styles are minimal, place them in the project’s main CSS file.
+Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design 
+and functionality. You can target previous versions of Internet Explorer using conditional comments. 
+Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS 
+changes styles are minimal, place them in the project’s main CSS file.
 
 #### Internet Explorer (IE) notes
 * Conditional comments are deprecated in IE10+
-* Imarc _does not support_ IE Compatability Mode
+* Imarc _does not support_ IE Compatibility Mode
 
 ## Accessibility
 
@@ -911,7 +955,9 @@ Use the Baseline Checklist below to ensure an acceptable level of accessibility.
 
 ### ARIA Landmark Roles
 
-ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse areas of a website by their respective landmark role, allowing users to skip over regions that are repeated on every page. Imarc takes advantage of five roles:
+ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse 
+areas of a website by their respective landmark role, allowing users to skip over regions that are 
+repeated on every page. Imarc takes advantage of five roles:
 <ul>
 	<li>
 		<code>banner</code>: A region that contains the prime heading or internal title of a page.
