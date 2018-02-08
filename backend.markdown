@@ -18,9 +18,9 @@ libraries that are meant to be reusable components across many projects. Project
 ## Environment
 
 - Amazon EC2 w/EBS or DigitalOcean
-- Debian 7 (Wheezy)
+- Debian 8 (Jessie)
 - Apache 2.4+
-- PHP 5.5+
+- PHP 7.1+
 - PostgreSQL 9.3+
 
 ## Security
