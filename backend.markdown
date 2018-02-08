@@ -39,6 +39,15 @@ All Engineers must understand and implement the best practices around:
 
 For a very detailed guide to web security issues, view the [OWASP Security Guide](https://www.owasp.org/index.php/Guide_Table_of_Contents)
 
+## Third-Party Code
+
+Any Third-Party Code, being framework or library dependencies for any given project, shall only be used or included if it meets the one of the following conditions:
+
+* It has been licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php), [BSD License](http://www.opensource.org/licenses/bsd-license.php), or [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+* It has been licensed under a separate agreement approved by an officer of Imarc or Imarc’s Director of Engineering.
+
+The purpose of this policy is to ensure that Imarc retains all necessary rights to sell, license and distribute any code developed or maintained during the course of business.
+
 ## Dependency Management
 
 All PHP dependencies are managed by [Composer](https://getcomposer.org/). Get started with Composer by reading their [intro documentation](https://getcomposer.org/doc/00-intro.md). By default, Composer installs all dependencies into a `/vendor` directory within your project.
