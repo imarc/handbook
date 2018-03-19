@@ -476,7 +476,13 @@ Wireframes are useful for rapidly iterating on the underlying functional design 
 
 Wireframes usually are annotated to describe behaviors, functionality, and content needs. 
 
-**Always use real content.** Using Latin text (“lorem ipsum”) will speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well. It bears repeating: **always use real content**.
+#### Guidelines
+
+* **Use real content.** <br> Using Latin text (“lorem ipsum”) will speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well. It bears repeating: **always use real content**.
+* **Set your artboard widths based on your client's web analytics data.** <br> Although you should assume that all projects are responsive unless otherwise noted, you can still get into trouble with too-large a canvas. 
+	* **Getting Data:** If you have no client web analytics data to fall back on, use recent [device resolution data from StatCounter](http://gs.statcounter.com/screen-resolution-stats/desktop/north-america/#monthly-201801-201801-bar). Be sure to filter by appropriate region.
+	* **Or use safe defaults:** Set desktop artboards to 1200px wide, and mobile artboards to 320px wide. (This covers 80% of desktop users, and 85% of mobile.)
+
 
 #### Limitations
 Wireframes aren't perfect. Some common problems (and solutions) include:
