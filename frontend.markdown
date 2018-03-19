@@ -153,6 +153,41 @@ Include a generic font family such as `serif`, `sans-serif`, `cursive`,
 in the stack are unavailable. Imarc uses a handy `$font-stack` SASS variable
 to reference our stack throughout our stylesheet if need be.
 
+
+### Font Awesome
+
+[Font Awesome](https://fontawesome.com) is iconography framework used on nearly all Imarc projects. 
+With version 5, it is powered by JavaScript and SVG. This is a departure from 
+version 4 which was powered by web fonts.
+
+If an Imarc project already utilizes v4, do not mix in v5 icons. Keep them separate if possible.
+
+#### Things To Note
+* v5 is powered by SVG and JavaScript and Font Awesome <a href="https://fontawesome.com/how-to-use/svg-with-js#pseudo-elements">discourages the use of CSS pseudo elements</a> due to speed issues
+* Icons are available in three weights: 
+[light](https://fontawesome.com/icons?d=gallery&s=light), 
+[regular](https://fontawesome.com/icons?d=gallery&s=regular), 
+[solid](https://fontawesome.com/icons?d=gallery&s=solid) – regular and light are often limited
+to Professional tier only
+* v5 has a Free and a Pro tier. Imarc owns a license for the Pro tier
+* The Pro tier has 1,387 additional icons and allows for usage of additional weights
+
+
+#### Getting Started
+* CDN – Log in to fontawesome.com to add a domain name for CDN usage. The URL supplied is custom
+per project
+* NPM – Log in to fontawesome.com to find Imarc’s custom token for use with the private Font Awesome
+NPM registry
+* Using Vue.js? Font Awesome supplies separate 
+<a href="https://fontawesome.com/how-to-use/js-component-packages">documentation for Vue</a>.
+
+#### Using Font Awesome
+v5 uses similar HTML to declare icons (e.g.) `<i class="fas fa-camera-retro"></i>` where `fas` 
+stands for <em>fontawesome solid</em>. Icons inherit their parent’s `color` and `font-size` CSS 
+properties.
+
+<i class="fal fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
+
 ### Web Fonts
 
 Use the following syntax to utilize web fonts with `@font-face`. Based on Imarc
