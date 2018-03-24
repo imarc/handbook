@@ -156,35 +156,43 @@ to reference our stack throughout our stylesheet if need be.
 
 ### Font Awesome
 
-[Font Awesome](https://fontawesome.com) is iconography framework used on nearly all Imarc projects. 
-With version 5, it is powered by JavaScript and SVG. This is a departure from 
-version 4 which was powered by web fonts.
+[Font Awesome](https://fontawesome.com) is an iconography framework used on nearly all Imarc projects. 
+With version 5, it is powered by SVG/JS in addition to traditional web fonts.
 
-If an Imarc project already utilizes v4, do not mix in v5 icons. Keep them separate if possible.
+Imarc owns a <a href="https://fontawesome.com/pro">Professional license</a>, which allows us the use 
+of 1,500+ additional icons. It also allows for use of all icon font-weights (solid, light, regular).
+
+#### Implementation
+There are various ways to get Font Awesome going on your project. You can manually include supplied 
+source files, leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private NPM 
+package</a>, or utilize the CDN.
+
+**Imarc-recommended implementation**
+* Use <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font implementation</a> rather than SVG/JS – it’s considerably smaller in file size and 
+covers nearly all use cases
+* Use the Free-tiered <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font CDN</a> to serve up Font Awesome. The free-tier allows for local 
+development. If you need to use Pro-tier icons, use the Pro CDN link. You will need to add your 
+project’s URL to <a href="https://fontawesome.com/account/services">our Font Awesome Pro CDN 
+Domain list</a>, however and local development may be affected.
+* The HTML that displays icons is similar to v4. Make sure your HTML code includes proper 
+<a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">accessibility 
+information</a> if its required.
+
+    <i class="fas fa-camera-retro" aria-hidden></i>` <i class="fas fa-camera-retro" aria-hidden></i>`
+
+<small>
+    *Decorative icons should include appropriate aria information. Font Awesome 
+    provides an <a href="<a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">">Accessibility guide</a>.*
+</small>
+
 
 #### Things To Note
-* v5 is powered by SVG and JavaScript and Font Awesome <a href="https://fontawesome.com/how-to-use/svg-with-js#pseudo-elements">discourages the use of CSS pseudo elements</a> due to speed issues
-* Icons are available in three weights: 
-[light](https://fontawesome.com/icons?d=gallery&s=light), 
-[regular](https://fontawesome.com/icons?d=gallery&s=regular), 
-[solid](https://fontawesome.com/icons?d=gallery&s=solid) – regular and light are often limited
-to Professional tier only
-* v5 has a Free and a Pro tier. Imarc owns a license for the Pro tier
-* The Pro tier has 1,387 additional icons and allows for usage of additional weights
-
-
-#### Getting Started
-* CDN – Log in to fontawesome.com to add a domain name for CDN usage. The URL supplied is custom
-per project
-* NPM – Log in to fontawesome.com to find Imarc’s custom token for use with the private Font Awesome
-NPM registry
+* If an Imarc project already utilizes v4, do not mix in v5 icons. Keep them separate.
+* SVG/JS style implementation 
+<a href="https://fontawesome.com/how-to-use/svg-with-js#pseudo-elements">discourages the use of CSS pseudo elements</a> due to speed issues
 * Using Vue.js? Font Awesome supplies separate 
 <a href="https://fontawesome.com/how-to-use/js-component-packages">documentation for Vue</a>.
 
-#### Using Font Awesome
-v5 uses similar HTML to declare icons (e.g.) `<i class="fas fa-camera-retro"></i>` where `fas` 
-stands for <em>fontawesome solid</em>. Icons inherit their parent’s `color` and `font-size` CSS 
-properties.
 
 <i class="fal fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
 
