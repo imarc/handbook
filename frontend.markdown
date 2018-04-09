@@ -182,7 +182,7 @@ information</a> if its required.
 
 <small>
     *Decorative icons should include appropriate aria information. Font Awesome 
-    provides an <a href="<a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">">Accessibility guide</a>.*
+    provides an <a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">Accessibility guide</a>.*
 </small>
 
 
@@ -194,7 +194,7 @@ information</a> if its required.
 <a href="https://fontawesome.com/how-to-use/js-component-packages">documentation for Vue</a>.
 
 
-<i class="fal fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
+<i class="far fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
 
 ### Web Fonts
 
