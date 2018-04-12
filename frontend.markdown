@@ -937,18 +937,6 @@ We do not code to support these browsers unless explicitly requested and specifi
 	</tr>
 </table>
 
-As of October 2016, the definitive list includes Chrome and Firefox (Mac &
-Windows), IE 11, Edge, Mac Safari 10, iOS Safari 9, Android Browser (Android
-4.1), and Android Chrome (Android 4.2–4.4).
-
-By default we do not test on IE 6–10. However individual projects may require
-browser support beyond our defaults. In these cases the additional support will
-be specified in the proposal and strategy documents.
-
-One case where this is of particular concern is when a large group of potential
-site users will be using Windows XP or Vista. These users are unable to upgrade
-to current versions of IE, so we should be mindful of the issues they might
-face.
 
 ### Mobile Browser Support
 
@@ -975,9 +963,8 @@ face.
 	</tr>
 </table>
 
-By default we do not test on Blackberry or Windows Phone devices. However, individual projects may 
-require browser support beyond our defaults. In these cases the additional support will be 
-specified in the proposal and strategy documents.
+Individual projects may require browser support beyond our defaults. In these cases the additional 
+support will be specified in the proposal and strategy documents.
 
 Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
