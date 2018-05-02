@@ -931,7 +931,7 @@ We do not code to support these browsers unless explicitly requested and specifi
 		<td class="supported">yes</td>
 	</tr>
 	<tr>
-		<td>Safari 10</td>
+		<td>Safari 11</td>
 		<td class="supported">yes</td>
 		<td></td>
 	</tr>
@@ -947,17 +947,12 @@ We do not code to support these browsers unless explicitly requested and specifi
 		<th>Target Devices</th>
 	</tr>
 	<tr>
-		<td>iOS 9</td>
-		<td>Safari 9</td>
-		<td>4"+ screens, iPads</td>
-	</tr>
-	<tr>
 		<td>iOS 10</td>
 		<td>Safari 10</td>
 		<td>4"+ screens, iPads</td>
 	</tr>
 	<tr>
-		<td>Android 4.4–current</td>
+		<td>Android 6.0–current</td>
 		<td>Chrome</td>
 		<td>4"+ handsets, 7–10" tablets</td>
 	</tr>
