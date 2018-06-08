@@ -40,6 +40,7 @@ This handbook provides a reference for the most frequently needed activities and
 
 
 ### Team Members
+
 For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats, and only a few people are needed.
 
 #### Producer or Project Manager
