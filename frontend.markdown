@@ -796,10 +796,15 @@ implementation:
 
 #### Background Video
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s “hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses <a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for implementing a responsive backround video. Note that we use padding on the `video`’s `::before` pseudo element to achieve our desired aspect ratio.
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s 
+“hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses 
+<a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing 
+and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for 
+implementing a responsive backround video. Note that we use padding on the `video`’s `::before` 
+pseudo element to achieve our desired aspect ratio.
 
     <div class="hero">
-        <video autoplay="autoplay" loop="loop" poster="video-placeholder.jpg">
+        <video autoplay loop="loop" muted poster="video-placeholder.jpg">
             <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
             <source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
         </video>
