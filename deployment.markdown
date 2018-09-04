@@ -240,14 +240,12 @@ in `patton.config`.
 ## Using `deploy`
 
 The `deploy` script has a number of command line flags and parameters to control
-how it runs. This documentation was written when `deploy` was at version **6.0**.
+how it runs.
 
-The `deploy` and `patton.config` files need to live in the same directory on the
-webserver. Before using Patton, you must edit the `patton.config` file and set
-the `DOMAIN_NAME` variable to the top-level domain name for the site. Do **not**
-include `www.`.
+As of Patton 11.0, patton should be cloned/installed to `/usr/lib/patton` and the deploy command should be a symlink to `/usr/lib/patton/deploy`.  This symlink will usually live in `/var/www` or whatever the base directory for your web docs are.
 
-### Initialization (Patton 10.x)
+
+### Initialization
 
 Patton 10+ uses ACLs instead of cludged together `sudo` allowances.  You can
 initialize a new skeleton structure with the following inside of your project's
@@ -277,7 +275,7 @@ unless configured otherwise:
 The simplest operation with Patton is to display the current configuration. This
 is done by calling:
 
-	./deploy -c
+	./deploy -c example.com
 
 The output will contain all of the configuration variables along with their
 currently computed values. Values printed in yellow have been customized in
@@ -289,8 +287,8 @@ computed based on other variables.
 For the Stage and Prod environments, an currently deployed SVN revision is
 stored and can be retrieved:
 
-	./deploy -v stage
-	./deploy -v prod
+	./deploy -v example.com stage
+	./deploy -v example.com prod
 
 It is not possible to display the revision on Dev because the Dev environment is
 editable and will not normally represent an exact SVN revision.
@@ -300,40 +298,28 @@ editable and will not normally represent an exact SVN revision.
 For the Stge and Prod environments it is possible to see the SVN log for the
 revisions that will be deployed:
 
-	./deploy -l stage
-	./deploy -l prod
+	./deploy -l example.com stage
+	./deploy -l example.com prod
 
 ### Deploying
 
 The latest Code and Content can be deployed to any of the three environments.
 
-	./deploy dev
-	./deploy stage
-	./deploy prod
+	./deploy example.com dev
+	./deploy example.com stage
+	./deploy example.com prod
 
 By default deploying to Dev and Stage will deploy the latest revision from
 `/trunk/`. Prod will deploy the revision currently deployed to Stage. This
 ensures that all deployments are tested.
 
-#### Specific Revisions
+#### Deploying Specific Branches & Commit
 
-For the Stage and Dev environments it is possible to deploy any revision that
-is greater or equal to the revision deployed to Prod.
+For the Stage and Dev environments it is possible to deploy any branch or commit that
+is newer than the revision deployed to Prod.
 
-	./deploy dev 876
-	./deploy stage 876
-
-#### Branches
-
-The Dev environment allows for deploying a branch:
-
-	./deploy dev branch_to_deploy
-
-The branch name should be the folder stored under `/branches/`. The example
-above would pull from `/branches/branch_to_deploy`.
-
-It is not possible to deploy a branch to Stage or Prod. Branches must be merged
-into the trunk to deploy to Stage or Prod.
+	./deploy example.com dev example-branch
+	./deploy example.com stage example-branch
 
 ### Content Source
 
