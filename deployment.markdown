@@ -258,15 +258,19 @@ folder:
 You can optionally create the entire project directory by specifying a completely
 new folder:
 
-	./deploy -i /var/www/example.com
+	./deploy -i example.com
+
+In Patton 11+, You can optionally create a platform specific project directory by specifying the new folder as well as a platform:
+
+	./deploy -i example.com craft3
 
 Initialization will perform the following actions on the noted supported systems
 unless configured otherwise:
 
 1. Create basic directory structure
 2. Set access control lists or permissions if `ACLS=0`
-3. Create databases - *PostgreSQL Only*
-4. Set proper privileges on databases - *PostgreSQL 9+ Only*
+3. Create databases
+4. Set proper privileges on databases
 
 ### Show Config
 
