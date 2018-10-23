@@ -985,13 +985,6 @@ Clients are likely going to want to add marketing scripts like Google Analytics 
 
 While clients themselves can apply filters to correct this in the settings of those scripts, we can't count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution. 
 
-For instance in craft: 
-
-    {% set env = getenv('ENVIRONMENT') %} 
-    {% if env == 'prod'%}
-        <!-- Add analytics script here -->
-    {% endif %}
-
 The way of detecting whether the enviroment is production may vary from project to project so it's a good idea to consult the project's dedicated engineer about best way to do so.
 
 ## Accessibility
