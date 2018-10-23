@@ -979,6 +979,21 @@ changes styles are minimal, place them in the project’s main CSS file.
 * Conditional comments are deprecated in IE10+
 * Imarc _does not support_ IE Compatibility Mode
 
+## Analytics or marketing tags.
+
+Clients are likely going to want to add marketing scripts like Google Analytics to their site, but we don't want those scripts gathering data in development or staging enviroments. 
+
+While clients themselves can apply filters to correct this in the settings of those scripts, we can't count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution. 
+
+For instance in craft: 
+
+    {% set env = getenv('ENVIRONMENT') %} 
+    {% if env == 'prod'%}
+        <!-- Add analytics script here -->
+    {% endif %}
+
+The way of detecting whether the enviroment is production may vary from project to project so it's a good idea to consult the project's dedicated engineer about best way to do so.
+
 ## Accessibility
 
 Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
