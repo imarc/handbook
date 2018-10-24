@@ -416,7 +416,7 @@ page or section.
 For a more complete list of naming conventions, see **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)**
 for detailed layout naming conventions.
 
-### CSS Principals
+### CSS Principles
 
 Engineers should strive to make lean, modular classes that can be easily adapted
 to different sections and pages. **If you find yourself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
@@ -979,13 +979,13 @@ changes styles are minimal, place them in the project’s main CSS file.
 * Conditional comments are deprecated in IE10+
 * Imarc _does not support_ IE Compatibility Mode
 
-## Analytics or marketing scripts.
+## External Scripts for Analytics, Marketing, and Plug-ins
 
-Clients are likely going to want to add marketing scripts like Google Analytics to their site, but we don't want those scripts gathering data in development or staging enviroments. 
+Many of our client sites use external scripts such as Google Analytics, HubSpot or Marketo. We should stop those scripts gathering data in development or staging enviroments. 
 
-While clients themselves can apply filters to correct this in the settings of those scripts, we can't count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution. 
+While clients themselves may apply filters to correct this in the settings of those scripts, we can't count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution.
 
-The way of detecting whether the enviroment is production may vary from project to project so it's a good idea to consult the project's dedicated engineer about best way to do so.
+The way of detecting whether the enviroment is production varies from project to project. Consult the project's lead engineer about best way to do this.
 
 ## Accessibility
 
