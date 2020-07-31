@@ -5,7 +5,7 @@ layout: default
 
 <section class="intro">
 	<p>
-		This document outlines Imarc’s creative process and deliverables. <a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		This document outlines Imarc’s creative process and deliverables. <a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm.
 	</p>
 </section>
 
