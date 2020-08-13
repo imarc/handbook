@@ -895,14 +895,12 @@ The following **philosophy** is paraphrased from our standard proposal language.
 * We produce semantic, HTML5-compliant markup, CSS, and scripts.
 * We believe users should be able to consume as much visual and interactive richness as their 
 browser can support.
-* We test against a specific whitelist of mainstream desktop and mobile browsers.
+* We test against a specific set of mainstream desktop and mobile browsers.
 * We ensure our sites function correctly and look as good as possible on these browsers.
 * We recognize that not every browser functions in the same way and requiring an identical 
-experience imposes false limitations on users with modern more capable browsers.
+experience imposes false limitations on users with modern, more capable browsers.
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for 
 each user’s environment.
-* We recognize that some browsers are incapable of properly rendering standards compliant code. 
-We do not code to support these browsers unless explicitly requested and specified for the project.
 
 ### Desktop Browser Support
 
@@ -921,16 +919,6 @@ We do not code to support these browsers unless explicitly requested and specifi
 		<td class="supported" colspan="2">yes</td>
 	</tr>
 	<tr>
-		<td>Internet Explorer 11.0</td>
-		<td></td>
-		<td class="supported">yes</td>
-	</tr>
-    <tr>
-        <td colspan="3" style="box-shadow: inset 0 0 0 2px #FF675B;">
-            <strong>Imarc does not support Internet Explorer’s “Compatibility View” in any form</strong>
-        </td>
-    </tr>
-	<tr>
 		<td>Microsoft Edge (stable)</td>
 		<td></td>
 		<td class="supported">yes</td>
@@ -941,6 +929,8 @@ We do not code to support these browsers unless explicitly requested and specifi
 		<td></td>
 	</tr>
 </table>
+
+_** We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the project (IE11, for example)._
 
 
 ### Mobile Browser Support
