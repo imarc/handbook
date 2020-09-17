@@ -5,7 +5,7 @@ This is the source for the Imarc Handbook. All changes, pull requests, etc.
 should always be done against the *gh-pages* branch.
 
 Handbook uses gh-pages and can be viewed locally using [Jekyll](https://jekyllrb.com/). Install 
-Jekyll and run `jekyll serve` within the project directory.
+Jekyll and run `bundle exec jekyll serve` within the project directory.
 
 Just show me the Handbook
 -------------------------
