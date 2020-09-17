@@ -4,14 +4,9 @@
 	{% endif %}
 {% endfor %}
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
-<!--[if gte IE 9]><!-->
 <html lang="en">
-<!--<![endif]-->
 	<head>
 		<meta charset="UTF-8" />
-
-		<base href="https://handbook.imarc.com" />
 
 		<title>{{ page.title }} Handbook | Imarc’s Coding Standards &amp; Best Practices</title>
 		<meta name="description" content="{{ page.title }} Handbook of Standards &amp; Best Practices for coding and web design. By Imarc, A Digital Agency" />
@@ -30,7 +25,7 @@
 		<div class="header_container" id="top">
 			<header class="group container primary">
 				<div class="branding">
-					<a href="https://handbook.imarc.com">
+					<a href="/">
 						<img src="img/logo.png" alt="Handbook" />
 					</a>
 				</div>
@@ -43,7 +38,7 @@
 								{% assign class = '' %}
 							{% endif %}
 							<li class="{{ class }}">
-							<a href="{{ link.relative_url }}">{{ link.text }}</a>
+								<a href="{{ link.relative_url }}">{{ link.text }}</a>
 							</li>
 						{% endfor %}
 					</ul>

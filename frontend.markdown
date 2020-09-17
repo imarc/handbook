@@ -1,6 +1,7 @@
 ---
 title: Frontend
 layout: default
+permalink: foo
 ---
 
 <section class="intro">
