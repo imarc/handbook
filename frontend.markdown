@@ -1,7 +1,6 @@
 ---
 title: Frontend
 layout: default
-permalink: foo
 ---
 
 <section class="intro">
@@ -157,41 +156,41 @@ to reference our stack throughout our stylesheet if need be.
 
 ### Font Awesome
 
-[Font Awesome](https://fontawesome.com) is an iconography framework used on nearly all Imarc projects. 
+[Font Awesome](https://fontawesome.com) is an iconography framework used on nearly all Imarc projects.
 With version 5, it is powered by SVG/JS in addition to traditional web fonts.
 
-Imarc owns a <a href="https://fontawesome.com/pro">Professional license</a>, which allows us the use 
+Imarc owns a <a href="https://fontawesome.com/pro">Professional license</a>, which allows us the use
 of 1,500+ additional icons. It also allows for use of all icon font-weights (solid, light, regular).
 
 #### Implementation
-There are various ways to get Font Awesome going on your project. You can manually include supplied 
-source files, leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private NPM 
+There are various ways to get Font Awesome going on your project. You can manually include supplied
+source files, leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private NPM
 package</a>, or utilize the CDN.
 
 **Imarc-recommended implementation**
-* Use <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font implementation</a> rather than SVG/JS – it’s considerably smaller in file size and 
+* Use <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font implementation</a> rather than SVG/JS – it’s considerably smaller in file size and
 covers nearly all use cases
-* Use the Free-tiered <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font CDN</a> to serve up Font Awesome. The free-tier allows for local 
-development. If you need to use Pro-tier icons, use the Pro CDN link. You will need to add your 
-project’s URL to <a href="https://fontawesome.com/account/services">our Font Awesome Pro CDN 
+* Use the Free-tiered <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font CDN</a> to serve up Font Awesome. The free-tier allows for local
+development. If you need to use Pro-tier icons, use the Pro CDN link. You will need to add your
+project’s URL to <a href="https://fontawesome.com/account/services">our Font Awesome Pro CDN
 Domain list</a>, however and local development may be affected.
-* The HTML that displays icons is similar to v4. Make sure your HTML code includes proper 
-<a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">accessibility 
+* The HTML that displays icons is similar to v4. Make sure your HTML code includes proper
+<a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">accessibility
 information</a> if its required.
 
     <i class="fas fa-camera-retro" aria-hidden></i>` <i class="fas fa-camera-retro" aria-hidden></i>`
 
 <small>
-    *Decorative icons should include appropriate aria information. Font Awesome 
+    *Decorative icons should include appropriate aria information. Font Awesome
     provides an <a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">Accessibility guide</a>.*
 </small>
 
 
 #### Things To Note
 * If an Imarc project already utilizes v4, do not mix in v5 icons. Keep them separate.
-* SVG/JS style implementation 
+* SVG/JS style implementation
 <a href="https://fontawesome.com/how-to-use/svg-with-js#pseudo-elements">discourages the use of CSS pseudo elements</a> due to speed issues
-* Using Vue.js? Font Awesome supplies separate 
+* Using Vue.js? Font Awesome supplies separate
 <a href="https://fontawesome.com/how-to-use/js-component-packages">documentation for Vue</a>.
 
 
@@ -206,21 +205,21 @@ appropriate `font-style` and `font-weight` for each while using the same `font-f
 
     @font-face {
         font-family: 'Roboto Slab';
-        src: url('RobotoSlab-Light-webfont.woff') format('woff'),  
+        src: url('RobotoSlab-Light-webfont.woff') format('woff'),
         font-weight: 100;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Roboto Slab';
-        src: url('RobotoSlab-Medium-webfont.woff') format('woff'),  
+        src: url('RobotoSlab-Medium-webfont.woff') format('woff'),
         font-weight: 300;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Roboto Slab';
-        src: url('RobotoSlab-Bold-webfont.woff') format('woff'),  
+        src: url('RobotoSlab-Bold-webfont.woff') format('woff'),
         font-weight: 700;
         font-style: normal;
     }
@@ -797,11 +796,11 @@ implementation:
 
 #### Background Video
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s 
-“hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses 
-<a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing 
-and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for 
-implementing a responsive backround video. Note that we use padding on the `video`’s `::before` 
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s
+“hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses
+<a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing
+and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for
+implementing a responsive backround video. Note that we use padding on the `video`’s `::before`
 pseudo element to achieve our desired aspect ratio.
 
     <div class="hero">
@@ -826,28 +825,28 @@ pseudo element to achieve our desired aspect ratio.
 
 ### Image Compression
 
-Whenever you cut up a website, you should use image compression software to crunch the images. 
-Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) 
-comes highly recommended among the Imarc team. Always compress your images manually or via an 
+Whenever you cut up a website, you should use image compression software to crunch the images.
+Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/)
+comes highly recommended among the Imarc team. Always compress your images manually or via an
 automated task if you’re using a task runner.
 
 ### SVG
 
-SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for 
+SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for
 infinite scaling without sacrificing image quality.
 
 #### Implementation
 
 Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an
-`<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or 
-color variations, “inlining” the SVG is acceptable. To help with document readability, include the 
+`<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or
+color variations, “inlining” the SVG is acceptable. To help with document readability, include the
 file via PHP/etc.
 
-SVG code can be exported directly from Adobe Illustrator via 
+SVG code can be exported directly from Adobe Illustrator via
 *File > Export > Export As…*
 
 Remove any `doctype`, `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
-takes advantage of the `viewBox` attribute. 
+takes advantage of the `viewBox` attribute.
 
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 61.25 61.25">
         <g>
@@ -861,8 +860,8 @@ takes advantage of the `viewBox` attribute.
 
 #### IE11 sizing
 
-IE11 does not always respect SVG size dimensions in fluid-width scenarios. In this scenario, you 
-can [wrap the SVG with a container](https://codepen.io/marcelmoreau/pen/JMJvmg) with pseudo-element 
+IE11 does not always respect SVG size dimensions in fluid-width scenarios. In this scenario, you
+can [wrap the SVG with a container](https://codepen.io/marcelmoreau/pen/JMJvmg) with pseudo-element
 
 ### Favicons
 
@@ -894,13 +893,13 @@ Use a 256x256 SVG file for this – setting your icon to black. To set a color f
 The following **philosophy** is paraphrased from our standard proposal language.
 
 * We produce semantic, HTML5-compliant markup, CSS, and scripts.
-* We believe users should be able to consume as much visual and interactive richness as their 
+* We believe users should be able to consume as much visual and interactive richness as their
 browser can support.
 * We test against a specific set of mainstream desktop and mobile browsers.
 * We ensure our sites function correctly and look as good as possible on these browsers.
-* We recognize that not every browser functions in the same way and requiring an identical 
+* We recognize that not every browser functions in the same way and requiring an identical
 experience imposes false limitations on users with modern, more capable browsers.
-* We do not require an *identical experience*. Instead we strive for an *optimal experience* for 
+* We do not require an *identical experience*. Instead we strive for an *optimal experience* for
 each user’s environment.
 
 ### Desktop Browser Support
@@ -954,16 +953,16 @@ _** We recognize that some browsers are incapable of properly rendering standard
 	</tr>
 </table>
 
-Individual projects may require browser support beyond our defaults. In these cases the additional 
+Individual projects may require browser support beyond our defaults. In these cases the additional
 support will be specified in the proposal and strategy documents.
 
 Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
 ### Internet Explorer styles
 
-Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design 
-and functionality. You can target previous versions of Internet Explorer using conditional comments. 
-Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS 
+Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design
+and functionality. You can target previous versions of Internet Explorer using conditional comments.
+Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS
 changes styles are minimal, place them in the project’s main CSS file.
 
 #### Internet Explorer (IE) notes
@@ -972,7 +971,7 @@ changes styles are minimal, place them in the project’s main CSS file.
 
 ## External Scripts for Analytics, Marketing, and Plug-ins
 
-Many of our client sites use external scripts such as Google Analytics, HubSpot or Marketo. We should stop those scripts gathering data in development or staging enviroments. 
+Many of our client sites use external scripts such as Google Analytics, HubSpot or Marketo. We should stop those scripts gathering data in development or staging enviroments.
 
 While clients themselves may apply filters to correct this in the settings of those scripts, we can't count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution.
 
@@ -984,8 +983,8 @@ Use the Baseline Checklist below to ensure an acceptable level of accessibility.
 
 ### ARIA Landmark Roles
 
-ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse 
-areas of a website by their respective landmark role, allowing users to skip over regions that are 
+ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse
+areas of a website by their respective landmark role, allowing users to skip over regions that are
 repeated on every page. Imarc takes advantage of five roles:
 <ul>
 	<li>

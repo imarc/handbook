@@ -3,3 +3,5 @@ css/.DS_Store
 .DS_Store
 .rvmrc
 .jekyll-cache
+node_modules
+mix-manifest.json
