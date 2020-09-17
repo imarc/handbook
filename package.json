@@ -1,0 +1,29 @@
+{
+  "name": "imarc-handbook",
+  "version": "1.0.0",
+  "description": "Handbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run dev -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imarc/handbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imarc/handbook/issues"
+  },
+  "homepage": "https://github.com/imarc/handbook#readme",
+  "devDependencies": {
+    "laravel-mix": "^5.0.5",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
+}

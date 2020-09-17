@@ -13,5 +13,9 @@ If you don’t have [Bundler](https://rubygems.org/gems/bundler), install it via
 
 Run `bundle install`
 
-Serve Handbook locally via `bundle exec jekyll serve`.
+Serve Handbook locally via `bundle exec jekyll serve`
 
+Run `npm i` to install packages that power Sass compilation `npm run watch`
+
+## Deployment
+Commit and push to `gh-pages`
