@@ -106,7 +106,7 @@ As you plan the site, keep in mind that not everything must be nailed down in ad
 * Make sure the client understands what they are asking the designers and engineers to create
 * Make sure the client can produce their assigned content or functions as well
 * Identify risk points and fallback positions
-* Keep the project moving steadily forward, avoiding getting mired in [yak shaving](http://www.hanselman.com/blog/YakShavingDefinedIllGetThatDoneAsSoonAsIShaveThisYak.aspx) or [alligator wrangling](https://en.wiktionary.org/wiki/forget,_when_up_to_one%27s_neck_in_alligators,_that_the_mission_is_to_drain_the_swamp).
+* Keep the project moving steadily forward, avoiding getting mired in [yak shaving](https://www.hanselman.com/blog/YakShavingDefinedIllGetThatDoneAsSoonAsIShaveThisYak.aspx) or [alligator wrangling](https://en.wiktionary.org/wiki/forget,_when_up_to_one%27s_neck_in_alligators,_that_the_mission_is_to_drain_the_swamp).
 
 
 #### The Client's responsibilities:
@@ -268,7 +268,7 @@ Both internal stakeholder and user interview templates are provided.
 <div markdown="1" class="reading">
 ##### Recommended Reading
 
-* [Interviewing Users: How to Uncover Compelling Insights, Steve Portigal, 2013](http://www.amazon.com/gp/product/193382011X/)
+* [Interviewing Users: How to Uncover Compelling Insights, Steve Portigal, 2013](https://www.amazon.com/gp/product/193382011X/)
 </div>
 
 ###  Competitive Analysis
@@ -310,9 +310,9 @@ Watch out for [confirmation bias](https://www.sciencedaily.com/terms/confirmatio
 
 * [Don’t Let Your Brain Deceive You: Avoiding Bias In Your UX Feedback](https://www.smashingmagazine.com/2017/10/avoid-bias-ux-feedback/), Smashing magazine
 * [Smart Survey Design (PDF)](https://s3.amazonaws.com/SurveyMonkeyFiles/SmartSurvey.pdf), SurveyMonkey
-* [Survey Design](http://www.surveysoftware.net/sdesign.htm), Creative Research Systems
-* [Questionnaire Design and Surveys Sampling](http://home.ubalt.edu/ntsbarsh/stat-data/Surveys.htm), Prof. Hossein Arsham, University of Baltimore
-* [Statistics Tutorial](http://www.statisticallysignificantconsulting.com/Statistics101.htm), Steve Creech, Statistically Significant Consulting
+* [Survey Design](https://www.surveysoftware.net/sdesign.htm), Creative Research Systems
+* [Questionnaire Design and Surveys Sampling](https://home.ubalt.edu/ntsbarsh/stat-data/Surveys.htm), Prof. Hossein Arsham, University of Baltimore
+* [Statistics Tutorial](https://www.statisticallysignificantconsulting.com/Statistics101.htm), Steve Creech, Statistically Significant Consulting
 * [Using Incentives in Survey Research](https://www.statpac.com/surveys/incentives.htm), StatPac
 </div>
 
@@ -329,7 +329,7 @@ We review web analytics to better inform decisions, and to set a baseline to mea
 + **Visitor Technology:** Browsers and versions, commonest devices
 + **Traffic Sources and Search Keywords:** Relative mix of traffic sources, keywords used in organic search
 + **Events:** Correlate offline events to visits or conversions
-+ **SEO:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [Imarc Wiki: SEO](http://wiki.imarc.net/SEO) for guidance.)
++ **SEO:** Audit use (and mis-use) of meta description tags, title tags, headlines, image alt text, sitemap.xml health, 301 redirects, appropirate use of keyword. (See [Imarc Wiki: SEO](https://wiki.imarc.net/SEO) for guidance.)
 
 We also identify the most important performance metrics that the client should follow in the future. The exact metrics will vary from project to project, but in general we will define several general and specific indicators:
 
@@ -363,7 +363,7 @@ Projects often have many goals, yet do not have unlimited time and resources. A 
 
 A small-group card sort is performed in person with the core client team (3–6 people). Cards are prepared in advance with all known project goals, and blanks are available to create new ones. The team is asked to sort the goals into groups (typically “High”, “Medium”, and “Low”). Not only do priorities emerge, but the conversation within the client team clarifies why cards go into each group.
 
-![Sample card sort](http://handbook.imarc.net/img/strategy/cardsort.jpg)
+![Sample card sort](/img/strategy/cardsort.jpg)
 
 If the stakeholder group is very large or geographically scattered, an online card sort may be appropriate. This also allows us to segment participants into “core” and “advisory” groups for separate analysis; if significant differences are found, this should be immediately raised and addressed with the client.
 
@@ -374,8 +374,8 @@ An “open sort” exercise, in which card groups are created on the fly by part
 <div markdown="1" class="reading">
 #### Recommended Reading:
 
-* [Card Sorting: Mistakes Made and Lessons Learned](http://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
-* [Open Card Sort Analysis 101](http://www.uxbooth.com/articles/open-card-sort-analysis-101/)
+* [Card Sorting: Mistakes Made and Lessons Learned](https://www.uxmatters.com/mt/archives/2007/09/card-sorting-mistakes-made-and-lessons-learned.php)
+* [Open Card Sort Analysis 101](https://www.uxbooth.com/articles/open-card-sort-analysis-101/)
 </div>
 
 
@@ -463,7 +463,7 @@ If the meeting is remote, be sure your producer has reserved a conference room, 
 <!--
 - Strengths and Weaknesses, When to use or not use
 - Content considerations
-- Process: [wiki.imarc.net/Wireframe_Process](http://wiki.imarc.net/Wireframe_Process)
+- Process: [wiki.imarc.net/Wireframe_Process](https://wiki.imarc.net/Wireframe_Process)
 -->
 
 A wireframe is a low fidelity representation of a design that connects the underlying conceptual structure (information architecture) to the visual design of the website. A wireframe should clearly show:
@@ -481,7 +481,7 @@ Wireframes usually are annotated to describe behaviors, functionality, and conte
 
 * **Use real content.** <br> Using Latin text (“lorem ipsum”) will speed up your wireframing, but it allows you (and your client) to skip thinking through content needs. That rarely turns out well. It bears repeating: **always use real content**.
 * **Set your artboard widths based on your client's web analytics data.** <br> Although you should assume that all projects are responsive unless otherwise noted, you can still get into trouble with too-large a canvas. 
-	* **Getting Data:** If you have no client web analytics data to fall back on, use recent [device resolution data from StatCounter](http://gs.statcounter.com/screen-resolution-stats/desktop/north-america/#monthly-201801-201801-bar). Be sure to filter by appropriate region.
+	* **Getting Data:** If you have no client web analytics data to fall back on, use recent [device resolution data from StatCounter](https://gs.statcounter.com/screen-resolution-stats/desktop/north-america/#monthly-201801-201801-bar). Be sure to filter by appropriate region.
 	* **Or use safe defaults:** Set desktop artboards to 1200px wide, and mobile artboards to 320px wide. (This covers 80% of desktop users, and 85% of mobile.)
 
 
@@ -547,18 +547,18 @@ Common kinds of testing:
 
 When planning a structured usability test, it’s best to start with a list of questions that need answering, such as “can users easily sign up for a workshop?” or “does breaking the checkout into three steps make it easier to use than the current site?”
 
-Next, create a formal task list and script, recruit up to 5 users ([at most](http://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
+Next, create a formal task list and script, recruit up to 5 users ([at most](https://www.nngroup.com/articles/how-many-test-users/)), and one at a time sit with each of them in front of a computer and ask them to perform specific tasks. One person runs the test, being as careful as possible not to lead the tester; other team members may observe by screen-share and one-way audio.
 
 The script helps to ensure consistency; video recording the screen lets us revisit the tests.
 
-![Marcel Moreau conducting user testing](http://handbook.imarc.net/img/strategy/user-testing-live.jpg)
+![Marcel Moreau conducting user testing](/img/strategy/user-testing-live.jpg)
 
 <div markdown="1" class="reading">
 #### Recommended Reading:
 
-* [Rocket Surgery Made Easy](http://www.sensible.com/rsme.html), Steve Krug
-* [Traveling Usability Lab](http://www.nngroup.com/articles/traveling-usability-lab/), Jakob Nielsen
-* [How Many Test Users in a Usability Study?](http://www.nngroup.com/articles/how-many-test-users/), Jakob Nielsen
+* [Rocket Surgery Made Easy](https://www.sensible.com/rsme.html), Steve Krug
+* [Traveling Usability Lab](https://www.nngroup.com/articles/traveling-usability-lab/), Jakob Nielsen
+* [How Many Test Users in a Usability Study?](https://www.nngroup.com/articles/how-many-test-users/), Jakob Nielsen
 </div>
 
 
@@ -585,32 +585,32 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 ### Wireframes and Site Maps
 
-[OmniGraffle Pro](http://www.omnigroup.com/products/omnigraffle) is our primary tool for creating site maps and wireframes.
+[OmniGraffle Pro](https://www.omnigroup.com/products/omnigraffle) is our primary tool for creating site maps and wireframes.
 
 We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version from our fileserver.
 
 
 ### Documents
 
-[Keynote](http://www.apple.com/iwork/keynote/) is our preferred on-screen presentation tool. If cross-platform compatibility will be required, we use PowerPoint. ([Reveal.js](http://lab.hakim.se/reveal-js/#/) is handy for web-based presentations, but HTML & CSS knowledge is a prerequisite.)
+[Keynote](https://www.apple.com/iwork/keynote/) is our preferred on-screen presentation tool. If cross-platform compatibility will be required, we use PowerPoint. ([Reveal.js](https://lab.hakim.se/reveal-js/#/) is handy for web-based presentations, but HTML & CSS knowledge is a prerequisite.)
 
-We frequently use [Google Docs](http://docs.google.com) for collaborative authoring and editing. Google Docs should not be created or edited using personal accounts; *only* use your imarc.com account.
+We frequently use [Google Docs](https://docs.google.com) for collaborative authoring and editing. Google Docs should not be created or edited using personal accounts; *only* use your imarc.com account.
 
-We use [Word](http://www.microsoft.com/mac/word) for some documents, but are not great fans of it. We appreciate Word's .docx file format for its superior change tracking capabilities.
+We use [Word](https://www.microsoft.com/mac/word) for some documents, but are not great fans of it. We appreciate Word's .docx file format for its superior change tracking capabilities.
 
 Branded templates for Word and Keynote can be downloaded from the Imarc Google Drive.
 
 
 ### Research and Testing Tools
 
-**Surveys:** [Survey Monkey](http://surveymonkey.com) for user surveys.
+**Surveys:** [Survey Monkey](https://surveymonkey.com) for user surveys.
 
-**Tree Testing:** [Treejack](http://www.optimalworkshop.com/treejack.htm) for testing content structure and navigation. Somewhat expensive, so we turn the subscription on when needed, then de-activate.
+**Tree Testing:** [Treejack](https://www.optimalworkshop.com/treejack.htm) for testing content structure and navigation. Somewhat expensive, so we turn the subscription on when needed, then de-activate.
 
-**Card Sorting:** [OptimalSort](http://www.optimalworkshop.com/optimalsort.htm) is used for remote card sort exercises. ([Here are some others](http://www.measuringux.com/CardSorting/); we haven't yet tried most of them.)
+**Card Sorting:** [OptimalSort](https://www.optimalworkshop.com/optimalsort.htm) is used for remote card sort exercises. ([Here are some others](https://www.measuringux.com/CardSorting/); we haven't yet tried most of them.)
 
-**Screen Recording:** [Camtasia](http://www.techsmith.com/camtasia.html) is reasonably good for conducting in-person user testing. Camtasia records the session screen and audio.
+**Screen Recording:** [Camtasia](https://www.techsmith.com/camtasia.html) is reasonably good for conducting in-person user testing. Camtasia records the session screen and audio.
 
-**Screen Sharing:** [Join.me](http://join.me) for remote user testing, as well as presentation and remote working sessions with clients.
+**Screen Sharing:** [Join.me](https://join.me) for remote user testing, as well as presentation and remote working sessions with clients.
 
-**A/B Testing:** [Optimizely](https://www.optimizely.com/) is our go-to for testing variations of an existing website. (See also this [A/B Test Sample Size Calculator](http://www.evanmiller.org/ab-testing/sample-size.html).)
+**A/B Testing:** [Optimizely](https://www.optimizely.com/) is our go-to for testing variations of an existing website. (See also this [A/B Test Sample Size Calculator](https://www.evanmiller.org/ab-testing/sample-size.html).)

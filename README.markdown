@@ -1,15 +1,17 @@
-Handbook
-========
+# Handbook
 
-This is the source for the Imarc Handbook. All changes, pull requests, etc.
-should always be done against the *gh-pages* branch.
+https://handbook.imarc.com
 
-Handbook uses gh-pages and can be viewed locally using [Jekyll](https://jekyllrb.com/). Install 
-Jekyll and run `bundle exec jekyll serve` within the project directory.
+This is the source for Imarc Handbook. All changes, pull requests, etc. should be done against the *gh-pages* branch.
 
-Just show me the Handbook
--------------------------
+## Development
+You can update Handbook by pushing to `gh-pages`, but you should work locally first, previewing your changes.
 
-You can see the Imarc Handbook at
+Handbook uses [GitHub Pages](https://pages.github.com) and can be viewed locally using [Jekyll](https://jekyllrb.com).
 
-+ https://handbook.imarc.com/
+If you don’t have [Bundler](https://rubygems.org/gems/bundler), install it via `gem install bundler` (you only need to do this once)
+
+Run `bundle install`
+
+Serve Handbook locally via `bundle exec jekyll serve`.
+
