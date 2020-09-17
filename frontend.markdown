@@ -14,43 +14,40 @@ layout: default
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great
 starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and SCSS.
 
-## Dependency Management
+## NPM
 
-All JS dependencies are managed by [npm](https://www.npmjs.com/). Get started with `npm` by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `/node_modules` directory within your project.
+All JavaScript dependencies are managed by [npm](https://www.npmjs.com). Get started with `npm` by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `/node_modules` directory within your project.
 
 - Project and library code should never have the `/node_modules` directory committed.
 - **Project** code SHOULD commit the `package-lock.json` file.
 - **Library** code SHOULD NOT commit the `package-lock.json` file.
 
-To ignore the `/node_modules` directory, the following line should be added to your `.gitignore`
+## Module Bundling / Asset Compilation
+Imarc often uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) to handle JavaScript module bundling. Asset compilation (Sass), etc is an included feature. Reference Boilerplate for Laravel Mix configs.
 
-	node_modules
+## Doctype, Validation, Meta
 
-## Doctype
-
+### Doctype
 Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype.
 
     <!DOCTYPE html>
 
-It’s important to understand your project’s technical specification. Some advanced HTML5 technologies may not function correctly in older browsers. If you choose to use advanced HTML5 elements such as `meter` and `picture`, use [Modernizr](http://modernizr.com), a feature detection library that assists with gracefully degrading your project for users with legacy browsers. In short, use **feature detection** and never use **browser detection**.
-
-Modernizr detects what the browser’s rendering engine supports, allowing you to react appropriately to differing support scenarios.
-
-
 ### Validation
-
 A concerted effort should be made to ensure your HTML and CSS validate. Markup should
 be semantic and well-formed and contain all required attributes. Elements should occur
 within the proper context of the DOCTYPE.
 
-* [W3C HTML Markup Validator](http://validator.w3.org/)
+* [W3C HTML Markup Validator](http://validator.w3.org)
 * [W3C CSS Validator](http://jigsaw.w3.org/css-validator)
 
-## Metadata content
+### Metadata
+Include the following meta tag in the head to credit Imarc.
 
-### Page Titles
+	<meta name="web_author" content="Imarc, A Digital Agency | Boston + Silicon Valley | more info at imarc.com" />
 
-Title tags should contain descriptive information that concisely describes the current
+#### Titles
+
+Titles should contain descriptive information that concisely describes the current
 page. In the case of nested pages, information in the title tag should be ordered from
 most specific to least specific. A standard delimiter such as `–` or `|` should be employed
 to indicate distinct content levels.
@@ -58,14 +55,14 @@ to indicate distinct content levels.
 	<title>Support - Contact | Imarc Web Design: Boston + Silicon Valley</title>
 
 This shows that I’m on the page called *Support*. That page lives in a section called *Contact*
-which resides in a website for *Imarc* . Titles are adjusted to meet SEO needs.
+which resides in a website for *Imarc*. Titles are adjusted to meet SEO needs.
 
 The homepage should include the site or company name, followed by a simple description
 of the entire website.
 
 	<title>Imarc | Web Design and Digital Agency in Boston + Silicon Valley</title>
 
-### Meta Description
+#### Description
 
 A quality meta description can help in higher clickthroughs. Ideally, all pages
 include a unique meta description – a concise, human-readable description of that
@@ -83,12 +80,6 @@ If no meta description exists, Google will create its own from on-page content.
 Keep meta descriptions less than 160 characters. Here is an example meta description for Imarc’s Blog page.
 
 	<meta name="description" content="Our blog features the latest in web design, development, user experience and marketing." />
-
-### Imarc Credits
-
-Include the following meta tag in the head to credit Imarc.
-
-	<meta name="web_author" content="Imarc, A Digital Agency | Boston + Silicon Valley | more info at imarc.com" />
 
 ### Character Encoding
 
@@ -117,28 +108,23 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 
 ## Typography
 
-The default type size and font for a site should be set on the `html` element.
+The default font-size and font-family for a site can be set on the `body` element. To help prevent adjustments of font-size after iOS orientation changes, use `-webkit-text-size-adjust: 100%`.
 
-    html {
+    body {
         font-family: Arial, Helvetica, serif;
-        font-size: 16px;
+        font-size: 1rem;
+        -webkit-text-size-adjust: 100%;
     }
 
 Do not set sizes on unclassed markup that typically should be rendered as
 the default text size. This includes `p`, `li`, `div`, `td`, `a`.
 
-Aside from the initial `html` font-size declaration, use `rem` (root relative) units to set type size. With 16px as a base size: 1rem = 16px; 1.25rem = 20px; 2rem = 32px. Leading, or `line-height`, should be a unitless measure.
-
-    h1 {
-        font-size: 2.5rem;
-        line-height: 1.3;
-        margin-bottom: 1.25rem;
-    }
+With 1rem as a base size: 1rem = 16px; 1.25rem = 20px; 2rem = 32px. Leading, or `line-height`, should be a unitless measure (e.g. `line-height: 1.5`)
 
 ### Font Stacks
 
 Specify font families using font stacks. This provides appropriate fall-back
-fonts to handle when a specified font may not be available.
+choices to user agents.
 
 Default **serif** font stack:
 
@@ -149,18 +135,14 @@ Default **sans-serif** font stack:
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 Include a generic font family such as `serif`, `sans-serif`, `cursive`,
-`fantasy`, or `monospace`. This provides a fallback in case all other fonts
-in the stack are unavailable. Imarc uses a handy `$font-stack` SASS variable
-to reference our stack throughout our stylesheet if need be.
+`fantasy`, or `monospace`. Imarc often uses a handy `$font-stack` Sass variable.
 
 
 ### Font Awesome
 
-[Font Awesome](https://fontawesome.com) is an iconography framework used on nearly all Imarc projects.
-With version 5, it is powered by SVG/JS in addition to traditional web fonts.
+[Font Awesome](https://fontawesome.com) is an iconography framework used on many Imarc projects.
 
-Imarc owns a <a href="https://fontawesome.com/pro">Professional license</a>, which allows us the use
-of 1,500+ additional icons. It also allows for use of all icon font-weights (solid, light, regular).
+Imarc owns a <a href="https://fontawesome.com/pro">professional license</a> and you can find credentials in [LastPass](https://lastpass.com).
 
 #### Implementation
 There are various ways to get Font Awesome going on your project. You can manually include supplied
@@ -168,67 +150,14 @@ source files, leverage a <a href="https://fontawesome.com/how-to-use/use-with-no
 package</a>, or utilize the CDN.
 
 **Imarc-recommended implementation**
-* Use <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font implementation</a> rather than SVG/JS – it’s considerably smaller in file size and
-covers nearly all use cases
-* Use the Free-tiered <a href="https://fontawesome.com/get-started/web-fonts-with-css">Web Font CDN</a> to serve up Font Awesome. The free-tier allows for local
-development. If you need to use Pro-tier icons, use the Pro CDN link. You will need to add your
-project’s URL to <a href="https://fontawesome.com/account/services">our Font Awesome Pro CDN
-Domain list</a>, however and local development may be affected.
-* The HTML that displays icons is similar to v4. Make sure your HTML code includes proper
-<a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">accessibility
-information</a> if its required.
-
-    <i class="fas fa-camera-retro" aria-hidden></i>` <i class="fas fa-camera-retro" aria-hidden></i>`
-
-<small>
-    *Decorative icons should include appropriate aria information. Font Awesome
-    provides an <a href="https://fontawesome.com/how-to-use/accessibility#web-font-accessibility">Accessibility guide</a>.*
-</small>
-
-
-#### Things To Note
-* If an Imarc project already utilizes v4, do not mix in v5 icons. Keep them separate.
-* SVG/JS style implementation
-<a href="https://fontawesome.com/how-to-use/svg-with-js#pseudo-elements">discourages the use of CSS pseudo elements</a> due to speed issues
-* Using Vue.js? Font Awesome supplies separate
-<a href="https://fontawesome.com/how-to-use/js-component-packages">documentation for Vue</a>.
-
+* Use a [Font Awesome kit](https://fontawesome.com/kits)
+* Implementation via NPM is fine, but using the professional tier can require all team members to possess the same `.npmrc` file in order to pull down gated assets from NPM properly. See a lead engineer for help.
 
 <i class="far fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
 
-### Web Fonts
+### Web Font services
 
-Use the following syntax to utilize web fonts with `@font-face`. Based on Imarc
-browser support, the WOFF 1.0 font file format satisfies all our user agents. However, if possible,
-use WOFF 2.0 for reduced file size. When using a multi-weight/style typeface be sure to add the
-appropriate `font-style` and `font-weight` for each while using the same `font-family` name.
-
-    @font-face {
-        font-family: 'Roboto Slab';
-        src: url('RobotoSlab-Light-webfont.woff') format('woff'),
-        font-weight: 100;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Roboto Slab';
-        src: url('RobotoSlab-Medium-webfont.woff') format('woff'),
-        font-weight: 300;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Roboto Slab';
-        src: url('RobotoSlab-Bold-webfont.woff') format('woff'),
-        font-weight: 700;
-        font-style: normal;
-    }
-
-
-`<em>` and `<strong>` tags will automatically grab the correct `@font-face` rule provided
-both an italic and bold version exist.
-
-Other web font services Imarc often uses are: **[Google Web Fonts](http://www.google.com/webfonts)**,
+Web font services Imarc uses: **[Google Web Fonts](http://www.google.com/webfonts)**,
 **[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
 
 ### Dashes
@@ -255,66 +184,23 @@ are printed. Imarc begins from a sane starting point as documented in [Imarc Boi
 
 ## Coding Style
 
-Consistent coding style for HTML and CSS is vital because multiple people
-collaborate on a site’s markup and style.
-
-### Line Breaks
-
-Set your text editor to only use Unix line-break (`\n`), not Windows (`\r\n`)
-or Mac (`\r`) breaks.
-
-### HTML
-
-Keep markup at a reasonable width. When markup surrounds a significant amount of content, place the tags on their own line, indent the content, and hard-wrap content at about 80 characters.
-
-	<!-- DON'T DO THIS -->
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit a sollicitudin sagittis.</p>
-
-	<!-- Instead, DO THIS -->
-	<p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla
-	    libero id quam semper semper. Nulla a pulvinar justo. Mauris a velit sed
-	    ante laoreet vehicula. Etiam ac semper mi. Etiam neque lacus, hendrerit
-	    a sollicitudin sagittis.
-	</p>
-	<ul>
-	    <li>
-	        Foo is listed first – ipsum dolor sit amet, consectetur adipiscing
-	        elit fringilla libero id quam semper semper.
-	    </li>
-	</ul>
-
-With short lines of content, the tag and content can stay on the same line.
-
-	<ul>
-	    <li>Foo is listed first</li>
-	    <li>Bar follows</li>
-	    <li>Baz is typically last</li>
-	</ul>
-
-#### Layout
-
-Use floats to construct layouts instead of frames, iframes, or tables. This maintains the flow of the page, and allows acceptable control over source ordering.
-
-##### Containing floats
-
-Make sure to properly contain floats with a clearfix. Imarc uses a `group` class.
-
-    .group:before,
-    .group:after {
-        content: '';
-        display: table;
-    }
-    .group:after {
-        clear: both;
-    }
+Consistent coding style for HTML and CSS is vital because multiple people collaborate on a site’s markup and style.
 
 ### CSS
 
-#### Formatting
+#### ABEM
+Many Imarc projects use a variant of Block Element Modifier called [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/). It is influenced from [Atomic Design](https://atomicdesign.bradfrost.com/) principals. This creates a methodology for HTML class naming and Sass directory structure.
 
-    .callout,
-    .module {
+Check out the [Sass folder structure description on Imarc’s boilerplate-components](https://imarc.github.io/boilerplate-components/pattern-library/).
+
+#### Layout
+
+Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) or [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for page layouts. Do not use floats or tables.
+
+
+#### General Formatting
+
+    .heading {
         background-color: #FFF;
         border: 1px solid #DDD;
         color: #666;
@@ -332,9 +218,6 @@ Make sure to properly contain floats with a clearfix. Imarc uses a `group` class
 		Each declaration lives on its own indented line
 	</li>
 	<li>
-		Declarations are ordered alphabetically by property name
-	</li>
-	<li>
 		Each property has a space between the colon and value ends with a semi-colon
 	</li>
 	<li>
@@ -343,179 +226,11 @@ Make sure to properly contain floats with a clearfix. Imarc uses a `group` class
 </ul>
 
 
-Stylesheets should be organized in a logical manner. See [Boilerplate’s](http://imarc.github.io/boilerplate) sections in its CSS file. To visually divide a stylesheet sections, use the following comment style as a section indicator.
-
-	/* = Typography = */
-
-
-Related style rules should be grouped together in ascending order of specificity.
-
-
-    header {
-        background-color: #EEE;
-    }
-    header .content {
-        background: none;
-        margin: 0 auto;
-        padding: 0;
-    }
-    header .content .title {
-        color: #000000;
-        float: left;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 24px;
-        font-weight: normal;
-        margin: 0;
-    }
-
-
-## Structure
-
-Most page layouts can generally be thought of in three primary parts. These structural names should be used as classes in the markup.
-
-* **`header.primary`** – Logo, global navigation, utility links, typically at the top of a page.
-* **`.torso`** – Holds all content that is not part of the header or footer. Typically the torso is between the header and footer.
-* **`footer.primary`** – Links and global content that typically follows the torso.
-
-
-![Structural naming conventions](/img/naming_structure.png)
-
-
-### Navigation
-
-Navigation should be named as the following:
-
-* **`nav.primary`** – Links to top-level pages representing the first level of directories
-* **`nav.secondary`** – Links to pages within a single section; direct children of a primary parent
-* **`nav.utility`** – Global utility links (e.g. Log In, Shopping Cart, Settings)
-* **`nav.tertiary`** – (not pictured) Links to pages representing direct children of a secondary parent
-
-Use unordered list markup within navigation instead of anchors. Lists allows us to represent hierarchy.
-
-![Navigation naming conventions](/img/naming_navigation.png)
-
-
-Within navigation elements, there may be a different style to denote the current
-page or section.
-
-* **`.active`** – The currently viewed item in any navigation.
-
-
-![Active states in navigation](/img/naming_navigation2.png)
-
-
-### Content
-
-* **`.main`** – The purpose of the page, whatever the most important content is
-* **`aside.primary`** – Any auxiliary content or related info
-* **`.intro`** – Introductory content styled for visual emphasis
-
-
-![Content naming conventions](/img/naming_content.png)
-
-For a more complete list of naming conventions, see **[Imarc Boilerplate structure](http://imarc.github.com/boilerplate/structure)**
-for detailed layout naming conventions.
-
-### CSS Principles
-
-Engineers should strive to make lean, modular classes that can be easily adapted
-to different sections and pages. **If you find yourself copying entire blocks of declarations from one selector to another, you are likely doing it wrong**.
-
-Consider two callouts used on two different pages: a landing page and a
-members page.
-
-![Landing page call to action](/img/cta-landing.png)
-
-![Members page call to action](/img/cta-members.png)
-
-Knowing we will utilize callouts on multiple pages, it’s
-important to find properties they share and start with some base styles. These
-would probably live in our stylesheet’s **Layout** section
-
-    .callout {
-        border-radius: 4px;
-        font-weight: 300;
-        margin-bottom: 3em;
-        margin-top: 2em;
-        padding: 1em;
-    }
-    .callout .button {
-        background-color: pink;
-        border-radius: 2px;
-        padding: 0.4em;
-        text-transform: uppercase;
-    }
-
-Based on the knowledge we have from our creative mockups, we feel confident with
-these base styles. Any visual changes for callouts should be added on to these
-base styles:
-
-    .callout.dense {
-        font-weight: 600;
-        margin-top: 0;
-    }
-    .callout.dense .button {
-        background-color: pink;
-        float: right;
-    }
-
-You might wonder why we didn’t target our callouts via a `body#members .callout`
-selector. It would not necessarily be a bad way to proceed. But thinking in a
-modular way, what if the client also wanted to use this `.dense` styled
-callout on special Guest pages? We would find ourself copying and pasting rules
-in more than one place.
-
 #### Use Only Class Selectors
 
-To avoid CSS specificity issues, use only class selectors when marking up HTML.
-The exceptions to this rule are: anchors, form label IDs, the ID that is
-[placed on the `body` tag](frontend#SpecificTargeting), and instances when IDs are
-more appropriate hooks for JavaScript purposes.
+To avoid CSS specificity issues, use only class selectors.
+The exceptions to this rule are: anchors, form label IDs, JavaScript hook requirements.
 
-Classes should be lowercase, using hyphens to separate words. Ideally, classes are only one word.
-
-Classes have the benefit of being highly reusable. By utilizing classes, we
-can write leaner, more modular CSS.
-
-#### Choose Meaningful Names
-
-Choose names that accurately describe the content, not the visual container.
-Avoid choosing presentational names e.g.(`orange-arrow`, `left-column`)
-
-For example, `meta` is an acceptable class name while `sidebar-info` is not. The
-described content will always be `meta`; it might not always be in the
-context of a sidebar.
-
-* Meaningful class names might be: `main`, `aside`, `record-detail`.
-* Bad CSS classes would be: `left_column`, `blue-callout`, `hidden`.
-
-
-### Specific Targeting
-
-When targeting a specific section or page is needed, use the body’s class or ID attributes.
-Use the ID for styles pertaining to a single page. Use the class for styles that
-pertain to an entire section of pages. **Always** include the body tag in your selector.
-
-    <body class="section-products" id="page-macbook">
-
-**ID use case**: Headlines must use a `font-weight: 700;` on the MacBook page to
-align with marketing materials.
-
-**Class use case**: Buttons need to be silver for all pages within the site’s Products section
-
-    body#page-macbook {
-        h1,
-        h2,
-        h3 {
-            font-weight: 700;
-        }
-    }
-
-    body.section-products {
-        .button {
-            background-color: silver;
-        }
-    }
 
 ## Forms
 
@@ -527,18 +242,7 @@ The `action` attribute is required on all forms, and should have a blank value b
 
 Form inputs and labels are grouped together within a div. The containing div is named after the form input type.  For example, a `text` input is contained inside `<div class="text">` and a `file` input is contained inside `<div class="file">`.
 
-All appropriate input elements should have an associated label element.
-Labels should be associated directly with inputs.
-
-Related fields, such as checkboxes and radio fields, may be further grouped
-within a div with a class of the plural input type, such as `checkboxes`.
-
-This allows maximum form style flexibility with minimal markup changes.
-
-Required fields should be indicated by a `span` with a class of `required` within the associated `label` element.
-
-If an input has a max-length defined in the database, it should have a
-corresponding max-length attribute in the markup.
+Input elements should have an associated label element.
 
 Form element markup
 
@@ -573,10 +277,6 @@ Form element markup
                     <input id="sample_form-radio_1" type="radio" />
                     radio 1
                 </label>
-                <label class="radio">
-                    <input id="sample_form-radio_2" type="radio" />
-                    radio 2
-                </label>
             </div>
             <div class="checkboxes group">
                 <label>Check all that apply</label>
@@ -587,10 +287,6 @@ Form element markup
                     <label class="checkbox">
                     <input id="sample_form-checkbox_1" type="checkbox" />
                     checkbox 1
-                </label>
-                <label class="checkbox">
-                    <input id="sample_form-checkbox_2" type="checkbox" />
-                    checkbox 2
                 </label>
             </div>
         </fieldset>
@@ -610,10 +306,6 @@ Form element markup
                      <optgroup label="group 1">
                          <option value="option 3">option 3</option>
                          <option value="option 4">option 4</option>
-                         <option value="option 5">option 5</option>
-                         <option value="option 6">option 6</option>
-                         <option value="option 7">option 7</option>
-                         <option value="option 8">option 8</option>
                      </optgroup>
                  </select>
             </div>
@@ -628,10 +320,6 @@ Form element markup
                     <optgroup label="group 1">
                         <option value="option 3">option 3</option>
                         <option value="option 4">option 4</option>
-                        <option value="option 5">option 5</option>
-                        <option value="option 6">option 6</option>
-                        <option value="option 7">option 7</option>
-                        <option value="option 8">option 8</option>
                     </optgroup>
                 </select>
             </div>
@@ -677,7 +365,6 @@ Form element markup
 * **`.info`** – Informative message
 * **`.error`** – Notification that an action had problems
 * **`.help`** – Coaching or guidance; typically inline
-
 
 Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
 
@@ -773,9 +460,7 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
 
 ### Video
 
-When clients host videos on major video providers like YouTube and Vimeo, utilize those providers’ embed codes to display
-the videos on our sites. Wrap these embed codes in an `.embed` div with the associated CSS rules to allow for a responsive
-implementation:
+When clients host videos on major video providers like YouTube and Vimeo, utilize those providers’ embed codes to display the videos on our sites. Wrap these embed codes in an `.embed` div with the associated CSS rules to allow for a responsive implementation:
 
     .embed {
         clear: both;
@@ -825,10 +510,8 @@ pseudo element to achieve our desired aspect ratio.
 
 ### Image Compression
 
-Whenever you cut up a website, you should use image compression software to crunch the images.
-Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/)
-comes highly recommended among the Imarc team. Always compress your images manually or via an
-automated task if you’re using a task runner.
+Whenever you cut up a website, you should use image compression software on assets.
+Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) is recommended among the Imarc team.
 
 ### SVG
 
@@ -857,11 +540,6 @@ takes advantage of the `viewBox` attribute.
             <polygon class="y" points="29.4 43.45 29.4 31.91 29.4 29.28 29.4 17.8 31.85 17.8 31.85 29.28 31.85 31.91 31.85 43.45 29.4 43.45"/>
         </g>
     </svg>
-
-#### IE11 sizing
-
-IE11 does not always respect SVG size dimensions in fluid-width scenarios. In this scenario, you
-can [wrap the SVG with a container](https://codepen.io/marcelmoreau/pen/JMJvmg) with pseudo-element
 
 ### Favicons
 
@@ -893,8 +571,7 @@ Use a 256x256 SVG file for this – setting your icon to black. To set a color f
 The following **philosophy** is paraphrased from our standard proposal language.
 
 * We produce semantic, HTML5-compliant markup, CSS, and scripts.
-* We believe users should be able to consume as much visual and interactive richness as their
-browser can support.
+* We believe users should be able to consume as much visual and interactive richness as their browser can support.
 * We test against a specific set of mainstream desktop and mobile browsers.
 * We ensure our sites function correctly and look as good as possible on these browsers.
 * We recognize that not every browser functions in the same way and requiring an identical
@@ -958,68 +635,17 @@ support will be specified in the proposal and strategy documents.
 
 Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
-### Internet Explorer styles
+## Analytics, Marketing, and Plug-ins
 
-Some older versions of Internet Explorer need dedicated CSS rules in order to achieve proper design
-and functionality. You can target previous versions of Internet Explorer using conditional comments.
-Place these targeted styles in a dedicated CSS file (e.g. lt_ie9.css). If your Internet Explorer CSS
-changes styles are minimal, place them in the project’s main CSS file.
+Many clients use external scripts such as Google Analytics, HubSpot, Marketo. We should stop those scripts gathering data in development or staging environments.
 
-#### Internet Explorer (IE) notes
-* Conditional comments are deprecated in IE10+
-* Imarc _does not support_ IE Compatibility Mode
-
-## External Scripts for Analytics, Marketing, and Plug-ins
-
-Many of our client sites use external scripts such as Google Analytics, HubSpot or Marketo. We should stop those scripts gathering data in development or staging enviroments.
-
-While clients themselves may apply filters to correct this in the settings of those scripts, we can't count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution.
+While clients themselves may apply filters to correct this in the settings of those scripts, we can’t count on this always being the case. Wrapping any marketing scripts in a conditional that differentiates between enviroments is the most ideal solution.
 
 The way of detecting whether the enviroment is production varies from project to project. Consult the project's lead engineer about best way to do this.
 
 ## Accessibility
 
-Use the Baseline Checklist below to ensure an acceptable level of accessibility. For clients who desire an extra level of accessibility, use the Advanced Checklist.
-
-### ARIA Landmark Roles
-
-ARIA landmark roles allow ease of navigation for non-sighted users. Screenreaders can traverse
-areas of a website by their respective landmark role, allowing users to skip over regions that are
-repeated on every page. Imarc takes advantage of five roles:
-<ul>
-	<li>
-		<code>banner</code>: A region that contains the prime heading or internal title of a page.
-	</li>
-	<li>
-		<code>navigation</code>: A collection of links suitable for use when navigating the document or related documents.
-	</li>
-	<li>
-		<code>main</code>: Main content in a document. In almost all cases a page will have only one main role.
-	</li>
-	<li>
-		<code>complementary</code>:	Any section of the document that supports the main content, yet is separate and meaningful on its own.
-	</li>
-	<li>
-		<code>contentinfo</code>: A region that contains information about the parent document such as copyrights and links to privacy statements
-	</li>
-</ul>
-
-Adding a role is simple and does not affect the display or behavior of a web page. Note that if there are multiple navigation structures, they should be labeled for completeness using the <code>aria-label</code> attribute.
-
-	<header class="primary" role="banner">
-
-	<nav aria-label="utility navigation" class="utility" role="navigation">
-
-	<nav aria-label="primary navigation" class="primary" role="navigation">
-
-	<nav aria-label="secondary navigation" class="secondary" role="navigation">
-
-	<aside class="primary" role="complementary">
-
-	<div class="main" role="main">
-
-	<footer class="primary" role="contentinfo">
-
+Use this checklist below to ensure an acceptable level of accessibility.
 
 ### Baseline Checklist
 <ul>
@@ -1038,17 +664,10 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 		</ul>
 	</li>
 	<li>
-		Include skip navigation allowing users to skip repetitive navigation
+		Include skip navigation
 	</li>
 	<li>
-		focus styles should should exist on links and form elements
-	</li>
-	<li>
-		Ensure all links work and none are set to href=”#”
-	</li>
-	<li>
-		JavaScript adds a behavior layer but adheres to progressive advancement, graceful degradation practices. Users without JavaScript
-        can view all website content.
+		Focus styles should be present and visible for keyboard operability
 	</li>
 	<li>
 		<strong>Web forms</strong>
@@ -1057,7 +676,7 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 				Inputs always have associated labels
 			</li>
 			<li>
-				If using HTML5, form inputs should use an associated type attribute (e.g. search, tel, email, datetime)
+				Inputs should use an associated type attribute (e.g. search, tel, email, datetime)
 			</li>
 			<li>
 				Validation messages show all errors at once instead of progressively showing more errors
@@ -1066,21 +685,15 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 				Validation messages use same field names as form and in the same order
 			</li>
 			<li>
-				Make sure all required fields are listed as required in error message
-			</li>
-			<li>
 				Make sure required fields visually indicate their requirements (e.g. asterisk)
 			</li>
 		</ul>
 	</li>
 	<li>
-		Images should always have an alt attribute, where its value conveys the same thing that is communicated to a sighted user. Decorative images that provide no important meaning to non-sighted users should utilize an empty alt value.
+		Images should always have an `alt` attribute, where its value conveys the same thing that is communicated to a sighted user. Decorative images that provide no important meaning to non-sighted users should utilize an empty `alt=""` value. This ensures screen readers omit them from announcements.
 	</li>
 	<li>
 		Timed responses are properly indicated to users.
-	</li>
-	<li>
-		All content is viewable without an active stylesheet.
 	</li>
 	<li>
 		<strong>Color</strong>
@@ -1102,142 +715,6 @@ Adding a role is simple and does not affect the display or behavior of a web pag
 </ul>
 
 
-### Advanced Checklist
-
-* Audio files are accompanied by text transcriptions.
-* Videos are captioned.
-* CAPTCHAs are accessible to screen reader users and to Braille Display users.
-* Print stylesheets are used for maximum legibility.
-* Mobile media query is used to ensure website layout does not break on mobile devices.
-
-
-## Structured Data Markup
-
-To provide the best content possible for users, search engines and social media platforms try to infer information from the markup on a website. Crawlers aren't always 100% accurate. To remove variance from these crawlers and improve SEO, you can define data explicitly with [Schema.org](http://schema.org).
-
- Content that will be shared heavily on social media is recommended to use Schema.org and [Open Graph Protocol](http://ogp.me/). The Open Graph Protocol enables any web page to become a rich object in a social graph.
-
-### Schema.org
-
-Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org is sponsored by Google, Microsoft, Yahoo and Yandex.
-
-#### Schema.org Example
-
-**Movie Type Markup Example**
-
-	<!-- Simplified version found on IMDb -->
-	<div itemscope itemtype="http://schema.org/Movie">
-		<h1 class="" itemprop="name">Frozen 2013 - IMDb</h1>
-		<a href="http://pro.imdb.com/title/tt2294629/companycredits?rf=cons_tt_cocred_tt&ref_=cons_tt_cocred_tt" itemprop='url'>
-		<div itemprop="description">
-			When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
-		</div>
-		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-            <strong title="7.6 based on 405,502 user ratings"><span itemprop="ratingValue">7.6</span></strong><span class="grey">/</span><span class="grey" itemprop="bestRating">10</span>
-            <a href="/title/tt2294629/ratings?ref_=tt_ov_rt"><span itemprop="ratingCount">405,502</span></a>
-            <span itemprop="reviewCount">893 user</span> <span itemprop="reviewCount">405 critic</span>
-		</div>
-	</div>
-
-
-An example of what kind of data that is being extracted by crawlers from content that has proper markup.
-
-![Extracted Data](img/structured-data-extracted.png)
-
-If you want content to appear as rich snippets on major search engines such as this.
-
-![Rich Snippet](img/structured-data-rich-snippet.png)
-
-It is recommended that you use structured data markup on these types of content.
-
-<div class="columns">
-    <div>
-        <p>Google Rich Snippet Support</p>
-        <ul>
-            <li>Product</li>
-            <li>Recipe</li>
-            <li>Review</li>
-            <li>Event</li>
-            <li>Software Applications</li>
-            <li>Video</li>
-            <li>News Articles</li>
-        </ul>
-    </div>
-    <hr/>
-    <div>
-        <p>Bing Rich Snippet Support</p>
-        <ul>
-            <li>Breadcrumbs</li>
-            <li>Businesses and Organizations</li>
-            <li>Events</li>
-            <li>People</li>
-            <li>Products and Offers</li>
-            <li>Recipes</li>
-            <li>Reviews</li>
-            <li>Reviews (aggregated)</li>
-        </ul>
-    </div>
-</div>
-
-**[View a complete list of Schema.org content types and example markup.](http://schema.org/docs/full.html)**
-
-### Open Graph
-
-Sharing content via social media can yield unexpected results related to its appearance on a time line.
-
-For example, Facebook pulls what it deems relevant to a shared item – title, description, photo, etc. For a supplementary thumbnail, Facebook pulls the first `img` it can find in the site. If this is unsatisfactory, you can control the thumbnail image to be shared by using the following line in the web site's `head`:
-
-	<link rel="image_src" href="/img/site/logo_acme.png" />
-
-#### Open Graph Example
-
-**Blog Post Markup Example**
-
-	<head>
-	...
-	    <!-- Facebook Specific-->
-		<meta property="fb:admins" content="100004926167588">
-		<meta name="article:author" content="https://www.facebook.com/ImarcAgency">
-		<!-- Twitter Specific -->
-		<meta name="twitter:site" content="@ImarcAgency">
-		<meta name="twitter:title" content="Responsive Design or Mobile-Specific: Which Option is Best for You? | Imarc Web Design: Boston + Santa Cruz">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:image" content="http://creative.imarc.net/sup/img/i_alone_color.jpg">
-		<!-- General -->
-		<meta property="og:type" content="Responsive Design or Mobile-Specific: Which Option is Best for You?">
-		<meta property="og:description" content=" Our clients are always asking, “Does my site need to be responsive?” In a word, yes. But, there are options to consider when it comes to delivering a mobile optimized experience. There is no “one size fits all approach,” and the direction your…">
-		<meta property="og:site_name" content="Imarc Digital Agency">
-		<meta property="og:url" content="https://www.imarc.com/blog/responsive_design_mobile_specific_website">
-	</head>
-
-**Facebook Rich Object**
-
-![Screenshot displaying how structured blog data is displayed on Facebook](/img/structured-data-facebook.png)
-
-<hr>
-
-**Twitter Rich Object**
-
-![Screenshot displaying how structured blog data is displayed on Twitter](/img/structured-data-twitter.png)
-
-<hr>
-
-**Linkedin Rich Object**
-
-![Screenshot displaying how structured blog data is displayed on LinkedIn](/img/structured-data-linkedin.png)
-
-<hr>
-
-**[View more Open Graph example and data types](http://ogp.me/#metadata)**
-
-#### Structured Data Markup Testing Tools
-- [Schema.org Testing Tool](https://developers.google.com/structured-data/testing-tool/)
-- [Schema.org Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/)
-- [Open Graph Protocol Testing Tool](http://iframely.com/debug)
-- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug)
-- [Twitter Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
-
-
 ## Mobile Optimization
 
 ### Viewport
@@ -1248,8 +725,6 @@ On mobile-specific sites, set the viewport to the width of the device:
 This fits the webpage into the visible area of the `viewport` to ensure that
 the page is scaled to 100% on load.
 
-This works in most, but not all mobile browsers, a full chart of support is
-here [Quirksmode](http://www.quirksmode.org/mobile/tableViewport.html#metaviewport)
 
 ### Mobile Orientation Changes
 iPhone can have issues with dynamic orientation changes – changing from
@@ -1326,12 +801,3 @@ Additional info on
 [Peter Gasston’ blog](http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/).
 Andy Clark’s [320 and up project](http://stuffandnonsense.co.uk/projects/320andup/)
 also provides resources for optimization.
-
-
-## Tips ##
-
-### Markup Tester
-
-After resetting CSS and applying style, it’s easy to overlook a seldom-used
-tag. Download the [Markup Tester (HTML file)](https://svn.imarc.net/framework.imarc.net/trunk/html/markup_test.html)
-from the Framework repository and drop it onto your page. Make sure all tags render appropriately on your project.

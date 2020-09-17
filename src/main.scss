@@ -106,25 +106,31 @@ header.primary {
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
     padding: 16px;
     position: relative;
+    .branding {
+        background-color: #FFF;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0 auto .75em;
+        max-width: 180px;
+        position: relative;
+        text-align: center;
+        &-heading {
+            color: white;
+            text-transform: uppercase;
+        }
+        a {
+            display: block;
+            font-size: 30px;
+            transition: opacity 200ms linear;
+        }
+
+        a:hover,
+        a:focus {
+            opacity: 0.7;
+        }
+    }
 }
 
-header.primary .branding {
-    background: #FFF;
-    margin: 0 auto 1.4em;
-    max-width: 180px;
-    position: relative;
-}
-
-header.primary .branding a {
-    display: block;
-    margin-top: 3px;
-    transition: opacity 200ms linear;
-}
-
-header.primary .branding a:hover,
-header.primary .branding a:focus {
-    opacity: 0.7;
-}
 
 nav.primary ul {
     text-align: center;
@@ -240,7 +246,6 @@ aside.primary nav > ul li a:hover {
 }
 
 aside.primary nav > ul > li > a {
-    font-size: 1.1em;
     font-weight: 400;
 }
 
@@ -250,7 +255,7 @@ aside.primary nav ul ul {
 
 aside.primary nav > ul li li a {
     color: #414141;
-    font-size: 0.9em;
+    font-size: 0.875em;
 }
 
 aside.primary nav > ul li li a:hover,
@@ -551,7 +556,7 @@ body.homepage h2.intro {
 }
 body.homepage nav.primary {
     float: none;
-    margin: 8em auto 10em;
+    margin: 5em auto 10em;
     width: 90%;
 }
 body.homepage nav.primary ul {
@@ -617,12 +622,11 @@ body.homepage nav.primary li a:focus .flipper {
 }
 .back h3 {
     color: #FF675B;
-    font-size: 24px;
 }
 .front img,
 .back img {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 }
 .back p {
     font-size: 15px;
@@ -815,9 +819,12 @@ tr:first-child th:first-child {
         padding: 30px;
     }
 
+    header.primary .branding {
+        text-align: left;
+    }
+
     header.primary .branding a {
         display: block;
-        margin-top: 3px;
     }
 
     .heading {
