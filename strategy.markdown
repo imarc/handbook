@@ -32,7 +32,7 @@ figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 }
 </style>
 
-## How to use this handbook.
+## How to use this handbook
 
 Your job is to clearly define the project’s final product for both the client and the Imarc production team, while focused on creating a positive end-user experience. You’ll work with your producer, and probably with UX engineers, web engineers, creatives, and/or UX designers as well.
 
@@ -41,7 +41,7 @@ This handbook provides a reference for the most frequently needed activities and
 
 ### Team Members
 
-For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats, and only a few people are needed.
+For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats… and only a few people are needed.
 
 #### Producer or Project Manager
 
