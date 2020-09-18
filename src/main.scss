@@ -16,7 +16,9 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+    height: 100%;
+}
 body {
     background-color: white;
     color: #414141;
@@ -197,26 +199,19 @@ body .heading h1:before {
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
     list-style: none;
     padding: 0;
     text-align: left;
-    @media only screen and (min-width: 768px) {
-        margin: 0 -5px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-bottom: 80px;
-        margin-top: 80px;
-    }
 }
 
 .card {
     background-image: linear-gradient(135deg, rgb(211 230 234 / .825), rgb(211 230 234 / .525));
-    border-radius: 4px;
     color: #252d2f;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     &__body {
         padding: 20px;
     }
@@ -228,14 +223,6 @@ body .heading h1:before {
     &__copy {
         margin-top: 0;
         margin-bottom: 20px;
-    }
-    @media only screen and (min-width: 768px) {
-        margin-left: 4px;
-        margin-right: 4px;
-        width: 47.5%;
-    }
-    @media only screen and (min-width: 1024px) {
-        width: 23%;
     }
 }
 
@@ -299,7 +286,7 @@ aside.primary nav ul ul {
 
 aside.primary nav > ul li li a {
     color: #414141;
-    font-size: 0.875em;
+    font-size: 0.925em;
 }
 
 aside.primary nav > ul li li a:hover,
@@ -572,8 +559,13 @@ body.homepage {
     background-position: left top, center center;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
-    padding: 20px 0 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 48px 0;
     text-align: center;
+    width: 100%;
 }
 body.homepage header.primary,
 body.homepage footer.primary {
@@ -727,6 +719,7 @@ tr:first-child th:first-child {
         margin-left: auto;
         margin-right: auto;
         max-width: 1160px;
+        width: 100%;
     }
 
     footer.primary p {
