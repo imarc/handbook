@@ -540,6 +540,7 @@ body.homepage header.primary .branding {
   float: none;
   margin: 0 auto;
   max-width: none;
+  text-align: center;
   width: 90%;
 }
 
