@@ -443,9 +443,6 @@ As noted earlier in this document, you'll need to get an approval at some point.
 <figure markdown="1"><figcaption>Single-page Wireframe</figcaption>
 [![Example Wireframe](img/strategy/wireframe-example-metro.png)](img/strategy/wireframe-example-metro.png)
 </figure>
-<figure markdown="1"><figcaption>Workflow Diagram</figcaption>
-[![Example Storyboard](img/strategy/storyboard.png)](img/strategy/storyboard.png)
-</figure>
 </div>
 
 <!-- 
@@ -510,8 +507,7 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 [Adobe XD](https://www.adobe.com/products/xd.html) is our primary tool for creating site maps and wireframes.
 
-We have created Adobe XD templates with our most commonly used wireframe components. You can get the latest versions from our fileserver. These can be found by going to *fileserver > files > user experience > templates*. 
-
+We have created Adobe XD templates with our most commonly used wireframe components. You can get the latest versions from our fileserver. These can be found by going to *fileserver > data > files > UX > templates*. 
 
 ### Documents
 
