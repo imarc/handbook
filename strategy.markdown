@@ -11,25 +11,6 @@ layout: default
 figure img { border: 1px solid #999999;}
 figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
 
-.needscontent { 
-	padding: 1em;
-	margin: 1em;
-	font-size: bigger;
-	border: 4px dotted #fbce78;	/* Imarc Metal */
-}
-.needscontent:before {
-	content: "Needs Update: ";
-	font-style: italic;
-	font-weight: bold;
-	color: #41322f;				/* Imarc Wood */
-	background-color: #fbce78;	/* Imarc Metal */
-}
-.reading, .templates { 
-	margin: 0 3em 0 3em;
-	background-color: #F4ECE6;  /* a lighter shade of Imarc Earth */
-	padding: 0.25em 1em 0.25em 1em;
-	color: #41322f;				/* Imarc Wood */
-}
 </style>
 
 ## How to use this handbook
@@ -41,7 +22,7 @@ This handbook provides a reference for the most frequently needed activities and
 
 ### Team Members
 
-For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats… and only a few people are needed.
+For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats and only a few people are needed.
 
 #### Producer or Project Manager
 
@@ -218,12 +199,6 @@ You should prepare an agenda, and provide it the client *before* the meeting. Th
 As larger projects often have many goals, yet do not have unlimited time and resources, it’s important to prioritize goals. A group card sort activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
 
-<div markdown="1" class="templates needscontent">
-##### Template:
-[Sample agenda topics for discovery meeting NEEDS URL](URL_NEEDED)
-</div>
-
-
 ## Research Activities
 Depending on budget and goals, a number of research activities may be incorporated into a project.
 
@@ -259,12 +234,6 @@ Interviews can explore concrete items, such as user interface, document flow, fe
 
 User interviews can take place in person or remotely. We create a script and a list of questions to ensure consistency.
 
-<div markdown="1" class="templates">
-##### Templates
-[//fileserver/files/UX/templates/Interviews/](smb://fileserver/files/UX/templates/Interviews/) <br> 
-Both internal stakeholder and user interview templates are provided.
-</div>
-
 <div markdown="1" class="reading">
 ##### Recommended Reading
 
@@ -288,7 +257,6 @@ Beware! Just because something commonly is done a certain way does not mean it i
 <div markdown="1" class="templates">
 #### Templates and Tools
 
-* [//fileserver/files/UX/templates/competitive analysis/](smb://fileserver/files/UX/templates/competitive analysis/)
 * [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider/) is a great tool to help analyze a site from an SEO perspective. Windows/Mac/Linux.
 </div>
 
@@ -351,7 +319,7 @@ Templates needed
 ####  Personas
 
 <div markdown="1" class="needscontent">
-Needs description, examples, templates.
+<i>Needs description, examples, templates.</i>
 </div>
 
 
@@ -388,36 +356,6 @@ Common formats include:
 * **Oral presentation** is great for small projects with a limited amount of discovery. Your clients are likely the main knowledge-holders in the project and you just want to be sure that you correctly understood everything you heard from them.
 * **Slides** (the dreaded “PowerPoint deck”) are useful to present the summary of quantitative research such as surveys or web analytics, and in presenting highly visual findings such as personas or competitive site reviews.
 * **Written findings reports** take the most time to prepare, and the most time for a client to absorb, but allow you to go into greath depth and provide nuanced interpretation. Preparing a written report usually takes as many hours as all the research that preceeded it.
-
-
-#### Templates
-
-<div markdown="1" class="templates needscontent">
-<p>needs links to examples on fileserver</p>
-</div>
-
-
-
-## Information Architecture
-
-<div markdown="1" class="needscontent">
-
-* Content Strategy
-	* Content Audit
-	* Content Requirements
-	* Mapping gaps & identifying sources
-	* Working with the client to plan content development -- realistically.
-* Architecture
-	* Site Maps
-	* Testing the IA
-	* Guiding Client Feedback and Obtaining Approvals
-* SEO
-	* Research
-	* Considerations
-
-</div>
-
-
 
 
 ## User Experience & Interaction Design
@@ -515,15 +453,12 @@ As noted earlier in this document, you'll need to get an approval at some point.
 #### Examples
 <div class="needscontent">
 <figure markdown="1"><figcaption>Single-page Wireframe</figcaption>
-[![Example Wireframe](img/strategy/wireframe-example.png)](img/strategy/wireframe-example.png)
+[![Example Wireframe](img/strategy/wireframe-example-metro.png)](img/strategy/wireframe-example-metro.png)
 </figure>
 <figure markdown="1"><figcaption>Workflow Diagram</figcaption>
 [![Example Storyboard](img/strategy/storyboard.png)](img/strategy/storyboard.png)
 </figure>
 </div>
-
-##### Templates
-[//fileserver/files/UX/templates/wireframes/](smb://fileserver/files/UX/templates/wireframes/)
 
 <!-- 
 <div markdown="1" class="needscontent">
@@ -563,7 +498,7 @@ The script helps to ensure consistency; video recording the screen lets us revis
 
 
 
-
+<!-- 
 ## Documenting Requirements
 
 <div markdown="1" class="needscontent">
@@ -574,7 +509,7 @@ The script helps to ensure consistency; video recording the screen lets us revis
 * Reviewers (engineers, creatives, PMs, clients)
 * Guiding Client Feedback and Obtaining Approvals
 
-</div>
+</div> -->
 
 
 
@@ -585,9 +520,9 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 ### Wireframes and Site Maps
 
-[OmniGraffle Pro](https://www.omnigroup.com/products/omnigraffle) is our primary tool for creating site maps and wireframes.
+[Adobe XD](https://www.adobe.com/products/xd.html) is our primary tool for creating site maps and wireframes.
 
-We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version from our fileserver.
+We have created an Adobe XD template with our most commonly used wireframe components. You can get the latest version from our fileserver.
 
 
 ### Documents
