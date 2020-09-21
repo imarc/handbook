@@ -7,12 +7,6 @@ layout: default
 	<p>This handbook will guide you through the process of creating a clear and concise blueprint for a website or application.</p>
 </section>
 
-<style type="text/css">
-figure img { border: 1px solid #999999;}
-figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
-
-</style>
-
 ## How to use this handbook
 
 Your job is to clearly define the project’s final product for both the client and the Imarc production team, while focused on creating a positive end-user experience. You’ll work with your producer, and probably with UX engineers, web engineers, creatives, and/or UX designers as well.
@@ -255,7 +249,7 @@ You should look for patterns and best practices among:
 Beware! Just because something commonly is done a certain way does not mean it is the *best* way. You should use your own judgement; the goal of a competitive analysis is not to comply with the lowest common denominator, but to *find the very best practices*.
 
 <div markdown="1" class="templates">
-#### Templates and Tools
+#### Tools
 
 * [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider/) is a great tool to help analyze a site from an SEO perspective. Windows/Mac/Linux.
 </div>
@@ -319,7 +313,7 @@ Templates needed
 ####  Personas
 
 <div markdown="1" class="needscontent">
-<i>Needs description, examples, templates.</i>
+*Needs description, examples, templates.*
 </div>
 
 
@@ -390,12 +384,6 @@ Work with the designer to prepare the experience kickoff website. You'll need to
 Meet with the designer before the kickoff to decide who will lead the meeting. Usually, you'll divide up the session, with the designer focusing on visual elements and the UX/strategist focusing on goals, audiences and content.
 
 If the meeting is remote, be sure your producer has reserved a conference room, a dial-in and screen share for you, and has sent the screen share and dial-in to all the client team members.
-
-##### Templates
-<div markdown="1" class="needscontent templates">
-<p>TODO: Make a standard template for this</p>
-</div>
-
 
 ### Wireframes
 <!--
@@ -522,12 +510,12 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 [Adobe XD](https://www.adobe.com/products/xd.html) is our primary tool for creating site maps and wireframes.
 
-We have created an Adobe XD template with our most commonly used wireframe components. You can get the latest version from our fileserver.
+We have created Adobe XD templates with our most commonly used wireframe components. You can get the latest versions from our fileserver. These can be found by going to *fileserver > files > user experience > templates*. 
 
 
 ### Documents
 
-[Keynote](https://www.apple.com/iwork/keynote/) is our preferred on-screen presentation tool. If cross-platform compatibility will be required, we use PowerPoint. ([Reveal.js](https://lab.hakim.se/reveal-js/#/) is handy for web-based presentations, but HTML & CSS knowledge is a prerequisite.)
+[Keynote](https://www.apple.com/iwork/keynote/) is our preferred on-screen presentation tool. If cross-platform compatibility will be required, we use PowerPoint.
 
 We frequently use [Google Docs](https://docs.google.com) for collaborative authoring and editing. Google Docs should not be created or edited using personal accounts; *only* use your imarc.com account.
 
