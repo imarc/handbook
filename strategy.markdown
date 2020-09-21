@@ -7,31 +7,6 @@ layout: default
 	<p>This handbook will guide you through the process of creating a clear and concise blueprint for a website or application.</p>
 </section>
 
-<style type="text/css">
-figure img { border: 1px solid #999999;}
-figure figcaption { font-style: italic; font-size: 0.85em; text-align: center;}
-
-.needscontent { 
-	padding: 1em;
-	margin: 1em;
-	font-size: bigger;
-	border: 4px dotted #fbce78;	/* Imarc Metal */
-}
-.needscontent:before {
-	content: "Needs Update: ";
-	font-style: italic;
-	font-weight: bold;
-	color: #41322f;				/* Imarc Wood */
-	background-color: #fbce78;	/* Imarc Metal */
-}
-.reading, .templates { 
-	margin: 0 3em 0 3em;
-	background-color: #F4ECE6;  /* a lighter shade of Imarc Earth */
-	padding: 0.25em 1em 0.25em 1em;
-	color: #41322f;				/* Imarc Wood */
-}
-</style>
-
 ## How to use this handbook
 
 Your job is to clearly define the project’s final product for both the client and the Imarc production team, while focused on creating a positive end-user experience. You’ll work with your producer, and probably with UX engineers, web engineers, creatives, and/or UX designers as well.
@@ -41,7 +16,7 @@ This handbook provides a reference for the most frequently needed activities and
 
 ### Team Members
 
-For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats… and only a few people are needed.
+For large projects, the strategy team will include most of the following roles. More often, a single person may wear several hats and only a few people are needed.
 
 #### Producer or Project Manager
 
@@ -218,12 +193,6 @@ You should prepare an agenda, and provide it the client *before* the meeting. Th
 As larger projects often have many goals, yet do not have unlimited time and resources, it’s important to prioritize goals. A group card sort activity with the core client team (3–6 people) can be very effective in both establishing priorities and in ensuring the entire client team is in agreement on them.
 
 
-<div markdown="1" class="templates needscontent">
-##### Template:
-[Sample agenda topics for discovery meeting NEEDS URL](URL_NEEDED)
-</div>
-
-
 ## Research Activities
 Depending on budget and goals, a number of research activities may be incorporated into a project.
 
@@ -259,12 +228,6 @@ Interviews can explore concrete items, such as user interface, document flow, fe
 
 User interviews can take place in person or remotely. We create a script and a list of questions to ensure consistency.
 
-<div markdown="1" class="templates">
-##### Templates
-[//fileserver/files/UX/templates/Interviews/](smb://fileserver/files/UX/templates/Interviews/) <br> 
-Both internal stakeholder and user interview templates are provided.
-</div>
-
 <div markdown="1" class="reading">
 ##### Recommended Reading
 
@@ -286,9 +249,8 @@ You should look for patterns and best practices among:
 Beware! Just because something commonly is done a certain way does not mean it is the *best* way. You should use your own judgement; the goal of a competitive analysis is not to comply with the lowest common denominator, but to *find the very best practices*.
 
 <div markdown="1" class="templates">
-#### Templates and Tools
+#### Tools
 
-* [//fileserver/files/UX/templates/competitive analysis/](smb://fileserver/files/UX/templates/competitive analysis/)
 * [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider/) is a great tool to help analyze a site from an SEO perspective. Windows/Mac/Linux.
 </div>
 
@@ -351,7 +313,7 @@ Templates needed
 ####  Personas
 
 <div markdown="1" class="needscontent">
-Needs description, examples, templates.
+*Needs description, examples, templates.*
 </div>
 
 
@@ -390,36 +352,6 @@ Common formats include:
 * **Written findings reports** take the most time to prepare, and the most time for a client to absorb, but allow you to go into greath depth and provide nuanced interpretation. Preparing a written report usually takes as many hours as all the research that preceeded it.
 
 
-#### Templates
-
-<div markdown="1" class="templates needscontent">
-<p>needs links to examples on fileserver</p>
-</div>
-
-
-
-## Information Architecture
-
-<div markdown="1" class="needscontent">
-
-* Content Strategy
-	* Content Audit
-	* Content Requirements
-	* Mapping gaps & identifying sources
-	* Working with the client to plan content development -- realistically.
-* Architecture
-	* Site Maps
-	* Testing the IA
-	* Guiding Client Feedback and Obtaining Approvals
-* SEO
-	* Research
-	* Considerations
-
-</div>
-
-
-
-
 ## User Experience & Interaction Design
 In this section:
 
@@ -452,12 +384,6 @@ Work with the designer to prepare the experience kickoff website. You'll need to
 Meet with the designer before the kickoff to decide who will lead the meeting. Usually, you'll divide up the session, with the designer focusing on visual elements and the UX/strategist focusing on goals, audiences and content.
 
 If the meeting is remote, be sure your producer has reserved a conference room, a dial-in and screen share for you, and has sent the screen share and dial-in to all the client team members.
-
-##### Templates
-<div markdown="1" class="needscontent templates">
-<p>TODO: Make a standard template for this</p>
-</div>
-
 
 ### Wireframes
 <!--
@@ -515,15 +441,9 @@ As noted earlier in this document, you'll need to get an approval at some point.
 #### Examples
 <div class="needscontent">
 <figure markdown="1"><figcaption>Single-page Wireframe</figcaption>
-[![Example Wireframe](img/strategy/wireframe-example.png)](img/strategy/wireframe-example.png)
-</figure>
-<figure markdown="1"><figcaption>Workflow Diagram</figcaption>
-[![Example Storyboard](img/strategy/storyboard.png)](img/strategy/storyboard.png)
+[![Example Wireframe](img/strategy/wireframe-example-metro.png)](img/strategy/wireframe-example-metro.png)
 </figure>
 </div>
-
-##### Templates
-[//fileserver/files/UX/templates/wireframes/](smb://fileserver/files/UX/templates/wireframes/)
 
 <!-- 
 <div markdown="1" class="needscontent">
@@ -563,7 +483,7 @@ The script helps to ensure consistency; video recording the screen lets us revis
 
 
 
-
+<!-- 
 ## Documenting Requirements
 
 <div markdown="1" class="needscontent">
@@ -574,7 +494,7 @@ The script helps to ensure consistency; video recording the screen lets us revis
 * Reviewers (engineers, creatives, PMs, clients)
 * Guiding Client Feedback and Obtaining Approvals
 
-</div>
+</div> -->
 
 
 
@@ -585,14 +505,13 @@ The most important qualification for a tool is *fitness for purpose*. We constan
 
 ### Wireframes and Site Maps
 
-[OmniGraffle Pro](https://www.omnigroup.com/products/omnigraffle) is our primary tool for creating site maps and wireframes.
+[Adobe XD](https://www.adobe.com/products/xd.html) is our primary tool for creating site maps and wireframes.
 
-We have created an OmniGraffle stencil with our most commonly used wireframe components. You can get the latest version from our fileserver.
-
+We have created Adobe XD templates with our most commonly used wireframe components. You can get the latest versions from our fileserver. These can be found by going to *fileserver > data > files > UX > templates*. 
 
 ### Documents
 
-[Keynote](https://www.apple.com/iwork/keynote/) is our preferred on-screen presentation tool. If cross-platform compatibility will be required, we use PowerPoint. ([Reveal.js](https://lab.hakim.se/reveal-js/#/) is handy for web-based presentations, but HTML & CSS knowledge is a prerequisite.)
+[Keynote](https://www.apple.com/iwork/keynote/) is our preferred on-screen presentation tool. If cross-platform compatibility will be required, we use PowerPoint.
 
 We frequently use [Google Docs](https://docs.google.com) for collaborative authoring and editing. Google Docs should not be created or edited using personal accounts; *only* use your imarc.com account.
 
