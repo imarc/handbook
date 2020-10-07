@@ -18,9 +18,9 @@ starting point for new projects. Authored by Imarc, Boilerplate contains our sta
 
 All JavaScript dependencies are managed by [npm](https://www.npmjs.com). Get started with `npm` by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `/node_modules` directory within your project.
 
-- Project and library code should never have the `/node_modules` directory committed.
-- **Project** code SHOULD commit the `package-lock.json` file.
-- **Library** code SHOULD NOT commit the `package-lock.json` file.
+* *Project and library code should never have the `/node_modules` directory committed.
+* ***Project** code SHOULD commit the `package-lock.json` file.
+* ***Library** code SHOULD NOT commit the `package-lock.json` file.
 
 ## Module Bundling / Asset Compilation
 Imarc often uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) to handle JavaScript module bundling. Asset compilation (Sass), etc is an included feature. Reference Boilerplate for Laravel Mix configs.
@@ -647,157 +647,42 @@ The way of detecting whether the enviroment is production varies from project to
 
 Use this checklist below to ensure an acceptable level of accessibility.
 
-### Baseline Checklist
-<ul>
-	<li>
-		Use open web standards such as HTML, CSS, JavaScript
-	</li>
-	<li>
-		HTML and CSS correctly validate using W3C validation tools
-		<ul>
-			<li>
-				<a href="http://validator.w3.org">HTML validator</a>
-			</li>
-			<li>
-				<a href="http://jigsaw.w3.org/css-validator">CSS validator</a>
-			</li>
-		</ul>
-	</li>
-	<li>
-		Include skip navigation
-	</li>
-	<li>
-		Focus styles should be present and visible for keyboard operability
-	</li>
-	<li>
-		<strong>Web forms</strong>
-		<ul>
-			<li>
-				Inputs always have associated labels
-			</li>
-			<li>
-				Inputs should use an associated type attribute (e.g. search, tel, email, datetime)
-			</li>
-			<li>
-				Validation messages show all errors at once instead of progressively showing more errors
-			</li>
-			<li>
-				Validation messages use same field names as form and in the same order
-			</li>
-			<li>
-				Make sure required fields visually indicate their requirements (e.g. asterisk)
-			</li>
-		</ul>
-	</li>
-	<li>
-		Images should always have an `alt` attribute, where its value conveys the same thing that is communicated to a sighted user. Decorative images that provide no important meaning to non-sighted users should utilize an empty `alt=""` value. This ensures screen readers omit them from announcements.
-	</li>
-	<li>
-		Timed responses are properly indicated to users.
-	</li>
-	<li>
-		<strong>Color</strong>
-		<ul>
-			<li>
-				Color combinations should not create visual difficulty for users with color deficiencies. Utilize <a href="http://www.checkmycolours.com">Check My Colours</a> or a similar service.
-			</li>
-			<li>
-				Important information should not be conveyed with color alone. Use other identifiers like special characters and font weight.
-			</li>
-		</ul>
-	</li>
-	<li>
-		All form fields can be activated, operated and submitted using a keyboard.
-	</li>
-	<li>
-		Users can control galleries and modal windows using a keyboard.
-	</li>
-</ul>
+### Miscellaneous
 
+* Use open web standards such as HTML, CSS, JavaScript
+* Vet HTML and CSS using their respective W3C validators ([HTML](http://validator.w3.org) / [CSS](http://jigsaw.w3.org/css-validator))
+* Include visually-hidden skip navigation that is operable via keyboard focus
+* Focus styles should be present and visible for keyboard operability
+* Images should always have an `alt` attribute , where its value conveys the same thing that is communicated to a sighted user. Decorative images that provide no important meaning to non-sighted users should utilize an empty `alt=""` value. This ensures screen readers omit them from announcements.
+* Timed responses are properly indicated to users.
+* All form fields can be activated, operated and submitted using a keyboard.
+* Users can control galleries and modal windows using a keyboard.
+
+### Navigations
+These points are taken from [W3C’s Accessible Menus Tutorial](https://www.w3.org/WAI/tutorials/menus) .
+* Use informed markup. Use informed labeling for the navigation itself along with current nav items. Labeling could be done via visually-hidden text or WAI-ARIA labels.
+* Navigations should have proper states (active, hover, focus, current, visited).
+* Dropdown navigations should be mouse/touch/keyboard operable and should leverage WAI-ARIA markup.
+
+### Web Forms
+
+* Inputs always have associated labels
+* Inputs should use an associated type attribute (e.g. `search`, `tel`, `email`, etc)
+* Make sure required fields are visually indicated as such (e.g. an asterisk <strong>*</strong>)
+* All form fields can be operated using a keyboard, with apparent focus styles.
+* Validation messages show all errors at once instead of progressively showing more errors
+* Validation messages use same field names as form and in the same order
+
+### Color
+
+* Color combinations should be in compliance with [WCAG 2.0 minimum contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Use a <a href="https://contrast-grid.eightshapes.com">color contrast checker</a> to ensure your ratio meets the standard.
+* Important information should not be conveyed with color alone. Use other visual identifiers like font-weight, sizing, shapes, special characters.
 
 ## Mobile Optimization
 
 ### Viewport
 On mobile-specific sites, set the viewport to the width of the device:
 
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-This fits the webpage into the visible area of the `viewport` to ensure that
-the page is scaled to 100% on load.
-
-
-### Mobile Orientation Changes
-iPhone can have issues with dynamic orientation changes – changing from
-portrait to landscape view while viewing a page. The issue occurs on iPhone,
-when using the viewport setting, `initial-scale=1.0`.
-
-[Mozilla’s developer site](https://developer.mozilla.org/en/Mobile/Viewport_meta_tag#Viewport_basics)
-explains this issue and one possible solution:
-
-> Mobile Safari often just zooms the page when changing from portrait to
-> landscape, instead of laying out the page as it would if originally loaded
-> in landscape. If web developers want their scale settings to remain
-> consistent when switching orientations on the iPhone, they must
-> add a `maximum-scale` value to prevent this zooming, which has the
-> sometimes-**unwanted side effect of preventing users from zooming in**.
-
-Another option Imarc has discussed is employing JavaScript to solve iPhone’s
-re-orientation issue.
-
-
-### Media Queries
-
-Meida queries is a CSS3 technology allowing scope limitation of styles based on a
-feature such as width, aspect ratio, pixel density, and more. Imarc primarily
-uses media queries to serve different styles to mobile and tablet devices.
-
-All media queries can reside in a site’s main stylesheet.
-
-    @media (min-width: 481px) {
-        nav.primary li {
-            float: left;
-            font-size: 1.4em;
-            font-weight: bold;
-            margin: 0 0 20px 20px;
-        }
-    }
-
-Some devices may download all styles (including large background images), regardless
-of whether that device is scoped. This allows the device to apply specific width-based
-rules on the fly without re-fetching images or CSS. The downside is a loss of optimization.
-For tips on improving optimization, see [Mobile Optimization](frontend#MobileOptimization)
-
-#### Media Query Behaviors
-
-Use `min-device-width` to prevent automatic reflowing when a window is
-resized.
-
-	<link rel="stylesheet" href="/base.css" media="all" type="text/css"  />
-	<link rel="stylesheet" href="/desktop.css" media="screen and (min-device-width: 481px)" type="text/css" />
-
-**With min/max-device-width:**
-- Android and iOS phones will download both CSS files
-- Android and iOS phones will ignore style definitions, images, and assets
-  referenced in `desktop.css`.
-- When a desktop browser is sized down narrower than 481px, nothing
-  will change.
-- See [http://www.ddmf.org/](http://www.ddmf.org/)
-
-Use `min-width` or `max-width` to allow media queries to dynamically activate
-when the browser window is scaled.
-
-	<link rel="stylesheet" href="/base.css" media="all" type="text/css" />
-	<link rel="stylesheet" href="/desktop.css" media="screen and (min-width: 481px)" type="text/css" />
-
-**With min/max-width:**
-- Android and iOS phones will download both CSS files (same as above)
-- Android and iOS phones will ignore style definitions, images, and assets
-   referenced in `desktop.css`. (same as above)
-- When a desktop browser is scaled down the `desktop.css` styles will be
-  deactivated causing the page to dynamically reflows.
-- See [http://robot-or-not.com/](http://robot-or-not.com/)
-
-Additional info on
-[Peter Gasston’ blog](http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/).
-Andy Clark’s [320 and up project](http://stuffandnonsense.co.uk/projects/320andup/)
-also provides resources for optimization.
+`initial-scale=1.0` ensures smartphones retain the same zoom level during orientation change (e.g. portrait to landscape).
