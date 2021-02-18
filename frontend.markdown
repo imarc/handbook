@@ -6,7 +6,7 @@ layout: default
 <section class="intro">
 	<p>
 		This document describes Imarc’s markup and style standards.
-		<a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
+		<a href="https://www.imarc.com">Imarc</a> is a digital agency with offices near Boston and Silicon Valley.
 	</p>
 </section>
 
