@@ -14,16 +14,16 @@ layout: default
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great
 starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and SCSS.
 
-## NPM
+## npm
 
-All JavaScript dependencies are managed by [npm](https://www.npmjs.com). Get started with `npm` by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `/node_modules` directory within your project.
+Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `node_modules` directory. See installed packages and relevant scripts on the project’s `package.json` file. 
 
-* *Project and library code should never have the `/node_modules` directory committed.
-* ***Project** code SHOULD commit the `package-lock.json` file.
-* ***Library** code SHOULD NOT commit the `package-lock.json` file.
+* Project and library code should never have `node_modules` committed.
+* **Project** code SHOULD commit the `package-lock.json` file.
+* **Library** code SHOULD NOT commit the `package-lock.json` file.
 
 ## Module Bundling / Asset Compilation
-Imarc often uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) to handle JavaScript module bundling. Asset compilation (Sass), etc is an included feature. Reference Boilerplate for Laravel Mix configs.
+Imarc often uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) for both JavaScript module bundling and Asset compilation (Sass). Reference Boilerplate for Laravel Mix configs.
 
 ## Doctype, Validation, Meta
 
