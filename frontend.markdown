@@ -80,7 +80,7 @@ Keep meta descriptions less than 160 characters. Here is an example meta descrip
 
 ### Font Size
 
-Users are able to edit theor browser’s default font-size. To best work with this, it is ideal to **not set** a default font-size on the `<html>` or `<body>` selectors. Let the browser’s default size (16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit. 
+Users are able to edit their browser’s default font-size. To best work with this, it is ideal to **not set** a default font-size on the `<html>` or `<body>` selectors. Let the browser’s default size (16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit. 
 
 “The design I was given has a larger default font-size than 16px. What do I do?” 
 
