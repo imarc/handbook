@@ -457,6 +457,8 @@ Use YouTube/Vimeo embed codes to display the videos. For responsive videos, wrap
         width: 100%;
     }
 
+Tip: with a preprocesser like Sass, you don’t need `calc()`, and `padding-top: 9 / 16 * 100%` would suffice.
+
 #### Background Video
 
 Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s
