@@ -108,23 +108,24 @@ The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
 
 ## Typography
 
-The default font-size and font-family for a site can be set on the `body` element. To help prevent adjustments of font-size after iOS orientation changes, use `-webkit-text-size-adjust: 100%`.
+### Font Size
 
-    body {
-        font-family: Arial, Helvetica, serif;
-        font-size: 1rem;
-        -webkit-text-size-adjust: 100%;
+For compatibility with users’ browser font-size preferences, do not set a default font-size on the `<html>` or `<body>` elements. 
+Let the browser’s default size (16px) serve as a baseline from where we can cascade our own styles. In this way, we can control proportion. 
+Relative sizing via `em` or `rem` is most friendly to user sizing preferences and zooming. Avoid using the `px` unit. 
+
+If your project’s default font-size is not 16px but say, 20px, then use relative sizing:
+
+    html {
+        font-size: 125%; // (125/100) * 16px = 20px
     }
 
-Do not set sizes on unclassed markup that typically should be rendered as
-the default text size. This includes `p`, `li`, `div`, `td`, `a`.
-
-With 1rem as a base size: 1rem = 16px; 1.25rem = 20px; 2rem = 32px. Leading, or `line-height`, should be a unitless measure (e.g. `line-height: 1.5`)
+Your project’s root font-size would now be 20px. 1.5rem would be 30px. 
 
 ### Font Stacks
 
-Specify font families using font stacks. This provides appropriate fall-back
-choices to user agents.
+Specify font families on `<body>` using font stacks. This provides appropriate fall-back
+choices.
 
 Default **serif** font stack:
 
@@ -132,11 +133,19 @@ Default **serif** font stack:
 
 Default **sans-serif** font stack:
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-Include a generic font family such as `serif`, `sans-serif`, `cursive`,
-`fantasy`, or `monospace`. Imarc often uses a handy `$font-stack` Sass variable.
+To help prevent adjustments of font-size after iOS orientation changes, use `-webkit-text-size-adjust: 100%`.
 
+    body {
+        font-family: Arial, Helvetica, serif;
+        -webkit-text-size-adjust: 100%;
+    }
+
+Do not set sizes on unclassed elements that typically should be rendered as
+the default text size. This includes `p`, `li`, `div`, `td`, `a`.
+
+`line-height` should use a unitless measure (e.g. `line-height: 1.5`)
 
 ### Font Awesome
 
