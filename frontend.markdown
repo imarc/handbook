@@ -23,7 +23,7 @@ Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more b
 * **Library** code SHOULD NOT commit the `package-lock.json` file.
 
 ## Module Bundling / Asset Compilation
-Imarc often uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) for both JavaScript module bundling and Asset compilation (Sass). Reference Boilerplate for Laravel Mix configs.
+Imarc uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) for both JavaScript module bundling and Asset compilation (Sass). Reference Boilerplate for an example of a [Laravel Mix configuration file](https://github.com/imarc/boilerplate-components/blob/next/webpack.mix.js).
 
 ## Doctype, Validation, Meta
 
@@ -39,11 +39,6 @@ within the proper context of the DOCTYPE.
 
 * [W3C HTML Markup Validator](http://validator.w3.org)
 * [W3C CSS Validator](http://jigsaw.w3.org/css-validator)
-
-### Metadata
-Include the following meta tag in the head to credit Imarc.
-
-	<meta name="web_author" content="Imarc, A Digital Agency | Boston + Silicon Valley | more info at imarc.com" />
 
 #### Titles
 
@@ -81,93 +76,49 @@ Keep meta descriptions less than 160 characters. Here is an example meta descrip
 
 	<meta name="description" content="Our blog features the latest in web design, development, user experience and marketing." />
 
-### Character Encoding
-
-Use UTF-8 as the character encoding. Set your editor to use UTF-8 for
-all aspects of the web application.
-
-HTML pages should begin with by setting `UTF-8` in the content-type meta tag.
-
-	<meta charset="UTF-8" />
-
-Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the
-frontend HTML and backend databases, use real UTF-8 characters instead of HTML
-entities.
-
-Use real apostrophes and quotations instead of primes and double-primes. Use
-a UTF-8 character like `»`, instead of typing out entities like `&raquo;`.
-The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`,
-`&quot;`.
-
-    <p>
-        Separation of content – better with an en-dash.
-        Imarc’s motto: “Use curly quotes”
-        <a href="#"> Learn More »</a>
-    </p>
-
-
 ## Typography
 
 ### Font Size
 
-For compatibility with users’ browser font-size preferences, do not set a default font-size on the `<html>` or `<body>` elements. 
-Let the browser’s default size (16px) serve as a baseline from where we can cascade our own styles. In this way, we can control proportion. 
-Relative sizing via `em` or `rem` is most friendly to user sizing preferences and zooming. Avoid using the `px` unit. 
+Users are able to edit theor browser’s default font-size. To best work with this, it is ideal to **not set** a default font-size on the `<html>` or `<body>` selectors. Let the browser’s default size (16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit. 
 
-If your project’s default font-size is not 16px but say, 20px, then use relative sizing:
+“The design I was given has a larger default font-size than 16px. What do I do?” 
+
+If you need to, use a percentage unit on the your `:root` or `<html>` selector’s `font-size` property. In the case of 20px default font-size:
 
     html {
         font-size: 125%; // (125/100) * 16px = 20px
     }
 
-Your project’s root font-size would now be 20px. 1.5rem would be 30px. 
+Your project’s root font-size would now be 20px. 1.5rem would be 30px.
 
 ### Font Stacks
 
-Specify font families on `<body>` using font stacks. This provides appropriate fall-back
-choices.
+Specify a font family stack on `<body>`.
 
-Default **serif** font stack:
+A default **serif** font stack:
 
     font-family: Constantia, Lucida, Georgia, serif;
 
-Default **sans-serif** font stack:
+A default **sans-serif** font stack:
 
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-To help prevent adjustments of font-size after iOS orientation changes, use `-webkit-text-size-adjust: 100%`.
+To help prevent adjustments of font-size after iOS device orientation changes, use `-webkit-text-size-adjust: 100%`.
 
     body {
-        font-family: Arial, Helvetica, serif;
         -webkit-text-size-adjust: 100%;
     }
 
-Do not set sizes on unclassed elements that typically should be rendered as
-the default text size. This includes `p`, `li`, `div`, `td`, `a`.
+Try not to set `font-size` on selectors that should be rendered at the project’s default font-size (e.g. `<p>`, `<li>`, `<div>`, `<td>`, `<a>`). Rather, you should style to a class – modifying font-size on a `.card__lead` class that is hung on a `<p>` selector is better).
 
-`line-height` should use a unitless measure (e.g. `line-height: 1.5`)
+### Line Height
 
-### Font Awesome
+`line-height` should use a unitless value (e.g. `line-height: 1.5`)
 
-[Font Awesome](https://fontawesome.com) is an iconography framework used on many Imarc projects.
+### Web Fonts
 
-Imarc owns a <a href="https://fontawesome.com/pro">professional license</a> and you can find credentials in [LastPass](https://lastpass.com).
-
-#### Implementation
-There are various ways to get Font Awesome going on your project. You can manually include supplied
-source files, leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private NPM
-package</a>, or utilize the CDN.
-
-**Imarc-recommended implementation**
-* Use a [Font Awesome kit](https://fontawesome.com/kits)
-* Implementation via NPM is fine, but using the professional tier can require all team members to possess the same `.npmrc` file in order to pull down gated assets from NPM properly. See a lead engineer for help.
-
-<i class="far fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
-
-### Web Font services
-
-Web font services Imarc uses: **[Google Web Fonts](http://www.google.com/webfonts)**,
-**[Typekit](http://www.typekit.com)**, **[Fonts.com](http://www.fonts.com/)**
+Imarc leans on web font services such as [Google Fonts](https://fonts.google.com), [Typekit](http://www.typekit.com), [Fonts.com](http://www.fonts.com/). See your project manager for guidance if your desired web font costs money.
 
 ### Dashes
 
@@ -187,18 +138,37 @@ Em dashes have been dropped based on Robert Bringhurst’s recommendation in
 
 ### Print Styles
 
-While not requested often, some websites necessitate a clean layout when pages
-are printed. Imarc begins from a sane starting point as documented in [Imarc Boilerplate](https://github.com/imarc/boilerplate/blob/gh-pages/css/styles.scss#L1130)
-
+While not requested often, some websites require a print stylesheet. Imarc has a [sane starting point for print styles](https://github.com/imarc/boilerplate-components/blob/master/resources/styles/base.scss#L295-L334).
 
 ## Coding Style
 
 Consistent coding style for HTML and CSS is vital because multiple people collaborate on a site’s markup and style.
 
+### Character Encoding
+
+Use UTF-8 as the character encoding. Set your editor to use UTF-8 for
+all aspects of the web application.
+
+HTML pages should begin with by setting `UTF-8` in the content-type meta tag.
+
+	<meta charset="UTF-8" />
+
+Since [UTF-8](http://en.wikipedia.org/wiki/UTF-8) is enabled throughout the
+front-end HTML and backend databases, use real UTF-8 characters instead of HTML
+entities.
+
+Use real UTF-8 characters instead of HTML entities. For example, use `»`, instead of typing out its `&raquo;` entity. The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`, `&quot;`. This also applies to CSS. Doing something like `content: '»'` is better than `content: '\bb'.
+
+    <p>
+        Separation of content – better with an en-dash.
+        Imarc’s motto: “Use curly quotes”
+        <a href="#"> Learn More »</a>
+    </p>
+
 ### CSS
 
 #### ABEM
-Many Imarc projects use a variant of Block Element Modifier called [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/). It is influenced from [Atomic Design](https://atomicdesign.bradfrost.com/) principals. This creates a methodology for HTML class naming and Sass directory structure.
+Many Imarc projects use an offshoot of Block Element Modifier called [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/). It is influenced from [Atomic Design](https://atomicdesign.bradfrost.com/) principals. This creates a methodology for HTML class naming and Sass directory structure.
 
 Check out the [Sass folder structure description on Imarc’s boilerplate-components](https://imarc.github.io/boilerplate-components/pattern-library/).
 
@@ -207,7 +177,7 @@ Check out the [Sass folder structure description on Imarc’s boilerplate-compon
 Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) or [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for page layouts. Do not use floats or tables.
 
 
-#### General Formatting
+#### General CSS Formatting
 
     .heading {
         background-color: #FFF;
@@ -239,7 +209,6 @@ Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flex
 
 To avoid CSS specificity issues, use only class selectors.
 The exceptions to this rule are: anchors, form label IDs, JavaScript hook requirements.
-
 
 ## Forms
 
@@ -383,7 +352,6 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
         </p>
     </div>
 
-
 ## Tables
 
 Use tables to display tabular data such as a pricing or feature chart. Do not use tables for page layout. Make sure your tables do not only use rows and cells – take advantage of other elements to increase accessibility.
@@ -464,19 +432,21 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
         </tbody>
     </table>
 
-
 ## Media
 
 ### Video
 
-When clients host videos on major video providers like YouTube and Vimeo, utilize those providers’ embed codes to display the videos on our sites. Wrap these embed codes in an `.embed` div with the associated CSS rules to allow for a responsive implementation:
+Use YouTube/Vimeo embed codes to display the videos. For responsive videos, wrap the embed code in a parent and apply appropriate CSS. Note that `calc(9 / 16 * 100%)` below corresponds to a 16:9 aspect ratio. Modify this as needed.
 
     .embed {
-        clear: both;
-        height: 0;
-        margin-bottom: 2em;
-        padding-bottom: 56.25%;
         position: relative;
+        width: 100%;
+    }
+    
+    .embed::before {
+        content: '';
+        display: block;
+        padding-bottom: calc(9 / 16 * 100%);
     }
 
     .embed iframe {
@@ -485,7 +455,6 @@ When clients host videos on major video providers like YouTube and Vimeo, utiliz
         position: absolute;
         top: 0;
         width: 100%;
-        z-index: 1;
     }
 
 #### Background Video
@@ -494,8 +463,7 @@ Sometimes, a video will auto-play (without audio) behind HTML content. This is c
 “hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses
 <a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing
 and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for
-implementing a responsive backround video. Note that we use padding on the `video`’s `::before`
-pseudo element to achieve our desired aspect ratio.
+implementing a responsive backround video.
 
     <div class="hero">
         <video autoplay loop="loop" muted poster="video-placeholder.jpg">
@@ -511,16 +479,16 @@ pseudo element to achieve our desired aspect ratio.
         width: 100%;
         z-index: 1;
     }
+    
     .hero::before {
-        content: "";
+        content: '';
         display: block;
-        padding-top: 33.333%;
+        padding-top: calc(3 / 9 * 100%);
     }
 
 ### Image Compression
 
-Whenever you cut up a website, you should use image compression software on assets.
-Regular compression can greatly reduce the weight of the site. [ImageOptim](https://imageoptim.com/) is recommended among the Imarc team.
+Whenever you save imagery for a web page, use image compression software on assets. Compression can reduce the weight of the site. [ImageOptim](https://imageoptim.com/) is recommended by the Imarc team.
 
 ### SVG
 
@@ -574,6 +542,30 @@ Use a 256x256 SVG file for this – setting your icon to black. To set a color f
 
     <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
 
+## Iconography
+
+### Font Awesome
+
+[Font Awesome](https://fontawesome.com) is an iconography framework used on many Imarc projects.
+
+Imarc owns a <a href="https://fontawesome.com/pro">professional license</a> and you can find sign-in credentials in [LastPass](https://lastpass.com).
+
+#### Font Awesome Implementation
+There are a couple ways to get Font Awesome going on your project. You can manually include supplied
+source files or leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private npm
+package</a>.
+
+**Imarc-recommended implementation**
+* Use a [Font Awesome kit](https://fontawesome.com/kits)
+* Implementation via NPM is fine, but using the professional tier can require all team members to possess the same `.npmrc` file in order to pull down gated assets from NPM properly. See a lead engineer for help.
+
+<i class="far fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
+
+### SVG icons
+
+Tabler and Feather are two popular SVG icon sets.
+
+** Content to be written here regarding best practices, etc**.
 
 ## Browser Support
 
@@ -694,4 +686,4 @@ On mobile-specific sites, set the viewport to the width of the device:
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-`initial-scale=1.0` ensures smartphones retain the same zoom level during orientation change (e.g. portrait to landscape).
+`initial-scale=1` ensures smartphones retain the same zoom level during orientation change (e.g. portrait to landscape).
