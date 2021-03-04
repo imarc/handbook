@@ -13,7 +13,9 @@
 @import "~normalize-scss/sass/normalize";
 
 /* = Base = */
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 html {
@@ -24,7 +26,6 @@ body {
     color: #414141;
     font-family: "canada-type-gibson", "Gibson", Arial, sans-serif;
     font-weight: 300;
-    font-size: 1rem;
     line-height: 1.5;
     margin: 0;
     -webkit-text-size-adjust: 100%;
@@ -36,7 +37,7 @@ img {
 }
 
 ::selection {
-    background: #FF675B;
+    background-color: #FF675B;
     color: #FFF;
     text-shadow: none;
 }
@@ -48,8 +49,8 @@ nav ul {
     padding-left: 0;
 }
 
-nav ul:before,
-nav ul:after {
+nav ul::before,
+nav ul::after {
     content: "";
     display: table;
 }
@@ -59,15 +60,15 @@ nav ul:after {
 }
 
 /* = Grouping = */
-.group:before,
-.group:after,
-.container:before,
-.container:after {
+.group::before,
+.group::after,
+.container::before,
+.container::after {
     content: "";
     display: table;
 }
-.group:after,
-.container:after {
+.group::after,
+.container::after {
     clear: both;
 }
 
@@ -118,7 +119,7 @@ header.primary {
         text-align: center;
         &-heading {
             color: white;
-            text-transform: uppercase;
+            font-weight: 700;
         }
         a {
             display: block;
@@ -174,7 +175,7 @@ nav.primary .active a:focus {
     z-index: 4;
 }
 
-body .heading h1:before {
+body .heading h1::before {
     background-repeat: no-repeat;
     content: "";
     display: block;
@@ -302,15 +303,15 @@ aside.primary nav > ul > li:first-child {
     border-top: none;
 }
 
-figure img { 
+figure img {
     border: 1px solid #999999;
 }
-  
-figure figcaption { 
-    font-style: italic; 
-    font-size: 0.85em; 
+
+figure figcaption {
+    font-style: italic;
+    font-size: 0.85em;
     text-align: center;
-}  
+}
 
 footer.primary {
     background: #1B1B1B;
@@ -326,7 +327,6 @@ footer.primary img {
     max-width: 90px;
     opacity: 0.6;
 }
-
 
 
 /* = Typography = */
@@ -349,7 +349,7 @@ h6:first-child {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 h2 {
@@ -565,17 +565,31 @@ sub {
 body.homepage {
     background-attachment: fixed;
     background-color: #222;
-    background-image: url(/img/tile_diagonal.png), url(/img/bg_home.jpg);
-    background-position: left top, center center;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover;
+    background-image: url(/img/shed.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
     padding: 48px 0;
+    position: relative;
     text-align: center;
     width: 100%;
+    &::before {
+        content: '';
+        display: block;
+        background-color: rgba(white, 0.15);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
 }
 body.homepage header.primary,
 body.homepage footer.primary {
@@ -591,10 +605,6 @@ body.homepage header.primary .branding {
     text-align: center;
     width: 90%;
 }
-body.homepage .branding a:hover,
-body.homepage .branding a:focus {
-    opacity: 0.5;
-}
 
 body.homepage .branding h1 {
     background: rgba(0,0,0,0.6);
@@ -602,19 +612,11 @@ body.homepage .branding h1 {
     padding: 14px;
     width: 90%;
 }
-body.homepage h2.intro {
-    color: #f2efed;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-}
 
 body.homepage footer.primary {
-    font-size: 13px;
+    font-size: 14px;
     padding: 0;
     text-align: center;
-    text-shadow: 1px 1px 12px #000;
 }
 
 body.homepage footer.primary img {

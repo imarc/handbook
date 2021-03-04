@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/imarc/handbook#readme",
   "devDependencies": {
-    "laravel-mix": "^5.0.5",
-    "sass": "^1.26.10",
-    "sass-loader": "^10.0.2"
+    "laravel-mix": "^5.0.9",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1"
   },
   "dependencies": {
     "normalize-scss": "^7.0.1"
