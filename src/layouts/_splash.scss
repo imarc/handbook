@@ -1,0 +1,36 @@
+/**
+ * layouts > splash
+ */
+
+.splash {
+    background-image: conic-gradient(from .5turn at bottom center, hsl(190, 35%, 87%), white);
+
+    &__header {
+        align-content: center;
+        display: grid;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    &__heading {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    &__body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: 1fr auto;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}

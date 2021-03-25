@@ -1,0 +1,10 @@
+/**
+ * abstracts > mixins
+ *
+ */
+
+ @mixin breakpoint($breakpoint: md, $key: min) {
+    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}

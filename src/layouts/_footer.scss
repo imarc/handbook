@@ -1,0 +1,37 @@
+/**
+ * layouts > footer
+ */
+
+.footer {
+    background-color: $ash;
+    color: white;
+    font-size: 0.875rem;
+
+    &__body {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        text-align: center;
+
+        @include breakpoint(md) {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+        }
+
+    }
+
+    &__brand {
+        width: 100px;
+    }
+
+    &__asset {
+        display: block;
+    }
+
+    &__content {
+        @include breakpoint(md) {
+            margin-left: 2rem;
+        }
+    }
+}

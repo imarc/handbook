@@ -1,0 +1,76 @@
+/**
+ * Base > Typography
+ */
+
+%heading {
+    font-weight: $headings-font-weight;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @extend %heading;
+}
+
+h1 {
+    font-size: 2.75rem;
+    @include breakpoint(md) {
+        font-size: 4.25rem;
+    }
+}
+
+h2 {
+    font-size: 2.25rem;
+    @include breakpoint(md) {
+        font-size: 3.157rem;
+    }
+}
+
+h3 {
+    font-size: 1.75rem;
+    @include breakpoint(md) {
+        font-size: 2.369rem;
+    }
+}
+
+h4 {
+    font-size: 1.25rem;
+    @include breakpoint(md) {
+        font-size: 1.777rem;
+    }
+}
+
+p {
+    margin-top: 0;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.meta {
+    font-size: 0.825rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: $gray-400;
+    font-weight: 700;
+
+    &--capped {
+        text-transform: uppercase;
+    }
+
+    &--section {
+        letter-spacing: 0.225rem;
+        line-height: 1.25;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}
