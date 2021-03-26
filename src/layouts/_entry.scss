@@ -5,18 +5,17 @@
 .entry {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1px;
-
-    &__item {
-
-    }
+    gap: 0.125rem;
 
     &__body {
-        background-color: white;
+        background-color: $white;
+        border-radius: 0.125rem;
         padding: 2rem;
     }
 
     &__heading {
-        font-size: 1.5rem;
+        font-size: 1.275rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
     }
 }

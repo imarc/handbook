@@ -1,0 +1,28 @@
+/**
+ * layouts > torso
+ */
+
+.torso {
+    &__body {
+        @include breakpoint(lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__main {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+
+        @include breakpoint(lg) {
+            margin-right: 2rem;
+            max-width: 78.125%;
+        }
+    }
+
+    &__aside {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    }
+
+}

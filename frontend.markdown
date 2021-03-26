@@ -16,7 +16,7 @@ starting point for new projects. Authored by Imarc, Boilerplate contains our sta
 
 ## npm
 
-Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `node_modules` directory. See installed packages and relevant scripts on the project’s `package.json` file. 
+Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `node_modules` directory. See installed packages and relevant scripts on the project’s `package.json` file.
 
 * Project and library code should never have `node_modules` committed.
 * **Project** code SHOULD commit the `package-lock.json` file.
@@ -80,9 +80,9 @@ Keep meta descriptions less than 160 characters. Here is an example meta descrip
 
 ### Font Size
 
-Users are able to edit their browser’s default font-size. To best work with this, it is ideal to **not set** a default font-size on the `<html>` or `<body>` selectors. Let the browser’s default size (16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit. 
+Users are able to edit their browser’s default font-size. To best work with this, it is ideal to **not set** a default font-size on the `<html>` or `<body>` selectors. Let the browser’s default size (16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit.
 
-“The design I was given has a larger default font-size than 16px. What do I do?” 
+“The design I was given has a larger default font-size than 16px. What do I do?”
 
 If you need to, use a percentage unit on the your `:root` or `<html>` selector’s `font-size` property. In the case of 20px default font-size:
 
@@ -442,7 +442,7 @@ Use YouTube/Vimeo embed codes to display the videos. For responsive videos, wrap
         position: relative;
         width: 100%;
     }
-    
+
     .embed::before {
         content: '';
         display: block;
@@ -481,7 +481,7 @@ implementing a responsive backround video.
         width: 100%;
         z-index: 1;
     }
-    
+
     .hero::before {
         content: '';
         display: block;

@@ -3,7 +3,7 @@
  */
 
 .splash {
-    background-image: conic-gradient(from .5turn at bottom center, hsl(190, 35%, 87%), white);
+    background-image: conic-gradient(at 125% 50%, $ocean, $ice, $white, $ice, $ice);
 
     &__header {
         align-content: center;
@@ -13,6 +13,10 @@
     }
 
     &__heading {
+        --fluid-type-min: 2.75rem;
+        --fluid-type-max: 7rem;
+        --fluid-type-target: 5vw;
+
         margin-bottom: 4rem;
         text-align: center;
     }
@@ -25,12 +29,23 @@
 
     &__title {
         display: block;
-        margin-bottom: 0.5rem;
+        color: $fire;
+        margin-bottom: 1rem;
+        @include breakpoint(md) {
+            text-shadow:
+                0.125rem 0.125rem 0 shade-color($fire, 20%),
+                0.25rem 0.25rem 0 $ice,
+                0.375rem 0.375rem 0 rgba($white, 0.5);
+        }
     }
 
     &__subtitle {
+        color: $gray-500;
         display: block;
-        font-size: 1rem;
+        font-size: clamp(0.875rem, 2vw, 1.25rem);
         font-weight: 400;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        text-transform: uppercase;
     }
 }

@@ -1,5 +1,5 @@
 navigation:
-- text: Strategy & UX
+- text: Strategy / UX
   relative_url: strategy
   url: /strategy.html
 - text: Creative
@@ -8,9 +8,6 @@ navigation:
 - text: Frontend
   relative_url: frontend
   url: /frontend.html
-- text: JavaScript
-  relative_url: javascript
-  url: /javascript.html
 - text: Backend
   relative_url: backend
   url: /backend.html

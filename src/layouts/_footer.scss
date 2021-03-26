@@ -3,13 +3,13 @@
  */
 
 .footer {
-    background-color: $ash;
-    color: white;
-    font-size: 0.875rem;
+    background-color: $footer-background-color;
+    color: color-contrast($footer-background-color);
+    font-size: 0.825rem;
 
     &__body {
-        padding-bottom: 1.5rem;
-        padding-top: 1.5rem;
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
         text-align: center;
 
         @include breakpoint(md) {
@@ -22,16 +22,17 @@
     }
 
     &__brand {
-        width: 100px;
+        width: 5rem;
     }
 
     &__asset {
         display: block;
+        fill: currentColor;
     }
 
     &__content {
         @include breakpoint(md) {
-            margin-left: 2rem;
+            margin-left: 1.75rem;
         }
     }
 }

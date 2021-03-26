@@ -2,11 +2,26 @@
  * Base > Typography
  */
 
+a {
+    color: $link;
+    transition: color 150ms ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-hover;
+    }
+}
+
 %heading {
+    font-size: clamp(
+        var(--fluid-type-min, 1.25rem),
+        calc(1rem + var(--fluid-type-target, 3vw)),
+        var(--fluid-type-max, 1.777rem)
+    );
     font-weight: $headings-font-weight;
     margin-top: 0;
     margin-bottom: 0.25em;
-    line-height: 1;
+    line-height: 1.15;
 }
 
 h1,
@@ -18,31 +33,24 @@ h5 {
 }
 
 h1 {
-    font-size: 2.75rem;
-    @include breakpoint(md) {
-        font-size: 4.25rem;
-    }
+    --fluid-type-min: 2.75rem;
+    --fluid-type-max: 4.25rem;
+    --fluid-type-target: 5vw;
 }
 
 h2 {
-    font-size: 2.25rem;
-    @include breakpoint(md) {
-        font-size: 3.157rem;
-    }
+    --fluid-type-min: 2.25rem;
+    --fluid-type-max: 3.157rem;
 }
 
 h3 {
-    font-size: 1.75rem;
-    @include breakpoint(md) {
-        font-size: 2.369rem;
-    }
+    --fluid-type-min: 1.75rem;
+    --fluid-type-max: 2.369rem;
 }
 
 h4 {
-    font-size: 1.25rem;
-    @include breakpoint(md) {
-        font-size: 1.777rem;
-    }
+    --fluid-type-min: 1.25rem;
+    --fluid-type-max: 1.777rem;
 }
 
 p {

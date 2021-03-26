@@ -1,0 +1,16 @@
+/**
+ * layouts > hero
+ */
+
+.hero {
+    background-color: $hero-background-color;
+
+    &__body {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    &__heading {
+        color: color-contrast($hero-background-color);
+    }
+}
