@@ -5,10 +5,10 @@ navigation:
 - text: Creative
   relative_url: creative
   url: /creative.html
-- text: Frontend
+- text: Front-end
   relative_url: frontend
   url: /frontend.html
-- text: Backend
+- text: Back-end
   relative_url: backend
   url: /backend.html
 - text: Servers

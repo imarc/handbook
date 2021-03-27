@@ -1,14 +1,8 @@
 ---
-title: Frontend
+title: Front-end
+lead: All things front-end development such as Sass, typography basics, accessibility, and more.
 layout: default
 ---
-
-<section class="intro">
-	<p>
-		This document describes Imarc’s markup and style standards.
-		<a href="https://www.imarc.com">Imarc</a> is a digital agency with offices near Boston and Silicon Valley.
-	</p>
-</section>
 
 ## Boilerplate
 **[Boilerplate](http://imarc.github.io/boilerplate)** is a great

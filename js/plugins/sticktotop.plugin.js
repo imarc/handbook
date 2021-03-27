@@ -1,14 +1,14 @@
 /**
  * Provides ability to have an element stick to the top of the page.
  * This plugin should be called on an element that is either position:static or position:relative.
- * 
+ *
  * == Method Signature ==
- * 
- * Passing in a container into the plugin restricts the sticky element from 
+ *
+ * Passing in a container into the plugin restricts the sticky element from
  * moving down along the page farther than the bottom of it.
- * 
+ *
  *	$('.create_sidebar').stickToTop('#torso');
- * 
+ *
  * @copyright 2009-2011, iMarc <info@imarc.net>
  * @author  Craig Ruksznis [cr] <craigruks@imarc.net>
  * @author  Will Bond [wb] <will@imarc.net>
@@ -46,7 +46,7 @@
 			minWidth: 0
 		};
 		$.extend(options, opts);
-		
+
 		element.css({
 			width: element.width(),
 			height: element.height()
@@ -61,17 +61,17 @@
 
 			if (tallEnough && scrollTop > containerTop && scrollTop >= containerTop + heightContainer.outerHeight() - element.outerHeight()) {
 				setPositionAbsolute();
-			
+
 			// if the element is not viewable
 			} else if (tallEnough && topOffset - scrollTop <= 0) {
 				setPositionFixed();
-			
+
 			// if the element is viewable or the window is smaller than the element
 			} else if (!tallEnough || ((isFixed || isAbsolute) && topOffset - scrollTop > 0)) {
 				resetPosition();
 			}
 		}
-		
+
 		function resetPosition() {
 			element.css({
 				position: originalCSSPosition,
@@ -116,7 +116,7 @@
 			}
 		});
 	}
-	
+
 	$.fn.stickToTop = function(heightContainer, options) {
 		this.each(function() {
 			new $.stickToTop($(this), $(heightContainer), options);

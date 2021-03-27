@@ -1,13 +1,8 @@
 ---
 title: Creative
+lead: Imarc’s creative process and deliverables.
 layout: default
 ---
-
-<section class="intro">
-	<p>
-		This document outlines Imarc’s creative process and deliverables. <a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm.
-	</p>
-</section>
 
 <style type="text/css">
 figure img { border: 1px solid #999999;}

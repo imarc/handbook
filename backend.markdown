@@ -1,6 +1,7 @@
 ---
-title: Backend
+title: Back-end
 layout: default
+lead: PHP, SQL, and coding styles.
 ---
 
 <section class="intro">

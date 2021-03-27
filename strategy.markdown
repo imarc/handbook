@@ -1,16 +1,8 @@
 ---
 title: Strategy / UX
+lead: Imarc’s typical strategy process and its deliverables are described here.
 layout: default
 ---
-
-<section class="intro">
-	<p>
-        This page outlines the Strategy process and deliverables for a typical project at Imarc. The information contained should get you on the right track towards tackling a project the “Imarc way”. Or as a non-strategist a deeper understanding for how the UX discipline operates.
-    </p>
-	<p>
-        As always, ask a peer if you have any questions and or suggestions.
-    </p>
-</section>
 
 ## UX Process
 

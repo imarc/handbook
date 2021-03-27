@@ -1,14 +1,8 @@
 ---
 title: Servers
+lead: Imarc’s hosting, server, and maintenance practices.
 layout: default
 ---
-
-<section class="intro">
-	<p markdown="1">
-		This document describes Imarc’s hosting, server, and maintenance practices.
-		[Imarc](https://www.imarc.com) is a full service web development and design firm with offices near Boston and Silicon Valley.
-	</p>
-</section>
 
 ## Imarc's Architecture
 

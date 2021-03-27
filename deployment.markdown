@@ -1,15 +1,8 @@
 ---
 title: Deployment
+lead: Imarc’s preferred method for deploying websites using an automated, repeatable system called <em>patton</em>.
 layout: default
 ---
-
-<section class="intro">
-	<p markdown="1">
-		This document describes Imarc’s preferred method for deploying websites using
-		an automated, repeatable system called  `patton`.
-		[Imarc](https://www.imarc.com) is a full service web development and design firm with offices near Boston and Silicon Valley.
-	</p>
-</section>
 
 ## Concepts
 

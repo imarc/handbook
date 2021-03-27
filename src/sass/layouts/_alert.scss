@@ -1,0 +1,50 @@
+/**
+ * layouts > alert
+ */
+
+.alert {
+    $b: &;
+
+    background-color: $alert-background-color;
+
+    &__body {
+        display: flex;
+        font-size: $alert-font-size;
+        padding: 1.25rem;
+    }
+
+    &__icon {
+        $leading: $alert-font-size * $base-line-height;
+
+        fill: none;
+        flex-shrink: 0;
+        height: $alert-icon-size;
+        margin-right: $alert-font-size / 2;
+        stroke: currentColor;
+        stroke-width: $icon-stroke-width;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vertical-align: -0.125em;
+        width: $alert-icon-size;
+        @if $leading != $icon-size {
+            transform: translateY(($leading - $icon-size) / 2);
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+
+    &--center {
+
+        #{$b}__body {
+            justify-content: center;
+        }
+
+        #{$b}__content {
+            flex-grow: 0;
+        }
+    }
+
+}
+

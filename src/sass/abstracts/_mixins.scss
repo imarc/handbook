@@ -1,0 +1,21 @@
+/**
+ * abstracts > mixins
+ *
+ */
+
+@mixin breakpoint($breakpoint: md, $key: min) {
+    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+@mixin linkHoverLine($start: 60%, $stop: 90%, $color: $ice, $borderColor: $tomato, $borderThickness: 0.125rem, $transition: 250ms) {
+    background-image: linear-gradient(transparent $start, $color $start, $color $stop, $borderColor calc(#{$stop} + #{$borderThickness}), transparent calc(#{$stop} + #{$borderThickness}));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+
+    &:hover {
+        background-size: 100% 100%;
+        transition: $transition cubic-bezier(0.555, 0.0425, 0.3, 1);
+    }
+}

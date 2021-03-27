@@ -2,7 +2,7 @@
  * layouts > button
  */
 
- .link {
+.link {
     color: $link;
 
     &__icon {
@@ -15,7 +15,4 @@
         width: 1em;
     }
 
-    &--icon {
-        font-weight: 500;
-    }
 }

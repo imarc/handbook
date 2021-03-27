@@ -19,47 +19,51 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	</head>
 	<body class="{{ bodyclass }}">
-        <header class="masthead" id="top">
-            <div class="container--lg">
-                <div class="masthead__body">
-                    <a class="masthead__brand" href="/">
-                        Handbook
-                    </a>
-                    <nav class="nav masthead__nav">
-                        <ul id="menu" class="menu nav__list">
-                            {% for link in site.navigation %}
-                                {% if page.url == link.url %}
-                                    {% assign class = 'active' %}
-                                {% else %}
-                                    {% assign class = '' %}
-                                {% endif %}
-                                <li class="{{ class }} nav__item">
-                                    <a class="nav__link" href="{{ link.relative_url }}">{{ link.text }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
 
-		<div class="hero">
-            <div class="container--lg">
-                <div class="hero__body">
-                    <h1 class="hero__heading">{{ page.title }}</h1>
+        <div class="cover">
+            <header class="masthead" id="top">
+                <div class="container--xl">
+                    <div class="masthead__body">
+                        <a class="masthead__brand brand" href="/">
+                            <div class="brand__logo">Handbook</div>
+                        </a>
+                        <nav class="nav masthead__nav">
+                            <ul id="menu" class="menu nav__list masthead__nav-list">
+                                {% for link in site.navigation %}
+                                    {% if page.url == link.url %}
+                                        {% assign class = 'active' %}
+                                    {% else %}
+                                        {% assign class = '' %}
+                                    {% endif %}
+                                    <li class="{{ class }} nav__item masthead__nav-item">
+                                        <a class="nav__link masthead__nav-link" href="{{ link.relative_url }}">{{ link.text }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <div class="hero">
+                <div class="container--xl">
+                    <div class="hero__body">
+                        <h1 class="hero__heading">{{ page.title }}</h1>
+                        <p class="hero__lead lead">{{ page.lead }}</p>
+                    </div>
                 </div>
             </div>
-		</div>
+        </div>
 
 		<div class="torso">
-            <div class="container--lg">
+            <div class="container--xl">
                 <div class="torso__body">
-                    <div class="main torso__main" role="main">
+                    <div class="torso__main" id="main">
                         {{ content }}
                     </div>
                     <aside class="torso__aside">
-                        <section class="toc">
-                            <nav class="nav nav--vertical">
+                        <section class="torso__aside-item">
+                            <nav class="nav nav--vertical nav--toc">
                             </nav>
                         </section>
                     </aside>
@@ -68,7 +72,7 @@
 		</div>
 
         <div class="footer">
-            <div class="container--lg">
+            <div class="container--xl">
                 <div class="footer__body">
                     <div class="footer__brand">
                         <svg class="footer__asset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528.904 196.547">
@@ -90,6 +94,7 @@
             </div>
         </div>
 
+		<script src="js/main.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="js/plugins/sticktotop.plugin.js"></script>
 		<script src="js/template.js"></script>
