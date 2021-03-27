@@ -1,0 +1,50 @@
+/**
+ * layouts > tables
+ */
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+th {
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: $gray-400;
+    caption-side: bottom;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    width: 100%;
+
+    > :not(caption) > * > * {
+        padding: 0.5rem;
+        border-bottom-width: 0.0625rem;
+    }
+
+    > tbody {
+        vertical-align: inherit;
+    }
+
+    > thead {
+        vertical-align: bottom;
+    }
+
+    > :not(:last-child) > :last-child > * {
+        border-bottom-color: $gray-400;
+    }
+}
+
+.table--responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

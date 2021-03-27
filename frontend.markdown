@@ -578,54 +578,58 @@ each user’s environment.
 
 ### Desktop Browser Support
 
-<table>
-	<tr>
-		<th>Browser/Version</th>
-		<th>Mac</th>
-		<th>Windows</th>
-	</tr>
-	<tr>
-		<td>Chrome (stable)</td>
-		<td class="supported" colspan="2">yes</td>
-	</tr>
-	<tr>
-		<td>Firefox (stable)</td>
-		<td class="supported" colspan="2">yes</td>
-	</tr>
-	<tr>
-		<td>Microsoft Edge (stable)</td>
-		<td></td>
-		<td class="supported">yes</td>
-	</tr>
-	<tr>
-		<td>Safari 11</td>
-		<td class="supported">yes</td>
-		<td></td>
-	</tr>
-</table>
+<div class="table table--responsive">
+    <table>
+        <tr>
+            <th>Browser/Version</th>
+            <th>Mac</th>
+            <th>Windows</th>
+        </tr>
+        <tr>
+            <td>Chrome (stable)</td>
+            <td class="supported" colspan="2">yes</td>
+        </tr>
+        <tr>
+            <td>Firefox (stable)</td>
+            <td class="supported" colspan="2">yes</td>
+        </tr>
+        <tr>
+            <td>Microsoft Edge (stable)</td>
+            <td></td>
+            <td class="supported">yes</td>
+        </tr>
+        <tr>
+            <td>Safari 11</td>
+            <td class="supported">yes</td>
+            <td></td>
+        </tr>
+    </table>
+</div>
 
 _** We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the project (IE11, for example)._
 
 
 ### Mobile Browser Support
 
-<table>
-	<tr>
-		<th>Platform/OS</th>
-		<th>Browser</th>
-		<th>Target Devices</th>
-	</tr>
-	<tr>
-		<td>iOS 10</td>
-		<td>Safari 10</td>
-		<td>4"+ screens, iPads</td>
-	</tr>
-	<tr>
-		<td>Android 6.0–current</td>
-		<td>Chrome</td>
-		<td>4"+ handsets, 7–10" tablets</td>
-	</tr>
-</table>
+<div class="table table--responsive">
+    <table>
+        <tr>
+            <th>Platform/OS</th>
+            <th>Browser</th>
+            <th>Target Devices</th>
+        </tr>
+        <tr>
+            <td>iOS 10</td>
+            <td>Safari 10</td>
+            <td>4"+ screens, iPads</td>
+        </tr>
+        <tr>
+            <td>Android 6.0–current</td>
+            <td>Chrome</td>
+            <td>4"+ handsets, 7–10" tablets</td>
+        </tr>
+    </table>
+</div>
 
 Individual projects may require browser support beyond our defaults. In these cases the additional
 support will be specified in the proposal and strategy documents.
