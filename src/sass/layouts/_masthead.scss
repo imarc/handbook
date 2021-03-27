@@ -1,0 +1,56 @@
+/**
+ * layouts > masthead
+ */
+
+.masthead {
+    &__body {
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+
+        @include breakpoint(lg) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
+    }
+
+    &__brand {
+        @include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($tomato, 20%));
+
+        color: $masthead-brand-link-color;
+        display: inline-block;
+        font-size: 1.625rem;
+        font-weight: $masthead-brand-font-weight;
+        margin-bottom: 0.5rem;
+
+        &:hover {
+            color: $masthead-brand-link-hover-color;
+        }
+
+        @include breakpoint(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__nav-list {
+        @include breakpoint(sm) {
+            margin-left: -0.675rem;
+        }
+        @include breakpoint(lg) {
+            margin-left: 0;
+        }
+    }
+
+    &__nav-link {
+        @include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($tomato, 20%));
+
+        color: $masthead-nav-link-color;
+
+        &:hover {
+            color: $masthead-nav-link-hover-color;
+        }
+    }
+
+}
+

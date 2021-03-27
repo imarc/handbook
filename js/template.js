@@ -8,37 +8,39 @@ $(function() {
 			var tagNum  = parseInt(heading.prop('tagName').replace('H', ''));
 			var id      = heading.text().replace(/[^a-z0-9]/gi, '');
 			var link    = window.location.pathname;
-			
+
 			heading.attr('id', id);
 
+			heading.attr('data-foo', tagNum);
+
 			if (tagNum == baseNum) {
-				html += '</li><li>';
+				html += '</li><li class="nav__item">';
 			} else if (tagNum < baseNum) {
 				for (var i = tagNum; i < baseNum; i++) {
-					html += '</li></ul><li>';
+					html += '</li></ul><li class="nav__item">';
 				}
 			} else if (tagNum > baseNum) {
 				for (var i = baseNum; i < tagNum; i++) {
-					html += '<ul><li>';
+					html += '<ul class="nav__list"><li class="nav__item">';
 				}
 			}
 
 			baseNum = tagNum;
-			
+
 			link += '#' + id;
 
-			html += '<a href="' + link + '">' + heading.text() + '</a>';
+			html += '<a class="nav__link" href="' + link + '">' + heading.text() + '</a>';
 		});
 
 		for (var i = 1; i < baseNum; i++) {
 			html += '</li></ul>';
 		}
-		
+
 		this.append(html);
 
 		return this;
 	};
 
-	$('.toc nav').appendTOC('.main', 'h2, h3');
-	$('.toc').addClass('sticky').stickToTop('.torso', { minWidth: 770 });
+	$('.nav--toc').appendTOC('.torso__main', 'h2, h3');
+	$('.nav--toc').addClass('sticky').stickToTop('.torso', { minWidth: 1024});
 });

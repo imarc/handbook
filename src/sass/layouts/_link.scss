@@ -1,0 +1,18 @@
+/**
+ * layouts > button
+ */
+
+.link {
+    color: $link;
+
+    &__icon {
+        height: 1em;
+        stroke: currentColor;
+        stroke-width: $icon-stroke-width;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vertical-align: -0.125em;
+        width: 1em;
+    }
+
+}

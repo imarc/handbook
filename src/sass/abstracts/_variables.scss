@@ -1,0 +1,141 @@
+/**
+ * abstracts > variables
+ *
+ */
+
+/**
+ * colors
+ */
+
+$white: #FFF;
+$gray-100: #FAFAFA;
+$gray-200: #f4f4f4;
+$gray-300: #BBB;
+$gray-400: #999;
+$gray-500: #777;
+$gray-600: #666;
+$gray-700: #333;
+$gray-800: #111;
+$black: #000;
+
+// generated via https://tailwind.ink
+$tomato: #ff675b; // imarc fire
+$orange: #DE930A;
+$olive: #B4A50A;
+$limegreen: #2BB53F;
+$pine: #1CAAA4;
+$denim: #1F92EC;
+$royalblue: #387CF5;
+$indigo: #586EF7;
+$flamingo: #DD51E7;
+$cerise: #F94B8D;
+
+$ash: #252d2f;
+$ice: #d3e6ea;
+$salt: #f2efed;
+$ocean: #387CF5;
+
+
+/**
+ * base
+ */
+
+$body-color: $ash;
+$border-color: $gray-200;
+
+$base-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$base-font-size: 1rem;
+$base-font-weight: 400;
+$base-line-height: 1.5;
+
+/**
+ * containers
+ */
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1240px,
+);
+
+$container-padding-x: 1.25rem;
+
+/**
+ * breakpoints
+ */
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1260px
+);
+
+
+/**
+ * typography
+ */
+
+$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-size-code: 0.875em;
+
+$link: $ocean;
+$link-hover: $tomato;
+
+$lead-color: $gray-600;
+$code-color: hotpink;
+
+$headings-font-family: $base-font-family;
+$headings-font-weight: 500;
+
+$paragraph-margin-bottom: 1rem;
+
+
+/**
+ * icons
+ */
+$icon-size: $base-font-size;
+$icon-stroke-width: 2px;
+
+
+/**
+ * layout stuff
+ */
+
+$alert-background-color: #F2F0A0;
+$alert-font-size: $base-font-size * 0.925;
+$alert-icon-size: $icon-size;
+
+$brand-font-size: 2rem;
+$brand-font-weight: 700;
+
+$cover-background-color: $ice;
+
+$masthead-brand-font-weight: 700;
+$masthead-brand-link-color: color-contrast($cover-background-color);
+$masthead-brand-link-hover-color: $gray-700;
+$masthead-nav-link-color: color-contrast($cover-background-color);
+$masthead-nav-link-hover-color: $gray-700;
+
+$nav-toc-link-color: $ocean;
+$nav-toc-link-hover-color: $tomato;
+$nav-toc-sub-link-color: $ash;
+$nav-toc-sub-link-hover-color: $tomato;
+
+$hero-background-color: $cover-background-color;
+$hero-heading-font-size: 3rem;
+$hero-padding-y: 4rem;
+$hero-lead-margin-y: 1rem;
+
+$aside-width: 320px;
+
+$footer-background-color: $ice;
+
+
+/**
+ * buttons
+ */
+
+$button-radius: 0.25rem;
+

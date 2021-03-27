@@ -1,0 +1,46 @@
+/**
+ * layouts > torso
+ */
+
+.torso {
+    &__body {
+        @include breakpoint(lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__main {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+
+        @include breakpoint(lg) {
+            max-width: calc(100% - #{$aside-width});
+            padding-bottom: 5rem;
+            padding-right: 4rem;
+            padding-top: 5rem;
+        }
+    }
+
+    &__aside {
+        display: none;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        @include breakpoint(lg) {
+            display: block;
+            flex-basis: $aside-width;
+            flex-shrink: 0;
+            padding-bottom: 5rem;
+            padding-top: 5rem;
+        }
+    }
+
+    &__aside-item {
+        @include breakpoint(lg) {
+            border-left: 0.325rem solid $salt;
+            padding-bottom: 1rem;
+            padding-left: 2rem;
+            padding-top: 1rem;
+        }
+    }
+}

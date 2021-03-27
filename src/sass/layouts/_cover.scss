@@ -1,0 +1,18 @@
+/**
+ * layouts > cover
+ */
+
+.cover {
+    background-color: $cover-background-color;
+
+    &__body {
+        display: flex;
+        font-size: $alert-font-size;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+
+    @include breakpoint(lg) {
+    }
+}
+

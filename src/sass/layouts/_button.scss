@@ -1,0 +1,32 @@
+/**
+ * layouts > button
+ */
+
+.button {
+    border-radius: $button-radius;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 150ms ease-in-out;
+    vertical-align: middle;
+
+    &--primary {
+        background-color: $link;
+        color: white;
+    }
+
+    &--primary:hover,
+    &--primary:focus {
+        background-color: $link-hover;
+        color: white;
+    }
+
+    &__icon {
+        height: 1em;
+        vertical-align: -0.125em;
+        width: 1em;
+    }
+}

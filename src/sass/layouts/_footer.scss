@@ -1,0 +1,38 @@
+/**
+ * layouts > footer
+ */
+
+.footer {
+    background-color: $footer-background-color;
+    color: color-contrast($footer-background-color);
+    font-size: 0.825rem;
+
+    &__body {
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+        text-align: center;
+
+        @include breakpoint(md) {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+        }
+
+    }
+
+    &__brand {
+        width: 5rem;
+    }
+
+    &__asset {
+        display: block;
+        fill: currentColor;
+    }
+
+    &__content {
+        @include breakpoint(md) {
+            margin-left: 1.75rem;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+/**
+ * Base
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    background-color: white;
+    color: $body-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(#000, 0);
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+// Hide mouse-initiated focus styles
+:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+// Show keyboard-initiated focus styles
+:focus-visible {
+    outline: 2px solid $gray-500;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+ol,
+ul {
+    padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: $font-family-code;
+}
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    color: $gray-400;
+}
+
+code {
+    font-size: $font-size-code;
+    color: $code-color;
+    word-wrap: break-word;
+}
+
+kbd {
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: $font-size-code;
+    color: inherit;
+    background-color: $gray-200;
+
+    kbd {
+        padding: 0;
+        font-size: 1em;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
