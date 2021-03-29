@@ -64,7 +64,7 @@
         }
 
         #{$b}__item #{$b}__item #{$b}__link {
-            color: $nav-toc-sub-link-color;
+            color: var(--copy02, $nav-toc-sub-link-color);
 
             &:hover {
                 color: $nav-toc-sub-link-hover-color;

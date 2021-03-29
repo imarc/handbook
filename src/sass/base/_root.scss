@@ -1,0 +1,39 @@
+/**
+ * base > root
+ */
+
+:root {
+     @media (prefers-reduced-motion: no-preference) {
+         scroll-behavior: smooth;
+     }
+ }
+
+:root[color-mode="light"] {
+    --surface01: #{$white};
+    --surface02: #{$salt};
+    --surface03: #{$ice};
+    --surface04: #{$portafino};
+    --copy01: #{$body-color};
+    --copy02: #{$gray-700};
+    --buttonColorMode: #{$white};
+    --primary: #{$link};
+
+    .button--color-mode-light {
+        display: none;
+    }
+}
+
+:root[color-mode="dark"] {
+    --surface01: #{$gray-900};
+    --surface02: #{$gray-800};
+    --surface03: #{$gray-800};
+    --surface04: #{$gray-700};
+    --copy01: #{$gray-200};
+    --copy02: #{$gray-300};
+    --buttonColorMode: #{$gray-900};
+    --primary: #{$link};
+
+    .button--color-mode-dark {
+        display: none;
+    }
+}

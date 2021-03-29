@@ -1,5 +1,5 @@
 /**
- * Base
+ * base > base
  */
 
 *,
@@ -8,20 +8,15 @@
     box-sizing: border-box;
 }
 
-:root {
-    @media (prefers-reduced-motion: no-preference) {
-        scroll-behavior: smooth;
-    }
-}
-
 body {
-    background-color: white;
-    color: $body-color;
+    background-color: var(--surface01, $white);
+    color: var(--copy01, $body-color);
     font-family: $base-font-family;
     font-size: $base-font-size;
     font-weight: $base-font-weight;
     line-height: $base-line-height;
     margin: 0;
+    transition: background-color 250ms ease-in;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(#000, 0);
 }
@@ -56,6 +51,19 @@ ul,
 dl {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: 600;
+}
+
+dd {
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+
+dd + dt {
+    margin-top: 1rem;
 }
 
 pre,

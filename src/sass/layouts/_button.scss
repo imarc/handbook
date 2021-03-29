@@ -3,30 +3,37 @@
  */
 
 .button {
+    border: 0;
     border-radius: $button-radius;
+    cursor: pointer;
     display: inline-block;
-    font-size: 0.875rem;
-    font-weight: 700;
     padding: 0.5rem 1rem;
     text-align: center;
-    text-decoration: none;
     transition: background-color 150ms ease-in-out;
+    user-select: none;
     vertical-align: middle;
 
-    &--primary {
-        background-color: $link;
-        color: white;
-    }
-
-    &--primary:hover,
-    &--primary:focus {
-        background-color: $link-hover;
-        color: white;
+    &--color-mode {
+        background-color: var(--buttonColorMode);
+        border: 0.0625rem solid var(--copy01);
+        border-right: 0;
+        color: var(--copy01);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        fill: none;
+        padding: 0.275rem;
+        position: absolute;
+        right: 0;
+        stroke: currentColor;
+        stroke-width: $icon-stroke-width;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        top: 6rem;
+        vertical-align: -0.125em;
+        z-index: 1;
     }
 
     &__icon {
-        height: 1em;
-        vertical-align: -0.125em;
-        width: 1em;
+        display: block;
     }
 }

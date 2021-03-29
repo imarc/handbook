@@ -16,13 +16,8 @@
         padding-top: 4rem;
     }
 
-    &__item {
-        background-color: $white;
-        box-shadow: 0.25rem 0.25rem 0 0 rgba($white, 0.325);
-    }
-
     &__body {
-        border-top: 0.325rem solid $salt;
+        border-top: 0.325rem solid var(--surface02, $salt);
         padding: 2rem;
     }
 

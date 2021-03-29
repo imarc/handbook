@@ -3,7 +3,7 @@
  */
 
 .cover {
-    background-color: $cover-background-color;
+    background-color: var(--surface03, $hero-background-color);
 
     &__body {
         display: flex;

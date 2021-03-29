@@ -4,22 +4,62 @@
 	{% endif %}
 {% endfor %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="light">
 	<head>
 		<meta charset="UTF-8" />
-
 		<title>{{ page.title }} Handbook | Imarc’s Coding Standards &amp; Best Practices</title>
 		<meta name="description" content="{{ page.title }} Handbook of Standards &amp; Best Practices for coding and web design. By Imarc, A Digital Agency" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="shortcut icon" href="/img/favicon.ico" />
+
+        <script>
+            if (
+              localStorage.getItem("color-mode") === "dark" ||
+              (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+                !localStorage.getItem("color-mode"))
+            ) {
+              document.documentElement.setAttribute("color-mode", "dark");
+            }
+        </script>
+
+		<link rel="shortcut icon" href="/img/favicon.png" />
 		<link rel="apple-touch-icon" href="/img/touch-icon.png">
 		<link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/github.min.css" media="all">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	</head>
 	<body class="{{ bodyclass }}">
-
+        <button
+            aria-label="View site in light mode"
+            class="button button--color-mode button--color-mode-light"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="button__icon"
+                focusable="false"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+            >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+        </button>
+        <button
+            aria-label="View site in dark mode"
+            class="button button--color-mode button--color-mode-dark"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="button__icon"
+                focusable="false"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+            >
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                <path d="M19 11h2m-1 -1v2" />
+            </svg>
+        </button>
         <div class="cover">
             <header class="masthead" id="top">
                 <div class="container--xl">
@@ -94,12 +134,14 @@
             </div>
         </div>
 
+		<script src="js/manifest.js"></script>
+        <script src="js/vendor.js"></script>
 		<script src="js/main.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="js/plugins/sticktotop.plugin.js"></script>
 		<script src="js/template.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

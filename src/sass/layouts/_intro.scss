@@ -12,9 +12,10 @@
     }
 
     &__cell {
-        background-color: $ice;
+        background-color: var(--surface03, $ice);
         padding-bottom: 2rem;
         padding-top: 2rem;
+        transition: background-color 250ms ease-in;
         @include breakpoint(lg) {
             align-items: center;
             display: flex;
@@ -45,13 +46,18 @@
     }
 
     &__asset {
+        [color-mode="dark"] & {
+            filter: brightness(0.675);
+        }
         display: block;
         height: 15rem;
         object-fit: cover;
         width: 100%;
+
         @include breakpoint(sm) {
             height: 20rem;
         }
+
         @include breakpoint(lg) {
             height: 100%;
         }

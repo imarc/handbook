@@ -72,7 +72,6 @@ h2[id] {
 }
 
 h3[id] {
-    color: $gray-600;
     margin-top: 1.25rem;
 }
 
@@ -88,7 +87,7 @@ p {
 }
 
 .lead {
-    color: $lead-color;
+    color: var(--copy02, $lead-color);
     font-size: 1.25rem;
     font-weight: 300;
 

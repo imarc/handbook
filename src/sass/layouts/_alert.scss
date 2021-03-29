@@ -5,7 +5,8 @@
 .alert {
     $b: &;
 
-    background-color: $alert-background-color;
+    background-color: var(--surface04, $alert-background-color);
+    transition: background-color 250ms ease-in;
 
     &__body {
         display: flex;
