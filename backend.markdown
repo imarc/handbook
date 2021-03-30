@@ -5,13 +5,6 @@ lead: PHP, SQL, and coding styles.
 icon: _icon-backend.html
 ---
 
-<section class="intro">
-	<p>
-		This document describes Imarc’s standards for writing PHP and SQL.
-		<a href="https://www.imarc.com">Imarc</a> is a full service web development and design firm with offices near Boston and Silicon Valley.
-	</p>
-</section>
-
 ## Important Terms
 
 This document occasionally makes a distinction between **library code** and **project code**. Library code is closed or open source

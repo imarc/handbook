@@ -666,27 +666,27 @@ h1 {
 
 h2 {
   --fluid-type-min: 1.5rem;
-  --fluid-type-max: 2rem;
+  --fluid-type-max: 2.25rem;
 }
 
 h3 {
   --fluid-type-min: 1.275rem;
-  --fluid-type-max: 1.75rem;
+  --fluid-type-max: 1.5rem;
 }
 
 h4 {
   --fluid-type-min: 1.125rem;
-  --fluid-type-max: 1.5rem;
+  --fluid-type-max: 1.25rem;
 }
 
 h5 {
   --fluid-type-min: 1.075rem;
-  --fluid-type-max: 1.25rem;
+  --fluid-type-max: 1.075rem;
 }
 
 h2[id] {
   border-top: 0.125rem solid var(--surface02);
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   padding-top: 1.75rem;
 }
 h2[id]:first-of-type {
@@ -695,8 +695,9 @@ h2[id]:first-of-type {
   padding-top: 0;
 }
 
-h3[id] {
-  margin-top: 1.25rem;
+h3[id],
+h4[id] {
+  margin-top: 1.75rem;
 }
 
 p {
@@ -1028,6 +1029,7 @@ p {
   .hero__media {
     flex-basis: 20%;
     flex-shrink: 0;
+    margin-bottom: 0;
     margin-left: 4rem;
   }
 }

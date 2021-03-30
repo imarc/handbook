@@ -33,6 +33,7 @@
         @include breakpoint(md) {
             flex-basis: 20%;
             flex-shrink: 0;
+            margin-bottom: 0;
             margin-left: 4rem;
         }
     }
