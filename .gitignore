@@ -2,6 +2,7 @@ _site
 css/.DS_Store
 .DS_Store
 .rvmrc
+.gsap-bonus.tgz
 .jekyll-cache
 node_modules
 mix-manifest.json

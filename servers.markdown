@@ -2,6 +2,7 @@
 title: Servers
 lead: Imarc’s hosting, server, and maintenance practices.
 layout: default
+icon: _icon-servers.html
 ---
 
 ## Imarc's Architecture

@@ -2,6 +2,7 @@
 title: Strategy / UX
 lead: Imarc’s typical strategy process and its deliverables are described here.
 layout: default
+icon: _icon-strategy.html
 ---
 
 ## UX Process

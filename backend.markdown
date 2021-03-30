@@ -2,6 +2,7 @@
 title: Back-end
 layout: default
 lead: PHP, SQL, and coding styles.
+icon: _icon-backend.html
 ---
 
 <section class="intro">

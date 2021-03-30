@@ -2,6 +2,7 @@
 title: Deployment
 lead: Imarc’s preferred method for deploying websites using an automated, repeatable system called <em>patton</em>.
 layout: default
+icon: _icon-deployment.html
 ---
 
 ## Concepts

@@ -16,6 +16,10 @@ Serve Handbook locally via `bundle exec jekyll serve`
 
 Run `npm i` to install packages and `npm run watch` to compile Sass to CSS.
 
+### Icons
+
+We use [Tabler SVG Icons](https://tablericons.com/).
+
 ## Deployment
 
 You can deploy Handbook by pushing to the `gh-pages` branch. Handbook uses [GitHub Pages](https://pages.github.com).

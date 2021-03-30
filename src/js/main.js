@@ -1,6 +1,9 @@
 // import Vue from 'vue';
 
 import { gsap } from 'gsap'
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
+
+gsap.registerPlugin(DrawSVGPlugin)
 
 gsap.from(".entry__item", {
     ease: "power3.out",
@@ -12,6 +15,15 @@ gsap.from(".entry__item", {
         grid: [0,1],
     }
 });
+
+var tl = gsap.timeline()
+tl.from(".icon--dept .icon__part", {
+    delay: .25,
+    duration: .75,
+    drawSVG: 0,
+    ease: "Bounce.easeOut"
+}, 0.1)
+
 
 // Color mode
 const toggleColorMode = function toggleColorMode(e) {

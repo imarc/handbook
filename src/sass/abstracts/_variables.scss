@@ -84,6 +84,14 @@ $paragraph-margin-bottom: 1rem;
 
 
 /**
+ * transitions
+ */
+$transition-all: all 250ms ease-in-out;
+$transition-background-color: background-color 250ms ease-in-out;
+$transition-color: color 250ms ease-in-out;
+
+
+/**
  * icons
  */
 $icon-size: $base-font-size;
@@ -101,6 +109,8 @@ $alert-icon-size: $icon-size;
 $brand-font-size: 2rem;
 $brand-font-weight: 700;
 
+$color-mode-toggle-font-size: 1.5rem;
+
 $cover-background-color: $ice;
 
 $masthead-brand-font-weight: 700;
@@ -115,9 +125,10 @@ $nav-toc-sub-link-color: $ash;
 $nav-toc-sub-link-hover-color: $fire;
 
 $hero-background-color: $cover-background-color;
-$hero-heading-font-size: 3rem;
 $hero-padding-y: 4rem;
 $hero-lead-margin-y: 1rem;
+$hero-icon-size-sm: 3rem;
+$hero-icon-size-lg: 100%;
 
 $aside-width: 320px;
 

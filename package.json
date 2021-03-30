@@ -25,7 +25,7 @@
     "sass-loader": "^10.1.1"
   },
   "dependencies": {
-    "gsap": "^3.6.1",
+    "gsap": "file:gsap-bonus.tgz",
     "normalize.css": "^8.0.1"
   }
 }

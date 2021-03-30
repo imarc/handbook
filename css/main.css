@@ -383,6 +383,9 @@ template {
  * typography
  */
 /**
+ * transitions
+ */
+/**
  * icons
  */
 /**
@@ -392,9 +395,9 @@ template {
  * buttons
  */
 /**
- * abstracts > mixins
- *
- */
+* abstracts > mixins
+*
+*/
 /* Dracula Theme v1.2.5
  *
  * https://github.com/dracula/highlightjs
@@ -521,6 +524,7 @@ template {
 }
 
 body {
+  transition: background-color 250ms ease-in-out;
   background-color: var(--surface01, #FFF);
   color: var(--copy01, #252d2f);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -528,7 +532,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-  transition: background-color 250ms ease-in;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -657,8 +660,8 @@ h5 {
 
 h1 {
   --fluid-type-min: 1.875rem;
-  --fluid-type-max: 2.5rem;
-  --fluid-type-target: 5vw;
+  --fluid-type-max: 4.5rem;
+  --fluid-type-target: 3.75vw;
 }
 
 h2 {
@@ -682,7 +685,7 @@ h5 {
 }
 
 h2[id] {
-  border-top: 0.125rem solid #f2efed;
+  border-top: 0.125rem solid var(--surface02);
   margin-top: 1.75rem;
   padding-top: 1.75rem;
 }
@@ -752,8 +755,8 @@ p {
  * layouts > alert
  */
 .alert {
+  transition: background-color 250ms ease-in-out;
   background-color: var(--surface04, #F2F0A0);
-  transition: background-color 250ms ease-in;
 }
 .alert__body {
   display: flex;
@@ -842,13 +845,13 @@ p {
  * layouts > button
  */
 .button {
+  transition: background-color 250ms ease-in-out;
   border: 0;
   border-radius: 0.25rem;
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
   text-align: center;
-  transition: background-color 150ms ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -863,6 +866,7 @@ p {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   fill: none;
+  font-size: 1.5rem;
   padding: 0.275rem;
   position: absolute;
   right: 0;
@@ -876,6 +880,16 @@ p {
 }
 .button__icon {
   display: block;
+  font-size: 1em;
+  height: 1em;
+  width: 1em;
+}
+
+/**
+ * layouts > icon
+ */
+.icon {
+  stroke-width: 1px;
 }
 
 /**
@@ -891,10 +905,10 @@ p {
   }
 }
 .intro__cell {
+  transition: background-color 250ms ease-in-out;
   background-color: var(--surface03, #d3e6ea);
   padding-bottom: 2rem;
   padding-top: 2rem;
-  transition: background-color 250ms ease-in;
 }
 @media (min-width: 992px) {
   .intro__cell {
@@ -973,23 +987,60 @@ p {
   font-size: 1.275rem;
   margin-bottom: 0.5rem;
 }
+.entry__media {
+  margin-bottom: 0.75rem;
+}
+.entry__media .icon {
+  height: 2rem;
+  width: 2rem;
+}
 
 /**
  * layouts > hero
  */
 .hero {
   background-color: var(--surface03, #d3e6ea);
+  transition: background-color 250ms ease-in-out;
 }
 .hero__body {
   padding-bottom: 2rem;
   padding-top: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .hero__body {
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 .hero__heading {
-  font-size: 3rem;
   margin-bottom: 0;
 }
 .hero__lead {
   margin-top: 1rem;
+}
+.hero__media {
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .hero__media {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    margin-left: 4rem;
+  }
+}
+.hero__media .icon {
+  height: 3rem;
+  stroke: #6B7280;
+  width: 3rem;
+}
+@media (min-width: 768px) {
+  .hero__media .icon {
+    height: 100%;
+    width: 100%;
+  }
 }
 @media (min-width: 992px) {
   .hero {
@@ -1211,7 +1262,7 @@ table > :not(:last-child) > :last-child > * {
 }
 @media (min-width: 992px) {
   .torso__aside-item {
-    border-left: 0.325rem solid #f2efed;
+    border-left: 0.325rem solid var(--surface02);
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-top: 1rem;

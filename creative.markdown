@@ -2,6 +2,7 @@
 title: Creative
 lead: Imarc’s creative process and deliverables.
 layout: default
+icon: _icon-creative.html
 ---
 
 <style type="text/css">

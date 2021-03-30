@@ -35,8 +35,8 @@ h5 {
 
 h1 {
     --fluid-type-min: 1.875rem;
-    --fluid-type-max: 2.5rem;
-    --fluid-type-target: 5vw;
+    --fluid-type-max: 4.5rem;
+    --fluid-type-target: 3.75vw;
 }
 
 h2 {
@@ -60,7 +60,7 @@ h5 {
 }
 
 h2[id] {
-    border-top: 0.125rem solid $salt;
+    border-top: 0.125rem solid var(--surface02);
     margin-top: 1.75rem;
     padding-top: 1.75rem;
 

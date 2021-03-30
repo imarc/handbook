@@ -25,4 +25,13 @@
         font-size: 1.275rem;
         margin-bottom: 0.5rem;
     }
+
+    &__media {
+        margin-bottom: 0.75rem;
+    }
+
+    &__media .icon {
+        height: 2rem;
+        width: 2rem;
+    }
 }

@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" color-mode="light">
 	<head>
-		<meta charset="UTF-8" />
-		<title>Handbook | Imarc’s Coding Standards &amp; Best Practices</title>
-		<meta name="description" content="Coding and process standards for Imarc, a digital agency in Massachusetts." />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <script>
-            if (
-              localStorage.getItem("color-mode") === "dark" ||
-              (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-                !localStorage.getItem("color-mode"))
-            ) {
-              document.documentElement.setAttribute("color-mode", "dark");
-            }
-        </script>
-		<link rel="shortcut icon" href="/img/favicon.png" />
-		<link rel="apple-touch-icon" href="/img/touch-icon.png">
-		<link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
+		{% include _head.html %}
 	</head>
 	<body class="homepage">
         <button
@@ -63,7 +47,7 @@
                             </h1>
                         </div>
                         <p class="lead lead--ornament">
-                            Handbook documents <strong><a href="https://imarc.com">Imarc</a></strong>’s standards and best practices across disciplines such as front-end / back-end engineering, user experience strategy, servers &amp; deployment, and more.
+                            {{ content | remove: "<p>" | remove: "</p>"}}
                         </p>
                     </div>
                 </div>
@@ -93,6 +77,9 @@
                 <div class="entry__item">
                     <div class="entry__body">
                         <div>
+                            <div class="entry__media">
+                                {% include _icon-strategy.html %}
+                            </div>
                             <h2 class="entry__heading">
                                 Strategy / UX
                             </h2>
@@ -114,6 +101,9 @@
                 <div class="entry__item">
                     <div class="entry__body">
                         <div>
+                            <div class="entry__media">
+                                {% include _icon-creative.html %}
+                            </div>
                             <h2 class="entry__heading">
                                 Creative
                             </h2>
@@ -135,8 +125,12 @@
                 <div class="entry__item">
                     <div class="entry__body">
                         <div>
+                            <div class="entry__media">
+                                {% include _icon-frontend.html %}
+                            </div>
                             <h2 class="entry__heading">
                                 Front-end
+
                             </h2>
                             <p class="entry__copy">
                                 Style and organization
@@ -156,6 +150,9 @@
                 <div class="entry__item">
                     <div class="entry__body">
                         <div>
+                            <div class="entry__media">
+                                {% include _icon-backend.html %}
+                            </div>
                             <h2 class="entry__heading">
                                 Back-end
                             </h2>
@@ -177,6 +174,9 @@
                 <div class="entry__item">
                     <div class="entry__body">
                         <div>
+                            <div class="entry__media">
+                                {% include _icon-servers.html %}
+                            </div>
                             <h2 class="entry__heading">
                                 Servers
                             </h2>
@@ -198,6 +198,9 @@
                 <div class="entry__item">
                     <div class="entry__body">
                         <div>
+                            <div class="entry__media">
+                                {% include _icon-deployment.html %}
+                            </div>
                             <h2 class="entry__heading">
                                 Deployment
                             </h2>
@@ -219,20 +222,6 @@
             </div>
         </div>
 
-		<script src="js/manifest.js"></script>
-		<script src="js/vendor.js"></script>
-		<script src="js/main.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="js/plugins/sticktotop.plugin.js"></script>
-		<script src="js/template.js"></script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-6769990-6', 'imarc.net');
-			ga('send', 'pageview');
-			ga('set', 'anonymizeIp', true);
-		</script>
+		{% include _scripts.html %}
 	</body>
 </html>

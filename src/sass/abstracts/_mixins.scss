@@ -1,7 +1,7 @@
 /**
- * abstracts > mixins
- *
- */
+* abstracts > mixins
+*
+*/
 
 @mixin breakpoint($breakpoint: md, $key: min) {
     @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
@@ -19,5 +19,15 @@
             background-size: 100% 100%;
             transition: $transition cubic-bezier(0.555, 0.0425, 0.3, 1);
         }
+    }
+}
+
+@mixin transition($transition...) {
+    @if length($transition) == 0 {
+        $transition: $transition-all;
+    }
+
+    @if nth($transition, 1) != null {
+        transition: $transition;
     }
 }

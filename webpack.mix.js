@@ -12,6 +12,7 @@ mix.js('src/js/main.js', 'js')
 
 mix.copyDirectory('src/img', 'img');
 
+
 mix.extract(['gsap'])
 mix.sourceMaps()
 mix.version()

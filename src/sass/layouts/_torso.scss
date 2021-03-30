@@ -37,7 +37,7 @@
 
     &__aside-item {
         @include breakpoint(lg) {
-            border-left: 0.325rem solid $salt;
+            border-left: 0.325rem solid var(--surface02);
             padding-bottom: 1rem;
             padding-left: 2rem;
             padding-top: 1rem;
