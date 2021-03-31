@@ -5,14 +5,13 @@
 .cover {
     background-color: var(--surface03, $hero-background-color);
 
+    @include transition($transition-background-color);
+
     &__body {
         display: flex;
         font-size: $alert-font-size;
         padding-bottom: 4rem;
         padding-top: 4rem;
-    }
-
-    @include breakpoint(lg) {
     }
 }
 

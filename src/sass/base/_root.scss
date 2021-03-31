@@ -3,10 +3,10 @@
  */
 
 :root {
-     @media (prefers-reduced-motion: no-preference) {
-         scroll-behavior: smooth;
-     }
- }
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+}
 
 :root[color-mode="light"] {
     --surface01: #{$white};

@@ -351,19 +351,9 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 
 Use tables to display tabular data such as a pricing or feature chart. Do not use tables for page layout. Make sure your tables do not only use rows and cells – take advantage of other elements to increase accessibility.
 
-### Caption
+### Captions, Headers and Scope
 
-Optional element. `caption` helps describe the table. Think of it as a title.
-
-    <table>
-        <caption>
-            ACME, Inc Product Line Pricing Tiers
-        </caption>
-        …
-    </table>
-
-
-### Table Headers and Scope
+`caption` help describe tables are are optional.
 
 Use the table headers element `th` to indicate a header. Passing a `scope` attribute  and value of `col` or `row` gives non-visual user agents specific guidance on where its associated data lives. This is important when there are headers at the top of columns and at the beginning of each row.
 
@@ -407,9 +397,6 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
                 <th>
                     Silver Tier
                 </th>
-                <th>
-                    Gold Tier
-                </th>
             </tr>
         </thead>
         <tbody>
@@ -420,9 +407,6 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
                 <td>
                     5 hours of support
                 </td>
-                <td>
-                    10 hours of support
-                </td>
             </tr>
         </tbody>
     </table>
@@ -431,7 +415,7 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
 
 ### Video
 
-Use YouTube/Vimeo embed codes to display the videos. For responsive videos, wrap the embed code in a parent and apply appropriate CSS. Note that `calc(9 / 16 * 100%)` below corresponds to a 16:9 aspect ratio. Modify this as needed.
+We typically use vendor-provided (YouTube/Vimeo/Wistia) embed codes to display video. For responsive videos, wrap the embed code in a parent (e.g. `.embed`) and apply appropriate CSS. Note that `calc(9 / 16 * 100%)` below corresponds to a 16:9 aspect ratio. Modify this as needed.
 
     .embed {
         position: relative;
@@ -456,50 +440,47 @@ Tip: with a preprocesser like Sass, you don’t need `calc()`, and `padding-top:
 
 #### Background Video
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s
-“hero” area. Create and export `.mp4` and `.webm` video files. Imarc typically uses
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* area. Create and export `.mp4` and `.webm` video files. Imarc typically uses
 <a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing
-and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/CSS for
+and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/Sass for
 implementing a responsive backround video.
 
     <div class="hero">
-        <video autoplay loop="loop" muted poster="video-placeholder.jpg">
+        <video class="hero__video" autoplay loop="loop" muted poster="video-placeholder.jpg">
             <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
             <source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
         </video>
     </div>
 
-    .hero video {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-    }
+    .hero
+        &__video {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
 
-    .hero::before {
-        content: '';
-        display: block;
-        padding-top: calc(3 / 9 * 100%);
+        &::before {
+            content: '';
+            display: block;
+            padding-top: calc(3 / 9 * 100%);
+        }
     }
 
 ### Image Compression
 
-Whenever you save imagery for a web page, use image compression software on assets. Compression can reduce the weight of the site. [ImageOptim](https://imageoptim.com/) is recommended by the Imarc team.
+Whenever you save imagery for a web page, use image compression software. Compression can reduce the weight of the site. [ImageOptim](https://imageoptim.com/) is recommended by the Imarc team.
 
 ### SVG
 
-SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for
-infinite scaling without sacrificing image quality.
+SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for infinite scaling without sacrificing image quality.
 
 #### Implementation
 
-Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an
-`<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or
-color variations, “inlining” the SVG is acceptable. To help with document readability, include the
-file via PHP/etc.
+Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or color variations, “inlining” the SVG is acceptable. To help with document readability, include the file via PHP/etc.
 
-SVG code can be exported directly from Adobe Illustrator via
+SVG code can be exported directly from Adobe Illustrator via:
 *File > Export > Export As…*
 
 Remove any `doctype`, `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
@@ -515,15 +496,13 @@ takes advantage of the `viewBox` attribute.
         </g>
     </svg>
 
-### Favicons
+### Favicon / Touch Icons
 
 Use 32x32 PNG files for favicons:
 
     <link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon" />
 
-### Touch Icons
-
-iOS and Android devices both support touch icons:
+iOS and Android devices both support touch icons. A touch icon is what will appear on a user's smartphone if they save a webpage as a bookmark to their homescreen.
 
     <link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
 

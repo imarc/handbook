@@ -101,14 +101,15 @@ kbd {
     }
 }
 
-.visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
     height: 1px !important;
-    padding: 0 !important;
     margin: -1px !important;
     overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
+    padding: 0 !important;
+    position: absolute !important;
     white-space: nowrap !important;
-    border: 0 !important;
+    width: 1px !important;
 }

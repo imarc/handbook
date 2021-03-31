@@ -14,6 +14,16 @@
     user-select: none;
     vertical-align: middle;
 
+    &--primary {
+        background-color: $link;
+        color: $white;
+
+        &:hover {
+            background-color: shade-color($link, 25%);
+            color: $white;
+        }
+    }
+
     &--color-mode {
         background-color: var(--buttonColorMode);
         border: 0.0625rem solid var(--copy01);

@@ -10,10 +10,12 @@
         margin-bottom: 0;
         padding: 0;
         width: 100%;
+
         @include breakpoint(sm) {
             display: flex;
             flex-wrap: wrap;
         }
+
         @include breakpoint(lg) {
             flex-wrap: nowrap;
         }
@@ -22,11 +24,16 @@
     &__item {
         font-weight: 500;
         margin-bottom: 0.325rem;
+
         @include breakpoint(sm) {
             margin-bottom: 0;
             margin-left: 0.675rem;
             margin-right: 0.675rem;
         }
+    }
+
+    &__link--active {
+        font-weight: 700;
     }
 
     &--vertical {

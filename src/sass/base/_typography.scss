@@ -3,7 +3,10 @@
  */
 
 a {
-    @include linkHoverLine();
+    //@include linkHoverLine();
+
+    @include transition($transition-color);
+
     color: $link;
     text-decoration: none;
 
@@ -50,7 +53,7 @@ h3 {
 
 h4 {
     --fluid-type-min: 1.125rem;
-    --fluid-type-max: 1.5rem;
+    --fluid-type-max: 1.25rem;
 }
 
 h5 {

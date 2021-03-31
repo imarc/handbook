@@ -16,7 +16,7 @@
     }
 
     &__brand {
-        @include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
+        //@include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
 
         color: var(--copy01, $body-color);
         display: inline-block;
@@ -43,13 +43,9 @@
     }
 
     &__nav-link {
-        @include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
+        //@include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
 
         color: var(--copy01, $body-color);
-
-        &:hover {
-            color: var(--copy02, $masthead-nav-link-hover-color);
-        }
     }
 
 }

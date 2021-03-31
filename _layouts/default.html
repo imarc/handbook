@@ -10,40 +10,9 @@
 	</head>
 	<body class="{{ bodyclass }}">
 
-        <button
-            aria-label="View site in light mode"
-            class="button button--color-mode button--color-mode-light"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="button__icon"
-                focusable="false"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-            >
-                <circle cx="12" cy="12" r="4" />
-                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-            </svg>
-        </button>
-
-        <button
-            aria-label="View site in dark mode"
-            class="button button--color-mode button--color-mode-dark"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="button__icon"
-                focusable="false"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-            >
-                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
-                <path d="M19 11h2m-1 -1v2" />
-            </svg>
-        </button>
+        <a class="visually-hidden-focusable button button--primary" href="#hero">
+            Skip to main content
+        </a>
 
         <div class="cover">
             <header class="masthead" id="top">
@@ -56,12 +25,12 @@
                             <ul id="menu" class="menu nav__list masthead__nav-list">
                                 {% for link in site.navigation %}
                                     {% if page.url == link.url %}
-                                        {% assign class = 'active' %}
+                                        {% assign class = 'nav__link--active' %}
                                     {% else %}
                                         {% assign class = '' %}
                                     {% endif %}
-                                    <li class="{{ class }} nav__item masthead__nav-item">
-                                        <a class="nav__link masthead__nav-link" href="{{ link.relative_url }}">{{ link.text }}</a>
+                                    <li class="nav__item masthead__nav-item">
+                                        <a class="nav__link masthead__nav-link {{ class }}" href="{{ link.relative_url }}">{{ link.text }}</a>
                                     </li>
                                 {% endfor %}
                             </ul>
@@ -70,7 +39,42 @@
                 </div>
             </header>
 
-            <div class="hero">
+            <button
+                aria-label="View site in light mode"
+                class="button button--color-mode button--color-mode-light"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="button__icon"
+                    focusable="false"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                </svg>
+            </button>
+
+            <button
+                aria-label="View site in dark mode"
+                class="button button--color-mode button--color-mode-dark"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="button__icon"
+                    focusable="false"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                    <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                    <path d="M19 11h2m-1 -1v2" />
+                </svg>
+            </button>
+
+            <div class="hero" id="hero">
                 <div class="container--xl">
                     <div class="hero__body">
                         <div class="hero__content">
