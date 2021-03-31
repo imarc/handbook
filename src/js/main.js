@@ -21,7 +21,8 @@ tl.from(".icon--dept .icon__part", {
     delay: .25,
     duration: .75,
     drawSVG: 0,
-    ease: "Bounce.easeOut"
+    opacity: 0,
+    ease: "expo.in"
 }, 0.1)
 
 

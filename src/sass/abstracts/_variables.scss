@@ -77,8 +77,8 @@ $link-hover: $fire;
 $lead-color: $gray-700;
 $code-color: hotpink;
 
-$headings-font-family: $base-font-family;
-$headings-font-weight: 500;
+$headings-font-family: "canada-type-gibson", "Gibson", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-weight: 600;
 
 $paragraph-margin-bottom: 1rem;
 
@@ -113,6 +113,9 @@ $color-mode-toggle-font-size: 1.5rem;
 
 $cover-background-color: $ice;
 
+$entry-margin-y-sm: 2rem;
+$entry-margin-y-lg: 3rem;
+
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;
 $masthead-brand-link-hover-color: $ocean;
@@ -125,6 +128,7 @@ $nav-toc-sub-link-color: $ash;
 $nav-toc-sub-link-hover-color: $fire;
 
 $hero-background-color: $cover-background-color;
+$hero-heading-font-weight: 700;
 $hero-padding-y: 4rem;
 $hero-lead-margin-y: 1rem;
 $hero-icon-size-sm: 3rem;

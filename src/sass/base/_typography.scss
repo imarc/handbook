@@ -16,7 +16,7 @@ a {
     font-family: $headings-font-family;
     font-size: clamp(
         var(--fluid-type-min, 1.25rem),
-        calc(1rem + var(--fluid-type-target, 3vw)),
+        calc(1rem + var(--fluid-type-target, 5vw)),
         var(--fluid-type-max, 1.777rem)
     );
     font-weight: $headings-font-weight;
@@ -36,22 +36,21 @@ h5 {
 h1 {
     --fluid-type-min: 1.875rem;
     --fluid-type-max: 4.5rem;
-    --fluid-type-target: 3.75vw;
 }
 
 h2 {
     --fluid-type-min: 1.5rem;
-    --fluid-type-max: 2.25rem;
+    --fluid-type-max: 2.5rem;
 }
 
 h3 {
     --fluid-type-min: 1.275rem;
-    --fluid-type-max: 1.5rem;
+    --fluid-type-max: 1.75rem;
 }
 
 h4 {
     --fluid-type-min: 1.125rem;
-    --fluid-type-max: 1.25rem;
+    --fluid-type-max: 1.5rem;
 }
 
 h5 {
@@ -83,7 +82,10 @@ p {
 
 .brand {
     &__logo {
+        font-family: $headings-font-family;
         font-weight: $brand-font-weight;
+        --fluid-type-min: 1.875rem;
+        --fluid-type-max: 4.5rem;
     }
 }
 

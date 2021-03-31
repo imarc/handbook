@@ -9,15 +9,23 @@
 
     @include breakpoint(md) {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 2rem;
+        gap: $entry-margin-y-lg;
     }
     @include breakpoint(lg) {
         padding-bottom: 4rem;
         padding-top: 4rem;
     }
 
+    &__item {
+        margin-bottom: $entry-margin-y-sm;
+
+        @include breakpoint(md) {
+            margin-bottom: 0;
+        }
+    }
+
     &__body {
-        border-top: 0.325rem solid var(--surface02, $salt);
+        background-color: var(--surface02, $salt);
         padding: 2rem;
     }
 

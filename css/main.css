@@ -650,9 +650,9 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp( var(--fluid-type-min, 1.25rem), calc(1rem + var(--fluid-type-target, 3vw)), var(--fluid-type-max, 1.777rem) );
-  font-weight: 500;
+  font-family: "canada-type-gibson", "Gibson", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp( var(--fluid-type-min, 1.25rem), calc(1rem + var(--fluid-type-target, 5vw)), var(--fluid-type-max, 1.777rem) );
+  font-weight: 600;
   line-height: 1.15;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -661,22 +661,21 @@ h5 {
 h1 {
   --fluid-type-min: 1.875rem;
   --fluid-type-max: 4.5rem;
-  --fluid-type-target: 3.75vw;
 }
 
 h2 {
   --fluid-type-min: 1.5rem;
-  --fluid-type-max: 2.25rem;
+  --fluid-type-max: 2.5rem;
 }
 
 h3 {
   --fluid-type-min: 1.275rem;
-  --fluid-type-max: 1.5rem;
+  --fluid-type-max: 1.75rem;
 }
 
 h4 {
   --fluid-type-min: 1.125rem;
-  --fluid-type-max: 1.25rem;
+  --fluid-type-max: 1.5rem;
 }
 
 h5 {
@@ -706,7 +705,10 @@ p {
 }
 
 .brand__logo {
+  font-family: "canada-type-gibson", "Gibson", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
+  --fluid-type-min: 1.875rem;
+  --fluid-type-max: 4.5rem;
 }
 
 .lead {
@@ -971,7 +973,7 @@ p {
 @media (min-width: 768px) {
   .entry {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -980,8 +982,16 @@ p {
     padding-top: 4rem;
   }
 }
+.entry__item {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .entry__item {
+    margin-bottom: 0;
+  }
+}
 .entry__body {
-  border-top: 0.325rem solid var(--surface02, #f2efed);
+  background-color: var(--surface02, #f2efed);
   padding: 2rem;
 }
 .entry__heading {
@@ -1016,7 +1026,14 @@ p {
     flex-direction: row;
   }
 }
+@media (min-width: 992px) {
+  .hero__body {
+    padding-bottom: 4rem;
+    padding-top: 8rem;
+  }
+}
 .hero__heading {
+  font-weight: 700;
   margin-bottom: 0;
 }
 .hero__lead {
@@ -1042,12 +1059,6 @@ p {
   .hero__media .icon {
     height: 100%;
     width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .hero {
-    padding-bottom: 4rem;
-    padding-top: 8rem;
   }
 }
 

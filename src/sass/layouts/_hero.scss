@@ -18,9 +18,16 @@
             justify-content: space-between;
             flex-direction: row;
         }
+
+        @include breakpoint(lg) {
+            padding-bottom: $hero-padding-y;
+            padding-top: $hero-padding-y * 2;
+        }
+
     }
 
     &__heading {
+        font-weight: $hero-heading-font-weight;
         margin-bottom: 0;
     }
 
@@ -48,8 +55,4 @@
         }
     }
 
-    @include breakpoint(lg) {
-        padding-bottom: $hero-padding-y;
-        padding-top: $hero-padding-y * 2;
-    }
 }
