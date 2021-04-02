@@ -8,9 +8,10 @@
     padding-top: 2rem;
 
     @include breakpoint(md) {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: $entry-margin-y-lg;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
     @include breakpoint(lg) {
         padding-bottom: 4rem;
         padding-top: 4rem;

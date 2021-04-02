@@ -6,6 +6,7 @@
     &__body {
         display: flex;
         flex-direction: column;
+
         @include breakpoint(lg) {
             flex-direction: row;
         }
@@ -41,16 +42,13 @@
 
     &__media {
         @include breakpoint(lg) {
-            position: relative;
             flex: 0 0 50%;
             max-width: 50%;
+            position: relative;
         }
     }
 
     &__asset {
-        [color-mode="dark"] & {
-            filter: brightness(0.675);
-        }
         display: block;
         height: 15rem;
         object-fit: cover;
@@ -62,6 +60,10 @@
 
         @include breakpoint(lg) {
             height: 100%;
+        }
+
+        [color-mode='dark'] & {
+            filter: brightness(0.675);
         }
     }
 }

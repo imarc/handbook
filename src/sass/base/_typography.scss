@@ -17,15 +17,13 @@ a {
 
 %heading {
     font-family: $headings-font-family;
-    font-size: clamp(
-        var(--fluid-type-min, 1.25rem),
-        calc(1rem + var(--fluid-type-target, 5vw)),
-        var(--fluid-type-max, 1.777rem)
-    );
+    font-size: clamp(var(--fluid-type-min, 1.25rem),
+    calc(1rem + var(--fluid-type-target, 5vw)),
+    var(--fluid-type-max, 1.777rem));
     font-weight: $headings-font-weight;
     line-height: 1.15;
-    margin-top: 0;
     margin-bottom: 0.5rem;
+    margin-top: 0;
 }
 
 h1,
@@ -61,6 +59,8 @@ h5 {
     --fluid-type-max: 1.075rem;
 }
 
+/* stylelint-disable selector-no-qualifying-type */
+
 h2[id] {
     border-top: 0.125rem solid var(--surface02);
     margin-top: 2rem;
@@ -78,6 +78,8 @@ h4[id] {
     margin-top: 1.75rem;
 }
 
+/* stylelint-enable selector-no-qualifying-type */
+
 p {
     margin-bottom: $paragraph-margin-bottom;
     margin-top: 0;
@@ -85,10 +87,10 @@ p {
 
 .brand {
     &__logo {
-        font-family: $headings-font-family;
-        font-weight: $brand-font-weight;
         --fluid-type-min: 1.875rem;
         --fluid-type-max: 4.5rem;
+        font-family: $headings-font-family;
+        font-weight: $brand-font-weight;
     }
 }
 
@@ -134,7 +136,7 @@ p {
     &--section {
         letter-spacing: 0.225rem;
         line-height: 1.25;
-        text-align: center;
         margin-bottom: 4rem;
+        text-align: center;
     }
 }

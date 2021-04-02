@@ -6,7 +6,6 @@
     $b: &;
 
     @include transition($transition-background-color);
-
     background-color: var(--surface04, $alert-background-color);
 
     &__body {
@@ -23,11 +22,12 @@
         height: $alert-icon-size;
         margin-right: $alert-font-size / 2;
         stroke: currentColor;
-        stroke-width: $icon-stroke-width;
         stroke-linecap: round;
         stroke-linejoin: round;
+        stroke-width: $icon-stroke-width;
         vertical-align: -0.125em;
         width: $alert-icon-size;
+
         @if $leading != $icon-size {
             transform: translateY(($leading - $icon-size) / 2);
         }

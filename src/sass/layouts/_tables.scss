@@ -27,8 +27,8 @@ table {
     width: 100%;
 
     > :not(caption) > * > * {
-        padding: 0.5rem;
         border-bottom-width: 0.0625rem;
+        padding: 0.5rem;
     }
 
     > tbody {
@@ -45,6 +45,6 @@ table {
 }
 
 .table--responsive {
-    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
 }

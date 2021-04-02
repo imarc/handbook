@@ -8,22 +8,26 @@
     }
 }
 
-:root[color-mode="light"] {
+:root[color-mode='light'] {
     --surface01: #{$white};
     --surface02: #{$salt};
     --surface03: #{$ice};
-    --surface04: #{$portafino};
+    --surface04: #{$ice-600};
     --copy01: #{$body-color};
     --copy02: #{$gray-700};
     --buttonColorMode: #{$white};
     --primary: #{$link};
 
-    .button--color-mode-light {
-        display: none;
+    .color-mode__button--light .color-mode__active {
+        display: block;
+    }
+
+    .color-mode__button--light {
+        // opacity: 0.25;
     }
 }
 
-:root[color-mode="dark"] {
+:root[color-mode='dark'] {
     --surface01: #{$gray-900};
     --surface02: #{$gray-800};
     --surface03: #{$gray-800};
@@ -33,7 +37,11 @@
     --buttonColorMode: #{$gray-900};
     --primary: #{$link};
 
-    .button--color-mode-dark {
-        display: none;
+    .color-mode__button--dark .color-mode__active {
+        display: block;
+    }
+
+    .color-mode__button--dark {
+        // opacity: 0.25;
     }
 }

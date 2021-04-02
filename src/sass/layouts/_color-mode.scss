@@ -1,0 +1,58 @@
+/**
+ * layouts > colormode
+ */
+
+.color-mode {
+    $b: &;
+
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    &__body {
+        background-color: var(--surface01);
+        border-radius: 0.5rem;
+        display: flex;
+        padding: 0.5rem;
+        width: 100px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        flex: 1 0 0%;
+        font-size: 1rem;
+        height: 2rem;
+        line-height: 1;
+        position: relative;
+        text-align: center;
+        width: 2rem;
+        z-index: 0;
+    }
+
+    &__active {
+        @include transition($transition-background-color);
+        background-color: var(--surface03);
+        border-radius: 0.25rem;
+        display: none;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__button #{$b}__icon {
+        display: inline-block;
+        height: 1.125rem;
+        position: relative;
+        stroke: var(--copy01);
+        stroke-width: $color-mode-icon-stroke-width;
+        width: 1.125rem;
+        z-index: 1;
+    }
+}
+

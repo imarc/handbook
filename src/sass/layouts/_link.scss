@@ -8,11 +8,10 @@
     &__icon {
         height: 1em;
         stroke: currentColor;
-        stroke-width: $icon-stroke-width;
         stroke-linecap: round;
         stroke-linejoin: round;
+        stroke-width: $icon-stroke-width;
         vertical-align: -0.125em;
         width: 1em;
     }
-
 }

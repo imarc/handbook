@@ -23,14 +23,15 @@
 
     &__body {
         display: grid;
-        min-height: 100vh;
         grid-template-rows: 1fr auto;
+        min-height: 100vh;
     }
 
     &__title {
-        display: block;
         color: $fire;
+        display: block;
         margin-bottom: 1rem;
+
         @include breakpoint(md) {
             text-shadow:
                 0.125rem 0.125rem 0 shade-color($fire, 20%),

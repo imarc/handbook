@@ -18,8 +18,8 @@ body {
     font-weight: $base-font-weight;
     line-height: $base-line-height;
     margin: 0;
-    -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(#000, 0);
+    text-size-adjust: 100%;
 }
 
 img {
@@ -50,8 +50,8 @@ ul {
 ol,
 ul,
 dl {
-    margin-top: 0;
     margin-bottom: 1rem;
+    margin-top: 0;
 }
 
 dt {
@@ -75,29 +75,29 @@ samp {
 }
 
 pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: auto;
     color: $gray-400;
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    overflow: auto;
 }
 
 code {
-    font-size: $font-size-code;
     color: $code-color;
+    font-size: $font-size-code;
     word-wrap: break-word;
 }
 
 kbd {
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
-    font-size: $font-size-code;
-    color: inherit;
     background-color: $gray-200;
+    border-radius: 0.25rem;
+    color: inherit;
+    font-size: $font-size-code;
+    padding: 0.25rem 0.5rem;
 
     kbd {
-        padding: 0;
         font-size: 1em;
+        padding: 0;
     }
 }
 

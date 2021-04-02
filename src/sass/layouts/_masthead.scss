@@ -4,13 +4,14 @@
 
 .masthead {
     &__body {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding-bottom: 1.25rem;
         padding-top: 1.25rem;
 
         @include breakpoint(lg) {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
             text-align: left;
         }
     }
@@ -22,31 +23,65 @@
         display: inline-block;
         font-size: 1.625rem;
         font-weight: $masthead-brand-font-weight;
-        margin-bottom: 0.5rem;
-
-        &:hover {
-            color: $masthead-brand-link-hover-color;
-        }
 
         @include breakpoint(lg) {
             margin-bottom: 0;
         }
+
+        &:hover {
+            color: $masthead-brand-link-hover-color;
+        }
     }
 
-    &__nav-list {
+    &__controls {
+        @include breakpoint(md) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__color-mode {
+        @include breakpoint(md) {
+            margin-left: 1.5rem;
+        }
+
+        @include breakpoint(lg) {
+            order: 3;
+        }
+    }
+
+    &__nav {
+        flex-grow: 1;
+        margin-top: 1rem;
+        width: 100%;
+
         @include breakpoint(sm) {
             margin-left: -0.675rem;
+            margin-top: 0;
         }
+
         @include breakpoint(lg) {
-            margin-left: 0;
+            flex-grow: 0;
+            margin-left: auto;
+            width: auto;
         }
     }
 
     &__nav-link {
         //@include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
-
+        border-top: 1px solid $gray-300;
         color: var(--copy01, $body-color);
-    }
+        padding-bottom: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0.5rem;
 
+        @include breakpoint(sm) {
+            border-top: 0;
+            padding-left: $nav-link-padding-x;
+            padding-right: $nav-link-padding-x;
+        }
+    }
 }
 

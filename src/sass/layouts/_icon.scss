@@ -3,5 +3,9 @@
  */
 
 .icon {
-    stroke-width: 1px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: $icon-stroke-width;
 }

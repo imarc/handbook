@@ -23,13 +23,12 @@
 
     &__item {
         font-weight: 500;
-        margin-bottom: 0.325rem;
+    }
 
-        @include breakpoint(sm) {
-            margin-bottom: 0;
-            margin-left: 0.675rem;
-            margin-right: 0.675rem;
-        }
+    &__link {
+        display: block;
+        padding-left: $nav-link-padding-x;
+        padding-right: $nav-link-padding-x;
     }
 
     &__link--active {

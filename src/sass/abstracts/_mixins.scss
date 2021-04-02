@@ -10,7 +10,7 @@
 }
 
 @mixin linkHoverLine($start: 60%, $stop: 90%, $color: $ice, $borderColor: $fire, $borderThickness: 0.125rem, $transition: 250ms) {
-    @at-root [color-mode="light"] & {
+    @at-root [color-mode='light'] & {
         background-image: linear-gradient(transparent $start, $color $start, $color $stop, $borderColor calc(#{$stop} + #{$borderThickness}), transparent calc(#{$stop} + #{$borderThickness}));
         background-repeat: no-repeat;
         background-size: 0 100%;

@@ -26,6 +26,7 @@
         display: none;
         padding-bottom: 3rem;
         padding-top: 3rem;
+
         @include breakpoint(lg) {
             display: block;
             flex-basis: $aside-width;

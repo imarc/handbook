@@ -4,12 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <script>
-    if (
-      localStorage.getItem("color-mode") === "dark" ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-        !localStorage.getItem("color-mode"))
-    ) {
-      document.documentElement.setAttribute("color-mode", "dark");
+    if (localStorage.getItem("color-mode") === "dark") {
+        document.documentElement.setAttribute("color-mode", "dark");
     }
 </script>
 <script src="https://use.typekit.net/uzj8mcd.js"></script>
