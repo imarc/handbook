@@ -7,7 +7,7 @@
  * colors
  */
 
- // grayscale
+// grayscale
 $white:    #fff;
 $gray-100: #f3f4f6;
 $gray-200: #e5e7eb;
@@ -21,35 +21,78 @@ $gray-900: #0d0f12;
 $black:    #000;
 
 // imarc brand
-$fire:     #ff675b;
 $ash:      #252d2f;
+$fire:     #ff675b;
 $ice:      #d3e6ea;
 $salt:     #f2efed;
-
-// imarc shadings and tints
-$fire-300: tint-color($fire, 40%);
-$fire-400: tint-color($fire, 20%);
-$fire-500: $fire;
-$fire-600: shade-color($fire, 20%);
-$fire-700: shade-color($fire, 40%);
-
-$ice-300: tint-color($ice, 40%);
-$ice-400: tint-color($ice, 20%);
-$ice-500: $ice;
-$ice-600: shade-color($ice, 20%);
-$ice-700: shade-color($ice, 40%);
-
-$salt-300: tint-color($salt, 40%);
-$salt-400: tint-color($salt, 20%);
-$salt-500: $salt;
-$salt-600: shade-color($salt, 20%);
-$salt-700: shade-color($salt, 40%);
-
 
 // more colors spun from https://tailwind.ink
 $ocean:    #387cf5;
 $olive:    #b4a50a;
 $limegreen:#2bb53f;
+$indigo:   #dd51e7;
+
+
+// shadings and tints
+$fire-100: tint-color($fire, 80%);
+$fire-200: tint-color($fire, 60%);
+$fire-300: tint-color($fire, 40%);
+$fire-400: tint-color($fire, 20%);
+$fire-500: $fire;
+$fire-600: shade-color($fire, 20%);
+$fire-700: shade-color($fire, 40%);
+$fire-800: shade-color($fire, 60%);
+$fire-900: shade-color($fire, 80%);
+
+$ice-100: tint-color($ice, 80%);
+$ice-200: tint-color($ice, 60%);
+$ice-300: tint-color($ice, 40%);
+$ice-400: tint-color($ice, 20%);
+$ice-500: $ice;
+$ice-600: shade-color($ice, 20%);
+$ice-700: shade-color($ice, 40%);
+$ice-800: shade-color($ice, 60%);
+$ice-900: shade-color($ice, 80%);
+
+$salt-100: tint-color($salt, 80%);
+$salt-200: tint-color($salt, 60%);
+$salt-300: tint-color($salt, 40%);
+$salt-400: tint-color($salt, 20%);
+$salt-500: $salt;
+$salt-600: shade-color($salt, 20%);
+$salt-700: shade-color($salt, 40%);
+$salt-800: shade-color($salt, 60%);
+$salt-900: shade-color($salt, 80%);
+
+$olive-100: tint-color($olive, 80%);
+$olive-200: tint-color($olive, 60%);
+$olive-300: tint-color($olive, 40%);
+$olive-400: tint-color($olive, 20%);
+$olive-500: $olive;
+$olive-600: shade-color($olive, 20%);
+$olive-700: shade-color($olive, 40%);
+$olive-800: shade-color($olive, 60%);
+$olive-900: shade-color($olive, 80%);
+
+$limegreen-100: tint-color($limegreen, 80%);
+$limegreen-200: tint-color($limegreen, 60%);
+$limegreen-300: tint-color($limegreen, 40%);
+$limegreen-400: tint-color($limegreen, 20%);
+$limegreen-500: $limegreen;
+$limegreen-600: shade-color($limegreen, 20%);
+$limegreen-700: shade-color($limegreen, 40%);
+$limegreen-800: shade-color($limegreen, 60%);
+$limegreen-900: shade-color($limegreen, 80%);
+
+$indigo-100: tint-color($indigo, 80%);
+$indigo-200: tint-color($indigo, 60%);
+$indigo-300: tint-color($indigo, 40%);
+$indigo-400: tint-color($indigo, 20%);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
 
 
 /**
@@ -57,7 +100,9 @@ $limegreen:#2bb53f;
  */
 
 $body-color: $ash;
-$border-color: $gray-200;
+$body-color-dark: $gray-200;
+$border-color: $salt;
+$border-color-dark: $salt-900;
 
 $base-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $base-font-size: 1rem;
@@ -120,27 +165,33 @@ $transition-color: color 250ms ease-in-out;
  * icons
  */
 $icon-size: $base-font-size;
-$icon-stroke-width: 2px;
+$icon-stroke-width: 0.125rem;
 
 
 /**
  * layout stuff
  */
 
-$alert-background-color: $ice-600;
+$alert-background-color: $limegreen-200;
+$alert-background-color-dark: $limegreen-900;
 $alert-font-size: $base-font-size * 0.925;
 $alert-icon-size: $icon-size;
 
 $brand-font-size: 2rem;
 $brand-font-weight: 700;
 
-$color-mode-toggle-margin-x: 0.5rem;
+$color-mode-active-background: $olive-200;
+$color-mode-active-background-dark: $indigo-800;
 $color-mode-label-font-size: 0.875rem;
+$color-mode-toggle-margin-x: 0.5rem;
 $color-mode-toggle-font-size: 1.5rem;
-$color-mode-icon-stroke-width: 2px;
+$color-mode-icon-stroke-width: $icon-stroke-width;
 
 $cover-background-color: $ice;
+$cover-background-color-dark: $ice-900;
 
+$entry-background-color: $salt;
+$entry-background-color-dark: $salt-900;
 $entry-margin-y-sm: 2rem;
 $entry-margin-y-lg: 3rem;
 
@@ -157,6 +208,7 @@ $nav-toc-sub-link-color: $ash;
 $nav-toc-sub-link-hover-color: $fire;
 
 $hero-background-color: $cover-background-color;
+$hero-background-color-dark: $cover-background-color-dark;
 $hero-heading-font-weight: 700;
 $hero-padding-y: 4rem;
 $hero-lead-margin-y: 1rem;
@@ -165,9 +217,13 @@ $hero-icon-size-sm: 3rem;
 $hero-icon-size-lg: 100%;
 $hero-icon-stroke-width: 1px;
 
+$intro-background-color: $ice;
+$intro-background-color-dark: $ice-900;
+
 $aside-width: 320px;
 
 $footer-background-color: $ice;
+$footer-background-color-dark: $ice-900;
 
 
 /**

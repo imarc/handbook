@@ -3,7 +3,7 @@
  */
 
 .footer {
-    background-color: var(--surface02, $footer-background-color);
+    background-color: var(--footer-background-color, $footer-background-color);
     font-size: 0.825rem;
 
     &__body {

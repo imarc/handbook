@@ -8,40 +8,38 @@
     }
 }
 
-:root[color-mode='light'] {
-    --surface01: #{$white};
-    --surface02: #{$salt};
-    --surface03: #{$ice};
-    --surface04: #{$ice-600};
-    --copy01: #{$body-color};
-    --copy02: #{$gray-700};
-    --buttonColorMode: #{$white};
-    --primary: #{$link};
+:root[color-mode="light"] {
+    --matte: #{$white};
+    --hero-background-color: #{$hero-background-color};
+    --cover-background-color: #{$cover-background-color};
+    --footer-background-color: #{$footer-background-color};
+    --intro-background-color: #{$intro-background-color};
+    --alert-background-color: #{$alert-background-color};
+    --entry-background-color: #{$entry-background-color};
+    --border-color: #{$border-color};
+    --color-mode-active: #{$color-mode-active-background};
+    --base-copy: #{$body-color};
+    --base-copy-lighter: #{$gray-700};
 
     .color-mode__button--light .color-mode__active {
         display: block;
     }
-
-    .color-mode__button--light {
-        // opacity: 0.25;
-    }
 }
 
-:root[color-mode='dark'] {
-    --surface01: #{$gray-900};
-    --surface02: #{$gray-800};
-    --surface03: #{$gray-800};
-    --surface04: #{$gray-700};
-    --copy01: #{$gray-200};
-    --copy02: #{$gray-300};
-    --buttonColorMode: #{$gray-900};
-    --primary: #{$link};
+:root[color-mode="dark"] {
+    --matte: #{$gray-900};
+    --hero-background-color: #{$hero-background-color-dark};
+    --cover-background-color: #{$cover-background-color-dark};
+    --footer-background-color: #{$footer-background-color-dark};
+    --intro-background-color: #{$intro-background-color-dark};
+    --alert-background-color: #{$alert-background-color-dark};
+    --entry-background-color: #{$entry-background-color-dark};
+    --border-color: #{$border-color-dark};
+    --color-mode-active: #{$color-mode-active-background-dark};
+    --base-copy: #{$body-color-dark};
+    --base-copy-lighter: #{$gray-300};
 
     .color-mode__button--dark .color-mode__active {
         display: block;
-    }
-
-    .color-mode__button--dark {
-        // opacity: 0.25;
     }
 }

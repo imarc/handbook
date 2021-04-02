@@ -4,7 +4,7 @@
 
 .cover {
     @include transition($transition-background-color);
-    background-color: var(--surface03, $hero-background-color);
+    background-color: var(--cover-background-color, $cover-background-color);
 
     &__body {
         display: flex;

@@ -3,8 +3,6 @@
  */
 
 a {
-    //@include linkHoverLine();
-
     @include transition($transition-color);
 
     color: $link;
@@ -62,7 +60,7 @@ h5 {
 /* stylelint-disable selector-no-qualifying-type */
 
 h2[id] {
-    border-top: 0.125rem solid var(--surface02);
+    border-top: 0.125rem solid var(--border-color, $border-color);
     margin-top: 2rem;
     padding-top: 1.75rem;
 
@@ -95,7 +93,7 @@ p {
 }
 
 .lead {
-    color: var(--copy02, $lead-color);
+    color: var(--base-copy-lighter, $lead-color);
     font-size: 1.25rem;
     font-weight: 300;
 

@@ -17,9 +17,7 @@
     }
 
     &__brand {
-        //@include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
-
-        color: var(--copy01, $body-color);
+        color: var(--base-copy, $body-color);
         display: inline-block;
         font-size: 1.625rem;
         font-weight: $masthead-brand-font-weight;
@@ -42,6 +40,10 @@
     }
 
     &__color-mode {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+
         @include breakpoint(md) {
             margin-left: 1.5rem;
         }
@@ -69,16 +71,13 @@
     }
 
     &__nav-link {
-        //@include linkHoverLine($color: shade-color($ice, 15%), $borderColor: shade-color($fire, 20%));
-        border-top: 1px solid $gray-300;
-        color: var(--copy01, $body-color);
+        color: var(--base-copy, $body-color);
         padding-bottom: 0.5rem;
         padding-left: 0;
         padding-right: 0;
         padding-top: 0.5rem;
 
         @include breakpoint(sm) {
-            border-top: 0;
             padding-left: $nav-link-padding-x;
             padding-right: $nav-link-padding-x;
         }

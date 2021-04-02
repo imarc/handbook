@@ -6,7 +6,7 @@
     $b: &;
 
     @include transition($transition-background-color);
-    background-color: var(--surface04, $alert-background-color);
+    background-color: var(--alert-background-color, $alert-background-color);
 
     &__body {
         display: flex;
@@ -38,7 +38,6 @@
     }
 
     &--center {
-
         #{$b}__body {
             justify-content: center;
         }

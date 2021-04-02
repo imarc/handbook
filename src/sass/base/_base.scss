@@ -11,8 +11,8 @@
 body {
     @include transition($transition-background-color);
 
-    background-color: var(--surface01, $white);
-    color: var(--copy01, $body-color);
+    background-color: var(--matte, $white);
+    color: var(--base-copy, $body-color);
     font-family: $base-font-family;
     font-size: $base-font-size;
     font-weight: $base-font-weight;

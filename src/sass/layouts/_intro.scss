@@ -12,10 +12,10 @@
         }
     }
 
-    &__cell {
+    &__content {
         @include transition($transition-background-color);
 
-        background-color: var(--surface03, $ice);
+        background-color: var(--intro-background-color, $intro-background-color);
         padding-bottom: 2rem;
         padding-top: 2rem;
 
@@ -30,7 +30,7 @@
         }
     }
 
-    &__content {
+    &__wrapper {
         max-width: map-get($container-max-widths, xl) / 2;
         padding-left: $container-padding-x;
         padding-right: $container-padding-x;

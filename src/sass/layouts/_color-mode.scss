@@ -5,12 +5,8 @@
 .color-mode {
     $b: &;
 
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-
     &__body {
-        background-color: var(--surface01);
+        background-color: var(--matte, $white);
         border-radius: 0.5rem;
         display: flex;
         padding: 0.5rem;
@@ -26,6 +22,7 @@
         font-size: 1rem;
         height: 2rem;
         line-height: 1;
+        padding: 0;
         position: relative;
         text-align: center;
         width: 2rem;
@@ -34,7 +31,7 @@
 
     &__active {
         @include transition($transition-background-color);
-        background-color: var(--surface03);
+        background-color: var(--color-mode-active, $ice);
         border-radius: 0.25rem;
         display: none;
         height: 100%;
@@ -49,7 +46,7 @@
         display: inline-block;
         height: 1.125rem;
         position: relative;
-        stroke: var(--copy01);
+        stroke: var(--base-copy, $body-color);
         stroke-width: $color-mode-icon-stroke-width;
         width: 1.125rem;
         z-index: 1;

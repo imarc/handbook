@@ -4,7 +4,7 @@
 
 .hero {
     @include transition($transition-background-color);
-    background-color: var(--surface03, $hero-background-color);
+    background-color: var(--hero-background-color, $hero-background-color);
 
     &__body {
         display: flex;
