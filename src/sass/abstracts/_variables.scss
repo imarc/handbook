@@ -9,7 +9,7 @@
 
 // grayscale
 $white:    #fff;
-$gray-100: #f3f4f6;
+$gray-100: #f5f6f8;
 $gray-200: #e5e7eb;
 $gray-300: #d1d5db;
 $gray-400: #b4b6b8;
@@ -31,7 +31,6 @@ $ocean:    #387cf5;
 $olive:    #b4a50a;
 $limegreen:#2bb53f;
 $indigo:   #dd51e7;
-
 
 // shadings and tints
 $fire-100: tint-color($fire, 80%);
@@ -96,6 +95,13 @@ $indigo-900: shade-color($indigo, 80%);
 
 
 /**
+ * spacing
+ */
+
+$spacer: 1rem;
+
+
+/**
  * base
  */
 
@@ -109,6 +115,7 @@ $base-font-size: 1rem;
 $base-font-weight: 400;
 $base-line-height: 1.5;
 
+
 /**
  * containers
  */
@@ -121,6 +128,7 @@ $container-max-widths: (
 );
 
 $container-padding-x: 1.25rem;
+
 
 /**
  * breakpoints
@@ -156,6 +164,7 @@ $paragraph-margin-bottom: 1rem;
 /**
  * transitions
  */
+
 $transition-all: all 250ms ease-in-out;
 $transition-background-color: background-color 250ms ease-in-out;
 $transition-color: color 250ms ease-in-out;
@@ -164,6 +173,7 @@ $transition-color: color 250ms ease-in-out;
 /**
  * icons
  */
+
 $icon-size: $base-font-size;
 $icon-stroke-width: 0.125rem;
 
@@ -172,8 +182,8 @@ $icon-stroke-width: 0.125rem;
  * layout stuff
  */
 
-$alert-background-color: $limegreen-200;
-$alert-background-color-dark: $limegreen-900;
+$alert-background-color: $olive-100;
+$alert-background-color-dark: $olive-900;
 $alert-font-size: $base-font-size * 0.925;
 $alert-icon-size: $icon-size;
 
@@ -220,7 +230,9 @@ $hero-icon-stroke-width: 1px;
 $intro-background-color: $ice;
 $intro-background-color-dark: $ice-900;
 
-$aside-width: 320px;
+$aside-background-color: $gray-100;
+$aside-background-color-dark: $gray-800;
+$aside-width: 310px;
 
 $footer-background-color: $ice;
 $footer-background-color-dark: $ice-900;

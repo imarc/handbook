@@ -33,16 +33,6 @@ tl.from(".icon--dept .icon__part", {
 
 const toggleColorMode = function toggleColorMode(e) {
 
-    const state = Flip.getState(toggleColorButtonActive)
-
-    e.currentTarget.appendChild(toggleColorButtonActive)
-
-    Flip.from(state, {
-        absolute: true,
-        duration: .25,
-        ease: "expo.inOut",
-    });
-
     if (e.currentTarget.classList.contains("color-mode__button--light")) {
         document.documentElement.setAttribute("color-mode", "light")
         localStorage.setItem("color-mode", "light")
@@ -54,11 +44,10 @@ const toggleColorMode = function toggleColorMode(e) {
 };
 
 const toggleColorButtons = document.querySelectorAll(".color-mode__button")
-const toggleColorButtonActive = document.querySelector(".color-mode__active")
-const toggleColorButtonDark = document.querySelector(".color-mode__button--dark")
 
 toggleColorButtons.forEach((btn) => {
     btn.addEventListener("click", toggleColorMode)
 })
+
 
 

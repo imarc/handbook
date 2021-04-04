@@ -36,7 +36,7 @@
         "at-rule-empty-line-before": ["always", { "except": [ "first-nested", "blockless-after-same-name-blockless"] }],
         "indentation": 4,
         "max-nesting-depth": 3,
-        "rule-empty-line-before": "always",
+        "rule-empty-line-before": ["always", {"except": ["first-nested"] } ],
         "selector-class-pattern": null,
         "string-quotes": null,
         "order/properties-alphabetical-order": true,

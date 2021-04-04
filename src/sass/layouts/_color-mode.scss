@@ -1,5 +1,5 @@
 /**
- * layouts > colormode
+ * layouts > color-mode
  */
 
 .color-mode {
@@ -9,23 +9,26 @@
         background-color: var(--matte, $white);
         border-radius: 0.5rem;
         display: flex;
-        padding: 0.5rem;
-        width: 100px;
+        padding: 0.25rem;
+        width: 5.5rem;
     }
 
     &__button {
+        align-items: center;
         background-color: transparent;
         border: 0;
         border-radius: 0.25rem;
         cursor: pointer;
+        display: flex;
         flex: 1 0 0%;
         font-size: 1rem;
         height: 2rem;
+        justify-content: center;
         line-height: 1;
         padding: 0;
         position: relative;
         text-align: center;
-        width: 2rem;
+        width: 2.75rem;
         z-index: 0;
     }
 
@@ -43,13 +46,10 @@
     }
 
     &__button #{$b}__icon {
-        display: inline-block;
         height: 1.125rem;
-        position: relative;
         stroke: var(--base-copy, $body-color);
         stroke-width: $color-mode-icon-stroke-width;
         width: 1.125rem;
-        z-index: 1;
     }
 }
 
