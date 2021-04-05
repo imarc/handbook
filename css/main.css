@@ -1356,6 +1356,8 @@ table > :not(:last-child) > :last-child > * {
     display: block;
     flex-basis: 310px;
     flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding-bottom: 5rem;
     padding-left: 2rem;
     padding-top: 5rem;
