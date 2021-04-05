@@ -33,7 +33,7 @@
     }
 
     &__aside {
-        background-color: $aside-background-color;
+        background-color: var(--aside-background-color, $aside-background-color);
         margin-left: -$container-padding-x;
         margin-right: -$container-padding-x;
         padding-bottom: 3rem;

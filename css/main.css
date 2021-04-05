@@ -1052,6 +1052,7 @@ p {
 }
 .entry__media .icon {
   height: 2rem;
+  stroke-width: 0.09375rem;
   width: 2rem;
 }
 
@@ -1102,7 +1103,7 @@ p {
 .hero__media .icon {
   height: 3rem;
   stroke: #6b7280;
-  stroke-width: 1px;
+  stroke-width: 0.0625rem;
   width: 3rem;
 }
 @media (min-width: 768px) {
@@ -1341,7 +1342,7 @@ table > :not(:last-child) > :last-child > * {
   }
 }
 .torso__aside {
-  background-color: #f5f6f8;
+  background-color: var(--aside-background-color, #f5f6f8);
   margin-left: -1.25rem;
   margin-right: -1.25rem;
   padding-bottom: 3rem;
