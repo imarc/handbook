@@ -115,22 +115,6 @@ Try not to set `font-size` on selectors that should be rendered at the project�
 
 Imarc leans on web font services such as [Google Fonts](https://fonts.google.com), [Typekit](http://www.typekit.com), [Fonts.com](http://www.fonts.com/). See your project manager for guidance if your desired web font costs money.
 
-### Dashes
-
-There are multiple types of dashes present in common use: hyphen, figure dash,
-en dash, em dash and minus sign. Instead of using all five, we limit use to 2:
-
-* (-) A hyphen, which is present on the keyboard, is used for hyphenation of words and separating phone numbers
-* (–) An en dash should be used without spaces for numeric ranges (ex: 6–10), or combined with a space on either side for an abrupt change in thought – this is the modern equivalent of an em dash
-
-Em dashes have been dropped based on Robert Bringhurst’s recommendation in
-[The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326):
-
-  The em dash is the nineteenth-century standard, still prescribed in many
-  editorial style books, but the em dash is too long for use with the best
-  text faces. Like the oversized space between sentences, it belongs to the
-  padded and corseted aesthetic of Victorian typography.
-
 ### Print Styles
 
 While not requested often, some websites require a print stylesheet. Imarc has a [sane starting point for print styles](https://github.com/imarc/boilerplate-components/blob/master/resources/styles/base.scss#L295-L334).
