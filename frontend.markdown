@@ -6,8 +6,7 @@ icon: _icon-frontend.html
 ---
 
 ## Boilerplate
-**[Boilerplate](http://imarc.github.io/boilerplate)** is a great
-starting point for new projects. Authored by Imarc, Boilerplate contains our standard HTML and SCSS.
+Our **[Boilerplate Components](https://github.com/imarc/boilerplate-components/tree/5.0.0-beta.3)** is a great starting point for new projects. Authored by Imarc, Boilerplate Components contains our standard HTML, Sass, and JavaScript.
 
 ## npm
 
@@ -20,110 +19,50 @@ Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more b
 ## Module Bundling / Asset Compilation
 Imarc uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) for both JavaScript module bundling and Asset compilation (Sass). Reference Boilerplate for an example of a [Laravel Mix configuration file](https://github.com/imarc/boilerplate-components/blob/next/webpack.mix.js).
 
-## Doctype, Validation, Meta
+## Doctype and metadata
 
 ### Doctype
-Use the [HTML5](https://developer.mozilla.org/en-US/docs/HTML/HTML5) doctype.
+Use a proper [doctype](https://developer.mozilla.org/en-US/docs/Glossary/Doctype) to ensure a browser renders to relevant specifications.
 
     <!DOCTYPE html>
 
-### Validation
-A concerted effort should be made to ensure your HTML and CSS validate. Markup should
-be semantic and well-formed and contain all required attributes. Elements should occur
-within the proper context of the DOCTYPE.
-
-* [W3C HTML Markup Validator](http://validator.w3.org)
-* [W3C CSS Validator](http://jigsaw.w3.org/css-validator)
+### Metadata
 
 #### Titles
 
 Titles should contain descriptive information that concisely describes the current
-page. In the case of nested pages, information in the title tag should be ordered from
-most specific to least specific. A standard delimiter such as `–` or `|` should be employed
-to indicate distinct content levels.
+page. Titles appear on search engine result pages and are weighted in Search Engine Optimization (SEO), but do not keyword-stuff. An example of a well-written title for a fictional Imarc blog post might be:
 
-	<title>Support - Contact | Imarc Web Design: Boston + Silicon Valley</title>
+	<title>Using flexbox to lay out a Leadership design | Imarc: Boston-based Web Agency</title>
 
-This shows that I’m on the page called *Support*. That page lives in a section called *Contact*
-which resides in a website for *Imarc*. Titles are adjusted to meet SEO needs.
-
-The homepage should include the site or company name, followed by a simple description
-of the entire website.
-
-	<title>Imarc | Web Design and Digital Agency in Boston + Silicon Valley</title>
+Note the `|` delimiter. This is a common pattern Imarc uses to append general website information if space allows (keep titles under 60 characters).
 
 #### Description
 
-A quality meta description can help in higher clickthroughs. Ideally, all pages
-include a unique meta description – a concise, human-readable description of that
-page’s contents. Do not duplicate meta descriptions from other pages. Custom
-meta descriptions can appear in search engine result pages as seen in the
-graphic below, however Google will sometimes replace custom meta descriptions
-with on-page content if they feel it’s of more value to the end user.
-
-If no meta description exists, Google will create its own from on-page content.
-
-[Tips for writing meta descriptions by Google](https://support.google.com/webmasters/answer/35624?hl=en#1)
-
-![Example of meta description in search results](/img/meta_description.jpg)
-
-Keep meta descriptions less than 160 characters. Here is an example meta description for Imarc’s Blog page.
+Meta descriptions display under titles on search engine result pages (SERPs). A quality meta description can help in higher clickthroughs. Ideally, all pages include a unique meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Keep them under 160 characters.
 
 	<meta name="description" content="Our blog features the latest in web design, development, user experience and marketing." />
 
-## Typography
+If no meta description exists, Google will create its own from on-page content.
 
-### Font Size
+[Tips for writing meta descriptions by Google](https://developers.google.com/search/docs/advanced/appearance/good-titles-snippets#why-the-search-result-title-might-differ-from-the-pages-title-tag)
 
-Users are able to edit their browser’s default font-size. To best work with this, it is ideal to **not set** a default font-size on the `<html>` or `<body>` selectors. Let the browser’s default size (16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit.
+#### Favicon / Touch Icons
 
-“The design I was given has a larger default font-size than 16px. What do I do?”
+Use 32x32 PNG files for favicons:
 
-If you need to, use a percentage unit on the your `:root` or `<html>` selector’s `font-size` property. In the case of 20px default font-size:
+    <link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon">
 
-    html {
-        font-size: 125%; // (125/100) * 16px = 20px
-    }
+iOS and Android devices both support touch icons. A touch icon is what will appear on a user's smartphone if they save a webpage as a bookmark to their homescreen.
 
-Your project’s root font-size would now be 20px. 1.5rem would be 30px.
+    <link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
 
-### Font Stacks
+Your touch icons should be a PNG at 192x192. It’s possible to specify
+different sizes for different devices, but using a single high
+resolution touch icon is the easiest way to ensure the highest
+quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
-Specify a font family stack on `<body>`.
-
-A default **serif** font stack:
-
-    font-family: Constantia, Lucida, Georgia, serif;
-
-A default **sans-serif** font stack:
-
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-To help prevent adjustments of font-size after iOS device orientation changes, use `-webkit-text-size-adjust: 100%`.
-
-    body {
-        -webkit-text-size-adjust: 100%;
-    }
-
-Try not to set `font-size` on selectors that should be rendered at the project’s default font-size (e.g. `<p>`, `<li>`, `<div>`, `<td>`, `<a>`). Rather, you should style to a class – modifying font-size on a `.card__lead` class that is hung on a `<p>` selector is better).
-
-### Line Height
-
-`line-height` should use a unitless value (e.g. `line-height: 1.5`)
-
-### Web Fonts
-
-Imarc leans on web font services such as [Google Fonts](https://fonts.google.com), [Typekit](http://www.typekit.com), [Fonts.com](http://www.fonts.com/). See your project manager for guidance if your desired web font costs money.
-
-### Print Styles
-
-While not requested often, some websites require a print stylesheet. Imarc has a [sane starting point for print styles](https://github.com/imarc/boilerplate-components/blob/master/resources/styles/base.scss#L295-L334).
-
-## Coding Style
-
-Consistent coding style for HTML and CSS is vital because multiple people collaborate on a site’s markup and style.
-
-### Character Encoding
+#### Character Encoding
 
 Use UTF-8 as the character encoding. Set your editor to use UTF-8 for
 all aspects of the web application.
@@ -138,16 +77,115 @@ entities.
 
 Use real UTF-8 characters instead of HTML entities. For example, use `»`, instead of typing out its `&raquo;` entity. The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`, `&quot;`. This also applies to CSS. Doing something like `content: '»'` is better than `content: '\bb'.
 
-    <p>
-        Separation of content – better with an en-dash.
-        Imarc’s motto: “Use curly quotes”
-        <a href="#"> Learn More »</a>
-    </p>
+#### Safari pinned icon
 
-### CSS
+With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab.
+Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
 
-#### ABEM
+    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
+
+## Typography
+
+### Fonts
+
+#### Font-size
+
+Because users are able to set their preferred font-size in their web browser, **do not set a default font-size on the** `<html>` **or** `<body>` **selectors**. Let the browser’s default size (usually 16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit.
+
+**“The design I was given has a larger default font-size than 16px. What do I do?”**
+
+In this case, use a percentage on the `<html>` selector’s `font-size` property. In the case of 20px default font-size:
+
+    html {
+        font-size: 125%; // (125/100) * 16px = 20px
+    }
+
+Your project’s root font-size would now be 20px. 1.5rem would be 30px.
+
+#### Stacks
+
+Specify a font stack on the `<body>` selector.
+
+**serif** font stack example:
+
+    font-family: Constantia, Lucida, Georgia, serif;
+
+**sans-serif** font stack example:
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+To help prevent adjustments of font-size after iOS device orientation changes, use `-webkit-text-size-adjust: 100%`.
+
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+
+Try not to set `font-size` on selectors that should be rendered at the project’s default font-size (e.g. `<p>`, `<li>`, `<div>`, `<td>`, `<a>`). Rather, you should style to a class – modifying font-size on a `.card__lead` class that is hung on a `<p>` selector is better).
+
+#### Web Fonts
+
+Imarc often uses web font services such as [Google Fonts](https://fonts.google.com), [Typekit](http://www.typekit.com), [Fonts.com](http://www.fonts.com/). See your project manager for guidance if your desired web font costs money.
+
+### Line Height
+
+`line-height` should always use a unitless value (e.g. `line-height: 1.5`)
+
+### Print Styles
+
+While not requested often, some websites require a print stylesheet. Imarc has a [sane starting point for print styles](https://github.com/imarc/boilerplate-components/blob/master/resources/styles/base.scss#L295-L334).
+
+## CSS
+
+Consistent coding style for CSS is vital as multiple people collaborate on site buildouts and maintenance.
+
+### Class naming (ABEM)
+
 Many Imarc projects use an offshoot of Block Element Modifier called [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/). It is influenced from [Atomic Design](https://atomicdesign.bradfrost.com/) principals. This creates a methodology for HTML class naming and Sass directory structure.
+
+Our preferred class naming format is:
+
+    blockName__elementName -modifierName
+
+#### Real-world example
+
+**HTML**
+
+    <div class="hero">
+        <div class="hero__body">
+            <h1 class="hero__heading">
+                About Us
+            </h1>
+            <div class="hero__action -seasonalOffer">
+                <a class="button hero__button" href="/">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+Note how `button` and `hero__button` are chained. This is known as a [mix](https://en.bem.info/methodology/key-concepts/#mix) in BEM – two BEM entities existing on the same DOM node. `button` is considered an *atom* in Atomic Design and `hero__button` is an element of the `hero` block.
+
+**Sass**
+
+    .hero {
+        &__body {
+            padding: 1rem;
+        }
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__action {
+            font-size: 2.5rem;
+
+            &.-seasonalOffer {
+                …
+            }
+        }
+
+        &__button {
+            border-radius: 0.25rem;
+        }
+    }
 
 Check out the [Sass folder structure description on Imarc’s boilerplate-components](https://imarc.github.io/boilerplate-components/pattern-library/).
 
@@ -158,36 +196,24 @@ Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flex
 
 #### General CSS Formatting
 
-    .heading {
+    .hero {
         background-color: #FFF;
-        border: 1px solid #DDD;
-        color: #666;
-        height: 60px;
-        margin: 20px auto;
-        padding: 20px;
-        width: 960px;
+        color: #333;
+        padding: 2rem;
     }
 
-<ul>
-	<li>
-		Selector(s) lives on its own line(s) followed by the opening brace
-	</li>
-	<li>
-		Each declaration lives on its own indented line
-	</li>
-	<li>
-		Each property has a space between the colon and value ends with a semi-colon
-	</li>
-	<li>
-		The closing brace should be on its own line at the same indentation as the selector
-	</li>
-</ul>
-
+- Selector(s) lives on its own line(s) followed by the opening brace
+- Each declaration lives on its own indented line
+- Each property has a space between the colon and value ends with a semi-colon
+- The closing brace should be on its own line at the same indentation as the selector
 
 #### Use Only Class Selectors
 
-To avoid CSS specificity issues, use only class selectors.
-The exceptions to this rule are: anchors, form label IDs, JavaScript hook requirements.
+Style to class selectors only and not IDs or selectors
+
+`.hero__heading` **not** `#hero__heading` or `.hero h1`
+
+The exceptions to this rule: anchor links, form label IDs, JavaScript hook requirements.
 
 ## Forms
 
@@ -203,8 +229,8 @@ Input elements should have an associated label element.
 
 Form element markup
 
-    <form method="post">
-        <fieldset>
+    <form class="form" method="post">
+        <fieldset class="form__fieldset">
             <p>
                 Through out the fields, you will also see <code>span.help</code>
                 elements. These are used for help text relevant to fields.
@@ -318,14 +344,16 @@ Form element markup
 
 ### Messaging
 
-* **`.success`** – Confirmation after an action has successfully completed
-* **`.info`** – Informative message
-* **`.error`** – Notification that an action had problems
-* **`.help`** – Coaching or guidance; typically inline
+#### Modifiers
+
+* **`.-success`** – Confirmation after an action has successfully completed
+* **`.-info`** – Informative message
+* **`.-error`** – Notification that an action had problems
+* **`.-help`** – Coaching or guidance; typically inline
 
 Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
 
-    <div class="messaging success">
+    <div class="messaging -success">
         <p>
             Congratulations! You have signed up for ACME’s business afterhours.
         </p>
@@ -479,28 +507,6 @@ takes advantage of the `viewBox` attribute.
             <polygon class="y" points="29.4 43.45 29.4 31.91 29.4 29.28 29.4 17.8 31.85 17.8 31.85 29.28 31.85 31.91 31.85 43.45 29.4 43.45"/>
         </g>
     </svg>
-
-### Favicon / Touch Icons
-
-Use 32x32 PNG files for favicons:
-
-    <link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon" />
-
-iOS and Android devices both support touch icons. A touch icon is what will appear on a user's smartphone if they save a webpage as a bookmark to their homescreen.
-
-    <link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
-
-Your touch icons should be a PNG at 192x192. It’s possible to specify
-different sizes for different devices, but using a single high
-resolution touch icon is the easiest way to ensure the highest
-quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
-
-### Safari pinned icon
-
-With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab.
-Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
-
-    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
 
 ## Iconography
 
