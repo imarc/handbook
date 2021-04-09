@@ -42,5 +42,4 @@ $(function() {
 	};
 
 	$('.nav--toc').appendTOC('.torso__main', 'h2, h3');
-	$('.nav--toc').addClass('sticky').stickToTop('.torso', { minWidth: 1024});
 });
