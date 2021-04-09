@@ -53,4 +53,9 @@
             padding-top: 5rem;
         }
     }
+
+    &__nav--toc-stuck {
+        position: sticky;
+        top: 1rem;
+    }
 }

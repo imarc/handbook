@@ -1363,6 +1363,10 @@ table > :not(:last-child) > :last-child > * {
     padding-top: 5rem;
   }
 }
+.torso__nav--toc-stuck {
+  position: sticky;
+  top: 1rem;
+}
 
 /**
  * layouts > footer
