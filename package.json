@@ -28,22 +28,38 @@
   },
   "dependencies": {
     "gsap": "file:gsap-bonus.tgz",
+    "lazysizes": "^5.3.2",
     "normalize.css": "^8.0.1"
   },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
     "rules": {
-        "at-rule-empty-line-before": ["always", { "except": [ "first-nested", "blockless-after-same-name-blockless"] }],
-        "indentation": 4,
-        "max-nesting-depth": 3,
-        "rule-empty-line-before": ["always", {"except": ["first-nested"] } ],
-        "selector-class-pattern": null,
-        "string-quotes": null,
-        "order/properties-alphabetical-order": true,
-        "scss/at-extend-no-missing-placeholder": null,
-        "scss/at-import-no-partial-leading-underscore": null,
-        "scss/at-mixin-pattern": null,
-        "scss/dollar-variable-pattern": ""
+      "at-rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "first-nested",
+            "blockless-after-same-name-blockless"
+          ]
+        }
+      ],
+      "indentation": 4,
+      "max-nesting-depth": 3,
+      "rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "first-nested"
+          ]
+        }
+      ],
+      "selector-class-pattern": null,
+      "string-quotes": null,
+      "order/properties-alphabetical-order": true,
+      "scss/at-extend-no-missing-placeholder": null,
+      "scss/at-import-no-partial-leading-underscore": null,
+      "scss/at-mixin-pattern": null,
+      "scss/dollar-variable-pattern": ""
     }
   }
 }

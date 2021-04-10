@@ -2,23 +2,35 @@
 
 https://handbook.imarc.com
 
-Imarc Handbook documents coding best practices. All pull requests, etc. should be done against the *gh-pages* branch.
+Imarc Handbook documents coding best practices. All pull requests should be done against the *gh-pages* branch.
 
-## Development
-
-You should work locally before commiting any code. Handbook can be viewed locally using [Jekyll](https://jekyllrb.com).
+## Setup
 
 If you don’t have [Bundler](https://rubygems.org/gems/bundler), install it via `gem install bundler` (you only need to do this once).
 
 Run `bundle install`
 
-Serve Handbook locally via `bundle exec jekyll serve`
+## Development
 
-Run `npm i` to install packages and `npm run watch` to compile Sass to CSS.
+Work locally before committing any code. Handbook can be viewed locally using [Jekyll](https://jekyllrb.com).
+
+Serve Handbook locally `bundle exec jekyll serve`
+
+Run `npm i` to install packages (first time only) and `npm run watch` to compile Sass to CSS.
+
+### BEM
+
+HTML classes are formed following [BEM's Two Dashes Style](https://en.bem.info/methodology/naming-convention/#two-dashes-style)
+
+``block-name__elem-name--mod-name``
 
 ### Icons
 
-We use [Tabler SVG Icons](https://tablericons.com/).
+We use [Tabler SVG Icons](https://tablericons.com/) for department icons. We include them in templates from the `_includes` folder.
+
+### Images
+
+Lazysizes content to be added.
 
 ## Deployment
 
