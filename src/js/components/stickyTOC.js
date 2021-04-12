@@ -2,7 +2,7 @@
  * sticky sidebar
  */
 
-const navTOC = document.querySelector(".nav--toc");
+const navTOC = document.querySelector(".nav--toc")
 
 const stickTOC = () => {
     const viewportHeight = document.documentElement.clientHeight
@@ -14,6 +14,7 @@ const stickTOC = () => {
     }
 }
 
-document.addEventListener("DOMContentLoaded", stickTOC);
-
-window.addEventListener("resize", stickTOC);
+if (navTOC) {
+    document.addEventListener("DOMContentLoaded", stickTOC)
+    window.addEventListener("resize", stickTOC)
+}
