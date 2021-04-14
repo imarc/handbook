@@ -6,18 +6,43 @@ icon: _icon-frontend.html
 ---
 
 ## Boilerplate
-Our **[Boilerplate Components](https://github.com/imarc/boilerplate-components/tree/5.0.0-beta.3)** is a great starting point for new projects. Authored by Imarc, Boilerplate Components contains our standard HTML, Sass, and JavaScript.
+Our [Boilerplate Components](https://github.com/imarc/boilerplate-components/tree/5.0.0-beta.3) is a great starting point for new projects. Authored by Imarc, Boilerplate Components contains our standard HTML, Sass, and JavaScript.
 
 ## npm
 
-Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `node_modules` directory. See installed packages and relevant scripts on the project’s `package.json` file.
+Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `node_modules` directory. See installed packages and relevant scripts in a project’s root-level `package.json` file.
 
 * Project and library code should never have `node_modules` committed.
 * **Project** code SHOULD commit the `package-lock.json` file.
 * **Library** code SHOULD NOT commit the `package-lock.json` file.
 
-## Module Bundling / Asset Compilation
-Imarc uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) for both JavaScript module bundling and Asset compilation (Sass). Reference Boilerplate for an example of a [Laravel Mix configuration file](https://github.com/imarc/boilerplate-components/blob/next/webpack.mix.js).
+## Module bundling / asset compilation
+
+[Laravel Mix](https://github.com/JeffreyWay/laravel-mix) is thin layer on top of Webpack that makes things simple. Imarc uses Laravel Mix for JavaScript module bundling and asset compilation (Sass, images). Reference Boilerplate Components for an example of a [Laravel Mix configuration file](https://github.com/imarc/boilerplate-components/blob/5.0.0-beta.3/webpack.mix.js). Note that Laravel Mix itself is included in projects [as a node package](https://www.npmjs.com/package/laravel-mix).
+
+## Code editors
+
+Popular code editors used at Imarc include: [Visual Studio Code](https://code.visualstudio.com), [PhpStorm](https://www.jetbrains.com/phpstorm/), and [Sublime Text](https://www.sublimetext.com/).
+
+### Code linting
+
+Code linting is automatic code-checking that reveals errors and/or stylistic issues. It helps maintain uniform code standards. Two popular linting tools we leverage are [ESLint](https://eslint.org/) for JavaScript and [Stylelint](https://stylelint.io/) for CSS. These are often integrated via node packages, allowing an engineer lint code via an npm script. However, dedicated code editor extensions/plugins can enhance linting even further. 
+
+#### ESLint
+
+TBD.
+
+#### Stylelint
+
+TBD.
+
+### Must-have extensions
+
+#### Emmet
+
+[Emmet](https://www.emmet.io/) helps engineers write HTML faster via shorthand. Visual Studio Code includes Emmet by default. If your code editor does not have Emmet, get it and use it. Learn to use Emmet via its [documentation](https://docs.emmet.io/).
+
+<img alt="" class="lazyload" data-src="/img/gif-emmet.gif">
 
 ## Doctype and metadata
 
@@ -31,7 +56,7 @@ Use a proper [doctype](https://developer.mozilla.org/en-US/docs/Glossary/Doctype
 #### Titles
 
 Titles should contain descriptive information that concisely describes the current
-page. Titles appear on search engine result pages and are weighted in Search Engine Optimization (SEO), but do not keyword-stuff. An example of a well-written title for a fictional Imarc blog post might be:
+page. Titles appear on search engine result pages and are weighted in Search Engine Optimization (SEO), but do not "keyword-stuff" titles. An example of a well-written title for a fictional Imarc blog post might be:
 
 	<title>Using flexbox to lay out a Leadership design | Imarc: Boston-based Web Agency</title>
 
@@ -47,7 +72,7 @@ If no meta description exists, Google will create its own from on-page content.
 
 [Tips for writing meta descriptions by Google](https://developers.google.com/search/docs/advanced/appearance/good-titles-snippets#why-the-search-result-title-might-differ-from-the-pages-title-tag)
 
-#### Favicon / Touch Icons
+#### Favicon / touch icons
 
 Use 32x32 PNG files for favicons:
 
@@ -62,7 +87,14 @@ different sizes for different devices, but using a single high
 resolution touch icon is the easiest way to ensure the highest
 quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
-#### Character Encoding
+#### Safari pinned icon
+
+With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab.
+Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
+
+    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
+
+#### Character encoding
 
 Use UTF-8 as the character encoding. Set your editor to use UTF-8 for
 all aspects of the web application.
@@ -77,13 +109,6 @@ entities.
 
 Use real UTF-8 characters instead of HTML entities. For example, use `»`, instead of typing out its `&raquo;` entity. The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`, `&quot;`. This also applies to CSS. Doing something like `content: '»'` is better than `content: '\bb'.
 
-#### Safari pinned icon
-
-With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab.
-Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
-
-    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
-
 ## Typography
 
 ### Fonts
@@ -94,7 +119,7 @@ Because users are able to set their preferred font-size in their web browser, **
 
 **“The design I was given has a larger default font-size than 16px. What do I do?”**
 
-In this case, use a percentage on the `<html>` selector’s `font-size` property. In the case of 20px default font-size:
+In this case, use a percentage on `<html>`’s `font-size` property. In the case of 20px default font-size:
 
     html {
         font-size: 125%; // (125/100) * 16px = 20px
@@ -122,15 +147,15 @@ To help prevent adjustments of font-size after iOS device orientation changes, u
 
 Try not to set `font-size` on selectors that should be rendered at the project’s default font-size (e.g. `<p>`, `<li>`, `<div>`, `<td>`, `<a>`). Rather, you should style to a class – modifying font-size on a `.card__lead` class that is hung on a `<p>` selector is better).
 
-#### Web Fonts
+#### Web fonts
 
 Imarc often uses web font services such as [Google Fonts](https://fonts.google.com), [Typekit](http://www.typekit.com), [Fonts.com](http://www.fonts.com/). See your project manager for guidance if your desired web font costs money.
 
-### Line Height
+#### Line height
 
 `line-height` should always use a unitless value (e.g. `line-height: 1.5`)
 
-### Print Styles
+### Print styles
 
 While not requested often, some websites require a print stylesheet. Imarc has a [sane starting point for print styles](https://github.com/imarc/boilerplate-components/blob/master/resources/styles/base.scss#L295-L334).
 
@@ -354,9 +379,11 @@ Form element markup
 Sample messaging markup. Note that chaining off `messaging` helps to avoid repeating CSS rules.
 
     <div class="messaging -success">
-        <p>
-            Congratulations! You have signed up for ACME’s business afterhours.
-        </p>
+        <div class="messaging__content">
+            <p>
+                Congratulations! You have successfully registered.
+            </p>
+        </div>
     </div>
 
 ## Tables
@@ -425,6 +452,32 @@ While not used for accessibility, use `<colgroup>` and `<col>` elements to more 
 
 ## Media
 
+### Images
+
+JPG format is ideal for photographic-like images. (e.g. images of people, places, things)
+
+PNG format is ideal for flat-color graphics and/or images that require transparency.
+
+WebP is TBD.
+
+#### Compression
+
+Whenever you export images, use image compression software. Compression reduces file size which in terms helps site performance. [ImageOptim](https://imageoptim.com/) is a client that is used by much of the Imarc team.
+
+### SVG
+
+SVG (Scalable Vector Graphics) is an XML-based image format. It allows for infinite scaling without sacrificing image quality. It is often used for logos, icons, and illustrative graphics.
+
+#### SVG implementation tips
+
+##### Inline vs. src
+
+Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or stroke/fill variations, inlining an SVG is acceptable. To help with document readability, it's preferable to "include" the SVG via a PHP or Twig include statement.
+
+##### Exporting from design programs
+
+TBD.
+
 ### Video
 
 We typically use vendor-provided (YouTube/Vimeo/Wistia) embed codes to display video. For responsive videos, wrap the embed code in a parent (e.g. `.embed`) and apply appropriate CSS. Note that `calc(9 / 16 * 100%)` below corresponds to a 16:9 aspect ratio. Modify this as needed.
@@ -452,10 +505,7 @@ Tip: with a preprocesser like Sass, you don’t need `calc()`, and `padding-top:
 
 #### Background Video
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* area. Create and export `.mp4` and `.webm` video files. Imarc typically uses
-<a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a> for editing
-and <a href="https://handbrake.fr/">Handbrake</a> for optimization. Here is some HTML/Sass for
-implementing a responsive backround video.
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* area. Create and export `.mp4` and `.webm` video files. Imarc often a video optimization tool like <a href="https://handbrake.fr/">Handbrake</a> to decrease file size as much as possible. Here is some HTML/Sass for implementing a responsive background video.
 
     <div class="hero">
         <video class="hero__video" autoplay loop="loop" muted poster="video-placeholder.jpg">
@@ -474,66 +524,44 @@ implementing a responsive backround video.
         }
 
         &::before {
-            content: '';
+            content: "";
             display: block;
-            padding-top: calc(3 / 9 * 100%);
+            padding-top: calc(9 / 16 * 100%); 
+            16 width
+            9 height
         }
     }
 
-### Image Compression
+`calc(9 / 16 * 100%)` would output a `padding-top: 56.25%`. This matches the popular 16:9 aspect ratio. To use a different aspect ratio, `calc(height / width * 100%)` will output the proper percentage.
 
-Whenever you save imagery for a web page, use image compression software. Compression can reduce the weight of the site. [ImageOptim](https://imageoptim.com/) is recommended by the Imarc team.
+### Responsive images
 
-### SVG
-
-SVG (Scalable Vector Graphics) is an XML-based image format that is vector-based. It allows for infinite scaling without sacrificing image quality.
-
-#### Implementation
-
-Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or color variations, “inlining” the SVG is acceptable. To help with document readability, include the file via PHP/etc.
-
-SVG code can be exported directly from Adobe Illustrator via:
-*File > Export > Export As…*
-
-Remove any `doctype`, `height`, `width`, `title` and `style` information from the SVG code. Make sure your code
-takes advantage of the `viewBox` attribute.
-
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 61.25 61.25">
-        <g>
-            <g class="c">
-                <path class="circle" d="M30.63,61.25A30.63,30.63,0,0,1,30.63,0C47.8,0,61.25,13,61.25,29.62c0,17.14-14,31.63-30.62,31.63m0-59a28.38,28.38,0,0,0,0,56.75C46,59,59,45.55,59,29.62,59,14.27,46.54,2.25,30.63,2.25"/>
-            </g>
-            <polygon class="x" points="17.8 29.4 29.34 29.4 31.97 29.4 43.45 29.4 43.45 31.85 31.97 31.85 29.34 31.85 17.8 31.85 17.8 29.4"/>
-            <polygon class="y" points="29.4 43.45 29.4 31.91 29.4 29.28 29.4 17.8 31.85 17.8 31.85 29.28 31.85 31.91 31.85 43.45 29.4 43.45"/>
-        </g>
-    </svg>
+Responsive image techniques allow one to serve appropriately sized images for the device a site user is using. Mobile devices can download a small image, and a desktop machine can download a large version of the same image. Imarc typically uses [lazysizes](https://github.com/aFarkas/lazysizes) on projects, as it provides lazyloading among other features, and allows for cross-browser compatibility. It can be included as a [node package](https://www.npmjs.com/package/lazysizes).
 
 ## Iconography
 
+### SVG-based icons
+
+[Tabler](https://tablericons.com) and [Feather](https://feathericons.com) are two popular SVG icon sets.
+
+#### Implementation tips
+
+TBD.
+
 ### Font Awesome
 
-[Font Awesome](https://fontawesome.com) is an iconography framework used on many Imarc projects.
+[Font Awesome](https://fontawesome.com) is an iconography framework used on many Imarc projects. Note that as of 2021, we prefer using SVG icon sets. That said, Imarc owns a <a href="https://fontawesome.com/pro">professional license</a>. You can find sign-in credentials in our [LastPass](https://lastpass.com).
 
-Imarc owns a <a href="https://fontawesome.com/pro">professional license</a> and you can find sign-in credentials in [LastPass](https://lastpass.com).
-
-#### Font Awesome Implementation
+#### Font Awesome implementation
 There are a couple ways to get Font Awesome going on your project. You can manually include supplied
-source files or leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private npm
-package</a>.
+source files or leverage a <a href="https://fontawesome.com/how-to-use/use-with-node-js">private node
+package (npm)</a>.
 
 **Imarc-recommended implementation**
-* Use a [Font Awesome kit](https://fontawesome.com/kits)
-* Implementation via NPM is fine, but using the professional tier can require all team members to possess the same `.npmrc` file in order to pull down gated assets from NPM properly. See a lead engineer for help.
+* Implementation via npm is fine, but note that using the professional tier requires all team members to possess the same `.npmrc` file in order to pull down gated assets from npm. See a lead front-end engineer for help.
+* **Deprecated**: use a [Font Awesome kit](https://fontawesome.com/kits) 
 
-<i class="far fa-hand-point-right"></i> <a href="http://imarc.github.io/boilerplate/#Iconography">Visit Boilerplate</a> to see Font Awesome v5 in the wild.
-
-### SVG icons
-
-Tabler and Feather are two popular SVG icon sets.
-
-** Content to be written here regarding best practices, etc**.
-
-## Browser Support
+## Browser support
 
 The following **philosophy** is paraphrased from our standard proposal language.
 
@@ -546,7 +574,7 @@ experience imposes false limitations on users with modern, more capable browsers
 * We do not require an *identical experience*. Instead we strive for an *optimal experience* for
 each user’s environment.
 
-### Desktop Browser Support
+### Desktop
 
 <div class="table table--responsive">
     <table>
@@ -578,8 +606,7 @@ each user’s environment.
 
 _** We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the project (IE11, for example)._
 
-
-### Mobile Browser Support
+### Mobile
 
 <div class="table table--responsive">
     <table>
@@ -630,6 +657,7 @@ Use this checklist below to ensure an acceptable level of accessibility.
 * Users can control galleries and modal windows using a keyboard.
 
 ### Navigations
+
 These points are taken from [W3C’s Accessible Menus Tutorial](https://www.w3.org/WAI/tutorials/menus) .
 * Use informed markup. Use informed labeling for the navigation itself along with current nav items. Labeling could be done via visually-hidden text or WAI-ARIA labels.
 * Navigations should have proper states (active, hover, focus, current, visited).
@@ -649,7 +677,7 @@ These points are taken from [W3C’s Accessible Menus Tutorial](https://www.w3.o
 * Color combinations should be in compliance with [WCAG 2.0 minimum contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Use a <a href="https://contrast-grid.eightshapes.com">color contrast checker</a> to ensure your ratio meets the standard.
 * Important information should not be conveyed with color alone. Use other visual identifiers like font-weight, sizing, shapes, special characters.
 
-## Mobile Optimization
+## Mobile optimization
 
 ### Viewport
 On mobile-specific sites, set the viewport to the width of the device:
