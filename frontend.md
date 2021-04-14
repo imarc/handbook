@@ -26,7 +26,7 @@ Popular code editors used at Imarc include: [Visual Studio Code](https://code.vi
 
 ### Code linting
 
-Code linting is automatic code-checking that reveals errors and/or stylistic issues. It helps maintain uniform code standards. Two popular linting tools we leverage are [ESLint](https://eslint.org/) for JavaScript and [Stylelint](https://stylelint.io/) for CSS. These are often integrated via node packages, allowing an engineer lint code via an npm script. However, dedicated code editor extensions/plugins can enhance linting even further. 
+Code linting is automatic code-checking that reveals errors and/or stylistic issues. It helps maintain uniform code standards. Two popular linting tools we leverage are [ESLint](https://eslint.org/) for JavaScript and [Stylelint](https://stylelint.io/) for CSS. These are often integrated via node packages, allowing an engineer to lint code via an npm script. However, dedicated code editor extensions/plugins can enhance linting even further with features such as real-time feedback. 
 
 #### ESLint
 
@@ -46,7 +46,7 @@ Code linting is automatic code-checking that reveals errors and/or stylistic iss
 
 #### Misc
 
-Other often-used extensions include: [IntelliSense](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion), [liximomo sftp](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp) for Visual Studio Code, [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), [Twig Language 2](https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2), [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag), [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+Other often-used extensions include: [IntelliSense](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion), [liximomo sftp](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp), [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), [Twig Language 2](https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2), [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag), [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 
 ## Doctype and metadata
 
@@ -60,17 +60,17 @@ Use a proper [doctype](https://developer.mozilla.org/en-US/docs/Glossary/Doctype
 #### Titles
 
 Titles should contain descriptive information that concisely describes the current
-page. Titles appear on search engine result pages and are weighted in Search Engine Optimization (SEO), but do not "keyword-stuff" titles. An example of a well-written title for a fictional Imarc blog post might be:
+page. Titles appear on search engine result pages (SERPs) and are weighted in Search Engine Optimization (SEO), but do not "keyword-stuff" titles. An example of a well-written title for a fictional Imarc blog post might be:
 
-	<title>Using flexbox to lay out a Leadership design | Imarc: Boston-based Web Agency</title>
+	<title>Use flexbox to lay out a design | Imarc: Boston Web Agency</title>
 
 Note the `|` delimiter. This is a common pattern Imarc uses to append general website information if space allows (keep titles under 60 characters).
 
 #### Description
 
-Meta descriptions display under titles on search engine result pages (SERPs). A quality meta description can help in higher clickthroughs. Ideally, all pages include a unique meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Keep them under 160 characters.
+Meta descriptions appear under titles on SERPs. A quality meta description can help foster higher clickthroughs. Ideally, all pages include a unique meta description – a concise, human-readable description of that page’s contents. Do not duplicate meta descriptions from other pages. Keep them under 160 characters.
 
-	<meta name="description" content="Our blog features the latest in web design, development, user experience and marketing." />
+	<meta name="description" content="Learning how to size columns of content with flexbox's flex-basis property help a lot when laying out a web page design." />
 
 If no meta description exists, Google will create its own from on-page content.
 
@@ -108,7 +108,7 @@ Use real UTF-8 characters instead of HTML entities. For example, use `»`, inste
 
 #### Viewport
 
-Ensure a device’s viewport is set to device-width, which is the width of the screen in CSS pixels at a scale of 100%:
+Ensure a device’s viewport is set to `device-width`, which is the width of the screen in CSS pixels at a scale of 100%:
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -130,7 +130,7 @@ In this case, use a percentage on `<html>`’s `font-size` property. In the case
         font-size: 125%; // (125/100) * 16px = 20px
     }
 
-Your project’s root font-size would now be 20px. 1.5rem would be 30px.
+Your project’s `:root` font-size would now be 20px. 1.5rem would be 30px.
 
 #### Stacks
 
@@ -305,7 +305,7 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 
 #### Compression
 
-Whenever you export images, use image compression software. Compression reduces file size which in terms helps site performance. [ImageOptim](https://imageoptim.com/) is a client that is used by much of the Imarc team.
+Whenever you export images, use image compression software. Compression reduces file size which in turn helps site performance. [ImageOptim](https://imageoptim.com/) is a client used at Imarc.
 
 ### SVG
 
