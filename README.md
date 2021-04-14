@@ -26,12 +26,12 @@ HTML classes are formed following [BEM's Two Dashes Style](https://en.bem.info/m
 
 ### Icons
 
-We use [Tabler SVG Icons](https://tablericons.com/) for department icons. We include them in templates from the `_includes` folder.
+We use [Tabler SVG Icons](https://tablericons.com/) for department icons. They are include from the `_includes` folder.
 
 ### Images
 
-Lazysizes content to be added.
+[lazysizes](https://github.com/aFarkas/lazysizes) is used for lazy loading and responsive images.
 
 ## Deployment
 
-You can deploy Handbook by pushing to the `gh-pages` branch. Handbook uses [GitHub Pages](https://pages.github.com).
+You can deploy Handbook by pushing to the `gh-pages` branch. Remember to run `npm run prod` before doing so. Handbook uses [GitHub Pages](https://pages.github.com) for hosting.

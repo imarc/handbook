@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mix",
-    "watch": "mix watch"
+    "watch": "mix watch",
+    "prod": "mix --production"
   },
   "repository": {
     "type": "git",
