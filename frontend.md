@@ -12,7 +12,7 @@ Our [Boilerplate Components](https://github.com/imarc/boilerplate-components/tre
 
 Front-end dependencies are managed by [npm](https://www.npmjs.com). Learn more by reading their [getting started documentation](https://docs.npmjs.com/). By default, npm installs all dependencies into a `node_modules` directory. See installed packages and relevant scripts in a project’s root-level `package.json` file.
 
-* Project and library code should never have `node_modules` committed.
+* **Project** and **library** code SHOULD NEVER commit `node_modules`.
 * **Project** code SHOULD commit the `package-lock.json` file.
 * **Library** code SHOULD NOT commit the `package-lock.json` file.
 
@@ -30,19 +30,23 @@ Code linting is automatic code-checking that reveals errors and/or stylistic iss
 
 #### ESLint
 
-TBD.
+<div class="fpo">WORK IN PROGRESS</div>
 
 #### Stylelint
 
-TBD.
+<div class="fpo">WORK IN PROGRESS</div>
 
-### Must-have extensions
+### Popular extensions
 
 #### Emmet
 
 [Emmet](https://www.emmet.io/) helps engineers write HTML faster via shorthand. Visual Studio Code includes Emmet by default. If your code editor does not have Emmet, get it and use it. Learn to use Emmet via its [documentation](https://docs.emmet.io/).
 
 <img alt="" class="lazyload" data-src="/img/gif-emmet.gif">
+
+#### Misc
+
+Other often-used extensions include: [IntelliSense](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion), [liximomo sftp](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp) for Visual Studio Code, [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), [Twig Language 2](https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2), [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag), [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 
 ## Doctype and metadata
 
@@ -87,13 +91,6 @@ different sizes for different devices, but using a single high
 resolution touch icon is the easiest way to ensure the highest
 quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
 
-#### Safari pinned icon
-
-With Safari 9 (OSX El Capitan), Apple has introduced the ability to control the icon on a pinned tab.
-Use a 256x256 SVG file for this – setting your icon to black. To set a color for the icon, use the color attribute.
-
-    <link rel="mask-icon" href="/img/icons/pinned-icon.svg" color="#990000">
-
 #### Character encoding
 
 Use UTF-8 as the character encoding. Set your editor to use UTF-8 for
@@ -108,6 +105,14 @@ front-end HTML and backend databases, use real UTF-8 characters instead of HTML
 entities.
 
 Use real UTF-8 characters instead of HTML entities. For example, use `»`, instead of typing out its `&raquo;` entity. The only characters that need encoding are `&amp;`, `&lt;`, and `&gt;`, `&quot;`. This also applies to CSS. Doing something like `content: '»'` is better than `content: '\bb'.
+
+#### Viewport
+
+Ensure a device’s viewport is set to device-width, which is the width of the screen in CSS pixels at a scale of 100%:
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+`initial-scale=1` ensures smartphones retain the same zoom level during orientation change (e.g. portrait to landscape).
 
 ## Typography
 
@@ -159,19 +164,27 @@ Imarc often uses web font services such as [Google Fonts](https://fonts.google.c
 
 While not requested often, some websites require a print stylesheet. Imarc has a [sane starting point for print styles](https://github.com/imarc/boilerplate-components/blob/master/resources/styles/base.scss#L295-L334).
 
-## CSS
+## HTML / CSS
 
-Consistent coding style for CSS is vital as multiple people collaborate on site buildouts and maintenance.
+Consistent coding style for HTML / CSS is vital as multiple engineers collaborate on site buildouts and maintenance.
 
-### Class naming (ABEM)
+### Layout
 
-Many Imarc projects use an offshoot of Block Element Modifier called [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/). It is influenced from [Atomic Design](https://atomicdesign.bradfrost.com/) principals. This creates a methodology for HTML class naming and Sass directory structure.
+Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) or [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for page layouts. Do not use floats or tables.
+
+### Containers
+
+All sites use some form of container system – elements with a max-width (often 1200px) that are center-aligned in the browser, enclosing site content. These elements should not chain other elements on them. Nor should they be given any layout properties such as `display: flex`.
+
+### Class naming
+
+Many Imarc projects use an offshoot of [Block Element Modifier](https://en.bem.info/methodology/quick-start/) called [ABEM](https://css-tricks.com/abem-useful-adaptation-bem/). It is influenced from [Atomic Design](https://atomicdesign.bradfrost.com/) principals. This creates a methodology for HTML class naming and Sass directory structure.
 
 Our preferred class naming format is:
 
     blockName__elementName -modifierName
 
-#### Real-world example
+#### Example
 
 **HTML**
 
@@ -214,11 +227,6 @@ Note how `button` and `hero__button` are chained. This is known as a [mix](https
 
 Check out the [Sass folder structure description on Imarc’s boilerplate-components](https://imarc.github.io/boilerplate-components/pattern-library/).
 
-#### Layout
-
-Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) or [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for page layouts. Do not use floats or tables.
-
-
 #### General CSS Formatting
 
     .hero {
@@ -227,10 +235,16 @@ Use [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flex
         padding: 2rem;
     }
 
+    .torso {
+        background-color: #DDD;
+        color: #111;
+    }
+
 - Selector(s) lives on its own line(s) followed by the opening brace
 - Each declaration lives on its own indented line
 - Each property has a space between the colon and value ends with a semi-colon
 - The closing brace should be on its own line at the same indentation as the selector
+- New blocks have a space between them
 
 #### Use Only Class Selectors
 
@@ -240,132 +254,23 @@ Style to class selectors only and not IDs or selectors
 
 The exceptions to this rule: anchor links, form label IDs, JavaScript hook requirements.
 
+### Breakpoints
+
+Imarc projects follow a mobile-first methodology. Your media queries should be `min-width` based and not `max-width` based.
+
+Limit your breakpoints to a reasonable amount (3-4).
+
 ## Forms
 
 All elements inside a `form` element should be placed within a `fieldset` element. A `fieldset` is used to group related form elements. Use a heading tag instead of the `legend` element to title fieldsets.
 
 The `action` attribute is required on all forms, and should have a blank value by default.
 
-### Form Element Markup
+### Markup example
 
-Form inputs and labels are grouped together within a div. The containing div is named after the form input type.  For example, a `text` input is contained inside `<div class="text">` and a `file` input is contained inside `<div class="file">`.
+`<input>` elements should always be associated with `<label>` elements via `id` and `for` attributes, respectively.
 
-Input elements should have an associated label element.
-
-Form element markup
-
-    <form class="form" method="post">
-        <fieldset class="form__fieldset">
-            <p>
-                Through out the fields, you will also see <code>span.help</code>
-                elements. These are used for help text relevant to fields.
-            </p>
-            <div class="text">
-                <label for="sample_form-text">Text <span class="required">*</span></label>
-                <input id="sample_form-text" type="text" />
-                <span class="help">only numbers and letters</span>
-            </div>
-            <div class="password">
-                <label for="sample_form-password">Password <span class="required">*</span></label>
-                <input id="sample_form-password" type="password" />
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <h4>
-                Radios and Checkboxes
-            </h4>
-            <div class="radios group">
-                <label>Choose one</label>
-                <label class="radio">
-                    <input id="sample_form-radio" type="radio" />
-                radio
-                </label>
-                <label class="radio">
-                    <input id="sample_form-radio_1" type="radio" />
-                    radio 1
-                </label>
-            </div>
-            <div class="checkboxes group">
-                <label>Check all that apply</label>
-                <label class="checkbox">
-                    <input id="sample_form-checkbox" type="checkbox" />
-                    checkbox
-                </label>
-                    <label class="checkbox">
-                    <input id="sample_form-checkbox_1" type="checkbox" />
-                    checkbox 1
-                </label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <h4>
-                Selects
-            </h4>
-            <div class="select">
-                 <label for="sample_form-select">Select one</label>
-                 <select id="sample_form-select">
-                     <optgroup label="group">
-                         <option value="option">Option</option>
-                         <option value="option 1">option 1</option>
-                         <option value="option 2" selected="selected">option 2</option>
-                     </optgroup>
-                     <optgroup label="group 1">
-                         <option value="option 3">option 3</option>
-                         <option value="option 4">option 4</option>
-                     </optgroup>
-                 </select>
-            </div>
-            <div class="select multiple">
-                <label for="sample_form-select_multiple">Select multiple</label>
-                <select id="sample_form-select_multiple" multiple="multiple" size="2">
-                    <optgroup label="group">
-                        <option value="option">Option</option>
-                        <option value="option 1">option 1</option>
-                        <option value="option 2" selected="selected">option 2</option>
-                    </optgroup>
-                    <optgroup label="group 1">
-                        <option value="option 3">option 3</option>
-                        <option value="option 4">option 4</option>
-                    </optgroup>
-                </select>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <h4>
-                Textareas and Files
-            </h4>
-            <div class="textarea">
-                <label for="sample_form-textarea">Textarea</label>
-                <textarea id="sample_form-textarea"></textarea>
-            </div>
-            <div class="file">
-                <label for="sample_form-file">Upload File</label>
-                <input type="file" id="sample_form-file" />
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <h3>
-                Buttons
-            </h3>
-            <div class="submit">
-                <input type="submit" value="Submit" />
-            </div>
-            <div class="button">
-                <input type="button" value="Input Button" />
-            </div>
-            <div class="reset">
-                <input type="reset" value="Reset" />
-            </div>
-            <div class="button">
-                <button>Button Element</button>
-            </div>
-        </fieldset>
-    </form>
-
+<div class="fpo">WORK IN PROGRESS</div>
 
 ### Messaging
 
@@ -386,79 +291,17 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
         </div>
     </div>
 
-## Tables
-
-Use tables to display tabular data such as a pricing or feature chart. Do not use tables for page layout. Make sure your tables do not only use rows and cells – take advantage of other elements to increase accessibility.
-
-### Captions, Headers and Scope
-
-`caption` help describe tables are are optional.
-
-Use the table headers element `th` to indicate a header. Passing a `scope` attribute  and value of `col` or `row` gives non-visual user agents specific guidance on where its associated data lives. This is important when there are headers at the top of columns and at the beginning of each row.
-
-    <table>
-        <caption>
-            ACME, Inc Product Line Pricing Tiers
-        </caption>
-        <tr>
-            <th scope="col">
-                Bronze Tier
-            </th>
-            <th scope="col">
-                Silver Tier
-            </th>
-        </tr>
-        <tr>
-            <td>
-                2 hours of support
-            </td>
-            <td>
-                5 hours of support
-            </td>
-        </tr>
-    </table>
-
-### Column Groups
-
-While not used for accessibility, use `<colgroup>` and `<col>` elements to more easily style table columns.
-
-    <table>
-        <colgroup>
-            <col class="bronze" />
-            <col class="silver" />
-            <col class="gold" />
-        </colgroup>
-        <thead>
-            <tr>
-                <th>
-                    Bronze Tier
-                </th>
-                <th>
-                    Silver Tier
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    2 hours of support
-                </td>
-                <td>
-                    5 hours of support
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
 ## Media
 
 ### Images
 
-JPG format is ideal for photographic-like images. (e.g. images of people, places, things)
+**JPG format** is ideal for photographic-like images. (e.g. images of people, places, things)
 
-PNG format is ideal for flat-color graphics and/or images that require transparency.
+**PNG format** is ideal for flat-color graphics and/or images that require transparency.
 
-WebP is TBD.
+**WebP**
+
+<div class="fpo">WORK IN PROGRESS</div>
 
 #### Compression
 
@@ -476,7 +319,7 @@ Inline SVGs can block rendering and will not cache. As a result, using an `.svg`
 
 ##### Exporting from design programs
 
-TBD.
+<div class="fpo">WORK IN PROGRESS</div>
 
 ### Video
 
@@ -505,7 +348,7 @@ Tip: with a preprocesser like Sass, you don’t need `calc()`, and `padding-top:
 
 #### Background Video
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* area. Create and export `.mp4` and `.webm` video files. Imarc often a video optimization tool like <a href="https://handbrake.fr/">Handbrake</a> to decrease file size as much as possible. Here is some HTML/Sass for implementing a responsive background video.
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* area. Create and export `.mp4` and `.webm` video files. Imarc often uses a video optimization tool like <a href="https://handbrake.fr/">Handbrake</a> to achieve smallest file size. Here is some HTML/Sass for implementing a responsive background video. Note the `muted` attribute on the `<video>` element.
 
     <div class="hero">
         <video class="hero__video" autoplay loop="loop" muted poster="video-placeholder.jpg">
@@ -534,10 +377,6 @@ Sometimes, a video will auto-play (without audio) behind HTML content. This is c
 
 `calc(9 / 16 * 100%)` would output a `padding-top: 56.25%`. This matches the popular 16:9 aspect ratio. To use a different aspect ratio, `calc(height / width * 100%)` will output the proper percentage.
 
-### Responsive images
-
-Responsive image techniques allow one to serve appropriately sized images for the device a site user is using. Mobile devices can download a small image, and a desktop machine can download a large version of the same image. Imarc typically uses [lazysizes](https://github.com/aFarkas/lazysizes) on projects, as it provides lazyloading among other features, and allows for cross-browser compatibility. It can be included as a [node package](https://www.npmjs.com/package/lazysizes).
-
 ## Iconography
 
 ### SVG-based icons
@@ -546,7 +385,7 @@ Responsive image techniques allow one to serve appropriately sized images for th
 
 #### Implementation tips
 
-TBD.
+<div class="fpo">WORK IN PROGRESS</div>
 
 ### Font Awesome
 
@@ -560,6 +399,28 @@ package (npm)</a>.
 **Imarc-recommended implementation**
 * Implementation via npm is fine, but note that using the professional tier requires all team members to possess the same `.npmrc` file in order to pull down gated assets from npm. See a lead front-end engineer for help.
 * **Deprecated**: use a [Font Awesome kit](https://fontawesome.com/kits) 
+
+## Animation
+
+Imarc often uses [GreenSock](https://greensock.com/) or [animejs](https://animejs.com/) for site animations. animejs is often seen as a simpler solution.
+
+<div class="fpo">WORK IN PROGRESS</div>
+
+## Performance
+
+Having a fast website is crucial. If you have access to the Imarc wiki, see our existing [Frontend Performance](https://wiki.imarc.com/Frontend_Performance) article.
+
+### Responsive images
+
+Responsive image techniques allow one to serve appropriately sized images for the device a site user is using. Mobile devices can download a small image, and a desktop machine can download a large version of the same image. Imarc typically uses [lazysizes](https://github.com/aFarkas/lazysizes) on projects, as it provides lazyloading among other features, and allows for cross-browser compatibility. It can be included as a [node package](https://www.npmjs.com/package/lazysizes).
+
+### Web inspector
+
+<div class="fpo">WORK IN PROGRESS</div>
+
+### PageSpeed Insights / Core web vitals
+
+<div class="fpo">WORK IN PROGRESS</div>
 
 ## Browser support
 
@@ -584,12 +445,14 @@ each user’s environment.
             <th>Windows</th>
         </tr>
         <tr>
-            <td>Chrome (stable)</td>
-            <td class="supported" colspan="2">yes</td>
+            <td>Chrome (current version)</td>
+            <td class="supported">yes</td>
+            <td class="supported">yes</td>
         </tr>
         <tr>
-            <td>Firefox (stable)</td>
-            <td class="supported" colspan="2">yes</td>
+            <td>Firefox (current version)</td>
+            <td class="supported">yes</td>
+            <td class="supported">yes</td>
         </tr>
         <tr>
             <td>Microsoft Edge (stable)</td>
@@ -597,33 +460,34 @@ each user’s environment.
             <td class="supported">yes</td>
         </tr>
         <tr>
-            <td>Safari 11</td>
+            <td>Safari (current version)</td>
             <td class="supported">yes</td>
             <td></td>
         </tr>
     </table>
 </div>
 
-_** We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the project (IE11, for example)._
+_** We recognize that some browsers are incapable of properly rendering standards compliant code. We do not code to support these browsers unless explicitly requested and specified for the project (Internet Explorer 11 from Microsoft is one example)_
 
 ### Mobile
 
 <div class="table table--responsive">
     <table>
         <tr>
-            <th>Platform/OS</th>
             <th>Browser</th>
-            <th>Target Devices</th>
+            <th>Platform/OS</th>
         </tr>
         <tr>
-            <td>iOS 10</td>
-            <td>Safari 10</td>
-            <td>4"+ screens, iPads</td>
+            <td>Chrome (current release)</td>
+            <td>Android</td>
         </tr>
         <tr>
-            <td>Android 6.0–current</td>
-            <td>Chrome</td>
-            <td>4"+ handsets, 7–10" tablets</td>
+            <td>Chrome (current release)</td>
+            <td>iOS</td>
+        </tr>
+        <tr>
+            <td>Safari (current release)</td>
+            <td>iOS</td>
         </tr>
     </table>
 </div>
@@ -633,7 +497,7 @@ support will be specified in the proposal and strategy documents.
 
 Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
-## Analytics, Marketing, and Plug-ins
+## Analytics, marketing, and plug-ins
 
 Many clients use external scripts such as Google Analytics, HubSpot, Marketo. We should stop those scripts gathering data in development or staging environments.
 
@@ -663,12 +527,12 @@ These points are taken from [W3C’s Accessible Menus Tutorial](https://www.w3.o
 * Navigations should have proper states (active, hover, focus, current, visited).
 * Dropdown navigations should be mouse/touch/keyboard operable and should leverage WAI-ARIA markup.
 
-### Web Forms
+### Web forms
 
 * Inputs always have associated labels
 * Inputs should use an associated type attribute (e.g. `search`, `tel`, `email`, etc)
-* Make sure required fields are visually indicated as such (e.g. an asterisk <strong>*</strong>)
-* All form fields can be operated using a keyboard, with apparent focus styles.
+* Make sure required fields are visually indicated as such (e.g. with an asterisk <strong>*</strong>)
+* All forms are keyboard-operable, with obvious visual `:focus` styles.
 * Validation messages show all errors at once instead of progressively showing more errors
 * Validation messages use same field names as form and in the same order
 
@@ -676,12 +540,3 @@ These points are taken from [W3C’s Accessible Menus Tutorial](https://www.w3.o
 
 * Color combinations should be in compliance with [WCAG 2.0 minimum contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Use a <a href="https://contrast-grid.eightshapes.com">color contrast checker</a> to ensure your ratio meets the standard.
 * Important information should not be conveyed with color alone. Use other visual identifiers like font-weight, sizing, shapes, special characters.
-
-## Mobile optimization
-
-### Viewport
-On mobile-specific sites, set the viewport to the width of the device:
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-`initial-scale=1` ensures smartphones retain the same zoom level during orientation change (e.g. portrait to landscape).

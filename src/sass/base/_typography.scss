@@ -20,7 +20,7 @@ a {
     var(--fluid-type-max, 1.777rem));
     font-weight: $headings-font-weight;
     line-height: 1.15;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     margin-top: 0;
 }
 
@@ -53,8 +53,8 @@ h4 {
 }
 
 h5 {
-    --fluid-type-min: 1.075rem;
-    --fluid-type-max: 1.075rem;
+    --fluid-type-min: 1.175rem;
+    --fluid-type-max: 1.175rem;
 }
 
 /* stylelint-disable selector-no-qualifying-type */
