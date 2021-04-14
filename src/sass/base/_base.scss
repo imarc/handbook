@@ -115,7 +115,7 @@ kbd {
 }
 
 .fpo {
-    background-color: $limegreen-200;
+    background-color: var(--alert-background-color, $alert-background-color);
     display: inline-block;
     padding: 0.0625rem 0.25rem;
 }
