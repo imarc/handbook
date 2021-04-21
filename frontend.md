@@ -299,27 +299,32 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 
 **PNG format** is ideal for flat-color graphics and/or images that require transparency.
 
-**WebP**
+**WebP** can replace jpg/png formats in modern browsers - currently supprted in latest releases of Chrome, Firefox and Edge.
 
-<div class="fpo">WORK IN PROGRESS</div>
+##### Exporting from design programs
+
+To help with performance and keep file sizes down, be sure to optimize images for the web. You should do this when exporting or saving images for your build. Saving out as 1.5x works well for retina screens. Once your images are exported, you'll want to further compress them using a tool like ImageOptim, mentioned below.
 
 #### Compression
 
-Whenever you export images, use image compression software. Compression reduces file size which in turn helps site performance. [ImageOptim](https://imageoptim.com/) is a client used at Imarc.
+Whenever you export images, use image compression software. Compression reduces file size which in turn helps site performance. [ImageOptim](https://imageoptim.com/) is a client used at Imarc. This is done after exporting from a design program and before uploading to the site. 
+
+#### Transforms
+
+Some Content Management Systems, like Craft CMS, allow you to set transforms on images managed via the CMS that dynamically scale and/or crop the image to keep file size down and make sure dimensions align with what's expected on the front-end. You can determine the appropriate size by measuring in the original design, or assessing the layout and space where the image will appear on the front-end. For instance a full-width background image might need to be set to fit to 1600px wide, while a resource listing image might be cropped to 300px wide x 250px tall.
 
 ### SVG
 
 SVG (Scalable Vector Graphics) is an XML-based image format. It allows for infinite scaling without sacrificing image quality. It is often used for logos, icons, and illustrative graphics.
 
-#### SVG implementation tips
-
 ##### Inline vs. src
 
 Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or stroke/fill variations, inlining an SVG is acceptable. To help with document readability, it's preferable to "include" the SVG via a PHP or Twig include statement.
 
-##### Exporting from design programs
+#### SVG Implementation Tips
 
-<div class="fpo">WORK IN PROGRESS</div>
+When saving an SVG to use inline, the most important property to update is "CSS Properties" - you'll want to select "Style Attributes" as this option inserts all of the CSS inline, instead of adding additional classes and styles which bloats the SVG code. Another hot tip is to remove the "height" and "width" properties and control these via CSS so you get more control over the size and scalability. 
+
 
 ### Video
 
@@ -370,8 +375,6 @@ Sometimes, a video will auto-play (without audio) behind HTML content. This is c
             content: "";
             display: block;
             padding-top: calc(9 / 16 * 100%); 
-            16 width
-            9 height
         }
     }
 
