@@ -2,23 +2,31 @@
 
 https://handbook.imarc.com
 
-Imarc Handbook documents coding best practices. All pull requests should be done against the *gh-pages* branch.
+Imarc Handbook documents coding best practices. All pull requests should be made against the *gh-pages* branch.
 
 ## Setup
 
-If you don’t have [Bundler](https://rubygems.org/gems/bundler), install it via `gem install bundler` (you only need to do this once).
+Handbook uses [Jekyll](https://jekyllrb.com), a static-site generator written in Ruby. Your machine likely already has Ruby, but you can install it if needed. You might [use Homebrew](https://formulae.brew.sh/formula/ruby), for example.
 
-Run `bundle install`
+### Bundler
+
+If you don’t have [Bundler](https://rubygems.org/gems/bundler), install it via `gem install bundler` (you only need to do this once). Then run `bundle install`. Note: you might need to run these commands as `sudo`
+
+### Node packages
+
+Run `npm i` to install node packages.
 
 ## Development
 
-Work locally before committing any code. Handbook can be viewed locally using [Jekyll](https://jekyllrb.com).
+### Serve Handbook in browser
 
-Serve Handbook locally `bundle exec jekyll serve`
+`bundle exec jekyll serve`
 
-Run `npm i` to install packages (first time only) and `npm run watch` to compile Sass to CSS.
+### Watch Sass and JavaScript
 
-### BEM
+`npm run watch`
+
+### HTML class naming
 
 HTML classes are formed following [BEM's Two Dashes Style](https://en.bem.info/methodology/naming-convention/#two-dashes-style)
 
