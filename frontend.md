@@ -299,7 +299,7 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 
 **PNG format** is ideal for flat-color graphics and/or images that require transparency.
 
-**WebP** can replace jpg/png formats in modern browsers - currently supprted in latest releases of Chrome, Firefox and Edge.
+**WebP** can replace jpg/png formats in modern browsers - currently supported in latest releases of Chrome, Firefox and Edge (18+).
 
 ##### Exporting from design programs
 
