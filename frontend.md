@@ -262,9 +262,15 @@ Limit your breakpoints to a reasonable amount (3-4).
 
 ## Forms
 
-All elements inside a `form` element should be placed within a `fieldset` element. A `fieldset` is used to group related form elements. Use a heading tag instead of the `legend` element to title fieldsets.
+The action attribute is required on all forms, and should have a blank value by default.
 
-The `action` attribute is required on all forms, and should have a blank value by default.
+    <form action=""> … </form>
+
+### Mobile
+
+To prevent "zooming" an interface when tapping into an `<input>` on mobile, form `<input>`s should have a minimum `font-size` of 16px. Do not set a smaller `font-size` than 16px.
+
+<div class="fpo">WORK IN PROGRESS</div>
 
 ### Markup example
 
