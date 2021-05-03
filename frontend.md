@@ -268,7 +268,7 @@ The action attribute is required on all forms, and should have a blank value by 
 
 ### Mobile
 
-To prevent "zooming" an interface when tapping into an `<input>` on mobile, form `<input>`s should have a minimum `font-size` of 16px. Do not set a smaller `font-size` than 16px.
+To prevent "zooming" an interface when tapping into an `<input>` on an iOS mobile device, form `<input>`s should have a minimum `font-size` of 16px. Do not set a smaller `font-size` than 16px.
 
 <div class="fpo">WORK IN PROGRESS</div>
 
