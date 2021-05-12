@@ -818,6 +818,36 @@ p {
   width: 100%;
 }
 
+.chapter__body {
+  padding-bottom: 1.25rem;
+  padding-right: 1.25rem;
+}
+.chapter__bodyIn {
+  border: 0.25rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #ee7162, #f9d253);
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+}
+.chapter__media .icon {
+  height: 2.5rem;
+  stroke-width: 0.09375rem;
+  width: 2.5rem;
+}
+.chapter__key {
+  align-self: flex-end;
+  transform: translateX(2.5rem) translateY(2.5rem);
+}
+.chapter__label {
+  font-size: 1.5rem;
+}
+.chapter__figure {
+  font-size: 4.75rem;
+  font-weight: 800;
+  line-height: 0.75;
+}
+
 /**
  * layouts > container
  */
@@ -976,16 +1006,20 @@ p {
  * layouts > entry
  */
 .entry__item {
+  display: block;
   margin-bottom: 2rem;
 }
+.entry__item:hover {
+  box-shadow: inset 0 0 0 10px red;
+}
 .entry__body {
-  background-color: var(--entry-background-color, #fff);
   display: flex;
   padding: 2rem;
 }
 .entry__aside {
-  margin-right: 3rem;
-  width: 160px;
+  flex-shrink: 0;
+  margin-right: 6rem;
+  width: 150px;
 }
 .entry__main {
   flex-grow: 1;
@@ -995,16 +1029,8 @@ p {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-.entry__media {
-  margin-bottom: 0.75rem;
-}
 .entry__copy {
   margin-bottom: 1.5rem;
-}
-.entry__media .icon {
-  height: 2rem;
-  stroke-width: 0.09375rem;
-  width: 2rem;
 }
 
 /**

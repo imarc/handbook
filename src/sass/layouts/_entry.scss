@@ -4,18 +4,24 @@
 
 .entry {
     &__item {
+        display: block;
         margin-bottom: $entry-margin-y-sm;
+
+        &:hover {
+            box-shadow: inset 0 0 0 10px red;
+        }
     }
 
     &__body {
-        background-color: var(--entry-background-color, $entry-background-color);
+        // background-color: var(--entry-background-color, $entry-background-color);
         display: flex;
         padding: 2rem;
     }
 
     &__aside {
-        margin-right: $spacer * 3;
-        width: 160px;
+        flex-shrink: 0;
+        margin-right: $spacer * 6;
+        width: 150px;
     }
 
     &__main {
@@ -28,17 +34,7 @@
         margin-bottom: $spacer * 1.5;
     }
 
-    &__media {
-        margin-bottom: 0.75rem;
-    }
-
     &__copy {
         margin-bottom: $spacer * 1.5;
-    }
-
-    &__media .icon {
-        height: 2rem;
-        stroke-width: $entry-icon-stroke-width;
-        width: 2rem;
     }
 }
