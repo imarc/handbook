@@ -32,6 +32,10 @@ HTML classes are formed following [BEM's Two Dashes Style](https://en.bem.info/m
 
 ``block-name__elem-name--mod-name``
 
+### Fonts
+
+We use the Gibson typeface via TypeKit (Adobe Fonts).
+
 ### Icons
 
 We use [Tabler SVG Icons](https://tablericons.com/) for department icons. They are include from the `_includes` folder.

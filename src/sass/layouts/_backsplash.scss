@@ -1,0 +1,20 @@
+/**
+ * layouts > backsplash
+ */
+
+.backsplash {
+    &::before {
+        background-image: url('../img/culture-shed.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        content: '';
+        display: block;
+        filter: grayscale(1);
+        height: 100%;
+        opacity: 0.0625;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+

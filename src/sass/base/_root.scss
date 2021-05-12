@@ -18,12 +18,15 @@
     --entry-background-color: #{$entry-background-color};
     --aside-background-color: #{$aside-background-color};
     --border-color: #{$border-color};
-    --color-mode-active: #{$color-mode-active-background};
     --base-copy: #{$body-color};
     --base-copy-lighter: #{$gray-700};
 
-    .color-mode__button--light .color-mode__active {
+    .color-mode__button--light .color-mode__background {
         display: block;
+    }
+
+    .color-mode__button--light .color-mode__icon {
+        stroke: color-contrast($color-mode-active-background);
     }
 }
 
@@ -37,11 +40,14 @@
     --entry-background-color: #{$entry-background-color-dark};
     --aside-background-color: #{$aside-background-color-dark};
     --border-color: #{$border-color-dark};
-    --color-mode-active: #{$color-mode-active-background-dark};
     --base-copy: #{$body-color-dark};
     --base-copy-lighter: #{$gray-300};
 
-    .color-mode__button--dark .color-mode__active {
+    .color-mode__button--dark .color-mode__background {
         display: block;
+    }
+
+    .color-mode__button--dark .color-mode__icon {
+        stroke: color-contrast($color-mode-active-background);
     }
 }

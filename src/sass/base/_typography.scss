@@ -96,25 +96,6 @@ p {
     color: var(--base-copy-lighter, $lead-color);
     font-size: 1.25rem;
     font-weight: 300;
-
-    &--ornament {
-        margin-top: 1.25rem;
-        padding-top: 1.25rem;
-        position: relative;
-
-        &::before {
-            background-color: currentColor;
-            bottom: auto;
-            content: '';
-            display: block;
-            height: 0.0625rem;
-            left: 0;
-            position: absolute;
-            right: auto;
-            top: 0;
-            width: 2rem;
-        }
-    }
 }
 
 .meta {

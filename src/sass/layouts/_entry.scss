@@ -3,40 +3,37 @@
  */
 
 .entry {
-    display: grid;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-
-    @include breakpoint(md) {
-        gap: $entry-margin-y-lg;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    @include breakpoint(lg) {
-        padding-bottom: 4rem;
-        padding-top: 4rem;
-    }
-
     &__item {
         margin-bottom: $entry-margin-y-sm;
-
-        @include breakpoint(md) {
-            margin-bottom: 0;
-        }
     }
 
     &__body {
         background-color: var(--entry-background-color, $entry-background-color);
+        display: flex;
         padding: 2rem;
     }
 
+    &__aside {
+        margin-right: $spacer * 3;
+        width: 160px;
+    }
+
+    &__main {
+        flex-grow: 1;
+    }
+
     &__heading {
-        font-size: 1.275rem;
-        margin-bottom: 0.5rem;
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: $spacer * 1.5;
     }
 
     &__media {
         margin-bottom: 0.75rem;
+    }
+
+    &__copy {
+        margin-bottom: $spacer * 1.5;
     }
 
     &__media .icon {

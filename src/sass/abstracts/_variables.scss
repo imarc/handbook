@@ -110,7 +110,7 @@ $body-color-dark: $gray-200;
 $border-color: $salt;
 $border-color-dark: $salt-900;
 
-$base-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$base-font-family: 'canada-type-gibson', 'Gibson', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $base-font-size: 1rem;
 $base-font-weight: 400;
 $base-line-height: 1.5;
@@ -190,20 +190,21 @@ $alert-icon-size: $icon-size;
 $brand-font-size: 2rem;
 $brand-font-weight: 700;
 
-$color-mode-active-background: $olive-200;
-$color-mode-active-background-dark: $indigo-800;
+$color-mode-background: $fire;
+$color-mode-active-background: $white;
 $color-mode-label-font-size: 0.875rem;
 $color-mode-toggle-margin-x: 0.5rem;
 $color-mode-toggle-font-size: 1.5rem;
+$color-mode-icon-color: $white;
 $color-mode-icon-stroke-width: $icon-stroke-width;
 
 $cover-background-color: $ice;
 $cover-background-color-dark: $ice-900;
 
-$entry-background-color: $salt;
-$entry-background-color-dark: $salt-900;
-$entry-margin-y-sm: 2rem;
-$entry-margin-y-lg: 3rem;
+$entry-background-color: $white;
+$entry-background-color-dark: $gray-800;
+$entry-margin-y-sm: $spacer * 2;
+$entry-margin-y-lg: $spacer * 3;
 $entry-icon-stroke-width: 0.09375rem;
 
 $masthead-brand-font-weight: 700;
@@ -230,6 +231,7 @@ $hero-icon-stroke-width: 0.0625rem;
 
 $intro-background-color: $ice;
 $intro-background-color-dark: $ice-900;
+$intro-max-width: 720px;
 
 $aside-background-color: $gray-100;
 $aside-background-color-dark: $gray-800;
