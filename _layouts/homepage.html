@@ -4,6 +4,12 @@
 		{% include _head.html %}
 	</head>
 	<body class="homepage backsplash">
+        <div class="backsplash__shape backsplash__shape--circle">
+            {% include _shape-circle.html %}
+        </div>
+        <div class="backsplash__shape backsplash__shape--water">
+            {% include _shape-water.html %}
+        </div>
         <div class="intro">
             <div class="intro__body">
                 <div class="color-mode intro__color-mode">
@@ -86,7 +92,7 @@
                             <p class="entry__copy">
                                 Discovery and definition
                             </p>
-                            <a class="link link--semibold entry__link" href="strategy">
+                            <a class="link link--icon link--semibold entry__link" href="strategy">
                                 Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -94,6 +100,7 @@
                                     <line x1="15" y1="16" x2="19" y2="12" />
                                     <line x1="15" y1="8" x2="19" y2="12" />
                                 </svg>
+
                             </a>
                         </div>
                     </div>

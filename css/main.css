@@ -505,14 +505,14 @@ template {
 }
 
 :root[color-mode=light] {
-  --matte: #fff;
+  --matte: #f2efed;
   --hero-background-color: #d3e6ea;
   --cover-background-color: #d3e6ea;
   --footer-background-color: #d3e6ea;
   --intro-background-color: #d3e6ea;
   --alert-background-color: #f0edce;
   --entry-background-color: #fff;
-  --aside-background-color: #f5f6f8;
+  --aside-background-color: #f2efed;
   --border-color: #f2efed;
   --base-copy: #252d2f;
   --base-copy-lighter: #2c333d;
@@ -555,7 +555,7 @@ template {
 
 body {
   transition: background-color 250ms ease-in-out;
-  background-color: var(--matte, #fff);
+  background-color: var(--matte, #f2efed);
   color: var(--base-copy, #252d2f);
   font-family: "canada-type-gibson", "Gibson", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
@@ -663,6 +663,14 @@ kbd kbd {
   padding: 0.0625rem 0.275rem;
 }
 
+.baz {
+  height: 300px;
+  width: 300px;
+  background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+}
+
 /**
  * Base > Typography
  */
@@ -736,13 +744,6 @@ p {
   margin-top: 0;
 }
 
-.brand__logo {
-  --fluid-type-min: 1.875rem;
-  --fluid-type-max: 4.5rem;
-  font-family: "canada-type-gibson", "Gibson", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-}
-
 .lead {
   color: var(--base-copy-lighter, #2c333d);
   font-size: 1.25rem;
@@ -769,6 +770,25 @@ p {
   text-align: center;
 }
 
+/**
+ * base > animations
+ */
+@-webkit-keyframes gradientReverseY {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradientReverseY {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /**
  * layouts > icon
  */
@@ -816,22 +836,77 @@ p {
 }
 
 /**
+ * layouts > brand
+ */
+.brand__logo {
+  --fluid-type-min: 1.875rem;
+  --fluid-type-max: 4.5rem;
+  display: inline-block;
+  font-family: "canada-type-gibson", "Gibson", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: 0.125em;
+  padding-left: 0.175em;
+  padding-right: 0.175em;
+  padding-top: 0.225em;
+  position: relative;
+}
+.brand__logo::before {
+  background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+  bottom: auto;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
+  content: "";
+  height: 1.075em;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: 0;
+  width: calc(1.075em / 1.33);
+  z-index: -1;
+}
+
+/**
  * layouts > backsplash
  */
 .backsplash::before {
-  background-image: url("../img/culture-shed.jpg");
+  background-image: linear-gradient(to bottom, transparent, var(--matte, #f2efed)), url("../img/culture-shed.jpg");
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 300px, cover;
   content: "";
-  display: block;
-  filter: grayscale(1);
-  height: 100%;
-  opacity: 0.0625;
+  filter: grayscale(1) opacity(0.0625);
+  height: 58.944%;
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: -1;
+}
+.backsplash__shape {
+  display: inline-block;
+  height: 50vw;
+  position: absolute;
+}
+.backsplash__shape .shape {
+  fill: #ff675b;
+}
+.backsplash__shape--circle {
+  height: 50vw;
+  left: -50vw;
+  top: -50vw;
+  transform: var(--translateX) var(--translateY);
+  width: 50vw;
+}
+.backsplash__shape--water {
+  height: calc(50vw * 1.1254);
+  right: -50vw;
+  top: calc((50vw * 1.1254) * -1);
+  width: 50vw;
 }
 
+/**
+ * layouts > chapter
+ */
 .chapter {
   position: relative;
   z-index: 0;
@@ -956,6 +1031,15 @@ p {
 }
 
 /**
+ * layouts > frame
+ */
+.frame {
+  background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+}
+
+/**
  * layouts > button
  */
 .link {
@@ -969,6 +1053,9 @@ p {
   stroke-width: 0.125rem;
   vertical-align: -0.125em;
   width: 1em;
+}
+.link--icon {
+  font-weight: 600;
 }
 .link--semibold {
   font-weight: 600;
@@ -1042,12 +1129,12 @@ p {
   opacity: 1;
 }
 .entry__item:hover .entry__chapterBodyOut {
-  background-color: #f5f6f8;
+  background-color: #f2efed;
   background-image: none;
 }
 .entry__item:hover .entry__chapterBodyIn {
   transition: background-color 250ms ease-in-out;
-  background-color: #f5f6f8;
+  background-color: #f2efed;
 }
 .entry__item .entry__chapterBodyOut {
   transition: background-color 250ms ease-in-out;
@@ -1342,12 +1429,12 @@ table > :not(:last-child) > :last-child > * {
  */
 @media (min-width: 992px) {
   .torso {
-    background-image: linear-gradient(to right, transparent calc(100% - 310px - 1.25rem), var(--aside-background-color, #f5f6f8) 1%);
+    background-image: linear-gradient(to right, transparent calc(100% - 310px - 1.25rem), var(--aside-background-color, #f2efed) 1%);
   }
 }
 @media (min-width: 1260px) {
   .torso {
-    background-image: linear-gradient(to right, transparent calc((50% + ((1240px / 2) - 1.25rem) - 310px)), var(--aside-background-color, #f5f6f8) 1%);
+    background-image: linear-gradient(to right, transparent calc((50% + ((1240px / 2) - 1.25rem) - 310px)), var(--aside-background-color, #f2efed) 1%);
   }
 }
 @media (min-width: 992px) {
@@ -1369,7 +1456,7 @@ table > :not(:last-child) > :last-child > * {
   }
 }
 .torso__aside {
-  background-color: var(--aside-background-color, #f5f6f8);
+  background-color: var(--aside-background-color, #f2efed);
   margin-left: -1.25rem;
   margin-right: -1.25rem;
   padding-bottom: 3rem;

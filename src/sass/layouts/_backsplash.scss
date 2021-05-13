@@ -4,17 +4,42 @@
 
 .backsplash {
     &::before {
-        background-image: url('../img/culture-shed.jpg');
+        background-image: linear-gradient(to bottom, transparent, var(--matte, $gray-100)), url('../img/culture-shed.jpg');
+        //background-image: linear-gradient(to bottom, transparent, var(--matte, $gray-100)), url('http://unsplash.it/1800/1061?random&gravity=center');
+        background-position: 0 100%, 0 0;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: 100% 300px, cover;
         content: '';
-        display: block;
-        filter: grayscale(1);
-        height: 100%;
-        opacity: 0.0625;
+        filter: grayscale(1) opacity(0.0625);
+        height: 58.944%;
         position: absolute;
         top: 0;
         width: 100%;
+        z-index: -1;
+    }
+
+    &__shape {
+        display: inline-block;
+        height: $backsplash-shape-size;
+        position: absolute;
+
+        .shape {
+            fill: $backsplash-shape-fill;
+        }
+    }
+
+    &__shape--circle {
+        height: $backsplash-shape-size;
+        left: -$backsplash-shape-size;
+        top: -$backsplash-shape-size;
+        transform: var(--translateX) var(--translateY);
+        width: $backsplash-shape-size;
+    }
+
+    &__shape--water {
+        height: calc(#{$backsplash-shape-size} * 1.1254);
+        right: -$backsplash-shape-size;
+        top: calc((#{$backsplash-shape-size} * 1.1254) * -1);
+        width: $backsplash-shape-size;
     }
 }
-

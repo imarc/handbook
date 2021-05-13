@@ -9,7 +9,7 @@
 
 // grayscale
 $white:    #fff;
-$gray-100: #f5f6f8;
+$gray-100: #f2efed;
 $gray-200: #e5e7eb;
 $gray-300: #d1d5db;
 $gray-400: #b4b6b8;
@@ -188,6 +188,10 @@ $alert-background-color-dark: $olive-900;
 $alert-font-size: $base-font-size * 0.925;
 $alert-icon-size: $icon-size;
 
+$backsplash-shape-size: 50vw;
+$backsplash-shape-fill: $fire;
+
+$brand-frame-height: 1.075em;
 $brand-font-size: 2rem;
 $brand-font-weight: 700;
 

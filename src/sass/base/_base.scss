@@ -11,7 +11,7 @@
 body {
     @include transition($transition-background-color);
 
-    background-color: var(--matte, $white);
+    background-color: var(--matte, $gray-100);
     color: var(--base-copy, $body-color);
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -118,4 +118,12 @@ kbd {
     background-color: var(--alert-background-color, $alert-background-color);
     display: inline-block;
     padding: 0.0625rem 0.275rem;
+}
+
+
+.baz {
+    height: 300px;
+    width: 300px;
+    background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
 }

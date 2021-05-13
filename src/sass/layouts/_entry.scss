@@ -42,7 +42,8 @@
         }
 
         .entry__chapterBodyIn {
-            @include transition($transition-background-color);        }
+            @include transition($transition-background-color);
+        }
     }
 
     &__body {

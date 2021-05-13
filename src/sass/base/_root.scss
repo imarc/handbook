@@ -9,7 +9,7 @@
 }
 
 :root[color-mode="light"] {
-    --matte: #{$white};
+    --matte: #{$gray-100};
     --hero-background-color: #{$hero-background-color};
     --cover-background-color: #{$cover-background-color};
     --footer-background-color: #{$footer-background-color};

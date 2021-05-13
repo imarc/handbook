@@ -83,15 +83,6 @@ p {
     margin-top: 0;
 }
 
-.brand {
-    &__logo {
-        --fluid-type-min: 1.875rem;
-        --fluid-type-max: 4.5rem;
-        font-family: $headings-font-family;
-        font-weight: $brand-font-weight;
-    }
-}
-
 .lead {
     color: var(--base-copy-lighter, $lead-color);
     font-size: 1.25rem;

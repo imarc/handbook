@@ -3,6 +3,8 @@
  */
 
 .link {
+    $b: &;
+
     color: $link;
 
     &__icon {
@@ -13,6 +15,10 @@
         stroke-width: $icon-stroke-width;
         vertical-align: -0.125em;
         width: 1em;
+    }
+
+    &--icon {
+        font-weight: 600;
     }
 
     &--semibold {
