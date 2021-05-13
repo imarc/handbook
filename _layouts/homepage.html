@@ -60,18 +60,20 @@
 
         <div class="container--lg">
             <div class="entry">
-                <a class="entry__item" href="#">
+                <div class="entry__item">
                     <div class="entry__body">
                         <div class="entry__aside">
                             <div class="chapter entry__chapter">
                                 <div class="chapter__body">
-                                    <div class="chapter__bodyIn">
-                                        <div class="chapter__media">
-                                            {% include _icon-strategy.html %}
-                                        </div>
-                                        <div class="chapter__key">
-                                            <div class="chapter__label">Chapter</div>
-                                            <div class="chapter__figure">01</div>
+                                    <div class="chapter__bodyOut entry__chapterBodyOut">
+                                        <div class="chapter__bodyIn entry__chapterBodyIn">
+                                            <div class="chapter__media">
+                                                {% include _icon-strategy.html %}
+                                            </div>
+                                            <div class="chapter__key">
+                                                <div class="chapter__label">Chapter</div>
+                                                <div class="chapter__figure">01</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +86,7 @@
                             <p class="entry__copy">
                                 Discovery and definition
                             </p>
-                            <div class="link link--semi" href="strategy">
+                            <a class="link link--semibold entry__link" href="strategy">
                                 Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -92,10 +94,10 @@
                                     <line x1="15" y1="16" x2="19" y2="12" />
                                     <line x1="15" y1="8" x2="19" y2="12" />
                                 </svg>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
 

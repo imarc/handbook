@@ -1,13 +1,23 @@
 .chapter {
+    position: relative;
+    z-index: 0;
+
     &__body {
         padding-bottom: $chapter-body-outer-padding;
         padding-right: $chapter-body-outer-padding;
     }
 
+    &__bodyOut {
+        padding: $chapter-body-border-width;
+        position: relative;
+
+        &::before {
+            @extend %border-gradient;
+        }
+    }
+
     &__bodyIn {
-        border: $chapter-body-border-width solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(to bottom, #ee7162, #f9d253);
+        background-color: $white;
         display: flex;
         flex-direction: column;
         padding: $chapter-body-inner-padding;

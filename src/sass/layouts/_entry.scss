@@ -4,16 +4,49 @@
 
 .entry {
     &__item {
-        display: block;
         margin-bottom: $entry-margin-y-sm;
+        padding: $entry-border-width;
+        position: relative;
+
+        &::before {
+            @extend %border-gradient;
+
+            @include transition($transition-opacity);
+
+            opacity: 0;
+        }
 
         &:hover {
-            box-shadow: inset 0 0 0 10px red;
+            cursor: pointer;
+
+            &::before {
+                @include transition($transition-opacity);
+
+                opacity: 1;
+            }
+
+            .entry__chapterBodyOut {
+                background-color: $chapter-body-inner-background-color;
+                background-image: none;
+            }
+
+            .entry__chapterBodyIn {
+                @include transition($transition-background-color);
+
+                background-color: $chapter-body-inner-background-color;
+            }
         }
+
+        .entry__chapterBodyOut {
+            @include transition($transition-background-color);
+        }
+
+        .entry__chapterBodyIn {
+            @include transition($transition-background-color);        }
     }
 
     &__body {
-        // background-color: var(--entry-background-color, $entry-background-color);
+        background-color: var(--entry-background-color, $entry-background-color);
         display: flex;
         padding: 2rem;
     }
@@ -36,5 +69,13 @@
 
     &__copy {
         margin-bottom: $spacer * 1.5;
+    }
+
+    &__link {
+        color: inherit;
+
+        &:hover {
+            color: inherit;
+        }
     }
 }

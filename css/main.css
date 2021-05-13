@@ -402,6 +402,20 @@ template {
 * abstracts > mixins
 *
 */
+/**
+ * placeholders
+ */
+.entry__item::before, .chapter__bodyOut::before {
+  background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 /* Dracula Theme v1.2.5
  *
  * https://github.com/dracula/highlightjs
@@ -818,14 +832,20 @@ p {
   width: 100%;
 }
 
+.chapter {
+  position: relative;
+  z-index: 0;
+}
 .chapter__body {
   padding-bottom: 1.25rem;
   padding-right: 1.25rem;
 }
+.chapter__bodyOut {
+  padding: 0.25rem;
+  position: relative;
+}
 .chapter__bodyIn {
-  border: 0.25rem solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to bottom, #ee7162, #f9d253);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   padding: 0.75rem;
@@ -950,7 +970,7 @@ p {
   vertical-align: -0.125em;
   width: 1em;
 }
-.link--semi {
+.link--semibold {
   font-weight: 600;
 }
 
@@ -1006,13 +1026,37 @@ p {
  * layouts > entry
  */
 .entry__item {
-  display: block;
   margin-bottom: 2rem;
+  padding: 0.5rem;
+  position: relative;
+}
+.entry__item::before {
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
 }
 .entry__item:hover {
-  box-shadow: inset 0 0 0 10px red;
+  cursor: pointer;
+}
+.entry__item:hover::before {
+  transition: opacity 250ms ease-in-out;
+  opacity: 1;
+}
+.entry__item:hover .entry__chapterBodyOut {
+  background-color: #f5f6f8;
+  background-image: none;
+}
+.entry__item:hover .entry__chapterBodyIn {
+  transition: background-color 250ms ease-in-out;
+  background-color: #f5f6f8;
+}
+.entry__item .entry__chapterBodyOut {
+  transition: background-color 250ms ease-in-out;
+}
+.entry__item .entry__chapterBodyIn {
+  transition: background-color 250ms ease-in-out;
 }
 .entry__body {
+  background-color: var(--entry-background-color, #fff);
   display: flex;
   padding: 2rem;
 }
@@ -1031,6 +1075,12 @@ p {
 }
 .entry__copy {
   margin-bottom: 1.5rem;
+}
+.entry__link {
+  color: inherit;
+}
+.entry__link:hover {
+  color: inherit;
 }
 
 /**

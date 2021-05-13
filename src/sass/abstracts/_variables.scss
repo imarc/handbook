@@ -168,6 +168,7 @@ $paragraph-margin-bottom: 1rem;
 $transition-all: all 250ms ease-in-out;
 $transition-background-color: background-color 250ms ease-in-out;
 $transition-color: color 250ms ease-in-out;
+$transition-opacity: opacity 250ms ease-in-out;
 
 
 /**
@@ -203,6 +204,7 @@ $cover-background-color-dark: $ice-900;
 
 $entry-background-color: $white;
 $entry-background-color-dark: $gray-800;
+$entry-border-width: $spacer * 0.5;
 $entry-margin-y-sm: $spacer * 2;
 $entry-margin-y-lg: $spacer * 3;
 $entry-icon-stroke-width: 0.09375rem;
@@ -210,6 +212,7 @@ $entry-icon-stroke-width: 0.09375rem;
 $chapter-body-border-width: 0.25rem;
 $chapter-body-outer-padding: 1.25rem;
 $chapter-body-inner-padding: 0.75rem;
+$chapter-body-inner-background-color: $gray-100;
 
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;
@@ -250,4 +253,3 @@ $footer-background-color-dark: $ice-900;
  */
 
 $button-radius: 0.25rem;
-
