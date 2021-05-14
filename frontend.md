@@ -301,11 +301,11 @@ Sample messaging markup. Note that chaining off `messaging` helps to avoid repea
 
 ### Images
 
-**JPG format** is ideal for photographic-like images. (e.g. images of people, places, things)
+**JPG format** is ideal for photographic-like images and large, abstract background images. (e.g. images of people, places, things)
 
-**PNG format** is ideal for flat-color graphics and/or images that require transparency.
+**PNG format** is ideal for flat-color graphics and/or images that require transparency. 
 
-**WebP** can replace jpg/png formats in modern browsers - currently supported in latest releases of Chrome, Firefox and Edge (18+).
+**WebP** can replace jpg/png formats in modern browsers (currently supported in latest releases of Chrome, Firefox and Edge 18+). This format might not be available from a native design program, but can be converted using other programs or even auto-generated via transforms in a CMS. 
 
 ##### Exporting from design programs
 
@@ -317,7 +317,8 @@ Whenever you export images, use image compression software. Compression reduces 
 
 #### Transforms
 
-Some Content Management Systems, like Craft CMS, allow you to set transforms on images managed via the CMS that dynamically scale and/or crop the image to keep file size down and make sure dimensions align with what's expected on the front-end. You can determine the appropriate size by measuring in the original design, or assessing the layout and space where the image will appear on the front-end. For instance a full-width background image might need to be set to fit to 1600px wide, while a resource listing image might be cropped to 300px wide x 250px tall.
+Some Content Management Systems, like Craft CMS, allow you to set transforms on images managed via the CMS which allows for images to be manipulated on demand. This helps with site performance and speed. If a user uploads a 4000x3000 image for a headshot, we can use image transforms to dynamically re-size and crop the image to something reasonable, like 300x300. We typically define image transforms within Craft CMS projects. See [Craft’s image transforms](https://craftcms.com/docs/3.x/image-transforms.html) documentation for more information.
+
 
 ### SVG
 
@@ -325,11 +326,18 @@ SVG (Scalable Vector Graphics) is an XML-based image format. It allows for infin
 
 ##### Inline vs. src
 
-Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or stroke/fill variations, inlining an SVG is acceptable. To help with document readability, it's preferable to "include" the SVG via a PHP or Twig include statement.
+Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or stroke/fill variations, inlining an SVG is acceptable. To help with document readability, it's preferable to "include" the SVG via a PHP or Twig include statement. When using an SVG inline, feel free to edit the code as you see fit - remove extra groupings, add classes or ids, etc. 
 
 #### SVG Implementation Tips
 
-When saving an SVG to use inline, the most important property to update is "CSS Properties" - you'll want to select "Style Attributes" as this option inserts all of the CSS inline, instead of adding additional classes and styles which bloats the SVG code. Another hot tip is to remove the "height" and "width" properties and control these via CSS so you get more control over the size and scalability. 
+When using a program such as Adobe Illustrator to export an SVG for inline usage, the most important property to update is "Styling". You'll want to select "Presentation Attributes" as this option includes the styles as inline attributes instead of adding extra classes and styles which causes bloat and may conflict with other styles down the road. Another hot tip is to remove the "height" and "width" properties and control these via CSS so you get more control over the size and scalability.
+
+Ideal settings for exporting SVGs from Illustrator:
+
+<img alt="" class="lazyload" data-src="/img/svg-settings.png">
+
+#### Sizing SVGs
+We ask our designers to crop SVGs very tight to their bounding box for better styling control, but on the occasion we are using SVGs from another source we may need to edit the files ourselves. We can do this with a program like Adobe Illustrator, or edit the SVG code directly to update some SVG properties for sizing purposes. We reference this article quite often when dealing with viewbox or sizing properties: [Scaling SVG Elements](https://wattenberger.com/guide/scaling-svg) 
 
 
 ### Video
@@ -390,11 +398,39 @@ Sometimes, a video will auto-play (without audio) behind HTML content. This is c
 
 ### SVG-based icons
 
-[Tabler](https://tablericons.com) and [Feather](https://feathericons.com) are two popular SVG icon sets.
+[The Noun Project](https://thenounproject.com/), [Tabler](https://tablericons.com), and [Feather](https://feathericons.com) are a few popular SVG icon sets.
 
 #### Implementation tips
+The preferred method is to include an SVG icon as a `<symbol>`. This way, you can create one SVG file that houses all of the icons you need on your site (similar to the old image sprites). 
 
-<div class="fpo">WORK IN PROGRESS</div>
+    <!-- /_partials/icons.twig (example file path) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-1" viewBox="0 0 30 30">
+            <!-- <path> and whatever other shapes in here -->
+        </symbol>
+        <symbol id="icon-2" viewBox="0 0 30 30">
+            <!-- <path> and whatever other shapes in here -->
+        </symbol>
+        <!-- And so on -->
+    </svg>
+
+Then, you can just reference them easily within the template code:
+
+    <div class=“icon”>
+        <svg class=“icon”>
+            <use xlink:href=“#icon-1” />
+        </svg>
+    </div>
+    <div class=“icon”>
+        <svg class=“icon”>
+            <use xlink:href=“#icon-2" />
+        </svg>
+    </div>
+
+A few things to note:
+* `viewbox` is set on the initial symbol definition
+* The SVG is set to `display: none;`
+* Best practice is to wrap SVG symbols in a parent `<div>`, which you can use for standard positioning, sizing, and styling for your icons
 
 ### Font Awesome
 
@@ -407,6 +443,7 @@ package (npm)</a>.
 
 **Imarc-recommended implementation**
 * Implementation via npm is fine, but note that using the professional tier requires all team members to possess the same `.npmrc` file in order to pull down gated assets from npm. See a lead front-end engineer for help.
+* You can also download the FontAwesome font files and self-host.
 * **Deprecated**: use a [Font Awesome kit](https://fontawesome.com/kits) 
 
 ## Animation
