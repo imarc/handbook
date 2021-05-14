@@ -25,12 +25,7 @@ $ash:      #252d2f;
 $fire:     #ff675b;
 $ice:      #d3e6ea;
 $salt:     #f2efed;
-
-// more colors spun from https://tailwind.ink
 $ocean:    #387cf5;
-$olive:    #b4a50a;
-$limegreen:#2bb53f;
-$indigo:   #dd51e7;
 
 // shadings and tints
 $fire-100: tint-color($fire, 80%);
@@ -63,36 +58,6 @@ $salt-700: shade-color($salt, 40%);
 $salt-800: shade-color($salt, 60%);
 $salt-900: shade-color($salt, 80%);
 
-$olive-100: tint-color($olive, 80%);
-$olive-200: tint-color($olive, 60%);
-$olive-300: tint-color($olive, 40%);
-$olive-400: tint-color($olive, 20%);
-$olive-500: $olive;
-$olive-600: shade-color($olive, 20%);
-$olive-700: shade-color($olive, 40%);
-$olive-800: shade-color($olive, 60%);
-$olive-900: shade-color($olive, 80%);
-
-$limegreen-100: tint-color($limegreen, 80%);
-$limegreen-200: tint-color($limegreen, 60%);
-$limegreen-300: tint-color($limegreen, 40%);
-$limegreen-400: tint-color($limegreen, 20%);
-$limegreen-500: $limegreen;
-$limegreen-600: shade-color($limegreen, 20%);
-$limegreen-700: shade-color($limegreen, 40%);
-$limegreen-800: shade-color($limegreen, 60%);
-$limegreen-900: shade-color($limegreen, 80%);
-
-$indigo-100: tint-color($indigo, 80%);
-$indigo-200: tint-color($indigo, 60%);
-$indigo-300: tint-color($indigo, 40%);
-$indigo-400: tint-color($indigo, 20%);
-$indigo-500: $indigo;
-$indigo-600: shade-color($indigo, 20%);
-$indigo-700: shade-color($indigo, 40%);
-$indigo-800: shade-color($indigo, 60%);
-$indigo-900: shade-color($indigo, 80%);
-
 
 /**
  * spacing
@@ -109,6 +74,9 @@ $body-color: $ash;
 $body-color-dark: $gray-200;
 $border-color: $salt;
 $border-color-dark: $salt-900;
+
+$fpo-background-color: $fire-200;
+$fpo-background-color-dark: $fire-800;
 
 $base-font-family: 'canada-type-gibson', 'Gibson', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $base-font-size: 1rem;
@@ -156,7 +124,7 @@ $lead-color: $gray-700;
 $code-color: #d63384;
 
 $headings-font-family: 'canada-type-gibson', 'Gibson', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-$headings-font-weight: 600;
+$headings-font-weight: 700;
 
 $paragraph-margin-bottom: 1rem;
 
@@ -183,13 +151,8 @@ $icon-stroke-width: 0.125rem;
  * layout stuff
  */
 
-$alert-background-color: $olive-100;
-$alert-background-color-dark: $olive-900;
-$alert-font-size: $base-font-size * 0.925;
-$alert-icon-size: $icon-size;
-
-$backsplash-shape-size: 50vw;
-$backsplash-shape-fill: $fire;
+$backdrop-shape-size: 50vw;
+$backdrop-shape-fill: $fire;
 
 $brand-frame-height: 1.075em;
 $brand-font-size: 2rem;
@@ -209,14 +172,18 @@ $cover-background-color-dark: $ice-900;
 $entry-background-color: $white;
 $entry-background-color-dark: $gray-800;
 $entry-border-width: $spacer * 0.5;
+$entry-box-shadow: 0.75rem 0.75rem 2rem 0 $gray-200;
 $entry-margin-y-sm: $spacer * 2;
 $entry-margin-y-lg: $spacer * 3;
 $entry-icon-stroke-width: 0.09375rem;
 
+$chapter-background-color: $white;
+$chapter-background-color-dark: $gray-900;
 $chapter-body-border-width: 0.25rem;
 $chapter-body-outer-padding: 1.25rem;
 $chapter-body-inner-padding: 0.75rem;
 $chapter-body-inner-background-color: $gray-100;
+$chapter-icon-size: 2.5rem;
 
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;
@@ -224,7 +191,10 @@ $masthead-brand-link-hover-color: $ocean;
 $masthead-nav-link-color: $gray-700;
 $masthead-nav-link-hover-color: $ocean;
 
+$nav-item-font-weight: 500;
 $nav-link-padding-x: 0.75rem;
+$nav-link-active-font-weight: 600;
+
 $nav-toc-link-color: $ocean;
 $nav-toc-link-hover-color: $fire;
 $nav-toc-sub-link-color: $ash;
@@ -232,7 +202,6 @@ $nav-toc-sub-link-hover-color: $fire;
 
 $hero-background-color: $cover-background-color;
 $hero-background-color-dark: $cover-background-color-dark;
-$hero-heading-font-weight: 700;
 $hero-padding-y: 4rem;
 $hero-lead-margin-y: 1rem;
 $hero-icon-color: $gray-500;
@@ -240,8 +209,6 @@ $hero-icon-size-sm: 3rem;
 $hero-icon-size-lg: 100%;
 $hero-icon-stroke-width: 0.0625rem;
 
-$intro-background-color: $ice;
-$intro-background-color-dark: $ice-900;
 $intro-max-width: 720px;
 
 $aside-background-color: $gray-100;

@@ -7,13 +7,16 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        padding-bottom: $spacer * 2;
         padding-top: $spacer * 2;
     }
 
     &__content {
-        margin-bottom: clamp(#{$spacer} * 2, 5vw, #{$spacer} * 6);
-        margin-top: clamp(#{$spacer} * 2, 5vw, #{$spacer} * 6);
+        margin-bottom: clamp(#{$spacer} * 2, 4vw, #{$spacer} * 5);
+        margin-top: clamp(#{$spacer} * 2, 4vw, #{$spacer} * 5);
         text-align: center;
+    }
+
+    &__brandLogo {
+        margin-bottom: $spacer * 0.75;
     }
 }

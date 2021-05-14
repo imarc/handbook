@@ -21,6 +21,19 @@
         font-weight: 600;
     }
 
+    &--arrow {
+        #{$b}__icon {
+            @include transition(250ms transform ease-in-out);
+        }
+
+        &:hover {
+            #{$b}__icon {
+                @include transition(250ms transform ease-in-out);
+                transform: translateX(0.25em);
+            }
+        }
+    }
+
     &--semibold {
         font-weight: 600;
     }

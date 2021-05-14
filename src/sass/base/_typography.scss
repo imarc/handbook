@@ -15,13 +15,16 @@ a {
 
 %heading {
     font-family: $headings-font-family;
-    font-size: clamp(var(--fluid-type-min, 1.25rem),
-    calc(1rem + var(--fluid-type-target, 5vw)),
-    var(--fluid-type-max, 1.777rem));
     font-weight: $headings-font-weight;
     line-height: 1.15;
     margin-bottom: 0.75rem;
     margin-top: 0;
+}
+
+%fluidtype {
+    font-size: clamp(var(--fluid-type-min, 1.25rem),
+    calc(1rem + var(--fluid-type-target, 5vw)),
+    var(--fluid-type-max, 1.777rem));
 }
 
 h1,
@@ -30,6 +33,7 @@ h3,
 h4,
 h5 {
     @extend %heading;
+    @extend %fluidtype;
 }
 
 h1 {
@@ -61,6 +65,7 @@ h5 {
 
 h2[id] {
     border-top: 0.125rem solid var(--border-color, $border-color);
+    font-weight: 600;
     margin-top: 2rem;
     padding-top: 1.75rem;
 

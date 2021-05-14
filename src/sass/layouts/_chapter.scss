@@ -21,29 +21,32 @@
     }
 
     &__bodyIn {
-        background-color: $white;
+        background-color: var(--chapter-background-color, $white);
         display: flex;
         flex-direction: column;
         padding: $chapter-body-inner-padding;
     }
 
     &__media .icon {
-        height: 2.5rem;
+        height: $chapter-icon-size;
         stroke-width: $entry-icon-stroke-width;
-        width: 2.5rem;
+        width: $chapter-icon-size;
     }
 
     &__key {
+        --fluid-type-min: 3rem;
+        --fluid-type-target: 5vw;
+        --fluid-type-max: 4.5rem;
+        @extend %fluidtype;
         align-self: flex-end;
         transform: translateX($chapter-body-outer-padding + $chapter-body-inner-padding + $chapter-body-border-width * 2) translateY($chapter-body-outer-padding + $chapter-body-inner-padding + $chapter-body-border-width * 2);
     }
 
     &__label {
-        font-size: 1.5rem;
+        font-size: 0.325em;
     }
 
     &__figure {
-        font-size: 4.75rem;
         font-weight: 800;
         line-height: 0.75;
     }

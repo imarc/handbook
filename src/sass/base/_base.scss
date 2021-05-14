@@ -115,11 +115,10 @@ kbd {
 }
 
 .fpo {
-    background-color: var(--alert-background-color, $alert-background-color);
+    background-color: var(--fpo-background-color, $fpo-background-color);
     display: inline-block;
     padding: 0.0625rem 0.275rem;
 }
-
 
 .baz {
     height: 300px;

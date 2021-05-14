@@ -3,6 +3,8 @@
  */
 
 .entry {
+    $b: &;
+
     &__item {
         margin-bottom: $entry-margin-y-sm;
         padding: $entry-border-width;
@@ -16,6 +18,14 @@
             opacity: 0;
         }
 
+        .entry__chapterBodyOut {
+            @include transition($transition-background-color);
+        }
+
+        .entry__chapterBodyIn {
+            @include transition($transition-background-color);
+        }
+
         &:hover {
             cursor: pointer;
 
@@ -23,6 +33,10 @@
                 @include transition($transition-opacity);
 
                 opacity: 1;
+            }
+
+            #{$b}__body {
+                box-shadow: none;
             }
 
             .entry__chapterBodyOut {
@@ -35,27 +49,46 @@
 
                 background-color: $chapter-body-inner-background-color;
             }
+
+            #{$b}__link--arrow {
+                @extend .link--arrow, :hover;
+            }
         }
 
-        .entry__chapterBodyOut {
-            @include transition($transition-background-color);
-        }
-
-        .entry__chapterBodyIn {
-            @include transition($transition-background-color);
+        @include breakpoint(md) {
+            margin-bottom: $entry-margin-y-lg;
         }
     }
 
     &__body {
         background-color: var(--entry-background-color, $entry-background-color);
-        display: flex;
+        box-shadow: var(--entry-box-shadow, $entry-box-shadow);
         padding: 2rem;
+
+        @include breakpoint(md) {
+            display: flex;
+        }
+    }
+
+    &__shape {
+        left: 50%;
+        margin-left: -2rem;
+        margin-top: -2rem;
+        position: absolute;
+        top: 50%;
+        width: 4rem;
+        z-index: -1;
     }
 
     &__aside {
         flex-shrink: 0;
-        margin-right: $spacer * 6;
+        margin-bottom: $spacer * 2;
+        margin-right: $spacer * 5;
         width: 150px;
+
+        @include breakpoint(md) {
+            margin-bottom: 0;
+        }
     }
 
     &__main {
@@ -63,8 +96,6 @@
     }
 
     &__heading {
-        font-size: 2.25rem;
-        font-weight: 700;
         margin-bottom: $spacer * 1.5;
     }
 

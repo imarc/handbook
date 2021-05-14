@@ -1,9 +1,34 @@
 import { gsap } from "gsap"
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin"
+import { CSSPlugin } from "gsap/CSSPlugin"
 
 /**
  * animations
  */
+
+const entryItems = document.querySelectorAll(".entry__item")
+
+Array.from(entryItems).forEach((entryItem) => {
+    entryItem.addEventListener("mouseenter", () => {
+        // console.log('test1')
+        // entryItem.querySelectorAll(".entry__shape")
+        const tri = entryItem.querySelector(".entry__shape--triangle")
+
+
+        gsap.to(tri, {
+            duration: 1,
+            ease: 'bounce',
+            x: -600
+        });
+    })
+})
+
+
+
+
+// var entryItems = gsap.timeline()
+
+// entryItems
 
 // gsap.registerPlugin(DrawSVGPlugin)
 
@@ -29,8 +54,11 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin"
 // }, 0.1)
 
 
-var tl = gsap.timeline()
+    // .to(".ornaments", { duration: 1, css: { backgroundSize: '70% 70%' } })
+    // .to(".backdrop__shape--squiggles", {duration: 1, x: '100%', y: '-50%' })
 
-tl
-    .to(".backsplash__shape--circle", {duration: 1, x: '20vw', y: '20vw' })
-    .to(".backsplash__shape--water", {duration: 1, x: '-20vw', y: '-20vw' })
+
+// background-position-x: 0, 100%;
+// background-position-y: -100%;
+// background-repeat: no-repeat;
+// background-size: 0%;

@@ -1,0 +1,19 @@
+/**
+ * layouts > backdrop
+ */
+
+.backdrop {
+    &::before {
+        background-image: linear-gradient(to bottom, transparent, var(--matte, $gray-100)), url('../img/culture-shed.jpg');
+        background-position: 0 100%, 0 0;
+        background-repeat: no-repeat;
+        background-size: 100% 300px, cover;
+        content: '';
+        filter: grayscale(1) opacity(0.0625);
+        height: 58.944%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
