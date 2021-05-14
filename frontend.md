@@ -337,7 +337,7 @@ Ideal settings for exporting SVGs from Illustrator:
 <img alt="" class="lazyload" data-src="/img/svg-settings.png">
 
 #### Sizing SVGs
-We ask our designers to crop SVGs very tight to their bounding box for better styling control, but on the occasion we are using SVGs from another source we may need to edit the files ourselves. We can do this with a program like Adobe Illustrator, or edit the SVG code directly to update some SVG properties for sizing purposes. We reference this article quite often when dealing with viewbox or sizing properties: [Scaling SVG Elements](https://wattenberger.com/guide/scaling-svg) 
+We ask our designers to crop SVGs very tight to their bounding box for better styling control, but if we are using SVGs from another source, we may need to edit the files ourselves. We can do this with a program like Adobe Illustrator, or edit the SVG code directly to update some SVG properties for sizing purposes. For more on dealing with viewbox or sizing properties, see  [Scaling SVG Elements](https://wattenberger.com/guide/scaling-svg) 
 
 
 ### Video
@@ -428,9 +428,9 @@ Then, you can just reference them easily within the template code:
     </div>
 
 A few things to note:
-* `viewbox` is set on the initial symbol definition
-* The SVG is set to `display: none;`
-* Best practice is to wrap SVG symbols in a parent `<div>`, which you can use for standard positioning, sizing, and styling for your icons
+* `viewbox` is set on the initial symbol definition.
+* The SVG is set to `display: none;`.
+* Best practice is to wrap SVG symbols in a parent `<div>`, which you can use for standard positioning, sizing, and styling for your icons.
 
 ### Font Awesome
 
