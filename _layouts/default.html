@@ -83,9 +83,25 @@
                             <p class="hero__lead lead">{{ page.lead }}</p>
                         </div>
                         <div class="hero__media">
-                            {% if page.icon %}
-                                {% include {{ page.icon }} %}
-                            {% endif %}
+
+
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__bodyOut">
+                                        <div class="chapter__bodyIn">
+                                            <div class="chapter__media">
+                                                {% if page.icon %}
+                                                    {% include {{ page.icon }} %}
+                                                {% endif %}
+                                            </div>
+                                            <div class="chapter__key">
+                                                <div class="chapter__label">Chapter</div>
+                                                <div class="chapter__figure">01</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

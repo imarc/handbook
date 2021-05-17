@@ -506,14 +506,14 @@ template {
 
 :root[color-mode=light] {
   --matte: #f2efed;
-  --hero-background-color: #d3e6ea;
-  --cover-background-color: #d3e6ea;
+  --hero-background-color: #f2efed;
+  --cover-background-color: #f2efed;
   --footer-background-color: #d3e6ea;
   --chapter-background-color: #fff;
   --fpo-background-color: #ffc2bd;
   --entry-background-color: #fff;
-  --entry-box-shadow: 0.75rem 0.75rem 2rem 0 #e5e7eb;
-  --aside-background-color: #f2efed;
+  --entry-box-shadow: 0.75rem 0.75rem 2rem 0 rgba(0, 0, 0, 0.075);
+  --torso-background-color: #fff;
   --border-color: #f2efed;
   --base-copy: #252d2f;
   --base-copy-lighter: #2c333d;
@@ -534,7 +534,7 @@ template {
   --fpo-background-color: #662924;
   --entry-background-color: #1d232a;
   --entry-box-shadow: none;
-  --aside-background-color: #1d232a;
+  --torso-background-color: #1d232a;
   --border-color: #30302f;
   --base-copy: #e5e7eb;
   --base-copy-lighter: #d1d5db;
@@ -809,6 +809,7 @@ p {
  * layouts > icon
  */
 .icon {
+  display: block;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -825,11 +826,12 @@ p {
   display: inline-block;
   font-weight: 700;
   margin-bottom: 0;
-  padding-bottom: 0.125em;
+  padding-bottom: 0.15em;
   padding-left: 0.175em;
   padding-right: 0.175em;
-  padding-top: 0.225em;
+  padding-top: 0.175em;
   position: relative;
+  z-index: 0;
 }
 .brand__logo::before {
   background-image: linear-gradient(to bottom, #ee7162, #f9d253);
@@ -837,12 +839,12 @@ p {
   -webkit-clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
           clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
   content: "";
-  height: 1.075em;
+  height: 1.025em;
   left: 0;
   position: absolute;
   right: auto;
   top: 0;
-  width: calc(1.075em / 1.33);
+  width: calc(1.025em / 1.33);
   z-index: -1;
 }
 
@@ -982,7 +984,7 @@ p {
  */
 .cover {
   transition: background-color 250ms ease-in-out;
-  background-color: var(--cover-background-color, #d3e6ea);
+  background-color: var(--cover-background-color, #f2efed);
 }
 .cover__body {
   display: flex;
@@ -1121,7 +1123,7 @@ p {
 }
 .entry__body {
   background-color: var(--entry-background-color, #fff);
-  box-shadow: var(--entry-box-shadow, 0.75rem 0.75rem 2rem 0 #e5e7eb);
+  box-shadow: var(--entry-box-shadow, 0.75rem 0.75rem 2rem 0 rgba(0, 0, 0, 0.075));
   padding: 2rem;
 }
 @media (min-width: 768px) {
@@ -1131,12 +1133,15 @@ p {
 }
 .entry__shape {
   left: 50%;
-  margin-left: -2rem;
-  margin-top: -2rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
   position: absolute;
   top: 50%;
-  width: 4rem;
-  z-index: -1;
+  width: 1rem;
+  z-index: -2;
+}
+.entry__shape .shape {
+  fill: #ff675b;
 }
 .entry__aside {
   flex-shrink: 0;
@@ -1170,7 +1175,7 @@ p {
  */
 .hero {
   transition: background-color 250ms ease-in-out;
-  background-color: var(--hero-background-color, #d3e6ea);
+  background-color: var(--hero-background-color, #f2efed);
 }
 .hero__body {
   display: flex;
@@ -1206,18 +1211,6 @@ p {
     flex-shrink: 0;
     margin-bottom: 0;
     margin-left: 4rem;
-  }
-}
-.hero__media .icon {
-  height: 3rem;
-  stroke: #6b7280;
-  stroke-width: 0.0625rem;
-  width: 3rem;
-}
-@media (min-width: 768px) {
-  .hero__media .icon {
-    height: 100%;
-    width: 100%;
   }
 }
 
@@ -1384,6 +1377,14 @@ p {
 }
 
 /**
+ * layouts > shape
+ */
+.shape {
+  display: block;
+  fill: currentColor;
+}
+
+/**
  * layouts > tables
  */
 tbody,
@@ -1432,15 +1433,8 @@ table > :not(:last-child) > :last-child > * {
 /**
  * layouts > torso
  */
-@media (min-width: 992px) {
-  .torso {
-    background-image: linear-gradient(to right, transparent calc(100% - 310px - 1.25rem), var(--aside-background-color, #f2efed) 1%);
-  }
-}
-@media (min-width: 1260px) {
-  .torso {
-    background-image: linear-gradient(to right, transparent calc((50% + ((1240px / 2) - 1.25rem) - 310px)), var(--aside-background-color, #f2efed) 1%);
-  }
+.torso {
+  background-color: var(--torso-background-color, #fff);
 }
 @media (min-width: 992px) {
   .torso__body {
@@ -1461,7 +1455,6 @@ table > :not(:last-child) > :last-child > * {
   }
 }
 .torso__aside {
-  background-color: var(--aside-background-color, #f2efed);
   margin-left: -1.25rem;
   margin-right: -1.25rem;
   padding-bottom: 3rem;
@@ -1471,7 +1464,6 @@ table > :not(:last-child) > :last-child > * {
 }
 @media (min-width: 992px) {
   .torso__aside {
-    background-color: transparent;
     display: block;
     flex-basis: 310px;
     flex-shrink: 0;

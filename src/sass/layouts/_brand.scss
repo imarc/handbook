@@ -9,11 +9,12 @@
         display: inline-block;
         font-weight: $brand-font-weight;
         margin-bottom: 0;
-        padding-bottom: 0.125em;
+        padding-bottom: 0.15em;
         padding-left: 0.175em;
         padding-right: 0.175em;
-        padding-top: 0.225em;
+        padding-top: 0.175em;
         position: relative;
+        z-index: 0;
 
         &::before {
             background-image: linear-gradient(to bottom, #ee7162, #f9d253);

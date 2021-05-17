@@ -72,12 +72,16 @@
 
     &__shape {
         left: 50%;
-        margin-left: -2rem;
-        margin-top: -2rem;
+        margin-left: -$entry-shape-size / 2;
+        margin-top: -$entry-shape-size / 2;
         position: absolute;
         top: 50%;
-        width: 4rem;
-        z-index: -1;
+        width: $entry-shape-size;
+        z-index: -2;
+    }
+
+    &__shape .shape {
+        fill: $shape-fill;
     }
 
     &__aside {

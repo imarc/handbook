@@ -43,17 +43,4 @@
             margin-left: 4rem;
         }
     }
-
-    &__media .icon {
-        height: $hero-icon-size-sm;
-        stroke: $hero-icon-color;
-        stroke-width: $hero-icon-stroke-width;
-        width: $hero-icon-size-sm;
-
-        @include breakpoint(md) {
-            height: $hero-icon-size-lg;
-            width: $hero-icon-size-lg;
-        }
-    }
-
 }

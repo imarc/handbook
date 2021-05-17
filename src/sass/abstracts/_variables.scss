@@ -154,7 +154,9 @@ $icon-stroke-width: 0.125rem;
 $backdrop-shape-size: 50vw;
 $backdrop-shape-fill: $fire;
 
-$brand-frame-height: 1.075em;
+$shape-fill: $fire;
+
+$brand-frame-height: 1.025em;
 $brand-font-size: 2rem;
 $brand-font-weight: 700;
 
@@ -166,16 +168,17 @@ $color-mode-toggle-font-size: 1.5rem;
 $color-mode-icon-color: $white;
 $color-mode-icon-stroke-width: $icon-stroke-width;
 
-$cover-background-color: $ice;
+$cover-background-color: $gray-100;
 $cover-background-color-dark: $ice-900;
 
 $entry-background-color: $white;
 $entry-background-color-dark: $gray-800;
 $entry-border-width: $spacer * 0.5;
-$entry-box-shadow: 0.75rem 0.75rem 2rem 0 $gray-200;
+$entry-box-shadow: 0.75rem 0.75rem 2rem 0 rgb($black, 0.075);
 $entry-margin-y-sm: $spacer * 2;
 $entry-margin-y-lg: $spacer * 3;
 $entry-icon-stroke-width: 0.09375rem;
+$entry-shape-size: $spacer;
 
 $chapter-background-color: $white;
 $chapter-background-color-dark: $gray-900;
@@ -204,16 +207,13 @@ $hero-background-color: $cover-background-color;
 $hero-background-color-dark: $cover-background-color-dark;
 $hero-padding-y: 4rem;
 $hero-lead-margin-y: 1rem;
-$hero-icon-color: $gray-500;
-$hero-icon-size-sm: 3rem;
-$hero-icon-size-lg: 100%;
-$hero-icon-stroke-width: 0.0625rem;
 
 $intro-max-width: 720px;
 
-$aside-background-color: $gray-100;
-$aside-background-color-dark: $gray-800;
 $aside-width: 310px;
+
+$torso-background-color: $white;
+$torso-background-color-dark: $gray-800;
 
 $footer-background-color: $ice;
 $footer-background-color-dark: $ice-900;

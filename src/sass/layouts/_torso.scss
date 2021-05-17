@@ -3,15 +3,8 @@
  */
 
 .torso {
-    $container-max-width: map-get($container-max-widths, xl);
 
-    @include breakpoint(lg) {
-        background-image: linear-gradient(to right, transparent calc(100% - #{$aside-width} - #{$container-padding-x}), var(--aside-background-color, $aside-background-color) 1%);
-    }
-
-    @include breakpoint(xl) {
-        background-image: linear-gradient(to right, transparent calc((50% + ((#{$container-max-width} / 2) - #{$container-padding-x}) - #{$aside-width})), var(--aside-background-color, $aside-background-color) 1%);
-    }
+    background-color: var(--torso-background-color, $torso-background-color);
 
     &__body {
         @include breakpoint(lg) {
@@ -33,7 +26,6 @@
     }
 
     &__aside {
-        background-color: var(--aside-background-color, $aside-background-color);
         margin-left: -$container-padding-x;
         margin-right: -$container-padding-x;
         padding-bottom: 3rem;
@@ -42,7 +34,6 @@
         padding-top: 3rem;
 
         @include breakpoint(lg) {
-            background-color: transparent;
             display: block;
             flex-basis: $aside-width;
             flex-shrink: 0;
