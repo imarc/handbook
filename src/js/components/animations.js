@@ -1,4 +1,7 @@
 import { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
+
+gsap.registerPlugin(ScrollTrigger)
 
 /**
  * animations
@@ -6,18 +9,20 @@ import { gsap } from "gsap"
 
 const entryItems = document.querySelectorAll(".entry__item")
 
+
+
 Array.from(entryItems).forEach((entryItem) => {
-    const entryItemWidthHalf = entryItem.offsetWidth / 2;
-    const entryItemHeightHalf = entryItem.offsetHeight / 2;
+    const entryItemX = entryItem.offsetWidth / 2.15;
+    const entryItemY = entryItem.offsetHeight / 2.15;
 
     const arrShapeLocations = [
         {
-            x: entryItemWidthHalf,
-            y: -entryItemHeightHalf,
+            x: entryItemX,
+            y: -entryItemY,
         },
         {
-            x: -entryItemWidthHalf,
-            y: entryItemHeightHalf
+            x: -entryItemX,
+            y: entryItemY
         }
     ]
 
@@ -29,24 +34,35 @@ Array.from(entryItems).forEach((entryItem) => {
         shapes.forEach((shape, index) => {
             const location = arrShapeLocations[index]
 
-            gsap.to(shape, {
-                duration: .5,
-                ease: 'expo.inOut',
-                scale: 12,
-                ...location,
-            });
+            ScrollTrigger.matchMedia({
+                "(min-width: 1180px)": () => {
+                    gsap.to(shape, {
+                        duration: .25,
+                        ease: 'expo.inOut',
+                        scale: 12,
+                        ...location,
+                    });
+                }
+            })
         })
     })
 
     entryItem.addEventListener("mouseleave", () => {
         shapes.forEach((shape, index) => {
-            gsap.to(shape, {
-                duration: .5,
-                ease: 'expo.inOut',
-                scale: 1,
-                x: 0,
-                y: 0,
-            });
+
+
+            ScrollTrigger.matchMedia({
+                "(min-width: 1180px)": () => {
+                    gsap.to(shape, {
+                        duration: .25,
+                        ease: 'expo.inOut',
+                        scale: 1,
+                        x: 0,
+                        y: 0,
+                    });
+                }
+            })
         })
+
     })
 })

@@ -4,30 +4,16 @@
 
 .brand {
     &__logo {
-        --fluid-type-min: 1.875rem;
-        --fluid-type-max: 4.5rem;
+        @extend %heading;
+        @extend %fluidtype;
+
+        @include frame();
         display: inline-block;
         font-weight: $brand-font-weight;
         margin-bottom: 0;
         padding-bottom: 0.15em;
         padding-left: 0.175em;
         padding-right: 0.175em;
-        padding-top: 0.175em;
-        position: relative;
-        z-index: 0;
-
-        &::before {
-            background-image: linear-gradient(to bottom, #ee7162, #f9d253);
-            bottom: auto;
-            clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
-            content: '';
-            height: $brand-frame-height;
-            left: 0;
-            position: absolute;
-            right: auto;
-            top: 0;
-            width: calc(#{$brand-frame-height} / 1.33);
-            z-index: -1;
-        }
+        padding-top: 0.15em;
     }
 }

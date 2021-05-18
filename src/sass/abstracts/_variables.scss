@@ -177,8 +177,10 @@ $entry-border-width: $spacer * 0.5;
 $entry-box-shadow: 0.75rem 0.75rem 2rem 0 rgb($black, 0.075);
 $entry-margin-y-sm: $spacer * 2;
 $entry-margin-y-lg: $spacer * 3;
-$entry-icon-stroke-width: 0.09375rem;
 $entry-shape-size: $spacer;
+
+$frame-border-width: 0.25rem;
+$frame-size: 1em;
 
 $chapter-background-color: $white;
 $chapter-background-color-dark: $gray-900;

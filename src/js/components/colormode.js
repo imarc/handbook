@@ -9,7 +9,6 @@ const toggleColorMode = function toggleColorMode(e) {
         return
     }
 
-    // e.currentTarget.classList.toggle("color-mode__button--active")
     document.documentElement.setAttribute("color-mode", "dark");
     localStorage.setItem("color-mode", "dark")
 };

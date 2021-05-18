@@ -665,14 +665,6 @@ kbd kbd {
   padding: 0.0625rem 0.275rem;
 }
 
-.baz {
-  height: 300px;
-  width: 300px;
-  background-image: linear-gradient(to bottom, #ee7162, #f9d253);
-  -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-          clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-}
-
 /**
  * Base > Typography
  */
@@ -685,7 +677,7 @@ a:hover, .entry__item:hover a.entry__link--arrow {
   color: #ff675b;
 }
 
-h1,
+.brand__logo, h1,
 h2,
 h3,
 h4,
@@ -697,7 +689,7 @@ h5 {
   margin-top: 0;
 }
 
-.chapter__key, h1,
+.chapter__key, .brand__logo, h1,
 h2,
 h3,
 h4,
@@ -821,17 +813,15 @@ p {
  * layouts > brand
  */
 .brand__logo {
-  --fluid-type-min: 1.875rem;
-  --fluid-type-max: 4.5rem;
+  position: relative;
+  z-index: 0;
   display: inline-block;
   font-weight: 700;
   margin-bottom: 0;
   padding-bottom: 0.15em;
   padding-left: 0.175em;
   padding-right: 0.175em;
-  padding-top: 0.175em;
-  position: relative;
-  z-index: 0;
+  padding-top: 0.15em;
 }
 .brand__logo::before {
   background-image: linear-gradient(to bottom, #ee7162, #f9d253);
@@ -839,15 +829,15 @@ p {
   -webkit-clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
           clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
   content: "";
-  height: 1.025em;
+  display: block;
+  height: 1em;
   left: 0;
   position: absolute;
   right: auto;
   top: 0;
-  width: calc(1.025em / 1.33);
+  width: calc(1em / 1.38);
   z-index: -1;
 }
-
 /**
  * layouts > backdrop
  */
@@ -862,7 +852,7 @@ p {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: -1;
+  z-index: -3;
 }
 
 /**
@@ -888,7 +878,6 @@ p {
 }
 .chapter__media .icon {
   height: 2.5rem;
-  stroke-width: 0.09375rem;
   width: 2.5rem;
 }
 .chapter__key {
@@ -996,9 +985,31 @@ p {
  * layouts > frame
  */
 .frame {
+  position: relative;
+}
+.frame::before {
   background-image: linear-gradient(to bottom, #ee7162, #f9d253);
-  -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
-          clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  bottom: auto;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
+  content: "";
+  display: block;
+  height: 1.025em;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: 0;
+  width: calc(1.025em / 1.38);
+}
+.frame::after {
+  background-color: green;
+  bottom: auto;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: 0;
 }
 
 /**
@@ -1202,11 +1213,11 @@ p {
 .hero__lead {
   margin-top: 1rem;
 }
-.hero__media {
+.hero__aside {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 768px) {
-  .hero__media {
+  .hero__aside {
     flex-basis: 20%;
     flex-shrink: 0;
     margin-bottom: 0;

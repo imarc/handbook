@@ -3,6 +3,45 @@
  */
 
 .frame {
-    background-image: linear-gradient(to bottom, #ee7162, #f9d253);
-    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    position: relative;
+
+    &::before {
+        background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+        bottom: auto;
+        clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
+        content: '';
+        display: block;
+        height: $brand-frame-height;
+        left: 0;
+        position: absolute;
+        right: auto;
+        top: 0;
+        width: calc(#{$brand-frame-height} / 1.38);
+    }
+
+    &::after {
+        background-color: green;
+        bottom: auto;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        right: auto;
+        top: 0;
+    }
 }
+
+
+
+
+// background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+// bottom: auto;
+// clip-path: polygon(0% 0%, 0% 100%, 0.25rem 100%, 0.25rem 0.25rem, calc(100% - 0.25rem) 0.25rem, calc(100% - 0.25rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.25rem), 0% 100%, 100% 100%, 100% 0%);
+// content: '';
+// height: $brand-frame-height;
+// left: 0;
+// position: absolute;
+// right: auto;
+// top: 0;
+// width: calc(#{$brand-frame-height} / 1.33);
+// z-index: -1;

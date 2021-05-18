@@ -9,6 +9,41 @@
     }
 }
 
+@mixin frame($borderWidth: $frame-border-width, $frame-height: $frame-size) {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        background-image: linear-gradient(to bottom, #ee7162, #f9d253);
+        bottom: auto;
+        clip-path: polygon(0% 0%, 0% 100%, $borderWidth 100%, $borderWidth $borderWidth, calc(100% - #{$borderWidth}) $borderWidth, calc(100% - #{$borderWidth}) calc(100% - #{$borderWidth}), $borderWidth calc(100% - #{$borderWidth}), 0% 100%, 100% 100%, 100% 0%);
+        content: '';
+        display: block;
+        height: $frame-height;
+        left: 0;
+        position: absolute;
+        right: auto;
+        top: 0;
+        width: calc(#{$frame-height} / 1.38);
+        z-index: -1;
+    }
+
+    &::after {
+        // background-color: green;
+        // bottom: auto;
+        // content: '';
+        // display: block;
+        // height: 100%;
+        // left: 0;
+        // position: absolute;
+        // right: auto;
+        // top: 0;
+        // width: 100%;
+    }
+
+
+}
+
 @mixin linkHoverLine($start: 60%, $stop: 90%, $color: $ice, $borderColor: $fire, $borderThickness: 0.125rem, $transition: 250ms) {
     @at-root [color-mode='light'] & {
         background-image: linear-gradient(transparent $start, $color $start, $color $stop, $borderColor calc(#{$stop} + #{$borderThickness}), transparent calc(#{$stop} + #{$borderThickness}));
