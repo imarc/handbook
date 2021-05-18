@@ -57,13 +57,13 @@
 
     &--toc {
         > #{$b}__list > #{$b}__item {
-            margin-bottom: 0.875rem;
+            margin-bottom: $spacer * 0.875;
         }
 
         #{$b}__item #{$b}__item {
             font-size: 0.925rem;
             font-weight: 400;
-            margin-top: 0.125rem;
+            margin-top: $spacer * 0.125;
         }
 
         #{$b}__link {

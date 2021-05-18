@@ -39,17 +39,6 @@
                 box-shadow: none;
             }
 
-            .entry__chapterBodyOut {
-                // background-color: $chapter-body-inner-background-color;
-                // background-image: none;
-            }
-
-            .entry__chapterBodyIn {
-                @include transition($transition-background-color);
-
-                // background-color: $chapter-body-inner-background-color;
-            }
-
             #{$b}__link--arrow {
                 @extend .link--arrow, :hover;
             }
@@ -63,10 +52,12 @@
     &__body {
         background-color: var(--entry-background-color, $entry-background-color);
         box-shadow: var(--entry-box-shadow, $entry-box-shadow);
-        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        padding: $spacer * 2;
 
         @include breakpoint(md) {
-            display: flex;
+            flex-direction: row;
         }
     }
 

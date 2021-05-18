@@ -44,13 +44,13 @@ strong {
 
 ol,
 ul {
-    padding-left: 2rem;
+    padding-left: $spacer * 2;
 }
 
 ol,
 ul,
 dl {
-    margin-bottom: 1rem;
+    margin-bottom: $spacer;
     margin-top: 0;
 }
 
@@ -60,11 +60,11 @@ dt {
 
 dd {
     margin-left: 0;
-    margin-top: 0.5rem;
+    margin-top: $spacer * 0.5;
 }
 
 dd + dt {
-    margin-top: 1rem;
+    margin-top: $spacer;
 }
 
 pre,
@@ -77,7 +77,7 @@ samp {
 pre {
     color: $gray-400;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: $spacer;
     margin-top: 0;
     overflow: auto;
 }
@@ -93,7 +93,7 @@ kbd {
     border-radius: 0.25rem;
     color: inherit;
     font-size: $font-size-code;
-    padding: 0.25rem 0.5rem;
+    padding: $spacer * 0.25 $spacer * 0.5;
 
     kbd {
         font-size: 1em;
@@ -117,5 +117,5 @@ kbd {
 .fpo {
     background-color: var(--fpo-background-color, $fpo-background-color);
     display: inline-block;
-    padding: 0.0625rem 0.275rem;
+    padding: $spacer * 0.0625 $spacer * 0.275;
 }

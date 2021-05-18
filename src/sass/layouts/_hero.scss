@@ -8,7 +8,7 @@
 
     &__body {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-bottom: $hero-padding-y / 2;
         padding-top: $hero-padding-y / 2;
 
@@ -33,18 +33,18 @@
     }
 
     &__main {
+        margin-bottom: $spacer;
+
         @include breakpoint(lg) {
+            margin-bottom: 0;
             max-width: calc(100% - #{$aside-width});
             padding-right: $spacer * 4;
         }
     }
 
     &__aside {
-        margin-bottom: $spacer;
-
         @include breakpoint(md) {
-            margin-bottom: 0;
-            margin-left: 4rem;
+            margin-left: $spacer * 4;
         }
     }
 }

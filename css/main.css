@@ -764,20 +764,6 @@ p {
   text-transform: uppercase;
 }
 
-.eyebrow {
-  color: #b4b6b8;
-  font-weight: 700;
-}
-.eyebrow--capped {
-  text-transform: uppercase;
-}
-.eyebrow--section {
-  letter-spacing: 0.225rem;
-  line-height: 1.25;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
 /**
  * base > animations
  */
@@ -1131,9 +1117,6 @@ p {
 .entry__item:hover .entry__body {
   box-shadow: none;
 }
-.entry__item:hover .entry__chapterBodyIn {
-  transition: background-color 250ms ease-in-out;
-}
 @media (min-width: 768px) {
   .entry__item {
     margin-bottom: 3rem;
@@ -1142,11 +1125,13 @@ p {
 .entry__body {
   background-color: var(--entry-background-color, #fff);
   box-shadow: var(--entry-box-shadow, 0.75rem 0.75rem 2rem 0 rgba(0, 0, 0, 0.075));
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
 }
 @media (min-width: 768px) {
   .entry__body {
-    display: flex;
+    flex-direction: row;
   }
 }
 .entry__shape {
@@ -1195,7 +1180,7 @@ p {
 }
 .hero__body {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
@@ -1218,18 +1203,18 @@ p {
 .hero__lead {
   margin-top: 1rem;
 }
+.hero__main {
+  margin-bottom: 1rem;
+}
 @media (min-width: 992px) {
   .hero__main {
+    margin-bottom: 0;
     max-width: calc(100% - 310px);
     padding-right: 4rem;
   }
 }
-.hero__aside {
-  margin-bottom: 1rem;
-}
 @media (min-width: 768px) {
   .hero__aside {
-    margin-bottom: 0;
     margin-left: 4rem;
   }
 }

@@ -126,7 +126,7 @@ $code-color: #d63384;
 $headings-font-family: 'canada-type-gibson', 'Gibson', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $headings-font-weight: 700;
 
-$paragraph-margin-bottom: 1rem;
+$paragraph-margin-bottom: $spacer;
 
 
 /**
@@ -144,7 +144,7 @@ $transition-opacity: opacity 250ms ease-in-out;
  */
 
 $icon-size: $base-font-size;
-$icon-stroke-width: 0.125rem;
+$icon-stroke-width: $spacer * 0.125;
 
 
 /**
@@ -160,9 +160,9 @@ $brand-font-weight: 700;
 
 $color-mode-background: $fire;
 $color-mode-active-background: $white;
-$color-mode-label-font-size: 0.875rem;
-$color-mode-toggle-margin-x: 0.5rem;
-$color-mode-toggle-font-size: 1.5rem;
+$color-mode-label-font-size: $spacer * 0.875;
+$color-mode-toggle-margin-x: $spacer * 0.5;
+$color-mode-toggle-font-size: $spacer * 1.5;
 $color-mode-icon-color: $white;
 $color-mode-icon-stroke-width: $icon-stroke-width;
 
@@ -172,12 +172,12 @@ $cover-background-color-dark: $ice-900;
 $entry-background-color: $white;
 $entry-background-color-dark: $gray-800;
 $entry-border-width: $spacer * 0.5;
-$entry-box-shadow: 0.75rem 0.75rem 2rem 0 rgb($black, 0.075);
+$entry-box-shadow: $spacer * 0.75 $spacer * 0.75 $spacer * 2 0 rgb($black, 0.075);
 $entry-margin-y-sm: $spacer * 2;
 $entry-margin-y-lg: $spacer * 3;
 $entry-shape-size: $spacer;
 
-$frame-border-width: 0.25rem;
+$frame-border-width: $spacer * 0.25;
 $frame-size: 1em;
 
 $chapter-background-color: $white;
@@ -186,8 +186,8 @@ $chapter-font-size-sm: $base-font-size * 0.625;
 $chapter-font-size-lg: $base-font-size;
 $chapter-frame-size: 14em;
 $chapter-icon-size: 2.5em;
-$chapter-outer-padding: 1.25rem;
-$chapter-inner-padding: 1.25rem;
+$chapter-outer-padding: $spacer * 1.25;
+$chapter-inner-padding: $spacer * 1.25;
 $chapter-label-font-size: 1.5em;
 $chapter-figure-font-size: 4.5em;
 $chapter-figure-font-weight: 800;
@@ -199,7 +199,7 @@ $masthead-nav-link-color: $gray-700;
 $masthead-nav-link-hover-color: $ocean;
 
 $nav-item-font-weight: 500;
-$nav-link-padding-x: 0.75rem;
+$nav-link-padding-x: $spacer * 0.75;
 $nav-link-active-font-weight: 600;
 
 $nav-toc-link-color: $ocean;
@@ -209,8 +209,8 @@ $nav-toc-sub-link-hover-color: $fire;
 
 $hero-background-color: $cover-background-color;
 $hero-background-color-dark: $cover-background-color-dark;
-$hero-padding-y: 4rem;
-$hero-lead-margin-y: 1rem;
+$hero-padding-y: $spacer * 4;
+$hero-lead-margin-y: $spacer;
 
 $intro-max-width: 720px;
 
@@ -227,4 +227,4 @@ $footer-background-color-dark: $ice-900;
  * buttons
  */
 
-$button-radius: 0.25rem;
+$button-radius: $spacer * 0.25;

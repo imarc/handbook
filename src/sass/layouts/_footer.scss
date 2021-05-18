@@ -7,8 +7,8 @@
     font-size: 0.825rem;
 
     &__body {
-        padding-bottom: 1.25rem;
-        padding-top: 1.25rem;
+        padding-bottom: $spacer * 1.25;
+        padding-top: $spacer * 1.25;
         text-align: center;
 
         @include breakpoint(md) {
@@ -32,7 +32,7 @@
 
     &__content {
         @include breakpoint(md) {
-            margin-left: 1.75rem;
+            margin-left: $spacer * 1.75;
         }
     }
 }
