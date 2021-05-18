@@ -417,18 +417,18 @@ The preferred method is to include an SVG icon as a `<symbol>`. This way, you ca
 Then, you can just reference them easily within the template code:
 
     <div class=“icon”>
-        <svg class=“icon”>
+        <svg class=“icon__svg”>
             <use xlink:href=“#icon-1” />
         </svg>
     </div>
     <div class=“icon”>
-        <svg class=“icon”>
+        <svg class=“icon__svg”>
             <use xlink:href=“#icon-2" />
         </svg>
     </div>
 
 A few things to note:
-* `viewbox` is set on the initial symbol definition.
+* `viewBox` is set on the initial symbol definition.
 * The SVG is set to `display: none;`.
 * Best practice is to wrap SVG symbols in a parent `<div>`, which you can use for standard positioning, sizing, and styling for your icons.
 
