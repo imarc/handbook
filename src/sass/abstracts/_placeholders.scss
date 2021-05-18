@@ -12,3 +12,17 @@
     width: 100%;
     z-index: -1;
 }
+
+%heading {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+
+%fluidtype {
+    font-size: clamp(var(--fluid-type-min, 1.25rem),
+    calc(1rem + var(--fluid-type-target, 5vw)),
+    var(--fluid-type-max, 1.777rem));
+}

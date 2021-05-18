@@ -3,7 +3,6 @@
  */
 
 .torso {
-
     background-color: var(--torso-background-color, $torso-background-color);
 
     &__body {
@@ -19,9 +18,9 @@
 
         @include breakpoint(lg) {
             max-width: calc(100% - #{$aside-width});
-            padding-bottom: 5rem;
-            padding-right: 4rem;
-            padding-top: 5rem;
+            padding-bottom: $spacer * 5;
+            padding-right: $spacer * 4;
+            padding-top: $spacer * 5;
         }
     }
 
@@ -39,9 +38,9 @@
             flex-shrink: 0;
             margin-left: 0;
             margin-right: 0;
-            padding-bottom: 5rem;
+            padding-bottom: $spacer * 5;
             padding-left: 2rem;
-            padding-top: 5rem;
+            padding-top: $spacer * 5;
         }
     }
 

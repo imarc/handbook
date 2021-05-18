@@ -156,8 +156,6 @@ $backdrop-shape-fill: $fire;
 
 $shape-fill: $fire;
 
-$brand-frame-height: 1.025em;
-$brand-font-size: 2rem;
 $brand-font-weight: 700;
 
 $color-mode-background: $fire;
@@ -184,11 +182,15 @@ $frame-size: 1em;
 
 $chapter-background-color: $white;
 $chapter-background-color-dark: $gray-900;
-$chapter-body-border-width: 0.25rem;
-$chapter-body-outer-padding: 1.25rem;
-$chapter-body-inner-padding: 0.75rem;
-$chapter-body-inner-background-color: $gray-100;
-$chapter-icon-size: 2.5rem;
+$chapter-font-size-sm: $base-font-size * 0.625;
+$chapter-font-size-lg: $base-font-size;
+$chapter-frame-size: 14em;
+$chapter-icon-size: 2.5em;
+$chapter-outer-padding: 1.25rem;
+$chapter-inner-padding: 1.25rem;
+$chapter-label-font-size: 1.5em;
+$chapter-figure-font-size: 4.5em;
+$chapter-figure-font-weight: 800;
 
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;

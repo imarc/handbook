@@ -3,28 +3,28 @@
  */
 
 .chapter {
-    position: relative;
-    z-index: 0;
-
     &__body {
-        padding-bottom: $chapter-body-outer-padding;
-        padding-right: $chapter-body-outer-padding;
-    }
+        font-size: $chapter-font-size-sm;
+        padding-bottom: $chapter-outer-padding;
+        padding-right: $chapter-outer-padding;
 
-    &__bodyOut {
-        padding: $chapter-body-border-width;
-        position: relative;
-
-        &::before {
-            @extend %border-gradient;
+        @include breakpoint(md) {
+            font-size: $chapter-font-size-lg;
         }
     }
 
-    &__bodyIn {
-        background-color: var(--chapter-background-color, $white);
+    &__frame {
+        @include frame($background: var(--chapter-background-color, $chapter-background-color), $frame-height: $chapter-frame-size);
+        align-content: space-between;
         display: flex;
         flex-direction: column;
-        padding: $chapter-body-inner-padding;
+        height: $chapter-frame-size;
+        padding: $chapter-inner-padding;
+        width: calc(#{$chapter-frame-size} / 1.38);
+    }
+
+    &__media {
+        margin-bottom: auto;
     }
 
     &__media .icon {
@@ -33,20 +33,17 @@
     }
 
     &__key {
-        --fluid-type-min: 3rem;
-        --fluid-type-target: 5vw;
-        --fluid-type-max: 4.5rem;
-        @extend %fluidtype;
         align-self: flex-end;
-        transform: translateX($chapter-body-outer-padding + $chapter-body-inner-padding + $chapter-body-border-width * 2) translateY($chapter-body-outer-padding + $chapter-body-inner-padding + $chapter-body-border-width * 2);
+        transform: translateX($chapter-outer-padding + $chapter-inner-padding) translateY($chapter-outer-padding + $chapter-inner-padding);
     }
 
     &__label {
-        font-size: 0.325em;
+        font-size: $chapter-label-font-size;
     }
 
     &__figure {
-        font-weight: 800;
+        font-size: $chapter-figure-font-size;
+        font-weight: $chapter-figure-font-weight;
         line-height: 0.75;
     }
 }
