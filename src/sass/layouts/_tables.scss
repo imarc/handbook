@@ -28,7 +28,7 @@ table {
 
     > :not(caption) > * > * {
         border-bottom-width: 0.0625rem;
-        padding: 0.5rem;
+        padding: $spacer * 0.5;
     }
 
     > tbody {

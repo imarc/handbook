@@ -13,23 +13,13 @@ a {
     }
 }
 
-%heading {
-    font-family: $headings-font-family;
-    font-size: clamp(var(--fluid-type-min, 1.25rem),
-    calc(1rem + var(--fluid-type-target, 5vw)),
-    var(--fluid-type-max, 1.777rem));
-    font-weight: $headings-font-weight;
-    line-height: 1.15;
-    margin-bottom: 0.75rem;
-    margin-top: 0;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5 {
     @extend %heading;
+    @extend %fluidtype;
 }
 
 h1 {
@@ -59,10 +49,17 @@ h5 {
 
 /* stylelint-disable selector-no-qualifying-type */
 
+h2[id],
+h3[id],
+h4[id] {
+    font-weight: 600;
+}
+
 h2[id] {
     border-top: 0.125rem solid var(--border-color, $border-color);
-    margin-top: 2rem;
-    padding-top: 1.75rem;
+    font-weight: 600;
+    margin-top: $spacer * 2;
+    padding-top: $spacer * 1.75;
 
     &:first-of-type {
         border: 0;
@@ -73,7 +70,7 @@ h2[id] {
 
 h3[id],
 h4[id] {
-    margin-top: 1.75rem;
+    margin-top: $spacer * 1.75;
 }
 
 /* stylelint-enable selector-no-qualifying-type */
@@ -83,58 +80,14 @@ p {
     margin-top: 0;
 }
 
-.brand {
-    &__logo {
-        --fluid-type-min: 1.875rem;
-        --fluid-type-max: 4.5rem;
-        font-family: $headings-font-family;
-        font-weight: $brand-font-weight;
-    }
-}
-
 .lead {
     color: var(--base-copy-lighter, $lead-color);
     font-size: 1.25rem;
     font-weight: 300;
-
-    &--ornament {
-        margin-top: 1.25rem;
-        padding-top: 1.25rem;
-        position: relative;
-
-        &::before {
-            background-color: currentColor;
-            bottom: auto;
-            content: '';
-            display: block;
-            height: 0.0625rem;
-            left: 0;
-            position: absolute;
-            right: auto;
-            top: 0;
-            width: 2rem;
-        }
-    }
 }
 
 .meta {
     font-size: 0.825rem;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-.eyebrow {
-    color: $gray-400;
-    font-weight: 700;
-
-    &--capped {
-        text-transform: uppercase;
-    }
-
-    &--section {
-        letter-spacing: 0.225rem;
-        line-height: 1.25;
-        margin-bottom: 4rem;
-        text-align: center;
-    }
 }

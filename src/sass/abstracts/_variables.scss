@@ -9,7 +9,7 @@
 
 // grayscale
 $white:    #fff;
-$gray-100: #f5f6f8;
+$gray-100: #f2efed;
 $gray-200: #e5e7eb;
 $gray-300: #d1d5db;
 $gray-400: #b4b6b8;
@@ -25,12 +25,7 @@ $ash:      #252d2f;
 $fire:     #ff675b;
 $ice:      #d3e6ea;
 $salt:     #f2efed;
-
-// more colors spun from https://tailwind.ink
 $ocean:    #387cf5;
-$olive:    #b4a50a;
-$limegreen:#2bb53f;
-$indigo:   #dd51e7;
 
 // shadings and tints
 $fire-100: tint-color($fire, 80%);
@@ -63,36 +58,6 @@ $salt-700: shade-color($salt, 40%);
 $salt-800: shade-color($salt, 60%);
 $salt-900: shade-color($salt, 80%);
 
-$olive-100: tint-color($olive, 80%);
-$olive-200: tint-color($olive, 60%);
-$olive-300: tint-color($olive, 40%);
-$olive-400: tint-color($olive, 20%);
-$olive-500: $olive;
-$olive-600: shade-color($olive, 20%);
-$olive-700: shade-color($olive, 40%);
-$olive-800: shade-color($olive, 60%);
-$olive-900: shade-color($olive, 80%);
-
-$limegreen-100: tint-color($limegreen, 80%);
-$limegreen-200: tint-color($limegreen, 60%);
-$limegreen-300: tint-color($limegreen, 40%);
-$limegreen-400: tint-color($limegreen, 20%);
-$limegreen-500: $limegreen;
-$limegreen-600: shade-color($limegreen, 20%);
-$limegreen-700: shade-color($limegreen, 40%);
-$limegreen-800: shade-color($limegreen, 60%);
-$limegreen-900: shade-color($limegreen, 80%);
-
-$indigo-100: tint-color($indigo, 80%);
-$indigo-200: tint-color($indigo, 60%);
-$indigo-300: tint-color($indigo, 40%);
-$indigo-400: tint-color($indigo, 20%);
-$indigo-500: $indigo;
-$indigo-600: shade-color($indigo, 20%);
-$indigo-700: shade-color($indigo, 40%);
-$indigo-800: shade-color($indigo, 60%);
-$indigo-900: shade-color($indigo, 80%);
-
 
 /**
  * spacing
@@ -110,7 +75,10 @@ $body-color-dark: $gray-200;
 $border-color: $salt;
 $border-color-dark: $salt-900;
 
-$base-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$fpo-background-color: $fire-200;
+$fpo-background-color-dark: $fire-800;
+
+$base-font-family: 'canada-type-gibson', 'Gibson', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $base-font-size: 1rem;
 $base-font-weight: 400;
 $base-line-height: 1.5;
@@ -156,9 +124,9 @@ $lead-color: $gray-700;
 $code-color: #d63384;
 
 $headings-font-family: 'canada-type-gibson', 'Gibson', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-$headings-font-weight: 600;
+$headings-font-weight: 700;
 
-$paragraph-margin-bottom: 1rem;
+$paragraph-margin-bottom: $spacer;
 
 
 /**
@@ -168,6 +136,7 @@ $paragraph-margin-bottom: 1rem;
 $transition-all: all 250ms ease-in-out;
 $transition-background-color: background-color 250ms ease-in-out;
 $transition-color: color 250ms ease-in-out;
+$transition-opacity: opacity 250ms ease-in-out;
 
 
 /**
@@ -175,36 +144,53 @@ $transition-color: color 250ms ease-in-out;
  */
 
 $icon-size: $base-font-size;
-$icon-stroke-width: 0.125rem;
+$icon-stroke-width: $spacer * 0.125;
 
 
 /**
  * layout stuff
  */
 
-$alert-background-color: $olive-100;
-$alert-background-color-dark: $olive-900;
-$alert-font-size: $base-font-size * 0.925;
-$alert-icon-size: $icon-size;
+$backdrop-shape-size: 50vw;
+$backdrop-shape-fill: $fire;
 
-$brand-font-size: 2rem;
+$shape-fill: $fire;
+
 $brand-font-weight: 700;
 
-$color-mode-active-background: $olive-200;
-$color-mode-active-background-dark: $indigo-800;
-$color-mode-label-font-size: 0.875rem;
-$color-mode-toggle-margin-x: 0.5rem;
-$color-mode-toggle-font-size: 1.5rem;
+$color-mode-background: $fire;
+$color-mode-active-background: $white;
+$color-mode-label-font-size: $spacer * 0.875;
+$color-mode-toggle-margin-x: $spacer * 0.5;
+$color-mode-toggle-font-size: $spacer * 1.5;
+$color-mode-icon-color: $white;
 $color-mode-icon-stroke-width: $icon-stroke-width;
 
-$cover-background-color: $ice;
+$cover-background-color: $gray-100;
 $cover-background-color-dark: $ice-900;
 
-$entry-background-color: $salt;
-$entry-background-color-dark: $salt-900;
-$entry-margin-y-sm: 2rem;
-$entry-margin-y-lg: 3rem;
-$entry-icon-stroke-width: 0.09375rem;
+$entry-background-color: $white;
+$entry-background-color-dark: $gray-800;
+$entry-border-width: $spacer * 0.5;
+$entry-box-shadow: $spacer * 0.75 $spacer * 0.75 $spacer * 2 0 rgb($black, 0.075);
+$entry-margin-y-sm: $spacer * 2;
+$entry-margin-y-lg: $spacer * 3;
+$entry-shape-size: $spacer;
+
+$frame-border-width: $spacer * 0.25;
+$frame-size: 1em;
+
+$chapter-background-color: $white;
+$chapter-background-color-dark: $gray-900;
+$chapter-font-size-sm: $base-font-size * 0.625;
+$chapter-font-size-lg: $base-font-size;
+$chapter-frame-size: 14em;
+$chapter-icon-size: 2.5em;
+$chapter-outer-padding: $spacer * 1.25;
+$chapter-inner-padding: $spacer * 1.25;
+$chapter-label-font-size: 1.5em;
+$chapter-figure-font-size: 4.5em;
+$chapter-figure-font-weight: 800;
 
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;
@@ -212,7 +198,10 @@ $masthead-brand-link-hover-color: $ocean;
 $masthead-nav-link-color: $gray-700;
 $masthead-nav-link-hover-color: $ocean;
 
-$nav-link-padding-x: 0.75rem;
+$nav-item-font-weight: 500;
+$nav-link-padding-x: $spacer * 0.75;
+$nav-link-active-font-weight: 600;
+
 $nav-toc-link-color: $ocean;
 $nav-toc-link-hover-color: $fire;
 $nav-toc-sub-link-color: $ash;
@@ -220,20 +209,15 @@ $nav-toc-sub-link-hover-color: $fire;
 
 $hero-background-color: $cover-background-color;
 $hero-background-color-dark: $cover-background-color-dark;
-$hero-heading-font-weight: 700;
-$hero-padding-y: 4rem;
-$hero-lead-margin-y: 1rem;
-$hero-icon-color: $gray-500;
-$hero-icon-size-sm: 3rem;
-$hero-icon-size-lg: 100%;
-$hero-icon-stroke-width: 0.0625rem;
+$hero-padding-y: $spacer * 4;
+$hero-lead-margin-y: $spacer;
 
-$intro-background-color: $ice;
-$intro-background-color-dark: $ice-900;
+$intro-max-width: 720px;
 
-$aside-background-color: $gray-100;
-$aside-background-color-dark: $gray-800;
 $aside-width: 310px;
+
+$torso-background-color: $white;
+$torso-background-color-dark: $gray-800;
 
 $footer-background-color: $ice;
 $footer-background-color-dark: $ice-900;
@@ -243,5 +227,4 @@ $footer-background-color-dark: $ice-900;
  * buttons
  */
 
-$button-radius: 0.25rem;
-
+$button-radius: $spacer * 0.25;

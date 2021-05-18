@@ -8,8 +8,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 1.25rem;
-        padding-top: 1.25rem;
+        padding-bottom: $spacer * 1.25;
+        padding-top: $spacer * 1.25;
 
         @include breakpoint(lg) {
             text-align: left;
@@ -45,7 +45,7 @@
         justify-content: flex-end;
 
         @include breakpoint(md) {
-            margin-left: 1.5rem;
+            margin-left: $spacer * 1.5;
         }
 
         @include breakpoint(lg) {
@@ -55,11 +55,11 @@
 
     &__nav {
         flex-grow: 1;
-        margin-top: 1rem;
+        margin-top: $spacer;
         width: 100%;
 
         @include breakpoint(sm) {
-            margin-left: -0.675rem;
+            margin-left: $spacer * -0.675;
             margin-top: 0;
         }
 
@@ -72,10 +72,10 @@
 
     &__nav-link {
         color: var(--base-copy, $body-color);
-        padding-bottom: 0.5rem;
+        padding-bottom: $spacer * 0.5;
         padding-left: 0;
         padding-right: 0;
-        padding-top: 0.5rem;
+        padding-top: $spacer * 0.5;
 
         @include breakpoint(sm) {
             padding-left: $nav-link-padding-x;

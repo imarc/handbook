@@ -1,103 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" color-mode="light">
+<html lang="en" class="foo" color-mode="light">
 	<head>
 		{% include _head.html %}
 	</head>
-	<body class="homepage">
+	<body class="homepage backdrop ornaments">
         <div class="intro">
             <div class="intro__body">
+                <div class="color-mode intro__color-mode">
+                    <div class="color-mode__body">
+                        <button
+                            aria-label="View site in light mode"
+                            class="color-mode__button color-mode__button--light"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon color-mode__icon"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                            </svg>
+                            <div class="color-mode__background"></div>
+                        </button>
+
+                        <button
+                        aria-label="View site in dark mode"
+                        class="color-mode__button color-mode__button--dark"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon color-mode__icon"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                            </svg>
+                            <div class="color-mode__background"></div>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="intro__content">
-                    <div class="intro__wrapper">
+                    <div class="container--md">
                         <div class="brand">
-                            <h1 class="brand__logo">
+                            <h1 class="brand__logo intro__brandLogo">
                                 Handbook
                             </h1>
                         </div>
                         <p class="lead lead--ornament">
                             {{ content | remove: "<p>" | remove: "</p>"}}
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="color-mode">
-                            <div class="color-mode__body">
-                                <button
-                                    aria-label="View site in light mode"
-                                    class="color-mode__button color-mode__button--light"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="icon color-mode__icon"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <circle cx="12" cy="12" r="4" />
-                                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                                    </svg>
-                                    <div class="color-mode__active"></div>
-                                </button>
-
-                                <button
-                                aria-label="View site in dark mode"
-                                class="color-mode__button color-mode__button--dark"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="icon color-mode__icon"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                                    </svg>
-                                    <div class="color-mode__active"></div>
-                                </button>
+        <div class="container--lg">
+            <div class="entry">
+                <div class="js-entry__item entry__item">
+                    <div class="js-entry__shape entry__shape entry__shape--triangle">
+                        {% include _shape-triangle.html %}
+                    </div>
+                    <div class="js-entry__shape entry__shape entry__shape--circle">
+                        {% include _shape-circle.html %}
+                    </div>
+                    <div class="entry__body">
+                        <div class="entry__aside">
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__frame">
+                                        <div class="chapter__media">
+                                            {% include _icon-strategy.html %}
+                                        </div>
+                                        <div class="chapter__key">
+                                            <div class="chapter__label">Chapter</div>
+                                            <div class="chapter__figure">01</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="intro__media">
-                    <img
-                        alt=""
-                        class="intro__asset lazyload"
-                        data-srcset="img/culture-shed-sm.jpg 800w,
-                        img/culture-shed.jpg 810w"
-                        data-sizes="auto"
-                    >
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert--center">
-            <div class="container--lg">
-                <div class="alert__body">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="alert__icon" width="20" height="20" viewBox="0 0 24 24">
-                        <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
-                        <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
-                        <line x1="9.7" y1="17" x2="14.3" y2="17" />
-                    </svg>
-                    <div class="alert__content">
-                        Hiring alert! Imarc is looking for <strong><a href="https://www.imarc.com/careers"> front-end engineers and strategists</a></strong>!
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container--xl">
-            <div class="entry">
-                <div class="entry__item">
-                    <div class="entry__body">
-                        <div>
-                            <div class="entry__media">
-                                {% include _icon-strategy.html %}
-                            </div>
+                        <div class="entry__main">
                             <h2 class="entry__heading">
                                 Strategy / UX
                             </h2>
                             <p class="entry__copy">
                                 Discovery and definition
                             </p>
-                            <a class="link link--icon" href="strategy">
-                                Read
+                            <a class="link link--icon link--arrow link--semibold entry__link entry__link--arrow" href="strategy">
+                                Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -108,20 +102,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="entry__item">
+                <div class="js-entry__item entry__item">
+                    <div class="js-entry__shape entry__shape entry__shape--circle">
+                        {% include _shape-square.html %}
+                    </div>
+                    <div class="js-entry__shape entry__shape entry__shape--square">
+                        {% include _shape-triangle.html %}
+                    </div>
                     <div class="entry__body">
-                        <div>
-                            <div class="entry__media">
-                                {% include _icon-creative.html %}
+                        <div class="entry__aside">
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__frame">
+                                        <div class="chapter__media">
+                                            {% include _icon-creative.html %}
+                                        </div>
+                                        <div class="chapter__key">
+                                            <div class="chapter__label">Chapter</div>
+                                            <div class="chapter__figure">02</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="entry__main">
                             <h2 class="entry__heading">
                                 Creative
                             </h2>
                             <p class="entry__copy">
                                 Visualize and create
                             </p>
-                            <a class="link link--icon" href="creative">
-                                Read
+                            <a class="link link--icon link--arrow link--semibold entry__link entry__link--arrow" href="creative">
+                                Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -132,21 +144,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="entry__item">
+                <div class="js-entry__item entry__item">
+                    <div class="js-entry__shape entry__shape entry__shape--triangle">
+                        {% include _shape-triangle.html %}
+                    </div>
+                    <div class="js-entry__shape entry__shape entry__shape--circle">
+                        {% include _shape-circle.html %}
+                    </div>
                     <div class="entry__body">
-                        <div>
-                            <div class="entry__media">
-                                {% include _icon-frontend.html %}
+                        <div class="entry__aside">
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__frame">
+                                        <div class="chapter__media">
+                                            {% include _icon-frontend.html %}
+                                        </div>
+                                        <div class="chapter__key">
+                                            <div class="chapter__label">Chapter</div>
+                                            <div class="chapter__figure">03</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="entry__main">
                             <h2 class="entry__heading">
                                 Front-end
-
                             </h2>
                             <p class="entry__copy">
                                 Style and organization
                             </p>
-                            <a class="link link--icon" href="frontend">
-                                Read
+                            <a class="link link--icon link--arrow link--semibold entry__link entry__link--arrow" href="frontend">
+                                Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -157,20 +186,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="entry__item">
+                <div class="js-entry__item entry__item">
+                    <div class="js-entry__shape entry__shape entry__shape--triangle">
+                        {% include _shape-square.html %}
+                    </div>
+                    <div class="js-entry__shape entry__shape entry__shape--circle">
+                        {% include _shape-circle.html %}
+                    </div>
                     <div class="entry__body">
-                        <div>
-                            <div class="entry__media">
-                                {% include _icon-backend.html %}
+                        <div class="entry__aside">
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__frame">
+                                        <div class="chapter__media">
+                                            {% include _icon-backend.html %}
+                                        </div>
+                                        <div class="chapter__key">
+                                            <div class="chapter__label">Chapter</div>
+                                            <div class="chapter__figure">04</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="entry__main">
                             <h2 class="entry__heading">
                                 Back-end
                             </h2>
                             <p class="entry__copy">
                                 Integration and structure
                             </p>
-                            <a class="link link--icon" href="backend">
-                                Read
+                            <a class="link link--icon link--arrow link--semibold entry__link entry__link--arrow" href="backend">
+                                Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -181,20 +228,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="entry__item">
+                <div class="js-entry__item entry__item">
+                    <div class="js-entry__shape entry__shape entry__shape--triangle">
+                        {% include _shape-triangle.html %}
+                    </div>
+                    <div class="js-entry__shape entry__shape entry__shape--circle">
+                        {% include _shape-circle.html %}
+                    </div>
                     <div class="entry__body">
-                        <div>
-                            <div class="entry__media">
-                                {% include _icon-servers.html %}
+                        <div class="entry__aside">
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__frame">
+                                        <div class="chapter__media">
+                                            {% include _icon-creative.html %}
+                                        </div>
+                                        <div class="chapter__key">
+                                            <div class="chapter__label">Chapter</div>
+                                            <div class="chapter__figure">05</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="entry__main">
                             <h2 class="entry__heading">
                                 Servers
                             </h2>
                             <p class="entry__copy">
                                 Architecture and management
                             </p>
-                            <a class="link link--icon" href="servers">
-                                Read
+                            <a class="link link--icon link--arrow link--semibold entry__link entry__link--arrow" href="servers">
+                                Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <line x1="5" y1="12" x2="19" y2="12" />
@@ -205,20 +270,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="entry__item">
+                <div class="js-entry__item entry__item">
+                    <div class="js-entry__shape entry__shape entry__shape--triangle">
+                        {% include _shape-square.html %}
+                    </div>
+                    <div class="js-entry__shape entry__shape entry__shape--circle">
+                        {% include _shape-triangle.html %}
+                    </div>
                     <div class="entry__body">
-                        <div>
-                            <div class="entry__media">
-                                {% include _icon-deployment.html %}
+                        <div class="entry__aside">
+                            <div class="chapter">
+                                <div class="chapter__body">
+                                    <div class="chapter__frame entry__chapterFrame">
+                                        <div class="chapter__media">
+                                            {% include _icon-deployment.html %}
+                                        </div>
+                                        <div class="chapter__key">
+                                            <div class="chapter__label">Chapter</div>
+                                            <div class="chapter__figure">06</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="entry__main">
                             <h2 class="entry__heading">
                                 Deployment
                             </h2>
                             <p class="entry__copy">
                                 Server automation
                             </p>
-                            <a class="link link--icon" href="deployment">
-                                Read
+                            <a class="link link--icon link--arrow link--semibold entry__link entry__link--arrow" href="deployment">
+                                Read this chapter
 
                                 <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <line x1="5" y1="12" x2="19" y2="12" />

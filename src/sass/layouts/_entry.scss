@@ -3,45 +3,104 @@
  */
 
 .entry {
-    display: grid;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-
-    @include breakpoint(md) {
-        gap: $entry-margin-y-lg;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    @include breakpoint(lg) {
-        padding-bottom: 4rem;
-        padding-top: 4rem;
-    }
+    $b: &;
 
     &__item {
         margin-bottom: $entry-margin-y-sm;
+        padding: $entry-border-width;
+        position: relative;
+
+        &::before {
+            @extend %border-gradient;
+
+            @include transition($transition-opacity);
+
+            opacity: 0;
+        }
+
+        .entry__chapterFrame {
+            @include transition($transition-background-color);
+        }
+
+        .entry__chapterBodyIn {
+            @include transition($transition-background-color);
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::before {
+                @include transition($transition-opacity);
+
+                opacity: 1;
+            }
+
+            #{$b}__body {
+                box-shadow: none;
+            }
+
+            #{$b}__link--arrow {
+                @extend .link--arrow, :hover;
+            }
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: $entry-margin-y-lg;
+        }
+    }
+
+    &__body {
+        background-color: var(--entry-background-color, $entry-background-color);
+        box-shadow: var(--entry-box-shadow, $entry-box-shadow);
+        display: flex;
+        flex-direction: column;
+        padding: $spacer * 2;
+
+        @include breakpoint(md) {
+            flex-direction: row;
+        }
+    }
+
+    &__shape {
+        left: 50%;
+        margin-left: -$entry-shape-size / 2;
+        margin-top: -$entry-shape-size / 2;
+        position: absolute;
+        top: 50%;
+        width: $entry-shape-size;
+        z-index: -2;
+    }
+
+    &__shape .shape {
+        fill: $shape-fill;
+    }
+
+    &__aside {
+        margin-bottom: $spacer * 2;
+        margin-right: $spacer * 4;
 
         @include breakpoint(md) {
             margin-bottom: 0;
         }
     }
 
-    &__body {
-        background-color: var(--entry-background-color, $entry-background-color);
-        padding: 2rem;
+    &__main {
+        flex-grow: 1;
     }
 
     &__heading {
-        font-size: 1.275rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: $spacer * 1.5;
     }
 
-    &__media {
-        margin-bottom: 0.75rem;
+    &__copy {
+        margin-bottom: $spacer * 1.5;
     }
 
-    &__media .icon {
-        height: 2rem;
-        stroke-width: $entry-icon-stroke-width;
-        width: 2rem;
+    &__link {
+        color: inherit;
+
+        &:hover {
+            color: inherit;
+        }
     }
 }

@@ -8,9 +8,8 @@
 
     &__body {
         display: flex;
-        font-size: $alert-font-size;
-        padding-bottom: 4rem;
-        padding-top: 4rem;
+        padding-bottom: $spacer * 4;
+        padding-top: $spacer * 4;
     }
 }
 

@@ -6,11 +6,11 @@
     $b: &;
 
     &__body {
-        background-color: var(--matte, $white);
+        background-color: $color-mode-background;
         border-radius: 0.5rem;
         display: flex;
-        padding: 0.25rem;
-        width: 5.5rem;
+        padding: $spacer * 0.25;
+        width: 5rem;
     }
 
     &__button {
@@ -21,20 +21,19 @@
         cursor: pointer;
         display: flex;
         flex: 1 0 0%;
-        font-size: 1rem;
         height: 2rem;
         justify-content: center;
         line-height: 1;
         padding: 0;
         position: relative;
         text-align: center;
-        width: 2.75rem;
+        width: 2.5rem;
         z-index: 0;
     }
 
-    &__active {
+    &__background {
         @include transition($transition-background-color);
-        background-color: var(--color-mode-active, $ice);
+        background-color: $color-mode-active-background;
         border-radius: 0.25rem;
         display: none;
         height: 100%;
@@ -43,13 +42,14 @@
         top: 0;
         width: 100%;
         z-index: -1;
+
     }
 
-    &__button #{$b}__icon {
-        height: 1.125rem;
-        stroke: var(--base-copy, $body-color);
+    &__icon {
+        height: 1.25rem;
+        stroke: $color-mode-icon-color;
         stroke-width: $color-mode-icon-stroke-width;
-        width: 1.125rem;
+        width: 1.25rem;
     }
 }
 

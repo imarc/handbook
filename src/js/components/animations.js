@@ -1,31 +1,68 @@
-import { gsap } from 'gsap'
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
-import { Flip } from 'gsap/Flip'
+import { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/ScrollTrigger.js'
 
+gsap.registerPlugin(ScrollTrigger)
 
 /**
  * animations
  */
 
-gsap.registerPlugin(DrawSVGPlugin)
-gsap.registerPlugin(Flip)
+const entryItems = document.querySelectorAll(".entry__item")
 
-gsap.from(".entry__item", {
-    ease: "power3.out",
-    opacity: 0,
-    duration: 1.25,
-    y: 20,
-    stagger: {
-        amount: 0.5,
-        grid: [0,1],
-    }
-});
 
-var tl = gsap.timeline()
-tl.from(".icon--dept .icon__part", {
-    delay: .25,
-    duration: .75,
-    drawSVG: 0,
-    opacity: 0,
-    ease: "expo.in"
-}, 0.1)
+
+Array.from(entryItems).forEach((entryItem) => {
+    const entryItemX = entryItem.offsetWidth / 2.15;
+    const entryItemY = entryItem.offsetHeight / 2.15;
+
+    const arrShapeLocations = [
+        {
+            x: entryItemX,
+            y: -entryItemY,
+        },
+        {
+            x: -entryItemX,
+            y: entryItemY
+        }
+    ]
+
+    let shapes = Array.from(entryItem.querySelectorAll(".entry__shape"))
+
+    shapes.sort((a, b) => 0.5 - Math.random())
+
+    entryItem.addEventListener("mouseenter", () => {
+        shapes.forEach((shape, index) => {
+            const location = arrShapeLocations[index]
+
+            ScrollTrigger.matchMedia({
+                "(min-width: 1180px)": () => {
+                    gsap.to(shape, {
+                        duration: .25,
+                        ease: 'expo.inOut',
+                        scale: 12,
+                        ...location,
+                    });
+                }
+            })
+        })
+    })
+
+    entryItem.addEventListener("mouseleave", () => {
+        shapes.forEach((shape, index) => {
+
+
+            ScrollTrigger.matchMedia({
+                "(min-width: 1180px)": () => {
+                    gsap.to(shape, {
+                        duration: .25,
+                        ease: 'expo.inOut',
+                        scale: 1,
+                        x: 0,
+                        y: 0,
+                    });
+                }
+            })
+        })
+
+    })
+})

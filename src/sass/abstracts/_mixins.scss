@@ -9,6 +9,46 @@
     }
 }
 
+@mixin frame(
+    $border-width: $frame-border-width,
+    $color-start: #ee7162,
+    $color-end: #f9d253,
+    $frame-height: $frame-size,
+    $background: transparent
+    ) {
+    min-width: calc(#{$frame-height} / 1.38);
+    position: relative;
+    z-index: 0;
+
+    &::before,
+    &::after {
+        bottom: auto;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &::before {
+        background-image: linear-gradient(to bottom, $color-start, $color-end);
+        clip-path: polygon(0% 0%, 0% 100%, $border-width 100%, $border-width $border-width, calc(100% - #{$border-width}) $border-width, calc(100% - #{$border-width}) calc(100% - #{$border-width}), $border-width calc(100% - #{$border-width}), 0% 100%, 100% 100%, 100% 0%);
+        height: $frame-height;
+        width: calc(#{$frame-height} / 1.38);
+    }
+
+    &::after {
+        background-color: $background;
+        height: calc(#{$frame-height} - (#{$border-width} * 2));
+        left: $border-width;
+        top: $border-width;
+        width: calc(#{$frame-height} / 1.38 - (#{$border-width} * 2));
+    }
+
+
+}
+
 @mixin linkHoverLine($start: 60%, $stop: 90%, $color: $ice, $borderColor: $fire, $borderThickness: 0.125rem, $transition: 250ms) {
     @at-root [color-mode='light'] & {
         background-image: linear-gradient(transparent $start, $color $start, $color $stop, $borderColor calc(#{$stop} + #{$borderThickness}), transparent calc(#{$stop} + #{$borderThickness}));

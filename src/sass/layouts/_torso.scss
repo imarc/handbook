@@ -3,15 +3,7 @@
  */
 
 .torso {
-    $container-max-width: map-get($container-max-widths, xl);
-
-    @include breakpoint(lg) {
-        background-image: linear-gradient(to right, transparent calc(100% - #{$aside-width} - #{$container-padding-x}), var(--aside-background-color, $aside-background-color) 1%);
-    }
-
-    @include breakpoint(xl) {
-        background-image: linear-gradient(to right, transparent calc((50% + ((#{$container-max-width} / 2) - #{$container-padding-x}) - #{$aside-width})), var(--aside-background-color, $aside-background-color) 1%);
-    }
+    background-color: var(--torso-background-color, $torso-background-color);
 
     &__body {
         @include breakpoint(lg) {
@@ -21,36 +13,34 @@
     }
 
     &__main {
-        padding-bottom: 3rem;
-        padding-top: 3rem;
+        padding-bottom: $spacer * 3;
+        padding-top: $spacer * 3;
 
         @include breakpoint(lg) {
             max-width: calc(100% - #{$aside-width});
-            padding-bottom: 5rem;
-            padding-right: 4rem;
-            padding-top: 5rem;
+            padding-bottom: $spacer * 5;
+            padding-right: $spacer * 4;
+            padding-top: $spacer * 5;
         }
     }
 
     &__aside {
-        background-color: var(--aside-background-color, $aside-background-color);
         margin-left: -$container-padding-x;
         margin-right: -$container-padding-x;
-        padding-bottom: 3rem;
+        padding-bottom: $spacer * 3;
         padding-left: $container-padding-x;
         padding-right: $container-padding-x;
-        padding-top: 3rem;
+        padding-top: $spacer * 3;
 
         @include breakpoint(lg) {
-            background-color: transparent;
             display: block;
             flex-basis: $aside-width;
             flex-shrink: 0;
             margin-left: 0;
             margin-right: 0;
-            padding-bottom: 5rem;
-            padding-left: 2rem;
-            padding-top: 5rem;
+            padding-bottom: $spacer * 5;
+            padding-left: $spacer * 2;
+            padding-top: $spacer * 5;
         }
     }
 

@@ -1,0 +1,19 @@
+/**
+ * layouts > brand
+ */
+
+.brand {
+    &__logo {
+        @extend %heading;
+        @extend %fluidtype;
+
+        @include frame();
+        display: inline-block;
+        font-weight: $brand-font-weight;
+        margin-bottom: 0;
+        padding-bottom: 0.15em;
+        padding-left: 0.175em;
+        padding-right: 0.175em;
+        padding-top: 0.15em;
+    }
+}

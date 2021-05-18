@@ -3,6 +3,7 @@ title: Front-end
 lead: All things front-end development such as Sass, typography basics, accessibility, and more.
 layout: default
 icon: _icon-frontend.html
+chapter: '03'
 ---
 
 ## Boilerplate

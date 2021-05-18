@@ -1,0 +1,49 @@
+/**
+ * layouts > chapter
+ */
+
+.chapter {
+    &__body {
+        font-size: $chapter-font-size-sm;
+        padding-bottom: $chapter-outer-padding;
+        padding-right: $chapter-outer-padding;
+
+        @include breakpoint(md) {
+            font-size: $chapter-font-size-lg;
+        }
+    }
+
+    &__frame {
+        @include frame($background: var(--chapter-background-color, $chapter-background-color), $frame-height: $chapter-frame-size);
+        align-content: space-between;
+        display: flex;
+        flex-direction: column;
+        height: $chapter-frame-size;
+        padding: $chapter-inner-padding;
+        width: calc(#{$chapter-frame-size} / 1.38);
+    }
+
+    &__media {
+        margin-bottom: auto;
+    }
+
+    &__media .icon {
+        height: $chapter-icon-size;
+        width: $chapter-icon-size;
+    }
+
+    &__key {
+        align-self: flex-end;
+        transform: translateX($chapter-outer-padding + $chapter-inner-padding) translateY($chapter-outer-padding + $chapter-inner-padding);
+    }
+
+    &__label {
+        font-size: $chapter-label-font-size;
+    }
+
+    &__figure {
+        font-size: $chapter-figure-font-size;
+        font-weight: $chapter-figure-font-weight;
+        line-height: 0.75;
+    }
+}
