@@ -39,7 +39,7 @@ Array.from(entryItems).forEach((entryItem) => {
                     gsap.to(shape, {
                         duration: .25,
                         ease: 'expo.inOut',
-                        scale: 12,
+                        scale: 1.5,
                         ...location,
                     });
                 }
@@ -49,7 +49,6 @@ Array.from(entryItems).forEach((entryItem) => {
 
     entryItem.addEventListener("mouseleave", () => {
         shapes.forEach((shape, index) => {
-
 
             ScrollTrigger.matchMedia({
                 "(min-width: 1180px)": () => {
@@ -63,6 +62,5 @@ Array.from(entryItems).forEach((entryItem) => {
                 }
             })
         })
-
     })
 })

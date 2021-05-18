@@ -52,4 +52,8 @@
     .color-mode__button--dark .color-mode__icon {
         stroke: color-contrast($color-mode-active-background);
     }
+
+    .backdrop::after {
+        opacity: 0.25;
+    }
 }
