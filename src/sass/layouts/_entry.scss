@@ -77,10 +77,10 @@
 
     &__aside {
         margin-bottom: $spacer * 2;
-        margin-right: $spacer * 4;
 
         @include breakpoint(md) {
             margin-bottom: 0;
+            margin-right: $spacer * 4;
         }
     }
 
