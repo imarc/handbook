@@ -128,7 +128,7 @@ $breakpoints: (
 $font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 $font-size-code: 0.875em;
 
-$link: $ocean;
+$link: $fire;
 $link-hover: $fire;
 
 $lead-color: $gray-700;
@@ -201,16 +201,16 @@ $chapter-figure-font-weight: 800;
 
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;
-$masthead-brand-link-hover-color: $ocean;
+$masthead-brand-link-hover-color: $fire;
 $masthead-nav-link-color: $gray-700;
-$masthead-nav-link-hover-color: $ocean;
+$masthead-nav-link-hover-color: $fire;
 
 $nav-item-font-weight: 500;
 $nav-link-padding-x: $spacer * 0.75;
 $nav-link-active-font-weight: 600;
 
-$nav-toc-link-color: $ocean;
-$nav-toc-link-hover-color: $fire;
+$nav-toc-link-color: $link;
+$nav-toc-link-hover-color: $link-hover;
 $nav-toc-sub-link-color: $ash;
 $nav-toc-sub-link-hover-color: $fire;
 
