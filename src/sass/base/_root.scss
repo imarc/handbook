@@ -3,6 +3,7 @@
  */
 
 :root {
+    font-size: $root-font-size;
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
