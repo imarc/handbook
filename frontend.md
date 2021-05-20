@@ -79,18 +79,21 @@ If no meta description exists, Google will create its own from on-page content.
 
 #### Favicon / touch icons
 
-Use 32x32 PNG files for favicons:
+Favicons: use a 32x32 PNG file:
 
-    <link rel="shortcut icon" href="/img/icons/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png">
 
-iOS and Android devices both support touch icons. A touch icon is what will appear on a user's smartphone if they save a webpage as a bookmark to their homescreen.
+Touch icons: use a 180x180 PNG file.
 
-    <link rel="apple-touch-icon" href="/img/icons/touch-icon.png">
+    <link rel="apple-touch-icon" href="/img/touch-icon.png">
 
-Your touch icons should be a PNG at 192x192. It’s possible to specify
-different sizes for different devices, but using a single high
-resolution touch icon is the easiest way to ensure the highest
-quality icon. For further reading, see the [iOS Developer Library](http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html).
+iOS and Android devices both support touch icons. A touch icon is what will appear on a smartphone if a user saves a webpage to their homescreen.
+
+**“What about the .ico file format?”** 
+
+If you need to support old, legacy browsers, you can still use the `.ico` file format. You should host this file at the root-level, as some user agents only look at the root-level (e.g. RSS readers).
+
+    <link rel="icon" href="/favicon.ico">
 
 #### Character encoding
 
