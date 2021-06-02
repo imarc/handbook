@@ -22,7 +22,8 @@ Edit and save a respective department's markdown file (e.g. `frontend.md`). See 
 
 ### Embeds
 
-As of this writing, we embed Codepen examples. See LastPass for its login credentials. Wrap Codepen embed code in a `<div class="emebed"></div>` parent for proper spacing. you can also remove the byline copy Codepen adds.
+As of this writing, we embed Codepen examples. See LastPass for its login credentials. Wrap Codepen embed code in a `<div class="emebed"></div>` parent for proper spacing. Remove the _See the Pen_ byline copy and the `<script>`.
+
 ## Development
 
 ### Serve Handbook in browser
@@ -41,7 +42,7 @@ HTML classes are formed following [BEM's Two Dashes Style](https://en.bem.info/m
 
 ### Fonts
 
-We use the Gibson typeface via TypeKit (Adobe Fonts).
+Handbook uses the Gibson typeface via TypeKit (Adobe Fonts).
 
 ### Icons
 
