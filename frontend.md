@@ -124,7 +124,12 @@ Ensure a device’s viewport is set to `device-width`, which is the width of the
 
 #### Font-size
 
-Because users are able to set their preferred font-size in their web browser, **do not set a default font-size on the** `<html>` **or** `<body>` **selectors**. Let the browser’s default size (usually 16px) serve as a baseline. From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit.
+Because users are able to set their preferred font-size in their web browser, **do not set a default font-size on the** `<html>` **or** `:root` **selectors**. Let the browser’s default size serve as a baseline (usually 100% which equals 16px). From here, we can control font-size *proportion* with relative sizing units `rem` or `em`. Avoid using the `px` unit.
+
+<div class="embed">
+    <div class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="imarcagency" data-slug-hash="zYZRzdX" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="font-size: 16px base best practice">
+    </div>
+</div>
 
 **“The design I was given has a larger default font-size than 16px. What do I do?”**
 

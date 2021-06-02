@@ -16,6 +16,13 @@ If you don’t have [Bundler](https://rubygems.org/gems/bundler), install it via
 
 Run `npm i` to install node packages.
 
+## Content Authoring
+
+Edit and save a respective department's markdown file (e.g. `frontend.md`). See a [markdown guide](https://guides.github.com/features/mastering-markdown/) for editing help.
+
+### Embeds
+
+As of this writing, we embed Codepen examples. See LastPass for its login credentials. Wrap Codepen embed code in a `<div class="emebed"></div>` parent for proper spacing. you can also remove the byline copy Codepen adds.
 ## Development
 
 ### Serve Handbook in browser
