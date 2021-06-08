@@ -3,13 +3,36 @@
  */
 
 .masthead {
+
+    @at-root .js-masthead__toggle {
+        @include frame($frame-height: $masthead-nav-toggle-size, $frame-width-factor: 0.5, $background: rgba($white, 0.75), $is-scalable: true);
+
+        align-items: center;
+        bottom: $masthead-nav-toggle-bottom-pos;
+        display: flex;
+        font-weight: $masthead-nav-toggle-font-weight;
+        justify-content: center;
+        padding-bottom: $masthead-nav-toggle-padding-y;
+        padding-left: $masthead-nav-toggle-padding-x;
+        padding-right: $masthead-nav-toggle-padding-x;
+        padding-top: $masthead-nav-toggle-padding-y;
+        position: fixed;
+        right: $masthead-nav-toggle-right-pos;
+        text-decoration: none;
+
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+
     &__body {
         align-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: $spacer * 1.25;
-        padding-top: $spacer * 1.25;
+        padding-bottom: $masthead-body-padding-y;
+        padding-top: $masthead-body-padding-y;
+        position: relative;
 
         @include breakpoint(lg) {
             text-align: left;
@@ -22,20 +45,20 @@
         font-size: 1.625rem;
         font-weight: $masthead-brand-font-weight;
 
-        @include breakpoint(lg) {
-            margin-bottom: 0;
-        }
-
         &:hover {
             color: $masthead-brand-link-hover-color;
         }
     }
 
-    &__controls {
+    &__wrapper {
+        display: flex;
+
         @include breakpoint(md) {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
+            width: 100%;
+        }
+
+        @include breakpoint(lg) {
+            width: auto;
         }
     }
 
@@ -45,20 +68,20 @@
         justify-content: flex-end;
 
         @include breakpoint(md) {
-            margin-left: $spacer * 1.5;
+            position: absolute;
+            right: 0;
+            top: $masthead-body-padding-y;
         }
 
         @include breakpoint(lg) {
-            order: 3;
+            margin-left: $spacer * 1.5;
+            position: static;
         }
     }
 
     &__nav {
-        flex-grow: 1;
-        margin-top: $spacer;
-        width: 100%;
-
-        @include breakpoint(sm) {
+        @include breakpoint(md) {
+            flex-grow: 1;
             margin-left: $spacer * -0.675;
             margin-top: 0;
         }
