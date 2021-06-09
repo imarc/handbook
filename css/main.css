@@ -431,7 +431,7 @@ h5 {
   margin-top: 0;
 }
 
-.brand__logo, h1,
+h1,
 h2,
 h3,
 h4,
@@ -862,6 +862,7 @@ body.mm-ocd-opened {
   --matte: #f2efed;
   --hero-background-color: #f2efed;
   --cover-background-color: #f2efed;
+  --masthead-background-color: #f2efed;
   --footer-background-color: #d3e6ea;
   --chapter-background-color: #fff;
   --fpo-background-color: #ffc2bd;
@@ -885,6 +886,7 @@ body.mm-ocd-opened {
   --matte: #0d0f12;
   --hero-background-color: #2a2e2f;
   --cover-background-color: #2a2e2f;
+  --masthead-background-color: #2a2e2f;
   --footer-background-color: #2a2e2f;
   --chapter-background-color: #0d0f12;
   --fpo-background-color: #662924;
@@ -1152,6 +1154,7 @@ p {
   position: relative;
   z-index: 0;
   display: inline-block;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0;
   padding-bottom: 0.15em;
@@ -1450,6 +1453,8 @@ p {
   text-align: center;
 }
 .intro__brandLogo {
+  --fluid-type-min: 1.875rem;
+  --fluid-type-max: 4.5rem;
   margin-bottom: 0.75rem;
 }
 .intro__lead {
@@ -1663,6 +1668,13 @@ p {
 /**
  * layouts > masthead
  */
+.masthead {
+  background-color: var(--masthead-background-color, #f2efed);
+  transition: transform 200ms linear;
+  width: 100%;
+  will-change: transform;
+  z-index: 1;
+}
 #js-masthead__nav:not(.mm-spn) {
   display: none;
 }
@@ -1724,8 +1736,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   position: relative;
 }
 @media (min-width: 992px) {
@@ -1736,7 +1748,6 @@ p {
 .masthead__brand {
   color: var(--base-copy, #252d2f);
   display: inline-block;
-  font-size: 1.625rem;
   font-weight: 700;
 }
 .masthead__brand:hover, .entry__item:hover .masthead__brand.entry__link--arrow {
@@ -1764,7 +1775,7 @@ p {
   .masthead__color-mode {
     position: absolute;
     right: 0;
-    top: 1.5rem;
+    top: 1rem;
   }
 }
 @media (min-width: 992px) {
@@ -1799,6 +1810,17 @@ p {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+}
+.masthead--pinned:not(.masthead--top) {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(0%);
+  zoom: 1;
+}
+.masthead--unpinned {
+  transform: translateY(-100%);
 }
 
 /**

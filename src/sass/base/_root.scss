@@ -14,6 +14,7 @@
     --matte: #{$gray-100};
     --hero-background-color: #{$hero-background-color};
     --cover-background-color: #{$cover-background-color};
+    --masthead-background-color: #{$masthead-background-color};
     --footer-background-color: #{$footer-background-color};
     --chapter-background-color: #{$chapter-background-color};
     --fpo-background-color: #{$fpo-background-color};
@@ -23,7 +24,7 @@
     --border-color: #{$border-color};
     --base-copy: #{$body-color};
     --base-copy-lighter: #{$gray-700};
-    --mobile-nav-toggle-background-color: #{$masthead-nav-toggle-background-color-light};
+    --mobile-nav-toggle-background-color: #{$masthead-nav-toggle-background-color};
     --mobile-nav-background-color: #{$white};
 
     .color-mode__button--light .color-mode__background {
@@ -39,6 +40,7 @@
     --matte: #{$gray-900};
     --hero-background-color: #{$hero-background-color-dark};
     --cover-background-color: #{$cover-background-color-dark};
+    --masthead-background-color: #{$masthead-background-color-dark};
     --footer-background-color: #{$footer-background-color-dark};
     --chapter-background-color: #{$chapter-background-color-dark};
     --fpo-background-color: #{$fpo-background-color-dark};

@@ -3,6 +3,11 @@
  */
 
 .masthead {
+    background-color: var(--masthead-background-color, $gray-100);
+    transition: transform 200ms linear;
+    width: 100%;
+    will-change: transform;
+    z-index: 1;
 
     @at-root #js-masthead__nav:not(.mm-spn) {
         display: none;
@@ -49,7 +54,6 @@
     &__brand {
         color: var(--base-copy, $body-color);
         display: inline-block;
-        font-size: 1.625rem;
         font-weight: $masthead-brand-font-weight;
 
         &:hover {
@@ -114,6 +118,18 @@
             padding-left: $nav-link-padding-x;
             padding-right: $nav-link-padding-x;
         }
+    }
+
+    &--pinned:not(&--top) {
+        box-shadow: $masthead-pinned-box-shadow;
+        left: 0;
+        position: fixed;
+        top: 0;
+        transform: translateY(0%);zoom: 1;
+    }
+
+    &--unpinned {
+        transform: translateY(-100%);
     }
 }
 

@@ -5,10 +5,10 @@
 .brand {
     &__logo {
         @extend %heading;
-        @extend %fluidtype;
 
         @include frame();
         display: inline-block;
+        font-size: 1.5rem;
         font-weight: $brand-font-weight;
         margin-bottom: 0;
         padding-bottom: 0.15em;

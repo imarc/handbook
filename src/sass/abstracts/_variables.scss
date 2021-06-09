@@ -202,12 +202,16 @@ $chapter-label-font-size: 1.5em;
 $chapter-figure-font-size: 4.5em;
 $chapter-figure-font-weight: 800;
 
-$masthead-body-padding-y: $spacer * 1.5;
+$masthead-height: 4.5rem;
+$masthead-background-color: $gray-100;
+$masthead-background-color-dark: $ice-900;
+$masthead-pinned-box-shadow: 0 0 1rem 0 rgba($black, 0.15);
+$masthead-body-padding-y: $spacer;
 $masthead-brand-font-weight: 700;
 $masthead-brand-link-color: $gray-700;
 $masthead-brand-link-hover-color: $fire;
 $masthead-nav-toggle-font-weight: 600;
-$masthead-nav-toggle-background-color-light: rgba($white, 0.625);
+$masthead-nav-toggle-background-color: rgba($white, 0.625);
 $masthead-nav-toggle-background-color-dark: rgba($black, 0.625);
 $masthead-nav-toggle-size: 2em;
 $masthead-nav-toggle-padding-x: $spacer;
