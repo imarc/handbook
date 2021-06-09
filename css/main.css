@@ -849,6 +849,9 @@ body.mm-ocd-opened {
 /**
  * base > root
  */
+:root {
+  --mm-spn-item-height: 2.5rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -868,6 +871,8 @@ body.mm-ocd-opened {
   --border-color: #f2efed;
   --base-copy: #252d2f;
   --base-copy-lighter: #2c333d;
+  --mobile-nav-toggle-background-color: rgba(255, 255, 255, 0.625);
+  --mobile-nav-background-color: #fff;
 }
 :root[color-mode=light] .color-mode__button--light .color-mode__background {
   display: block;
@@ -889,6 +894,8 @@ body.mm-ocd-opened {
   --border-color: #30302f;
   --base-copy: #e5e7eb;
   --base-copy-lighter: #d1d5db;
+  --mobile-nav-toggle-background-color: rgba(0, 0, 0, 0.625);
+  --mobile-nav-background-color: #000;
 }
 :root[color-mode=dark] .color-mode__button--dark .color-mode__background {
   display: block;
@@ -1647,8 +1654,19 @@ p {
 }
 
 /**
+ * layouts > nav-mobile
+ */
+.mm-spn {
+  background-color: var(--mobile-nav-background-color, #fff);
+}
+
+/**
  * layouts > masthead
  */
+#js-masthead__nav:not(.mm-spn) {
+  display: none;
+}
+
 .js-masthead__toggle {
   min-width: calc(2em / 0.5);
   position: relative;
@@ -1664,7 +1682,6 @@ p {
   padding-top: 0.75rem;
   position: fixed;
   right: 1rem;
-  text-decoration: none;
 }
 .js-masthead__toggle::before, .js-masthead__toggle::after {
   bottom: auto;
@@ -1685,13 +1702,16 @@ p {
   width: 100%;
 }
 .js-masthead__toggle::after {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: var(--mobile-nav-toggle-background-color, #fff);
   height: calc(2em - (0.25rem * 2));
   left: 0.25rem;
   top: 0.25rem;
   width: calc(2em / 0.5 - (0.25rem * 2));
   height: calc(100% - (0.25rem * 2));
   width: calc(100% - (0.25rem * 2));
+}
+.js-masthead__toggle:hover, .entry__item:hover .js-masthead__toggle.entry__link--arrow {
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .js-masthead__toggle {
