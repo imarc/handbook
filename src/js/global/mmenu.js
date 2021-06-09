@@ -14,7 +14,8 @@ document.addEventListener (
 
         const navigator = menu.navigation(
             {
-                theme: ""
+                theme: "",
+                title: "Handbook"
             }
         )
         const drawer = menu.offcanvas()

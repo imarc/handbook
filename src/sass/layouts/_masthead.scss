@@ -4,8 +4,12 @@
 
 .masthead {
 
+    @at-root #js-masthead__nav:not(.mm-spn) {
+        display: none;
+    }
+
     @at-root .js-masthead__toggle {
-        @include frame($frame-height: $masthead-nav-toggle-size, $frame-width-factor: 0.5, $background: rgba($white, 0.75), $is-scalable: true);
+        @include frame($frame-height: $masthead-nav-toggle-size, $frame-width-factor: 0.5, $background: var(--mobile-nav-toggle-background-color, $white), $is-scalable: true);
 
         align-items: center;
         bottom: $masthead-nav-toggle-bottom-pos;
@@ -18,7 +22,10 @@
         padding-top: $masthead-nav-toggle-padding-y;
         position: fixed;
         right: $masthead-nav-toggle-right-pos;
-        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
 
         @include breakpoint(md) {
             display: none;
@@ -80,7 +87,10 @@
     }
 
     &__nav {
+        // display: none;
+
         @include breakpoint(md) {
+            // display: block;
             flex-grow: 1;
             margin-left: $spacer * -0.675;
             margin-top: 0;

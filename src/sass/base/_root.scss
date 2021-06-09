@@ -3,6 +3,7 @@
  */
 
 :root {
+    --mm-spn-item-height: 2.5rem;
     font-size: $root-font-size;
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
@@ -22,6 +23,8 @@
     --border-color: #{$border-color};
     --base-copy: #{$body-color};
     --base-copy-lighter: #{$gray-700};
+    --mobile-nav-toggle-background-color: #{$masthead-nav-toggle-background-color-light};
+    --mobile-nav-background-color: #{$white};
 
     .color-mode__button--light .color-mode__background {
         display: block;
@@ -45,6 +48,8 @@
     --border-color: #{$border-color-dark};
     --base-copy: #{$body-color-dark};
     --base-copy-lighter: #{$gray-300};
+    --mobile-nav-toggle-background-color: #{$masthead-nav-toggle-background-color-dark};
+    --mobile-nav-background-color: #{$black};
 
     .color-mode__button--dark .color-mode__background {
         display: block;
