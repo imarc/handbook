@@ -40,6 +40,10 @@ HTML classes are formed following [BEM's Two Dashes Style](https://en.bem.info/m
 
 ``block-name__elem-name--mod-name``
 
+### Mobile Nav
+
+[mmenu-light](https://www.npmjs.com/package/mmenu-light) is used. We do not apply an mmenu-light "theme" but rather leverage a CSS custom property in `src/sass/layouts/_nav-mobile.scss`. It works in tandem with Handbook's other light/dark colors in `src/sass/base/_root.scss`.
+
 ### Fonts
 
 Handbook uses the Gibson typeface via TypeKit (Adobe Fonts).
