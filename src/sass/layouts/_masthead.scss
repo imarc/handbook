@@ -4,9 +4,9 @@
 
 .masthead {
     background-color: var(--masthead-background-color, $gray-100);
+    height: $masthead-height;
     transition: transform 200ms linear;
     width: 100%;
-    will-change: transform;
     z-index: 1;
 
     @at-root #js-masthead__nav:not(.mm-spn) {
@@ -14,30 +14,6 @@
 
         @include breakpoint(lg) {
             display: block;
-        }
-    }
-
-    @at-root .js-masthead__toggle {
-        @include frame($frame-height: $masthead-nav-toggle-size, $frame-width-factor: 0.5, $background: var(--mobile-nav-toggle-background-color, $white), $is-scalable: true);
-
-        align-items: center;
-        bottom: $masthead-nav-toggle-bottom-pos;
-        display: flex;
-        font-weight: $masthead-nav-toggle-font-weight;
-        justify-content: center;
-        padding-bottom: $masthead-nav-toggle-padding-y;
-        padding-left: $masthead-nav-toggle-padding-x;
-        padding-right: $masthead-nav-toggle-padding-x;
-        padding-top: $masthead-nav-toggle-padding-y;
-        position: fixed;
-        right: $masthead-nav-toggle-right-pos;
-
-        &:hover {
-            text-decoration: none;
-        }
-
-        @include breakpoint(md) {
-            display: none;
         }
     }
 
@@ -95,10 +71,7 @@
     }
 
     &__nav {
-        // display: none;
-
         @include breakpoint(md) {
-            // display: block;
             flex-grow: 1;
             margin-left: $spacer * -0.675;
             margin-top: 0;
@@ -129,7 +102,7 @@
         left: 0;
         position: fixed;
         top: 0;
-        transform: translateY(0%);zoom: 1;
+        transform: translateY(0%);
     }
 
     &--unpinned {

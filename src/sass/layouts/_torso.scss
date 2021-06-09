@@ -46,6 +46,6 @@
 
     &__nav--toc-stuck {
         position: sticky;
-        top: 1rem;
+        top: $masthead-height + $spacer;
     }
 }

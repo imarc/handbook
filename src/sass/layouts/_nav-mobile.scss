@@ -5,3 +5,27 @@
 .mm-spn {
     background-color: var(--mobile-nav-background-color, $white);
 }
+
+.js-masthead__toggle {
+    @include frame($frame-height: $masthead-nav-toggle-size, $frame-width-factor: 0.5, $background: var(--mobile-nav-toggle-background-color, $white), $is-scalable: true);
+
+    align-items: center;
+    bottom: $masthead-nav-toggle-bottom-pos;
+    display: flex;
+    font-weight: $masthead-nav-toggle-font-weight;
+    justify-content: center;
+    padding-bottom: $masthead-nav-toggle-padding-y;
+    padding-left: $masthead-nav-toggle-padding-x;
+    padding-right: $masthead-nav-toggle-padding-x;
+    padding-top: $masthead-nav-toggle-padding-y;
+    position: fixed;
+    right: $masthead-nav-toggle-right-pos;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}

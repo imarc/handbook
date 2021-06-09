@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    scroll-padding-top: $masthead-height;
+}
+
 body {
     @include transition($transition-background-color);
 
