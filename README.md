@@ -46,7 +46,7 @@ Handbook uses the Gibson typeface via TypeKit (Adobe Fonts).
 
 ### Icons
 
-We use [Streamline](https://app.streamlinehq.com/icons) for department icons.
+We use [Streamline](https://app.streamlinehq.com/icons) for icons. Specifically, the _Streamline Light_ family.
 ### Images
 
 [lazysizes](https://github.com/aFarkas/lazysizes) is used for lazy loading and responsive images.
