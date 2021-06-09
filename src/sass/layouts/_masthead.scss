@@ -11,6 +11,10 @@
 
     @at-root #js-masthead__nav:not(.mm-spn) {
         display: none;
+
+        @include breakpoint(lg) {
+            display: block;
+        }
     }
 
     @at-root .js-masthead__toggle {

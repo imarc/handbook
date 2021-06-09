@@ -1678,6 +1678,11 @@ p {
 #js-masthead__nav:not(.mm-spn) {
   display: none;
 }
+@media (min-width: 992px) {
+  #js-masthead__nav:not(.mm-spn) {
+    display: block;
+  }
+}
 
 .js-masthead__toggle {
   min-width: calc(2em / 0.5);
