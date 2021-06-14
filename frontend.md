@@ -356,55 +356,23 @@ We ask our designers to crop SVGs very tight to their bounding box for better st
 
 ### Video
 
-We typically use vendor-provided (YouTube/Vimeo/Wistia) embed codes to display video. For responsive videos, wrap the embed code in a parent (e.g. `.embed`) and apply appropriate CSS. Note that `calc(9 / 16 * 100%)` below corresponds to a 16:9 aspect ratio. Modify this as needed.
+We typically use vendor-provided (YouTube/Vimeo/Wistia) embed codes to display video. For responsive videos, wrap the embed code in a parent (e.g. `.embed`) and apply appropriate CSS. Note that `padding-bottom: calc(9 / 16 * 100%)` corresponds to a 16:9 aspect ratio. Modify this as needed.
 
-    .embed {
-        position: relative;
-        width: 100%;
-    }
-
-    .embed::before {
-        content: '';
-        display: block;
-        padding-bottom: calc(9 / 16 * 100%);
-    }
-
-    .embed iframe {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
+<div class="embed">
+    <div class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="imarcagency" data-slug-hash="vYxvEma" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive video embed">
+    </div>
+</div>
 
 Tip: with a preprocesser like Sass, you don’t need `calc()`, and `padding-top: 9 / 16 * 100%` would suffice.
 
-#### Background Video
+#### Background video
 
-Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* area. Create and export `.mp4` and `.webm` video files. Imarc often uses a video optimization tool like <a href="https://handbrake.fr/">Handbrake</a> to achieve smallest file size. Here is some HTML/Sass for implementing a responsive background video. Note the `muted` attribute on the `<video>` element.
+Sometimes, a video will auto-play (without audio) behind HTML content. This is common in a site’s *hero* block. Export a video file. Imarc often uses a video optimization tool like <a href="https://handbrake.fr/">Handbrake</a> to achieve smallest file size. Here is some HTML/Sass for implementing a responsive background video. Note the `muted` attribute on the `<video>` element.
 
-    <div class="hero">
-        <video class="hero__video" autoplay loop="loop" muted poster="video-placeholder.jpg">
-            <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-            <source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
-        </video>
+<div class="embed">
+    <div class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="imarcagency" data-slug-hash="JjWwoLp" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Background video behind web content">
     </div>
-
-    .hero
-        &__video {
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-        }
-
-        &::before {
-            content: "";
-            display: block;
-            padding-top: calc(9 / 16 * 100%); 
-        }
-    }
+</div>
 
 `calc(9 / 16 * 100%)` would output a `padding-top: 56.25%`. This matches the popular 16:9 aspect ratio. To use a different aspect ratio, `calc(height / width * 100%)` will output the proper percentage.
 
