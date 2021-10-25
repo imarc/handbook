@@ -340,18 +340,18 @@ SVG (Scalable Vector Graphics) is an XML-based image format. It allows for infin
 
 ##### Inline vs. src
 
-Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or stroke/fill variations, inlining an SVG is acceptable. To help with document readability, it's preferable to "include" the SVG via a PHP or Twig include statement. When using an SVG inline, feel free to edit the code as you see fit - remove extra groupings, add classes or ids, etc. 
+Inline SVGs can block rendering and will not cache. As a result, using an `.svg` file within an `<img>` tag is a solid implementation choice. However, if the interface calls for animation and/or stroke/fill variations, inlining an SVG is acceptable. To help with document readability, it's preferable to "include" the SVG via a PHP or Twig include statement. When using an SVG inline, feel free to edit the code as you see fit - remove extra groupings, add or update classes and ids, etc. 
+
+#### Sizing SVGs
+We ask our designers to crop SVGs very tight to their bounding box for better styling control, but if we are using SVGs from another source, we may need to edit the files ourselves. We can do this with a program like Adobe Illustrator, or edit the SVG code directly to update some SVG properties for sizing purposes. Another hot tip is to remove the "height" and "width" properties from the SVG code and control these via CSS so you get more control over the size and scalability. For more on dealing with viewBox or sizing properties, see  [Scaling SVG Elements](https://wattenberger.com/guide/scaling-svg) 
 
 #### SVG Implementation Tips
 
-When using a program such as Adobe Illustrator to export an SVG for inline usage, the most important property to update is "Styling". You'll want to select "Presentation Attributes" as this option includes the styles as inline attributes instead of adding extra classes and styles which causes bloat and may conflict with other styles down the road. Another hot tip is to remove the "height" and "width" properties and control these via CSS so you get more control over the size and scalability.
+When using a program such as Adobe Illustrator to export an SVG for inline usage, the most important property to update is "Styling". You'll want to select "Presentation Attributes" as this option includes the styles as inline attributes instead of adding extra classes and styles which causes bloat and may conflict with other styles down the road. Regardless of how your SVG is exported, best practice is to control your SVG styling with CSS. This means you may need to remove inline styles from the SVG code and move them to your CSS. 
 
 Ideal settings for exporting SVGs from Illustrator:
 
 <img alt="" class="lazyload" data-src="/img/svg-settings.png">
-
-#### Sizing SVGs
-We ask our designers to crop SVGs very tight to their bounding box for better styling control, but if we are using SVGs from another source, we may need to edit the files ourselves. We can do this with a program like Adobe Illustrator, or edit the SVG code directly to update some SVG properties for sizing purposes. For more on dealing with viewbox or sizing properties, see  [Scaling SVG Elements](https://wattenberger.com/guide/scaling-svg) 
 
 
 ### Video
@@ -383,7 +383,9 @@ Sometimes, a video will auto-play (without audio) behind HTML content. This is c
 [The Noun Project](https://thenounproject.com/), [Tabler](https://tablericons.com), and [Feather](https://feathericons.com) are a few popular SVG icon sets.
 
 #### Implementation tips
-The preferred method is to include an SVG icon as a `<symbol>`. This way, you can create one SVG file that houses all of the icons you need on your site (similar to the old image sprites). 
+The preferred method is to include an SVG icon as a `<symbol>`. This way, you can create one SVG sprite file that houses all of the icons you need on your site. Some icon sets provide an SVG sprite, but others you may need to create yourself. 
+
+This is an example of the SVG sprite file, where you'd define your SVG icons as symbols:
 
     <!-- /_partials/icons.twig (example file path) -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -520,8 +522,7 @@ _** We recognize that some browsers are incapable of properly rendering standard
     </table>
 </div>
 
-Individual projects may require browser support beyond our defaults. In these cases the additional
-support will be specified in the proposal and strategy documents.
+_** Individual projects may require browser support beyond our defaults. In these cases the need may be based on audience analytics data and, if needed, additional support will be specified in the proposal and strategy documents._
 
 Imarc employees who have access to our wiki can read more about our policies in the [Browser Support](http://wiki.imarc.net/Browser_Support) article.
 
